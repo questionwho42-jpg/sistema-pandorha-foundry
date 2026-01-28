@@ -1,0 +1,76 @@
+@page {
+  margin: 1.5cm;
+  size: A4;
+}
+
+body {
+  /* Margin handled by @page for PDF, but we keep some padding for HTML view */
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 12pt;
+  line-height: 1.6;
+  color: #111;
+  text-align: justify;
+}
+
+/* Force images to fill the width of the container */
+img {
+  width: 100% !important;
+  height: auto;
+  display: block;
+  margin: 1.5em 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+/* Handle Pandoc figures */
+figure {
+  width: 100%;
+  margin: 1.5em 0;
+  padding: 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.9em;
+  font-style: italic;
+  color: #555;
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  page-break-before: always;
+  text-align: center;
+  color: #222;
+  font-size: 26pt;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  border-bottom: 3px solid #333;
+  padding-bottom: 0.5em;
+}
+
+h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.2em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  color: #444;
+  font-size: 18pt;
+}
+
+/* Quotes/Blockquotes */
+blockquote {
+  font-style: italic;
+  background: #f4f4f4;
+  border-left: 4px solid #444;
+  padding: 1em;
+  margin: 1.5em 0;
+}
+
+p {
+  margin-bottom: 1em;
+}
