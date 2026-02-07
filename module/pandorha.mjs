@@ -39,12 +39,15 @@ Hooks.once("init", () => {
     toxin: PandorhaItemModel
   };
 
-  Actors.registerSheet("pandorha", PandorhaActorSheet, {
+  const ActorsCollection = foundry.documents.collections.Actors;
+  const ItemsCollection = foundry.documents.collections.Items;
+
+  ActorsCollection.registerSheet("pandorha", PandorhaActorSheet, {
     makeDefault: true,
     types: ["character", "npc", "monster"]
   });
 
-  Items.registerSheet("pandorha", PandorhaItemSheet, { makeDefault: true });
+  ItemsCollection.registerSheet("pandorha", PandorhaItemSheet, { makeDefault: true });
 
   registerHandlebars();
 });

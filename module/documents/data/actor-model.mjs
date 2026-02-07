@@ -1,4 +1,12 @@
 export class PandorhaActorModel extends foundry.abstract.TypeDataModel {
+  static migrateData(source) {
+    if (source?.details) {
+      if (source.details.crest === "") source.details.crest = null;
+      if (source.details.portrait === "") source.details.portrait = null;
+    }
+    return source;
+  }
+
   static defineSchema() {
     const fields = foundry.data.fields;
 
@@ -10,8 +18,8 @@ export class PandorhaActorModel extends foundry.abstract.TypeDataModel {
         ancestry: new fields.StringField({ initial: "" }),
         class: new fields.StringField({ initial: "" }),
         background: new fields.StringField({ initial: "" }),
-        crest: new fields.FilePathField({ categories: ["IMAGE"], initial: "" }),
-        portrait: new fields.FilePathField({ categories: ["IMAGE"], initial: "" })
+        crest: new fields.FilePathField({ categories: ["IMAGE"], initial: null, required: false, nullable: true }),
+        portrait: new fields.FilePathField({ categories: ["IMAGE"], initial: null, required: false, nullable: true })
       }),
       attributes: new fields.SchemaField({
         level: new fields.NumberField({ integer: true, initial: 1, min: 0 }),
