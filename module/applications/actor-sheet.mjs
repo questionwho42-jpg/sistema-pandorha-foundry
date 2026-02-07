@@ -6,16 +6,19 @@ const { HandlebarsApplicationMixin } = foundry.applications.api;
 export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ActorSheetV2) {
   static DEFAULT_OPTIONS = foundry.utils.mergeObject(super.DEFAULT_OPTIONS, {
     classes: ["pandorha", "sheet", "actor"],
-    template: "templates/actor/actor.hbs",
-    width: 900,
-    height: 720,
     position: { width: 900, height: 720 }
   });
+
+  static PARTS = {
+    form: {
+      template: "templates/actor/actor.hbs"
+    }
+  };
 
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
 
-    const items = this.actor.items.map(i => i.toObject());
+    const items = this.document.items.map(i => i.toObject());
     const byType = {
       ancestries: items.filter(i => i.type === "ancestry"),
       traits: items.filter(i => i.type === "trait"),
@@ -32,18 +35,18 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
 
     const skills = SKILLS.map(skill => ({
       ...skill,
-      trained: this.actor.system.skills?.[skill.id]?.trained ?? false,
-      bonus: this.actor.system.skills?.[skill.id]?.bonus ?? 0
+      trained: this.document.system.skills?.[skill.id]?.trained ?? false,
+      bonus: this.document.system.skills?.[skill.id]?.bonus ?? 0
     }));
 
     return {
       ...context,
-      system: this.actor.system,
+      system: this.document.system,
       items: byType,
       skills,
-      isCharacter: this.actor.type === "character",
-      isNpc: this.actor.type === "npc",
-      isMonster: this.actor.type === "monster"
+      isCharacter: this.document.type === "character",
+      isNpc: this.document.type === "npc",
+      isMonster: this.document.type === "monster"
     };
   }
 
@@ -62,7 +65,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         const mapValue = root.querySelector("[name='roll-map']")?.value ?? "auto";
         const mapStep = mapValue === "auto" ? "auto" : Number(mapValue);
         const bonus = Number(bonusRaw) || 0;
-        await rollTest({ actor: this.actor, eixo, aplicacao, bonus, trained, mapStep, label: "Teste Global" });
+        await rollTest({ actor: this.document, eixo, aplicacao, bonus, trained, mapStep, label: "Teste Global" });
       });
     }
 
@@ -72,7 +75,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         const skillId = button.getAttribute("data-skill-id");
         const skill = SKILLS.find(s => s.id === skillId);
         if (!skill) return;
-        await rollSkill({ actor: this.actor, skill });
+        await rollSkill({ actor: this.document, skill });
       });
     });
 
@@ -80,11 +83,11 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       button.addEventListener("click", async event => {
         event.preventDefault();
         const itemId = button.getAttribute("data-item-id");
-        const item = this.actor.items.get(itemId);
+        const item = this.document.items.get(itemId);
         if (!item) return;
         const mapValue = root.querySelector("[name='roll-map']")?.value ?? "auto";
         const mapStep = mapValue === "auto" ? "auto" : Number(mapValue);
-        await rollItem({ actor: this.actor, item, mapStep });
+        await rollItem({ actor: this.document, item, mapStep });
       });
     });
 
@@ -92,9 +95,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       button.addEventListener("click", async event => {
         event.preventDefault();
         const itemId = button.getAttribute("data-item-id");
-        const item = this.actor.items.get(itemId);
+        const item = this.document.items.get(itemId);
         if (!item) return;
-        await rollItemDamage({ actor: this.actor, item });
+        await rollItemDamage({ actor: this.document, item });
       });
     });
 
@@ -103,7 +106,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         event.preventDefault();
         const type = button.getAttribute("data-item-type");
         if (!type) return;
-        await this.actor.createEmbeddedDocuments("Item", [{ name: `Novo ${type}`, type }]);
+        await this.document.createEmbeddedDocuments("Item", [{ name: `Novo ${type}`, type }]);
       });
     });
 
@@ -111,7 +114,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       button.addEventListener("click", event => {
         event.preventDefault();
         const itemId = button.getAttribute("data-item-id");
-        const item = this.actor.items.get(itemId);
+        const item = this.document.items.get(itemId);
         item?.sheet?.render(true);
       });
     });
@@ -121,7 +124,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         event.preventDefault();
         const itemId = button.getAttribute("data-item-id");
         if (!itemId) return;
-        await this.actor.deleteEmbeddedDocuments("Item", [itemId]);
+        await this.document.deleteEmbeddedDocuments("Item", [itemId]);
       });
     });
   }
