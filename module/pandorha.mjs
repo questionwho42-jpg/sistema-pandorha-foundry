@@ -39,10 +39,11 @@ Hooks.once("init", () => {
     toxin: PandorhaItemModel
   };
 
-  Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("pandorha", PandorhaActorSheet, { makeDefault: true });
+  Actors.registerSheet("pandorha", PandorhaActorSheet, {
+    makeDefault: true,
+    types: ["character", "npc", "monster"]
+  });
 
-  Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("pandorha", PandorhaItemSheet, { makeDefault: true });
 
   registerHandlebars();

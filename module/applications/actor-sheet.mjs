@@ -1,7 +1,7 @@
 import { rollTest, rollSkill, rollItem, rollItemDamage } from "../data/rolls.mjs";
 import { SKILLS } from "../data/skills.mjs";
 
-export class PandorhaActorSheet extends ActorSheetV2 {
+export class PandorhaActorSheet extends foundry.applications.sheets.ActorSheetV2 {
   static DEFAULT_OPTIONS = foundry.utils.mergeObject(super.DEFAULT_OPTIONS, {
     classes: ["pandorha", "sheet", "actor"],
     template: "templates/actor/actor.hbs",

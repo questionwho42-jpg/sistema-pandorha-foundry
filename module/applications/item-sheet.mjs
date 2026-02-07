@@ -1,4 +1,4 @@
-export class PandorhaItemSheet extends ItemSheetV2 {
+export class PandorhaItemSheet extends foundry.applications.sheets.ItemSheetV2 {
   static DEFAULT_OPTIONS = foundry.utils.mergeObject(super.DEFAULT_OPTIONS, {
     classes: ["pandorha", "sheet", "item"],
     template: "templates/item/item.hbs",

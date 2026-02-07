@@ -1,5 +1,32 @@
 {
   "PANDORHA": {
     "System": "Pandorha"
+  },
+  "TYPES": {
+    "Actor": {
+      "character": "Personagem",
+      "npc": "NPC",
+      "monster": "Monstro"
+    },
+    "Item": {
+      "ancestry": "Ancestralidade",
+      "trait": "Traço",
+      "class": "Classe",
+      "talent": "Talento",
+      "maneuver": "Manobra",
+      "spell": "Magia",
+      "weapon": "Arma",
+      "armor": "Armadura",
+      "shield": "Escudo",
+      "equipment": "Equipamento",
+      "consumable": "Consumível",
+      "condition": "Condição",
+      "background": "Antecedente",
+      "feature": "Característica",
+      "ability": "Habilidade",
+      "rune": "Runa",
+      "disease": "Enfermidade",
+      "toxin": "Toxina"
+    }
   }
 }
