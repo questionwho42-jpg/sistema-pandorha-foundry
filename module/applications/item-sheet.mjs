@@ -8,7 +8,7 @@ export class PandorhaItemSheet extends HandlebarsApplicationMixin(foundry.applic
 
   static PARTS = {
     form: {
-      template: "templates/item/item.hbs"
+      template: "systems/pandorha/templates/item/item.hbs"
     }
   };
 

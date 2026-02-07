@@ -11,7 +11,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
 
   static PARTS = {
     form: {
-      template: "templates/actor/actor.hbs"
+      template: "systems/pandorha/templates/actor/actor.hbs"
     }
   };
 
