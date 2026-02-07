@@ -1,9 +1,9 @@
-<form class="pandorha-sheet" autocomplete="off">
+ï»¿<form class="pandorha-sheet" autocomplete="off">
   <header class="sheet-header">
     <div class="header-main">
       <input class="name" name="name" type="text" value="{{actor.name}}" />
       <div class="subline">
-        <label>Nível</label>
+        <label>NÃ­vel</label>
         <input name="system.attributes.level" type="number" value="{{system.attributes.level}}" />
         <label>Ancestralidade</label>
         <input name="system.details.ancestry" type="text" value="{{system.details.ancestry}}" />
@@ -19,7 +19,7 @@
     <div class="panel">
       <h3>Eixos</h3>
       <div class="stats">
-        <label>Físico</label>
+        <label>FÃ­sico</label>
         <input name="system.eixos.fisico" type="number" value="{{system.eixos.fisico}}" />
         <label>Mental</label>
         <input name="system.eixos.mental" type="number" value="{{system.eixos.mental}}" />
@@ -29,13 +29,13 @@
     </div>
 
     <div class="panel">
-      <h3>Aplicações</h3>
+      <h3>AplicaÃ§Ãµes</h3>
       <div class="stats">
         <label>Conflito</label>
         <input name="system.aplicacoes.conflito" type="number" value="{{system.aplicacoes.conflito}}" />
-        <label>Interação</label>
+        <label>InteraÃ§Ã£o</label>
         <input name="system.aplicacoes.interacao" type="number" value="{{system.aplicacoes.interacao}}" />
-        <label>Resistência</label>
+        <label>ResistÃªncia</label>
         <input name="system.aplicacoes.resistencia" type="number" value="{{system.aplicacoes.resistencia}}" />
       </div>
     </div>
@@ -70,14 +70,14 @@
       <h3>Rolagem</h3>
       <div class="roll-row">
         <select name="roll-eixo">
-          <option value="fisico">Físico</option>
+          <option value="fisico">FÃ­sico</option>
           <option value="mental">Mental</option>
           <option value="social">Social</option>
         </select>
         <select name="roll-aplicacao">
           <option value="conflito">Conflito</option>
-          <option value="interacao">Interação</option>
-          <option value="resistencia">Resistência</option>
+          <option value="interacao">InteraÃ§Ã£o</option>
+          <option value="resistencia">ResistÃªncia</option>
         </select>
         <input name="roll-bonus" type="number" value="0" />
         <select name="roll-map">
@@ -95,13 +95,13 @@
         <div>Iniciativa base: {{system.derived.initiative}}</div>
         <div>Slots usados: {{system.derived.carrySlots}} / {{system.derived.carryMax}}</div>
         <div>Tier: {{system.attributes.tier}}</div>
-        <div>DC Mundana: {{system.derived.dcTable.mundana}} | Desafiadora: {{system.derived.dcTable.desafiadora}} | Lendária: {{system.derived.dcTable.lendaria}} | Divina: {{system.derived.dcTable.divina}}</div>
+        <div>DC Mundana: {{system.derived.dcTable.mundana}} | Desafiadora: {{system.derived.dcTable.desafiadora}} | LendÃ¡ria: {{system.derived.dcTable.lendaria}} | Divina: {{system.derived.dcTable.divina}}</div>
       </div>
     </div>
   </section>
 
   <section class="panel">
-    <h3>Perícias</h3>
+    <h3>PerÃ­cias</h3>
     <div class="item-list">
       {{#each skills}}
       <div class="item-row">
@@ -149,7 +149,7 @@
       <div class="item-list">
         {{#each items.spells}}
         <div class="item-row">
-          <span class="item-name">{{name}} (Círculo {{system.circle}})</span>
+          <span class="item-name">{{name}} (CÃ­rculo {{system.circle}})</span>
           <div class="item-actions">
             <button type="button" data-action="item-roll" data-item-id="{{_id}}">Ataque</button>
             <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
@@ -183,7 +183,7 @@
 
     <div class="item-section">
       <div class="item-header">
-        <span>Características</span>
+        <span>CaracterÃ­sticas</span>
         <button type="button" data-action="item-create" data-item-type="feature">Adicionar</button>
       </div>
       <div class="item-list">
@@ -239,7 +239,7 @@
 
     <div class="item-section">
       <div class="item-header">
-        <span>Condições</span>
+        <span>CondiÃ§Ãµes</span>
         <button type="button" data-action="item-create" data-item-type="condition">Adicionar</button>
       </div>
       <div class="item-list">
@@ -257,7 +257,7 @@
   </section>
 
   <section class="panel">
-    <h3>Descrição</h3>
+    <h3>DescriÃ§Ã£o</h3>
     {{editor system.details.biography target="system.details.biography" button=true editable=editable}}
   </section>
 </form>

@@ -1,4 +1,4 @@
-<form class="pandorha-sheet" autocomplete="off">
+ï»¿<form class="pandorha-sheet" autocomplete="off">
   <header class="sheet-header">
     <input class="name" name="name" type="text" value="{{item.name}}" />
     <div class="subline">Tipo: {{itemType}}</div>
@@ -6,7 +6,7 @@
 
   <section class="grid">
     <div class="panel">
-      <h3>Ativação</h3>
+      <h3>AtivaÃ§Ã£o</h3>
       <div class="stats">
         <label>Custo</label>
         <input name="system.activation.cost" type="text" value="{{system.activation.cost}}" />
@@ -21,30 +21,30 @@
         <label>Eixo</label>
         <select name="system.roll.axis">
           <option value="">(auto)</option>
-          <option value="fisico" {{#ifEq system.roll.axis "fisico"}}selected{{/ifEq}}>Físico</option>
+          <option value="fisico" {{#ifEq system.roll.axis "fisico"}}selected{{/ifEq}}>FÃ­sico</option>
           <option value="mental" {{#ifEq system.roll.axis "mental"}}selected{{/ifEq}}>Mental</option>
           <option value="social" {{#ifEq system.roll.axis "social"}}selected{{/ifEq}}>Social</option>
         </select>
-        <label>Aplicação</label>
+        <label>AplicaÃ§Ã£o</label>
         <select name="system.roll.aplicacao">
           <option value="">(auto)</option>
           <option value="conflito" {{#ifEq system.roll.aplicacao "conflito"}}selected{{/ifEq}}>Conflito</option>
-          <option value="interacao" {{#ifEq system.roll.aplicacao "interacao"}}selected{{/ifEq}}>Interação</option>
-          <option value="resistencia" {{#ifEq system.roll.aplicacao "resistencia"}}selected{{/ifEq}}>Resistência</option>
+          <option value="interacao" {{#ifEq system.roll.aplicacao "interacao"}}selected{{/ifEq}}>InteraÃ§Ã£o</option>
+          <option value="resistencia" {{#ifEq system.roll.aplicacao "resistencia"}}selected{{/ifEq}}>ResistÃªncia</option>
         </select>
-        <label>Bônus</label>
+        <label>BÃ´nus</label>
         <input name="system.roll.bonus" type="number" value="{{system.roll.bonus}}" />
-        <label>É Ataque</label>
+        <label>Ã‰ Ataque</label>
         <input name="system.roll.isAttack" type="checkbox" {{#if system.roll.isAttack}}checked{{/if}} />
       </div>
     </div>
 
     <div class="panel">
-      <h3>Parâmetros</h3>
+      <h3>ParÃ¢metros</h3>
       <div class="stats">
         <label>Alcance</label>
         <input name="system.range" type="text" value="{{system.range}}" />
-        <label>Duração</label>
+        <label>DuraÃ§Ã£o</label>
         <input name="system.duration" type="text" value="{{system.duration}}" />
         <label>Teste</label>
         <input name="system.check" type="text" value="{{system.check}}" />
@@ -68,7 +68,7 @@
       <div class="stats">
         <label>Escola</label>
         <input name="system.school" type="text" value="{{system.school}}" />
-        <label>Círculo</label>
+        <label>CÃ­rculo</label>
         <input name="system.circle" type="number" value="{{system.circle}}" />
         <label>Componentes</label>
         <input name="system.components" type="text" value="{{system.components}}" />
@@ -78,7 +78,7 @@
     <div class="panel">
       <h3>Equipamento</h3>
       <div class="stats">
-        <label>Preço</label>
+        <label>PreÃ§o</label>
         <input name="system.price" type="text" value="{{system.price}}" />
         <label>Quantidade</label>
         <input name="system.quantity" type="number" value="{{system.quantity}}" />
@@ -109,7 +109,7 @@
     <div class="panel">
       <h3>Armadura</h3>
       <div class="stats">
-        <label>Bônus</label>
+        <label>BÃ´nus</label>
         <input name="system.armor.bonus" type="number" value="{{system.armor.bonus}}" />
         <label>Penalidade</label>
         <input name="system.armor.penalty" type="text" value="{{system.armor.penalty}}" />
@@ -125,7 +125,7 @@
     <div class="panel">
       <h3>Escudo</h3>
       <div class="stats">
-        <label>Bônus</label>
+        <label>BÃ´nus</label>
         <input name="system.shield.bonus" type="number" value="{{system.shield.bonus}}" />
         <label>Tags</label>
         <input name="system.shield.tags" type="text" value="{{joinTags system.shield.tags}}" />
@@ -137,7 +137,7 @@
   </section>
 
   <section class="panel">
-    <h3>Descrição</h3>
+    <h3>DescriÃ§Ã£o</h3>
     {{editor system.description target="system.description" button=true editable=editable}}
   </section>
 </form>
