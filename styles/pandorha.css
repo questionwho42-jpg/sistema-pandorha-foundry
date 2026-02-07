@@ -1,0 +1,79 @@
+.pandorha-sheet {
+  font-family: "Source Serif 4", serif;
+}
+
+.pandorha-sheet .sheet-header {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #999;
+}
+
+.pandorha-sheet .sheet-header .name {
+  font-size: 24px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.pandorha-sheet .subline {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 6px;
+  align-items: center;
+}
+
+.pandorha-sheet .grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.pandorha-sheet .panel {
+  border: 1px solid #bbb;
+  padding: 8px;
+  border-radius: 6px;
+  background: #f9f7f4;
+}
+
+.pandorha-sheet .stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  align-items: center;
+}
+
+.pandorha-sheet .roll-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.pandorha-sheet .item-section {
+  margin-top: 12px;
+}
+
+.pandorha-sheet .item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.pandorha-sheet .item-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 4px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.pandorha-sheet .item-actions button {
+  margin-left: 4px;
+}
+
+.pandorha-sheet .inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}

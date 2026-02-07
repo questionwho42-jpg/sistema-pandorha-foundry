@@ -1,0 +1,143 @@
+<form class="pandorha-sheet" autocomplete="off">
+  <header class="sheet-header">
+    <input class="name" name="name" type="text" value="{{item.name}}" />
+    <div class="subline">Tipo: {{itemType}}</div>
+  </header>
+
+  <section class="grid">
+    <div class="panel">
+      <h3>Ativação</h3>
+      <div class="stats">
+        <label>Custo</label>
+        <input name="system.activation.cost" type="text" value="{{system.activation.cost}}" />
+        <label>Tipo</label>
+        <input name="system.activation.type" type="text" value="{{system.activation.type}}" />
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Rolagem</h3>
+      <div class="stats">
+        <label>Eixo</label>
+        <select name="system.roll.axis">
+          <option value="">(auto)</option>
+          <option value="fisico" {{#ifEq system.roll.axis "fisico"}}selected{{/ifEq}}>Físico</option>
+          <option value="mental" {{#ifEq system.roll.axis "mental"}}selected{{/ifEq}}>Mental</option>
+          <option value="social" {{#ifEq system.roll.axis "social"}}selected{{/ifEq}}>Social</option>
+        </select>
+        <label>Aplicação</label>
+        <select name="system.roll.aplicacao">
+          <option value="">(auto)</option>
+          <option value="conflito" {{#ifEq system.roll.aplicacao "conflito"}}selected{{/ifEq}}>Conflito</option>
+          <option value="interacao" {{#ifEq system.roll.aplicacao "interacao"}}selected{{/ifEq}}>Interação</option>
+          <option value="resistencia" {{#ifEq system.roll.aplicacao "resistencia"}}selected{{/ifEq}}>Resistência</option>
+        </select>
+        <label>Bônus</label>
+        <input name="system.roll.bonus" type="number" value="{{system.roll.bonus}}" />
+        <label>É Ataque</label>
+        <input name="system.roll.isAttack" type="checkbox" {{#if system.roll.isAttack}}checked{{/if}} />
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Parâmetros</h3>
+      <div class="stats">
+        <label>Alcance</label>
+        <input name="system.range" type="text" value="{{system.range}}" />
+        <label>Duração</label>
+        <input name="system.duration" type="text" value="{{system.duration}}" />
+        <label>Teste</label>
+        <input name="system.check" type="text" value="{{system.check}}" />
+        <label>CD</label>
+        <input name="system.dc" type="text" value="{{system.dc}}" />
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Combate</h3>
+      <div class="stats">
+        <label>Dano</label>
+        <input name="system.damage" type="text" value="{{system.damage}}" />
+        <label>Efeito</label>
+        <input name="system.effect" type="text" value="{{system.effect}}" />
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Magia</h3>
+      <div class="stats">
+        <label>Escola</label>
+        <input name="system.school" type="text" value="{{system.school}}" />
+        <label>Círculo</label>
+        <input name="system.circle" type="number" value="{{system.circle}}" />
+        <label>Componentes</label>
+        <input name="system.components" type="text" value="{{system.components}}" />
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Equipamento</h3>
+      <div class="stats">
+        <label>Preço</label>
+        <input name="system.price" type="text" value="{{system.price}}" />
+        <label>Quantidade</label>
+        <input name="system.quantity" type="number" value="{{system.quantity}}" />
+        <label>Equipado</label>
+        <input name="system.equipped" type="checkbox" {{#if system.equipped}}checked{{/if}} />
+        <label>Slots</label>
+        <input name="system.slotCost" type="number" value="{{system.slotCost}}" />
+      </div>
+    </div>
+
+    {{#ifEq itemType "weapon"}}
+    <div class="panel">
+      <h3>Arma</h3>
+      <div class="stats">
+        <label>Dano</label>
+        <input name="system.weapon.damage" type="text" value="{{system.weapon.damage}}" />
+        <label>Tags</label>
+        <input name="system.weapon.tags" type="text" value="{{joinTags system.weapon.tags}}" />
+        <label>Alcance</label>
+        <input name="system.weapon.range" type="text" value="{{system.weapon.range}}" />
+        <label>Tipo</label>
+        <input name="system.weapon.type" type="text" value="{{system.weapon.type}}" />
+      </div>
+    </div>
+    {{/ifEq}}
+
+    {{#ifEq itemType "armor"}}
+    <div class="panel">
+      <h3>Armadura</h3>
+      <div class="stats">
+        <label>Bônus</label>
+        <input name="system.armor.bonus" type="number" value="{{system.armor.bonus}}" />
+        <label>Penalidade</label>
+        <input name="system.armor.penalty" type="text" value="{{system.armor.penalty}}" />
+        <label>Tags</label>
+        <input name="system.armor.tags" type="text" value="{{joinTags system.armor.tags}}" />
+        <label>Limite Eixo</label>
+        <input name="system.armor.maxAxis" type="number" value="{{system.armor.maxAxis}}" />
+      </div>
+    </div>
+    {{/ifEq}}
+
+    {{#ifEq itemType "shield"}}
+    <div class="panel">
+      <h3>Escudo</h3>
+      <div class="stats">
+        <label>Bônus</label>
+        <input name="system.shield.bonus" type="number" value="{{system.shield.bonus}}" />
+        <label>Tags</label>
+        <input name="system.shield.tags" type="text" value="{{joinTags system.shield.tags}}" />
+        <label>Tipo</label>
+        <input name="system.shield.type" type="text" value="{{system.shield.type}}" />
+      </div>
+    </div>
+    {{/ifEq}}
+  </section>
+
+  <section class="panel">
+    <h3>Descrição</h3>
+    {{editor system.description target="system.description" button=true editable=editable}}
+  </section>
+</form>
