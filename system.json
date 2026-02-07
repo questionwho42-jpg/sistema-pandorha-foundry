@@ -19,27 +19,49 @@
   ],
   "initiative": "1d20 + @system.attributes.level + @system.eixos.mental + @system.aplicacoes.interacao",
   "documentTypes": {
-    "Actor": ["character", "npc", "monster"],
-    "Item": [
-      "ancestry",
-      "trait",
-      "class",
-      "talent",
-      "maneuver",
-      "spell",
-      "weapon",
-      "armor",
-      "shield",
-      "equipment",
-      "consumable",
-      "condition",
-      "background",
-      "feature",
-      "ability",
-      "rune",
-      "disease",
-      "toxin"
-    ]
+    "Actor": {
+      "character": {
+        "htmlFields": ["description", "details.biography", "details.notes"],
+        "filePathFields": {
+          "details.crest": ["IMAGE"],
+          "details.portrait": ["IMAGE"]
+        }
+      },
+      "npc": {
+        "htmlFields": ["description", "details.biography", "details.notes"],
+        "filePathFields": {
+          "details.crest": ["IMAGE"],
+          "details.portrait": ["IMAGE"]
+        }
+      },
+      "monster": {
+        "htmlFields": ["description", "details.biography", "details.notes"],
+        "filePathFields": {
+          "details.crest": ["IMAGE"],
+          "details.portrait": ["IMAGE"]
+        }
+      }
+    },
+    "Item": {
+      "ancestry": { "htmlFields": ["description"] },
+      "trait": { "htmlFields": ["description"] },
+      "class": { "htmlFields": ["description"] },
+      "talent": { "htmlFields": ["description"] },
+      "maneuver": { "htmlFields": ["description"] },
+      "spell": { "htmlFields": ["description"] },
+      "weapon": { "htmlFields": ["description"] },
+      "armor": { "htmlFields": ["description"] },
+      "shield": { "htmlFields": ["description"] },
+      "equipment": { "htmlFields": ["description"] },
+      "consumable": { "htmlFields": ["description"] },
+      "condition": { "htmlFields": ["description"] },
+      "background": { "htmlFields": ["description"] },
+      "feature": { "htmlFields": ["description"] },
+      "ability": { "htmlFields": ["description"] },
+      "rune": { "htmlFields": ["description"] },
+      "disease": { "htmlFields": ["description"] },
+      "toxin": { "htmlFields": ["description"] }
+    }
   },
   "packs": [
     {"name": "ancestries", "label": "Ancestralidades", "path": "packs/ancestries.db", "type": "Item"},
@@ -57,15 +79,5 @@
     {"name": "toxins", "label": "Toxinas", "path": "packs/toxins.db", "type": "Item"},
     {"name": "bestiary", "label": "Bestiário", "path": "packs/bestiary.db", "type": "Actor"},
     {"name": "monster-abilities", "label": "Habilidades de Monstros", "path": "packs/monster-abilities.db", "type": "Item"}
-  ],
-  "htmlFields": [
-    "system.description",
-    "system.details.biography",
-    "system.details.notes",
-    "system.rules.text"
-  ],
-  "filePathFields": [
-    "system.details.crest",
-    "system.details.portrait"
   ]
 }
