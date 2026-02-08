@@ -26,6 +26,66 @@
   overflow: auto;
 }
 
+.pandorha-tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.pandorha-tabs input[type="radio"] {
+  display: none;
+}
+
+.pandorha-tabs label {
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e7d9c4;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease, color 0.2s ease;
+}
+
+.pandorha-tabs label:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+#tab-base:checked + label,
+#tab-origem:checked + label,
+#tab-pericias:checked + label,
+#tab-itens:checked + label,
+#tab-tracos:checked + label,
+#tab-status:checked + label,
+#tab-monstro:checked + label,
+#tab-descricao:checked + label {
+  background: var(--pandorha-accent);
+  color: #1f1408;
+  border-color: var(--pandorha-accent-dark);
+}
+
+.tab-content {
+  display: grid;
+  gap: 16px;
+}
+
+.tab-panel {
+  display: none;
+}
+
+#tab-base:checked ~ .tab-content .tab-base { display: block; }
+#tab-origem:checked ~ .tab-content .tab-origem { display: block; }
+#tab-pericias:checked ~ .tab-content .tab-pericias { display: block; }
+#tab-itens:checked ~ .tab-content .tab-itens { display: block; }
+#tab-tracos:checked ~ .tab-content .tab-tracos { display: block; }
+#tab-status:checked ~ .tab-content .tab-status { display: block; }
+#tab-monstro:checked ~ .tab-content .tab-monstro { display: block; }
+#tab-descricao:checked ~ .tab-content .tab-descricao { display: block; }
+
 .sheet-header {
   display: flex;
   flex-direction: column;
