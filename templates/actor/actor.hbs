@@ -146,12 +146,41 @@
   </section>
 
   <section class="panel">
+    <h3>Traços</h3>
+    <div class="item-section">
+      <div class="item-header">
+        <span>Traços</span>
+        <div class="item-actions">
+          <button type="button" data-action="open-compendium" data-pack="pandorha.traits">Compêndio</button>
+          <button type="button" data-action="add-from-pack" data-pack="pandorha.traits" data-item-type="trait">Adicionar</button>
+          <button type="button" data-action="item-create" data-item-type="trait">Criar</button>
+        </div>
+      </div>
+      <div class="item-list">
+        {{#each items.traits}}
+        <div class="item-row">
+          <span class="item-name">{{name}}</span>
+          <div class="item-actions">
+            <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
+            <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
     <h3>Itens</h3>
 
     <div class="item-section">
       <div class="item-header">
         <span>Armas</span>
-        <button type="button" data-action="item-create" data-item-type="weapon">Adicionar</button>
+        <div class="item-actions">
+          <button type="button" data-action="open-compendium" data-pack="pandorha.equipment">Compêndio</button>
+          <button type="button" data-action="add-from-pack" data-pack="pandorha.equipment" data-item-type="weapon">Adicionar</button>
+          <button type="button" data-action="item-create" data-item-type="weapon">Criar</button>
+        </div>
       </div>
       <div class="item-list">
         {{#each items.weapons}}
@@ -261,7 +290,11 @@
     <div class="item-section">
       <div class="item-header">
         <span>Equipamentos</span>
-        <button type="button" data-action="item-create" data-item-type="equipment">Adicionar</button>
+        <div class="item-actions">
+          <button type="button" data-action="open-compendium" data-pack="pandorha.equipment">Compêndio</button>
+          <button type="button" data-action="add-from-pack" data-pack="pandorha.equipment" data-item-type="equipment">Adicionar</button>
+          <button type="button" data-action="item-create" data-item-type="equipment">Criar</button>
+        </div>
       </div>
       <div class="item-list">
         {{#each items.equipment}}
@@ -279,7 +312,11 @@
     <div class="item-section">
       <div class="item-header">
         <span>Condições</span>
-        <button type="button" data-action="item-create" data-item-type="condition">Adicionar</button>
+        <div class="item-actions">
+          <button type="button" data-action="open-compendium" data-pack="pandorha.conditions">Compêndio</button>
+          <button type="button" data-action="add-from-pack" data-pack="pandorha.conditions" data-item-type="condition">Adicionar</button>
+          <button type="button" data-action="item-create" data-item-type="condition">Criar</button>
+        </div>
       </div>
       <div class="item-list">
         {{#each items.conditions}}
