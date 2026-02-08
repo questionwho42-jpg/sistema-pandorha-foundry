@@ -171,7 +171,11 @@
     <div class="item-section">
       <div class="item-header">
         <span>Magias</span>
-        <button type="button" data-action="item-create" data-item-type="spell">Adicionar</button>
+        <div class="item-actions">
+          <button type="button" data-action="open-compendium" data-pack="pandorha.spells">Compêndio</button>
+          <button type="button" data-action="add-from-pack" data-pack="pandorha.spells" data-item-type="spell">Adicionar</button>
+          <button type="button" data-action="item-create" data-item-type="spell">Criar</button>
+        </div>
       </div>
       <div class="item-list">
         {{#each items.spells}}
@@ -191,7 +195,11 @@
     <div class="item-section">
       <div class="item-header">
         <span>Manobras</span>
-        <button type="button" data-action="item-create" data-item-type="maneuver">Adicionar</button>
+        <div class="item-actions">
+          <button type="button" data-action="open-compendium" data-pack="pandorha.maneuvers">Compêndio</button>
+          <button type="button" data-action="add-from-pack" data-pack="pandorha.maneuvers" data-item-type="maneuver">Adicionar</button>
+          <button type="button" data-action="item-create" data-item-type="maneuver">Criar</button>
+        </div>
       </div>
       <div class="item-list">
         {{#each items.maneuvers}}
@@ -231,7 +239,11 @@
     <div class="item-section">
       <div class="item-header">
         <span>Talentos</span>
-        <button type="button" data-action="item-create" data-item-type="talent">Adicionar</button>
+        <div class="item-actions">
+          <button type="button" data-action="open-compendium" data-pack="pandorha.talents">Compêndio</button>
+          <button type="button" data-action="add-from-pack" data-pack="pandorha.talents" data-item-type="talent">Adicionar</button>
+          <button type="button" data-action="item-create" data-item-type="talent">Criar</button>
+        </div>
       </div>
       <div class="item-list">
         {{#each items.talents}}
