@@ -14,6 +14,7 @@
   color: #eadfcf;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, "Georgia", serif;
   padding: 0;
+  overflow: hidden;
 }
 
 .pandorha-sheet {
@@ -21,6 +22,8 @@
   flex-direction: column;
   gap: 16px;
   padding: 16px 18px 20px;
+  height: 100%;
+  overflow: auto;
 }
 
 .sheet-header {

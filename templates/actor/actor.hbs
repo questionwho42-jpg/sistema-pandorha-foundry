@@ -101,6 +101,33 @@
   </section>
 
   <section class="panel">
+    <h3>Origem</h3>
+    <div class="item-list">
+      <div class="item-row">
+        <span class="item-name">Ancestralidade: {{system.details.ancestry}}</span>
+        <div class="item-actions">
+          <button type="button" data-action="open-compendium" data-pack="pandorha.ancestries">Abrir Compêndio</button>
+          <button type="button" data-action="add-from-pack" data-pack="pandorha.ancestries" data-item-type="ancestry">Adicionar</button>
+        </div>
+      </div>
+      <div class="item-row">
+        <span class="item-name">Antecedente: {{system.details.background}}</span>
+        <div class="item-actions">
+          <button type="button" data-action="open-compendium" data-pack="pandorha.backgrounds">Abrir Compêndio</button>
+          <button type="button" data-action="add-from-pack" data-pack="pandorha.backgrounds" data-item-type="background">Adicionar</button>
+        </div>
+      </div>
+      <div class="item-row">
+        <span class="item-name">Classe: {{system.details.class}}</span>
+        <div class="item-actions">
+          <button type="button" data-action="open-compendium" data-pack="pandorha.classes">Abrir Compêndio</button>
+          <button type="button" data-action="add-from-pack" data-pack="pandorha.classes" data-item-type="class">Adicionar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
     <h3>Perícias</h3>
     <div class="item-list">
       {{#each skills}}

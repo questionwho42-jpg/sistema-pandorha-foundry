@@ -127,5 +127,55 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         await this.document.deleteEmbeddedDocuments("Item", [itemId]);
       });
     });
+
+    root.querySelectorAll("[data-action='open-compendium']").forEach(button => {
+      button.addEventListener("click", async event => {
+        event.preventDefault();
+        const packId = button.getAttribute("data-pack");
+        if (!packId) return;
+        const pack = game.packs?.get(packId);
+        if (pack) pack.render(true);
+      });
+    });
+
+    root.querySelectorAll("[data-action='add-from-pack']").forEach(button => {
+      button.addEventListener("click", async event => {
+        event.preventDefault();
+        const packId = button.getAttribute("data-pack");
+        const type = button.getAttribute("data-item-type");
+        if (!packId) return;
+        const pack = game.packs?.get(packId);
+        if (!pack) return;
+
+        const index = await pack.getIndex();
+        const options = index.map(entry => `<option value="${entry._id}">${entry.name}</option>`).join("");
+        const content = `<form><div class="form-group"><label>Selecione</label><select name="entry">${options}</select></div></form>`;
+
+        new Dialog({
+          title: "Adicionar do Compêndio",
+          content,
+          buttons: {
+            add: {
+              icon: '<i class="fas fa-plus"></i>',
+              label: "Adicionar",
+              callback: async html => {
+                const entryId = html.find("select[name='entry']").val();
+                if (!entryId) return;
+                const doc = await pack.getDocument(entryId);
+                if (!doc) return;
+                const data = doc.toObject();
+                if (type) data.type = type;
+                await this.document.createEmbeddedDocuments("Item", [data]);
+              }
+            },
+            cancel: {
+              icon: '<i class="fas fa-times"></i>',
+              label: "Cancelar"
+            }
+          },
+          default: "add"
+        }).render(true);
+      });
+    });
   }
 }

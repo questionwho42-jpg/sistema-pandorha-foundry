@@ -2,7 +2,7 @@
   "id": "pandorha",
   "title": "Pandorha",
   "description": "Sistema Pandorha para Foundry VTT.",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "compatibility": {
     "minimum": "13",
     "verified": "13.338",
