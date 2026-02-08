@@ -53,7 +53,8 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
   activateListeners(html) {
     super.activateListeners(html);
 
-    const root = this.element;
+    const root = html?.[0] ?? html ?? this.element?.[0] ?? this.element;
+    if (!root) return;
     const rollButton = root.querySelector("[data-action='roll-test']");
     if (rollButton) {
       rollButton.addEventListener("click", async event => {
