@@ -311,6 +311,30 @@
 
     <div class="item-section">
       <div class="item-header">
+        <span>Runas</span>
+        <div class="item-actions">
+          <button type="button" data-action="open-compendium" data-pack="pandorha.runes">Compêndio</button>
+          <button type="button" data-action="add-from-pack" data-pack="pandorha.runes" data-item-type="rune">Adicionar</button>
+          <button type="button" data-action="item-create" data-item-type="rune">Criar</button>
+        </div>
+      </div>
+      <div class="item-list">
+        {{#each items.equipment}}
+        {{#ifEq type "rune"}}
+        <div class="item-row">
+          <span class="item-name">{{name}}</span>
+          <div class="item-actions">
+            <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
+            <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+          </div>
+        </div>
+        {{/ifEq}}
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="item-section">
+      <div class="item-header">
         <span>Condições</span>
         <div class="item-actions">
           <button type="button" data-action="open-compendium" data-pack="pandorha.conditions">Compêndio</button>
@@ -330,7 +354,84 @@
         {{/each}}
       </div>
     </div>
+
+    <div class="item-section">
+      <div class="item-header">
+        <span>Enfermidades</span>
+        <div class="item-actions">
+          <button type="button" data-action="open-compendium" data-pack="pandorha.diseases">Compêndio</button>
+          <button type="button" data-action="add-from-pack" data-pack="pandorha.diseases" data-item-type="disease">Adicionar</button>
+          <button type="button" data-action="item-create" data-item-type="disease">Criar</button>
+        </div>
+      </div>
+      <div class="item-list">
+        {{#each items.equipment}}
+        {{#ifEq type "disease"}}
+        <div class="item-row">
+          <span class="item-name">{{name}}</span>
+          <div class="item-actions">
+            <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
+            <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+          </div>
+        </div>
+        {{/ifEq}}
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="item-section">
+      <div class="item-header">
+        <span>Toxinas</span>
+        <div class="item-actions">
+          <button type="button" data-action="open-compendium" data-pack="pandorha.toxins">Compêndio</button>
+          <button type="button" data-action="add-from-pack" data-pack="pandorha.toxins" data-item-type="toxin">Adicionar</button>
+          <button type="button" data-action="item-create" data-item-type="toxin">Criar</button>
+        </div>
+      </div>
+      <div class="item-list">
+        {{#each items.equipment}}
+        {{#ifEq type "toxin"}}
+        <div class="item-row">
+          <span class="item-name">{{name}}</span>
+          <div class="item-actions">
+            <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
+            <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+          </div>
+        </div>
+        {{/ifEq}}
+        {{/each}}
+      </div>
+    </div>
   </section>
+
+  {{#if isMonster}}
+  <section class="panel">
+    <h3>Habilidades de Monstros</h3>
+    <div class="item-section">
+      <div class="item-header">
+        <span>Habilidades</span>
+        <div class="item-actions">
+          <button type="button" data-action="open-compendium" data-pack="pandorha.monster-abilities">Compêndio</button>
+          <button type="button" data-action="add-from-pack" data-pack="pandorha.monster-abilities" data-item-type="ability">Adicionar</button>
+          <button type="button" data-action="item-create" data-item-type="ability">Criar</button>
+        </div>
+      </div>
+      <div class="item-list">
+        {{#each items.features}}
+        <div class="item-row">
+          <span class="item-name">{{name}}</span>
+          <div class="item-actions">
+            <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
+            <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+            <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
+            <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+  {{/if}}
 
   <section class="panel">
     <h3>Descrição</h3>
