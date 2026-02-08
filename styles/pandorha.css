@@ -27,10 +27,11 @@
 }
 
 .pandorha-tabs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 6px;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .pandorha-tabs input[type="radio"] {
@@ -69,12 +70,17 @@
 }
 
 .tab-content {
+  width: 100%;
   display: grid;
   gap: 16px;
 }
 
 .tab-panel {
   display: none;
+}
+
+.tab-panel .panel {
+  width: 100%;
 }
 
 #tab-base:checked ~ .tab-content .tab-base { display: block; }
