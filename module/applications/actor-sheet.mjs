@@ -60,10 +60,20 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
 
     const root = html?.[0] ?? html ?? this.element?.[0] ?? this.element;
     if (!root) return;
-    const rollButton = root.querySelector("[data-action='roll-test']");
-    if (rollButton) {
-      rollButton.addEventListener("click", async event => {
-        event.preventDefault();
+
+    if (!root.dataset) root.dataset = {};
+    if (root.dataset.pandorhaBound === "1") return;
+    root.dataset.pandorhaBound = "1";
+
+    root.addEventListener("click", async event => {
+      const button = event.target.closest("[data-action]");
+      if (!button) return;
+      event.preventDefault();
+
+      const action = button.getAttribute("data-action");
+      if (!action) return;
+
+      if (action === "roll-test") {
         const eixo = root.querySelector("[name='roll-eixo']")?.value;
         const aplicacao = root.querySelector("[name='roll-aplicacao']")?.value;
         const bonusRaw = root.querySelector("[name='roll-bonus']")?.value ?? "0";
@@ -72,81 +82,61 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         const mapStep = mapValue === "auto" ? "auto" : Number(mapValue);
         const bonus = Number(bonusRaw) || 0;
         await rollTest({ actor: this.document, eixo, aplicacao, bonus, trained, mapStep, label: "Teste Global" });
-      });
-    }
+        return;
+      }
 
-    root.querySelectorAll("[data-action='roll-skill']").forEach(button => {
-      button.addEventListener("click", async event => {
-        event.preventDefault();
+      if (action === "roll-skill") {
         const skillId = button.getAttribute("data-skill-id");
         const skill = SKILLS.find(s => s.id === skillId);
         if (!skill) return;
         await rollSkill({ actor: this.document, skill });
-      });
-    });
+        return;
+      }
 
-    root.querySelectorAll("[data-action='item-roll']").forEach(button => {
-      button.addEventListener("click", async event => {
-        event.preventDefault();
+      if (["item-roll", "item-damage", "item-edit", "item-delete"].includes(action)) {
         const itemId = button.getAttribute("data-item-id");
         const item = this.document.items.get(itemId);
         if (!item) return;
-        const mapValue = root.querySelector("[name='roll-map']")?.value ?? "auto";
-        const mapStep = mapValue === "auto" ? "auto" : Number(mapValue);
-        await rollItem({ actor: this.document, item, mapStep });
-      });
-    });
 
-    root.querySelectorAll("[data-action='item-damage']").forEach(button => {
-      button.addEventListener("click", async event => {
-        event.preventDefault();
-        const itemId = button.getAttribute("data-item-id");
-        const item = this.document.items.get(itemId);
-        if (!item) return;
-        await rollItemDamage({ actor: this.document, item });
-      });
-    });
+        if (action === "item-roll") {
+          const mapValue = root.querySelector("[name='roll-map']")?.value ?? "auto";
+          const mapStep = mapValue === "auto" ? "auto" : Number(mapValue);
+          await rollItem({ actor: this.document, item, mapStep });
+          return;
+        }
 
-    root.querySelectorAll("[data-action='item-create']").forEach(button => {
-      button.addEventListener("click", async event => {
-        event.preventDefault();
+        if (action === "item-damage") {
+          await rollItemDamage({ actor: this.document, item });
+          return;
+        }
+
+        if (action === "item-edit") {
+          item?.sheet?.render(true);
+          return;
+        }
+
+        if (action === "item-delete") {
+          await this.document.deleteEmbeddedDocuments("Item", [itemId]);
+          return;
+        }
+      }
+
+      if (action === "item-create") {
         const type = button.getAttribute("data-item-type");
         if (!type) return;
         await this.document.createEmbeddedDocuments("Item", [{ name: `Novo ${type}`, type }]);
-      });
-    });
+        return;
+      }
 
-    root.querySelectorAll("[data-action='item-edit']").forEach(button => {
-      button.addEventListener("click", event => {
-        event.preventDefault();
-        const itemId = button.getAttribute("data-item-id");
-        const item = this.document.items.get(itemId);
-        item?.sheet?.render(true);
-      });
-    });
-
-    root.querySelectorAll("[data-action='item-delete']").forEach(button => {
-      button.addEventListener("click", async event => {
-        event.preventDefault();
-        const itemId = button.getAttribute("data-item-id");
-        if (!itemId) return;
-        await this.document.deleteEmbeddedDocuments("Item", [itemId]);
-      });
-    });
-
-    root.querySelectorAll("[data-action='open-compendium']").forEach(button => {
-      button.addEventListener("click", async event => {
-        event.preventDefault();
+      if (action === "open-compendium") {
         const packId = button.getAttribute("data-pack");
         if (!packId) return;
         const pack = game.packs?.get(packId);
         if (pack) pack.render(true);
-      });
-    });
+        return;
+      }
 
-    root.querySelectorAll("[data-action='add-from-pack']").forEach(button => {
-      button.addEventListener("click", async event => {
-        event.preventDefault();
+      if (action === "add-from-pack") {
         const packId = button.getAttribute("data-pack");
         const type = button.getAttribute("data-item-type");
         if (!packId) return;
@@ -158,7 +148,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         const content = `<form><div class="form-group"><label>Selecione</label><select name="entry">${options}</select></div></form>`;
 
         new Dialog({
-          title: "Adicionar do CompÃªndio",
+          title: "Adicionar do Compêndio",
           content,
           buttons: {
             add: {
@@ -181,7 +171,8 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
           },
           default: "add"
         }).render(true);
-      });
+        return;
+      }
     });
   }
 }
