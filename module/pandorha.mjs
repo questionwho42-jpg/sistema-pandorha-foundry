@@ -61,3 +61,23 @@ Hooks.on("updateCombat", async (combat, changed) => {
     }
   }
 });
+
+Hooks.on("renderActorSheet", (app, html) => {
+  try {
+    if (!app || app.constructor?.name !== "PandorhaActorSheet") return;
+    console.warn("Pandorha renderActorSheet hook", { app, html });
+    app.activateListeners?.(html);
+  } catch (err) {
+    console.error("Pandorha renderActorSheet hook error", err);
+  }
+});
+
+Hooks.on("renderActorSheetV2", (app, html) => {
+  try {
+    if (!app || app.constructor?.name !== "PandorhaActorSheet") return;
+    console.warn("Pandorha renderActorSheetV2 hook", { app, html });
+    app.activateListeners?.(html);
+  } catch (err) {
+    console.error("Pandorha renderActorSheetV2 hook error", err);
+  }
+});
