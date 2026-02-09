@@ -17,6 +17,8 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
 
   onRender() {
     super.onRender?.();
+    const el = this.element?.[0] ?? this.element;
+    console.log("PandorhaActorSheet onRender", { hasElement: !!el, element: el });
     if (this.element) this.activateListeners(this.element);
   }
 
@@ -63,6 +65,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       element?.querySelector?.("[data-application-part='form']") ??
       element?.querySelector?.("form") ??
       element;
+    console.log("PandorhaActorSheet activateListeners", { hasElement: !!element, hasRoot: !!root, element, root });
     if (!root) return;
 
     if (!root.dataset) root.dataset = {};
@@ -72,6 +75,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     root.addEventListener("click", async event => {
       const button = event.target.closest("[data-action]");
       if (!button) return;
+      console.log("PandorhaActorSheet click", { action: button.getAttribute("data-action"), target: button });
       event.preventDefault();
 
       const action = button.getAttribute("data-action");
@@ -177,6 +181,6 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         }).render(true);
         return;
       }
-    });
+    }, { capture: true });
   }
 }
