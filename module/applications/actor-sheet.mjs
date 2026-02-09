@@ -15,6 +15,11 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     }
   };
 
+  onRender() {
+    super.onRender?.();
+    if (this.element) this.activateListeners(this.element);
+  }
+
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
 
