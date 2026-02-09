@@ -58,7 +58,11 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
   activateListeners(html) {
     super.activateListeners(html);
 
-    const root = html?.[0] ?? html ?? this.element?.[0] ?? this.element;
+    const element = html?.[0] ?? html ?? this.element?.[0] ?? this.element;
+    const root =
+      element?.querySelector?.("[data-application-part='form']") ??
+      element?.querySelector?.("form") ??
+      element;
     if (!root) return;
 
     if (!root.dataset) root.dataset = {};
