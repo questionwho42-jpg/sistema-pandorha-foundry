@@ -17,9 +17,12 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
 
   onRender() {
     super.onRender?.();
-    const el = this.element?.[0] ?? this.element;
-    console.log("PandorhaActorSheet onRender", { hasElement: !!el, element: el });
-    if (this.element) this.activateListeners(this.element);
+    this._bindGlobalClickHandler();
+  }
+
+  onClose() {
+    super.onClose?.();
+    this._unbindGlobalClickHandler();
   }
 
   async _prepareContext(options) {
@@ -57,27 +60,24 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     };
   }
 
-  activateListeners(html) {
-    const element = html?.[0] ?? html ?? this.element?.[0] ?? this.element;
-    const root =
-      element?.querySelector?.("[data-application-part='form']") ??
-      element?.querySelector?.("form") ??
-      element;
-    console.log("PandorhaActorSheet activateListeners", { hasElement: !!element, hasRoot: !!root, element, root });
-    if (!root) return;
+  _bindGlobalClickHandler() {
+    if (this._pandorhaClickHandler) return;
 
-    if (!root.dataset) root.dataset = {};
-    if (root.dataset.pandorhaBound === "1") return;
-    root.dataset.pandorhaBound = "1";
+    this._pandorhaClickHandler = async event => {
+      const appElement = this.element?.[0] ?? this.element;
+      if (!appElement || !appElement.contains(event.target)) return;
 
-    root.addEventListener("click", async event => {
       const button = event.target.closest("[data-action]");
       if (!button) return;
-      console.log("PandorhaActorSheet click", { action: button.getAttribute("data-action"), target: button });
-      event.preventDefault();
 
+      event.preventDefault();
       const action = button.getAttribute("data-action");
       if (!action) return;
+
+      const root =
+        appElement.querySelector?.("[data-application-part='form']") ??
+        appElement.querySelector?.("form") ??
+        appElement;
 
       if (action === "roll-test") {
         const eixo = root.querySelector("[name='roll-eixo']")?.value;
@@ -179,6 +179,14 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         }).render(true);
         return;
       }
-    }, { capture: true });
+    };
+
+    document.addEventListener("click", this._pandorhaClickHandler, true);
+  }
+
+  _unbindGlobalClickHandler() {
+    if (!this._pandorhaClickHandler) return;
+    document.removeEventListener("click", this._pandorhaClickHandler, true);
+    this._pandorhaClickHandler = null;
   }
 }
