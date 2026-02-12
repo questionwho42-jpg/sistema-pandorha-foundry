@@ -67,11 +67,17 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       const appElement = this.element?.[0] ?? this.element;
       if (!appElement || !appElement.contains(event.target)) return;
 
+      console.warn("Pandorha click captured", { target: event.target });
+
       const button = event.target.closest("[data-action]");
-      if (!button) return;
+      if (!button) {
+        console.warn("Pandorha click: no data-action");
+        return;
+      }
 
       event.preventDefault();
       const action = button.getAttribute("data-action");
+      console.warn("Pandorha click action", { action });
       if (!action) return;
 
       const root =
