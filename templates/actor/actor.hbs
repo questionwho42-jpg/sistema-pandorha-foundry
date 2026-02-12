@@ -1,9 +1,9 @@
-ï»¿<form class="pandorha-sheet" autocomplete="off">
+<form class="pandorha-sheet" data-actor-id="{{actor._id}}" autocomplete="off">
   <header class="sheet-header">
     <div class="header-main">
       <input class="name" name="name" type="text" value="{{actor.name}}" />
       <div class="subline">
-        <label>NÃ­vel</label>
+        <label>Nível</label>
         <input name="system.attributes.level" type="number" value="{{system.attributes.level}}" />
         <label>Ancestralidade</label>
         <input name="system.details.ancestry" type="text" value="{{system.details.ancestry}}" />
@@ -23,16 +23,16 @@
     <label for="tab-origem">Origem</label>
 
     <input type="radio" name="pandorha-tab" id="tab-pericias" />
-    <label for="tab-pericias">PerÃ­cias</label>
+    <label for="tab-pericias">Perícias</label>
 
     <input type="radio" name="pandorha-tab" id="tab-itens" />
     <label for="tab-itens">Itens</label>
 
     <input type="radio" name="pandorha-tab" id="tab-tracos" />
-    <label for="tab-tracos">TraÃ§os</label>
+    <label for="tab-tracos">Traços</label>
 
     <input type="radio" name="pandorha-tab" id="tab-status" />
-    <label for="tab-status">CondiÃ§Ãµes</label>
+    <label for="tab-status">Condições</label>
 
     {{#if isMonster}}
     <input type="radio" name="pandorha-tab" id="tab-monstro" />
@@ -40,7 +40,7 @@
     {{/if}}
 
     <input type="radio" name="pandorha-tab" id="tab-descricao" />
-    <label for="tab-descricao">DescriÃ§Ã£o</label>
+    <label for="tab-descricao">Descrição</label>
 
     <div class="tab-content">
       <div class="tab-panel tab-base">
@@ -48,7 +48,7 @@
           <div class="panel">
             <h3>Eixos</h3>
             <div class="stats">
-              <label>FÃ­sico</label>
+              <label>Físico</label>
               <input name="system.eixos.fisico" type="number" value="{{system.eixos.fisico}}" />
               <label>Mental</label>
               <input name="system.eixos.mental" type="number" value="{{system.eixos.mental}}" />
@@ -58,13 +58,13 @@
           </div>
 
           <div class="panel">
-            <h3>AplicaÃ§Ãµes</h3>
+            <h3>Aplicações</h3>
             <div class="stats">
               <label>Conflito</label>
               <input name="system.aplicacoes.conflito" type="number" value="{{system.aplicacoes.conflito}}" />
-              <label>InteraÃ§Ã£o</label>
+              <label>Interação</label>
               <input name="system.aplicacoes.interacao" type="number" value="{{system.aplicacoes.interacao}}" />
-              <label>ResistÃªncia</label>
+              <label>Resistência</label>
               <input name="system.aplicacoes.resistencia" type="number" value="{{system.aplicacoes.resistencia}}" />
             </div>
           </div>
@@ -99,14 +99,14 @@
             <h3>Rolagem</h3>
             <div class="roll-row">
               <select name="roll-eixo">
-                <option value="fisico">FÃ­sico</option>
+                <option value="fisico">Físico</option>
                 <option value="mental">Mental</option>
                 <option value="social">Social</option>
               </select>
               <select name="roll-aplicacao">
                 <option value="conflito">Conflito</option>
-                <option value="interacao">InteraÃ§Ã£o</option>
-                <option value="resistencia">ResistÃªncia</option>
+                <option value="interacao">Interação</option>
+                <option value="resistencia">Resistência</option>
               </select>
               <input name="roll-bonus" type="number" value="0" />
               <select name="roll-map">
@@ -124,7 +124,7 @@
               <div>Iniciativa base: {{system.derived.initiative}}</div>
               <div>Slots usados: {{system.derived.carrySlots}} / {{system.derived.carryMax}}</div>
               <div>Tier: {{system.attributes.tier}}</div>
-              <div>DC Mundana: {{system.derived.dcTable.mundana}} | Desafiadora: {{system.derived.dcTable.desafiadora}} | LendÃ¡ria: {{system.derived.dcTable.lendaria}} | Divina: {{system.derived.dcTable.divina}}</div>
+              <div>DC Mundana: {{system.derived.dcTable.mundana}} | Desafiadora: {{system.derived.dcTable.desafiadora}} | Lendária: {{system.derived.dcTable.lendaria}} | Divina: {{system.derived.dcTable.divina}}</div>
             </div>
           </div>
         </section>
@@ -137,21 +137,21 @@
             <div class="item-row">
               <span class="item-name">Ancestralidade: {{system.details.ancestry}}</span>
               <div class="item-actions">
-                <button type="button" data-action="open-compendium" data-pack="pandorha.ancestries">Abrir CompÃªndio</button>
+                <button type="button" data-action="open-compendium" data-pack="pandorha.ancestries">Abrir Compêndio</button>
                 <button type="button" data-action="add-from-pack" data-pack="pandorha.ancestries" data-item-type="ancestry">Adicionar</button>
               </div>
             </div>
             <div class="item-row">
               <span class="item-name">Antecedente: {{system.details.background}}</span>
               <div class="item-actions">
-                <button type="button" data-action="open-compendium" data-pack="pandorha.backgrounds">Abrir CompÃªndio</button>
+                <button type="button" data-action="open-compendium" data-pack="pandorha.backgrounds">Abrir Compêndio</button>
                 <button type="button" data-action="add-from-pack" data-pack="pandorha.backgrounds" data-item-type="background">Adicionar</button>
               </div>
             </div>
             <div class="item-row">
               <span class="item-name">Classe: {{system.details.class}}</span>
               <div class="item-actions">
-                <button type="button" data-action="open-compendium" data-pack="pandorha.classes">Abrir CompÃªndio</button>
+                <button type="button" data-action="open-compendium" data-pack="pandorha.classes">Abrir Compêndio</button>
                 <button type="button" data-action="add-from-pack" data-pack="pandorha.classes" data-item-type="class">Adicionar</button>
               </div>
             </div>
@@ -161,7 +161,7 @@
 
       <div class="tab-panel tab-pericias">
         <section class="panel">
-          <h3>PerÃ­cias</h3>
+          <h3>Perícias</h3>
           <div class="item-list">
             {{#each skills}}
             <div class="item-row">
@@ -187,7 +187,7 @@
             <div class="item-header">
               <span>Armas</span>
               <div class="item-actions">
-                <button type="button" data-action="open-compendium" data-pack="pandorha.equipment">CompÃªndio</button>
+                <button type="button" data-action="open-compendium" data-pack="pandorha.equipment">Compêndio</button>
                 <button type="button" data-action="add-from-pack" data-pack="pandorha.equipment" data-item-type="weapon">Adicionar</button>
                 <button type="button" data-action="item-create" data-item-type="weapon">Criar</button>
               </div>
@@ -211,7 +211,7 @@
             <div class="item-header">
               <span>Magias</span>
               <div class="item-actions">
-                <button type="button" data-action="open-compendium" data-pack="pandorha.spells">CompÃªndio</button>
+                <button type="button" data-action="open-compendium" data-pack="pandorha.spells">Compêndio</button>
                 <button type="button" data-action="add-from-pack" data-pack="pandorha.spells" data-item-type="spell">Adicionar</button>
                 <button type="button" data-action="item-create" data-item-type="spell">Criar</button>
               </div>
@@ -219,7 +219,7 @@
             <div class="item-list">
               {{#each items.spells}}
               <div class="item-row">
-                <span class="item-name">{{name}} (CÃ­rculo {{system.circle}})</span>
+                <span class="item-name">{{name}} (Círculo {{system.circle}})</span>
                 <div class="item-actions">
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Ataque</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
@@ -235,7 +235,7 @@
             <div class="item-header">
               <span>Manobras</span>
               <div class="item-actions">
-                <button type="button" data-action="open-compendium" data-pack="pandorha.maneuvers">CompÃªndio</button>
+                <button type="button" data-action="open-compendium" data-pack="pandorha.maneuvers">Compêndio</button>
                 <button type="button" data-action="add-from-pack" data-pack="pandorha.maneuvers" data-item-type="maneuver">Adicionar</button>
                 <button type="button" data-action="item-create" data-item-type="maneuver">Criar</button>
               </div>
@@ -257,7 +257,7 @@
 
           <div class="item-section">
             <div class="item-header">
-              <span>CaracterÃ­sticas</span>
+              <span>Características</span>
               <button type="button" data-action="item-create" data-item-type="feature">Adicionar</button>
             </div>
             <div class="item-list">
@@ -279,7 +279,7 @@
             <div class="item-header">
               <span>Talentos</span>
               <div class="item-actions">
-                <button type="button" data-action="open-compendium" data-pack="pandorha.talents">CompÃªndio</button>
+                <button type="button" data-action="open-compendium" data-pack="pandorha.talents">Compêndio</button>
                 <button type="button" data-action="add-from-pack" data-pack="pandorha.talents" data-item-type="talent">Adicionar</button>
                 <button type="button" data-action="item-create" data-item-type="talent">Criar</button>
               </div>
@@ -301,7 +301,7 @@
             <div class="item-header">
               <span>Equipamentos</span>
               <div class="item-actions">
-                <button type="button" data-action="open-compendium" data-pack="pandorha.equipment">CompÃªndio</button>
+                <button type="button" data-action="open-compendium" data-pack="pandorha.equipment">Compêndio</button>
                 <button type="button" data-action="add-from-pack" data-pack="pandorha.equipment" data-item-type="equipment">Adicionar</button>
                 <button type="button" data-action="item-create" data-item-type="equipment">Criar</button>
               </div>
@@ -323,7 +323,7 @@
             <div class="item-header">
               <span>Runas</span>
               <div class="item-actions">
-                <button type="button" data-action="open-compendium" data-pack="pandorha.runes">CompÃªndio</button>
+                <button type="button" data-action="open-compendium" data-pack="pandorha.runes">Compêndio</button>
                 <button type="button" data-action="add-from-pack" data-pack="pandorha.runes" data-item-type="rune">Adicionar</button>
                 <button type="button" data-action="item-create" data-item-type="rune">Criar</button>
               </div>
@@ -347,12 +347,12 @@
 
       <div class="tab-panel tab-tracos">
         <section class="panel">
-          <h3>TraÃ§os</h3>
+          <h3>Traços</h3>
           <div class="item-section">
             <div class="item-header">
-              <span>TraÃ§os</span>
+              <span>Traços</span>
               <div class="item-actions">
-                <button type="button" data-action="open-compendium" data-pack="pandorha.traits">CompÃªndio</button>
+                <button type="button" data-action="open-compendium" data-pack="pandorha.traits">Compêndio</button>
                 <button type="button" data-action="add-from-pack" data-pack="pandorha.traits" data-item-type="trait">Adicionar</button>
                 <button type="button" data-action="item-create" data-item-type="trait">Criar</button>
               </div>
@@ -374,13 +374,13 @@
 
       <div class="tab-panel tab-status">
         <section class="panel">
-          <h3>CondiÃ§Ãµes e Efeitos</h3>
+          <h3>Condições e Efeitos</h3>
 
           <div class="item-section">
             <div class="item-header">
-              <span>CondiÃ§Ãµes</span>
+              <span>Condições</span>
               <div class="item-actions">
-                <button type="button" data-action="open-compendium" data-pack="pandorha.conditions">CompÃªndio</button>
+                <button type="button" data-action="open-compendium" data-pack="pandorha.conditions">Compêndio</button>
                 <button type="button" data-action="add-from-pack" data-pack="pandorha.conditions" data-item-type="condition">Adicionar</button>
                 <button type="button" data-action="item-create" data-item-type="condition">Criar</button>
               </div>
@@ -402,7 +402,7 @@
             <div class="item-header">
               <span>Enfermidades</span>
               <div class="item-actions">
-                <button type="button" data-action="open-compendium" data-pack="pandorha.diseases">CompÃªndio</button>
+                <button type="button" data-action="open-compendium" data-pack="pandorha.diseases">Compêndio</button>
                 <button type="button" data-action="add-from-pack" data-pack="pandorha.diseases" data-item-type="disease">Adicionar</button>
                 <button type="button" data-action="item-create" data-item-type="disease">Criar</button>
               </div>
@@ -426,7 +426,7 @@
             <div class="item-header">
               <span>Toxinas</span>
               <div class="item-actions">
-                <button type="button" data-action="open-compendium" data-pack="pandorha.toxins">CompÃªndio</button>
+                <button type="button" data-action="open-compendium" data-pack="pandorha.toxins">Compêndio</button>
                 <button type="button" data-action="add-from-pack" data-pack="pandorha.toxins" data-item-type="toxin">Adicionar</button>
                 <button type="button" data-action="item-create" data-item-type="toxin">Criar</button>
               </div>
@@ -456,7 +456,7 @@
             <div class="item-header">
               <span>Habilidades</span>
               <div class="item-actions">
-                <button type="button" data-action="open-compendium" data-pack="pandorha.monster-abilities">CompÃªndio</button>
+                <button type="button" data-action="open-compendium" data-pack="pandorha.monster-abilities">Compêndio</button>
                 <button type="button" data-action="add-from-pack" data-pack="pandorha.monster-abilities" data-item-type="ability">Adicionar</button>
                 <button type="button" data-action="item-create" data-item-type="ability">Criar</button>
               </div>
@@ -481,7 +481,7 @@
 
       <div class="tab-panel tab-descricao">
         <section class="panel">
-          <h3>DescriÃ§Ã£o</h3>
+          <h3>Descrição</h3>
           {{editor system.details.biography target="system.details.biography" button=true editable=editable}}
         </section>
       </div>
