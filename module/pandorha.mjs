@@ -81,3 +81,16 @@ Hooks.on("renderActorSheetV2", (app, html) => {
     console.error("Pandorha renderActorSheetV2 hook error", err);
   }
 });
+
+Hooks.once("ready", () => {
+  console.warn("Pandorha ready hook");
+  document.addEventListener(
+    "click",
+    event => {
+      const el = event.target?.closest?.(".pandorha-sheet") ?? event.target;
+      if (!el) return;
+      console.warn("Pandorha global click", { target: event.target, inSheet: !!el.closest?.(".pandorha-sheet") });
+    },
+    true
+  );
+});
