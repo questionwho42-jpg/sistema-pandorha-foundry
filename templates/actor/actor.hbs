@@ -163,6 +163,53 @@
               </div>
             </div>
           </div>
+
+          <div class="item-section">
+            <div class="item-header">
+              <span>Descrições Selecionadas</span>
+            </div>
+            <div class="item-list">
+              {{#each items.ancestries}}
+              <div class="item-row">
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description" open>
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
+              </div>
+              {{/each}}
+              {{#each items.backgrounds}}
+              <div class="item-row">
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description" open>
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
+              </div>
+              {{/each}}
+              {{#each items.classes}}
+              <div class="item-row">
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description" open>
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          </div>
         </section>
       </div>
 
@@ -265,7 +312,15 @@
             <div class="item-list">
               {{#each wizard.ancestry.traits}}
               <div class="item-row">
-                <span class="item-name">{{name}}</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>
@@ -297,7 +352,15 @@
             <div class="item-list">
               {{#each wizard.background.talents}}
               <div class="item-row">
-                <span class="item-name">{{name}}</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>
@@ -322,7 +385,15 @@
             <div class="item-list">
               {{#each wizard.class.passives}}
               <div class="item-row">
-                <span class="item-name">{{name}}</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>
@@ -334,7 +405,15 @@
             <div class="item-list">
               {{#each wizard.class.initialTalents}}
               <div class="item-row">
-                <span class="item-name">{{name}}</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>
@@ -358,7 +437,15 @@
               <div class="item-list">
                 {{#each items}}
                 <div class="item-row">
-                  <span class="item-name">{{name}}</span>
+                  <div class="item-main">
+                    <span class="item-name">{{name}}</span>
+                    {{#if system.description}}
+                    <details class="item-description">
+                      <summary>Descrição</summary>
+                      <div class="item-description-content">{{{system.description}}}</div>
+                    </details>
+                    {{/if}}
+                  </div>
                   <div class="item-actions">
                     <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                   </div>
@@ -406,7 +493,15 @@
             <div class="item-list">
               {{#each wizard.equipment.items}}
               <div class="item-row">
-                <span class="item-name">{{name}} ({{priceLabel}})</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}} ({{priceLabel}})</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-toggle-equipped" data-item-id="{{_id}}">{{#if system.equipped}}Desequipar{{else}}Equipar{{/if}}</button>
                   <button type="button" data-action="wizard-remove-equipment" data-item-id="{{_id}}">Remover</button>
@@ -473,7 +568,15 @@
             <div class="item-list">
               {{#each items.weapons}}
               <div class="item-row">
-                <span class="item-name">{{name}} ({{system.weapon.damage}})</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}} ({{system.weapon.damage}})</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-toggle-equipped" data-item-id="{{_id}}">{{#if system.equipped}}Desequipar{{else}}Equipar{{/if}}</button>
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Ataque</button>
@@ -498,7 +601,15 @@
             <div class="item-list">
               {{#each items.spells}}
               <div class="item-row">
-                <span class="item-name">{{name}} (Círculo {{system.circle}})</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}} (Círculo {{system.circle}})</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Ataque</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
@@ -522,7 +633,15 @@
             <div class="item-list">
               {{#each items.maneuvers}}
               <div class="item-row">
-                <span class="item-name">{{name}}</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
@@ -542,7 +661,15 @@
             <div class="item-list">
               {{#each items.features}}
               <div class="item-row">
-                <span class="item-name">{{name}}</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
@@ -566,7 +693,15 @@
             <div class="item-list">
               {{#each items.talents}}
               <div class="item-row">
-                <span class="item-name">{{name}}</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
@@ -588,7 +723,15 @@
             <div class="item-list">
               {{#each items.equipment}}
               <div class="item-row">
-                <span class="item-name">{{name}} ({{type}})</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}} ({{type}})</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
@@ -608,16 +751,22 @@
               </div>
             </div>
             <div class="item-list">
-              {{#each items.equipment}}
-              {{#ifEq type "rune"}}
+              {{#each items.runes}}
               <div class="item-row">
-                <span class="item-name">{{name}}</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>
               </div>
-              {{/ifEq}}
               {{/each}}
             </div>
           </div>
@@ -699,7 +848,15 @@
             <div class="item-list">
               {{#each items.weapons}}
               <div class="item-row">
-                <span class="item-name">{{name}} ({{system.weapon.damage}})</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}} ({{system.weapon.damage}})</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-toggle-equipped" data-item-id="{{_id}}">{{#if system.equipped}}Desequipar{{else}}Equipar{{/if}}</button>
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Ataque</button>
@@ -724,7 +881,15 @@
               <div class="item-list">
                 {{#each items.armors}}
                 <div class="item-row">
-                  <span class="item-name">{{name}} (+{{system.armor.bonus}} CA)</span>
+                  <div class="item-main">
+                    <span class="item-name">{{name}} (+{{system.armor.bonus}} CA)</span>
+                    {{#if system.description}}
+                    <details class="item-description">
+                      <summary>Descrição</summary>
+                      <div class="item-description-content">{{{system.description}}}</div>
+                    </details>
+                    {{/if}}
+                  </div>
                   <div class="item-actions">
                     <button type="button" data-action="item-toggle-equipped" data-item-id="{{_id}}">{{#if system.equipped}}Desequipar{{else}}Equipar{{/if}}</button>
                     <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
@@ -746,7 +911,15 @@
               <div class="item-list">
                 {{#each items.shields}}
                 <div class="item-row">
-                  <span class="item-name">{{name}} (+{{system.shield.bonus}} CA)</span>
+                  <div class="item-main">
+                    <span class="item-name">{{name}} (+{{system.shield.bonus}} CA)</span>
+                    {{#if system.description}}
+                    <details class="item-description">
+                      <summary>Descrição</summary>
+                      <div class="item-description-content">{{{system.description}}}</div>
+                    </details>
+                    {{/if}}
+                  </div>
                   <div class="item-actions">
                     <button type="button" data-action="item-toggle-equipped" data-item-id="{{_id}}">{{#if system.equipped}}Desequipar{{else}}Equipar{{/if}}</button>
                     <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
@@ -770,7 +943,15 @@
               <div class="item-list">
                 {{#each items.consumables}}
                 <div class="item-row">
-                  <span class="item-name">{{name}}</span>
+                  <div class="item-main">
+                    <span class="item-name">{{name}}</span>
+                    {{#if system.description}}
+                    <details class="item-description">
+                      <summary>Descrição</summary>
+                      <div class="item-description-content">{{{system.description}}}</div>
+                    </details>
+                    {{/if}}
+                  </div>
                   <div class="item-actions">
                     <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                     <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
@@ -791,7 +972,15 @@
               <div class="item-list">
                 {{#each items.gear}}
                 <div class="item-row">
-                  <span class="item-name">{{name}}</span>
+                  <div class="item-main">
+                    <span class="item-name">{{name}}</span>
+                    {{#if system.description}}
+                    <details class="item-description">
+                      <summary>Descrição</summary>
+                      <div class="item-description-content">{{{system.description}}}</div>
+                    </details>
+                    {{/if}}
+                  </div>
                   <div class="item-actions">
                     <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                     <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
@@ -814,7 +1003,15 @@
             <div class="item-list">
               {{#each items.runes}}
               <div class="item-row">
-                <span class="item-name">{{name}}</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
@@ -841,7 +1038,15 @@
             <div class="item-list">
               {{#each items.traits}}
               <div class="item-row">
-                <span class="item-name">{{name}}</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
@@ -869,7 +1074,15 @@
             <div class="item-list">
               {{#each items.conditions}}
               <div class="item-row">
-                <span class="item-name">{{name}}</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
@@ -889,16 +1102,22 @@
               </div>
             </div>
             <div class="item-list">
-              {{#each items.equipment}}
-              {{#ifEq type "disease"}}
+              {{#each items.diseases}}
               <div class="item-row">
-                <span class="item-name">{{name}}</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>
               </div>
-              {{/ifEq}}
               {{/each}}
             </div>
           </div>
@@ -913,16 +1132,22 @@
               </div>
             </div>
             <div class="item-list">
-              {{#each items.equipment}}
-              {{#ifEq type "toxin"}}
+              {{#each items.toxins}}
               <div class="item-row">
-                <span class="item-name">{{name}}</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>
               </div>
-              {{/ifEq}}
               {{/each}}
             </div>
           </div>
@@ -945,7 +1170,15 @@
             <div class="item-list">
               {{#each items.features}}
               <div class="item-row">
-                <span class="item-name">{{name}}</span>
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descrição</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
                 <div class="item-actions">
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>

@@ -151,12 +151,15 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     const items = this.document.items.map(i => i.toObject());
     const byType = {
       ancestries: items.filter(i => i.type === "ancestry"),
+      backgrounds: items.filter(i => i.type === "background"),
       traits: items.filter(i => i.type === "trait"),
       classes: items.filter(i => i.type === "class"),
       talents: items.filter(i => i.type === "talent"),
       maneuvers: items.filter(i => i.type === "maneuver"),
       spells: items.filter(i => i.type === "spell"),
       conditions: items.filter(i => i.type === "condition"),
+      diseases: items.filter(i => i.type === "disease"),
+      toxins: items.filter(i => i.type === "toxin"),
       armors: items.filter(i => i.type === "armor"),
       shields: items.filter(i => i.type === "shield"),
       consumables: items.filter(i => i.type === "consumable"),
