@@ -1,8 +1,8 @@
-{
+ï»¿{
   "id": "pandorha",
   "title": "Pandorha",
   "description": "Sistema Pandorha para Foundry VTT.",
-  "version": "0.1.25",
+  "version": "0.1.27",
   "compatibility": {
     "minimum": "13",
     "verified": "13.338",
@@ -15,7 +15,7 @@
   "languages": [
     {
       "lang": "pt-BR",
-      "name": "Português (Brasil)",
+      "name": "PortuguÃªs (Brasil)",
       "path": "lang/pt-BR.json"
     }
   ],
@@ -67,19 +67,20 @@
   },
   "packs": [
     {"name": "ancestries", "label": "Ancestralidades", "path": "packs/ancestries.db", "type": "Item"},
-    {"name": "traits", "label": "Traços", "path": "packs/traits.db", "type": "Item"},
+    {"name": "traits", "label": "TraÃ§os", "path": "packs/traits.db", "type": "Item"},
     {"name": "classes", "label": "Classes", "path": "packs/classes.db", "type": "Item"},
-    {"name": "class-features", "label": "Características de Classe", "path": "packs/class-features.db", "type": "Item"},
+    {"name": "class-features", "label": "CaracterÃ­sticas de Classe", "path": "packs/class-features.db", "type": "Item"},
     {"name": "talents", "label": "Talentos", "path": "packs/talents.db", "type": "Item"},
     {"name": "maneuvers", "label": "Manobras", "path": "packs/maneuvers.db", "type": "Item"},
     {"name": "spells", "label": "Magias", "path": "packs/spells.db", "type": "Item"},
     {"name": "equipment", "label": "Equipamentos", "path": "packs/equipment.db", "type": "Item"},
-    {"name": "conditions", "label": "Condições", "path": "packs/conditions.db", "type": "Item"},
+    {"name": "conditions", "label": "CondiÃ§Ãµes", "path": "packs/conditions.db", "type": "Item"},
     {"name": "backgrounds", "label": "Antecedentes", "path": "packs/backgrounds.db", "type": "Item"},
     {"name": "runes", "label": "Runas", "path": "packs/runes.db", "type": "Item"},
     {"name": "diseases", "label": "Enfermidades", "path": "packs/diseases.db", "type": "Item"},
     {"name": "toxins", "label": "Toxinas", "path": "packs/toxins.db", "type": "Item"},
-    {"name": "bestiary", "label": "Bestiário", "path": "packs/bestiary.db", "type": "Actor"},
+    {"name": "bestiary", "label": "BestiÃ¡rio", "path": "packs/bestiary.db", "type": "Actor"},
     {"name": "monster-abilities", "label": "Habilidades de Monstros", "path": "packs/monster-abilities.db", "type": "Item"}
   ]
 }
+
