@@ -22,6 +22,11 @@
     <input type="radio" name="pandorha-tab" id="tab-origem" data-action="switch-tab" data-tab="origem" {{#ifEq activeTab "origem"}}checked{{/ifEq}} />
     <label for="tab-origem" data-action="switch-tab" data-tab="origem">Origem</label>
 
+    {{#if isCharacter}}
+    <input type="radio" name="pandorha-tab" id="tab-criacao" data-action="switch-tab" data-tab="criacao" {{#ifEq activeTab "criacao"}}checked{{/ifEq}} />
+    <label for="tab-criacao" data-action="switch-tab" data-tab="criacao">Criacao</label>
+    {{/if}}
+
     <input type="radio" name="pandorha-tab" id="tab-pericias" data-action="switch-tab" data-tab="pericias" {{#ifEq activeTab "pericias"}}checked{{/ifEq}} />
     <label for="tab-pericias" data-action="switch-tab" data-tab="pericias">Perícias</label>
 
@@ -158,6 +163,96 @@
           </div>
         </section>
       </div>
+
+      {{#if isCharacter}}
+      <div class="tab-panel tab-criacao">
+        <section class="panel wizard-panel">
+          <h3>Wizard de Criacao</h3>
+
+          <div class="wizard-progress">
+            <div class="wizard-progress-bar" style="width: {{wizard.progress}}%;"></div>
+          </div>
+          <div class="wizard-progress-text">Etapa {{wizard.step}} de {{wizard.total}}</div>
+
+          <div class="wizard-steps">
+            <button type="button" data-action="wizard-go-step" data-step="1">1. Base</button>
+            <button type="button" data-action="wizard-go-step" data-step="2">2. Ancestralidade</button>
+            <button type="button" data-action="wizard-go-step" data-step="3">3. Antecedente</button>
+            <button type="button" data-action="wizard-go-step" data-step="4">4. Classe</button>
+            <button type="button" data-action="wizard-go-step" data-step="5">5. Finalizar</button>
+          </div>
+
+          {{#ifEq wizard.step 1}}
+          <div class="wizard-step-panel">
+            <h4>Passo 1: Base</h4>
+            <p>Defina os dados iniciais do personagem.</p>
+            <div class="stats">
+              <label>Nome</label>
+              <input name="name" type="text" value="{{actor.name}}" />
+              <label>Nivel</label>
+              <input name="system.attributes.level" type="number" value="{{system.attributes.level}}" />
+            </div>
+          </div>
+          {{/ifEq}}
+
+          {{#ifEq wizard.step 2}}
+          <div class="wizard-step-panel">
+            <h4>Passo 2: Ancestralidade</h4>
+            <p>Escolha uma ancestralidade no compendio.</p>
+            <div class="wizard-actions">
+              <button type="button" data-action="open-compendium" data-pack="pandorha.ancestries">Abrir Compendio</button>
+              <button type="button" data-action="add-from-pack" data-pack="pandorha.ancestries" data-item-type="ancestry" data-next-step="3">Selecionar</button>
+            </div>
+            <div class="wizard-selected">Atual: {{system.details.ancestry}}</div>
+          </div>
+          {{/ifEq}}
+
+          {{#ifEq wizard.step 3}}
+          <div class="wizard-step-panel">
+            <h4>Passo 3: Antecedente</h4>
+            <p>Escolha um antecedente no compendio.</p>
+            <div class="wizard-actions">
+              <button type="button" data-action="open-compendium" data-pack="pandorha.backgrounds">Abrir Compendio</button>
+              <button type="button" data-action="add-from-pack" data-pack="pandorha.backgrounds" data-item-type="background" data-next-step="4">Selecionar</button>
+            </div>
+            <div class="wizard-selected">Atual: {{system.details.background}}</div>
+          </div>
+          {{/ifEq}}
+
+          {{#ifEq wizard.step 4}}
+          <div class="wizard-step-panel">
+            <h4>Passo 4: Classe</h4>
+            <p>Escolha uma classe no compendio.</p>
+            <div class="wizard-actions">
+              <button type="button" data-action="open-compendium" data-pack="pandorha.classes">Abrir Compendio</button>
+              <button type="button" data-action="add-from-pack" data-pack="pandorha.classes" data-item-type="class" data-next-step="5">Selecionar</button>
+            </div>
+            <div class="wizard-selected">Atual: {{system.details.class}}</div>
+          </div>
+          {{/ifEq}}
+
+          {{#ifEq wizard.step 5}}
+          <div class="wizard-step-panel">
+            <h4>Passo 5: Revisao</h4>
+            <p>Confira os dados da origem e conclua.</p>
+            <ul class="wizard-summary">
+              <li><strong>Nome:</strong> {{actor.name}}</li>
+              <li><strong>Nivel:</strong> {{system.attributes.level}}</li>
+              <li><strong>Ancestralidade:</strong> {{system.details.ancestry}}</li>
+              <li><strong>Antecedente:</strong> {{system.details.background}}</li>
+              <li><strong>Classe:</strong> {{system.details.class}}</li>
+            </ul>
+            <button type="button" data-action="wizard-finish">Concluir e Ir para Base</button>
+          </div>
+          {{/ifEq}}
+
+          <div class="wizard-nav">
+            <button type="button" data-action="wizard-prev" {{#ifEq wizard.step 1}}disabled{{/ifEq}}>Anterior</button>
+            <button type="button" data-action="wizard-next" {{#ifEq wizard.step 5}}disabled{{/ifEq}}>Proximo</button>
+          </div>
+        </section>
+      </div>
+      {{/if}}
 
       <div class="tab-panel tab-pericias">
         <section class="panel">

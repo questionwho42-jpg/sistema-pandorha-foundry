@@ -2,6 +2,12 @@ import { rollTest, rollSkill, rollItem, rollItemDamage } from "../data/rolls.mjs
 import { SKILLS } from "../data/skills.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
+const WIZARD_STEPS = 5;
+const WIZARD_REQUIREMENTS = {
+  2: { field: "ancestry", label: "ancestralidade" },
+  3: { field: "background", label: "antecedente" },
+  4: { field: "class", label: "classe" }
+};
 
 export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ActorSheetV2) {
   static DEFAULT_OPTIONS = foundry.utils.mergeObject(super.DEFAULT_OPTIONS, {
@@ -17,7 +23,11 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       "item-edit": function (event, target) { return this._onClickAction(event, target); },
       "item-delete": function (event, target) { return this._onClickAction(event, target); },
       "open-compendium": function (event, target) { return this._onClickAction(event, target); },
-      "add-from-pack": function (event, target) { return this._onClickAction(event, target); }
+      "add-from-pack": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-prev": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-next": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-go-step": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-finish": function (event, target) { return this._onClickAction(event, target); }
     }
   });
 
@@ -51,6 +61,8 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     }));
 
     const activeTab = this.document.getFlag("pandorha", "sheetTab") ?? "base";
+    const wizardStepRaw = Number(this.document.getFlag("pandorha", "wizardStep") ?? 1);
+    const wizardStep = Number.isFinite(wizardStepRaw) ? Math.min(WIZARD_STEPS, Math.max(1, wizardStepRaw)) : 1;
 
     return {
       ...context,
@@ -58,6 +70,11 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       items: byType,
       skills,
       activeTab,
+      wizard: {
+        step: wizardStep,
+        total: WIZARD_STEPS,
+        progress: Math.round((wizardStep / WIZARD_STEPS) * 100)
+      },
       isCharacter: this.document.type === "character",
       isNpc: this.document.type === "npc",
       isMonster: this.document.type === "monster",
@@ -81,6 +98,49 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       const tab = target.dataset.tab;
       if (!tab) return;
       await actor.setFlag("pandorha", "sheetTab", tab);
+      return;
+    }
+
+    if (action === "wizard-go-step") {
+      const requestedStep = Number(target.dataset.step);
+      if (!Number.isFinite(requestedStep)) return;
+      const step = Math.min(WIZARD_STEPS, Math.max(1, requestedStep));
+      await actor.setFlag("pandorha", "wizardStep", step);
+      await actor.setFlag("pandorha", "sheetTab", "criacao");
+      return;
+    }
+
+    if (action === "wizard-prev" || action === "wizard-next") {
+      const currentRaw = Number(actor.getFlag("pandorha", "wizardStep") ?? 1);
+      const current = Number.isFinite(currentRaw) ? Math.min(WIZARD_STEPS, Math.max(1, currentRaw)) : 1;
+      const requirement = action === "wizard-next" ? WIZARD_REQUIREMENTS[current] : undefined;
+      if (requirement) {
+        const value = actor.system.details?.[requirement.field];
+        if (!value) {
+          ui.notifications?.warn(`Selecione uma ${requirement.label} antes de continuar.`);
+          return;
+        }
+      }
+
+      const delta = action === "wizard-next" ? 1 : -1;
+      const nextStep = Math.min(WIZARD_STEPS, Math.max(1, current + delta));
+      await actor.setFlag("pandorha", "wizardStep", nextStep);
+      await actor.setFlag("pandorha", "sheetTab", "criacao");
+      return;
+    }
+
+    if (action === "wizard-finish") {
+      const missing = Object.values(WIZARD_REQUIREMENTS)
+        .map(req => req.field)
+        .find(field => !actor.system.details?.[field]);
+
+      if (missing) {
+        ui.notifications?.warn("Finalize ancestralidade, antecedente e classe antes de concluir.");
+        return;
+      }
+
+      await actor.setFlag("pandorha", "sheetTab", "base");
+      ui.notifications?.info("Criacao concluida. Voce ja pode ajustar os detalhes finais na aba Base.");
       return;
     }
 
@@ -150,6 +210,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     if (action === "add-from-pack") {
       const packId = target.dataset.pack;
       const type = target.dataset.itemType;
+      const nextStep = Number(target.dataset.nextStep ?? 0);
       if (!packId) return;
       const pack = game.packs?.get(packId);
       if (!pack) return;
@@ -189,6 +250,11 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
 
               if (originDetailsKey && created?.[0]) {
                 await actor.update({ [`system.details.${originDetailsKey}`]: created[0].name });
+              }
+
+              if (Number.isFinite(nextStep) && nextStep >= 1 && nextStep <= WIZARD_STEPS) {
+                await actor.setFlag("pandorha", "sheetTab", "criacao");
+                await actor.setFlag("pandorha", "wizardStep", nextStep);
               }
             }
           },
