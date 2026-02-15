@@ -29,7 +29,7 @@ export class PandorhaActor extends Actor {
     const armorItems = this.items.filter(i => i.type === "armor" && i.system.equipped);
     const shieldItems = this.items.filter(i => i.type === "shield" && i.system.equipped);
 
-    const armor = armorItems[0];
+    const armor = armorItems.sort((a, b) => (b.system?.armor?.bonus ?? 0) - (a.system?.armor?.bonus ?? 0))[0];
     const armorBonus = armor?.system.armor?.bonus ?? 0;
     const armorMaxAxis = armor?.system.armor?.maxAxis ?? 0;
     const limitedAxis = armorMaxAxis > 0 ? Math.min(fis, armorMaxAxis) : fis;
@@ -47,12 +47,53 @@ export class PandorhaActor extends Actor {
   }
 
   _calculateCarrySlots() {
-    let slots = 0;
-    for (const item of this.items) {
-      const cost = Number(item.system.slotCost ?? 0);
-      if (!Number.isNaN(cost)) slots += cost;
+    return this.items.reduce((total, item) => total + this._getItemSlotCost(item), 0);
+  }
+
+  _getItemSlotCost(item) {
+    const explicit = Number(item.system?.slotCost ?? 0);
+    if (Number.isFinite(explicit) && explicit > 0) return explicit;
+
+    const normalize = value => String(value ?? "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+
+    const quantity = Math.max(1, Number(item.system?.quantity ?? 1) || 1);
+    const category = normalize(item.system?.details?.category ?? "");
+    const name = normalize(item.name ?? "");
+    const type = item.type;
+
+    if (type === "consumable" || type === "rune") return 0;
+    if (type === "equipment") return Math.ceil(quantity / 3);
+
+    if (type === "armor") {
+      if (category.includes("pesad")) return 2;
+      return 1;
     }
-    return slots;
+
+    if (type === "shield") {
+      const shieldType = normalize(item.system?.shield?.type ?? "");
+      if (name.includes("torre") || shieldType.includes("pesad")) return 2;
+      return 1;
+    }
+
+    if (type === "weapon") {
+      const tagsRaw = item.system?.weapon?.tags ?? [];
+      const tags = Array.isArray(tagsRaw)
+        ? tagsRaw.map(normalize)
+        : String(tagsRaw).split(",").map(normalize);
+      const isLongWeapon =
+        tags.some(t => t.includes("2 maos") || t.includes("pesada"))
+        || name.includes("arco")
+        || name.includes("besta")
+        || name.includes("cajado")
+        || name.includes("montante")
+        || name.includes("alabarda");
+      return isLongWeapon ? 2 : 1;
+    }
+
+    return 0;
   }
 
   _getTier(level) {

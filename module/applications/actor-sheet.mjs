@@ -86,6 +86,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       "item-create": function (event, target) { return this._onClickAction(event, target); },
       "item-edit": function (event, target) { return this._onClickAction(event, target); },
       "item-delete": function (event, target) { return this._onClickAction(event, target); },
+      "item-toggle-equipped": function (event, target) { return this._onClickAction(event, target); },
       "open-compendium": function (event, target) { return this._onClickAction(event, target); },
       "add-from-pack": function (event, target) { return this._onClickAction(event, target); },
       "wizard-prev": function (event, target) { return this._onClickAction(event, target); },
@@ -580,7 +581,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       return;
     }
 
-    if (["item-roll", "item-damage", "item-edit", "item-delete"].includes(action)) {
+    if (["item-roll", "item-damage", "item-edit", "item-delete", "item-toggle-equipped"].includes(action)) {
       const itemId = target.dataset.itemId;
       const item = actor.items.get(itemId);
       if (!item) return;
@@ -604,6 +605,12 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
 
       if (action === "item-delete") {
         await actor.deleteEmbeddedDocuments("Item", [itemId]);
+        return;
+      }
+
+      if (action === "item-toggle-equipped") {
+        const current = item.system?.equipped ?? false;
+        await item.update({ "system.equipped": !current });
         return;
       }
     }
@@ -666,6 +673,17 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
 
               if (originDetailsKey && created?.[0]) {
                 await actor.update({ [`system.details.${originDetailsKey}`]: created[0].name });
+              }
+
+              if (created?.[0] && ["weapon", "armor", "shield"].includes(created[0].type)) {
+                const hasOtherEquippedSameType = actor.items.some(i =>
+                  i.type === created[0].type
+                  && i.id !== created[0].id
+                  && Boolean(i.system?.equipped)
+                );
+                if (!hasOtherEquippedSameType) {
+                  await created[0].update({ "system.equipped": true });
+                }
               }
 
               if (Number.isFinite(nextStep) && nextStep >= 1 && nextStep <= WIZARD_STEPS) {

@@ -449,6 +449,7 @@
               <div class="item-row">
                 <span class="item-name">{{name}} ({{system.weapon.damage}})</span>
                 <div class="item-actions">
+                  <button type="button" data-action="item-toggle-equipped" data-item-id="{{_id}}">{{#if system.equipped}}Desequipar{{else}}Equipar{{/if}}</button>
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Ataque</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
@@ -674,6 +675,7 @@
               <div class="item-row">
                 <span class="item-name">{{name}} ({{system.weapon.damage}})</span>
                 <div class="item-actions">
+                  <button type="button" data-action="item-toggle-equipped" data-item-id="{{_id}}">{{#if system.equipped}}Desequipar{{else}}Equipar{{/if}}</button>
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Ataque</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
@@ -698,6 +700,7 @@
                 <div class="item-row">
                   <span class="item-name">{{name}} (+{{system.armor.bonus}} CA)</span>
                   <div class="item-actions">
+                    <button type="button" data-action="item-toggle-equipped" data-item-id="{{_id}}">{{#if system.equipped}}Desequipar{{else}}Equipar{{/if}}</button>
                     <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                     <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                   </div>
@@ -719,6 +722,7 @@
                 <div class="item-row">
                   <span class="item-name">{{name}} (+{{system.shield.bonus}} CA)</span>
                   <div class="item-actions">
+                    <button type="button" data-action="item-toggle-equipped" data-item-id="{{_id}}">{{#if system.equipped}}Desequipar{{else}}Equipar{{/if}}</button>
                     <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                     <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                   </div>
