@@ -840,7 +840,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       .replace(/<\/p>/gi, "\n")
       .replace(/<[^>]+>/g, "")
       .replace(/\r/g, "");
-    const marker = plain.split(/Talentos do .*?\(Escolha 1\)/i);
+    const marker = plain.split(/Talentos d[oa] .*?\(Escolha 1\)/i);
     const section = marker[1] ?? "";
     if (!section) return [];
 
@@ -848,11 +848,14 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     const lines = section.split("\n").map(line => line.trim()).filter(Boolean);
     for (const line of lines) {
       if (/^##\s*\d+/.test(line)) break;
-      const match = line.match(/^- \*\*(.+?)\*\*:\s*(.+)$/);
+      const match = line.match(/^- \*\*(.+?)\*\*\s*:?\s*(.+)$/);
       if (!match) continue;
+      const name = match[1].replace(/:\s*$/, "").trim();
+      const description = match[2].trim();
+      if (!name || !description) continue;
       options.push({
-        name: match[1].replace(/\*\*/g, "").trim(),
-        description: match[2].replace(/\*\*/g, "").trim()
+        name,
+        description: description.replace(/\*\*/g, "").trim()
       });
     }
     return options.slice(0, 3);
