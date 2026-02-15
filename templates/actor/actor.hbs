@@ -16,31 +16,31 @@
   </header>
 
   <nav class="pandorha-tabs" aria-label="Abas da Ficha">
-    <input type="radio" name="pandorha-tab" id="tab-base" checked />
-    <label for="tab-base">Base</label>
+    <input type="radio" name="pandorha-tab" id="tab-base" data-action="switch-tab" data-tab="base" {{#ifEq activeTab "base"}}checked{{/ifEq}} />
+    <label for="tab-base" data-action="switch-tab" data-tab="base">Base</label>
 
-    <input type="radio" name="pandorha-tab" id="tab-origem" />
-    <label for="tab-origem">Origem</label>
+    <input type="radio" name="pandorha-tab" id="tab-origem" data-action="switch-tab" data-tab="origem" {{#ifEq activeTab "origem"}}checked{{/ifEq}} />
+    <label for="tab-origem" data-action="switch-tab" data-tab="origem">Origem</label>
 
-    <input type="radio" name="pandorha-tab" id="tab-pericias" />
-    <label for="tab-pericias">Perícias</label>
+    <input type="radio" name="pandorha-tab" id="tab-pericias" data-action="switch-tab" data-tab="pericias" {{#ifEq activeTab "pericias"}}checked{{/ifEq}} />
+    <label for="tab-pericias" data-action="switch-tab" data-tab="pericias">Perícias</label>
 
-    <input type="radio" name="pandorha-tab" id="tab-itens" />
-    <label for="tab-itens">Itens</label>
+    <input type="radio" name="pandorha-tab" id="tab-itens" data-action="switch-tab" data-tab="itens" {{#ifEq activeTab "itens"}}checked{{/ifEq}} />
+    <label for="tab-itens" data-action="switch-tab" data-tab="itens">Itens</label>
 
-    <input type="radio" name="pandorha-tab" id="tab-tracos" />
-    <label for="tab-tracos">Traços</label>
+    <input type="radio" name="pandorha-tab" id="tab-tracos" data-action="switch-tab" data-tab="tracos" {{#ifEq activeTab "tracos"}}checked{{/ifEq}} />
+    <label for="tab-tracos" data-action="switch-tab" data-tab="tracos">Traços</label>
 
-    <input type="radio" name="pandorha-tab" id="tab-status" />
-    <label for="tab-status">Condições</label>
+    <input type="radio" name="pandorha-tab" id="tab-status" data-action="switch-tab" data-tab="status" {{#ifEq activeTab "status"}}checked{{/ifEq}} />
+    <label for="tab-status" data-action="switch-tab" data-tab="status">Condições</label>
 
     {{#if isMonster}}
-    <input type="radio" name="pandorha-tab" id="tab-monstro" />
-    <label for="tab-monstro">Monstro</label>
+    <input type="radio" name="pandorha-tab" id="tab-monstro" data-action="switch-tab" data-tab="monstro" {{#ifEq activeTab "monstro"}}checked{{/ifEq}} />
+    <label for="tab-monstro" data-action="switch-tab" data-tab="monstro">Monstro</label>
     {{/if}}
 
-    <input type="radio" name="pandorha-tab" id="tab-descricao" />
-    <label for="tab-descricao">Descrição</label>
+    <input type="radio" name="pandorha-tab" id="tab-descricao" data-action="switch-tab" data-tab="descricao" {{#ifEq activeTab "descricao"}}checked{{/ifEq}} />
+    <label for="tab-descricao" data-action="switch-tab" data-tab="descricao">Descrição</label>
 
     <div class="tab-content">
       <div class="tab-panel tab-base">

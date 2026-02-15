@@ -8,6 +8,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     classes: ["pandorha", "sheet", "actor"],
     position: { width: 900, height: 720 },
     actions: {
+      "switch-tab": function (event, target) { return this._onClickAction(event, target); },
       "roll-test": function (event, target) { return this._onClickAction(event, target); },
       "roll-skill": function (event, target) { return this._onClickAction(event, target); },
       "item-roll": function (event, target) { return this._onClickAction(event, target); },
@@ -49,11 +50,14 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       bonus: this.document.system.skills?.[skill.id]?.bonus ?? 0
     }));
 
+    const activeTab = this.document.getFlag("pandorha", "sheetTab") ?? "base";
+
     return {
       ...context,
       system: this.document.system,
       items: byType,
       skills,
+      activeTab,
       isCharacter: this.document.type === "character",
       isNpc: this.document.type === "npc",
       isMonster: this.document.type === "monster",
@@ -72,6 +76,13 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       this.element?.querySelector?.("[data-application-part='form']") ??
       this.element?.querySelector?.("form") ??
       this.element;
+
+    if (action === "switch-tab") {
+      const tab = target.dataset.tab;
+      if (!tab) return;
+      await actor.setFlag("pandorha", "sheetTab", tab);
+      return;
+    }
 
     if (action === "roll-test") {
       const eixo = root?.querySelector?.("[name='roll-eixo']")?.value;
