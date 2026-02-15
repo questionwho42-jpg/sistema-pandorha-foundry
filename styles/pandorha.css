@@ -61,6 +61,7 @@
 #tab-criacao:checked + label,
 #tab-pericias:checked + label,
 #tab-itens:checked + label,
+#tab-equipamentos:checked + label,
 #tab-tracos:checked + label,
 #tab-status:checked + label,
 #tab-monstro:checked + label,
@@ -89,6 +90,7 @@
 #tab-criacao:checked ~ .tab-content .tab-criacao { display: block; }
 #tab-pericias:checked ~ .tab-content .tab-pericias { display: block; }
 #tab-itens:checked ~ .tab-content .tab-itens { display: block; }
+#tab-equipamentos:checked ~ .tab-content .tab-equipamentos { display: block; }
 #tab-tracos:checked ~ .tab-content .tab-tracos { display: block; }
 #tab-status:checked ~ .tab-content .tab-status { display: block; }
 #tab-monstro:checked ~ .tab-content .tab-monstro { display: block; }
@@ -317,6 +319,98 @@
   margin-bottom: 8px;
   color: var(--pandorha-ink);
   font-weight: 600;
+}
+
+.equipment-rules-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.equipment-live-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.equipment-live-card {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(216, 198, 174, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--pandorha-ink);
+  display: grid;
+  gap: 6px;
+}
+
+.equipment-live-card h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--pandorha-accent-dark);
+}
+
+.equipment-live-card .value {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.equipment-live-card p,
+.equipment-live-card ul {
+  margin: 0;
+  color: var(--pandorha-muted);
+}
+
+.equipment-live-card ul {
+  padding-left: 16px;
+}
+
+.equipment-rule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.equipment-rule-card {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(216, 198, 174, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.equipment-rule-card h4 {
+  margin: 0;
+  color: var(--pandorha-accent-dark);
+  font-size: 0.95rem;
+}
+
+.equipment-rule-list {
+  display: grid;
+  gap: 6px;
+}
+
+.equipment-rule-row {
+  display: grid;
+  gap: 3px;
+  color: var(--pandorha-ink);
+  border-top: 1px solid rgba(140, 110, 70, 0.2);
+  padding-top: 6px;
+}
+
+.equipment-rule-row:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.equipment-rule-row strong {
+  color: var(--pandorha-muted);
+  font-weight: 600;
+}
+
+.equipment-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
 }
 
 label {

@@ -213,68 +213,120 @@ function parseEquipment() {
   const text = read("04_Arsenal_e_Economia.md");
   const equipment = [];
 
-  function parseTable(sectionText, type) {
-    const lines = sectionText.split("\n").filter(line => line.startsWith("|"));
-    if (lines.length < 3) return;
-    const rows = lines.slice(2);
-    for (const row of rows) {
-      const cols = row.split("|").map(c => c.trim()).filter(Boolean);
-      if (cols.length < 5) continue;
+  function extractSection(number) {
+    const escaped = number.replace(".", "\\.");
+    const re = new RegExp(`###\\s+${escaped}[^\\n]*\\n([\\s\\S]*?)(?=\\n###\\s+\\d+\\.\\d+|\\n##\\s+|$)`);
+    const match = text.match(re);
+    return match?.[1] ?? "";
+  }
 
-      if (type === "weapon") {
-        const [name, weaponType, damage, tags, price, desc] = cols;
-        const item = baseItem({ name: name.replace(/\*\*/g, ""), type: "weapon", description: desc });
-        item.system.weapon.damage = damage;
-        item.system.weapon.tags = tags.split(",").map(t => t.trim()).filter(Boolean);
-        item.system.details.category = weaponType;
-        item.system.price = price;
-        item.system.damage = damage;
+  function cleanName(value = "") {
+    return value.replace(/\*\*/g, "").trim();
+  }
+
+  function parseTags(value = "") {
+    return value.split(",").map(t => t.trim()).filter(t => t && t !== "-");
+  }
+
+  function isMarkdownSeparator(value = "") {
+    return /^:?-{2,}:?$/.test(value.trim());
+  }
+
+  function parseTableRows(sectionText) {
+    const lines = sectionText
+      .split("\n")
+      .map(line => line.trim())
+      .filter(line => line.startsWith("|"));
+    if (lines.length < 3) return [];
+
+    const rows = [];
+    for (const row of lines.slice(2)) {
+      const cols = row
+        .split("|")
+        .slice(1, -1)
+        .map(c => c.trim());
+
+      if (cols.length < 2) continue;
+      if (cols.every(isMarkdownSeparator)) continue;
+
+      const first = cleanName(cols[0]);
+      if (!first || isMarkdownSeparator(first)) continue;
+      if (/^(Arma|Item|Armadura|Escudo|N(?:i|\u00ed)vel)$/i.test(first)) continue;
+
+      rows.push(cols);
+    }
+    return rows;
+  }
+
+  function parseWeaponSections() {
+    const sections = ["2.2", "2.3", "2.4", "2.5"];
+    for (const sectionNumber of sections) {
+      const rows = parseTableRows(extractSection(sectionNumber));
+      for (const row of rows) {
+        const [rawName, weaponType = "", damage = "", tags = "", price = "", desc = ""] = row;
+        const name = cleanName(rawName);
+        if (!name) continue;
+
+        const item = baseItem({ name, type: "weapon", description: desc });
+        item.system.weapon.damage = damage.trim() === "-" ? "" : damage.trim();
+        item.system.weapon.tags = parseTags(tags);
+        item.system.details.category = weaponType.trim() === "-" ? "" : weaponType.trim();
+        item.system.price = price.trim();
+        item.system.damage = item.system.weapon.damage;
         item.system.roll.axis = "fisico";
         item.system.roll.aplicacao = "conflito";
         item.system.roll.isAttack = true;
         equipment.push(item);
       }
-
-      if (type === "armor") {
-        const [name, armorType, ca, tags, penalty, price, desc] = cols;
-        const item = baseItem({ name: name.replace(/\*\*/g, ""), type: "armor", description: desc });
-        item.system.armor.bonus = Number(ca.replace(/[^0-9-]/g, "")) || 0;
-        item.system.armor.tags = tags.split(",").map(t => t.trim()).filter(Boolean);
-        item.system.details.category = armorType;
-        item.system.price = price;
-        item.system.armor.penalty = penalty;
-        equipment.push(item);
-      }
-
-      if (type === "shield") {
-        const [name, shieldType, ca, tags, price, desc] = cols;
-        const item = baseItem({ name: name.replace(/\*\*/g, ""), type: "shield", description: desc });
-        item.system.shield.bonus = Number(ca.replace(/[^0-9-]/g, "")) || 0;
-        item.system.shield.tags = tags.split(",").map(t => t.trim()).filter(Boolean);
-        item.system.shield.type = shieldType;
-        item.system.price = price;
-        equipment.push(item);
-      }
     }
   }
 
-  const weaponSections = text.split(/###\s+2\./);
-  for (const section of weaponSections) {
-    if (section.includes("Tabela")) continue;
-    if (section.includes("| Arma")) parseTable(section, "weapon");
-  }
-  if (text.includes("| Armadura")) parseTable(text, "armor");
-  if (text.includes("| Escudo")) parseTable(text, "shield");
+  function parseArmorSection() {
+    const rows = parseTableRows(extractSection("3.2"));
+    for (const row of rows) {
+      const [rawName, armorType = "", ca = "", tags = "", penalty = "", price = "", desc = ""] = row;
+      const name = cleanName(rawName);
+      if (!name) continue;
 
-  const consumableMatch = text.split(/4\.1 Consumíveis e Etéricos/)[1] || "";
-  const consumables = [...consumableMatch.matchAll(/-\s+\*\*(.+?)\:\*\*\s*(.+)/g)];
+      const item = baseItem({ name, type: "armor", description: desc });
+      item.system.armor.bonus = Number(ca.replace(/[^0-9-]/g, "")) || 0;
+      item.system.armor.tags = parseTags(tags);
+      item.system.details.category = armorType.trim();
+      item.system.price = price.trim();
+      item.system.armor.penalty = penalty.trim();
+      equipment.push(item);
+    }
+  }
+
+  function parseShieldSection() {
+    const rows = parseTableRows(extractSection("3.3"));
+    for (const row of rows) {
+      const [rawName, shieldType = "", ca = "", tags = "", price = "", desc = ""] = row;
+      const name = cleanName(rawName);
+      if (!name) continue;
+
+      const item = baseItem({ name, type: "shield", description: desc });
+      item.system.shield.bonus = Number(ca.replace(/[^0-9-]/g, "")) || 0;
+      item.system.shield.tags = parseTags(tags);
+      item.system.shield.type = shieldType.trim();
+      item.system.price = price.trim();
+      equipment.push(item);
+    }
+  }
+
+  parseWeaponSections();
+  parseArmorSection();
+  parseShieldSection();
+
+  const consumablesSection = extractSection("4.1");
+  const consumables = [...consumablesSection.matchAll(/-\s+\*\*(.+?)\:\*\*\s*(.+)/g)];
   for (const match of consumables) {
     const item = baseItem({ name: match[1].trim(), type: "consumable", description: match[2].trim() });
     equipment.push(item);
   }
 
-  const toolsMatch = text.split(/4\.2 Ferramentas/)[1] || "";
-  const tools = [...toolsMatch.matchAll(/-\s+\*\*(.+?)\:\*\*\s*(.+)/g)];
+  const toolsSection = extractSection("4.2");
+  const tools = [...toolsSection.matchAll(/-\s+\*\*(.+?)\:\*\*\s*(.+)/g)];
   for (const match of tools) {
     const item = baseItem({ name: match[1].trim(), type: "equipment", description: match[2].trim() });
     equipment.push(item);
@@ -282,7 +334,6 @@ function parseEquipment() {
 
   return equipment;
 }
-
 function parseRunes() {
   const text = read("04_Arsenal_e_Economia.md");
   const runes = [];
@@ -661,6 +712,12 @@ function parseBestiary() {
 
 function main() {
   ensureOutDir();
+
+  const target = (process.argv[2] || "all").toLowerCase();
+  if (target === "equipment") {
+    writePack("equipment", parseEquipment());
+    return;
+  }
 
   const { ancestries, traits } = parseAncestries();
   writePack("ancestries", ancestries);

@@ -32,6 +32,8 @@
 
     <input type="radio" name="pandorha-tab" id="tab-itens" data-action="switch-tab" data-tab="itens" {{#ifEq activeTab "itens"}}checked{{/ifEq}} />
     <label for="tab-itens" data-action="switch-tab" data-tab="itens">Itens</label>
+    <input type="radio" name="pandorha-tab" id="tab-equipamentos" data-action="switch-tab" data-tab="equipamentos" {{#ifEq activeTab "equipamentos"}}checked{{/ifEq}} />
+    <label for="tab-equipamentos" data-action="switch-tab" data-tab="equipamentos">Equipamentos</label>
 
     <input type="radio" name="pandorha-tab" id="tab-tracos" data-action="switch-tab" data-tab="tracos" {{#ifEq activeTab "tracos"}}checked{{/ifEq}} />
     <label for="tab-tracos" data-action="switch-tab" data-tab="tracos">Traços</label>
@@ -589,6 +591,205 @@
                 </div>
               </div>
               {{/ifEq}}
+              {{/each}}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="tab-panel tab-equipamentos">
+        <section class="panel equipment-rules-panel">
+          <h3>Equipamentos e Economia</h3>
+
+          <div class="equipment-live-stats">
+            <div class="equipment-live-card">
+              <h4>Carga Atual</h4>
+              <div class="value">{{system.derived.carrySlots}} / {{system.derived.carryMax}} Slots</div>
+              <p>Limite: {{equipmentRules.load.formula}}</p>
+            </div>
+            <div class="equipment-live-card">
+              <h4>Defesa Atual</h4>
+              <div class="value">CA {{system.defenses.ca}}</div>
+              <p>Considere armadura e escudo equipados.</p>
+            </div>
+            <div class="equipment-live-card">
+              <h4>Regra de Excesso</h4>
+              <ul>
+                {{#each equipmentRules.load.penalties}}
+                <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+
+          <div class="equipment-rule-grid">
+            <div class="equipment-rule-card">
+              <h4>Ocupacao de Slots</h4>
+              <div class="equipment-rule-list">
+                {{#each equipmentRules.slotTable}}
+                <div class="equipment-rule-row">
+                  <span>{{item}}</span>
+                  <strong>{{slots}}</strong>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+
+            <div class="equipment-rule-card">
+              <h4>Qualidade de Item</h4>
+              <div class="equipment-rule-list">
+                {{#each equipmentRules.quality}}
+                <div class="equipment-rule-row">
+                  <span>NV {{level}} - {{name}} ({{price}})</span>
+                  <strong>{{bonus}}</strong>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+
+            <div class="equipment-rule-card">
+              <h4>Progressao de Runas</h4>
+              <div class="equipment-rule-list">
+                {{#each equipmentRules.runes}}
+                <div class="equipment-rule-row">
+                  <span>{{grade}} (NV {{level}} - {{price}})</span>
+                  <strong>{{requirement}}</strong>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+
+          <div class="item-section">
+            <div class="item-header">
+              <span>Armas</span>
+              <div class="item-actions">
+                <button type="button" data-action="open-compendium" data-pack="pandorha.equipment">Compendio</button>
+                <button type="button" data-action="add-from-pack" data-pack="pandorha.equipment" data-item-type="weapon">Adicionar</button>
+                <button type="button" data-action="item-create" data-item-type="weapon">Criar</button>
+              </div>
+            </div>
+            <div class="item-list">
+              {{#each items.weapons}}
+              <div class="item-row">
+                <span class="item-name">{{name}} ({{system.weapon.damage}})</span>
+                <div class="item-actions">
+                  <button type="button" data-action="item-roll" data-item-id="{{_id}}">Ataque</button>
+                  <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                  <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
+                  <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+
+          <div class="equipment-category-grid">
+            <div class="item-section">
+              <div class="item-header">
+                <span>Armaduras</span>
+                <div class="item-actions">
+                  <button type="button" data-action="add-from-pack" data-pack="pandorha.equipment" data-item-type="armor">Adicionar</button>
+                  <button type="button" data-action="item-create" data-item-type="armor">Criar</button>
+                </div>
+              </div>
+              <div class="item-list">
+                {{#each items.armors}}
+                <div class="item-row">
+                  <span class="item-name">{{name}} (+{{system.armor.bonus}} CA)</span>
+                  <div class="item-actions">
+                    <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
+                    <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+
+            <div class="item-section">
+              <div class="item-header">
+                <span>Escudos</span>
+                <div class="item-actions">
+                  <button type="button" data-action="add-from-pack" data-pack="pandorha.equipment" data-item-type="shield">Adicionar</button>
+                  <button type="button" data-action="item-create" data-item-type="shield">Criar</button>
+                </div>
+              </div>
+              <div class="item-list">
+                {{#each items.shields}}
+                <div class="item-row">
+                  <span class="item-name">{{name}} (+{{system.shield.bonus}} CA)</span>
+                  <div class="item-actions">
+                    <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
+                    <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+
+          <div class="equipment-category-grid">
+            <div class="item-section">
+              <div class="item-header">
+                <span>Consumiveis</span>
+                <div class="item-actions">
+                  <button type="button" data-action="add-from-pack" data-pack="pandorha.equipment" data-item-type="consumable">Adicionar</button>
+                  <button type="button" data-action="item-create" data-item-type="consumable">Criar</button>
+                </div>
+              </div>
+              <div class="item-list">
+                {{#each items.consumables}}
+                <div class="item-row">
+                  <span class="item-name">{{name}}</span>
+                  <div class="item-actions">
+                    <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
+                    <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+
+            <div class="item-section">
+              <div class="item-header">
+                <span>Aventura e Ferramentas</span>
+                <div class="item-actions">
+                  <button type="button" data-action="add-from-pack" data-pack="pandorha.equipment" data-item-type="equipment">Adicionar</button>
+                  <button type="button" data-action="item-create" data-item-type="equipment">Criar</button>
+                </div>
+              </div>
+              <div class="item-list">
+                {{#each items.gear}}
+                <div class="item-row">
+                  <span class="item-name">{{name}}</span>
+                  <div class="item-actions">
+                    <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
+                    <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+
+          <div class="item-section">
+            <div class="item-header">
+              <span>Runas</span>
+              <div class="item-actions">
+                <button type="button" data-action="open-compendium" data-pack="pandorha.runes">Compendio</button>
+                <button type="button" data-action="add-from-pack" data-pack="pandorha.runes" data-item-type="rune">Adicionar</button>
+                <button type="button" data-action="item-create" data-item-type="rune">Criar</button>
+              </div>
+            </div>
+            <div class="item-list">
+              {{#each items.runes}}
+              <div class="item-row">
+                <span class="item-name">{{name}}</span>
+                <div class="item-actions">
+                  <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
+                  <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+                </div>
+              </div>
               {{/each}}
             </div>
           </div>

@@ -18,6 +18,36 @@ const APPLICATION_LABELS = {
   resistencia: "Resistencia"
 };
 
+const EQUIPMENT_RULES = {
+  load: {
+    formula: "[Fisico + Resistencia] + 6 Slots",
+    penalties: [
+      "Slots acima do limite: condicao Lento (-3m de movimento).",
+      "Slots acima do limite + 5: condicao Imobilizado."
+    ]
+  },
+  slotTable: [
+    { item: "Armas curtas (espadas, adagas)", slots: "1 Slot" },
+    { item: "Armas longas (cajados, arcos)", slots: "2 Slots" },
+    { item: "Armaduras leves e medias", slots: "1 Slot" },
+    { item: "Armaduras pesadas", slots: "2 Slots" },
+    { item: "Escudos", slots: "1 Slot (leve), 2 Slots (torre)" },
+    { item: "Itens de aventura", slots: "1 Slot a cada 3 unidades" },
+    { item: "Pocoes, pergaminhos e moedas", slots: "0 Slot" }
+  ],
+  quality: [
+    { level: "0", name: "Mundano", price: "Base", bonus: "Item padrao, 1 slot de runa (R)." },
+    { level: "1", name: "Obra-Prima", price: "x10", bonus: "+1 Acerto ou -1 Penalidade, 2 slots (RR)." },
+    { level: "2", name: "Encantado", price: "x50", bonus: "+1 Dano/CA e efeito magico, 3 slots (RRR)." },
+    { level: "3", name: "Lendario", price: "x200", bonus: "Poder unico, 4 slots (RRRR)." }
+  ],
+  runes: [
+    { grade: "Menor", level: "1", price: "100 O", requirement: "Sem requisito." },
+    { grade: "Maior", level: "2", price: "500 O", requirement: "Item Encantado (NV 2+)." },
+    { grade: "Ancestral", level: "3", price: "2500 O", requirement: "Item Lendario (NV 3)." }
+  ]
+};
+
 function clampInteger(value, min, max, fallback = min) {
   const n = Number(value);
   if (!Number.isFinite(n)) return fallback;
@@ -92,6 +122,11 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       maneuvers: items.filter(i => i.type === "maneuver"),
       spells: items.filter(i => i.type === "spell"),
       conditions: items.filter(i => i.type === "condition"),
+      armors: items.filter(i => i.type === "armor"),
+      shields: items.filter(i => i.type === "shield"),
+      consumables: items.filter(i => i.type === "consumable"),
+      gear: items.filter(i => i.type === "equipment"),
+      runes: items.filter(i => i.type === "rune"),
       equipment: items.filter(i => ["weapon", "armor", "shield", "equipment", "consumable", "rune"].includes(i.type)),
       weapons: items.filter(i => i.type === "weapon"),
       features: items.filter(i => ["feature", "ability"].includes(i.type))
@@ -194,6 +229,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       isCharacter: this.document.type === "character",
       isNpc: this.document.type === "npc",
       isMonster: this.document.type === "monster",
+      equipmentRules: EQUIPMENT_RULES,
       actor: this.document
     };
   }
