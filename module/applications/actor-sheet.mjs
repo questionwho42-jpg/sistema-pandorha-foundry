@@ -650,11 +650,18 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     }
 
     if (action === "roll-test") {
-      const eixo = root?.querySelector?.("[name='roll-eixo']")?.value;
-      const aplicacao = root?.querySelector?.("[name='roll-aplicacao']")?.value;
-      const bonusRaw = root?.querySelector?.("[name='roll-bonus']")?.value ?? "0";
-      const trained = root?.querySelector?.("[name='roll-trained']")?.checked ?? true;
-      const mapValue = root?.querySelector?.("[name='roll-map']")?.value ?? "auto";
+      const panel = target.closest(".tab-panel") ?? root;
+      const scope = target.closest("[data-roll-context]") ?? panel ?? root;
+      const findField = (name) =>
+        scope?.querySelector?.(`[name='${name}']`)
+        ?? panel?.querySelector?.(`[name='${name}']`)
+        ?? root?.querySelector?.(`[name='${name}']`);
+
+      const eixo = findField("roll-eixo")?.value;
+      const aplicacao = findField("roll-aplicacao")?.value;
+      const bonusRaw = findField("roll-bonus")?.value ?? "0";
+      const trained = findField("roll-trained")?.checked ?? true;
+      const mapValue = findField("roll-map")?.value ?? "auto";
       const mapStep = mapValue === "auto" ? "auto" : Number(mapValue);
       const bonus = Number(bonusRaw) || 0;
       await rollTest({ actor, eixo, aplicacao, bonus, trained, mapStep, label: "Teste Global" });
@@ -675,7 +682,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       if (!item) return;
 
       if (action === "item-roll") {
-        const mapValue = root?.querySelector?.("[name='roll-map']")?.value ?? "auto";
+        const panel = target.closest(".tab-panel") ?? root;
+        const mapField = panel?.querySelector?.("[name='roll-map']") ?? root?.querySelector?.("[name='roll-map']");
+        const mapValue = mapField?.value ?? "auto";
         const mapStep = mapValue === "auto" ? "auto" : Number(mapValue);
         await rollItem({ actor, item, mapStep });
         return;

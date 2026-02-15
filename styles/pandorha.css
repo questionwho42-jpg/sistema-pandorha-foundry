@@ -60,6 +60,7 @@
 #tab-origem:checked + label,
 #tab-criacao:checked + label,
 #tab-pericias:checked + label,
+#tab-acoes:checked + label,
 #tab-itens:checked + label,
 #tab-equipamentos:checked + label,
 #tab-tracos:checked + label,
@@ -89,6 +90,7 @@
 #tab-origem:checked ~ .tab-content .tab-origem { display: block; }
 #tab-criacao:checked ~ .tab-content .tab-criacao { display: block; }
 #tab-pericias:checked ~ .tab-content .tab-pericias { display: block; }
+#tab-acoes:checked ~ .tab-content .tab-acoes { display: block; }
 #tab-itens:checked ~ .tab-content .tab-itens { display: block; }
 #tab-equipamentos:checked ~ .tab-content .tab-equipamentos { display: block; }
 #tab-tracos:checked ~ .tab-content .tab-tracos { display: block; }
@@ -303,6 +305,12 @@
 .item-row .item-name {
   font-weight: 600;
   color: var(--pandorha-ink);
+}
+
+.item-meta {
+  color: var(--pandorha-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 .item-main {

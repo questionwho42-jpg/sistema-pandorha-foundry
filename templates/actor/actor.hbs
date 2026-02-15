@@ -30,6 +30,9 @@
     <input type="radio" name="pandorha-tab" id="tab-pericias" data-action="switch-tab" data-tab="pericias" {{#ifEq activeTab "pericias"}}checked{{/ifEq}} />
     <label for="tab-pericias" data-action="switch-tab" data-tab="pericias">Perícias</label>
 
+    <input type="radio" name="pandorha-tab" id="tab-acoes" data-action="switch-tab" data-tab="acoes" {{#ifEq activeTab "acoes"}}checked{{/ifEq}} />
+    <label for="tab-acoes" data-action="switch-tab" data-tab="acoes">Acoes</label>
+
     <input type="radio" name="pandorha-tab" id="tab-itens" data-action="switch-tab" data-tab="itens" {{#ifEq activeTab "itens"}}checked{{/ifEq}} />
     <label for="tab-itens" data-action="switch-tab" data-tab="itens">Itens</label>
     <input type="radio" name="pandorha-tab" id="tab-equipamentos" data-action="switch-tab" data-tab="equipamentos" {{#ifEq activeTab "equipamentos"}}checked{{/ifEq}} />
@@ -104,7 +107,7 @@
 
           <div class="panel">
             <h3>Rolagem</h3>
-            <div class="roll-row">
+            <div class="roll-row" data-roll-context="base-test">
               <select name="roll-eixo">
                 <option value="fisico">Físico</option>
                 <option value="mental">Mental</option>
@@ -548,6 +551,153 @@
               </div>
             </div>
             {{/each}}
+          </div>
+        </section>
+      </div>
+
+      <div class="tab-panel tab-acoes">
+        <section class="panel">
+          <h3>Acoes Rolaveis</h3>
+
+          <div class="item-section">
+            <div class="item-header">
+              <span>Teste Global</span>
+            </div>
+            <div class="roll-row" data-roll-context="actions-test">
+              <select name="roll-eixo">
+                <option value="fisico">Fisico</option>
+                <option value="mental">Mental</option>
+                <option value="social">Social</option>
+              </select>
+              <select name="roll-aplicacao">
+                <option value="conflito">Conflito</option>
+                <option value="interacao">Interacao</option>
+                <option value="resistencia">Resistencia</option>
+              </select>
+              <input name="roll-bonus" type="number" value="0" />
+              <select name="roll-map">
+                <option value="auto">MAP Auto</option>
+                <option value="0">MAP 0</option>
+                <option value="1">MAP 1</option>
+                <option value="2">MAP 2</option>
+              </select>
+              <label class="inline">Treinado
+                <input name="roll-trained" type="checkbox" checked />
+              </label>
+              <button type="button" data-action="roll-test">Rolar</button>
+            </div>
+          </div>
+
+          <div class="item-section">
+            <div class="item-header">
+              <span>Pericias</span>
+            </div>
+            <div class="item-list">
+              {{#each skills}}
+              <div class="item-row">
+                <div class="item-main">
+                  <span class="item-name">{{label}}</span>
+                  <span class="item-meta">{{#if trained}}Treinado{{else}}Nao treinado{{/if}} | Bonus {{bonus}}</span>
+                </div>
+                <div class="item-actions">
+                  <button type="button" data-action="roll-skill" data-skill-id="{{id}}">Rolar</button>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+
+          <div class="item-section">
+            <div class="item-header">
+              <span>Acoes de Combate</span>
+            </div>
+            <div class="item-list">
+              {{#each items.weapons}}
+              <div class="item-row">
+                <div class="item-main">
+                  <span class="item-name">{{name}} ({{system.weapon.damage}})</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descricao</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
+                <div class="item-actions">
+                  <button type="button" data-action="item-roll" data-item-id="{{_id}}">Ataque</button>
+                  <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                </div>
+              </div>
+              {{/each}}
+
+              {{#each items.maneuvers}}
+              <div class="item-row">
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descricao</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
+                <div class="item-actions">
+                  <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
+                  <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+
+          <div class="item-section">
+            <div class="item-header">
+              <span>Acoes Magicas</span>
+            </div>
+            <div class="item-list">
+              {{#each items.spells}}
+              <div class="item-row">
+                <div class="item-main">
+                  <span class="item-name">{{name}} (Circulo {{system.circle}})</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descricao</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
+                <div class="item-actions">
+                  <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
+                  <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+
+          <div class="item-section">
+            <div class="item-header">
+              <span>Habilidades e Caracteristicas</span>
+            </div>
+            <div class="item-list">
+              {{#each items.features}}
+              <div class="item-row">
+                <div class="item-main">
+                  <span class="item-name">{{name}}</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descricao</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
+                <div class="item-actions">
+                  <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
+                  <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                </div>
+              </div>
+              {{/each}}
+            </div>
           </div>
         </section>
       </div>
