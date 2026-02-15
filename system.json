@@ -2,7 +2,7 @@
   "id": "pandorha",
   "title": "Pandorha",
   "description": "Sistema Pandorha para Foundry VTT.",
-  "version": "0.1.40",
+  "version": "0.1.41",
   "compatibility": {
     "minimum": "13",
     "verified": "13.338",
@@ -255,6 +255,12 @@
       "label": "Habilidades de Monstros",
       "path": "packs/monster-abilities.db",
       "type": "Item"
+    },
+    {
+      "name": "rulebook",
+      "label": "Livro de Regras",
+      "path": "packs/rulebook.db",
+      "type": "JournalEntry"
     }
   ]
 }
