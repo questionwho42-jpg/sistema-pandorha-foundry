@@ -1,4 +1,4 @@
-﻿import { PandorhaActor } from "./documents/actor.mjs";
+import { PandorhaActor } from "./documents/actor.mjs";
 import { PandorhaItem } from "./documents/item.mjs";
 import { PandorhaActorSheet } from "./applications/actor-sheet.mjs";
 import { PandorhaItemSheet } from "./applications/item-sheet.mjs";

@@ -1,4 +1,4 @@
-﻿import { rollTest, rollSkill, rollItem, rollItemDamage } from "../data/rolls.mjs";
+import { rollTest, rollSkill, rollItem, rollItemDamage } from "../data/rolls.mjs";
 import { SKILLS } from "../data/skills.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
