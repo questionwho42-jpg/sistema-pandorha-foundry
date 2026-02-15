@@ -2,7 +2,7 @@
   "id": "pandorha",
   "title": "Pandorha",
   "description": "Sistema Pandorha para Foundry VTT.",
-  "version": "0.1.42",
+  "version": "0.1.43",
   "compatibility": {
     "minimum": "13",
     "verified": "13.338",
@@ -261,6 +261,24 @@
       "label": "Livro de Regras",
       "path": "packs/rulebook.db",
       "type": "JournalEntry"
+    },
+    {
+      "name": "weapon-combinations",
+      "label": "Armas Combinadas",
+      "path": "packs/weapon-combinations.db",
+      "type": "Item"
+    },
+    {
+      "name": "armor-combinations",
+      "label": "Armaduras Combinadas",
+      "path": "packs/armor-combinations.db",
+      "type": "Item"
+    },
+    {
+      "name": "shield-combinations",
+      "label": "Escudos Combinados",
+      "path": "packs/shield-combinations.db",
+      "type": "Item"
     }
   ]
 }
