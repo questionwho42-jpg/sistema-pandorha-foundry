@@ -148,7 +148,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       const content = `<form><div class="form-group"><label>Selecione</label><select name="entry">${options}</select></div></form>`;
 
       new Dialog({
-        title: "Adicionar do Compêndio",
+        title: "Adicionar do Compendio",
         content,
         buttons: {
           add: {
@@ -160,8 +160,25 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
               const doc = await pack.getDocument(entryId);
               if (!doc) return;
               const data = doc.toObject();
+              // Avoid silent failures from duplicate embedded document ids.
+              delete data._id;
               if (type) data.type = type;
-              await actor.createEmbeddedDocuments("Item", [data]);
+              const originDetailsKey = {
+                ancestry: "ancestry",
+                background: "background",
+                class: "class"
+              }[type];
+
+              if (originDetailsKey) {
+                const previous = actor.items.filter(i => i.type === type).map(i => i.id);
+                if (previous.length) await actor.deleteEmbeddedDocuments("Item", previous);
+              }
+
+              const created = await actor.createEmbeddedDocuments("Item", [data]);
+
+              if (originDetailsKey && created?.[0]) {
+                await actor.update({ [`system.details.${originDetailsKey}`]: created[0].name });
+              }
             }
           },
           cancel: {
