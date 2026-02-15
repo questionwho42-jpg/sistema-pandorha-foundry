@@ -112,6 +112,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     actions: {
       "switch-tab": function (event, target) { return this._onClickAction(event, target); },
       "roll-test": function (event, target) { return this._onClickAction(event, target); },
+      "roll-initiative": function (event, target) { return this._onClickAction(event, target); },
       "roll-skill": function (event, target) { return this._onClickAction(event, target); },
       "item-roll": function (event, target) { return this._onClickAction(event, target); },
       "item-damage": function (event, target) { return this._onClickAction(event, target); },
@@ -694,6 +695,14 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       const mapStep = mapValue === "auto" ? "auto" : Number(mapValue);
       const bonus = Number(bonusRaw) || 0;
       await rollTest({ actor, eixo, aplicacao, bonus, trained, mapStep, label: "Teste Global" });
+      return;
+    }
+
+    if (action === "roll-initiative") {
+      await actor.rollInitiative({
+        createCombatants: true,
+        rerollInitiative: Boolean(event?.shiftKey)
+      });
       return;
     }
 
