@@ -393,7 +393,33 @@
 
           {{#ifEq wizard.step 7}}
           <div class="wizard-step-panel">
-            <h4>Passo 7: Revisao Final</h4>
+            <h4>Passo 7: Compra de Equipamentos Iniciais</h4>
+            <p>Orcamento inicial de nivel 1: <strong>{{wizard.equipment.budgetGold}}</strong>.</p>
+            <div class="wizard-selected">Gasto: {{wizard.equipment.spentGold}} | Saldo: {{wizard.equipment.remainingGold}}</div>
+            {{#unless wizard.equipment.withinBudget}}
+            <div class="wizard-selected">[!] Voce excedeu o orcamento inicial.</div>
+            {{/unless}}
+            <div class="wizard-actions">
+              <button type="button" data-action="wizard-buy-equipment">Comprar Item</button>
+              <button type="button" data-action="open-compendium" data-pack="pandorha.equipment">Abrir Compendio</button>
+            </div>
+            <div class="item-list">
+              {{#each wizard.equipment.items}}
+              <div class="item-row">
+                <span class="item-name">{{name}} ({{priceLabel}})</span>
+                <div class="item-actions">
+                  <button type="button" data-action="item-toggle-equipped" data-item-id="{{_id}}">{{#if system.equipped}}Desequipar{{else}}Equipar{{/if}}</button>
+                  <button type="button" data-action="wizard-remove-equipment" data-item-id="{{_id}}">Remover</button>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+          {{/ifEq}}
+
+          {{#ifEq wizard.step 8}}
+          <div class="wizard-step-panel">
+            <h4>Passo 8: Revisao Final</h4>
             <ul class="wizard-summary">
               {{#each wizard.checklist}}
               <li>{{#if done}}[OK]{{else}}[ ]{{/if}} {{label}}</li>

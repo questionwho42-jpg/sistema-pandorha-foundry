@@ -2,9 +2,11 @@ import { rollTest, rollSkill, rollItem, rollItemDamage } from "../data/rolls.mjs
 import { SKILLS } from "../data/skills.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
-const WIZARD_STEPS = 7;
+const WIZARD_STEPS = 8;
 const AXIS_KEYS = ["fisico", "mental", "social"];
 const APPLICATION_KEYS = ["conflito", "interacao", "resistencia"];
+const INITIAL_GOLD_LEVEL_1 = 50;
+const INITIAL_EQUIPMENT_TYPES = ["weapon", "armor", "shield", "equipment", "consumable"];
 
 const AXIS_LABELS = {
   fisico: "Fisico",
@@ -71,6 +73,36 @@ function itemToContext(item) {
   };
 }
 
+function parsePriceToGold(rawPrice) {
+  const text = String(rawPrice ?? "").trim();
+  if (!text) return 0;
+
+  const normalized = text
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+
+  let total = 0;
+  const matches = [...normalized.matchAll(/(\d+(?:[.,]\d+)?)\s*([opc])/g)];
+  for (const match of matches) {
+    const value = Number(match[1].replace(",", ".")) || 0;
+    const unit = match[2];
+    if (unit === "o") total += value;
+    else if (unit === "p") total += value / 10;
+    else if (unit === "c") total += value / 100;
+  }
+
+  if (total > 0) return total;
+  const fallback = Number(normalized.replace(",", "."));
+  return Number.isFinite(fallback) ? fallback : 0;
+}
+
+function formatGold(value) {
+  const n = Number(value) || 0;
+  if (Number.isInteger(n)) return `${n} O`;
+  return `${n.toFixed(2)} O`;
+}
+
 export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ActorSheetV2) {
   static _packCache = new Map();
 
@@ -101,7 +133,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       "wizard-add-background-talent": function (event, target) { return this._onClickAction(event, target); },
       "wizard-select-class": function (event, target) { return this._onClickAction(event, target); },
       "wizard-add-class-talent": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-add-maneuver": function (event, target) { return this._onClickAction(event, target); }
+      "wizard-add-maneuver": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-buy-equipment": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-remove-equipment": function (event, target) { return this._onClickAction(event, target); }
     }
   });
 
@@ -150,7 +184,8 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       { number: 4, label: "Classe", done: wizardChecks[4] },
       { number: 5, label: "Manobras", done: wizardChecks[5] },
       { number: 6, label: "Pericias", done: wizardChecks[6] },
-      { number: 7, label: "Revisao", done: wizardChecks[7] }
+      { number: 7, label: "Equipamentos", done: wizardChecks[7] },
+      { number: 8, label: "Revisao", done: wizardChecks[8] }
     ];
 
     const ancestryPrimaryOptions = wizardSummary.ancestryProfile.primaryOptions.map(option => ({
@@ -217,6 +252,13 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
           complete: wizardSummary.maneuversComplete,
           axes: maneuversAxes
         },
+        equipment: {
+          budgetGold: formatGold(wizardSummary.equipmentBudgetGold),
+          spentGold: formatGold(wizardSummary.equipmentSpentGold),
+          remainingGold: formatGold(wizardSummary.equipmentRemainingGold),
+          withinBudget: wizardSummary.equipmentWithinBudget,
+          items: wizardSummary.equipmentItems
+        },
         trainedSkillsCount: wizardSummary.trainedSkillsCount,
         checklist: [
           { label: "Atributos 6/6 validos", done: wizardChecks[1] },
@@ -224,7 +266,8 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
           { label: "Antecedente + 1 talento de origem", done: wizardChecks[3] },
           { label: "Classe + passiva + 2 talentos iniciais", done: wizardChecks[4] },
           { label: "Manobras por Eixo selecionadas", done: wizardChecks[5] },
-          { label: "Ficha pronta para jogar", done: wizardChecks[7] }
+          { label: "Equipamentos iniciais dentro do orcamento", done: wizardChecks[7] },
+          { label: "Ficha pronta para jogar", done: wizardChecks[8] }
         ]
       },
       isCharacter: this.document.type === "character",
@@ -546,8 +589,50 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       return;
     }
 
+    if (action === "wizard-buy-equipment") {
+      const budget = this._getInitialEquipmentBudgetGold();
+      const currentSpent = this._getInitialEquipmentSpentGold();
+      const selected = await this._pickPackDocument({
+        packId: "pandorha.equipment",
+        title: "Comprar Equipamento Inicial",
+        filterFn: doc => INITIAL_EQUIPMENT_TYPES.includes(doc.type)
+      });
+      if (!selected) return;
+
+      const itemCost = this._getItemPriceGold(selected);
+      if ((currentSpent + itemCost) > budget) {
+        ui.notifications?.warn(`Orcamento insuficiente. Saldo atual: ${formatGold(Math.max(budget - currentSpent, 0))}.`);
+        return;
+      }
+
+      const created = await this._createItemFromPackDocument(selected, selected.type);
+      if (created && ["weapon", "armor", "shield"].includes(created.type)) {
+        const hasOtherEquippedSameType = actor.items.some(i =>
+          i.type === created.type
+          && i.id !== created.id
+          && Boolean(i.system?.equipped)
+        );
+        if (!hasOtherEquippedSameType) {
+          await created.update({ "system.equipped": true });
+        }
+      }
+
+      await actor.setFlag("pandorha", "sheetTab", "criacao");
+      return;
+    }
+
+    if (action === "wizard-remove-equipment") {
+      const itemId = target.dataset.itemId;
+      if (!itemId) return;
+      const item = actor.items.get(itemId);
+      if (!item || !INITIAL_EQUIPMENT_TYPES.includes(item.type)) return;
+      await actor.deleteEmbeddedDocuments("Item", [itemId]);
+      await actor.setFlag("pandorha", "sheetTab", "criacao");
+      return;
+    }
+
     if (action === "wizard-finish") {
-      for (let step = 1; step <= 5; step += 1) {
+      for (let step = 1; step <= 7; step += 1) {
         if (!this._validateWizardStep(step, { notify: true })) {
           await this._updateCreationState({ step });
           await actor.setFlag("pandorha", "sheetTab", "criacao");
@@ -947,6 +1032,24 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     return category.endsWith(" - Talento Inicial") || category.endsWith(" - Passiva");
   }
 
+  _getInitialEquipmentBudgetGold() {
+    return INITIAL_GOLD_LEVEL_1;
+  }
+
+  _getInitialEquipmentItems() {
+    return this.document.items.filter(item => INITIAL_EQUIPMENT_TYPES.includes(item.type));
+  }
+
+  _getItemPriceGold(itemOrDoc) {
+    const priceRaw = itemOrDoc?.system?.price ?? "";
+    const quantity = Math.max(1, Number(itemOrDoc?.system?.quantity ?? 1) || 1);
+    return parsePriceToGold(priceRaw) * quantity;
+  }
+
+  _getInitialEquipmentSpentGold() {
+    return this._getInitialEquipmentItems().reduce((sum, item) => sum + this._getItemPriceGold(item), 0);
+  }
+
   _getWizardSummary() {
     const actor = this.document;
     const creation = this._getCreationState();
@@ -1001,6 +1104,15 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     const maneuversComplete = AXIS_KEYS.every(axis => maneuversByAxis[axis].length >= requiredManeuvers[axis]);
 
     const trainedSkillsCount = Object.values(actor.system.skills ?? {}).filter(skill => skill?.trained).length;
+    const equipmentBudgetGold = this._getInitialEquipmentBudgetGold();
+    const equipmentItems = this._getInitialEquipmentItems().map(item => ({
+      ...itemToContext(item),
+      priceGold: this._getItemPriceGold(item),
+      priceLabel: formatGold(this._getItemPriceGold(item))
+    }));
+    const equipmentSpentGold = equipmentItems.reduce((sum, item) => sum + item.priceGold, 0);
+    const equipmentRemainingGold = equipmentBudgetGold - equipmentSpentGold;
+    const equipmentWithinBudget = equipmentRemainingGold >= 0;
 
     return {
       creation,
@@ -1021,7 +1133,12 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       requiredManeuvers,
       maneuversByAxis,
       maneuversComplete,
-      trainedSkillsCount
+      trainedSkillsCount,
+      equipmentItems,
+      equipmentBudgetGold,
+      equipmentSpentGold,
+      equipmentRemainingGold,
+      equipmentWithinBudget
     };
   }
 
@@ -1036,7 +1153,8 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     checks[4] = Boolean(summary.className) && summary.classPassive.length >= 1 && summary.classInitialTalents.length >= 2;
     checks[5] = summary.maneuversComplete;
     checks[6] = true;
-    checks[7] = checks[1] && checks[2] && checks[3] && checks[4] && checks[5];
+    checks[7] = summary.equipmentWithinBudget && summary.equipmentItems.length > 0;
+    checks[8] = checks[1] && checks[2] && checks[3] && checks[4] && checks[5] && checks[7];
     return checks;
   }
 
@@ -1089,6 +1207,13 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         return false;
       case 5:
         ui.notifications?.warn("Complete a selecao de manobras de acordo com os Eixos.");
+        return false;
+      case 7:
+        if (!summary.equipmentItems.length) {
+          ui.notifications?.warn("Compre ao menos 1 equipamento inicial.");
+          return false;
+        }
+        ui.notifications?.warn("O total gasto em equipamentos iniciais excede o orcamento.");
         return false;
       default:
         ui.notifications?.warn("Etapa de criacao incompleta.");
