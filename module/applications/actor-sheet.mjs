@@ -638,8 +638,18 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       const pack = game.packs?.get(packId);
       if (!pack) return;
 
-      const index = await pack.getIndex();
-      const options = index.map(entry => `<option value="${entry._id}">${entry.name}</option>`).join("");
+      const docs = await this._getPackDocuments(packId);
+      const filteredDocs = docs.filter(doc => (type ? doc.type === type : true));
+      if (!filteredDocs.length) {
+        ui.notifications?.warn(type
+          ? `Nenhum item do tipo ${type} encontrado neste compendio.`
+          : "Nenhum item encontrado neste compendio.");
+        return;
+      }
+
+      const options = filteredDocs
+        .map((doc, index) => `<option value="${index}">${foundry.utils.escapeHTML(doc.name)}</option>`)
+        .join("");
       const content = `<form><div class="form-group"><label>Selecione</label><select name="entry">${options}</select></div></form>`;
 
       new Dialog({
@@ -650,9 +660,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
             icon: '<i class="fas fa-plus"></i>',
             label: "Adicionar",
             callback: async html => {
-              const entryId = html.find("select[name='entry']").val();
-              if (!entryId) return;
-              const doc = await pack.getDocument(entryId);
+              const selectedIndex = Number(html.find("select[name='entry']").val());
+              if (!Number.isFinite(selectedIndex)) return;
+              const doc = filteredDocs[selectedIndex];
               if (!doc) return;
               const data = doc.toObject();
               // Avoid silent failures from duplicate embedded document ids.
