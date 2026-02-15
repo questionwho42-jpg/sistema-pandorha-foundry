@@ -134,6 +134,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       "wizard-select-class": function (event, target) { return this._onClickAction(event, target); },
       "wizard-add-class-talent": function (event, target) { return this._onClickAction(event, target); },
       "wizard-add-maneuver": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-add-spell": function (event, target) { return this._onClickAction(event, target); },
       "wizard-buy-equipment": function (event, target) { return this._onClickAction(event, target); },
       "wizard-remove-equipment": function (event, target) { return this._onClickAction(event, target); }
     }
@@ -186,7 +187,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       { number: 3, label: "Antecedente", done: wizardChecks[3] },
       { number: 4, label: "Classe", done: wizardChecks[4] },
       { number: 5, label: "Manobras", done: wizardChecks[5] },
-      { number: 6, label: "Pericias", done: wizardChecks[6] },
+      { number: 6, label: "Pericias e Magias", done: wizardChecks[6] },
       { number: 7, label: "Equipamentos", done: wizardChecks[7] },
       { number: 8, label: "Revisao", done: wizardChecks[8] }
     ];
@@ -249,7 +250,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
           passiveCount: wizardSummary.classPassive.length,
           passives: wizardSummary.classPassive,
           initialTalentCount: wizardSummary.classInitialTalents.length,
-          initialTalents: wizardSummary.classInitialTalents
+          initialTalents: wizardSummary.classInitialTalents,
+          isCaster: wizardSummary.classIsCaster,
+          baseEe: wizardSummary.classBaseEe
         },
         maneuvers: {
           complete: wizardSummary.maneuversComplete,
@@ -262,6 +265,11 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
           withinBudget: wizardSummary.equipmentWithinBudget,
           items: wizardSummary.equipmentItems
         },
+        spells: {
+          requiredMin: wizardSummary.minimumInitialSpells,
+          selectedCount: wizardSummary.selectedSpells.length,
+          selected: wizardSummary.selectedSpells
+        },
         trainedSkillsCount: wizardSummary.trainedSkillsCount,
         checklist: [
           { label: "Atributos 6/6 validos", done: wizardChecks[1] },
@@ -269,6 +277,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
           { label: "Antecedente + 1 talento de origem", done: wizardChecks[3] },
           { label: "Classe + passiva + 2 talentos iniciais", done: wizardChecks[4] },
           { label: "Manobras por Eixo selecionadas", done: wizardChecks[5] },
+          { label: "Magias iniciais (se conjurador)", done: wizardChecks[6] },
           { label: "Equipamentos iniciais dentro do orcamento", done: wizardChecks[7] },
           { label: "Ficha pronta para jogar", done: wizardChecks[8] }
         ]
@@ -588,6 +597,26 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       if (!selected) return;
 
       await this._createItemFromPackDocument(selected, "maneuver");
+      await actor.setFlag("pandorha", "sheetTab", "criacao");
+      return;
+    }
+
+    if (action === "wizard-add-spell") {
+      const summary = this._getWizardSummary();
+      if (!summary.classIsCaster) {
+        ui.notifications?.warn("A classe atual nao possui selecao inicial de magias.");
+        return;
+      }
+
+      const ownedNames = new Set(summary.selectedSpells.map(item => item.name));
+      const selected = await this._pickPackDocument({
+        packId: "pandorha.spells",
+        title: "Selecionar Magia Inicial",
+        filterFn: doc => (Number(doc.system?.circle ?? 0) <= 1) && !ownedNames.has(doc.name)
+      });
+      if (!selected) return;
+
+      await this._createItemFromPackDocument(selected, "spell");
       await actor.setFlag("pandorha", "sheetTab", "criacao");
       return;
     }
@@ -1082,6 +1111,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     const ancestryName = actor.system.details?.ancestry ?? "";
     const backgroundName = actor.system.details?.background ?? "";
     const className = actor.system.details?.class ?? "";
+    const classItem = actor.items.find(item => item.type === "class");
+    const classBaseEe = Number(classItem?.system?.classData?.baseEe ?? 0) || 0;
+    const classIsCaster = classBaseEe > 0 || /tecel|arcano|mago|brux|feiti|emissario/.test(normalizeText(className));
 
     const ancestryProfile = this._getAncestryProfile(ancestryName);
     const ancestryTraits = actor.items.filter(item => item.type === "trait").map(itemToContext);
@@ -1115,6 +1147,10 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     };
     const maneuversComplete = AXIS_KEYS.every(axis => maneuversByAxis[axis].length >= requiredManeuvers[axis]);
 
+    const selectedSpells = actor.items.filter(item => item.type === "spell").map(itemToContext);
+    const minimumInitialSpells = classIsCaster ? 1 : 0;
+    const hasRequiredInitialSpells = selectedSpells.length >= minimumInitialSpells;
+
     const trainedSkillsCount = Object.values(actor.system.skills ?? {}).filter(skill => skill?.trained).length;
     const equipmentBudgetGold = this._getInitialEquipmentBudgetGold();
     const equipmentItems = this._getInitialEquipmentItems().map(item => ({
@@ -1140,8 +1176,13 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       backgroundTalentOptions,
       backgroundTalents,
       className,
+      classBaseEe,
+      classIsCaster,
       classInitialTalents,
       classPassive,
+      selectedSpells,
+      minimumInitialSpells,
+      hasRequiredInitialSpells,
       requiredManeuvers,
       maneuversByAxis,
       maneuversComplete,
@@ -1164,9 +1205,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     checks[3] = Boolean(summary.backgroundName) && summary.backgroundTalents.length >= 1;
     checks[4] = Boolean(summary.className) && summary.classPassive.length >= 1 && summary.classInitialTalents.length >= 2;
     checks[5] = summary.maneuversComplete;
-    checks[6] = true;
+    checks[6] = summary.hasRequiredInitialSpells;
     checks[7] = summary.equipmentWithinBudget && summary.equipmentItems.length > 0;
-    checks[8] = checks[1] && checks[2] && checks[3] && checks[4] && checks[5] && checks[7];
+    checks[8] = checks[1] && checks[2] && checks[3] && checks[4] && checks[5] && checks[6] && checks[7];
     return checks;
   }
 
@@ -1219,6 +1260,10 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         return false;
       case 5:
         ui.notifications?.warn("Complete a selecao de manobras de acordo com os Eixos.");
+        return false;
+      case 6:
+        if (!summary.classIsCaster) return true;
+        ui.notifications?.warn(`Selecione pelo menos ${summary.minimumInitialSpells} magia inicial para a classe conjuradora.`);
         return false;
       case 7:
         if (!summary.equipmentItems.length) {

@@ -62,6 +62,7 @@
 #tab-pericias:checked + label,
 #tab-acoes:checked + label,
 #tab-itens:checked + label,
+#tab-magias:checked + label,
 #tab-equipamentos:checked + label,
 #tab-tracos:checked + label,
 #tab-status:checked + label,
@@ -92,6 +93,7 @@
 #tab-pericias:checked ~ .tab-content .tab-pericias { display: block; }
 #tab-acoes:checked ~ .tab-content .tab-acoes { display: block; }
 #tab-itens:checked ~ .tab-content .tab-itens { display: block; }
+#tab-magias:checked ~ .tab-content .tab-magias { display: block; }
 #tab-equipamentos:checked ~ .tab-content .tab-equipamentos { display: block; }
 #tab-tracos:checked ~ .tab-content .tab-tracos { display: block; }
 #tab-status:checked ~ .tab-content .tab-status { display: block; }

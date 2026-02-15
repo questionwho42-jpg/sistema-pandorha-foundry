@@ -35,6 +35,8 @@
 
     <input type="radio" name="pandorha-tab" id="tab-itens" data-action="switch-tab" data-tab="itens" {{#ifEq activeTab "itens"}}checked{{/ifEq}} />
     <label for="tab-itens" data-action="switch-tab" data-tab="itens">Itens</label>
+    <input type="radio" name="pandorha-tab" id="tab-magias" data-action="switch-tab" data-tab="magias" {{#ifEq activeTab "magias"}}checked{{/ifEq}} />
+    <label for="tab-magias" data-action="switch-tab" data-tab="magias">Magias</label>
     <input type="radio" name="pandorha-tab" id="tab-equipamentos" data-action="switch-tab" data-tab="equipamentos" {{#ifEq activeTab "equipamentos"}}checked{{/ifEq}} />
     <label for="tab-equipamentos" data-action="switch-tab" data-tab="equipamentos">Equipamentos</label>
 
@@ -462,8 +464,8 @@
 
           {{#ifEq wizard.step 6}}
           <div class="wizard-step-panel">
-            <h4>Passo 6: Pericias Treinadas</h4>
-            <p>Marque as pericias treinadas de acordo com sua build.</p>
+            <h4>Passo 6: Pericias e Magias</h4>
+            <p>Marque as pericias treinadas e, se for conjurador, selecione magias iniciais.</p>
             <div class="item-list">
               {{#each skills}}
               <div class="item-row">
@@ -478,6 +480,37 @@
               {{/each}}
             </div>
             <div class="wizard-selected">Pericias treinadas: {{wizard.trainedSkillsCount}}</div>
+
+            {{#if wizard.class.isCaster}}
+            <div class="wizard-choice-group">
+              <h5>Magias Iniciais ({{wizard.spells.selectedCount}} / {{wizard.spells.requiredMin}})</h5>
+              <p>Classe conjuradora detectada (EE base: {{wizard.class.baseEe}}).</p>
+              <div class="wizard-actions">
+                <button type="button" data-action="open-compendium" data-pack="pandorha.spells">Abrir Compendio</button>
+                <button type="button" data-action="wizard-add-spell">Adicionar Magia</button>
+              </div>
+              <div class="item-list">
+                {{#each wizard.spells.selected}}
+                <div class="item-row">
+                  <div class="item-main">
+                    <span class="item-name">{{name}} (Circulo {{system.circle}})</span>
+                    {{#if system.description}}
+                    <details class="item-description">
+                      <summary>Descricao</summary>
+                      <div class="item-description-content">{{{system.description}}}</div>
+                    </details>
+                    {{/if}}
+                  </div>
+                  <div class="item-actions">
+                    <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+            {{else}}
+            <div class="wizard-selected">Classe sem progressao de magias iniciais.</div>
+            {{/if}}
           </div>
           {{/ifEq}}
 
@@ -913,6 +946,49 @@
                   {{/if}}
                 </div>
                 <div class="item-actions">
+                  <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
+                  <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="tab-panel tab-magias">
+        <section class="panel">
+          <h3>Magias</h3>
+
+          <div class="derived">
+            <div>EE atual: {{system.resources.ee.value}} / {{system.resources.ee.max}}</div>
+            <div>Use esta aba para lancar, editar e revisar todas as magias conhecidas.</div>
+          </div>
+
+          <div class="item-section">
+            <div class="item-header">
+              <span>Grimorio</span>
+              <div class="item-actions">
+                <button type="button" data-action="open-compendium" data-pack="pandorha.spells">Compendio</button>
+                <button type="button" data-action="add-from-pack" data-pack="pandorha.spells" data-item-type="spell">Adicionar</button>
+                <button type="button" data-action="item-create" data-item-type="spell">Criar</button>
+              </div>
+            </div>
+            <div class="item-list">
+              {{#each items.spells}}
+              <div class="item-row">
+                <div class="item-main">
+                  <span class="item-name">{{name}} (Circulo {{system.circle}})</span>
+                  {{#if system.description}}
+                  <details class="item-description">
+                    <summary>Descricao</summary>
+                    <div class="item-description-content">{{{system.description}}}</div>
+                  </details>
+                  {{/if}}
+                </div>
+                <div class="item-actions">
+                  <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
+                  <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>
