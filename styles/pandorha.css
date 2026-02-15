@@ -194,6 +194,18 @@
   gap: 6px;
 }
 
+.wizard-steps button {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f0e4d3;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.wizard-steps button[data-complete="true"] {
+  background: rgba(99, 167, 108, 0.9);
+  color: #112411;
+  border-color: rgba(69, 122, 77, 0.95);
+}
+
 .wizard-step-panel {
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(216, 198, 174, 0.9);
@@ -219,9 +231,36 @@
   gap: 8px;
 }
 
+.wizard-actions button[data-selected="true"] {
+  background: #4f9658;
+  color: #f7fff8;
+}
+
 .wizard-selected {
   color: var(--pandorha-ink);
   font-weight: 600;
+}
+
+.wizard-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.wizard-choice-group {
+  border: 1px solid rgba(160, 130, 90, 0.35);
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.wizard-choice-group h5,
+.wizard-step-panel h5 {
+  margin: 0;
+  color: #3a2d1f;
+  font-size: 0.95rem;
 }
 
 .wizard-summary {
@@ -236,6 +275,11 @@
   display: flex;
   justify-content: space-between;
   gap: 8px;
+}
+
+.wizard-nav button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 
 .item-list {

@@ -167,7 +167,7 @@
       {{#if isCharacter}}
       <div class="tab-panel tab-criacao">
         <section class="panel wizard-panel">
-          <h3>Wizard de Criacao</h3>
+          <h3>Criacao Guiada de Personagem</h3>
 
           <div class="wizard-progress">
             <div class="wizard-progress-bar" style="width: {{wizard.progress}}%;"></div>
@@ -175,80 +175,235 @@
           <div class="wizard-progress-text">Etapa {{wizard.step}} de {{wizard.total}}</div>
 
           <div class="wizard-steps">
-            <button type="button" data-action="wizard-go-step" data-step="1">1. Base</button>
-            <button type="button" data-action="wizard-go-step" data-step="2">2. Ancestralidade</button>
-            <button type="button" data-action="wizard-go-step" data-step="3">3. Antecedente</button>
-            <button type="button" data-action="wizard-go-step" data-step="4">4. Classe</button>
-            <button type="button" data-action="wizard-go-step" data-step="5">5. Finalizar</button>
+            {{#each wizard.steps}}
+            <button type="button" data-action="wizard-go-step" data-step="{{number}}" {{#if done}}data-complete="true"{{/if}}>
+              {{number}}. {{label}}
+            </button>
+            {{/each}}
           </div>
 
           {{#ifEq wizard.step 1}}
           <div class="wizard-step-panel">
-            <h4>Passo 1: Base</h4>
-            <p>Defina os dados iniciais do personagem.</p>
-            <div class="stats">
-              <label>Nome</label>
-              <input name="name" type="text" value="{{actor.name}}" />
-              <label>Nivel</label>
-              <input name="system.attributes.level" type="number" value="{{system.attributes.level}}" />
+            <h4>Passo 1: Atributos Base (Regra 6/6)</h4>
+            <p>Distribua Eixos e Aplicacoes com minimo 1, maximo 3, total 6 em cada grupo.</p>
+
+            <div class="wizard-grid-2">
+              <div>
+                <h5>Eixos</h5>
+                <div class="stats">
+                  <label>Fisico</label>
+                  <input name="wizard-base-eixos-fisico" type="number" value="{{wizard.pools.baseEixos.fisico}}" min="1" max="3" />
+                  <label>Mental</label>
+                  <input name="wizard-base-eixos-mental" type="number" value="{{wizard.pools.baseEixos.mental}}" min="1" max="3" />
+                  <label>Social</label>
+                  <input name="wizard-base-eixos-social" type="number" value="{{wizard.pools.baseEixos.social}}" min="1" max="3" />
+                </div>
+                <p class="wizard-selected">Pontos usados: {{wizard.pools.eixosSpent}} / 6</p>
+              </div>
+
+              <div>
+                <h5>Aplicacoes</h5>
+                <div class="stats">
+                  <label>Conflito</label>
+                  <input name="wizard-base-aplicacoes-conflito" type="number" value="{{wizard.pools.baseAplicacoes.conflito}}" min="1" max="3" />
+                  <label>Interacao</label>
+                  <input name="wizard-base-aplicacoes-interacao" type="number" value="{{wizard.pools.baseAplicacoes.interacao}}" min="1" max="3" />
+                  <label>Resistencia</label>
+                  <input name="wizard-base-aplicacoes-resistencia" type="number" value="{{wizard.pools.baseAplicacoes.resistencia}}" min="1" max="3" />
+                </div>
+                <p class="wizard-selected">Pontos usados: {{wizard.pools.aplicacoesSpent}} / 6</p>
+              </div>
             </div>
+
+            <div class="wizard-selected">
+              Totais atuais: Fisico {{wizard.totals.eixos.fisico}}, Mental {{wizard.totals.eixos.mental}}, Social {{wizard.totals.eixos.social}},
+              Conflito {{wizard.totals.aplicacoes.conflito}}, Interacao {{wizard.totals.aplicacoes.interacao}}, Resistencia {{wizard.totals.aplicacoes.resistencia}}
+            </div>
+            <button type="button" data-action="wizard-apply-attributes">Aplicar Atributos</button>
           </div>
           {{/ifEq}}
 
           {{#ifEq wizard.step 2}}
           <div class="wizard-step-panel">
             <h4>Passo 2: Ancestralidade</h4>
-            <p>Escolha uma ancestralidade no compendio.</p>
+            <p>Escolha a ancestralidade, aplique o bonus racial e selecione 3 tracos.</p>
             <div class="wizard-actions">
               <button type="button" data-action="open-compendium" data-pack="pandorha.ancestries">Abrir Compendio</button>
-              <button type="button" data-action="add-from-pack" data-pack="pandorha.ancestries" data-item-type="ancestry" data-next-step="3">Selecionar</button>
+              <button type="button" data-action="wizard-select-ancestry">Selecionar Ancestralidade</button>
+              <button type="button" data-action="wizard-add-ancestry-trait">Adicionar Traco ({{wizard.ancestry.traitCount}}/3)</button>
             </div>
-            <div class="wizard-selected">Atual: {{system.details.ancestry}}</div>
+
+            <div class="wizard-selected">Ancestralidade: {{wizard.ancestry.selected}}</div>
+            <div class="wizard-selected">{{wizard.ancestry.profileLabel}}</div>
+
+            <div class="wizard-choice-group">
+              <h5>Bonus Primario</h5>
+              <div class="wizard-actions">
+                {{#each wizard.ancestry.primaryOptions}}
+                <button type="button" data-action="wizard-set-ancestry-bonus" data-slot="primary" data-scope="{{scope}}" data-key="{{key}}" {{#if selected}}data-selected="true"{{/if}}>
+                  +1 {{label}}
+                </button>
+                {{/each}}
+              </div>
+            </div>
+
+            {{#if wizard.ancestry.requiresExtraApplication}}
+            <div class="wizard-choice-group">
+              <h5>Bonus Extra de Aplicacao (Humano)</h5>
+              <div class="wizard-actions">
+                {{#each wizard.ancestry.extraOptions}}
+                <button type="button" data-action="wizard-set-ancestry-bonus" data-slot="extra" data-key="{{key}}" {{#if selected}}data-selected="true"{{/if}}>
+                  +1 {{label}}
+                </button>
+                {{/each}}
+              </div>
+            </div>
+            {{/if}}
+
+            <div class="item-list">
+              {{#each wizard.ancestry.traits}}
+              <div class="item-row">
+                <span class="item-name">{{name}}</span>
+                <div class="item-actions">
+                  <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+                </div>
+              </div>
+              {{/each}}
+            </div>
           </div>
           {{/ifEq}}
 
           {{#ifEq wizard.step 3}}
           <div class="wizard-step-panel">
             <h4>Passo 3: Antecedente</h4>
-            <p>Escolha um antecedente no compendio.</p>
+            <p>Escolha 1 antecedente e 1 talento da origem.</p>
             <div class="wizard-actions">
               <button type="button" data-action="open-compendium" data-pack="pandorha.backgrounds">Abrir Compendio</button>
-              <button type="button" data-action="add-from-pack" data-pack="pandorha.backgrounds" data-item-type="background" data-next-step="4">Selecionar</button>
+              <button type="button" data-action="wizard-select-background">Selecionar Antecedente</button>
+              <button type="button" data-action="wizard-add-background-talent">Escolher Talento de Origem</button>
             </div>
-            <div class="wizard-selected">Atual: {{system.details.background}}</div>
+            <div class="wizard-selected">Antecedente: {{wizard.background.selected}}</div>
+
+            {{#if wizard.background.availableTalents.length}}
+            <ul class="wizard-summary">
+              {{#each wizard.background.availableTalents}}
+              <li><strong>{{name}}</strong>: {{description}}</li>
+              {{/each}}
+            </ul>
+            {{/if}}
+
+            <div class="item-list">
+              {{#each wizard.background.talents}}
+              <div class="item-row">
+                <span class="item-name">{{name}}</span>
+                <div class="item-actions">
+                  <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+                </div>
+              </div>
+              {{/each}}
+            </div>
           </div>
           {{/ifEq}}
 
           {{#ifEq wizard.step 4}}
           <div class="wizard-step-panel">
             <h4>Passo 4: Classe</h4>
-            <p>Escolha uma classe no compendio.</p>
+            <p>Escolha a classe, mantenha a passiva e selecione 2 talentos iniciais.</p>
             <div class="wizard-actions">
               <button type="button" data-action="open-compendium" data-pack="pandorha.classes">Abrir Compendio</button>
-              <button type="button" data-action="add-from-pack" data-pack="pandorha.classes" data-item-type="class" data-next-step="5">Selecionar</button>
+              <button type="button" data-action="wizard-select-class">Selecionar Classe</button>
+              <button type="button" data-action="wizard-add-class-talent">Adicionar Talento Inicial ({{wizard.class.initialTalentCount}}/2)</button>
             </div>
-            <div class="wizard-selected">Atual: {{system.details.class}}</div>
+            <div class="wizard-selected">Classe: {{wizard.class.selected}}</div>
+
+            <h5>Passiva da Classe</h5>
+            <div class="item-list">
+              {{#each wizard.class.passives}}
+              <div class="item-row">
+                <span class="item-name">{{name}}</span>
+                <div class="item-actions">
+                  <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+
+            <h5>Talentos Iniciais</h5>
+            <div class="item-list">
+              {{#each wizard.class.initialTalents}}
+              <div class="item-row">
+                <span class="item-name">{{name}}</span>
+                <div class="item-actions">
+                  <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+                </div>
+              </div>
+              {{/each}}
+            </div>
           </div>
           {{/ifEq}}
 
           {{#ifEq wizard.step 5}}
           <div class="wizard-step-panel">
-            <h4>Passo 5: Revisao</h4>
-            <p>Confira os dados da origem e conclua.</p>
+            <h4>Passo 5: Manobras por Matriz</h4>
+            <p>Escolha 1 manobra por ponto em cada Eixo.</p>
+
+            {{#each wizard.maneuvers.axes}}
+            <div class="wizard-choice-group">
+              <h5>{{label}} ({{selectedCount}} / {{required}})</h5>
+              <div class="wizard-actions">
+                <button type="button" data-action="wizard-add-maneuver" data-axis="{{id}}">Adicionar Manobra de {{label}}</button>
+              </div>
+              <div class="item-list">
+                {{#each items}}
+                <div class="item-row">
+                  <span class="item-name">{{name}}</span>
+                  <div class="item-actions">
+                    <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+            {{/each}}
+          </div>
+          {{/ifEq}}
+
+          {{#ifEq wizard.step 6}}
+          <div class="wizard-step-panel">
+            <h4>Passo 6: Pericias Treinadas</h4>
+            <p>Marque as pericias treinadas de acordo com sua build.</p>
+            <div class="item-list">
+              {{#each skills}}
+              <div class="item-row">
+                <span class="item-name">{{label}}</span>
+                <div class="item-actions">
+                  <label class="inline">Treinado
+                    <input name="system.skills.{{id}}.trained" type="checkbox" {{#if trained}}checked{{/if}} />
+                  </label>
+                  <input name="system.skills.{{id}}.bonus" type="number" value="{{bonus}}" />
+                </div>
+              </div>
+              {{/each}}
+            </div>
+            <div class="wizard-selected">Pericias treinadas: {{wizard.trainedSkillsCount}}</div>
+          </div>
+          {{/ifEq}}
+
+          {{#ifEq wizard.step 7}}
+          <div class="wizard-step-panel">
+            <h4>Passo 7: Revisao Final</h4>
             <ul class="wizard-summary">
-              <li><strong>Nome:</strong> {{actor.name}}</li>
-              <li><strong>Nivel:</strong> {{system.attributes.level}}</li>
-              <li><strong>Ancestralidade:</strong> {{system.details.ancestry}}</li>
-              <li><strong>Antecedente:</strong> {{system.details.background}}</li>
-              <li><strong>Classe:</strong> {{system.details.class}}</li>
+              {{#each wizard.checklist}}
+              <li>{{#if done}}[OK]{{else}}[ ]{{/if}} {{label}}</li>
+              {{/each}}
             </ul>
-            <button type="button" data-action="wizard-finish">Concluir e Ir para Base</button>
+            <button type="button" data-action="wizard-finish">Concluir Criacao e Ir para Base</button>
           </div>
           {{/ifEq}}
 
           <div class="wizard-nav">
-            <button type="button" data-action="wizard-prev" {{#ifEq wizard.step 1}}disabled{{/ifEq}}>Anterior</button>
-            <button type="button" data-action="wizard-next" {{#ifEq wizard.step 5}}disabled{{/ifEq}}>Proximo</button>
+            <button type="button" data-action="wizard-prev" {{#unless wizard.canPrev}}disabled{{/unless}}>Anterior</button>
+            <button type="button" data-action="wizard-next" {{#unless wizard.canNext}}disabled{{/unless}}>Proximo</button>
           </div>
         </section>
       </div>

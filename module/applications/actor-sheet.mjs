@@ -2,14 +2,48 @@ import { rollTest, rollSkill, rollItem, rollItemDamage } from "../data/rolls.mjs
 import { SKILLS } from "../data/skills.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
-const WIZARD_STEPS = 5;
-const WIZARD_REQUIREMENTS = {
-  2: { field: "ancestry", label: "ancestralidade" },
-  3: { field: "background", label: "antecedente" },
-  4: { field: "class", label: "classe" }
+const WIZARD_STEPS = 7;
+const AXIS_KEYS = ["fisico", "mental", "social"];
+const APPLICATION_KEYS = ["conflito", "interacao", "resistencia"];
+
+const AXIS_LABELS = {
+  fisico: "Fisico",
+  mental: "Mental",
+  social: "Social"
 };
 
+const APPLICATION_LABELS = {
+  conflito: "Conflito",
+  interacao: "Interacao",
+  resistencia: "Resistencia"
+};
+
+function clampInteger(value, min, max, fallback = min) {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return fallback;
+  const i = Math.trunc(n);
+  return Math.min(max, Math.max(min, i));
+}
+
+function normalizeText(value) {
+  return String(value ?? "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+}
+
+function itemToContext(item) {
+  return {
+    _id: item.id,
+    name: item.name,
+    type: item.type,
+    system: item.system
+  };
+}
+
 export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ActorSheetV2) {
+  static _packCache = new Map();
+
   static DEFAULT_OPTIONS = foundry.utils.mergeObject(super.DEFAULT_OPTIONS, {
     classes: ["pandorha", "sheet", "actor"],
     position: { width: 900, height: 720 },
@@ -27,7 +61,16 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       "wizard-prev": function (event, target) { return this._onClickAction(event, target); },
       "wizard-next": function (event, target) { return this._onClickAction(event, target); },
       "wizard-go-step": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-finish": function (event, target) { return this._onClickAction(event, target); }
+      "wizard-finish": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-apply-attributes": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-select-ancestry": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-set-ancestry-bonus": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-add-ancestry-trait": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-select-background": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-add-background-talent": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-select-class": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-add-class-talent": function (event, target) { return this._onClickAction(event, target); },
+      "wizard-add-maneuver": function (event, target) { return this._onClickAction(event, target); }
     }
   });
 
@@ -61,8 +104,41 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     }));
 
     const activeTab = this.document.getFlag("pandorha", "sheetTab") ?? "base";
-    const wizardStepRaw = Number(this.document.getFlag("pandorha", "wizardStep") ?? 1);
-    const wizardStep = Number.isFinite(wizardStepRaw) ? Math.min(WIZARD_STEPS, Math.max(1, wizardStepRaw)) : 1;
+    const wizardSummary = this._getWizardSummary();
+    const wizardChecks = this._computeWizardChecks(wizardSummary);
+
+    const wizardSteps = [
+      { number: 1, label: "Atributos", done: wizardChecks[1] },
+      { number: 2, label: "Ancestralidade", done: wizardChecks[2] },
+      { number: 3, label: "Antecedente", done: wizardChecks[3] },
+      { number: 4, label: "Classe", done: wizardChecks[4] },
+      { number: 5, label: "Manobras", done: wizardChecks[5] },
+      { number: 6, label: "Pericias", done: wizardChecks[6] },
+      { number: 7, label: "Revisao", done: wizardChecks[7] }
+    ];
+
+    const ancestryPrimaryOptions = wizardSummary.ancestryProfile.primaryOptions.map(option => ({
+      ...option,
+      selected:
+        wizardSummary.creation.ancestryBonusPrimary?.scope === option.scope
+        && wizardSummary.creation.ancestryBonusPrimary?.key === option.key
+    }));
+
+    const ancestryExtraOptions = wizardSummary.ancestryProfile.extraApplication
+      ? APPLICATION_KEYS.map(key => ({
+        key,
+        label: APPLICATION_LABELS[key],
+        selected: wizardSummary.creation.ancestryBonusExtra === key
+      }))
+      : [];
+
+    const maneuversAxes = AXIS_KEYS.map(axis => ({
+      id: axis,
+      label: AXIS_LABELS[axis],
+      required: wizardSummary.requiredManeuvers[axis],
+      selectedCount: wizardSummary.maneuversByAxis[axis].length,
+      items: wizardSummary.maneuversByAxis[axis]
+    }));
 
     return {
       ...context,
@@ -71,9 +147,49 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       skills,
       activeTab,
       wizard: {
-        step: wizardStep,
+        step: wizardSummary.creation.step,
         total: WIZARD_STEPS,
-        progress: Math.round((wizardStep / WIZARD_STEPS) * 100)
+        progress: Math.round((wizardSummary.creation.step / WIZARD_STEPS) * 100),
+        canPrev: wizardSummary.creation.step > 1,
+        canNext: wizardSummary.creation.step < WIZARD_STEPS,
+        steps: wizardSteps,
+        pools: wizardSummary.pools,
+        totals: wizardSummary.totals,
+        ancestry: {
+          selected: wizardSummary.ancestryName,
+          profileLabel: wizardSummary.ancestryProfile.label,
+          primaryOptions: ancestryPrimaryOptions,
+          extraOptions: ancestryExtraOptions,
+          requiresExtraApplication: wizardSummary.ancestryProfile.extraApplication,
+          traitCount: wizardSummary.ancestryTraits.length,
+          traits: wizardSummary.ancestryTraits
+        },
+        background: {
+          selected: wizardSummary.backgroundName,
+          talentCount: wizardSummary.backgroundTalents.length,
+          talents: wizardSummary.backgroundTalents,
+          availableTalents: wizardSummary.backgroundTalentOptions
+        },
+        class: {
+          selected: wizardSummary.className,
+          passiveCount: wizardSummary.classPassive.length,
+          passives: wizardSummary.classPassive,
+          initialTalentCount: wizardSummary.classInitialTalents.length,
+          initialTalents: wizardSummary.classInitialTalents
+        },
+        maneuvers: {
+          complete: wizardSummary.maneuversComplete,
+          axes: maneuversAxes
+        },
+        trainedSkillsCount: wizardSummary.trainedSkillsCount,
+        checklist: [
+          { label: "Atributos 6/6 validos", done: wizardChecks[1] },
+          { label: "Ancestralidade + bonus + 3 tracos", done: wizardChecks[2] },
+          { label: "Antecedente + 1 talento de origem", done: wizardChecks[3] },
+          { label: "Classe + passiva + 2 talentos iniciais", done: wizardChecks[4] },
+          { label: "Manobras por Eixo selecionadas", done: wizardChecks[5] },
+          { label: "Ficha pronta para jogar", done: wizardChecks[7] }
+        ]
       },
       isCharacter: this.document.type === "character",
       isNpc: this.document.type === "npc",
@@ -102,45 +218,309 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     }
 
     if (action === "wizard-go-step") {
-      const requestedStep = Number(target.dataset.step);
-      if (!Number.isFinite(requestedStep)) return;
-      const step = Math.min(WIZARD_STEPS, Math.max(1, requestedStep));
-      await actor.setFlag("pandorha", "wizardStep", step);
+      const requestedStep = clampInteger(target.dataset.step, 1, WIZARD_STEPS, 1);
+      if (requestedStep > 1) {
+        for (let step = 1; step < requestedStep; step += 1) {
+          if (!this._validateWizardStep(step, { notify: true })) {
+            await this._updateCreationState({ step });
+            await actor.setFlag("pandorha", "sheetTab", "criacao");
+            return;
+          }
+        }
+      }
+      await this._updateCreationState({ step: requestedStep });
       await actor.setFlag("pandorha", "sheetTab", "criacao");
       return;
     }
 
     if (action === "wizard-prev" || action === "wizard-next") {
-      const currentRaw = Number(actor.getFlag("pandorha", "wizardStep") ?? 1);
-      const current = Number.isFinite(currentRaw) ? Math.min(WIZARD_STEPS, Math.max(1, currentRaw)) : 1;
-      const requirement = action === "wizard-next" ? WIZARD_REQUIREMENTS[current] : undefined;
-      if (requirement) {
-        const value = actor.system.details?.[requirement.field];
-        if (!value) {
-          ui.notifications?.warn(`Selecione uma ${requirement.label} antes de continuar.`);
-          return;
-        }
+      const creation = this._getCreationState();
+      if (action === "wizard-next" && !this._validateWizardStep(creation.step, { notify: true })) return;
+      const delta = action === "wizard-next" ? 1 : -1;
+      const nextStep = clampInteger(creation.step + delta, 1, WIZARD_STEPS, creation.step);
+      await this._updateCreationState({ step: nextStep });
+      await actor.setFlag("pandorha", "sheetTab", "criacao");
+      return;
+    }
+
+    if (action === "wizard-apply-attributes") {
+      const baseEixos = {
+        fisico: clampInteger(root?.querySelector?.("[name='wizard-base-eixos-fisico']")?.value, 1, 3, 1),
+        mental: clampInteger(root?.querySelector?.("[name='wizard-base-eixos-mental']")?.value, 1, 3, 1),
+        social: clampInteger(root?.querySelector?.("[name='wizard-base-eixos-social']")?.value, 1, 3, 1)
+      };
+      const baseAplicacoes = {
+        conflito: clampInteger(root?.querySelector?.("[name='wizard-base-aplicacoes-conflito']")?.value, 1, 3, 1),
+        interacao: clampInteger(root?.querySelector?.("[name='wizard-base-aplicacoes-interacao']")?.value, 1, 3, 1),
+        resistencia: clampInteger(root?.querySelector?.("[name='wizard-base-aplicacoes-resistencia']")?.value, 1, 3, 1)
+      };
+
+      if (!this._isPoolValid(baseEixos) || !this._isPoolValid(baseAplicacoes)) {
+        ui.notifications?.warn("A distribuicao de Eixos e Aplicacoes deve ser 6/6, com minimo 1 e maximo 3.");
+        return;
       }
 
-      const delta = action === "wizard-next" ? 1 : -1;
-      const nextStep = Math.min(WIZARD_STEPS, Math.max(1, current + delta));
-      await actor.setFlag("pandorha", "wizardStep", nextStep);
+      const nextCreation = foundry.utils.mergeObject(this._getCreationState(), { baseEixos, baseAplicacoes }, { inplace: false, recursive: true });
+      const totals = this._computeCreationTotals(nextCreation);
+      if (!this._totalsWithinLevelOneCap(totals)) {
+        ui.notifications?.warn("Com os bonus raciais, nenhum Eixo ou Aplicacao pode passar de 4 no nivel 1.");
+        return;
+      }
+
+      await this._setCreationState(nextCreation);
+      await this._applyCreationTotals(nextCreation);
+      await actor.setFlag("pandorha", "sheetTab", "criacao");
+      ui.notifications?.info("Atributos base atualizados.");
+      return;
+    }
+
+    if (action === "wizard-select-ancestry") {
+      const existingNames = new Set(actor.items.filter(i => i.type === "ancestry").map(i => i.name));
+      const selected = await this._pickPackDocument({
+        packId: "pandorha.ancestries",
+        title: "Escolher Ancestralidade",
+        filterFn: doc => !existingNames.has(doc.name)
+      });
+      if (!selected) return;
+
+      await this._replaceSingleItemFromPack({
+        doc: selected,
+        type: "ancestry",
+        detailsField: "ancestry"
+      });
+      await this._deleteItemsByPredicate(item => item.type === "trait");
+
+      const resetCreation = foundry.utils.mergeObject(this._getCreationState(), {
+        ancestryBonusPrimary: null,
+        ancestryBonusExtra: null
+      }, { inplace: false, recursive: true });
+      await this._setCreationState(resetCreation);
+      await this._applyCreationTotals(resetCreation);
+      await actor.setFlag("pandorha", "sheetTab", "criacao");
+      return;
+    }
+
+    if (action === "wizard-set-ancestry-bonus") {
+      const ancestryName = actor.system.details?.ancestry ?? "";
+      if (!ancestryName) {
+        ui.notifications?.warn("Escolha uma ancestralidade antes de definir bonus.");
+        return;
+      }
+
+      const profile = this._getAncestryProfile(ancestryName);
+      const slot = target.dataset.slot;
+      const creation = this._getCreationState();
+      const nextCreation = foundry.utils.deepClone(creation);
+
+      if (slot === "primary") {
+        const scope = target.dataset.scope;
+        const key = target.dataset.key;
+        const isAllowed = profile.primaryOptions.some(option => option.scope === scope && option.key === key);
+        if (!isAllowed) {
+          ui.notifications?.warn("Esse bonus nao e valido para essa ancestralidade.");
+          return;
+        }
+        const sameSelection = creation.ancestryBonusPrimary?.scope === scope && creation.ancestryBonusPrimary?.key === key;
+        nextCreation.ancestryBonusPrimary = sameSelection ? null : { scope, key };
+      } else if (slot === "extra") {
+        const key = target.dataset.key;
+        if (!profile.extraApplication || !APPLICATION_KEYS.includes(key)) {
+          ui.notifications?.warn("Bonus extra indisponivel para essa ancestralidade.");
+          return;
+        }
+        nextCreation.ancestryBonusExtra = creation.ancestryBonusExtra === key ? null : key;
+      } else {
+        return;
+      }
+
+      const totals = this._computeCreationTotals(nextCreation);
+      if (!this._totalsWithinLevelOneCap(totals)) {
+        ui.notifications?.warn("Esse bonus ultrapassa o limite 4 no nivel 1.");
+        return;
+      }
+
+      await this._setCreationState(nextCreation);
+      await this._applyCreationTotals(nextCreation);
+      await actor.setFlag("pandorha", "sheetTab", "criacao");
+      return;
+    }
+
+    if (action === "wizard-add-ancestry-trait") {
+      const ancestryName = actor.system.details?.ancestry ?? "";
+      if (!ancestryName) {
+        ui.notifications?.warn("Escolha uma ancestralidade antes de adicionar tracos.");
+        return;
+      }
+
+      const selectedTraits = actor.items.filter(i => i.type === "trait");
+      if (selectedTraits.length >= 3) {
+        ui.notifications?.warn("Voce ja escolheu os 3 tracos iniciais da ancestralidade.");
+        return;
+      }
+
+      const ownedNames = new Set(selectedTraits.map(item => item.name));
+      const selected = await this._pickPackDocument({
+        packId: "pandorha.traits",
+        title: `Escolher Traco de ${ancestryName}`,
+        filterFn: doc => (doc.system?.details?.category === ancestryName) && !ownedNames.has(doc.name)
+      });
+      if (!selected) return;
+
+      await this._createItemFromPackDocument(selected, "trait");
+      await actor.setFlag("pandorha", "sheetTab", "criacao");
+      return;
+    }
+
+    if (action === "wizard-select-background") {
+      const existingNames = new Set(actor.items.filter(i => i.type === "background").map(i => i.name));
+      const selected = await this._pickPackDocument({
+        packId: "pandorha.backgrounds",
+        title: "Escolher Antecedente",
+        filterFn: doc => !existingNames.has(doc.name)
+      });
+      if (!selected) return;
+
+      await this._replaceSingleItemFromPack({
+        doc: selected,
+        type: "background",
+        detailsField: "background"
+      });
+
+      await this._deleteItemsByPredicate(item => this._isBackgroundTalent(item));
+      await actor.setFlag("pandorha", "sheetTab", "criacao");
+      return;
+    }
+
+    if (action === "wizard-add-background-talent") {
+      const backgroundItem = actor.items.find(item => item.type === "background");
+      if (!backgroundItem) {
+        ui.notifications?.warn("Escolha um antecedente antes de selecionar talento.");
+        return;
+      }
+
+      const options = this._extractBackgroundTalentOptions(backgroundItem);
+      if (!options.length) {
+        ui.notifications?.warn("Nao foi possivel ler os talentos desse antecedente.");
+        return;
+      }
+
+      const choice = await this._pickSimpleOption({
+        title: `Talento de ${backgroundItem.name}`,
+        options: options.map(option => ({
+          label: option.name,
+          description: option.description,
+          value: option
+        }))
+      });
+      if (!choice) return;
+
+      await this._deleteItemsByPredicate(item => this._isBackgroundTalent(item));
+
+      const talentData = {
+        name: choice.name,
+        type: "talent",
+        img: "icons/svg/book.svg",
+        system: {
+          description: `<p>${choice.description}</p>`,
+          details: {
+            source: backgroundItem.name,
+            category: `Antecedente: ${backgroundItem.name}`,
+            requirements: "Nivel 1",
+            tags: ["origem"]
+          }
+        }
+      };
+
+      await actor.createEmbeddedDocuments("Item", [talentData]);
+      await actor.setFlag("pandorha", "sheetTab", "criacao");
+      return;
+    }
+
+    if (action === "wizard-select-class") {
+      const existingNames = new Set(actor.items.filter(i => i.type === "class").map(i => i.name));
+      const selected = await this._pickPackDocument({
+        packId: "pandorha.classes",
+        title: "Escolher Classe",
+        filterFn: doc => !existingNames.has(doc.name)
+      });
+      if (!selected) return;
+
+      await this._deleteItemsByPredicate(item => this._isAnyClassStartingFeature(item));
+
+      const createdClass = await this._replaceSingleItemFromPack({
+        doc: selected,
+        type: "class",
+        detailsField: "class"
+      });
+
+      await this._ensureClassPassive(createdClass?.name ?? selected.name);
+      await actor.setFlag("pandorha", "sheetTab", "criacao");
+      return;
+    }
+
+    if (action === "wizard-add-class-talent") {
+      const className = actor.system.details?.class ?? "";
+      if (!className) {
+        ui.notifications?.warn("Escolha uma classe antes de selecionar talentos iniciais.");
+        return;
+      }
+
+      const selectedTalents = actor.items.filter(item => this._isClassInitialTalent(item, className));
+      if (selectedTalents.length >= 2) {
+        ui.notifications?.warn("Voce ja escolheu os 2 talentos iniciais da classe.");
+        return;
+      }
+
+      const ownedNames = new Set(selectedTalents.map(item => item.name));
+      const selected = await this._pickPackDocument({
+        packId: "pandorha.class-features",
+        title: `Talento Inicial de ${className}`,
+        filterFn: doc => (doc.system?.details?.category === `${className} - Talento Inicial`) && !ownedNames.has(doc.name)
+      });
+      if (!selected) return;
+
+      await this._createItemFromPackDocument(selected, "feature");
+      await actor.setFlag("pandorha", "sheetTab", "criacao");
+      return;
+    }
+
+    if (action === "wizard-add-maneuver") {
+      const axis = target.dataset.axis;
+      if (!AXIS_KEYS.includes(axis)) return;
+
+      const summary = this._getWizardSummary();
+      const required = summary.requiredManeuvers[axis] ?? 0;
+      const selectedCount = summary.maneuversByAxis[axis]?.length ?? 0;
+      if (selectedCount >= required) {
+        ui.notifications?.warn(`Voce ja selecionou todas as manobras de ${AXIS_LABELS[axis]}.`);
+        return;
+      }
+
+      const ownedNames = new Set((summary.maneuversByAxis[axis] ?? []).map(item => item.name));
+      const selected = await this._pickPackDocument({
+        packId: "pandorha.maneuvers",
+        title: `Selecionar Manobra (${AXIS_LABELS[axis]})`,
+        filterFn: doc => (doc.system?.roll?.axis === axis) && !ownedNames.has(doc.name)
+      });
+      if (!selected) return;
+
+      await this._createItemFromPackDocument(selected, "maneuver");
       await actor.setFlag("pandorha", "sheetTab", "criacao");
       return;
     }
 
     if (action === "wizard-finish") {
-      const missing = Object.values(WIZARD_REQUIREMENTS)
-        .map(req => req.field)
-        .find(field => !actor.system.details?.[field]);
-
-      if (missing) {
-        ui.notifications?.warn("Finalize ancestralidade, antecedente e classe antes de concluir.");
-        return;
+      for (let step = 1; step <= 5; step += 1) {
+        if (!this._validateWizardStep(step, { notify: true })) {
+          await this._updateCreationState({ step });
+          await actor.setFlag("pandorha", "sheetTab", "criacao");
+          return;
+        }
       }
-
+      await this._updateCreationState({ step: WIZARD_STEPS });
+      await actor.setFlag("pandorha", "creationComplete", true);
       await actor.setFlag("pandorha", "sheetTab", "base");
-      ui.notifications?.info("Criacao concluida. Voce ja pode ajustar os detalhes finais na aba Base.");
+      ui.notifications?.info("Personagem criado. Continue os ajustes finos na aba Base.");
       return;
     }
 
@@ -254,7 +634,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
 
               if (Number.isFinite(nextStep) && nextStep >= 1 && nextStep <= WIZARD_STEPS) {
                 await actor.setFlag("pandorha", "sheetTab", "criacao");
-                await actor.setFlag("pandorha", "wizardStep", nextStep);
+                await this._updateCreationState({ step: nextStep });
               }
             }
           },
@@ -269,6 +649,519 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     }
 
     return super._onClickAction?.(event, target);
+  }
+
+  _getCreationState() {
+    const raw = this.document.getFlag("pandorha", "creation");
+    return this._coerceCreationState(raw);
+  }
+
+  _coerceCreationState(raw) {
+    const defaults = this._getDefaultCreationState();
+    if (!raw || typeof raw !== "object") return defaults;
+
+    const merged = foundry.utils.mergeObject(defaults, raw, { inplace: false, recursive: true });
+    merged.step = clampInteger(merged.step, 1, WIZARD_STEPS, 1);
+    merged.baseEixos = this._sanitizePool(merged.baseEixos);
+    merged.baseAplicacoes = this._sanitizePool(merged.baseAplicacoes);
+
+    const validPrimary = merged.ancestryBonusPrimary
+      && ["eixos", "aplicacoes"].includes(merged.ancestryBonusPrimary.scope)
+      && ((merged.ancestryBonusPrimary.scope === "eixos" && AXIS_KEYS.includes(merged.ancestryBonusPrimary.key))
+      || (merged.ancestryBonusPrimary.scope === "aplicacoes" && APPLICATION_KEYS.includes(merged.ancestryBonusPrimary.key)));
+    if (!validPrimary) merged.ancestryBonusPrimary = null;
+
+    if (!APPLICATION_KEYS.includes(merged.ancestryBonusExtra)) merged.ancestryBonusExtra = null;
+    return merged;
+  }
+
+  _getDefaultCreationState() {
+    const eixosCandidate = {
+      fisico: Number(this.document.system.eixos?.fisico ?? 0),
+      mental: Number(this.document.system.eixos?.mental ?? 0),
+      social: Number(this.document.system.eixos?.social ?? 0)
+    };
+    const aplicacoesCandidate = {
+      conflito: Number(this.document.system.aplicacoes?.conflito ?? 0),
+      interacao: Number(this.document.system.aplicacoes?.interacao ?? 0),
+      resistencia: Number(this.document.system.aplicacoes?.resistencia ?? 0)
+    };
+
+    return {
+      step: 1,
+      baseEixos: this._isPoolValid(eixosCandidate) ? this._sanitizePool(eixosCandidate) : { fisico: 2, mental: 2, social: 2 },
+      baseAplicacoes: this._isPoolValid(aplicacoesCandidate) ? this._sanitizePool(aplicacoesCandidate) : { conflito: 2, interacao: 2, resistencia: 2 },
+      ancestryBonusPrimary: null,
+      ancestryBonusExtra: null
+    };
+  }
+
+  _sanitizePool(pool) {
+    const keys = Object.keys(pool ?? {});
+    const source = keys.length === 3 ? pool : {};
+    const fallback = keys.includes("fisico")
+      ? { fisico: 2, mental: 2, social: 2 }
+      : { conflito: 2, interacao: 2, resistencia: 2 };
+    return Object.fromEntries(Object.entries(fallback).map(([key, value]) => [key, clampInteger(source[key], 1, 3, value)]));
+  }
+
+  _isPoolValid(pool) {
+    const values = Object.values(pool ?? {});
+    if (values.length !== 3) return false;
+    const validRange = values.every(value => Number.isFinite(Number(value)) && Number(value) >= 1 && Number(value) <= 3);
+    const total = values.reduce((sum, value) => sum + Number(value), 0);
+    return validRange && total === 6;
+  }
+
+  _computeCreationTotals(creation) {
+    const eixos = { ...creation.baseEixos };
+    const aplicacoes = { ...creation.baseAplicacoes };
+
+    if (creation.ancestryBonusPrimary?.scope === "eixos" && AXIS_KEYS.includes(creation.ancestryBonusPrimary.key)) {
+      eixos[creation.ancestryBonusPrimary.key] += 1;
+    }
+    if (creation.ancestryBonusPrimary?.scope === "aplicacoes" && APPLICATION_KEYS.includes(creation.ancestryBonusPrimary.key)) {
+      aplicacoes[creation.ancestryBonusPrimary.key] += 1;
+    }
+    if (creation.ancestryBonusExtra && APPLICATION_KEYS.includes(creation.ancestryBonusExtra)) {
+      aplicacoes[creation.ancestryBonusExtra] += 1;
+    }
+
+    return { eixos, aplicacoes };
+  }
+
+  _totalsWithinLevelOneCap(totals) {
+    const values = [...Object.values(totals.eixos ?? {}), ...Object.values(totals.aplicacoes ?? {})];
+    return values.every(value => Number(value) <= 4);
+  }
+
+  async _setCreationState(nextState) {
+    const safeState = this._coerceCreationState(nextState);
+    await this.document.setFlag("pandorha", "creation", safeState);
+    return safeState;
+  }
+
+  async _updateCreationState(patch) {
+    const current = this._getCreationState();
+    const merged = foundry.utils.mergeObject(current, patch, { inplace: false, recursive: true });
+    return this._setCreationState(merged);
+  }
+
+  async _applyCreationTotals(creation) {
+    const totals = this._computeCreationTotals(creation);
+    await this.document.update({
+      "system.eixos.fisico": totals.eixos.fisico,
+      "system.eixos.mental": totals.eixos.mental,
+      "system.eixos.social": totals.eixos.social,
+      "system.aplicacoes.conflito": totals.aplicacoes.conflito,
+      "system.aplicacoes.interacao": totals.aplicacoes.interacao,
+      "system.aplicacoes.resistencia": totals.aplicacoes.resistencia
+    });
+  }
+
+  _getAncestryProfile(ancestryName) {
+    const normalized = normalizeText(ancestryName);
+    const allPrimary = [
+      ...AXIS_KEYS.map(key => ({ scope: "eixos", key, label: AXIS_LABELS[key] })),
+      ...APPLICATION_KEYS.map(key => ({ scope: "aplicacoes", key, label: APPLICATION_LABELS[key] }))
+    ];
+
+    if (normalized.includes("humano")) {
+      return {
+        label: "Humano: +1 livre (Eixo ou Aplicacao) e +1 Aplicacao extra",
+        primaryOptions: allPrimary,
+        extraApplication: true
+      };
+    }
+    if (normalized.includes("elf")) {
+      return {
+        label: "Elfo: +1 Mental ou +1 Interacao",
+        primaryOptions: [
+          { scope: "eixos", key: "mental", label: AXIS_LABELS.mental },
+          { scope: "aplicacoes", key: "interacao", label: APPLICATION_LABELS.interacao }
+        ],
+        extraApplication: false
+      };
+    }
+    if (normalized.includes("anao")) {
+      return {
+        label: "Anao: +1 Fisico ou +1 Resistencia",
+        primaryOptions: [
+          { scope: "eixos", key: "fisico", label: AXIS_LABELS.fisico },
+          { scope: "aplicacoes", key: "resistencia", label: APPLICATION_LABELS.resistencia }
+        ],
+        extraApplication: false
+      };
+    }
+    if (normalized.includes("drakari")) {
+      return {
+        label: "Drakari: +1 Fisico ou +1 Conflito",
+        primaryOptions: [
+          { scope: "eixos", key: "fisico", label: AXIS_LABELS.fisico },
+          { scope: "aplicacoes", key: "conflito", label: APPLICATION_LABELS.conflito }
+        ],
+        extraApplication: false
+      };
+    }
+    if (normalized.includes("umbra")) {
+      return {
+        label: "Umbrai: +1 Social ou +1 Interacao",
+        primaryOptions: [
+          { scope: "eixos", key: "social", label: AXIS_LABELS.social },
+          { scope: "aplicacoes", key: "interacao", label: APPLICATION_LABELS.interacao }
+        ],
+        extraApplication: false
+      };
+    }
+    if (normalized.includes("fera")) {
+      return {
+        label: "Fera: +1 Fisico ou +1 Interacao",
+        primaryOptions: [
+          { scope: "eixos", key: "fisico", label: AXIS_LABELS.fisico },
+          { scope: "aplicacoes", key: "interacao", label: APPLICATION_LABELS.interacao }
+        ],
+        extraApplication: false
+      };
+    }
+
+    return {
+      label: "Selecione uma ancestralidade para liberar os bonus",
+      primaryOptions: [],
+      extraApplication: false
+    };
+  }
+
+  _extractBackgroundTalentOptions(backgroundItem) {
+    const html = backgroundItem?.system?.description ?? "";
+    if (!html) return [];
+
+    const plain = html
+      .replace(/<br\s*\/?>/gi, "\n")
+      .replace(/<\/p>/gi, "\n")
+      .replace(/<[^>]+>/g, "")
+      .replace(/\r/g, "");
+    const marker = plain.split(/Talentos do .*?\(Escolha 1\)/i);
+    const section = marker[1] ?? "";
+    if (!section) return [];
+
+    const options = [];
+    const lines = section.split("\n").map(line => line.trim()).filter(Boolean);
+    for (const line of lines) {
+      if (/^##\s*\d+/.test(line)) break;
+      const match = line.match(/^- \*\*(.+?)\*\*:\s*(.+)$/);
+      if (!match) continue;
+      options.push({
+        name: match[1].replace(/\*\*/g, "").trim(),
+        description: match[2].replace(/\*\*/g, "").trim()
+      });
+    }
+    return options.slice(0, 3);
+  }
+
+  _isBackgroundTalent(item) {
+    if (item.type !== "talent") return false;
+    const category = item.system?.details?.category ?? "";
+    return String(category).startsWith("Antecedente:");
+  }
+
+  _isClassInitialTalent(item, className) {
+    if (!className || item.type !== "feature") return false;
+    return item.system?.details?.category === `${className} - Talento Inicial`;
+  }
+
+  _isClassPassive(item, className) {
+    if (!className || item.type !== "feature") return false;
+    return item.system?.details?.category === `${className} - Passiva`;
+  }
+
+  _isAnyClassStartingFeature(item) {
+    if (item.type !== "feature") return false;
+    const category = String(item.system?.details?.category ?? "");
+    return category.endsWith(" - Talento Inicial") || category.endsWith(" - Passiva");
+  }
+
+  _getWizardSummary() {
+    const actor = this.document;
+    const creation = this._getCreationState();
+    const totals = this._computeCreationTotals(creation);
+    const totalsWithinCap = this._totalsWithinLevelOneCap(totals);
+
+    const pools = {
+      baseEixos: creation.baseEixos,
+      baseAplicacoes: creation.baseAplicacoes,
+      eixosSpent: Object.values(creation.baseEixos).reduce((sum, value) => sum + Number(value), 0),
+      aplicacoesSpent: Object.values(creation.baseAplicacoes).reduce((sum, value) => sum + Number(value), 0)
+    };
+    pools.eixosRemaining = 6 - pools.eixosSpent;
+    pools.aplicacoesRemaining = 6 - pools.aplicacoesSpent;
+    pools.eixosValid = this._isPoolValid(creation.baseEixos);
+    pools.aplicacoesValid = this._isPoolValid(creation.baseAplicacoes);
+
+    const ancestryName = actor.system.details?.ancestry ?? "";
+    const backgroundName = actor.system.details?.background ?? "";
+    const className = actor.system.details?.class ?? "";
+
+    const ancestryProfile = this._getAncestryProfile(ancestryName);
+    const ancestryTraits = actor.items.filter(item => item.type === "trait").map(itemToContext);
+
+    const backgroundItem = actor.items.find(item => item.type === "background");
+    const backgroundTalentOptions = this._extractBackgroundTalentOptions(backgroundItem);
+    const backgroundTalents = actor.items.filter(item => this._isBackgroundTalent(item)).map(itemToContext);
+
+    const classInitialTalents = actor.items
+      .filter(item => this._isClassInitialTalent(item, className))
+      .map(itemToContext);
+    const classPassive = actor.items
+      .filter(item => this._isClassPassive(item, className))
+      .map(itemToContext);
+
+    const maneuversByAxis = {
+      fisico: [],
+      mental: [],
+      social: []
+    };
+    for (const item of actor.items.filter(entry => entry.type === "maneuver")) {
+      const axis = item.system?.roll?.axis;
+      if (!AXIS_KEYS.includes(axis)) continue;
+      maneuversByAxis[axis].push(itemToContext(item));
+    }
+
+    const requiredManeuvers = {
+      fisico: totals.eixos.fisico,
+      mental: totals.eixos.mental,
+      social: totals.eixos.social
+    };
+    const maneuversComplete = AXIS_KEYS.every(axis => maneuversByAxis[axis].length >= requiredManeuvers[axis]);
+
+    const trainedSkillsCount = Object.values(actor.system.skills ?? {}).filter(skill => skill?.trained).length;
+
+    return {
+      creation,
+      pools,
+      totals,
+      totalsWithinCap,
+      ancestryName,
+      ancestryProfile,
+      hasPrimaryAncestryBonus: Boolean(creation.ancestryBonusPrimary),
+      hasExtraAncestryBonus: !ancestryProfile.extraApplication || Boolean(creation.ancestryBonusExtra),
+      ancestryTraits,
+      backgroundName,
+      backgroundTalentOptions,
+      backgroundTalents,
+      className,
+      classInitialTalents,
+      classPassive,
+      requiredManeuvers,
+      maneuversByAxis,
+      maneuversComplete,
+      trainedSkillsCount
+    };
+  }
+
+  _computeWizardChecks(summary) {
+    const checks = {};
+    checks[1] = summary.pools.eixosValid && summary.pools.aplicacoesValid && summary.totalsWithinCap;
+    checks[2] = Boolean(summary.ancestryName)
+      && summary.hasPrimaryAncestryBonus
+      && summary.hasExtraAncestryBonus
+      && summary.ancestryTraits.length >= 3;
+    checks[3] = Boolean(summary.backgroundName) && summary.backgroundTalents.length >= 1;
+    checks[4] = Boolean(summary.className) && summary.classPassive.length >= 1 && summary.classInitialTalents.length >= 2;
+    checks[5] = summary.maneuversComplete;
+    checks[6] = true;
+    checks[7] = checks[1] && checks[2] && checks[3] && checks[4] && checks[5];
+    return checks;
+  }
+
+  _validateWizardStep(step, { notify = true } = {}) {
+    const summary = this._getWizardSummary();
+    const checks = this._computeWizardChecks(summary);
+    if (checks[step]) return true;
+    if (!notify) return false;
+
+    switch (step) {
+      case 1:
+        if (!summary.pools.eixosValid || !summary.pools.aplicacoesValid) {
+          ui.notifications?.warn("Distribua Eixos e Aplicacoes em 6/6, com minimo 1 e maximo 3.");
+          return false;
+        }
+        ui.notifications?.warn("Com os bonus da ancestralidade, nenhum valor pode passar de 4 no nivel 1.");
+        return false;
+      case 2:
+        if (!summary.ancestryName) {
+          ui.notifications?.warn("Selecione a ancestralidade.");
+          return false;
+        }
+        if (!summary.hasPrimaryAncestryBonus) {
+          ui.notifications?.warn("Selecione o bonus inicial da ancestralidade.");
+          return false;
+        }
+        if (!summary.hasExtraAncestryBonus) {
+          ui.notifications?.warn("A ancestralidade humana exige escolher a Aplicacao extra.");
+          return false;
+        }
+        ui.notifications?.warn("Escolha os 3 tracos iniciais da ancestralidade.");
+        return false;
+      case 3:
+        if (!summary.backgroundName) {
+          ui.notifications?.warn("Selecione o antecedente.");
+          return false;
+        }
+        ui.notifications?.warn("Escolha 1 talento do antecedente.");
+        return false;
+      case 4:
+        if (!summary.className) {
+          ui.notifications?.warn("Selecione a classe.");
+          return false;
+        }
+        if (summary.classPassive.length < 1) {
+          ui.notifications?.warn("A passiva da classe ainda nao foi aplicada.");
+          return false;
+        }
+        ui.notifications?.warn("Escolha 2 talentos iniciais da classe.");
+        return false;
+      case 5:
+        ui.notifications?.warn("Complete a selecao de manobras de acordo com os Eixos.");
+        return false;
+      default:
+        ui.notifications?.warn("Etapa de criacao incompleta.");
+        return false;
+    }
+  }
+
+  async _getPackDocuments(packId) {
+    if (PandorhaActorSheet._packCache.has(packId)) return PandorhaActorSheet._packCache.get(packId);
+    const pack = game.packs?.get(packId);
+    if (!pack) return [];
+    const docs = await pack.getDocuments();
+    PandorhaActorSheet._packCache.set(packId, docs);
+    return docs;
+  }
+
+  async _pickPackDocument({ packId, title, filterFn }) {
+    const docs = await this._getPackDocuments(packId);
+    const filtered = docs.filter(doc => (typeof filterFn === "function" ? filterFn(doc) : true));
+    if (!filtered.length) {
+      ui.notifications?.warn("Nenhuma opcao disponivel para esse filtro.");
+      return null;
+    }
+
+    return new Promise(resolve => {
+      let resolved = false;
+      const close = (value) => {
+        if (resolved) return;
+        resolved = true;
+        resolve(value ?? null);
+      };
+
+      const options = filtered
+        .map((doc, index) => `<option value="${index}">${foundry.utils.escapeHTML(doc.name)}</option>`)
+        .join("");
+
+      new Dialog({
+        title,
+        content: `<form><div class="form-group"><label>Opcao</label><select name="entry">${options}</select></div></form>`,
+        buttons: {
+          add: {
+            icon: '<i class="fas fa-check"></i>',
+            label: "Selecionar",
+            callback: html => {
+              const index = Number(html.find("select[name='entry']").val());
+              close(filtered[index] ?? null);
+            }
+          },
+          cancel: {
+            icon: '<i class="fas fa-times"></i>',
+            label: "Cancelar",
+            callback: () => close(null)
+          }
+        },
+        default: "add",
+        close: () => close(null)
+      }).render(true);
+    });
+  }
+
+  async _pickSimpleOption({ title, options }) {
+    if (!options.length) return null;
+    return new Promise(resolve => {
+      let resolved = false;
+      const close = (value) => {
+        if (resolved) return;
+        resolved = true;
+        resolve(value ?? null);
+      };
+
+      const optionHtml = options
+        .map((option, index) => {
+          const label = foundry.utils.escapeHTML(option.label);
+          const description = foundry.utils.escapeHTML(option.description ?? "");
+          return `<option value="${index}">${label}${description ? ` - ${description}` : ""}</option>`;
+        })
+        .join("");
+
+      new Dialog({
+        title,
+        content: `<form><div class="form-group"><label>Opcao</label><select name="entry">${optionHtml}</select></div></form>`,
+        buttons: {
+          add: {
+            icon: '<i class="fas fa-check"></i>',
+            label: "Selecionar",
+            callback: html => {
+              const index = Number(html.find("select[name='entry']").val());
+              close(options[index]?.value ?? null);
+            }
+          },
+          cancel: {
+            icon: '<i class="fas fa-times"></i>',
+            label: "Cancelar",
+            callback: () => close(null)
+          }
+        },
+        default: "add",
+        close: () => close(null)
+      }).render(true);
+    });
+  }
+
+  async _createItemFromPackDocument(doc, typeOverride = null) {
+    const data = doc.toObject();
+    delete data._id;
+    if (typeOverride) data.type = typeOverride;
+    const created = await this.document.createEmbeddedDocuments("Item", [data]);
+    return created?.[0] ?? null;
+  }
+
+  async _replaceSingleItemFromPack({ doc, type, detailsField }) {
+    const previousIds = this.document.items.filter(item => item.type === type).map(item => item.id);
+    if (previousIds.length) {
+      await this.document.deleteEmbeddedDocuments("Item", previousIds);
+    }
+    const created = await this._createItemFromPackDocument(doc, type);
+    if (created) {
+      await this.document.update({ [`system.details.${detailsField}`]: created.name });
+    }
+    return created;
+  }
+
+  async _deleteItemsByPredicate(predicate) {
+    const ids = this.document.items.filter(predicate).map(item => item.id);
+    if (!ids.length) return;
+    await this.document.deleteEmbeddedDocuments("Item", ids);
+  }
+
+  async _ensureClassPassive(className) {
+    if (!className) return;
+    const alreadyExists = this.document.items.some(item => this._isClassPassive(item, className));
+    if (alreadyExists) return;
+
+    const docs = await this._getPackDocuments("pandorha.class-features");
+    const passive = docs.find(doc => doc.system?.details?.category === `${className} - Passiva`);
+    if (!passive) {
+      ui.notifications?.warn(`Nao encontrei passiva inicial da classe ${className} no compendio.`);
+      return;
+    }
+    await this._createItemFromPackDocument(passive, "feature");
   }
 }
 
