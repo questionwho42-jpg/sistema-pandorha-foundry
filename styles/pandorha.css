@@ -522,7 +522,7 @@ button:active {
 }
 
 .pandorha.token-hud .window-content {
-  padding: 10px;
+  padding: 8px;
   overflow: auto;
 }
 
@@ -609,7 +609,7 @@ button:active {
 .token-hud-list {
   display: grid;
   gap: 6px;
-  max-height: 200px;
+  max-height: 130px;
   overflow: auto;
   padding-right: 2px;
 }

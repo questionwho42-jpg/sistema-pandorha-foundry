@@ -11,6 +11,11 @@ let tokenHud;
 
 function renderTokenHud(force = false) {
   if (!tokenHud) return;
+  const hasControlled = (canvas?.tokens?.controlled?.length ?? 0) > 0;
+  if (!hasControlled) {
+    tokenHud.close();
+    return;
+  }
   tokenHud.render(force);
   setTimeout(() => tokenHud?.refreshPosition(), 10);
 }

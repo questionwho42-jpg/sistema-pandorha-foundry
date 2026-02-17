@@ -41,14 +41,14 @@ export class PandorhaTokenHud extends HandlebarsApplicationMixin(foundry.applica
     classes: ["pandorha", "token-hud"],
     tag: "section",
     position: {
-      width: 420,
-      height: 560
+      width: 340,
+      height: 360
     },
     window: {
-      title: "Pandorha | Token HUD",
+      title: "Pandorha | Rolagem Rapida",
       icon: "fa-solid fa-heart-pulse",
       minimizable: true,
-      resizable: true
+      resizable: false
     },
     actions: {
       "hud-open-sheet": function (event, target) { return this._onClickAction(event, target); },
@@ -129,7 +129,18 @@ export class PandorhaTokenHud extends HandlebarsApplicationMixin(foundry.applica
 
   async _onRender(context, options) {
     await super._onRender(context, options);
+    this._syncCompactSize(context?.hasActor ?? false);
     this.refreshPosition();
+  }
+
+  _syncCompactSize(hasActor) {
+    const element = this._getElementNode();
+    if (!element) return;
+
+    const width = 340;
+    const height = hasActor ? 360 : 110;
+    element.style.width = `${width}px`;
+    element.style.height = `${height}px`;
   }
 
   refreshPosition() {
@@ -138,8 +149,12 @@ export class PandorhaTokenHud extends HandlebarsApplicationMixin(foundry.applica
     if (!element || !hotbar) return;
 
     const hotbarBox = hotbar.getBoundingClientRect();
-    const width = element.offsetWidth || this.position.width || 420;
-    const left = Math.max(12, Math.round(hotbarBox.left - width - 12));
+    const sidebar = document.getElementById("sidebar");
+    const width = element.offsetWidth || this.position.width || 340;
+    const sidebarLeft = sidebar?.getBoundingClientRect?.().left ?? window.innerWidth;
+    const maxLeft = Math.max(84, Math.floor(sidebarLeft - width - 12));
+    const computedLeft = Math.round(hotbarBox.left - width - 8);
+    const left = Math.max(84, Math.min(computedLeft, maxLeft));
     const bottom = Math.max(12, Math.round(window.innerHeight - hotbarBox.bottom));
 
     element.style.position = "fixed";
@@ -147,7 +162,7 @@ export class PandorhaTokenHud extends HandlebarsApplicationMixin(foundry.applica
     element.style.right = "auto";
     element.style.top = "auto";
     element.style.bottom = `${bottom}px`;
-    element.style.zIndex = "70";
+    element.style.zIndex = "58";
   }
 
   async _onClickAction(event, target) {
