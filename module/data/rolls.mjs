@@ -1,4 +1,5 @@
 import { applyConditions, applyNumericEffects, findConditions, extractConditionDurations, extractNumericEffects } from "./conditions.mjs";
+import { getActorAutomation } from "./automation.mjs";
 
 export async function rollTest({
   actor,
@@ -12,6 +13,7 @@ export async function rollTest({
 } = {}) {
   if (!actor) return null;
 
+  const automation = getActorAutomation(actor);
   const untrainedPenalty = trained ? 0 : -4;
   const mapPenalty = getMapPenalty(mapStep, agile);
 
@@ -19,7 +21,7 @@ export async function rollTest({
     level: actor.system.attributes.level ?? 0,
     eixo: actor.system.eixos?.[eixo] ?? 0,
     aplicacao: actor.system.aplicacoes?.[aplicacao] ?? 0,
-    bonus: (bonus ?? 0) + untrainedPenalty + mapPenalty
+    bonus: (bonus ?? 0) + untrainedPenalty + mapPenalty + (automation.testBonus ?? 0)
   };
 
   const formula = "1d20 + @level + @eixo + @aplicacao + @bonus";
@@ -44,7 +46,7 @@ export async function rollFormula({ actor, formula, label = "Rolagem" } = {}) {
   return roll;
 }
 
-export async function rollSkill({ actor, skill, label = "Perícia", mapStep = 0 } = {}) {
+export async function rollSkill({ actor, skill, label = "PerÃ­cia", mapStep = 0 } = {}) {
   if (!actor || !skill) return null;
   const trained = actor.system.skills?.[skill.id]?.trained ?? false;
   const bonus = actor.system.skills?.[skill.id]?.bonus ?? 0;
@@ -63,13 +65,14 @@ export async function rollSkill({ actor, skill, label = "Perícia", mapStep = 0 }
 export async function rollItem({ actor, item, mapStep = 0 } = {}) {
   if (!actor || !item) return null;
   const system = item.system ?? {};
+  await postItemDescription({ actor, item, header: "Descricao da Acao" });
   const axis = system.roll?.axis || system.rollAxis || "fisico";
   const aplicacao = system.roll?.aplicacao || system.rollAplicacao || "conflito";
   const bonusBase = Number(system.roll?.bonus ?? system.rollBonus ?? 0) || 0;
   const attackBonus = actor.system.bonuses?.attack ?? 0;
   const bonus = bonusBase + (system.roll?.isAttack ? attackBonus : 0);
   const isAttack = system.roll?.isAttack ?? ["weapon", "maneuver", "spell"].includes(item.type);
-  const isAgile = (system.weapon?.tags ?? []).some(t => t.toLowerCase().includes("ágil"));
+  const isAgile = (system.weapon?.tags ?? []).some(t => t.toLowerCase().includes("Ã¡gil"));
   const autoMap = mapStep === "auto";
   const resolvedMap = autoMap ? getMapFromActor(actor, isAttack) : mapStep;
 
@@ -112,7 +115,7 @@ export async function rollItem({ actor, item, mapStep = 0 } = {}) {
       });
 
       if (degree.success && system.damage) {
-        await rollItemDamage({ actor, item, label: degree.critical ? "Dano Crítico" : "Dano", critical: degree.critical });
+        await rollItemDamage({ actor, item, label: degree.critical ? "Dano CrÃ­tico" : "Dano", critical: degree.critical });
       }
 
       if (!degree.success) continue;
@@ -134,7 +137,11 @@ export async function rollItem({ actor, item, mapStep = 0 } = {}) {
       if (defaultConditions.length) await applyConditions([target], defaultConditions, defaultDurations);
       if (defaultEffects.length) await applyNumericEffects([target], defaultEffects, {});
     }
-  } else if (!isAttack && system.dc) {
+  } else if (!isAttack) {
+    if (defaultConditions.length) await applyConditions([actor], defaultConditions, defaultDurations);
+    if (defaultEffects.length) await applyNumericEffects([actor], defaultEffects, {});
+    if (!system.dc) return roll;
+
     const dc = Number(system.dc ?? 0);
     const degree = evaluateDegree(roll.total, dc);
     await ChatMessage.create({
@@ -144,6 +151,21 @@ export async function rollItem({ actor, item, mapStep = 0 } = {}) {
   }
 
   return roll;
+}
+
+export async function postItemDescription({ actor, item, header = "Descricao" } = {}) {
+  if (!actor || !item) return null;
+
+  const description = getItemDescriptionHTML(item);
+  if (!description) {
+    ui.notifications?.warn(`"${item.name}" nao possui descricao para enviar ao chat.`);
+    return null;
+  }
+
+  return ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor }),
+    content: `<article class="pandorha-chat-card"><h3>${escapeHTML(item.name)}</h3><h4>${escapeHTML(header)}</h4>${description}</article>`
+  });
 }
 
 export async function rollItemDamage({ actor, item, label = "Dano", critical = false } = {}) {
@@ -184,10 +206,33 @@ export async function incrementActorMap(actor) {
 export function evaluateDegree(total, dc) {
   if (!dc || Number.isNaN(Number(dc))) return { success: true, critical: false, label: "Sucesso" };
   const diff = total - dc;
-  if (diff >= 10) return { success: true, critical: true, label: "Sucesso Crítico" };
+  if (diff >= 10) return { success: true, critical: true, label: "Sucesso CrÃ­tico" };
   if (diff >= 0) return { success: true, critical: false, label: "Sucesso" };
   if (diff >= -4) return { success: true, critical: false, label: "Sucesso com Custo" };
   return { success: false, critical: false, label: "Falha" };
+}
+
+function getItemDescriptionHTML(item) {
+  const system = item?.system ?? {};
+  const chunks = [
+    system.description,
+    system.effect,
+    system.activation?.cost ? `<p><strong>Custo:</strong> ${escapeHTML(system.activation.cost)}</p>` : "",
+    system.check ? `<p><strong>Teste:</strong> ${escapeHTML(system.check)}</p>` : "",
+    system.dc ? `<p><strong>CD:</strong> ${escapeHTML(String(system.dc))}</p>` : "",
+    system.damage ? `<p><strong>Dano:</strong> ${escapeHTML(String(system.damage))}</p>` : ""
+  ].filter(Boolean);
+
+  return chunks.join("");
+}
+
+function escapeHTML(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 function extractPartialSection(text) {
@@ -196,6 +241,6 @@ function extractPartialSection(text) {
 }
 
 function extractCriticalSection(text) {
-  const match = text.match(/Cr[ií]tico\s*:\s*([\s\S]*?)(?:\n\n|$)/i);
+  const match = text.match(/Cr[iÃ­]tico\s*:\s*([\s\S]*?)(?:\n\n|$)/i);
   return match ? match[1] : "";
 }

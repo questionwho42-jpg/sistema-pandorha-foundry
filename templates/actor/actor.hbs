@@ -135,6 +135,7 @@
             </div>
             <div class="derived">
               <div>Iniciativa base: {{system.derived.initiative}}</div>
+              <div>Automacao: ATQ {{automation.attack}} | DANO {{automation.damage}} | CA {{automation.ca}} | INI {{automation.initiative}} | TESTES {{automation.tests}}</div>
               <div>Slots usados: {{system.derived.carrySlots}} / {{system.derived.carryMax}}</div>
               <div>Tier: {{system.attributes.tier}}</div>
               <div>DC Mundana: {{system.derived.dcTable.mundana}} | Desafiadora: {{system.derived.dcTable.desafiadora}} | Lendária: {{system.derived.dcTable.lendaria}} | Divina: {{system.derived.dcTable.divina}}</div>
@@ -661,6 +662,7 @@
                 <div class="item-actions">
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Ataque</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                  <button type="button" data-action="item-post-description" data-item-id="{{_id}}">Descricao</button>
                 </div>
               </div>
               {{/each}}
@@ -679,6 +681,7 @@
                 <div class="item-actions">
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                  <button type="button" data-action="item-post-description" data-item-id="{{_id}}">Descricao</button>
                 </div>
               </div>
               {{/each}}
@@ -704,6 +707,7 @@
                 <div class="item-actions">
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                  <button type="button" data-action="item-post-description" data-item-id="{{_id}}">Descricao</button>
                 </div>
               </div>
               {{/each}}
@@ -729,6 +733,7 @@
                 <div class="item-actions">
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                  <button type="button" data-action="item-post-description" data-item-id="{{_id}}">Descricao</button>
                 </div>
               </div>
               {{/each}}
@@ -766,6 +771,7 @@
                   <button type="button" data-action="item-toggle-equipped" data-item-id="{{_id}}">{{#if system.equipped}}Desequipar{{else}}Equipar{{/if}}</button>
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Ataque</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                  <button type="button" data-action="item-post-description" data-item-id="{{_id}}">Descricao</button>
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>
@@ -798,6 +804,7 @@
                 <div class="item-actions">
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Ataque</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                  <button type="button" data-action="item-post-description" data-item-id="{{_id}}">Descricao</button>
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>
@@ -830,6 +837,7 @@
                 <div class="item-actions">
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                  <button type="button" data-action="item-post-description" data-item-id="{{_id}}">Descricao</button>
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>
@@ -858,6 +866,7 @@
                 <div class="item-actions">
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                  <button type="button" data-action="item-post-description" data-item-id="{{_id}}">Descricao</button>
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>
@@ -991,6 +1000,7 @@
                 <div class="item-actions">
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                  <button type="button" data-action="item-post-description" data-item-id="{{_id}}">Descricao</button>
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>
@@ -1089,6 +1099,7 @@
                   <button type="button" data-action="item-toggle-equipped" data-item-id="{{_id}}">{{#if system.equipped}}Desequipar{{else}}Equipar{{/if}}</button>
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Ataque</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                  <button type="button" data-action="item-post-description" data-item-id="{{_id}}">Descricao</button>
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>
@@ -1410,6 +1421,7 @@
                 <div class="item-actions">
                   <button type="button" data-action="item-roll" data-item-id="{{_id}}">Rolar</button>
                   <button type="button" data-action="item-damage" data-item-id="{{_id}}">Dano</button>
+                  <button type="button" data-action="item-post-description" data-item-id="{{_id}}">Descricao</button>
                   <button type="button" data-action="item-edit" data-item-id="{{_id}}">Editar</button>
                   <button type="button" data-action="item-delete" data-item-id="{{_id}}">Remover</button>
                 </div>

@@ -1,5 +1,6 @@
-import { rollTest, rollSkill, rollItem, rollItemDamage } from "../data/rolls.mjs";
+import { rollTest, rollSkill, rollItem, rollItemDamage, postItemDescription } from "../data/rolls.mjs";
 import { SKILLS } from "../data/skills.mjs";
+import { getActorAutomation, formatSigned } from "../data/automation.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const WIZARD_STEPS = 8;
@@ -116,6 +117,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       "roll-skill": function (event, target) { return this._onClickAction(event, target); },
       "item-roll": function (event, target) { return this._onClickAction(event, target); },
       "item-damage": function (event, target) { return this._onClickAction(event, target); },
+      "item-post-description": function (event, target) { return this._onClickAction(event, target); },
       "item-create": function (event, target) { return this._onClickAction(event, target); },
       "item-edit": function (event, target) { return this._onClickAction(event, target); },
       "item-delete": function (event, target) { return this._onClickAction(event, target); },
@@ -177,6 +179,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       trained: this.document.system.skills?.[skill.id]?.trained ?? false,
       bonus: this.document.system.skills?.[skill.id]?.bonus ?? 0
     }));
+    const automation = getActorAutomation(this.document);
 
     const activeTab = this.document.getFlag("pandorha", "sheetTab") ?? "base";
     const wizardSummary = this._getWizardSummary();
@@ -287,7 +290,14 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       isNpc: this.document.type === "npc",
       isMonster: this.document.type === "monster",
       equipmentRules: EQUIPMENT_RULES,
-      actor: this.document
+      actor: this.document,
+      automation: {
+        attack: formatSigned(automation.attack),
+        damage: formatSigned(automation.damage),
+        ca: formatSigned(automation.ca),
+        initiative: formatSigned(automation.initiative),
+        tests: formatSigned(automation.testBonus)
+      }
     };
   }
 
@@ -714,7 +724,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       return;
     }
 
-    if (["item-roll", "item-damage", "item-edit", "item-delete", "item-toggle-equipped"].includes(action)) {
+    if (["item-roll", "item-damage", "item-post-description", "item-edit", "item-delete", "item-toggle-equipped"].includes(action)) {
       const itemId = target.dataset.itemId;
       const item = actor.items.get(itemId);
       if (!item) return;
@@ -730,6 +740,11 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
 
       if (action === "item-damage") {
         await rollItemDamage({ actor, item });
+        return;
+      }
+
+      if (action === "item-post-description") {
+        await postItemDescription({ actor, item, header: "Descricao" });
         return;
       }
 

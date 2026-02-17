@@ -1,24 +1,48 @@
+import { SKILLS } from "../data/skills.mjs";
+import { getActorAutomation, getDerivedEffectBonuses } from "../data/automation.mjs";
+
 export class PandorhaActor extends Actor {
   prepareDerivedData() {
     super.prepareDerivedData();
 
     const system = this.system;
-    const level = system.attributes.level ?? 0;
-    const fis = system.eixos.fisico ?? 0;
-    const men = system.eixos.mental ?? 0;
-    const soc = system.eixos.social ?? 0;
-    const conf = system.aplicacoes.conflito ?? 0;
-    const inter = system.aplicacoes.interacao ?? 0;
-    const res = system.aplicacoes.resistencia ?? 0;
+    const automation = getActorAutomation(this);
+    const effectBonuses = getDerivedEffectBonuses(this);
+
+    const level = Number(system.attributes.level ?? 0);
+    const fis = Number(system.eixos.fisico ?? 0) + automation.eixos.fisico;
+    const men = Number(system.eixos.mental ?? 0) + automation.eixos.mental;
+    const soc = Number(system.eixos.social ?? 0) + automation.eixos.social;
+    const conf = Number(system.aplicacoes.conflito ?? 0) + automation.aplicacoes.conflito;
+    const inter = Number(system.aplicacoes.interacao ?? 0) + automation.aplicacoes.interacao;
+    const res = Number(system.aplicacoes.resistencia ?? 0) + automation.aplicacoes.resistencia;
+
+    system.eixos.fisico = fis;
+    system.eixos.mental = men;
+    system.eixos.social = soc;
+    system.aplicacoes.conflito = conf;
+    system.aplicacoes.interacao = inter;
+    system.aplicacoes.resistencia = res;
+
+    for (const skill of SKILLS) {
+      const skillData = system.skills?.[skill.id];
+      const autoSkill = automation.skills?.[skill.id];
+      if (!skillData || !autoSkill) continue;
+      skillData.bonus = Number(skillData.bonus ?? 0) + Number(autoSkill.bonus ?? 0);
+      skillData.trained = Boolean(skillData.trained || autoSkill.trained);
+    }
+
+    system.bonuses.attack = Number(system.bonuses.attack ?? 0) + automation.attack;
+    system.bonuses.damage = Number(system.bonuses.damage ?? 0) + automation.damage;
 
     const classItem = this.items.find(i => i.type === "class");
     const baseHp = classItem?.system.classData?.baseHp ?? 0;
     const basePv = classItem?.system.classData?.basePv ?? 0;
     const baseEe = classItem?.system.classData?.baseEe ?? 0;
 
-    const hpMax = baseHp + (fis + res) * 5;
-    const pvMax = basePv + (fis + inter) + level;
-    const eeMax = baseEe + (men + res) + level;
+    const hpMax = baseHp + (fis + res) * 5 + automation.resources.hp + effectBonuses.resources.hp;
+    const pvMax = basePv + (fis + inter) + level + automation.resources.pv + effectBonuses.resources.pv;
+    const eeMax = baseEe + (men + res) + level + automation.resources.ee + effectBonuses.resources.ee;
 
     system.resources.hp.max = hpMax;
     system.resources.pv.max = pvMax;
@@ -36,13 +60,18 @@ export class PandorhaActor extends Actor {
 
     const shieldBonus = shieldItems.reduce((sum, i) => sum + (i.system.shield?.bonus ?? 0), 0);
 
-    const ca = 10 + level + armorBonus + limitedAxis + shieldBonus;
+    const ca = 10 + level + armorBonus + limitedAxis + shieldBonus + automation.ca + effectBonuses.ca;
     system.defenses.ca = ca;
 
-    system.derived.initiative = level + men + inter;
+    const movementBase = Number(system.movement.base ?? 0);
+    system.movement.base = Math.max(0, movementBase + automation.movement);
+
+    system.derived.initiative = level + men + inter + automation.initiative + effectBonuses.initiative;
     system.derived.dc = 10 + level;
     system.derived.dcTable = this._getDcTable(system.attributes.tier);
-    system.derived.carryMax = (fis + res) + 6;
+    const carryBase = (fis + res) + 6 + automation.carryBonus;
+    const carryMultiplier = Math.max(1, Number(automation.carryMultiplier ?? 1));
+    system.derived.carryMax = Math.max(0, Math.floor(carryBase * carryMultiplier));
     system.derived.carrySlots = this._calculateCarrySlots();
   }
 
