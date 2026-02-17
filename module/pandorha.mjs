@@ -2,9 +2,18 @@ import { PandorhaActor } from "./documents/actor.mjs";
 import { PandorhaItem } from "./documents/item.mjs";
 import { PandorhaActorSheet } from "./applications/actor-sheet.mjs";
 import { PandorhaItemSheet } from "./applications/item-sheet.mjs";
+import { PandorhaTokenHud } from "./applications/token-hud.mjs";
 import { PandorhaActorModel } from "./documents/data/actor-model.mjs";
 import { PandorhaItemModel } from "./documents/data/item-model.mjs";
 import { registerHandlebars } from "./data/handlebars.mjs";
+
+let tokenHud;
+
+function renderTokenHud(force = false) {
+  if (!tokenHud) return;
+  tokenHud.render(force);
+  setTimeout(() => tokenHud?.refreshPosition(), 10);
+}
 
 Hooks.once("init", () => {
   console.log("Pandorha | Initializing system");
@@ -60,5 +69,26 @@ Hooks.on("updateCombat", async (combat, changed) => {
       await combatant.actor.setFlag("pandorha", "attacksThisTurn", 0);
     }
   }
+});
+
+Hooks.once("ready", () => {
+  game.pandorha ||= {};
+  tokenHud = new PandorhaTokenHud();
+  game.pandorha.tokenHud = tokenHud;
+
+  renderTokenHud(true);
+
+  window.addEventListener("resize", () => tokenHud?.refreshPosition());
+});
+
+Hooks.on("renderHotbar", () => tokenHud?.refreshPosition());
+Hooks.on("canvasReady", () => renderTokenHud());
+Hooks.on("controlToken", () => renderTokenHud());
+Hooks.on("updateToken", () => renderTokenHud());
+Hooks.on("createToken", () => renderTokenHud());
+Hooks.on("deleteToken", () => renderTokenHud());
+Hooks.on("updateActor", (actor) => {
+  const selectedActor = canvas?.tokens?.controlled?.[0]?.actor;
+  if (selectedActor?.id === actor.id) renderTokenHud();
 });
 

@@ -1,0 +1,119 @@
+<section class="pandorha-token-hud-sheet">
+  {{#if hasActor}}
+  <header class="token-hud-header">
+    <img class="token-hud-image" src="{{tokenImage}}" alt="{{actor.name}}" />
+    <div class="token-hud-meta">
+      <h3>{{actor.name}}</h3>
+      <div class="token-hud-type">{{actorTypeLabel}}</div>
+    </div>
+    <button type="button" data-action="hud-open-sheet">Ficha</button>
+  </header>
+
+  <section class="token-hud-stats">
+    <div class="token-hud-stat"><span>HP</span><strong>{{hp.value}} / {{hp.max}}</strong></div>
+    <div class="token-hud-stat"><span>PV</span><strong>{{pv.value}} / {{pv.max}}</strong></div>
+    <div class="token-hud-stat"><span>EE</span><strong>{{ee.value}} / {{ee.max}}</strong></div>
+    <div class="token-hud-stat"><span>CA</span><strong>{{ca}}</strong></div>
+    <div class="token-hud-stat"><span>Iniciativa</span><strong>{{initiative}}</strong></div>
+    <div class="token-hud-stat"><span>Ações</span><strong>{{actions.value}} / {{actions.max}}</strong></div>
+  </section>
+
+  <section class="token-hud-panel">
+    <div class="token-hud-panel-header">
+      <h4>Rolagem Rápida</h4>
+      <button type="button" data-action="hud-roll-initiative">Iniciativa</button>
+    </div>
+    <div class="roll-row" data-roll-context="hud-test">
+      <select name="hud-roll-eixo">
+        <option value="fisico">Físico</option>
+        <option value="mental">Mental</option>
+        <option value="social">Social</option>
+      </select>
+      <select name="hud-roll-aplicacao">
+        <option value="conflito">Conflito</option>
+        <option value="interacao">Interação</option>
+        <option value="resistencia">Resistência</option>
+      </select>
+      <input name="hud-roll-bonus" type="number" value="0" />
+      <select name="hud-roll-map">
+        <option value="auto">MAP Auto</option>
+        <option value="0">MAP 0</option>
+        <option value="1">MAP 1</option>
+        <option value="2">MAP 2</option>
+      </select>
+      <label class="inline">Treinado
+        <input name="hud-roll-trained" type="checkbox" checked />
+      </label>
+      <button type="button" data-action="hud-roll-test">Rolar Teste</button>
+    </div>
+  </section>
+
+  <section class="token-hud-panel">
+    <div class="token-hud-panel-header">
+      <h4>Perícias</h4>
+    </div>
+    <div class="token-hud-list">
+      {{#each skills}}
+      <div class="token-hud-list-row">
+        <div class="token-hud-list-main">
+          <span class="token-hud-list-name">{{label}}</span>
+          <span class="token-hud-list-meta">{{#if trained}}Treinado{{else}}Não Treinado{{/if}} | Bônus {{bonus}}</span>
+        </div>
+        <button type="button" data-action="hud-roll-skill" data-skill-id="{{id}}">Rolar</button>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="token-hud-panel">
+    <div class="token-hud-panel-header">
+      <h4>Ações de Itens</h4>
+    </div>
+    <div class="token-hud-list">
+      {{#if rollItems.length}}
+      {{#each rollItems}}
+      <div class="token-hud-list-row">
+        <div class="token-hud-list-main">
+          <span class="token-hud-list-name">{{name}}</span>
+          <span class="token-hud-list-meta">{{typeLabel}}</span>
+        </div>
+        <div class="token-hud-list-actions">
+          <button type="button" data-action="hud-item-roll" data-item-id="{{id}}">Rolar</button>
+          {{#if hasDamage}}
+          <button type="button" data-action="hud-item-damage" data-item-id="{{id}}">Dano</button>
+          {{/if}}
+          {{#if hasDescription}}
+          <button type="button" data-action="hud-item-description" data-item-id="{{id}}">Descrição</button>
+          {{/if}}
+        </div>
+      </div>
+      {{/each}}
+      {{else}}
+      <div class="token-hud-empty">Nenhum item rolável encontrado.</div>
+      {{/if}}
+    </div>
+  </section>
+
+  <section class="token-hud-panel">
+    <div class="token-hud-panel-header">
+      <h4>Status Ativos</h4>
+    </div>
+    <div class="token-hud-statuses">
+      {{#if statuses.length}}
+      {{#each statuses}}
+      <span class="token-hud-status" title="{{label}}">
+        <img src="{{icon}}" alt="{{label}}" />
+        <span>{{label}}</span>
+      </span>
+      {{/each}}
+      {{else}}
+      <div class="token-hud-empty">Sem condições/efeitos ativos.</div>
+      {{/if}}
+    </div>
+  </section>
+  {{else}}
+  <div class="token-hud-empty token-hud-empty-main">
+    Selecione um token para usar o painel rápido de status e rolagens.
+  </div>
+  {{/if}}
+</section>
