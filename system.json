@@ -2,7 +2,7 @@
   "id": "pandorha",
   "title": "Pandorha",
   "description": "Sistema Pandorha para Foundry VTT.",
-  "version": "0.1.49",
+  "version": "0.1.50",
   "compatibility": {
     "minimum": "13",
     "verified": "13.338",
@@ -12,7 +12,7 @@
     "module/pandorha.mjs"
   ],
   "styles": [
-    "styles/pandorha.css"
+    "styles/pandorha-0.1.50.css"
   ],
   "manifest": "https://raw.githubusercontent.com/questionwho42-jpg/sistema-pandorha-foundry/main/system.json",
   "download": "https://github.com/questionwho42-jpg/sistema-pandorha-foundry/archive/refs/heads/main.zip",
