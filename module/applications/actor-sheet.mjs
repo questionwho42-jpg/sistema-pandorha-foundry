@@ -110,6 +110,11 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
   static DEFAULT_OPTIONS = foundry.utils.mergeObject(super.DEFAULT_OPTIONS, {
     classes: ["pandorha", "sheet", "actor"],
     position: { width: 900, height: 720 },
+    form: {
+      submitOnChange: true,
+      submitOnClose: true,
+      closeOnSubmit: false
+    },
     actions: {
       "switch-tab": function (event, target) { return this._onClickAction(event, target); },
       "roll-test": function (event, target) { return this._onClickAction(event, target); },
@@ -148,6 +153,11 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       template: "systems/pandorha/templates/actor/actor.hbs"
     }
   };
+
+  async _onRender(context, options) {
+    await super._onRender(context, options);
+    this._bindResourceCurrentAutosave();
+  }
 
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
@@ -863,6 +873,50 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     }
 
     return super._onClickAction?.(event, target);
+  }
+
+  _bindResourceCurrentAutosave() {
+    const root = this.element?.querySelector?.("[data-application-part='form']") ??
+      this.element?.querySelector?.("form");
+    if (!root) return;
+
+    const watched = [
+      "system.resources.hp.value",
+      "system.resources.pv.value",
+      "system.resources.ee.value"
+    ];
+
+    for (const fieldName of watched) {
+      const input = root.querySelector?.(`[name='${fieldName}']`);
+      if (!input) continue;
+      if (input.dataset.pandorhaResourceBound === "1") continue;
+      input.dataset.pandorhaResourceBound = "1";
+
+      input.addEventListener("change", () => this._saveResourceCurrentValues(root), { passive: true });
+      input.addEventListener("blur", () => this._saveResourceCurrentValues(root), { passive: true });
+    }
+  }
+
+  async _saveResourceCurrentValues(root) {
+    if (!root) return;
+
+    const readInt = (name, fallback) => {
+      const value = Number(root.querySelector?.(`[name='${name}']`)?.value);
+      if (!Number.isFinite(value)) return fallback;
+      return Math.max(0, Math.trunc(value));
+    };
+
+    const hpValue = readInt("system.resources.hp.value", Number(this.document.system.resources?.hp?.value ?? 0));
+    const pvValue = readInt("system.resources.pv.value", Number(this.document.system.resources?.pv?.value ?? 0));
+    const eeValue = readInt("system.resources.ee.value", Number(this.document.system.resources?.ee?.value ?? 0));
+
+    const updates = {};
+    if (hpValue !== Number(this.document.system.resources?.hp?.value ?? 0)) updates["system.resources.hp.value"] = hpValue;
+    if (pvValue !== Number(this.document.system.resources?.pv?.value ?? 0)) updates["system.resources.pv.value"] = pvValue;
+    if (eeValue !== Number(this.document.system.resources?.ee?.value ?? 0)) updates["system.resources.ee.value"] = eeValue;
+
+    if (!Object.keys(updates).length) return;
+    await this.document.update(updates);
   }
 
   _getCreationState() {
