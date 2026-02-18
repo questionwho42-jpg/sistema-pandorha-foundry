@@ -520,3 +520,214 @@
     justify-content: flex-start;
   }
 }
+
+#pandorha-quickbar {
+  position: fixed;
+  left: 72px;
+  bottom: 12px;
+  z-index: 58;
+  width: 42px;
+  pointer-events: auto;
+  font-family: "Signika", sans-serif;
+}
+
+#pandorha-quickbar[data-expanded="true"] {
+  width: 340px;
+}
+
+#pandorha-quickbar .pqb-shell {
+  display: grid;
+  gap: 8px;
+  background: rgba(6, 8, 15, 0.95);
+  border: 1px solid rgba(197, 148, 68, 0.45);
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  padding: 6px;
+}
+
+#pandorha-quickbar .pqb-toggle {
+  width: 28px;
+  height: 28px;
+  justify-self: start;
+  border-radius: 8px;
+  border: 1px solid rgba(197, 148, 68, 0.55);
+  background: #c08b3f;
+  color: #1f1408;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#pandorha-quickbar .pqb-content {
+  display: grid;
+  gap: 8px;
+}
+
+#pandorha-quickbar .pqb-header {
+  display: grid;
+  grid-template-columns: 34px 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+#pandorha-quickbar .pqb-image {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#pandorha-quickbar .pqb-header-text {
+  display: grid;
+  gap: 1px;
+}
+
+#pandorha-quickbar .pqb-header-text strong {
+  color: #f6ead5;
+  font-size: 0.9rem;
+}
+
+#pandorha-quickbar .pqb-header-text small {
+  color: #d0bf9e;
+  font-size: 0.74rem;
+}
+
+#pandorha-quickbar .pqb-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+#pandorha-quickbar .pqb-stats div {
+  display: grid;
+  gap: 2px;
+  padding: 5px 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+#pandorha-quickbar .pqb-stats span {
+  color: #d7c7aa;
+  font-size: 0.68rem;
+}
+
+#pandorha-quickbar .pqb-stats strong {
+  color: #f6ecdb;
+  font-size: 0.82rem;
+}
+
+#pandorha-quickbar .pqb-panel {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 6px;
+  display: grid;
+  gap: 6px;
+}
+
+#pandorha-quickbar .pqb-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+
+#pandorha-quickbar .pqb-panel-head strong {
+  color: #f1e4d0;
+  font-size: 0.78rem;
+  letter-spacing: 0.3px;
+}
+
+#pandorha-quickbar .pqb-roll-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  align-items: center;
+}
+
+#pandorha-quickbar .pqb-roll-row input,
+#pandorha-quickbar .pqb-roll-row select {
+  width: 100%;
+  min-width: 0;
+  border-radius: 6px;
+  border: 1px solid rgba(162, 132, 92, 0.45);
+  background: #fefbf6;
+  color: #2b221b;
+  padding: 4px 6px;
+}
+
+#pandorha-quickbar .pqb-inline {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: #e2d4be;
+  font-size: 0.76rem;
+}
+
+#pandorha-quickbar .pqb-inline input {
+  width: 14px;
+  height: 14px;
+}
+
+#pandorha-quickbar button {
+  border: 1px solid rgba(197, 148, 68, 0.55);
+  border-radius: 7px;
+  background: #c08b3f;
+  color: #1f1408;
+  padding: 4px 6px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#pandorha-quickbar .pqb-list {
+  display: grid;
+  gap: 4px;
+  max-height: 140px;
+  overflow: auto;
+  padding-right: 1px;
+}
+
+#pandorha-quickbar .pqb-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+  align-items: center;
+  padding: 5px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+#pandorha-quickbar .pqb-row-main {
+  display: grid;
+  gap: 2px;
+}
+
+#pandorha-quickbar .pqb-row-title {
+  color: #f7ebd8;
+  font-size: 0.79rem;
+  font-weight: 700;
+}
+
+#pandorha-quickbar .pqb-row-main small {
+  color: #ccb99a;
+  font-size: 0.7rem;
+}
+
+#pandorha-quickbar .pqb-row-actions {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+#pandorha-quickbar .pqb-empty {
+  color: #d8c8ad;
+  font-size: 0.76rem;
+}
+
+#pandorha-quickbar .pqb-empty-main {
+  padding: 6px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}

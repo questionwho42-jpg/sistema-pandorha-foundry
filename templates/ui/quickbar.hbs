@@ -1,0 +1,107 @@
+<div class="pqb-shell">
+  <button type="button" class="pqb-toggle" data-action="quickbar-toggle" title="{{#if expanded}}Recolher{{else}}Expandir{{/if}}">
+    {{#if expanded}}&lsaquo;{{else}}&rsaquo;{{/if}}
+  </button>
+
+  {{#if expanded}}
+  <div class="pqb-content">
+    {{#if hasActor}}
+    <header class="pqb-header">
+      <img src="{{tokenImage}}" alt="{{actorName}}" class="pqb-image" />
+      <div class="pqb-header-text">
+        <strong>{{actorName}}</strong>
+        <small>{{actorType}}</small>
+      </div>
+      <button type="button" data-action="quickbar-open-sheet">Ficha</button>
+    </header>
+
+    <section class="pqb-stats">
+      <div><span>HP</span><strong>{{hp.value}} / {{hp.max}}</strong></div>
+      <div><span>PV</span><strong>{{pv.value}} / {{pv.max}}</strong></div>
+      <div><span>EE</span><strong>{{ee.value}} / {{ee.max}}</strong></div>
+      <div><span>CA</span><strong>{{ca}}</strong></div>
+      <div><span>INI</span><strong>{{initiative}}</strong></div>
+      <div><span>ACOES</span><strong>{{actions.value}} / {{actions.max}}</strong></div>
+    </section>
+
+    <section class="pqb-panel">
+      <div class="pqb-panel-head">
+        <strong>Rolagem Rapida</strong>
+        <button type="button" data-action="quickbar-roll-initiative">Iniciativa</button>
+      </div>
+      <div class="pqb-roll-row">
+        <select name="quickbar-roll-eixo">
+          <option value="fisico">Fisico</option>
+          <option value="mental">Mental</option>
+          <option value="social">Social</option>
+        </select>
+        <select name="quickbar-roll-aplicacao">
+          <option value="conflito">Conflito</option>
+          <option value="interacao">Interacao</option>
+          <option value="resistencia">Resistencia</option>
+        </select>
+        <input type="number" name="quickbar-roll-bonus" value="0" />
+        <select name="quickbar-roll-map">
+          <option value="auto" {{#ifEq mapValue "auto"}}selected{{/ifEq}}>MAP Auto</option>
+          <option value="0" {{#ifEq mapValue "0"}}selected{{/ifEq}}>MAP 0</option>
+          <option value="1" {{#ifEq mapValue "1"}}selected{{/ifEq}}>MAP 1</option>
+          <option value="2" {{#ifEq mapValue "2"}}selected{{/ifEq}}>MAP 2</option>
+        </select>
+        <label class="pqb-inline">Treinado
+          <input type="checkbox" name="quickbar-roll-trained" checked />
+        </label>
+        <button type="button" data-action="quickbar-roll-test">Rolar</button>
+      </div>
+    </section>
+
+    <section class="pqb-panel">
+      <div class="pqb-panel-head">
+        <strong>Pericias</strong>
+      </div>
+      <div class="pqb-list">
+        {{#each skills}}
+        <div class="pqb-row">
+          <div class="pqb-row-main">
+            <span class="pqb-row-title">{{label}}</span>
+            <small>{{#if trained}}Treinado{{else}}Nao treinado{{/if}} | Bonus {{bonus}}</small>
+          </div>
+          <button type="button" data-action="quickbar-roll-skill" data-skill-id="{{id}}">Rolar</button>
+        </div>
+        {{/each}}
+      </div>
+    </section>
+
+    <section class="pqb-panel">
+      <div class="pqb-panel-head">
+        <strong>Acoes Rolaveis</strong>
+      </div>
+      <div class="pqb-list">
+        {{#if rollItems.length}}
+        {{#each rollItems}}
+        <div class="pqb-row">
+          <div class="pqb-row-main">
+            <span class="pqb-row-title">{{name}}</span>
+            <small>{{typeLabel}}</small>
+          </div>
+          <div class="pqb-row-actions">
+            <button type="button" data-action="quickbar-item-roll" data-item-id="{{id}}">Rolar</button>
+            {{#if hasDamage}}
+            <button type="button" data-action="quickbar-item-damage" data-item-id="{{id}}">Dano</button>
+            {{/if}}
+            {{#if hasDescription}}
+            <button type="button" data-action="quickbar-item-description" data-item-id="{{id}}">Desc</button>
+            {{/if}}
+          </div>
+        </div>
+        {{/each}}
+        {{else}}
+        <div class="pqb-empty">Nenhum item rolavel.</div>
+        {{/if}}
+      </div>
+    </section>
+    {{else}}
+    <div class="pqb-empty pqb-empty-main">Selecione um token para liberar status e rolagens.</div>
+    {{/if}}
+  </div>
+  {{/if}}
+</div>

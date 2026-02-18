@@ -2,9 +2,34 @@ import { PandorhaActor } from "./documents/actor.mjs";
 import { PandorhaItem } from "./documents/item.mjs";
 import { PandorhaActorSheet } from "./applications/actor-sheet.mjs";
 import { PandorhaItemSheet } from "./applications/item-sheet.mjs";
+import { PandorhaQuickbar } from "./applications/quickbar.mjs";
 import { PandorhaActorModel } from "./documents/data/actor-model.mjs";
 import { PandorhaItemModel } from "./documents/data/item-model.mjs";
 import { registerHandlebars } from "./data/handlebars.mjs";
+
+let quickbar = null;
+
+function isQuickbarEnabled() {
+  return Boolean(game.settings?.get("pandorha", "enableQuickbar"));
+}
+
+async function refreshQuickbar() {
+  if (!isQuickbarEnabled()) {
+    quickbar?.destroy();
+    quickbar = null;
+    return;
+  }
+
+  if (!quickbar) {
+    quickbar = new PandorhaQuickbar();
+    game.pandorha ||= {};
+    game.pandorha.quickbar = quickbar;
+    await quickbar.activate();
+    return;
+  }
+
+  await quickbar.refresh();
+}
 
 Hooks.once("init", () => {
   console.log("Pandorha | Initializing system");
@@ -50,6 +75,26 @@ Hooks.once("init", () => {
   ItemsCollection.registerSheet("pandorha", PandorhaItemSheet, { makeDefault: true });
 
   registerHandlebars();
+
+  game.settings.register("pandorha", "enableQuickbar", {
+    name: "Pandorha: Barra Rapida de Token",
+    hint: "Exibe o painel de status e rolagens ao lado esquerdo da barra de macros.",
+    scope: "client",
+    config: true,
+    type: Boolean,
+    default: true,
+    onChange: () => {
+      if (!game.ready) return;
+      refreshQuickbar();
+    }
+  });
+
+  game.settings.register("pandorha", "quickbarExpanded", {
+    scope: "client",
+    config: false,
+    type: Boolean,
+    default: false
+  });
 });
 
 Hooks.on("updateCombat", async (combat, changed) => {
@@ -60,5 +105,24 @@ Hooks.on("updateCombat", async (combat, changed) => {
       await combatant.actor.setFlag("pandorha", "attacksThisTurn", 0);
     }
   }
+});
+
+Hooks.once("ready", () => {
+  refreshQuickbar();
+});
+
+Hooks.on("renderHotbar", () => {
+  quickbar?.refreshPosition();
+  refreshQuickbar();
+});
+
+Hooks.on("canvasReady", () => refreshQuickbar());
+Hooks.on("controlToken", () => refreshQuickbar());
+Hooks.on("updateToken", () => refreshQuickbar());
+Hooks.on("createToken", () => refreshQuickbar());
+Hooks.on("deleteToken", () => refreshQuickbar());
+Hooks.on("updateActor", (actor) => {
+  const selectedActor = canvas?.tokens?.controlled?.[0]?.actor;
+  if (selectedActor?.id === actor.id) refreshQuickbar();
 });
 
