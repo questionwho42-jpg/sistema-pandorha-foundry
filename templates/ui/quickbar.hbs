@@ -56,11 +56,11 @@
 
     <section class="pqb-panel">
       <div class="pqb-panel-head">
-        <strong>Acoes Rolaveis</strong>
+        <strong>Ataques com Armas</strong>
       </div>
       <div class="pqb-list">
-        {{#if rollItems.length}}
-        {{#each rollItems}}
+        {{#if weaponActions.length}}
+        {{#each weaponActions}}
         <div class="pqb-row">
           <div class="pqb-row-main">
             <span class="pqb-row-title">{{name}}</span>
@@ -78,7 +78,65 @@
         </div>
         {{/each}}
         {{else}}
-        <div class="pqb-empty">Nenhum item rolavel.</div>
+        <div class="pqb-empty">Nenhuma arma rolavel.</div>
+        {{/if}}
+      </div>
+    </section>
+
+    <section class="pqb-panel">
+      <div class="pqb-panel-head">
+        <strong>Magias</strong>
+      </div>
+      <div class="pqb-list">
+        {{#if spellActions.length}}
+        {{#each spellActions}}
+        <div class="pqb-row">
+          <div class="pqb-row-main">
+            <span class="pqb-row-title">{{name}}</span>
+            <small>{{typeLabel}}</small>
+          </div>
+          <div class="pqb-row-actions">
+            <button type="button" data-action="quickbar-item-roll" data-item-id="{{id}}">Rolar</button>
+            {{#if hasDamage}}
+            <button type="button" data-action="quickbar-item-damage" data-item-id="{{id}}">Dano</button>
+            {{/if}}
+            {{#if hasDescription}}
+            <button type="button" data-action="quickbar-item-description" data-item-id="{{id}}">Desc</button>
+            {{/if}}
+          </div>
+        </div>
+        {{/each}}
+        {{else}}
+        <div class="pqb-empty">Nenhuma magia rolavel.</div>
+        {{/if}}
+      </div>
+    </section>
+
+    <section class="pqb-panel">
+      <div class="pqb-panel-head">
+        <strong>Outras Acoes Rolaveis</strong>
+      </div>
+      <div class="pqb-list">
+        {{#if otherActions.length}}
+        {{#each otherActions}}
+        <div class="pqb-row">
+          <div class="pqb-row-main">
+            <span class="pqb-row-title">{{name}}</span>
+            <small>{{typeLabel}}</small>
+          </div>
+          <div class="pqb-row-actions">
+            <button type="button" data-action="quickbar-item-roll" data-item-id="{{id}}">Rolar</button>
+            {{#if hasDamage}}
+            <button type="button" data-action="quickbar-item-damage" data-item-id="{{id}}">Dano</button>
+            {{/if}}
+            {{#if hasDescription}}
+            <button type="button" data-action="quickbar-item-description" data-item-id="{{id}}">Desc</button>
+            {{/if}}
+          </div>
+        </div>
+        {{/each}}
+        {{else}}
+        <div class="pqb-empty">Nenhuma outra acao rolavel.</div>
         {{/if}}
       </div>
     </section>

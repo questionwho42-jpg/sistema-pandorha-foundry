@@ -107,11 +107,16 @@ export class PandorhaQuickbar {
       .map((item) => ({
         id: item.id,
         name: item.name,
+        type: item.type,
         typeLabel: ITEM_TYPE_LABELS[item.type] ?? item.type,
         hasDamage: Boolean(item.system?.damage || item.system?.weapon?.damage),
         hasDescription: Boolean(String(item.system?.description ?? item.system?.effect ?? "").trim())
       }))
       .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+
+    const weaponActions = rollItems.filter((item) => item.type === "weapon");
+    const spellActions = rollItems.filter((item) => item.type === "spell");
+    const otherActions = rollItems.filter((item) => !["weapon", "spell"].includes(item.type));
 
     return {
       expanded,
@@ -125,7 +130,9 @@ export class PandorhaQuickbar {
       actions: actor.system.resources?.actions ?? { value: 0, max: 0 },
       ca: Number(actor.system.defenses?.ca ?? 0),
       initiative: Number(actor.system.derived?.initiative ?? 0),
-      rollItems,
+      weaponActions,
+      spellActions,
+      otherActions,
       mapValue: this.mapValue
     };
   }
