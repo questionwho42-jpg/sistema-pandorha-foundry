@@ -56,23 +56,6 @@
 
     <section class="pqb-panel">
       <div class="pqb-panel-head">
-        <strong>Pericias</strong>
-      </div>
-      <div class="pqb-list">
-        {{#each skills}}
-        <div class="pqb-row">
-          <div class="pqb-row-main">
-            <span class="pqb-row-title">{{label}}</span>
-            <small>{{#if trained}}Treinado{{else}}Nao treinado{{/if}} | Bonus {{bonus}}</small>
-          </div>
-          <button type="button" data-action="quickbar-roll-skill" data-skill-id="{{id}}">Rolar</button>
-        </div>
-        {{/each}}
-      </div>
-    </section>
-
-    <section class="pqb-panel">
-      <div class="pqb-panel-head">
         <strong>Acoes Rolaveis</strong>
       </div>
       <div class="pqb-list">

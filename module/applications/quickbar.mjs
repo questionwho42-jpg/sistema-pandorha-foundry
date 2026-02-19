@@ -1,5 +1,4 @@
-import { rollItem, rollItemDamage, rollSkill, rollTest, postItemDescription } from "../data/rolls.mjs";
-import { SKILLS } from "../data/skills.mjs";
+import { rollItem, rollItemDamage, rollTest, postItemDescription } from "../data/rolls.mjs";
 
 const ITEM_TYPE_LABELS = {
   weapon: "Arma",
@@ -103,13 +102,6 @@ export class PandorhaQuickbar {
       };
     }
 
-    const skills = SKILLS.map((skill) => ({
-      id: skill.id,
-      label: skill.label,
-      trained: Boolean(actor.system.skills?.[skill.id]?.trained),
-      bonus: Number(actor.system.skills?.[skill.id]?.bonus ?? 0)
-    }));
-
     const rollItems = actor.items
       .filter((item) => this._isItemRollable(item))
       .map((item) => ({
@@ -133,7 +125,6 @@ export class PandorhaQuickbar {
       actions: actor.system.resources?.actions ?? { value: 0, max: 0 },
       ca: Number(actor.system.defenses?.ca ?? 0),
       initiative: Number(actor.system.derived?.initiative ?? 0),
-      skills,
       rollItems,
       mapValue: this.mapValue
     };
@@ -190,14 +181,6 @@ export class PandorhaQuickbar {
         mapStep,
         label: "Teste Rapido"
       });
-      return;
-    }
-
-    if (action === "quickbar-roll-skill") {
-      const skillId = button.dataset.skillId;
-      const skill = SKILLS.find((entry) => entry.id === skillId);
-      if (!skill) return;
-      await rollSkill({ actor, skill });
       return;
     }
 

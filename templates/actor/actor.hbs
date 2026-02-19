@@ -27,9 +27,6 @@
     <label for="tab-criacao" data-action="switch-tab" data-tab="criacao">Criacao</label>
     {{/if}}
 
-    <input type="radio" name="pandorha-tab" id="tab-pericias" data-action="switch-tab" data-tab="pericias" {{#ifEq activeTab "pericias"}}checked{{/ifEq}} />
-    <label for="tab-pericias" data-action="switch-tab" data-tab="pericias">Perícias</label>
-
     <input type="radio" name="pandorha-tab" id="tab-acoes" data-action="switch-tab" data-tab="acoes" {{#ifEq activeTab "acoes"}}checked{{/ifEq}} />
     <label for="tab-acoes" data-action="switch-tab" data-tab="acoes">Acoes</label>
 
@@ -466,22 +463,8 @@
 
           {{#ifEq wizard.step 6}}
           <div class="wizard-step-panel">
-            <h4>Passo 6: Pericias e Magias</h4>
-            <p>Marque as pericias treinadas e, se for conjurador, selecione magias iniciais.</p>
-            <div class="item-list">
-              {{#each skills}}
-              <div class="item-row">
-                <span class="item-name">{{label}}</span>
-                <div class="item-actions">
-                  <label class="inline">Treinado
-                    <input name="system.skills.{{id}}.trained" type="checkbox" {{#if trained}}checked{{/if}} />
-                  </label>
-                  <input name="system.skills.{{id}}.bonus" type="number" value="{{bonus}}" />
-                </div>
-              </div>
-              {{/each}}
-            </div>
-            <div class="wizard-selected">Pericias treinadas: {{wizard.trainedSkillsCount}}</div>
+            <h4>Passo 6: Magias</h4>
+            <p>Se for conjurador, selecione as magias iniciais.</p>
 
             {{#if wizard.class.isCaster}}
             <div class="wizard-choice-group">
@@ -570,26 +553,6 @@
       </div>
       {{/if}}
 
-      <div class="tab-panel tab-pericias">
-        <section class="panel">
-          <h3>Perícias</h3>
-          <div class="item-list">
-            {{#each skills}}
-            <div class="item-row">
-              <span class="item-name">{{label}}</span>
-              <div class="item-actions">
-                <label class="inline">Treinado
-                  <input name="system.skills.{{id}}.trained" type="checkbox" {{#if trained}}checked{{/if}} />
-                </label>
-                <input name="system.skills.{{id}}.bonus" type="number" value="{{bonus}}" />
-                <button type="button" data-action="roll-skill" data-skill-id="{{id}}">Rolar</button>
-              </div>
-            </div>
-            {{/each}}
-          </div>
-        </section>
-      </div>
-
       <div class="tab-panel tab-acoes">
         <section class="panel">
           <h3>Acoes Rolaveis</h3>
@@ -621,25 +584,6 @@
               </label>
               <button type="button" data-action="roll-test">Rolar</button>
               <button type="button" data-action="roll-initiative">Iniciativa</button>
-            </div>
-          </div>
-
-          <div class="item-section">
-            <div class="item-header">
-              <span>Pericias</span>
-            </div>
-            <div class="item-list">
-              {{#each skills}}
-              <div class="item-row">
-                <div class="item-main">
-                  <span class="item-name">{{label}}</span>
-                  <span class="item-meta">{{#if trained}}Treinado{{else}}Nao treinado{{/if}} | Bonus {{bonus}}</span>
-                </div>
-                <div class="item-actions">
-                  <button type="button" data-action="roll-skill" data-skill-id="{{id}}">Rolar</button>
-                </div>
-              </div>
-              {{/each}}
             </div>
           </div>
 

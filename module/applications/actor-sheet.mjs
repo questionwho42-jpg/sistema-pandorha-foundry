@@ -191,7 +191,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     }));
     const automation = getActorAutomation(this.document);
 
-    const activeTab = this.document.getFlag("pandorha", "sheetTab") ?? "base";
+    const rawActiveTab = this.document.getFlag("pandorha", "sheetTab") ?? "base";
+    const hiddenTabs = new Set(["pericias"]);
+    const activeTab = hiddenTabs.has(rawActiveTab) ? "base" : rawActiveTab;
     const wizardSummary = this._getWizardSummary();
     const wizardChecks = this._computeWizardChecks(wizardSummary);
 
@@ -201,7 +203,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       { number: 3, label: "Antecedente", done: wizardChecks[3] },
       { number: 4, label: "Classe", done: wizardChecks[4] },
       { number: 5, label: "Manobras", done: wizardChecks[5] },
-      { number: 6, label: "Pericias e Magias", done: wizardChecks[6] },
+      { number: 6, label: "Magias", done: wizardChecks[6] },
       { number: 7, label: "Equipamentos", done: wizardChecks[7] },
       { number: 8, label: "Revisao", done: wizardChecks[8] }
     ];
