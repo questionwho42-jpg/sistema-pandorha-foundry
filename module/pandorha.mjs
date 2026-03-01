@@ -1,5 +1,6 @@
 import { PandorhaActor } from "./documents/actor.mjs";
 import { PandorhaItem } from "./documents/item.mjs";
+import "../scripts/monks-tokenbar-integration.mjs";
 import { PandorhaActorSheet } from "./applications/actor-sheet.mjs";
 import { PandorhaItemSheet } from "./applications/item-sheet.mjs";
 import { PandorhaQuickbar } from "./applications/quickbar.mjs";
@@ -40,7 +41,7 @@ Hooks.once("init", () => {
   CONFIG.Actor.dataModels = {
     character: PandorhaActorModel,
     npc: PandorhaActorModel,
-    monster: PandorhaActorModel
+    monster: PandorhaActorModel,
   };
 
   CONFIG.Item.dataModels = {
@@ -61,7 +62,7 @@ Hooks.once("init", () => {
     ability: PandorhaItemModel,
     rune: PandorhaItemModel,
     disease: PandorhaItemModel,
-    toxin: PandorhaItemModel
+    toxin: PandorhaItemModel,
   };
 
   const ActorsCollection = foundry.documents.collections.Actors;
@@ -69,10 +70,12 @@ Hooks.once("init", () => {
 
   ActorsCollection.registerSheet("pandorha", PandorhaActorSheet, {
     makeDefault: true,
-    types: ["character", "npc", "monster"]
+    types: ["character", "npc", "monster"],
   });
 
-  ItemsCollection.registerSheet("pandorha", PandorhaItemSheet, { makeDefault: true });
+  ItemsCollection.registerSheet("pandorha", PandorhaItemSheet, {
+    makeDefault: true,
+  });
 
   registerHandlebars();
 
@@ -86,20 +89,23 @@ Hooks.once("init", () => {
     onChange: () => {
       if (!game.ready) return;
       refreshQuickbar();
-    }
+    },
   });
 
   game.settings.register("pandorha", "quickbarExpanded", {
     scope: "client",
     config: false,
     type: Boolean,
-    default: false
+    default: false,
   });
 });
 
 Hooks.on("updateCombat", async (combat, changed) => {
   if (!changed) return;
-  if (Object.prototype.hasOwnProperty.call(changed, "turn") || Object.prototype.hasOwnProperty.call(changed, "round")) {
+  if (
+    Object.prototype.hasOwnProperty.call(changed, "turn") ||
+    Object.prototype.hasOwnProperty.call(changed, "round")
+  ) {
     const combatant = combat.combatant;
     if (combatant?.actor) {
       await combatant.actor.setFlag("pandorha", "attacksThisTurn", 0);
@@ -125,4 +131,3 @@ Hooks.on("updateActor", (actor) => {
   const selectedActor = canvas?.tokens?.controlled?.[0]?.actor;
   if (selectedActor?.id === actor.id) refreshQuickbar();
 });
-
