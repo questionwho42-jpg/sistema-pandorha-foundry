@@ -264,6 +264,31 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(
   async _onRender(context, options) {
     await super._onRender(context, options);
     this._bindResourceCurrentAutosave();
+
+    // Hotfix: Força o salvamento na API V2 já que os Listeners nativos podem quebrar em HTML complexos
+    const form = this.element.querySelector("form.pandorha-sheet");
+    if (form) {
+      form.addEventListener("change", async (event) => {
+        if (event.target.dataset?.action || event.target.type === "radio")
+          return;
+        if (!event.target.name) return;
+
+        const fd = new foundry.utils.FormDataExtended(form);
+        const updateData = {};
+
+        for (const [key, value] of Object.entries(fd.object)) {
+          if (
+            !key.startsWith("wizard-") &&
+            !key.startsWith("roll-") &&
+            !key.startsWith("pandorha-")
+          ) {
+            updateData[key] = value;
+          }
+        }
+
+        await this.document.update(updateData);
+      });
+    }
   }
 
   async _prepareContext(options) {
