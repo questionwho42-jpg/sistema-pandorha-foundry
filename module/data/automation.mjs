@@ -10,7 +10,7 @@ const ALWAYS_ACTIVE_TYPES = new Set([
   "ability",
   "condition",
   "disease",
-  "toxin"
+  "toxin",
 ]);
 
 const EQUIPPED_ACTIVE_TYPES = new Set([
@@ -19,7 +19,7 @@ const EQUIPPED_ACTIVE_TYPES = new Set([
   "shield",
   "equipment",
   "consumable",
-  "rune"
+  "rune",
 ]);
 
 const SKILL_KEYWORDS = {
@@ -32,11 +32,13 @@ const SKILL_KEYWORDS = {
   atletismo: ["atletismo", "escalada", "nadar"],
   intimidacao: ["intimidacao", "intimidar"],
   persuasao: ["persuasao", "persuadir", "negociar"],
-  adestramento: ["adestramento", "domar", "animais"]
+  adestramento: ["adestramento", "domar", "animais"],
 };
 
 function emptySkillAutomation() {
-  return Object.fromEntries(SKILLS.map((skill) => [skill.id, { bonus: 0, trained: false }]));
+  return Object.fromEntries(
+    SKILLS.map((skill) => [skill.id, { bonus: 0, trained: false }]),
+  );
 }
 
 export function createAutomationState() {
@@ -52,19 +54,19 @@ export function createAutomationState() {
     resources: {
       hp: 0,
       pv: 0,
-      ee: 0
+      ee: 0,
     },
     eixos: {
       fisico: 0,
       mental: 0,
-      social: 0
+      social: 0,
     },
     aplicacoes: {
       conflito: 0,
       interacao: 0,
-      resistencia: 0
+      resistencia: 0,
     },
-    skills: emptySkillAutomation()
+    skills: emptySkillAutomation(),
   };
 }
 
@@ -81,11 +83,18 @@ export function getActorAutomation(actor) {
   return automation;
 }
 
+export function getItemAutomation(item, { ignoreActiveCheck = false } = {}) {
+  if (!item) return createAutomationState();
+  if (!ignoreActiveCheck && !isItemActiveForAutomation(item))
+    return createAutomationState();
+  return parseItemAutomation(item);
+}
+
 export function getDerivedEffectBonuses(actor) {
   const bonuses = {
     ca: 0,
     initiative: 0,
-    resources: { hp: 0, pv: 0, ee: 0 }
+    resources: { hp: 0, pv: 0, ee: 0 },
   };
 
   for (const effect of actor?.effects ?? []) {
@@ -127,72 +136,79 @@ export function formatSigned(value) {
 function isItemActiveForAutomation(item) {
   if (!item) return false;
   if (ALWAYS_ACTIVE_TYPES.has(item.type)) return true;
-  if (EQUIPPED_ACTIVE_TYPES.has(item.type)) return Boolean(item.system?.equipped);
+  if (EQUIPPED_ACTIVE_TYPES.has(item.type))
+    return Boolean(item.system?.equipped);
   return false;
 }
 
 function parseItemAutomation(item) {
   const result = createAutomationState();
   const text = normalizeText(
-    toPlainText([
-      item?.system?.effect,
-      item?.system?.description,
-      item?.system?.rune?.effects,
-      item?.system?.details?.requirements
-    ].filter(Boolean).join("\n"))
+    toPlainText(
+      [
+        item?.system?.effect,
+        item?.system?.description,
+        item?.system?.rune?.effects,
+        item?.system?.details?.requirements,
+      ]
+        .filter(Boolean)
+        .join("\n"),
+    ),
   );
 
   if (!text) return result;
 
   result.attack += collectSigned(text, [
     /([+\-]\s*\d+)\s*(?:de\s*)?(?:ataque|acerto)\b/gi,
-    /\b(?:ataque|acerto)\b[^+\-\n]{0,16}([+\-]\s*\d+)/gi
+    /\b(?:ataque|acerto)\b[^+\-\n]{0,16}([+\-]\s*\d+)/gi,
   ]);
 
   result.damage += collectSigned(text, [
     /([+\-]\s*\d+)\s*(?:de\s*)?dano\b/gi,
-    /\bdano\b[^+\-\n]{0,16}([+\-]\s*\d+)/gi
+    /\bdano\b[^+\-\n]{0,16}([+\-]\s*\d+)/gi,
   ]);
 
   result.ca += collectSigned(text, [
     /([+\-]\s*\d+)\s*(?:de\s*)?ca\b/gi,
-    /\bca\b[^+\-\n]{0,16}([+\-]\s*\d+)/gi
+    /\bca\b[^+\-\n]{0,16}([+\-]\s*\d+)/gi,
   ]);
 
   result.initiative += collectSigned(text, [
     /([+\-]\s*\d+)\s*(?:de\s*)?iniciativa\b/gi,
-    /\biniciativa\b[^+\-\n]{0,16}([+\-]\s*\d+)/gi
+    /\biniciativa\b[^+\-\n]{0,16}([+\-]\s*\d+)/gi,
   ]);
 
   result.movement += collectSigned(text, [
     /([+\-]\s*\d+)\s*(?:m|metros?)\s*(?:de\s*)?(?:movimento|deslocamento|velocidade)\b/gi,
-    /(?:movimento|deslocamento|velocidade)[^+\-\n]{0,16}([+\-]\s*\d+)\s*(?:m|metros?)?/gi
+    /(?:movimento|deslocamento|velocidade)[^+\-\n]{0,16}([+\-]\s*\d+)\s*(?:m|metros?)?/gi,
   ]);
 
   result.testBonus += collectSigned(text, [
     /([+\-]\s*\d+)\s*(?:de\s*)?(?:bonus|penalidade)?\s*em\s*testes?\b/gi,
-    /\btestes?\b[^+\-\n]{0,24}([+\-]\s*\d+)/gi
+    /\btestes?\b[^+\-\n]{0,24}([+\-]\s*\d+)/gi,
   ]);
 
   result.resources.hp += collectSigned(text, [
     /([+\-]\s*\d+)\s*(?:hp|vida)\s*(?:max(?:imo|ima)?)\b/gi,
-    /(?:hp|vida)\s*(?:max(?:imo|ima)?)\b[^+\-\n]{0,16}([+\-]\s*\d+)/gi
+    /(?:hp|vida)\s*(?:max(?:imo|ima)?)\b[^+\-\n]{0,16}([+\-]\s*\d+)/gi,
   ]);
   result.resources.pv += collectSigned(text, [
     /([+\-]\s*\d+)\s*pv\s*(?:max(?:imo|ima)?)\b/gi,
-    /\bpv\s*(?:max(?:imo|ima)?)\b[^+\-\n]{0,16}([+\-]\s*\d+)/gi
+    /\bpv\s*(?:max(?:imo|ima)?)\b[^+\-\n]{0,16}([+\-]\s*\d+)/gi,
   ]);
   result.resources.ee += collectSigned(text, [
     /([+\-]\s*\d+)\s*ee\s*(?:max(?:imo|ima)?)\b/gi,
-    /\bee\s*(?:max(?:imo|ima)?)\b[^+\-\n]{0,16}([+\-]\s*\d+)/gi
+    /\bee\s*(?:max(?:imo|ima)?)\b[^+\-\n]{0,16}([+\-]\s*\d+)/gi,
   ]);
 
-  applyPoolBonus(text, result.eixos, "fisico");
-  applyPoolBonus(text, result.eixos, "mental");
-  applyPoolBonus(text, result.eixos, "social");
-  applyPoolBonus(text, result.aplicacoes, "conflito");
-  applyPoolBonus(text, result.aplicacoes, "interacao");
-  applyPoolBonus(text, result.aplicacoes, "resistencia");
+  if (!["ancestry", "background", "class"].includes(item.type)) {
+    applyPoolBonus(text, result.eixos, "fisico");
+    applyPoolBonus(text, result.eixos, "mental");
+    applyPoolBonus(text, result.eixos, "social");
+    applyPoolBonus(text, result.aplicacoes, "conflito");
+    applyPoolBonus(text, result.aplicacoes, "interacao");
+    applyPoolBonus(text, result.aplicacoes, "resistencia");
+  }
 
   applySkillBonuses(text, result.skills);
   applySkillTraining(text, result.skills);
@@ -204,7 +220,7 @@ function parseItemAutomation(item) {
 function applyPoolBonus(text, pool, key) {
   pool[key] += collectSigned(text, [
     new RegExp(`([+\\-]\\s*\\d+)\\s*${key}\\b`, "gi"),
-    new RegExp(`\\b${key}\\b[^+\\-\\n]{0,16}([+\\-]\\s*\\d+)`, "gi")
+    new RegExp(`\\b${key}\\b[^+\\-\\n]{0,16}([+\\-]\\s*\\d+)`, "gi"),
   ]);
 }
 
@@ -214,7 +230,7 @@ function applySkillBonuses(text, skills) {
       const escaped = escapeRegex(keyword);
       const total = collectSigned(text, [
         new RegExp(`([+\\-]\\s*\\d+)[^\\n]{0,28}\\b${escaped}\\b`, "gi"),
-        new RegExp(`\\b${escaped}\\b[^+\\-\\n]{0,28}([+\\-]\\s*\\d+)`, "gi")
+        new RegExp(`\\b${escaped}\\b[^+\\-\\n]{0,28}([+\\-]\\s*\\d+)`, "gi"),
       ]);
       if (total) skills[skillId].bonus += total;
     }
@@ -227,7 +243,10 @@ function applySkillTraining(text, skills) {
   for (const [skillId, keywords] of Object.entries(SKILL_KEYWORDS)) {
     for (const keyword of keywords) {
       const escaped = escapeRegex(keyword);
-      const trainedRegex = new RegExp(`(?:treinad[oa]|treinamento)[^\\n]{0,32}\\b${escaped}\\b|\\b${escaped}\\b[^\\n]{0,32}(?:treinad[oa]|treinamento)`, "i");
+      const trainedRegex = new RegExp(
+        `(?:treinad[oa]|treinamento)[^\\n]{0,32}\\b${escaped}\\b|\\b${escaped}\\b[^\\n]{0,32}(?:treinad[oa]|treinamento)`,
+        "i",
+      );
       if (trainedRegex.test(text)) {
         skills[skillId].trained = true;
         break;
@@ -276,7 +295,8 @@ function mergeAutomation(target, source) {
 
   for (const skill of SKILLS) {
     target.skills[skill.id].bonus += source.skills[skill.id].bonus;
-    target.skills[skill.id].trained = target.skills[skill.id].trained || source.skills[skill.id].trained;
+    target.skills[skill.id].trained =
+      target.skills[skill.id].trained || source.skills[skill.id].trained;
   }
 }
 
@@ -295,7 +315,9 @@ function collectSigned(text, patterns) {
 
 function toGlobalRegex(pattern) {
   if (pattern instanceof RegExp) {
-    const flags = pattern.flags.includes("g") ? pattern.flags : `${pattern.flags}g`;
+    const flags = pattern.flags.includes("g")
+      ? pattern.flags
+      : `${pattern.flags}g`;
     return new RegExp(pattern.source, flags);
   }
   return new RegExp(String(pattern), "gi");
