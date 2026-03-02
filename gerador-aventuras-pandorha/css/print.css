@@ -1,0 +1,74 @@
+/* ============================================
+   PRINT.CSS — Layout para PDF e Ficha Resumo
+   ============================================ */
+
+@media print {
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  .header,
+  .wizard,
+  .wizard__nav,
+  .preview__toolbar,
+  .biblioteca,
+  .toast-container,
+  .loading-overlay,
+  .btn,
+  .reroll-btn {
+    display: none !important;
+  }
+
+  .preview {
+    display: block !important;
+  }
+  .preview__content {
+    background: #fff !important;
+    border: none !important;
+    padding: 0 !important;
+    color: #111 !important;
+  }
+
+  .preview__content h1 {
+    color: #222 !important;
+    font-size: 20pt;
+  }
+  .preview__content h2 {
+    color: #333 !important;
+    font-size: 16pt;
+    border-color: #ccc !important;
+  }
+  .preview__content h3 {
+    color: #444 !important;
+    font-size: 13pt;
+  }
+
+  .preview__content table {
+    border-color: #999 !important;
+  }
+  .preview__content th {
+    background: #eee !important;
+  }
+  .preview__content td,
+  .preview__content th {
+    border-color: #bbb !important;
+    color: #111 !important;
+  }
+
+  .preview__content blockquote {
+    border-color: #999 !important;
+    background: #f9f9f9 !important;
+  }
+
+  /* Manter cores do tema no PDF (se suportado) */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  @page {
+    margin: 12mm;
+    size: A4;
+  }
+}

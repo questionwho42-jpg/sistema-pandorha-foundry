@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⚒️ Forja de Aventuras — Sistema Pandorha</title>
+    <meta
+      name="description"
+      content="Gerador de aventuras completas para o Sistema de RPG Pandorha. Crie one-shots, mini-campanhas e campanhas longas prontas para jogar."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;700&family=Orbitron:wght@400;700&family=Rajdhani:wght@400;500;700&family=Lora:wght@400;700&family=Uncial+Antiqua&family=Nunito:wght@400;600;700&family=MedievalSharp&family=Quicksand:wght@400;600;700&family=Pirata+One&family=Barlow:wght@400;600;700&family=Cinzel+Decorative:wght@400;700&family=Source+Sans+3:wght@400;600;700&family=Bungee+Shade&family=Archivo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/themes.css" />
+    <link rel="stylesheet" href="css/print.css" media="print" />
+  </head>
+  <body data-theme="generico">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__logo">
+        <i data-lucide="anvil"></i>
+        <h1>Forja de Aventuras</h1>
+        <span class="header__subtitle">Sistema Pandorha</span>
+      </div>
+      <nav class="header__nav">
+        <button
+          class="btn btn--ghost"
+          id="btn-biblioteca"
+          aria-label="Biblioteca de aventuras"
+        >
+          <i data-lucide="library"></i>
+          <span>Biblioteca</span>
+        </button>
+        <button
+          class="btn btn--accent"
+          id="btn-aleatorio"
+          aria-label="Gerar aventura aleatória"
+        >
+          <i data-lucide="dice-5"></i>
+          <span>Aleatório</span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+      <!-- WIZARD -->
+      <section class="wizard" id="wizard" aria-label="Criador de aventuras">
+        <!-- Progress Bar -->
+        <div class="wizard__progress">
+          <div
+            class="wizard__progress-bar"
+            id="progress-bar"
+            style="width: 12.5%"
+          ></div>
+          <div class="wizard__steps" id="step-indicators"></div>
+        </div>
+
+        <!-- Etapa 1: Cenário -->
+        <div class="wizard__step active" data-step="1">
+          <div class="step__header">
+            <span class="step__number">1/8</span>
+            <h2>Escolha o Cenário</h2>
+            <p>
+              Onde a aventura acontece? Escolha uma região de Pandorha ou crie
+              uma nova.
+            </p>
+          </div>
+          <div class="step__content">
+            <div class="option-grid" id="cenario-options">
+              <button class="option-card" data-value="morden">
+                <i data-lucide="cog"></i>
+                <h3>Morden</h3>
+                <p>Bastião industrial. Runas, adamante e horror biótico.</p>
+              </button>
+              <button class="option-card" data-value="almar">
+                <i data-lucide="ship"></i>
+                <h3>Almar</h3>
+                <p>Costa dourada. Comércio, piratas e intrigas portuárias.</p>
+              </button>
+              <button class="option-card" data-value="cinar">
+                <i data-lucide="trees"></i>
+                <h3>Cinar</h3>
+                <p>Floresta ancestral. Druidas, espíritos e pactos naturais.</p>
+              </button>
+              <button class="option-card" data-value="draskar">
+                <i data-lucide="flame"></i>
+                <h3>Draskar</h3>
+                <p>Terras vulcânicas. Dragões, forjas e clãs guerreiros.</p>
+              </button>
+              <button class="option-card" data-value="dungard">
+                <i data-lucide="mountain"></i>
+                <h3>Dungard</h3>
+                <p>Fortaleza subterrânea. Gemas, runas e engenharia anã.</p>
+              </button>
+              <button class="option-card" data-value="floresta_ecos">
+                <i data-lucide="bug"></i>
+                <h3>Floresta dos Ecos</h3>
+                <p>Ecossistema predatório. Névoa inteligente e mutação.</p>
+              </button>
+              <button class="option-card" data-value="gorbax">
+                <i data-lucide="axe"></i>
+                <h3>Gorbax</h3>
+                <p>Montanhas orc. Tribos, totemismo e guerra territorial.</p>
+              </button>
+              <button class="option-card" data-value="custom">
+                <i data-lucide="plus-circle"></i>
+                <h3>Criar Novo</h3>
+                <p>Construa um cenário original com o método GRAPES.</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Etapa 2: Configuração -->
+        <div class="wizard__step" data-step="2">
+          <div class="step__header">
+            <span class="step__number">2/8</span>
+            <h2>Configuração</h2>
+            <p>Defina o nível de poder, grupo e dificuldade.</p>
+          </div>
+          <div class="step__content">
+            <div class="form-group">
+              <label for="tier-select">Tier (Escala de Poder)</label>
+              <select id="tier-select" class="form-select">
+                <option value="">Selecione...</option>
+                <option value="1">Tier 1 — Local (Nível 1-4)</option>
+                <option value="2">Tier 2 — Regional (Nível 5-10)</option>
+                <option value="3">Tier 3 — Continental (Nível 11-16)</option>
+                <option value="4">Tier 4 — Multiversal (Nível 17-20)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="jogadores-select">Número de Jogadores</label>
+              <select id="jogadores-select" class="form-select">
+                <option value="">Selecione...</option>
+                <option value="1">1 Jogador (Solo)</option>
+                <option value="2">2 Jogadores</option>
+                <option value="3">3 Jogadores</option>
+                <option value="4">4 Jogadores (Padrão)</option>
+                <option value="5">5 Jogadores</option>
+                <option value="6">6 Jogadores</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="dificuldade-select">Dificuldade dos Encontros</label>
+              <select id="dificuldade-select" class="form-select">
+                <option value="">Selecione...</option>
+                <option value="facil">Fácil — Ideal para iniciantes</option>
+                <option value="medio">
+                  Médio — Equilíbrio entre desafio e diversão
+                </option>
+                <option value="dificil">
+                  Difícil — Tático, exige estratégia
+                </option>
+                <option value="mortal">Mortal — Alto risco de morte</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Etapa 3: Tom -->
+        <div class="wizard__step" data-step="3">
+          <div class="step__header">
+            <span class="step__number">3/8</span>
+            <h2>Tom da Aventura</h2>
+            <p>
+              Escolha até 2 tons que definem a atmosfera. Eles podem ser
+              combinados.
+            </p>
+          </div>
+          <div class="step__content">
+            <div class="option-grid option-grid--multi" id="tom-options">
+              <button class="option-card" data-value="dark_fantasy">
+                <i data-lucide="skull"></i>
+                <h3>Dark Fantasy</h3>
+                <p>Mundo sombrio, moral cinza e terror sobrenatural.</p>
+              </button>
+              <button class="option-card" data-value="epica">
+                <i data-lucide="crown"></i>
+                <h3>Aventura Épica</h3>
+                <p>Heróis grandiosos, batalhas lendárias e glória.</p>
+              </button>
+              <button class="option-card" data-value="misterio">
+                <i data-lucide="search"></i>
+                <h3>Mistério / Intriga</h3>
+                <p>Pistas, conspirações e reviravoltas.</p>
+              </button>
+              <button class="option-card" data-value="horror">
+                <i data-lucide="ghost"></i>
+                <h3>Horror</h3>
+                <p>Medo, tensão e ameaças impossíveis de combater.</p>
+              </button>
+              <button class="option-card" data-value="comedia">
+                <i data-lucide="laugh"></i>
+                <h3>Comédia Heroica</h3>
+                <p>Humor, situações absurdas e carisma.</p>
+              </button>
+              <button class="option-card" data-value="politico">
+                <i data-lucide="landmark"></i>
+                <h3>Político</h3>
+                <p>Facções, traições e jogos de poder.</p>
+              </button>
+              <button class="option-card" data-value="sobrevivencia">
+                <i data-lucide="tent"></i>
+                <h3>Sobrevivência</h3>
+                <p>Recursos limitados, ambiente hostil e resistência.</p>
+              </button>
+            </div>
+            <p class="step__hint" id="tom-counter">0/2 selecionados</p>
+          </div>
+        </div>
+
+        <!-- Etapa 4: Conflito -->
+        <div class="wizard__step" data-step="4">
+          <div class="step__header">
+            <span class="step__number">4/8</span>
+            <h2>Conflito Central</h2>
+            <p>
+              O que está em jogo? As opções abaixo são adaptadas ao cenário
+              escolhido.
+            </p>
+          </div>
+          <div class="step__content">
+            <div class="option-grid" id="conflito-options">
+              <!-- Preenchido dinamicamente pelo JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Etapa 5: Vilão -->
+        <div class="wizard__step" data-step="5">
+          <div class="step__header">
+            <span class="step__number">5/8</span>
+            <h2>O Antagonista</h2>
+            <p>Que tipo de ameaça os heróis enfrentam?</p>
+          </div>
+          <div class="step__content">
+            <div class="option-grid" id="vilao-options">
+              <button class="option-card" data-value="faccao">
+                <i data-lucide="users"></i>
+                <h3>Facção</h3>
+                <p>Grupo organizado com agenda própria.</p>
+              </button>
+              <button class="option-card" data-value="criatura">
+                <i data-lucide="bug"></i>
+                <h3>Criatura</h3>
+                <p>Monstro poderoso que ameaça a região.</p>
+              </button>
+              <button class="option-card" data-value="corrupcao">
+                <i data-lucide="biohazard"></i>
+                <h3>Corrupção</h3>
+                <p>Praga, maldição ou contágio sem rosto.</p>
+              </button>
+              <button class="option-card" data-value="individuo">
+                <i data-lucide="user-x"></i>
+                <h3>Indivíduo</h3>
+                <p>NPC rival com motivação pessoal.</p>
+              </button>
+              <button class="option-card" data-value="entidade">
+                <i data-lucide="eye"></i>
+                <h3>Entidade</h3>
+                <p>Ser extradimensional ou divindade menor.</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Etapa 6: Duração -->
+        <div class="wizard__step" data-step="6">
+          <div class="step__header">
+            <span class="step__number">6/8</span>
+            <h2>Duração</h2>
+            <p>Quanto tempo a aventura deve durar?</p>
+          </div>
+          <div class="step__content">
+            <div class="option-grid" id="duracao-options">
+              <button class="option-card" data-value="oneshot">
+                <i data-lucide="zap"></i>
+                <h3>One-Shot</h3>
+                <p>1 sessão (3-4 horas). 1 capítulo, 3 cenas.</p>
+              </button>
+              <button class="option-card" data-value="mini">
+                <i data-lucide="book-open"></i>
+                <h3>Mini-Campanha</h3>
+                <p>3 sessões. 3 capítulos com arco narrativo.</p>
+              </button>
+              <button class="option-card" data-value="campanha">
+                <i data-lucide="library"></i>
+                <h3>Campanha</h3>
+                <p>5 sessões+. 5 capítulos, side-quests e epílogo.</p>
+              </button>
+            </div>
+            <div class="form-group" style="margin-top: 1.5rem">
+              <label for="estrutura-select">Estrutura dos Capítulos</label>
+              <select id="estrutura-select" class="form-select">
+                <option value="3cenas">
+                  3 Cenas Fixas (Investigação → Ação → Clímax)
+                </option>
+                <option value="flexivel">
+                  Cenas Flexíveis (2-5 por capítulo)
+                </option>
+                <option value="3atos">
+                  3 Atos (Introdução → Confronto → Resolução)
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Etapa 7: Extras -->
+        <div class="wizard__step" data-step="7">
+          <div class="step__header">
+            <span class="step__number">7/8</span>
+            <h2>Extras</h2>
+            <p>Ative ou desative módulos adicionais.</p>
+          </div>
+          <div class="step__content">
+            <div class="toggle-list">
+              <label class="toggle">
+                <input type="checkbox" id="toggle-regra-casa" checked />
+                <span class="toggle__slider"></span>
+                <div class="toggle__info">
+                  <strong>Regra da Casa</strong>
+                  <p>Mecânica temática exclusiva para esta aventura.</p>
+                </div>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" id="toggle-downtime" checked />
+                <span class="toggle__slider"></span>
+                <div class="toggle__info">
+                  <strong>Tempo Livre (Downtime)</strong>
+                  <p>Atividades entre capítulos.</p>
+                </div>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" id="toggle-downtime-tipo" />
+                <span class="toggle__slider"></span>
+                <div class="toggle__info">
+                  <strong>Downtime Mecânico</strong>
+                  <p>Se desativado, downtime será apenas narrativo.</p>
+                </div>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" id="toggle-progressao" />
+                <span class="toggle__slider"></span>
+                <div class="toggle__info">
+                  <strong>Progressão por XP</strong>
+                  <p>
+                    Se desativado, usa Marco Narrativo (sobe de nível por
+                    capítulo).
+                  </p>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Etapa 8: Nome -->
+        <div class="wizard__step" data-step="8">
+          <div class="step__header">
+            <span class="step__number">8/8</span>
+            <h2>Batize a Aventura</h2>
+            <p>Dê um nome épico para sua criação!</p>
+          </div>
+          <div class="step__content">
+            <div class="form-group">
+              <label for="nome-aventura">Nome da Aventura</label>
+              <input
+                type="text"
+                id="nome-aventura"
+                class="form-input"
+                placeholder="Ex: O Rastro do Paciente Zero"
+              />
+            </div>
+            <button
+              class="btn btn--reroll"
+              id="btn-sugerir-nome"
+              aria-label="Sugerir nome aleatório"
+            >
+              <i data-lucide="dice-5"></i>
+              Sugerir Nome
+            </button>
+          </div>
+        </div>
+
+        <!-- Navegação do Wizard -->
+        <div class="wizard__nav">
+          <button class="btn btn--ghost" id="btn-anterior" disabled>
+            <i data-lucide="arrow-left"></i>
+            Anterior
+          </button>
+          <button class="btn btn--primary" id="btn-proximo">
+            Próximo
+            <i data-lucide="arrow-right"></i>
+          </button>
+          <button class="btn btn--forge hidden" id="btn-forjar">
+            <i data-lucide="anvil"></i>
+            Forjar Aventura!
+          </button>
+        </div>
+      </section>
+
+      <!-- PREVIEW (aparece após gerar) -->
+      <section class="preview hidden" id="preview" aria-label="Aventura gerada">
+        <div class="preview__toolbar">
+          <button class="btn btn--ghost" id="btn-voltar-wizard">
+            <i data-lucide="arrow-left"></i>
+            Voltar ao Wizard
+          </button>
+          <div class="preview__actions">
+            <button class="btn btn--ghost" id="btn-download-md">
+              <i data-lucide="file-text"></i>
+              Markdown
+            </button>
+            <button class="btn btn--ghost" id="btn-download-pdf">
+              <i data-lucide="printer"></i>
+              PDF
+            </button>
+            <button class="btn btn--ghost" id="btn-cheat-sheet">
+              <i data-lucide="clipboard-list"></i>
+              Ficha Resumo
+            </button>
+            <button class="btn btn--accent" id="btn-salvar">
+              <i data-lucide="save"></i>
+              Salvar
+            </button>
+          </div>
+        </div>
+        <div class="preview__content" id="preview-content">
+          <!-- Conteúdo da aventura renderizado aqui -->
+        </div>
+      </section>
+
+      <!-- BIBLIOTECA (aparece ao clicar no botão) -->
+      <section
+        class="biblioteca hidden"
+        id="biblioteca"
+        aria-label="Biblioteca de aventuras"
+      >
+        <div class="biblioteca__header">
+          <h2><i data-lucide="library"></i> Biblioteca de Aventuras</h2>
+          <button class="btn btn--ghost" id="btn-fechar-biblioteca">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <div class="biblioteca__filters">
+          <select id="filtro-cenario" class="form-select form-select--sm">
+            <option value="">Todos os Cenários</option>
+          </select>
+          <select id="filtro-tier" class="form-select form-select--sm">
+            <option value="">Todos os Tiers</option>
+          </select>
+          <select id="filtro-duracao" class="form-select form-select--sm">
+            <option value="">Todas as Durações</option>
+          </select>
+        </div>
+        <div class="biblioteca__list" id="biblioteca-list">
+          <p class="biblioteca__empty">
+            Nenhuma aventura salva ainda. Forje a primeira!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- TOAST -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- LOADING OVERLAY -->
+    <div class="loading-overlay hidden" id="loading-overlay">
+      <div class="loading__animation" id="loading-animation"></div>
+      <p class="loading__text">Forjando sua aventura...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/state.js"></script>
+    <script src="js/tables.js"></script>
+    <script src="js/monsters.js"></script>
+    <script src="js/generator.js"></script>
+    <script src="js/wizard.js"></script>
+    <script src="js/themes.js"></script>
+    <script src="js/export.js"></script>
+    <script src="js/library.js"></script>
+    <script src="js/session.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
