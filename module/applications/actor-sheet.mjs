@@ -377,6 +377,10 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(
     return {
       ...context,
       system: this.document.system,
+      source:
+        this.document.system._source ||
+        this.document._source.system ||
+        this.document.toObject(false).system,
       items: byType,
       skills,
       activeTab,
