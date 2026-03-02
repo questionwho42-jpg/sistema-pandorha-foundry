@@ -77,6 +77,23 @@ export function getActorAutomation(actor) {
   for (const item of actor.items ?? []) {
     if (!isItemActiveForAutomation(item)) continue;
     const itemAutomation = parseItemAutomation(item);
+    if (itemAutomation.testBonus !== 0) {
+      console.warn(
+        `[Pandorha DEBUG] Item "${item.name}" (${item.type}) → testBonus = ${itemAutomation.testBonus}`,
+      );
+      const rawText = [
+        item?.system?.effect,
+        item?.system?.description,
+        item?.system?.rune?.effects,
+        item?.system?.details?.requirements,
+      ]
+        .filter(Boolean)
+        .join("\n");
+      console.warn(
+        `[Pandorha DEBUG] Texto bruto (primeiros 300 chars):`,
+        rawText.substring(0, 300),
+      );
+    }
     mergeAutomation(automation, itemAutomation);
   }
 
