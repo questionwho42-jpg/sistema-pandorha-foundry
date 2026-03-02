@@ -269,24 +269,27 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(
     const form = this.element.querySelector("form.pandorha-sheet");
     if (form) {
       form.addEventListener("change", async (event) => {
-        if (event.target.dataset?.action || event.target.type === "radio")
+        const target = event.target;
+        if (target.dataset?.action || target.type === "radio") return;
+        if (!target.name) return;
+        if (
+          target.name.startsWith("wizard-") ||
+          target.name.startsWith("roll-") ||
+          target.name.startsWith("pandorha-") ||
+          target.name.startsWith("system.resources.") // Handle manually by resource bind
+        ) {
           return;
-        if (!event.target.name) return;
-
-        const fd = new foundry.utils.FormDataExtended(form);
-        const updateData = {};
-
-        for (const [key, value] of Object.entries(fd.object)) {
-          if (
-            !key.startsWith("wizard-") &&
-            !key.startsWith("roll-") &&
-            !key.startsWith("pandorha-")
-          ) {
-            updateData[key] = value;
-          }
         }
 
-        await this.document.update(updateData);
+        const val =
+          target.type === "checkbox"
+            ? target.checked
+            : target.type === "number"
+              ? target.valueAsNumber
+              : target.value;
+        if (target.type === "number" && Number.isNaN(val)) return;
+
+        await this.document.update({ [target.name]: val });
       });
     }
   }
