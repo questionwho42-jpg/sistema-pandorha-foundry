@@ -1403,7 +1403,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(
         extraApplication: true,
       };
     }
-    if (normalized.includes("elf")) {
+    if (normalized.includes("elfo")) {
       return {
         label: "Elfo: +1 Mental ou +1 Interacao",
         primaryOptions: [
@@ -1417,7 +1417,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(
         extraApplication: false,
       };
     }
-    if (normalized.includes("anao")) {
+    if (normalized.includes("anao") || normalized.includes("anoe")) {
       return {
         label: "Anao: +1 Fisico ou +1 Resistencia",
         primaryOptions: [
@@ -1445,7 +1445,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(
         extraApplication: false,
       };
     }
-    if (normalized.includes("umbra")) {
+    if (normalized.includes("umbrai") || normalized.includes("umbra")) {
       return {
         label: "Umbrai: +1 Social ou +1 Interacao",
         primaryOptions: [
