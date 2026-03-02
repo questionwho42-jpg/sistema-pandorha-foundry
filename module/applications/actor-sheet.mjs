@@ -1,4 +1,10 @@
-import { rollTest, rollSkill, rollItem, rollItemDamage, postItemDescription } from "../data/rolls.mjs";
+import {
+  rollTest,
+  rollSkill,
+  rollItem,
+  rollItemDamage,
+  postItemDescription,
+} from "../data/rolls.mjs";
 import { SKILLS } from "../data/skills.mjs";
 import { getActorAutomation, formatSigned } from "../data/automation.mjs";
 
@@ -7,18 +13,24 @@ const WIZARD_STEPS = 8;
 const AXIS_KEYS = ["fisico", "mental", "social"];
 const APPLICATION_KEYS = ["conflito", "interacao", "resistencia"];
 const INITIAL_GOLD_LEVEL_1 = 50;
-const INITIAL_EQUIPMENT_TYPES = ["weapon", "armor", "shield", "equipment", "consumable"];
+const INITIAL_EQUIPMENT_TYPES = [
+  "weapon",
+  "armor",
+  "shield",
+  "equipment",
+  "consumable",
+];
 
 const AXIS_LABELS = {
   fisico: "Fisico",
   mental: "Mental",
-  social: "Social"
+  social: "Social",
 };
 
 const APPLICATION_LABELS = {
   conflito: "Conflito",
   interacao: "Interacao",
-  resistencia: "Resistencia"
+  resistencia: "Resistencia",
 };
 
 const EQUIPMENT_RULES = {
@@ -26,8 +38,8 @@ const EQUIPMENT_RULES = {
     formula: "[Fisico + Resistencia] + 6 Slots",
     penalties: [
       "Slots acima do limite: condicao Lento (-3m de movimento).",
-      "Slots acima do limite + 5: condicao Imobilizado."
-    ]
+      "Slots acima do limite + 5: condicao Imobilizado.",
+    ],
   },
   slotTable: [
     { item: "Armas curtas (espadas, adagas)", slots: "1 Slot" },
@@ -36,19 +48,54 @@ const EQUIPMENT_RULES = {
     { item: "Armaduras pesadas", slots: "2 Slots" },
     { item: "Escudos", slots: "1 Slot (leve), 2 Slots (torre)" },
     { item: "Itens de aventura", slots: "1 Slot a cada 3 unidades" },
-    { item: "Pocoes, pergaminhos e moedas", slots: "0 Slot" }
+    { item: "Pocoes, pergaminhos e moedas", slots: "0 Slot" },
   ],
   quality: [
-    { level: "0", name: "Mundano", price: "Base", bonus: "Item padrao, 1 slot de runa (R)." },
-    { level: "1", name: "Obra-Prima", price: "x10", bonus: "+1 Acerto ou -1 Penalidade, 2 slots (RR)." },
-    { level: "2", name: "Encantado", price: "x50", bonus: "+1 Dano/CA e efeito magico, 3 slots (RRR)." },
-    { level: "3", name: "Lendario", price: "x200", bonus: "Poder unico, 4 slots (RRRR)." }
+    {
+      level: "0",
+      name: "Mundano",
+      price: "Base",
+      bonus: "Item padrao, 1 slot de runa (R).",
+    },
+    {
+      level: "1",
+      name: "Obra-Prima",
+      price: "x10",
+      bonus: "+1 Acerto ou -1 Penalidade, 2 slots (RR).",
+    },
+    {
+      level: "2",
+      name: "Encantado",
+      price: "x50",
+      bonus: "+1 Dano/CA e efeito magico, 3 slots (RRR).",
+    },
+    {
+      level: "3",
+      name: "Lendario",
+      price: "x200",
+      bonus: "Poder unico, 4 slots (RRRR).",
+    },
   ],
   runes: [
-    { grade: "Menor", level: "1", price: "100 O", requirement: "Sem requisito." },
-    { grade: "Maior", level: "2", price: "500 O", requirement: "Item Encantado (NV 2+)." },
-    { grade: "Ancestral", level: "3", price: "2500 O", requirement: "Item Lendario (NV 3)." }
-  ]
+    {
+      grade: "Menor",
+      level: "1",
+      price: "100 O",
+      requirement: "Sem requisito.",
+    },
+    {
+      grade: "Maior",
+      level: "2",
+      price: "500 O",
+      requirement: "Item Encantado (NV 2+).",
+    },
+    {
+      grade: "Ancestral",
+      level: "3",
+      price: "2500 O",
+      requirement: "Item Lendario (NV 3).",
+    },
+  ],
 };
 
 function clampInteger(value, min, max, fallback = min) {
@@ -70,7 +117,7 @@ function itemToContext(item) {
     _id: item.id,
     name: item.name,
     type: item.type,
-    system: item.system
+    system: item.system,
   };
 }
 
@@ -104,7 +151,9 @@ function formatGold(value) {
   return `${n.toFixed(2)} O`;
 }
 
-export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.applications.sheets.ActorSheetV2) {
+export class PandorhaActorSheet extends HandlebarsApplicationMixin(
+  foundry.applications.sheets.ActorSheetV2,
+) {
   static _packCache = new Map();
 
   static DEFAULT_OPTIONS = foundry.utils.mergeObject(super.DEFAULT_OPTIONS, {
@@ -113,45 +162,103 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     form: {
       submitOnChange: true,
       submitOnClose: true,
-      closeOnSubmit: false
+      closeOnSubmit: false,
     },
     actions: {
-      "switch-tab": function (event, target) { return this._onClickAction(event, target); },
-      "roll-test": function (event, target) { return this._onClickAction(event, target); },
-      "roll-initiative": function (event, target) { return this._onClickAction(event, target); },
-      "roll-skill": function (event, target) { return this._onClickAction(event, target); },
-      "item-roll": function (event, target) { return this._onClickAction(event, target); },
-      "item-damage": function (event, target) { return this._onClickAction(event, target); },
-      "item-post-description": function (event, target) { return this._onClickAction(event, target); },
-      "item-create": function (event, target) { return this._onClickAction(event, target); },
-      "item-edit": function (event, target) { return this._onClickAction(event, target); },
-      "item-delete": function (event, target) { return this._onClickAction(event, target); },
-      "item-toggle-equipped": function (event, target) { return this._onClickAction(event, target); },
-      "open-compendium": function (event, target) { return this._onClickAction(event, target); },
-      "add-from-pack": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-prev": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-next": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-go-step": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-finish": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-apply-attributes": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-select-ancestry": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-set-ancestry-bonus": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-add-ancestry-trait": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-select-background": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-add-background-talent": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-select-class": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-add-class-talent": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-add-maneuver": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-add-spell": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-buy-equipment": function (event, target) { return this._onClickAction(event, target); },
-      "wizard-remove-equipment": function (event, target) { return this._onClickAction(event, target); }
-    }
+      "switch-tab": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "roll-test": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "roll-initiative": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "roll-skill": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "item-roll": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "item-damage": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "item-post-description": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "item-create": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "item-edit": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "item-delete": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "item-toggle-equipped": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "open-compendium": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "add-from-pack": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-prev": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-next": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-go-step": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-finish": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-apply-attributes": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-select-ancestry": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-set-ancestry-bonus": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-add-ancestry-trait": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-select-background": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-add-background-talent": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-select-class": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-add-class-talent": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-add-maneuver": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-add-spell": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-buy-equipment": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+      "wizard-remove-equipment": function (event, target) {
+        return this._onClickAction(event, target);
+      },
+    },
   });
 
   static PARTS = {
     form: {
-      template: "systems/pandorha/templates/actor/actor.hbs"
-    }
+      template: "systems/pandorha/templates/actor/actor.hbs",
+    },
   };
 
   async _onRender(context, options) {
@@ -162,36 +269,46 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
 
-    const items = this.document.items.map(i => i.toObject());
+    const items = this.document.items.map((i) => i.toObject());
     const byType = {
-      ancestries: items.filter(i => i.type === "ancestry"),
-      backgrounds: items.filter(i => i.type === "background"),
-      traits: items.filter(i => i.type === "trait"),
-      classes: items.filter(i => i.type === "class"),
-      talents: items.filter(i => i.type === "talent"),
-      maneuvers: items.filter(i => i.type === "maneuver"),
-      spells: items.filter(i => i.type === "spell"),
-      conditions: items.filter(i => i.type === "condition"),
-      diseases: items.filter(i => i.type === "disease"),
-      toxins: items.filter(i => i.type === "toxin"),
-      armors: items.filter(i => i.type === "armor"),
-      shields: items.filter(i => i.type === "shield"),
-      consumables: items.filter(i => i.type === "consumable"),
-      gear: items.filter(i => i.type === "equipment"),
-      runes: items.filter(i => i.type === "rune"),
-      equipment: items.filter(i => ["weapon", "armor", "shield", "equipment", "consumable", "rune"].includes(i.type)),
-      weapons: items.filter(i => i.type === "weapon"),
-      features: items.filter(i => ["feature", "ability"].includes(i.type))
+      ancestries: items.filter((i) => i.type === "ancestry"),
+      backgrounds: items.filter((i) => i.type === "background"),
+      traits: items.filter((i) => i.type === "trait"),
+      classes: items.filter((i) => i.type === "class"),
+      talents: items.filter((i) => i.type === "talent"),
+      maneuvers: items.filter((i) => i.type === "maneuver"),
+      spells: items.filter((i) => i.type === "spell"),
+      conditions: items.filter((i) => i.type === "condition"),
+      diseases: items.filter((i) => i.type === "disease"),
+      toxins: items.filter((i) => i.type === "toxin"),
+      armors: items.filter((i) => i.type === "armor"),
+      shields: items.filter((i) => i.type === "shield"),
+      consumables: items.filter((i) => i.type === "consumable"),
+      gear: items.filter((i) => i.type === "equipment"),
+      runes: items.filter((i) => i.type === "rune"),
+      equipment: items.filter((i) =>
+        [
+          "weapon",
+          "armor",
+          "shield",
+          "equipment",
+          "consumable",
+          "rune",
+        ].includes(i.type),
+      ),
+      weapons: items.filter((i) => i.type === "weapon"),
+      features: items.filter((i) => ["feature", "ability"].includes(i.type)),
     };
 
-    const skills = SKILLS.map(skill => ({
+    const skills = SKILLS.map((skill) => ({
       ...skill,
       trained: this.document.system.skills?.[skill.id]?.trained ?? false,
-      bonus: this.document.system.skills?.[skill.id]?.bonus ?? 0
+      bonus: this.document.system.skills?.[skill.id]?.bonus ?? 0,
     }));
     const automation = getActorAutomation(this.document);
 
-    const rawActiveTab = this.document.getFlag("pandorha", "sheetTab") ?? "base";
+    const rawActiveTab =
+      this.document.getFlag("pandorha", "sheetTab") ?? "base";
     const hiddenTabs = new Set(["pericias"]);
     const activeTab = hiddenTabs.has(rawActiveTab) ? "base" : rawActiveTab;
     const wizardSummary = this._getWizardSummary();
@@ -205,30 +322,31 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       { number: 5, label: "Manobras", done: wizardChecks[5] },
       { number: 6, label: "Magias", done: wizardChecks[6] },
       { number: 7, label: "Equipamentos", done: wizardChecks[7] },
-      { number: 8, label: "Revisao", done: wizardChecks[8] }
+      { number: 8, label: "Revisao", done: wizardChecks[8] },
     ];
 
-    const ancestryPrimaryOptions = wizardSummary.ancestryProfile.primaryOptions.map(option => ({
-      ...option,
-      selected:
-        wizardSummary.creation.ancestryBonusPrimary?.scope === option.scope
-        && wizardSummary.creation.ancestryBonusPrimary?.key === option.key
-    }));
+    const ancestryPrimaryOptions =
+      wizardSummary.ancestryProfile.primaryOptions.map((option) => ({
+        ...option,
+        selected:
+          wizardSummary.creation.ancestryBonusPrimary?.scope === option.scope &&
+          wizardSummary.creation.ancestryBonusPrimary?.key === option.key,
+      }));
 
     const ancestryExtraOptions = wizardSummary.ancestryProfile.extraApplication
-      ? APPLICATION_KEYS.map(key => ({
-        key,
-        label: APPLICATION_LABELS[key],
-        selected: wizardSummary.creation.ancestryBonusExtra === key
-      }))
+      ? APPLICATION_KEYS.map((key) => ({
+          key,
+          label: APPLICATION_LABELS[key],
+          selected: wizardSummary.creation.ancestryBonusExtra === key,
+        }))
       : [];
 
-    const maneuversAxes = AXIS_KEYS.map(axis => ({
+    const maneuversAxes = AXIS_KEYS.map((axis) => ({
       id: axis,
       label: AXIS_LABELS[axis],
       required: wizardSummary.requiredManeuvers[axis],
       selectedCount: wizardSummary.maneuversByAxis[axis].length,
-      items: wizardSummary.maneuversByAxis[axis]
+      items: wizardSummary.maneuversByAxis[axis],
     }));
 
     return {
@@ -240,7 +358,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       wizard: {
         step: wizardSummary.creation.step,
         total: WIZARD_STEPS,
-        progress: Math.round((wizardSummary.creation.step / WIZARD_STEPS) * 100),
+        progress: Math.round(
+          (wizardSummary.creation.step / WIZARD_STEPS) * 100,
+        ),
         canPrev: wizardSummary.creation.step > 1,
         canNext: wizardSummary.creation.step < WIZARD_STEPS,
         steps: wizardSteps,
@@ -251,15 +371,16 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
           profileLabel: wizardSummary.ancestryProfile.label,
           primaryOptions: ancestryPrimaryOptions,
           extraOptions: ancestryExtraOptions,
-          requiresExtraApplication: wizardSummary.ancestryProfile.extraApplication,
+          requiresExtraApplication:
+            wizardSummary.ancestryProfile.extraApplication,
           traitCount: wizardSummary.ancestryTraits.length,
-          traits: wizardSummary.ancestryTraits
+          traits: wizardSummary.ancestryTraits,
         },
         background: {
           selected: wizardSummary.backgroundName,
           talentCount: wizardSummary.backgroundTalents.length,
           talents: wizardSummary.backgroundTalents,
-          availableTalents: wizardSummary.backgroundTalentOptions
+          availableTalents: wizardSummary.backgroundTalentOptions,
         },
         class: {
           selected: wizardSummary.className,
@@ -268,35 +389,41 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
           initialTalentCount: wizardSummary.classInitialTalents.length,
           initialTalents: wizardSummary.classInitialTalents,
           isCaster: wizardSummary.classIsCaster,
-          baseEe: wizardSummary.classBaseEe
+          baseEe: wizardSummary.classBaseEe,
         },
         maneuvers: {
           complete: wizardSummary.maneuversComplete,
-          axes: maneuversAxes
+          axes: maneuversAxes,
         },
         equipment: {
           budgetGold: formatGold(wizardSummary.equipmentBudgetGold),
           spentGold: formatGold(wizardSummary.equipmentSpentGold),
           remainingGold: formatGold(wizardSummary.equipmentRemainingGold),
           withinBudget: wizardSummary.equipmentWithinBudget,
-          items: wizardSummary.equipmentItems
+          items: wizardSummary.equipmentItems,
         },
         spells: {
           requiredMin: wizardSummary.minimumInitialSpells,
           selectedCount: wizardSummary.selectedSpells.length,
-          selected: wizardSummary.selectedSpells
+          selected: wizardSummary.selectedSpells,
         },
         trainedSkillsCount: wizardSummary.trainedSkillsCount,
         checklist: [
           { label: "Atributos 6/6 validos", done: wizardChecks[1] },
           { label: "Ancestralidade + bonus + 3 tracos", done: wizardChecks[2] },
           { label: "Antecedente + 1 talento de origem", done: wizardChecks[3] },
-          { label: "Classe + passiva + 2 talentos iniciais", done: wizardChecks[4] },
+          {
+            label: "Classe + passiva + 2 talentos iniciais",
+            done: wizardChecks[4],
+          },
           { label: "Manobras por Eixo selecionadas", done: wizardChecks[5] },
           { label: "Magias iniciais (se conjurador)", done: wizardChecks[6] },
-          { label: "Equipamentos iniciais dentro do orcamento", done: wizardChecks[7] },
-          { label: "Ficha pronta para jogar", done: wizardChecks[8] }
-        ]
+          {
+            label: "Equipamentos iniciais dentro do orcamento",
+            done: wizardChecks[7],
+          },
+          { label: "Ficha pronta para jogar", done: wizardChecks[8] },
+        ],
       },
       isCharacter: this.document.type === "character",
       isNpc: this.document.type === "npc",
@@ -308,8 +435,8 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         damage: formatSigned(automation.damage),
         ca: formatSigned(automation.ca),
         initiative: formatSigned(automation.initiative),
-        tests: formatSigned(automation.testBonus)
-      }
+        tests: formatSigned(automation.testBonus),
+      },
     };
   }
 
@@ -320,7 +447,8 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     event.preventDefault();
 
     const actor = this.document;
-    const root = target.closest("form") ??
+    const root =
+      target.closest("form") ??
       this.element?.querySelector?.("[data-application-part='form']") ??
       this.element?.querySelector?.("form") ??
       this.element;
@@ -333,7 +461,12 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     }
 
     if (action === "wizard-go-step") {
-      const requestedStep = clampInteger(target.dataset.step, 1, WIZARD_STEPS, 1);
+      const requestedStep = clampInteger(
+        target.dataset.step,
+        1,
+        WIZARD_STEPS,
+        1,
+      );
       if (requestedStep > 1) {
         for (let step = 1; step < requestedStep; step += 1) {
           if (!this._validateWizardStep(step, { notify: true })) {
@@ -350,9 +483,18 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
 
     if (action === "wizard-prev" || action === "wizard-next") {
       const creation = this._getCreationState();
-      if (action === "wizard-next" && !this._validateWizardStep(creation.step, { notify: true })) return;
+      if (
+        action === "wizard-next" &&
+        !this._validateWizardStep(creation.step, { notify: true })
+      )
+        return;
       const delta = action === "wizard-next" ? 1 : -1;
-      const nextStep = clampInteger(creation.step + delta, 1, WIZARD_STEPS, creation.step);
+      const nextStep = clampInteger(
+        creation.step + delta,
+        1,
+        WIZARD_STEPS,
+        creation.step,
+      );
       await this._updateCreationState({ step: nextStep });
       await actor.setFlag("pandorha", "sheetTab", "criacao");
       return;
@@ -360,25 +502,66 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
 
     if (action === "wizard-apply-attributes") {
       const baseEixos = {
-        fisico: clampInteger(root?.querySelector?.("[name='wizard-base-eixos-fisico']")?.value, 1, 3, 1),
-        mental: clampInteger(root?.querySelector?.("[name='wizard-base-eixos-mental']")?.value, 1, 3, 1),
-        social: clampInteger(root?.querySelector?.("[name='wizard-base-eixos-social']")?.value, 1, 3, 1)
+        fisico: clampInteger(
+          root?.querySelector?.("[name='wizard-base-eixos-fisico']")?.value,
+          1,
+          3,
+          1,
+        ),
+        mental: clampInteger(
+          root?.querySelector?.("[name='wizard-base-eixos-mental']")?.value,
+          1,
+          3,
+          1,
+        ),
+        social: clampInteger(
+          root?.querySelector?.("[name='wizard-base-eixos-social']")?.value,
+          1,
+          3,
+          1,
+        ),
       };
       const baseAplicacoes = {
-        conflito: clampInteger(root?.querySelector?.("[name='wizard-base-aplicacoes-conflito']")?.value, 1, 3, 1),
-        interacao: clampInteger(root?.querySelector?.("[name='wizard-base-aplicacoes-interacao']")?.value, 1, 3, 1),
-        resistencia: clampInteger(root?.querySelector?.("[name='wizard-base-aplicacoes-resistencia']")?.value, 1, 3, 1)
+        conflito: clampInteger(
+          root?.querySelector?.("[name='wizard-base-aplicacoes-conflito']")
+            ?.value,
+          1,
+          3,
+          1,
+        ),
+        interacao: clampInteger(
+          root?.querySelector?.("[name='wizard-base-aplicacoes-interacao']")
+            ?.value,
+          1,
+          3,
+          1,
+        ),
+        resistencia: clampInteger(
+          root?.querySelector?.("[name='wizard-base-aplicacoes-resistencia']")
+            ?.value,
+          1,
+          3,
+          1,
+        ),
       };
 
       if (!this._isPoolValid(baseEixos) || !this._isPoolValid(baseAplicacoes)) {
-        ui.notifications?.warn("A distribuicao de Eixos e Aplicacoes deve ser 6/6, com minimo 1 e maximo 3.");
+        ui.notifications?.warn(
+          "A distribuicao de Eixos e Aplicacoes deve ser 6/6, com minimo 1 e maximo 3.",
+        );
         return;
       }
 
-      const nextCreation = foundry.utils.mergeObject(this._getCreationState(), { baseEixos, baseAplicacoes }, { inplace: false, recursive: true });
+      const nextCreation = foundry.utils.mergeObject(
+        this._getCreationState(),
+        { baseEixos, baseAplicacoes },
+        { inplace: false, recursive: true },
+      );
       const totals = this._computeCreationTotals(nextCreation);
       if (!this._totalsWithinLevelOneCap(totals)) {
-        ui.notifications?.warn("Com os bonus raciais, nenhum Eixo ou Aplicacao pode passar de 4 no nivel 1.");
+        ui.notifications?.warn(
+          "Com os bonus raciais, nenhum Eixo ou Aplicacao pode passar de 4 no nivel 1.",
+        );
         return;
       }
 
@@ -390,25 +573,31 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     }
 
     if (action === "wizard-select-ancestry") {
-      const existingNames = new Set(actor.items.filter(i => i.type === "ancestry").map(i => i.name));
+      const existingNames = new Set(
+        actor.items.filter((i) => i.type === "ancestry").map((i) => i.name),
+      );
       const selected = await this._pickPackDocument({
         packId: "pandorha.ancestries",
         title: "Escolher Ancestralidade",
-        filterFn: doc => !existingNames.has(doc.name)
+        filterFn: (doc) => !existingNames.has(doc.name),
       });
       if (!selected) return;
 
       await this._replaceSingleItemFromPack({
         doc: selected,
         type: "ancestry",
-        detailsField: "ancestry"
+        detailsField: "ancestry",
       });
-      await this._deleteItemsByPredicate(item => item.type === "trait");
+      await this._deleteItemsByPredicate((item) => item.type === "trait");
 
-      const resetCreation = foundry.utils.mergeObject(this._getCreationState(), {
-        ancestryBonusPrimary: null,
-        ancestryBonusExtra: null
-      }, { inplace: false, recursive: true });
+      const resetCreation = foundry.utils.mergeObject(
+        this._getCreationState(),
+        {
+          ancestryBonusPrimary: null,
+          ancestryBonusExtra: null,
+        },
+        { inplace: false, recursive: true },
+      );
       await this._setCreationState(resetCreation);
       await this._applyCreationTotals(resetCreation);
       await actor.setFlag("pandorha", "sheetTab", "criacao");
@@ -418,7 +607,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     if (action === "wizard-set-ancestry-bonus") {
       const ancestryName = actor.system.details?.ancestry ?? "";
       if (!ancestryName) {
-        ui.notifications?.warn("Escolha uma ancestralidade antes de definir bonus.");
+        ui.notifications?.warn(
+          "Escolha uma ancestralidade antes de definir bonus.",
+        );
         return;
       }
 
@@ -430,20 +621,31 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       if (slot === "primary") {
         const scope = target.dataset.scope;
         const key = target.dataset.key;
-        const isAllowed = profile.primaryOptions.some(option => option.scope === scope && option.key === key);
+        const isAllowed = profile.primaryOptions.some(
+          (option) => option.scope === scope && option.key === key,
+        );
         if (!isAllowed) {
-          ui.notifications?.warn("Esse bonus nao e valido para essa ancestralidade.");
+          ui.notifications?.warn(
+            "Esse bonus nao e valido para essa ancestralidade.",
+          );
           return;
         }
-        const sameSelection = creation.ancestryBonusPrimary?.scope === scope && creation.ancestryBonusPrimary?.key === key;
-        nextCreation.ancestryBonusPrimary = sameSelection ? null : { scope, key };
+        const sameSelection =
+          creation.ancestryBonusPrimary?.scope === scope &&
+          creation.ancestryBonusPrimary?.key === key;
+        nextCreation.ancestryBonusPrimary = sameSelection
+          ? null
+          : { scope, key };
       } else if (slot === "extra") {
         const key = target.dataset.key;
         if (!profile.extraApplication || !APPLICATION_KEYS.includes(key)) {
-          ui.notifications?.warn("Bonus extra indisponivel para essa ancestralidade.");
+          ui.notifications?.warn(
+            "Bonus extra indisponivel para essa ancestralidade.",
+          );
           return;
         }
-        nextCreation.ancestryBonusExtra = creation.ancestryBonusExtra === key ? null : key;
+        nextCreation.ancestryBonusExtra =
+          creation.ancestryBonusExtra === key ? null : key;
       } else {
         return;
       }
@@ -463,21 +665,27 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     if (action === "wizard-add-ancestry-trait") {
       const ancestryName = actor.system.details?.ancestry ?? "";
       if (!ancestryName) {
-        ui.notifications?.warn("Escolha uma ancestralidade antes de adicionar tracos.");
+        ui.notifications?.warn(
+          "Escolha uma ancestralidade antes de adicionar tracos.",
+        );
         return;
       }
 
-      const selectedTraits = actor.items.filter(i => i.type === "trait");
+      const selectedTraits = actor.items.filter((i) => i.type === "trait");
       if (selectedTraits.length >= 3) {
-        ui.notifications?.warn("Voce ja escolheu os 3 tracos iniciais da ancestralidade.");
+        ui.notifications?.warn(
+          "Voce ja escolheu os 3 tracos iniciais da ancestralidade.",
+        );
         return;
       }
 
-      const ownedNames = new Set(selectedTraits.map(item => item.name));
+      const ownedNames = new Set(selectedTraits.map((item) => item.name));
       const selected = await this._pickPackDocument({
         packId: "pandorha.traits",
         title: `Escolher Traco de ${ancestryName}`,
-        filterFn: doc => (doc.system?.details?.category === ancestryName) && !ownedNames.has(doc.name)
+        filterFn: (doc) =>
+          doc.system?.details?.category === ancestryName &&
+          !ownedNames.has(doc.name),
       });
       if (!selected) return;
 
@@ -487,49 +695,61 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     }
 
     if (action === "wizard-select-background") {
-      const existingNames = new Set(actor.items.filter(i => i.type === "background").map(i => i.name));
+      const existingNames = new Set(
+        actor.items.filter((i) => i.type === "background").map((i) => i.name),
+      );
       const selected = await this._pickPackDocument({
         packId: "pandorha.backgrounds",
         title: "Escolher Antecedente",
-        filterFn: doc => !existingNames.has(doc.name)
+        filterFn: (doc) => !existingNames.has(doc.name),
       });
       if (!selected) return;
 
       await this._replaceSingleItemFromPack({
         doc: selected,
         type: "background",
-        detailsField: "background"
+        detailsField: "background",
       });
 
-      await this._deleteItemsByPredicate(item => this._isBackgroundTalent(item));
+      await this._deleteItemsByPredicate((item) =>
+        this._isBackgroundTalent(item),
+      );
       await actor.setFlag("pandorha", "sheetTab", "criacao");
       return;
     }
 
     if (action === "wizard-add-background-talent") {
-      const backgroundItem = actor.items.find(item => item.type === "background");
+      const backgroundItem = actor.items.find(
+        (item) => item.type === "background",
+      );
       if (!backgroundItem) {
-        ui.notifications?.warn("Escolha um antecedente antes de selecionar talento.");
+        ui.notifications?.warn(
+          "Escolha um antecedente antes de selecionar talento.",
+        );
         return;
       }
 
       const options = this._extractBackgroundTalentOptions(backgroundItem);
       if (!options.length) {
-        ui.notifications?.warn("Nao foi possivel ler os talentos desse antecedente.");
+        ui.notifications?.warn(
+          "Nao foi possivel ler os talentos desse antecedente.",
+        );
         return;
       }
 
       const choice = await this._pickSimpleOption({
         title: `Talento de ${backgroundItem.name}`,
-        options: options.map(option => ({
+        options: options.map((option) => ({
           label: option.name,
           description: option.description,
-          value: option
-        }))
+          value: option,
+        })),
       });
       if (!choice) return;
 
-      await this._deleteItemsByPredicate(item => this._isBackgroundTalent(item));
+      await this._deleteItemsByPredicate((item) =>
+        this._isBackgroundTalent(item),
+      );
 
       const talentData = {
         name: choice.name,
@@ -541,9 +761,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
             source: backgroundItem.name,
             category: `Antecedente: ${backgroundItem.name}`,
             requirements: "Nivel 1",
-            tags: ["origem"]
-          }
-        }
+            tags: ["origem"],
+          },
+        },
       };
 
       await actor.createEmbeddedDocuments("Item", [talentData]);
@@ -552,20 +772,24 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     }
 
     if (action === "wizard-select-class") {
-      const existingNames = new Set(actor.items.filter(i => i.type === "class").map(i => i.name));
+      const existingNames = new Set(
+        actor.items.filter((i) => i.type === "class").map((i) => i.name),
+      );
       const selected = await this._pickPackDocument({
         packId: "pandorha.classes",
         title: "Escolher Classe",
-        filterFn: doc => !existingNames.has(doc.name)
+        filterFn: (doc) => !existingNames.has(doc.name),
       });
       if (!selected) return;
 
-      await this._deleteItemsByPredicate(item => this._isAnyClassStartingFeature(item));
+      await this._deleteItemsByPredicate((item) =>
+        this._isAnyClassStartingFeature(item),
+      );
 
       const createdClass = await this._replaceSingleItemFromPack({
         doc: selected,
         type: "class",
-        detailsField: "class"
+        detailsField: "class",
       });
 
       await this._ensureClassPassive(createdClass?.name ?? selected.name);
@@ -576,21 +800,29 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     if (action === "wizard-add-class-talent") {
       const className = actor.system.details?.class ?? "";
       if (!className) {
-        ui.notifications?.warn("Escolha uma classe antes de selecionar talentos iniciais.");
+        ui.notifications?.warn(
+          "Escolha uma classe antes de selecionar talentos iniciais.",
+        );
         return;
       }
 
-      const selectedTalents = actor.items.filter(item => this._isClassInitialTalent(item, className));
+      const selectedTalents = actor.items.filter((item) =>
+        this._isClassInitialTalent(item, className),
+      );
       if (selectedTalents.length >= 2) {
-        ui.notifications?.warn("Voce ja escolheu os 2 talentos iniciais da classe.");
+        ui.notifications?.warn(
+          "Voce ja escolheu os 2 talentos iniciais da classe.",
+        );
         return;
       }
 
-      const ownedNames = new Set(selectedTalents.map(item => item.name));
+      const ownedNames = new Set(selectedTalents.map((item) => item.name));
       const selected = await this._pickPackDocument({
         packId: "pandorha.class-features",
         title: `Talento Inicial de ${className}`,
-        filterFn: doc => (doc.system?.details?.category === `${className} - Talento Inicial`) && !ownedNames.has(doc.name)
+        filterFn: (doc) =>
+          doc.system?.details?.category === `${className} - Talento Inicial` &&
+          !ownedNames.has(doc.name),
       });
       if (!selected) return;
 
@@ -607,15 +839,20 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       const required = summary.requiredManeuvers[axis] ?? 0;
       const selectedCount = summary.maneuversByAxis[axis]?.length ?? 0;
       if (selectedCount >= required) {
-        ui.notifications?.warn(`Voce ja selecionou todas as manobras de ${AXIS_LABELS[axis]}.`);
+        ui.notifications?.warn(
+          `Voce ja selecionou todas as manobras de ${AXIS_LABELS[axis]}.`,
+        );
         return;
       }
 
-      const ownedNames = new Set((summary.maneuversByAxis[axis] ?? []).map(item => item.name));
+      const ownedNames = new Set(
+        (summary.maneuversByAxis[axis] ?? []).map((item) => item.name),
+      );
       const selected = await this._pickPackDocument({
         packId: "pandorha.maneuvers",
         title: `Selecionar Manobra (${AXIS_LABELS[axis]})`,
-        filterFn: doc => (doc.system?.roll?.axis === axis) && !ownedNames.has(doc.name)
+        filterFn: (doc) =>
+          doc.system?.roll?.axis === axis && !ownedNames.has(doc.name),
       });
       if (!selected) return;
 
@@ -627,15 +864,20 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     if (action === "wizard-add-spell") {
       const summary = this._getWizardSummary();
       if (!summary.classIsCaster) {
-        ui.notifications?.warn("A classe atual nao possui selecao inicial de magias.");
+        ui.notifications?.warn(
+          "A classe atual nao possui selecao inicial de magias.",
+        );
         return;
       }
 
-      const ownedNames = new Set(summary.selectedSpells.map(item => item.name));
+      const ownedNames = new Set(
+        summary.selectedSpells.map((item) => item.name),
+      );
       const selected = await this._pickPackDocument({
         packId: "pandorha.spells",
         title: "Selecionar Magia Inicial",
-        filterFn: doc => (Number(doc.system?.circle ?? 0) <= 1) && !ownedNames.has(doc.name)
+        filterFn: (doc) =>
+          Number(doc.system?.circle ?? 0) <= 1 && !ownedNames.has(doc.name),
       });
       if (!selected) return;
 
@@ -650,22 +892,28 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       const selected = await this._pickPackDocument({
         packId: "pandorha.equipment",
         title: "Comprar Equipamento Inicial",
-        filterFn: doc => INITIAL_EQUIPMENT_TYPES.includes(doc.type)
+        filterFn: (doc) => INITIAL_EQUIPMENT_TYPES.includes(doc.type),
       });
       if (!selected) return;
 
       const itemCost = this._getItemPriceGold(selected);
-      if ((currentSpent + itemCost) > budget) {
-        ui.notifications?.warn(`Orcamento insuficiente. Saldo atual: ${formatGold(Math.max(budget - currentSpent, 0))}.`);
+      if (currentSpent + itemCost > budget) {
+        ui.notifications?.warn(
+          `Orcamento insuficiente. Saldo atual: ${formatGold(Math.max(budget - currentSpent, 0))}.`,
+        );
         return;
       }
 
-      const created = await this._createItemFromPackDocument(selected, selected.type);
+      const created = await this._createItemFromPackDocument(
+        selected,
+        selected.type,
+      );
       if (created && ["weapon", "armor", "shield"].includes(created.type)) {
-        const hasOtherEquippedSameType = actor.items.some(i =>
-          i.type === created.type
-          && i.id !== created.id
-          && Boolean(i.system?.equipped)
+        const hasOtherEquippedSameType = actor.items.some(
+          (i) =>
+            i.type === created.type &&
+            i.id !== created.id &&
+            Boolean(i.system?.equipped),
         );
         if (!hasOtherEquippedSameType) {
           await created.update({ "system.equipped": true });
@@ -697,7 +945,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       await this._updateCreationState({ step: WIZARD_STEPS });
       await actor.setFlag("pandorha", "creationComplete", true);
       await actor.setFlag("pandorha", "sheetTab", "base");
-      ui.notifications?.info("Personagem criado. Continue os ajustes finos na aba Base.");
+      ui.notifications?.info(
+        "Personagem criado. Continue os ajustes finos na aba Base.",
+      );
       return;
     }
 
@@ -705,9 +955,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       const panel = target.closest(".tab-panel") ?? root;
       const scope = target.closest("[data-roll-context]") ?? panel ?? root;
       const findField = (name) =>
-        scope?.querySelector?.(`[name='${name}']`)
-        ?? panel?.querySelector?.(`[name='${name}']`)
-        ?? root?.querySelector?.(`[name='${name}']`);
+        scope?.querySelector?.(`[name='${name}']`) ??
+        panel?.querySelector?.(`[name='${name}']`) ??
+        root?.querySelector?.(`[name='${name}']`);
 
       const eixo = findField("roll-eixo")?.value;
       const aplicacao = findField("roll-aplicacao")?.value;
@@ -716,34 +966,53 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       const mapValue = findField("roll-map")?.value ?? "auto";
       const mapStep = mapValue === "auto" ? "auto" : Number(mapValue);
       const bonus = Number(bonusRaw) || 0;
-      await rollTest({ actor, eixo, aplicacao, bonus, trained, mapStep, label: "Teste Global" });
+      await rollTest({
+        actor,
+        eixo,
+        aplicacao,
+        bonus,
+        trained,
+        mapStep,
+        label: "Teste Global",
+      });
       return;
     }
 
     if (action === "roll-initiative") {
       await actor.rollInitiative({
         createCombatants: true,
-        rerollInitiative: Boolean(event?.shiftKey)
+        rerollInitiative: Boolean(event?.shiftKey),
       });
       return;
     }
 
     if (action === "roll-skill") {
       const skillId = target.dataset.skillId;
-      const skill = SKILLS.find(s => s.id === skillId);
+      const skill = SKILLS.find((s) => s.id === skillId);
       if (!skill) return;
       await rollSkill({ actor, skill });
       return;
     }
 
-    if (["item-roll", "item-damage", "item-post-description", "item-edit", "item-delete", "item-toggle-equipped"].includes(action)) {
+    if (
+      [
+        "item-roll",
+        "item-damage",
+        "item-post-description",
+        "item-edit",
+        "item-delete",
+        "item-toggle-equipped",
+      ].includes(action)
+    ) {
       const itemId = target.dataset.itemId;
       const item = actor.items.get(itemId);
       if (!item) return;
 
       if (action === "item-roll") {
         const panel = target.closest(".tab-panel") ?? root;
-        const mapField = panel?.querySelector?.("[name='roll-map']") ?? root?.querySelector?.("[name='roll-map']");
+        const mapField =
+          panel?.querySelector?.("[name='roll-map']") ??
+          root?.querySelector?.("[name='roll-map']");
         const mapValue = mapField?.value ?? "auto";
         const mapStep = mapValue === "auto" ? "auto" : Number(mapValue);
         await rollItem({ actor, item, mapStep });
@@ -780,7 +1049,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     if (action === "item-create") {
       const type = target.dataset.itemType;
       if (!type) return;
-      await actor.createEmbeddedDocuments("Item", [{ name: `Novo ${type}`, type }]);
+      await actor.createEmbeddedDocuments("Item", [
+        { name: `Novo ${type}`, type },
+      ]);
       return;
     }
 
@@ -801,16 +1072,23 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       if (!pack) return;
 
       const docs = await this._getPackDocuments(packId);
-      const filteredDocs = docs.filter(doc => (type ? doc.type === type : true));
+      const filteredDocs = docs.filter((doc) =>
+        type ? doc.type === type : true,
+      );
       if (!filteredDocs.length) {
-        ui.notifications?.warn(type
-          ? `Nenhum item do tipo ${type} encontrado neste compendio.`
-          : "Nenhum item encontrado neste compendio.");
+        ui.notifications?.warn(
+          type
+            ? `Nenhum item do tipo ${type} encontrado neste compendio.`
+            : "Nenhum item encontrado neste compendio.",
+        );
         return;
       }
 
       const options = filteredDocs
-        .map((doc, index) => `<option value="${index}">${foundry.utils.escapeHTML(doc.name)}</option>`)
+        .map(
+          (doc, index) =>
+            `<option value="${index}">${foundry.utils.escapeHTML(doc.name)}</option>`,
+        )
         .join("");
       const content = `<form><div class="form-group"><label>Selecione</label><select name="entry">${options}</select></div></form>`;
 
@@ -821,8 +1099,10 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
           add: {
             icon: '<i class="fas fa-plus"></i>',
             label: "Adicionar",
-            callback: async html => {
-              const selectedIndex = Number(html.find("select[name='entry']").val());
+            callback: async (html) => {
+              const selectedIndex = Number(
+                html.find("select[name='entry']").val(),
+              );
               if (!Number.isFinite(selectedIndex)) return;
               const doc = filteredDocs[selectedIndex];
               if (!doc) return;
@@ -833,43 +1113,58 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
               const originDetailsKey = {
                 ancestry: "ancestry",
                 background: "background",
-                class: "class"
+                class: "class",
               }[type];
 
               if (originDetailsKey) {
-                const previous = actor.items.filter(i => i.type === type).map(i => i.id);
-                if (previous.length) await actor.deleteEmbeddedDocuments("Item", previous);
+                const previous = actor.items
+                  .filter((i) => i.type === type)
+                  .map((i) => i.id);
+                if (previous.length)
+                  await actor.deleteEmbeddedDocuments("Item", previous);
               }
 
-              const created = await actor.createEmbeddedDocuments("Item", [data]);
+              const created = await actor.createEmbeddedDocuments("Item", [
+                data,
+              ]);
 
               if (originDetailsKey && created?.[0]) {
-                await actor.update({ [`system.details.${originDetailsKey}`]: created[0].name });
+                await actor.update({
+                  [`system.details.${originDetailsKey}`]: created[0].name,
+                });
               }
 
-              if (created?.[0] && ["weapon", "armor", "shield"].includes(created[0].type)) {
-                const hasOtherEquippedSameType = actor.items.some(i =>
-                  i.type === created[0].type
-                  && i.id !== created[0].id
-                  && Boolean(i.system?.equipped)
+              if (
+                created?.[0] &&
+                ["weapon", "armor", "shield"].includes(created[0].type)
+              ) {
+                const hasOtherEquippedSameType = actor.items.some(
+                  (i) =>
+                    i.type === created[0].type &&
+                    i.id !== created[0].id &&
+                    Boolean(i.system?.equipped),
                 );
                 if (!hasOtherEquippedSameType) {
                   await created[0].update({ "system.equipped": true });
                 }
               }
 
-              if (Number.isFinite(nextStep) && nextStep >= 1 && nextStep <= WIZARD_STEPS) {
+              if (
+                Number.isFinite(nextStep) &&
+                nextStep >= 1 &&
+                nextStep <= WIZARD_STEPS
+              ) {
                 await actor.setFlag("pandorha", "sheetTab", "criacao");
                 await this._updateCreationState({ step: nextStep });
               }
-            }
+            },
           },
           cancel: {
             icon: '<i class="fas fa-times"></i>',
-            label: "Cancelar"
-          }
+            label: "Cancelar",
+          },
         },
-        default: "add"
+        default: "add",
       }).render(true);
       return;
     }
@@ -878,14 +1173,15 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
   }
 
   _bindResourceCurrentAutosave() {
-    const root = this.element?.querySelector?.("[data-application-part='form']") ??
+    const root =
+      this.element?.querySelector?.("[data-application-part='form']") ??
       this.element?.querySelector?.("form");
     if (!root) return;
 
     const watched = [
       "system.resources.hp.value",
       "system.resources.pv.value",
-      "system.resources.ee.value"
+      "system.resources.ee.value",
     ];
 
     for (const fieldName of watched) {
@@ -894,8 +1190,16 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       if (input.dataset.pandorhaResourceBound === "1") continue;
       input.dataset.pandorhaResourceBound = "1";
 
-      input.addEventListener("change", () => this._saveResourceCurrentValues(root), { passive: true });
-      input.addEventListener("blur", () => this._saveResourceCurrentValues(root), { passive: true });
+      input.addEventListener(
+        "change",
+        () => this._saveResourceCurrentValues(root),
+        { passive: true },
+      );
+      input.addEventListener(
+        "blur",
+        () => this._saveResourceCurrentValues(root),
+        { passive: true },
+      );
     }
   }
 
@@ -908,14 +1212,26 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       return Math.max(0, Math.trunc(value));
     };
 
-    const hpValue = readInt("system.resources.hp.value", Number(this.document.system.resources?.hp?.value ?? 0));
-    const pvValue = readInt("system.resources.pv.value", Number(this.document.system.resources?.pv?.value ?? 0));
-    const eeValue = readInt("system.resources.ee.value", Number(this.document.system.resources?.ee?.value ?? 0));
+    const hpValue = readInt(
+      "system.resources.hp.value",
+      Number(this.document.system.resources?.hp?.value ?? 0),
+    );
+    const pvValue = readInt(
+      "system.resources.pv.value",
+      Number(this.document.system.resources?.pv?.value ?? 0),
+    );
+    const eeValue = readInt(
+      "system.resources.ee.value",
+      Number(this.document.system.resources?.ee?.value ?? 0),
+    );
 
     const updates = {};
-    if (hpValue !== Number(this.document.system.resources?.hp?.value ?? 0)) updates["system.resources.hp.value"] = hpValue;
-    if (pvValue !== Number(this.document.system.resources?.pv?.value ?? 0)) updates["system.resources.pv.value"] = pvValue;
-    if (eeValue !== Number(this.document.system.resources?.ee?.value ?? 0)) updates["system.resources.ee.value"] = eeValue;
+    if (hpValue !== Number(this.document.system.resources?.hp?.value ?? 0))
+      updates["system.resources.hp.value"] = hpValue;
+    if (pvValue !== Number(this.document.system.resources?.pv?.value ?? 0))
+      updates["system.resources.pv.value"] = pvValue;
+    if (eeValue !== Number(this.document.system.resources?.ee?.value ?? 0))
+      updates["system.resources.ee.value"] = eeValue;
 
     if (!Object.keys(updates).length) return;
     await this.document.update(updates);
@@ -930,18 +1246,25 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     const defaults = this._getDefaultCreationState();
     if (!raw || typeof raw !== "object") return defaults;
 
-    const merged = foundry.utils.mergeObject(defaults, raw, { inplace: false, recursive: true });
+    const merged = foundry.utils.mergeObject(defaults, raw, {
+      inplace: false,
+      recursive: true,
+    });
     merged.step = clampInteger(merged.step, 1, WIZARD_STEPS, 1);
     merged.baseEixos = this._sanitizePool(merged.baseEixos);
     merged.baseAplicacoes = this._sanitizePool(merged.baseAplicacoes);
 
-    const validPrimary = merged.ancestryBonusPrimary
-      && ["eixos", "aplicacoes"].includes(merged.ancestryBonusPrimary.scope)
-      && ((merged.ancestryBonusPrimary.scope === "eixos" && AXIS_KEYS.includes(merged.ancestryBonusPrimary.key))
-      || (merged.ancestryBonusPrimary.scope === "aplicacoes" && APPLICATION_KEYS.includes(merged.ancestryBonusPrimary.key)));
+    const validPrimary =
+      merged.ancestryBonusPrimary &&
+      ["eixos", "aplicacoes"].includes(merged.ancestryBonusPrimary.scope) &&
+      ((merged.ancestryBonusPrimary.scope === "eixos" &&
+        AXIS_KEYS.includes(merged.ancestryBonusPrimary.key)) ||
+        (merged.ancestryBonusPrimary.scope === "aplicacoes" &&
+          APPLICATION_KEYS.includes(merged.ancestryBonusPrimary.key)));
     if (!validPrimary) merged.ancestryBonusPrimary = null;
 
-    if (!APPLICATION_KEYS.includes(merged.ancestryBonusExtra)) merged.ancestryBonusExtra = null;
+    if (!APPLICATION_KEYS.includes(merged.ancestryBonusExtra))
+      merged.ancestryBonusExtra = null;
     return merged;
   }
 
@@ -949,20 +1272,24 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     const eixosCandidate = {
       fisico: Number(this.document.system.eixos?.fisico ?? 0),
       mental: Number(this.document.system.eixos?.mental ?? 0),
-      social: Number(this.document.system.eixos?.social ?? 0)
+      social: Number(this.document.system.eixos?.social ?? 0),
     };
     const aplicacoesCandidate = {
       conflito: Number(this.document.system.aplicacoes?.conflito ?? 0),
       interacao: Number(this.document.system.aplicacoes?.interacao ?? 0),
-      resistencia: Number(this.document.system.aplicacoes?.resistencia ?? 0)
+      resistencia: Number(this.document.system.aplicacoes?.resistencia ?? 0),
     };
 
     return {
       step: 1,
-      baseEixos: this._isPoolValid(eixosCandidate) ? this._sanitizePool(eixosCandidate) : { fisico: 2, mental: 2, social: 2 },
-      baseAplicacoes: this._isPoolValid(aplicacoesCandidate) ? this._sanitizePool(aplicacoesCandidate) : { conflito: 2, interacao: 2, resistencia: 2 },
+      baseEixos: this._isPoolValid(eixosCandidate)
+        ? this._sanitizePool(eixosCandidate)
+        : { fisico: 2, mental: 2, social: 2 },
+      baseAplicacoes: this._isPoolValid(aplicacoesCandidate)
+        ? this._sanitizePool(aplicacoesCandidate)
+        : { conflito: 2, interacao: 2, resistencia: 2 },
       ancestryBonusPrimary: null,
-      ancestryBonusExtra: null
+      ancestryBonusExtra: null,
     };
   }
 
@@ -972,13 +1299,23 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     const fallback = keys.includes("fisico")
       ? { fisico: 2, mental: 2, social: 2 }
       : { conflito: 2, interacao: 2, resistencia: 2 };
-    return Object.fromEntries(Object.entries(fallback).map(([key, value]) => [key, clampInteger(source[key], 1, 3, value)]));
+    return Object.fromEntries(
+      Object.entries(fallback).map(([key, value]) => [
+        key,
+        clampInteger(source[key], 1, 3, value),
+      ]),
+    );
   }
 
   _isPoolValid(pool) {
     const values = Object.values(pool ?? {});
     if (values.length !== 3) return false;
-    const validRange = values.every(value => Number.isFinite(Number(value)) && Number(value) >= 1 && Number(value) <= 3);
+    const validRange = values.every(
+      (value) =>
+        Number.isFinite(Number(value)) &&
+        Number(value) >= 1 &&
+        Number(value) <= 3,
+    );
     const total = values.reduce((sum, value) => sum + Number(value), 0);
     return validRange && total === 6;
   }
@@ -987,13 +1324,22 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     const eixos = { ...creation.baseEixos };
     const aplicacoes = { ...creation.baseAplicacoes };
 
-    if (creation.ancestryBonusPrimary?.scope === "eixos" && AXIS_KEYS.includes(creation.ancestryBonusPrimary.key)) {
+    if (
+      creation.ancestryBonusPrimary?.scope === "eixos" &&
+      AXIS_KEYS.includes(creation.ancestryBonusPrimary.key)
+    ) {
       eixos[creation.ancestryBonusPrimary.key] += 1;
     }
-    if (creation.ancestryBonusPrimary?.scope === "aplicacoes" && APPLICATION_KEYS.includes(creation.ancestryBonusPrimary.key)) {
+    if (
+      creation.ancestryBonusPrimary?.scope === "aplicacoes" &&
+      APPLICATION_KEYS.includes(creation.ancestryBonusPrimary.key)
+    ) {
       aplicacoes[creation.ancestryBonusPrimary.key] += 1;
     }
-    if (creation.ancestryBonusExtra && APPLICATION_KEYS.includes(creation.ancestryBonusExtra)) {
+    if (
+      creation.ancestryBonusExtra &&
+      APPLICATION_KEYS.includes(creation.ancestryBonusExtra)
+    ) {
       aplicacoes[creation.ancestryBonusExtra] += 1;
     }
 
@@ -1001,8 +1347,11 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
   }
 
   _totalsWithinLevelOneCap(totals) {
-    const values = [...Object.values(totals.eixos ?? {}), ...Object.values(totals.aplicacoes ?? {})];
-    return values.every(value => Number(value) <= 4);
+    const values = [
+      ...Object.values(totals.eixos ?? {}),
+      ...Object.values(totals.aplicacoes ?? {}),
+    ];
+    return values.every((value) => Number(value) <= 4);
   }
 
   async _setCreationState(nextState) {
@@ -1013,7 +1362,10 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
 
   async _updateCreationState(patch) {
     const current = this._getCreationState();
-    const merged = foundry.utils.mergeObject(current, patch, { inplace: false, recursive: true });
+    const merged = foundry.utils.mergeObject(current, patch, {
+      inplace: false,
+      recursive: true,
+    });
     return this._setCreationState(merged);
   }
 
@@ -1025,22 +1377,30 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       "system.eixos.social": totals.eixos.social,
       "system.aplicacoes.conflito": totals.aplicacoes.conflito,
       "system.aplicacoes.interacao": totals.aplicacoes.interacao,
-      "system.aplicacoes.resistencia": totals.aplicacoes.resistencia
+      "system.aplicacoes.resistencia": totals.aplicacoes.resistencia,
     });
   }
 
   _getAncestryProfile(ancestryName) {
     const normalized = normalizeText(ancestryName);
     const allPrimary = [
-      ...AXIS_KEYS.map(key => ({ scope: "eixos", key, label: AXIS_LABELS[key] })),
-      ...APPLICATION_KEYS.map(key => ({ scope: "aplicacoes", key, label: APPLICATION_LABELS[key] }))
+      ...AXIS_KEYS.map((key) => ({
+        scope: "eixos",
+        key,
+        label: AXIS_LABELS[key],
+      })),
+      ...APPLICATION_KEYS.map((key) => ({
+        scope: "aplicacoes",
+        key,
+        label: APPLICATION_LABELS[key],
+      })),
     ];
 
     if (normalized.includes("humano")) {
       return {
         label: "Humano: +1 livre (Eixo ou Aplicacao) e +1 Aplicacao extra",
         primaryOptions: allPrimary,
-        extraApplication: true
+        extraApplication: true,
       };
     }
     if (normalized.includes("elf")) {
@@ -1048,9 +1408,13 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         label: "Elfo: +1 Mental ou +1 Interacao",
         primaryOptions: [
           { scope: "eixos", key: "mental", label: AXIS_LABELS.mental },
-          { scope: "aplicacoes", key: "interacao", label: APPLICATION_LABELS.interacao }
+          {
+            scope: "aplicacoes",
+            key: "interacao",
+            label: APPLICATION_LABELS.interacao,
+          },
         ],
-        extraApplication: false
+        extraApplication: false,
       };
     }
     if (normalized.includes("anao")) {
@@ -1058,9 +1422,13 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         label: "Anao: +1 Fisico ou +1 Resistencia",
         primaryOptions: [
           { scope: "eixos", key: "fisico", label: AXIS_LABELS.fisico },
-          { scope: "aplicacoes", key: "resistencia", label: APPLICATION_LABELS.resistencia }
+          {
+            scope: "aplicacoes",
+            key: "resistencia",
+            label: APPLICATION_LABELS.resistencia,
+          },
         ],
-        extraApplication: false
+        extraApplication: false,
       };
     }
     if (normalized.includes("drakari")) {
@@ -1068,9 +1436,13 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         label: "Drakari: +1 Fisico ou +1 Conflito",
         primaryOptions: [
           { scope: "eixos", key: "fisico", label: AXIS_LABELS.fisico },
-          { scope: "aplicacoes", key: "conflito", label: APPLICATION_LABELS.conflito }
+          {
+            scope: "aplicacoes",
+            key: "conflito",
+            label: APPLICATION_LABELS.conflito,
+          },
         ],
-        extraApplication: false
+        extraApplication: false,
       };
     }
     if (normalized.includes("umbra")) {
@@ -1078,9 +1450,13 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         label: "Umbrai: +1 Social ou +1 Interacao",
         primaryOptions: [
           { scope: "eixos", key: "social", label: AXIS_LABELS.social },
-          { scope: "aplicacoes", key: "interacao", label: APPLICATION_LABELS.interacao }
+          {
+            scope: "aplicacoes",
+            key: "interacao",
+            label: APPLICATION_LABELS.interacao,
+          },
         ],
-        extraApplication: false
+        extraApplication: false,
       };
     }
     if (normalized.includes("fera")) {
@@ -1088,16 +1464,20 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         label: "Fera: +1 Fisico ou +1 Interacao",
         primaryOptions: [
           { scope: "eixos", key: "fisico", label: AXIS_LABELS.fisico },
-          { scope: "aplicacoes", key: "interacao", label: APPLICATION_LABELS.interacao }
+          {
+            scope: "aplicacoes",
+            key: "interacao",
+            label: APPLICATION_LABELS.interacao,
+          },
         ],
-        extraApplication: false
+        extraApplication: false,
       };
     }
 
     return {
       label: "Selecione uma ancestralidade para liberar os bonus",
       primaryOptions: [],
-      extraApplication: false
+      extraApplication: false,
     };
   }
 
@@ -1115,7 +1495,10 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     if (!section) return [];
 
     const options = [];
-    const lines = section.split("\n").map(line => line.trim()).filter(Boolean);
+    const lines = section
+      .split("\n")
+      .map((line) => line.trim())
+      .filter(Boolean);
     for (const line of lines) {
       if (/^##\s*\d+/.test(line)) break;
       const match = line.match(/^- \*\*(.+?)\*\*\s*:?\s*(.+)$/);
@@ -1125,7 +1508,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       if (!name || !description) continue;
       options.push({
         name,
-        description: description.replace(/\*\*/g, "").trim()
+        description: description.replace(/\*\*/g, "").trim(),
       });
     }
     return options.slice(0, 3);
@@ -1150,7 +1533,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
   _isAnyClassStartingFeature(item) {
     if (item.type !== "feature") return false;
     const category = String(item.system?.details?.category ?? "");
-    return category.endsWith(" - Talento Inicial") || category.endsWith(" - Passiva");
+    return (
+      category.endsWith(" - Talento Inicial") || category.endsWith(" - Passiva")
+    );
   }
 
   _getInitialEquipmentBudgetGold() {
@@ -1158,7 +1543,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
   }
 
   _getInitialEquipmentItems() {
-    return this.document.items.filter(item => INITIAL_EQUIPMENT_TYPES.includes(item.type));
+    return this.document.items.filter((item) =>
+      INITIAL_EQUIPMENT_TYPES.includes(item.type),
+    );
   }
 
   _getItemPriceGold(itemOrDoc) {
@@ -1168,7 +1555,10 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
   }
 
   _getInitialEquipmentSpentGold() {
-    return this._getInitialEquipmentItems().reduce((sum, item) => sum + this._getItemPriceGold(item), 0);
+    return this._getInitialEquipmentItems().reduce(
+      (sum, item) => sum + this._getItemPriceGold(item),
+      0,
+    );
   }
 
   _getWizardSummary() {
@@ -1180,8 +1570,14 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     const pools = {
       baseEixos: creation.baseEixos,
       baseAplicacoes: creation.baseAplicacoes,
-      eixosSpent: Object.values(creation.baseEixos).reduce((sum, value) => sum + Number(value), 0),
-      aplicacoesSpent: Object.values(creation.baseAplicacoes).reduce((sum, value) => sum + Number(value), 0)
+      eixosSpent: Object.values(creation.baseEixos).reduce(
+        (sum, value) => sum + Number(value),
+        0,
+      ),
+      aplicacoesSpent: Object.values(creation.baseAplicacoes).reduce(
+        (sum, value) => sum + Number(value),
+        0,
+      ),
     };
     pools.eixosRemaining = 6 - pools.eixosSpent;
     pools.aplicacoesRemaining = 6 - pools.aplicacoesSpent;
@@ -1191,30 +1587,41 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     const ancestryName = actor.system.details?.ancestry ?? "";
     const backgroundName = actor.system.details?.background ?? "";
     const className = actor.system.details?.class ?? "";
-    const classItem = actor.items.find(item => item.type === "class");
+    const classItem = actor.items.find((item) => item.type === "class");
     const classBaseEe = Number(classItem?.system?.classData?.baseEe ?? 0) || 0;
-    const classIsCaster = classBaseEe > 0 || /tecel|arcano|mago|brux|feiti|emissario/.test(normalizeText(className));
+    const classIsCaster =
+      classBaseEe > 0 ||
+      /tecel|arcano|mago|brux|feiti|emissario/.test(normalizeText(className));
 
     const ancestryProfile = this._getAncestryProfile(ancestryName);
-    const ancestryTraits = actor.items.filter(item => item.type === "trait").map(itemToContext);
+    const ancestryTraits = actor.items
+      .filter((item) => item.type === "trait")
+      .map(itemToContext);
 
-    const backgroundItem = actor.items.find(item => item.type === "background");
-    const backgroundTalentOptions = this._extractBackgroundTalentOptions(backgroundItem);
-    const backgroundTalents = actor.items.filter(item => this._isBackgroundTalent(item)).map(itemToContext);
+    const backgroundItem = actor.items.find(
+      (item) => item.type === "background",
+    );
+    const backgroundTalentOptions =
+      this._extractBackgroundTalentOptions(backgroundItem);
+    const backgroundTalents = actor.items
+      .filter((item) => this._isBackgroundTalent(item))
+      .map(itemToContext);
 
     const classInitialTalents = actor.items
-      .filter(item => this._isClassInitialTalent(item, className))
+      .filter((item) => this._isClassInitialTalent(item, className))
       .map(itemToContext);
     const classPassive = actor.items
-      .filter(item => this._isClassPassive(item, className))
+      .filter((item) => this._isClassPassive(item, className))
       .map(itemToContext);
 
     const maneuversByAxis = {
       fisico: [],
       mental: [],
-      social: []
+      social: [],
     };
-    for (const item of actor.items.filter(entry => entry.type === "maneuver")) {
+    for (const item of actor.items.filter(
+      (entry) => entry.type === "maneuver",
+    )) {
       const axis = item.system?.roll?.axis;
       if (!AXIS_KEYS.includes(axis)) continue;
       maneuversByAxis[axis].push(itemToContext(item));
@@ -1223,22 +1630,32 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     const requiredManeuvers = {
       fisico: totals.eixos.fisico,
       mental: totals.eixos.mental,
-      social: totals.eixos.social
+      social: totals.eixos.social,
     };
-    const maneuversComplete = AXIS_KEYS.every(axis => maneuversByAxis[axis].length >= requiredManeuvers[axis]);
+    const maneuversComplete = AXIS_KEYS.every(
+      (axis) => maneuversByAxis[axis].length >= requiredManeuvers[axis],
+    );
 
-    const selectedSpells = actor.items.filter(item => item.type === "spell").map(itemToContext);
+    const selectedSpells = actor.items
+      .filter((item) => item.type === "spell")
+      .map(itemToContext);
     const minimumInitialSpells = classIsCaster ? 1 : 0;
-    const hasRequiredInitialSpells = selectedSpells.length >= minimumInitialSpells;
+    const hasRequiredInitialSpells =
+      selectedSpells.length >= minimumInitialSpells;
 
-    const trainedSkillsCount = Object.values(actor.system.skills ?? {}).filter(skill => skill?.trained).length;
+    const trainedSkillsCount = Object.values(actor.system.skills ?? {}).filter(
+      (skill) => skill?.trained,
+    ).length;
     const equipmentBudgetGold = this._getInitialEquipmentBudgetGold();
-    const equipmentItems = this._getInitialEquipmentItems().map(item => ({
+    const equipmentItems = this._getInitialEquipmentItems().map((item) => ({
       ...itemToContext(item),
       priceGold: this._getItemPriceGold(item),
-      priceLabel: formatGold(this._getItemPriceGold(item))
+      priceLabel: formatGold(this._getItemPriceGold(item)),
     }));
-    const equipmentSpentGold = equipmentItems.reduce((sum, item) => sum + item.priceGold, 0);
+    const equipmentSpentGold = equipmentItems.reduce(
+      (sum, item) => sum + item.priceGold,
+      0,
+    );
     const equipmentRemainingGold = equipmentBudgetGold - equipmentSpentGold;
     const equipmentWithinBudget = equipmentRemainingGold >= 0;
 
@@ -1250,7 +1667,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       ancestryName,
       ancestryProfile,
       hasPrimaryAncestryBonus: Boolean(creation.ancestryBonusPrimary),
-      hasExtraAncestryBonus: !ancestryProfile.extraApplication || Boolean(creation.ancestryBonusExtra),
+      hasExtraAncestryBonus:
+        !ancestryProfile.extraApplication ||
+        Boolean(creation.ancestryBonusExtra),
       ancestryTraits,
       backgroundName,
       backgroundTalentOptions,
@@ -1271,23 +1690,39 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       equipmentBudgetGold,
       equipmentSpentGold,
       equipmentRemainingGold,
-      equipmentWithinBudget
+      equipmentWithinBudget,
     };
   }
 
   _computeWizardChecks(summary) {
     const checks = {};
-    checks[1] = summary.pools.eixosValid && summary.pools.aplicacoesValid && summary.totalsWithinCap;
-    checks[2] = Boolean(summary.ancestryName)
-      && summary.hasPrimaryAncestryBonus
-      && summary.hasExtraAncestryBonus
-      && summary.ancestryTraits.length >= 3;
-    checks[3] = Boolean(summary.backgroundName) && summary.backgroundTalents.length >= 1;
-    checks[4] = Boolean(summary.className) && summary.classPassive.length >= 1 && summary.classInitialTalents.length >= 2;
+    checks[1] =
+      summary.pools.eixosValid &&
+      summary.pools.aplicacoesValid &&
+      summary.totalsWithinCap;
+    checks[2] =
+      Boolean(summary.ancestryName) &&
+      summary.hasPrimaryAncestryBonus &&
+      summary.hasExtraAncestryBonus &&
+      summary.ancestryTraits.length >= 3;
+    checks[3] =
+      Boolean(summary.backgroundName) && summary.backgroundTalents.length >= 1;
+    checks[4] =
+      Boolean(summary.className) &&
+      summary.classPassive.length >= 1 &&
+      summary.classInitialTalents.length >= 2;
     checks[5] = summary.maneuversComplete;
     checks[6] = summary.hasRequiredInitialSpells;
-    checks[7] = summary.equipmentWithinBudget && summary.equipmentItems.length > 0;
-    checks[8] = checks[1] && checks[2] && checks[3] && checks[4] && checks[5] && checks[6] && checks[7];
+    checks[7] =
+      summary.equipmentWithinBudget && summary.equipmentItems.length > 0;
+    checks[8] =
+      checks[1] &&
+      checks[2] &&
+      checks[3] &&
+      checks[4] &&
+      checks[5] &&
+      checks[6] &&
+      checks[7];
     return checks;
   }
 
@@ -1300,10 +1735,14 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
     switch (step) {
       case 1:
         if (!summary.pools.eixosValid || !summary.pools.aplicacoesValid) {
-          ui.notifications?.warn("Distribua Eixos e Aplicacoes em 6/6, com minimo 1 e maximo 3.");
+          ui.notifications?.warn(
+            "Distribua Eixos e Aplicacoes em 6/6, com minimo 1 e maximo 3.",
+          );
           return false;
         }
-        ui.notifications?.warn("Com os bonus da ancestralidade, nenhum valor pode passar de 4 no nivel 1.");
+        ui.notifications?.warn(
+          "Com os bonus da ancestralidade, nenhum valor pode passar de 4 no nivel 1.",
+        );
         return false;
       case 2:
         if (!summary.ancestryName) {
@@ -1311,14 +1750,20 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
           return false;
         }
         if (!summary.hasPrimaryAncestryBonus) {
-          ui.notifications?.warn("Selecione o bonus inicial da ancestralidade.");
+          ui.notifications?.warn(
+            "Selecione o bonus inicial da ancestralidade.",
+          );
           return false;
         }
         if (!summary.hasExtraAncestryBonus) {
-          ui.notifications?.warn("A ancestralidade humana exige escolher a Aplicacao extra.");
+          ui.notifications?.warn(
+            "A ancestralidade humana exige escolher a Aplicacao extra.",
+          );
           return false;
         }
-        ui.notifications?.warn("Escolha os 3 tracos iniciais da ancestralidade.");
+        ui.notifications?.warn(
+          "Escolha os 3 tracos iniciais da ancestralidade.",
+        );
         return false;
       case 3:
         if (!summary.backgroundName) {
@@ -1339,18 +1784,24 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
         ui.notifications?.warn("Escolha 2 talentos iniciais da classe.");
         return false;
       case 5:
-        ui.notifications?.warn("Complete a selecao de manobras de acordo com os Eixos.");
+        ui.notifications?.warn(
+          "Complete a selecao de manobras de acordo com os Eixos.",
+        );
         return false;
       case 6:
         if (!summary.classIsCaster) return true;
-        ui.notifications?.warn(`Selecione pelo menos ${summary.minimumInitialSpells} magia inicial para a classe conjuradora.`);
+        ui.notifications?.warn(
+          `Selecione pelo menos ${summary.minimumInitialSpells} magia inicial para a classe conjuradora.`,
+        );
         return false;
       case 7:
         if (!summary.equipmentItems.length) {
           ui.notifications?.warn("Compre ao menos 1 equipamento inicial.");
           return false;
         }
-        ui.notifications?.warn("O total gasto em equipamentos iniciais excede o orcamento.");
+        ui.notifications?.warn(
+          "O total gasto em equipamentos iniciais excede o orcamento.",
+        );
         return false;
       default:
         ui.notifications?.warn("Etapa de criacao incompleta.");
@@ -1359,7 +1810,8 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
   }
 
   async _getPackDocuments(packId) {
-    if (PandorhaActorSheet._packCache.has(packId)) return PandorhaActorSheet._packCache.get(packId);
+    if (PandorhaActorSheet._packCache.has(packId))
+      return PandorhaActorSheet._packCache.get(packId);
     const pack = game.packs?.get(packId);
     if (!pack) return [];
     const docs = await pack.getDocuments();
@@ -1369,13 +1821,15 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
 
   async _pickPackDocument({ packId, title, filterFn }) {
     const docs = await this._getPackDocuments(packId);
-    const filtered = docs.filter(doc => (typeof filterFn === "function" ? filterFn(doc) : true));
+    const filtered = docs.filter((doc) =>
+      typeof filterFn === "function" ? filterFn(doc) : true,
+    );
     if (!filtered.length) {
       ui.notifications?.warn("Nenhuma opcao disponivel para esse filtro.");
       return null;
     }
 
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       let resolved = false;
       const close = (value) => {
         if (resolved) return;
@@ -1384,7 +1838,10 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       };
 
       const options = filtered
-        .map((doc, index) => `<option value="${index}">${foundry.utils.escapeHTML(doc.name)}</option>`)
+        .map(
+          (doc, index) =>
+            `<option value="${index}">${foundry.utils.escapeHTML(doc.name)}</option>`,
+        )
         .join("");
 
       new Dialog({
@@ -1394,26 +1851,26 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
           add: {
             icon: '<i class="fas fa-check"></i>',
             label: "Selecionar",
-            callback: html => {
+            callback: (html) => {
               const index = Number(html.find("select[name='entry']").val());
               close(filtered[index] ?? null);
-            }
+            },
           },
           cancel: {
             icon: '<i class="fas fa-times"></i>',
             label: "Cancelar",
-            callback: () => close(null)
-          }
+            callback: () => close(null),
+          },
         },
         default: "add",
-        close: () => close(null)
+        close: () => close(null),
       }).render(true);
     });
   }
 
   async _pickSimpleOption({ title, options }) {
     if (!options.length) return null;
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       let resolved = false;
       const close = (value) => {
         if (resolved) return;
@@ -1424,7 +1881,9 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
       const optionHtml = options
         .map((option, index) => {
           const label = foundry.utils.escapeHTML(option.label);
-          const description = foundry.utils.escapeHTML(option.description ?? "");
+          const description = foundry.utils.escapeHTML(
+            option.description ?? "",
+          );
           return `<option value="${index}">${label}${description ? ` - ${description}` : ""}</option>`;
         })
         .join("");
@@ -1436,21 +1895,35 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
           add: {
             icon: '<i class="fas fa-check"></i>',
             label: "Selecionar",
-            callback: html => {
+            callback: (html) => {
               const index = Number(html.find("select[name='entry']").val());
               close(options[index]?.value ?? null);
-            }
+            },
           },
           cancel: {
             icon: '<i class="fas fa-times"></i>',
             label: "Cancelar",
-            callback: () => close(null)
-          }
+            callback: () => close(null),
+          },
         },
         default: "add",
-        close: () => close(null)
+        close: () => close(null),
       }).render(true);
     });
+  }
+
+  async _onDropItemCreate(itemData) {
+    const createdItems = await super._onDropItemCreate(itemData);
+    if (!createdItems) return createdItems;
+
+    // Injeta a Característica Primordial no Inventário (Para Ancestralidades soltas na ficha)
+    for (const item of createdItems) {
+      if (item.type === "ancestry") {
+        await this._ensureAncestryCapacity(item);
+      }
+    }
+
+    return createdItems;
   }
 
   async _createItemFromPackDocument(doc, typeOverride = null) {
@@ -1462,35 +1935,99 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(foundry.appli
   }
 
   async _replaceSingleItemFromPack({ doc, type, detailsField }) {
-    const previousIds = this.document.items.filter(item => item.type === type).map(item => item.id);
+    const previousIds = this.document.items
+      .filter((item) => item.type === type)
+      .map((item) => item.id);
     if (previousIds.length) {
       await this.document.deleteEmbeddedDocuments("Item", previousIds);
     }
     const created = await this._createItemFromPackDocument(doc, type);
     if (created) {
-      await this.document.update({ [`system.details.${detailsField}`]: created.name });
+      await this.document.update({
+        [`system.details.${detailsField}`]: created.name,
+      });
+
+      // Injeta a Característica Primordial no Inventário (Para Ancestralidades)
+      if (type === "ancestry") {
+        await this._ensureAncestryCapacity(created);
+      }
     }
     return created;
   }
 
   async _deleteItemsByPredicate(predicate) {
-    const ids = this.document.items.filter(predicate).map(item => item.id);
+    const ids = this.document.items.filter(predicate).map((item) => item.id);
     if (!ids.length) return;
     await this.document.deleteEmbeddedDocuments("Item", ids);
   }
 
   async _ensureClassPassive(className) {
     if (!className) return;
-    const alreadyExists = this.document.items.some(item => this._isClassPassive(item, className));
+    const alreadyExists = this.document.items.some((item) =>
+      this._isClassPassive(item, className),
+    );
     if (alreadyExists) return;
 
     const docs = await this._getPackDocuments("pandorha.class-features");
-    const passive = docs.find(doc => doc.system?.details?.category === `${className} - Passiva`);
+    const passive = docs.find(
+      (doc) => doc.system?.details?.category === `${className} - Passiva`,
+    );
     if (!passive) {
-      ui.notifications?.warn(`Nao encontrei passiva inicial da classe ${className} no compendio.`);
+      ui.notifications?.warn(
+        `Nao encontrei passiva inicial da classe ${className} no compendio.`,
+      );
       return;
     }
     await this._createItemFromPackDocument(passive, "feature");
   }
-}
 
+  async _ensureAncestryCapacity(ancestryItem) {
+    if (!ancestryItem || ancestryItem.type !== "ancestry") return;
+
+    // Remove capacidades antigas baseadas no nome da Ancestralidade
+    const ancestryName = ancestryItem.name.split(" (")[0].trim();
+    const currentCapacities = this.document.items
+      .filter(
+        (i) =>
+          i.type === "feature" &&
+          i.system?.details?.category ===
+            `Capacidade Primordial: ${ancestryName}`,
+      )
+      .map((i) => i.id);
+
+    if (currentCapacities.length) {
+      await this.document.deleteEmbeddedDocuments("Item", currentCapacities);
+    }
+
+    // Procura o padrão: "- **Capacidade Primordial (Nome da Capacidade):** Texto" na descrição
+    const desc = ancestryItem.system?.description || "";
+    const match = desc.match(
+      /- \*\*Capacidade Primordial \(([^)]+)\):\*\*\s*(.*?)<\/p>/i,
+    );
+
+    if (match) {
+      const capacityName = match[1].trim();
+      const capacityDesc = match[2].trim();
+
+      const capacityData = {
+        name: capacityName,
+        type: "feature",
+        img: "icons/svg/book.svg",
+        system: {
+          description: `<p><strong>Capacidade Primordial de ${ancestryName}</strong></p><p>${capacityDesc}</p>`,
+          details: {
+            source: ancestryName,
+            category: `Capacidade Primordial: ${ancestryName}`,
+            requirements: "Nivel 1",
+            tags: ["ancestralidade", "primordial"],
+          },
+        },
+      };
+
+      await this.document.createEmbeddedDocuments("Item", [capacityData]);
+      ui.notifications?.info(
+        `Capacidade Primordial adicionada: ${capacityName}`,
+      );
+    }
+  }
+}
