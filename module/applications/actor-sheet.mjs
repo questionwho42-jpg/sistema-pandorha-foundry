@@ -1595,7 +1595,12 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(
 
     const ancestryProfile = this._getAncestryProfile(ancestryName);
     const ancestryTraits = actor.items
-      .filter((item) => item.type === "trait")
+      .filter(
+        (item) =>
+          item.type === "trait" ||
+          (item.type === "feature" &&
+            item.system?.details?.category?.includes("Capacidade Primordial")),
+      )
       .map(itemToContext);
 
     const backgroundItem = actor.items.find(

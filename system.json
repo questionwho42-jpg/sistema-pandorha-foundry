@@ -2,7 +2,7 @@
   "id": "pandorha",
   "title": "Pandorha",
   "description": "Sistema Pandorha para Foundry VTT.",
-  "version": "0.1.60",
+  "version": "0.1.61",
   "compatibility": {
     "minimum": "13",
     "verified": "13.338",
@@ -22,7 +22,7 @@
       "path": "lang/pt-BR.json"
     }
   ],
-  "initiative": "1d20 + @system.attributes.level + @system.eixos.mental + @system.aplicacoes.interacao",
+  "initiative": "1d20 + @system.derived.initiative",
   "documentTypes": {
     "Actor": {
       "character": {
