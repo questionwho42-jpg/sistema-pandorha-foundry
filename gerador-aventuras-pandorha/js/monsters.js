@@ -1,324 +1,491 @@
 /**
- * MONSTERS.JS — Fórmulas de Combate do Sistema Pandorha
- * Baseado em gerador_monstros_pandorha.py (Decorator Pattern)
+ * MONSTERS.JS — Fichas Completas (Sistema Pandorha — Cap. 13 + 14)
+ * Inclui: HP/CA/Ataque/Dano com dados, Eixos+Aplicações, Passivas oficiais, Ativas com custo de ação
  */
 
 const ForgeMonsters = (() => {
-  const HP_POR_ND = {
-    1: 15,
-    2: 25,
-    3: 40,
-    4: 55,
-    5: 70,
-    6: 90,
-    7: 110,
-    8: 130,
-    9: 155,
-    10: 180,
+  // Tabela Mestra oficial (Cap. 13, Seção 1)
+  const TABELA_MESTRA = {
+    1: {
+      hp: 15,
+      ca: 12,
+      ataque: 3,
+      danoMedio: 5,
+      dc: 12,
+      xp: 1,
+      dadosFis: "1d6+2",
+      dadosMag: "1d10",
+    },
+    2: {
+      hp: 25,
+      ca: 13,
+      ataque: 5,
+      danoMedio: 8,
+      dc: 13,
+      xp: 2,
+      dadosFis: "1d8+3",
+      dadosMag: "2d6",
+    },
+    3: {
+      hp: 40,
+      ca: 14,
+      ataque: 7,
+      danoMedio: 12,
+      dc: 13,
+      xp: 3,
+      dadosFis: "2d6+5",
+      dadosMag: "3d6",
+    },
+    4: {
+      hp: 55,
+      ca: 15,
+      ataque: 9,
+      danoMedio: 16,
+      dc: 14,
+      xp: 4,
+      dadosFis: "2d8+6",
+      dadosMag: "4d6",
+    },
+    5: {
+      hp: 70,
+      ca: 16,
+      ataque: 10,
+      danoMedio: 22,
+      dc: 15,
+      xp: 5,
+      dadosFis: "3d8+8",
+      dadosMag: "6d6",
+    },
+    6: {
+      hp: 90,
+      ca: 17,
+      ataque: 11,
+      danoMedio: 28,
+      dc: 16,
+      xp: 6,
+      dadosFis: "4d8+10",
+      dadosMag: "8d6",
+    },
+    8: {
+      hp: 120,
+      ca: 18,
+      ataque: 14,
+      danoMedio: 35,
+      dc: 17,
+      xp: 8,
+      dadosFis: "4d10+12",
+      dadosMag: "10d6",
+    },
+    10: {
+      hp: 150,
+      ca: 19,
+      ataque: 16,
+      danoMedio: 45,
+      dc: 18,
+      xp: 10,
+      dadosFis: "6d8+15",
+      dadosMag: "12d6",
+    },
   };
-  const PAPEIS = ["Atacante", "Tanque", "Assassino", "Controlador", "Suporte"];
 
-  const MONSTROS_POR_BIOMA = {
+  function _getBase(nd) {
+    if (TABELA_MESTRA[nd]) return { ...TABELA_MESTRA[nd] };
+    const nds = Object.keys(TABELA_MESTRA)
+      .map(Number)
+      .sort((a, b) => a - b);
+    let lower = nds[0],
+      upper = nds[nds.length - 1];
+    for (const n of nds) {
+      if (n <= nd) lower = n;
+      if (n >= nd) {
+        upper = n;
+        break;
+      }
+    }
+    if (lower === upper) return { ...TABELA_MESTRA[lower] };
+    const lo = TABELA_MESTRA[lower],
+      hi = TABELA_MESTRA[upper];
+    const t = (nd - lower) / (upper - lower);
+    return {
+      hp: Math.round(lo.hp + (hi.hp - lo.hp) * t),
+      ca: Math.round(lo.ca + (hi.ca - lo.ca) * t),
+      ataque: Math.round(lo.ataque + (hi.ataque - lo.ataque) * t),
+      danoMedio: Math.round(lo.danoMedio + (hi.danoMedio - lo.danoMedio) * t),
+      dc: Math.round(lo.dc + (hi.dc - lo.dc) * t),
+      xp: nd,
+      dadosFis: lo.dadosFis,
+      dadosMag: lo.dadosMag,
+    };
+  }
+
+  // Ajustes por Papel Tático (Cap. 13, Seção 2)
+  const AJUSTES_PAPEL = {
+    Tanque: {
+      hp: 1.5,
+      ca: -2,
+      ataque: -2,
+      dano: 1.0,
+      descPapel: "🛡️ Tanque — Feito para apanhar e proteger a linha de trás.",
+    },
+    Atacante: {
+      hp: 1.0,
+      ca: 0,
+      ataque: 0,
+      dano: 1.0,
+      descPapel: "⚔️ Atacante — Dano constante e confiável.",
+    },
+    Assassino: {
+      hp: 0.75,
+      ca: 2,
+      ataque: 2,
+      dano: 1.5,
+      descPapel: "🗡️ Assassino — Dano massivo e morre rápido.",
+    },
+    Controlador: {
+      hp: 0.6,
+      ca: 0,
+      ataque: 0,
+      dano: 0.7,
+      descPapel: "🔮 Controlador — Altera o campo e aplica condições.",
+    },
+    Suporte: {
+      hp: 0.8,
+      ca: 0,
+      ataque: -2,
+      dano: 0.5,
+      descPapel: "🩹 Suporte — Fortalece aliados e debuffa inimigos.",
+    },
+    Lacaio: {
+      hp: 0,
+      ca: 0,
+      ataque: 0,
+      dano: 0.5,
+      descPapel:
+        "🐜 Lacaio — HP 1. Morre com qualquer dano. Use 4-5 por jogador.",
+    },
+    Chefe: {
+      hp: 4.0,
+      ca: 0,
+      ataque: 0,
+      dano: 1.0,
+      descPapel: "👑 Chefe — HP x4, Ações Lendárias, Resistência Lendária.",
+    },
+  };
+
+  // Fórmulas de Eixos (Cap. 13, Seção 3)
+  function _calcEixos(nd, perfil) {
+    const forte = Math.floor(nd / 2) + 2;
+    const medio = Math.floor(nd / 4) + 1;
+    const fraco = Math.max(0, Math.floor(nd / 6));
+    const profiles = {
+      fisico: { fisico: forte, mental: medio, social: fraco },
+      mental: { fisico: medio, mental: forte, social: fraco },
+      social: { fisico: fraco, mental: medio, social: forte },
+      bestial: { fisico: forte, mental: fraco, social: -2 },
+    };
+    return profiles[perfil] || profiles.fisico;
+  }
+
+  // Aplicações derivadas (Cap. 13, Seção 3.2)
+  function _calcAplicacoes(eixos, focos) {
+    return {
+      conflito: {
+        valor: eixos.fisico + (focos.includes("conflito") ? 0 : -2),
+        eixo: "Físico",
+      },
+      resistencia: {
+        valor: eixos.fisico + (focos.includes("resistencia") ? 0 : -2),
+        eixo: "Físico",
+      },
+      interacao: {
+        valor: eixos.mental + (focos.includes("interacao") ? 0 : -2),
+        eixo: "Mental",
+      },
+      percepcao: {
+        valor: eixos.mental + (focos.includes("percepcao") ? 0 : -2),
+        eixo: "Mental",
+      },
+      vontade: {
+        valor: eixos.social + (focos.includes("vontade") ? 0 : -2),
+        eixo: "Social",
+      },
+    };
+  }
+
+  // Monstros completos por bioma
+  const BESTIARIO = {
     morden: [
       {
         nome: "Morph de Saturação",
         papel: "Assassino",
-        habilidade:
-          "Chicote Biótico: 1d10+ND dano. Sucesso: +1 Ponto de Síncope no alvo.",
-        comportamento: "Ataca das sombras, foge se isolado.",
+        perfil: "bestial",
+        focos: ["conflito"],
+        descricao:
+          "Criatura biótica que se formou a partir de matéria orgânica corrompida pela seiva da Floresta dos Ecos. Corpo amorfo, músculos de fibra vegetal, e tentáculos que secretam uma substância paralisante. Seus olhos são pontos de luz verde-esmeralda.",
+        comportamento:
+          "Ataca das sombras, focando alvos isolados. Foge se reduzido a 25% HP, escondendo-se nos dutos da ventilação. Nunca luta sozinho — sempre há mais nos dutos.",
+        passivas: [
+          {
+            nome: "Frenesi de Sangue",
+            mecanica: "+2 no Ataque contra alvos com menos de 50% HP.",
+            origem: "Cap.14 #1",
+          },
+          {
+            nome: "Invisibilidade nas Sombras",
+            mecanica:
+              "Em penumbra, pode usar 1 Ação para ficar Invisível até atacar ou ser atacado.",
+            origem: "Cap.14 #50",
+          },
+        ],
+        ativas: [
+          {
+            nome: "Chicote Biótico",
+            custo: "1 Ação",
+            mecanica:
+              "Ataque Melee, alcance 3m. +ATQ. Dano: DADOS + ND dano Ácido. Se acertar: alvo faz Teste de Físico + Resistência DC para escapar ou fica Agarrado.",
+            descricao: "Tentáculo de fibra que envolve o alvo.",
+          },
+          {
+            nome: "Esporos de Síncope",
+            custo: "2 Ações (Recarga 5-6)",
+            mecanica:
+              "Cone 3m. Teste de Físico + Resistência DC. Falha: +1 Ponto de Síncope e Envenenado por 1 rodada.",
+            descricao: "Libera uma nuvem verde de esporos alucinógenos.",
+          },
+        ],
       },
       {
         nome: "Sentinela de Adamante",
         papel: "Tanque",
-        habilidade:
-          "Carapaça Sincronizada: RD 4 contra físico. Investida: 2d8+ND dano.",
-        comportamento: "Protege posição, não persegue.",
+        perfil: "fisico",
+        focos: ["conflito", "resistencia"],
+        descricao:
+          "Construto militar de Morden. 2,5m de altura, revestido de placas de adamante gravadas com runas azuis. Um núcleo rúnico pulsa em seu peito. Não sente dor, não negocia, não para.",
+        comportamento:
+          "Protege uma posição fixa (portão, sala, prisioneiro). Não persegue além de 18m de seu posto. Se 2+ intrusos atacam, prioriza o mais ruidoso. Usa Investida para empurrar invasores para trás.",
+        passivas: [
+          {
+            nome: "Armadura Natural",
+            mecanica:
+              "RD 4 contra dano Cortante, Perfurante e Impacto não-mágico.",
+            origem: "Cap.14 #30",
+          },
+          {
+            nome: "Incansável",
+            mecanica: "Imune a Exaustão, Sono, Veneno e Charme.",
+            origem: "Cap.14 #28",
+          },
+        ],
+        ativas: [
+          {
+            nome: "Investida de Escudo",
+            custo: "2 Ações",
+            mecanica:
+              "Move até 9m em linha reta e ataca. +ATQ. Dano: DADOS. Se acertar: alvo faz Teste de Físico + Resistência DC ou é empurrado 3m e fica Caído.",
+            descricao:
+              "Avança como um aríete, usando o peso completo do corpo.",
+          },
+          {
+            nome: "Punho Pneumático",
+            custo: "1 Ação",
+            mecanica:
+              "Ataque Melee. +ATQ. Dano: DADOS de Impacto. Se crítico: armadura do alvo perde 1 CA (reparo necessário).",
+            descricao: "Golpe do punho mecânico com pressão de vapor.",
+          },
+          {
+            nome: "Provocação Rúnica",
+            custo: "Reação",
+            mecanica:
+              "Quando aliado adjacente é atacado: obriga o atacante a redirecionar o golpe para a Sentinela. Teste de Mental + Resistência DC nega.",
+            descricao: "Runas pulsam e atraem a atenção do agressor.",
+          },
+        ],
       },
       {
         nome: "Sombra de Éter",
         papel: "Controlador",
-        habilidade:
-          "Imaterial: RD 10 contra físico. Drenar Vontade: DC Mental, -1d4 PV.",
-        comportamento: "Evita luz, ataca alvos isolados.",
+        perfil: "mental",
+        focos: ["interacao", "percepcao"],
+        descricao:
+          "Entidade semitransparente que habita o Éter. Aparência de fumaça negra com olhos brancos. Flutua através de paredes. A temperatura cai 10°C quando está próxima.",
+        comportamento:
+          "Evita luz direta (toma 1d6 de dano radiante por turno sob luz solar). Ataca alvos isolados e foge para dentro de paredes. Prefere Drenar Vontade antes de combate físico.",
+        passivas: [
+          {
+            nome: "Imaterial",
+            mecanica:
+              "RD 10 contra dano Cortante, Perfurante e Impacto não-mágico. Pode se mover através de objetos sólidos (sofre 1d10 se terminar o turno dentro).",
+            origem: "Cap.14 #63",
+          },
+          {
+            nome: "Caminhar no Vento",
+            mecanica: "Voa (Levita 3m). Ignora terrenos difíceis.",
+            origem: "Cap.14 #46",
+          },
+        ],
+        ativas: [
+          {
+            nome: "Drenar Vontade",
+            custo: "1 Ação",
+            mecanica:
+              "Alcance 6m. Teste de Mental + Resistência DC. Falha: alvo perde 1d4 Pontos de Vigor e fica Aterrorizado por 1 rodada. A Sombra cura HP igual ao Vigor drenado × 3.",
+            descricao: "Sussurros de desespero invadem a mente do alvo.",
+          },
+          {
+            nome: "Toque Gélido",
+            custo: "1 Ação",
+            mecanica:
+              "Ataque Melee. +ATQ. Dano: DADOS de Frio. Alvo perde Reações até o fim do próximo turno.",
+            descricao: "Drena o calor muscular com um toque espectral.",
+          },
+        ],
       },
       {
         nome: "Autômato de Vapor",
         papel: "Atacante",
-        habilidade:
-          "Punho Pneumático: 2d6+ND dano. Jato de Vapor: cone 3m, 1d8 fogo.",
-        comportamento: "Patrulha rotas fixas, sem inteligência.",
+        perfil: "fisico",
+        focos: ["conflito"],
+        descricao:
+          "Robô industrial reprogramado para combate. 1,8m, pernas hidráulicas, braços com martelos pneumáticos. Placas de ferro com remendos de solda. Olho único rúnico vermelho.",
+        comportamento:
+          "Patrulha rotas fixas de 30m ida e volta. Sem inteligência — ataca qualquer coisa não-autorizada que cruze sua rota. Não persegue fora da rota. Previsível mas letal.",
+        passivas: [
+          {
+            nome: "Incansável",
+            mecanica: "Imune a Exaustão, Sono, Veneno e Charme.",
+            origem: "Cap.14 #28",
+          },
+          {
+            nome: "Visão Noturna",
+            mecanica:
+              "Enxerga no escuro (30m). Ignora penalidade de Cegueira por escuridão.",
+            origem: "Cap.14 #10",
+          },
+        ],
+        ativas: [
+          {
+            nome: "Martelo Hidráulico",
+            custo: "1 Ação",
+            mecanica: "Ataque Melee. +ATQ. Dano: DADOS de Impacto.",
+            descricao: "Golpe de martelo movido a pressão de vapor.",
+          },
+          {
+            nome: "Jato de Vapor",
+            custo: "2 Ações (Recarga 5-6)",
+            mecanica:
+              "Cone 3m. Dano: 2d6 de Fogo. Teste de Físico + Conflito (Esquiva) DC. Falha: dano total e Cego por 1 rodada. Sucesso: metade, sem Cegueira.",
+            descricao: "Libera todo o vapor acumulado num jato quente.",
+          },
+        ],
       },
       {
         nome: "Raiz Senciente",
         papel: "Controlador",
-        habilidade:
-          "Agarrar: teste Físico DC ou imobilizado. Drenar Seiva: 1d6 dano/turno.",
-        comportamento: "Emboscada, espera imóvel até proximidade.",
-      },
-    ],
-    almar: [
-      {
-        nome: "Corsário Veterano",
-        papel: "Atacante",
-        habilidade:
-          "Lâmina Dupla: 2d6+ND dano. Pistola de Pederneira: 1d10 dano à distância.",
-        comportamento: "Agressivo, grita insultos.",
-      },
-      {
-        nome: "Serpente Marítima",
-        papel: "Tanque",
-        habilidade: "Constringir: teste Físico DC ou preso. Escamas: RD 3.",
-        comportamento: "Arrasta vítimas para a água.",
-      },
-      {
-        nome: "Espírito da Maré",
-        papel: "Controlador",
-        habilidade:
-          "Onda: empurra 3m, teste Físico. Neblina: área dificulta visão.",
-        comportamento: "Controla terreno, evita combate direto.",
-      },
-      {
-        nome: "Caranguejo Colossal",
-        papel: "Tanque",
-        habilidade: "Pinça: 2d8+ND, agarra. Carapaça: RD 5 de frente.",
-        comportamento: "Lento mas devastador.",
-      },
-      {
-        nome: "Contrabandista Arcano",
-        papel: "Suporte",
-        habilidade:
-          "Bomba de Fumaça: esconde aliados. Faca Envenenada: 1d6+veneno.",
-        comportamento: "Foge se aliados caem.",
-      },
-    ],
-    cinar: [
-      {
-        nome: "Lobo Espectral",
-        papel: "Assassino",
-        habilidade:
-          "Mordida Fantasma: 1d8+ND, ignora armadura. Uivo: DC Mental ou Assustado.",
-        comportamento: "Ataca em matilha, foca o mais fraco.",
-      },
-      {
-        nome: "Treant Corrompido",
-        papel: "Tanque",
-        habilidade: "Esmagar: 2d10+ND. Raízes: imobiliza em área 3m.",
-        comportamento: "Defende território, não persegue.",
-      },
-      {
-        nome: "Pixie Sombria",
-        papel: "Controlador",
-        habilidade:
-          "Ilusão: DC Mental ou ataca aliado. Invisibilidade: desaparece 1 turno.",
-        comportamento: "Causa caos, nunca luta diretamente.",
-      },
-      {
-        nome: "Urso Fungal",
-        papel: "Atacante",
-        habilidade:
-          "Garras: 2d6+ND. Nuvem de Esporos: cone 3m, DC Resistência ou Envenenado.",
-        comportamento: "Territorial, ataca quem se aproxima.",
-      },
-      {
-        nome: "Dríade Vingativa",
-        papel: "Suporte",
-        habilidade:
-          "Cura Vegetal: 2d8 cura aliado. Espinhos: 1d6 dano reflexivo a quem ataca.",
-        comportamento: "Fica atrás, cura e amaldiçoa.",
-      },
-    ],
-    draskar: [
-      {
-        nome: "Salamandra de Fogo",
-        papel: "Atacante",
-        habilidade: "Baforada: cone 3m, 2d6 fogo. Imune a fogo.",
-        comportamento: "Agressiva, cerca e queima.",
-      },
-      {
-        nome: "Golem de Obsidiana",
-        papel: "Tanque",
-        habilidade:
-          "Punho: 2d10+ND. Corpo Reflexivo: atacantes corpo a corpo sofrem 1d4 cortante.",
-        comportamento: "Guarda portal, não recua.",
-      },
-      {
-        nome: "Wyvern Jovem",
-        papel: "Atacante",
-        habilidade:
-          "Mergulho: 3d6+ND. Ferrão Venenoso: DC Resistência ou Paralisado.",
-        comportamento: "Ataca do alto, retorna ao ar.",
-      },
-      {
-        nome: "Elemental de Magma",
-        papel: "Controlador",
-        habilidade:
-          "Lava: terreno em 3m se torna perigoso. Explosão: 2d8 fogo em área.",
-        comportamento: "Transforma terreno, dificulta fuga.",
-      },
-      {
-        nome: "Orc Forjador",
-        papel: "Suporte",
-        habilidade:
-          "Arma Rúnica: +1d6 dano ao aliado. Grito de Guerra: +2 ataque aliados próximos.",
-        comportamento: "Fica atrás, fortalece outros.",
-      },
-    ],
-    dungard: [
-      {
-        nome: "Aberração do Abismo",
-        papel: "Assassino",
-        habilidade:
-          "Tentáculos: 2d6+ND, alcance 3m. Escuridão: apaga luzes em 6m.",
-        comportamento: "Apaga luzes antes de atacar.",
-      },
-      {
-        nome: "Golem de Cristal",
-        papel: "Tanque",
-        habilidade: "Reflexo Arcano: reflete 50% dano mágico. Punho: 2d8+ND.",
-        comportamento: "Avança lentamente, inabalável.",
-      },
-      {
-        nome: "Verme das Profundezas",
-        papel: "Atacante",
-        habilidade: "Emergir: ataque surpresa 3d6. Ácido: 1d8 contínuo.",
-        comportamento: "Ataca de baixo, desaparece no solo.",
-      },
-      {
-        nome: "Fantasma do Minerador",
-        papel: "Controlador",
-        habilidade:
-          "Possessão: DC Mental ou perde o turno. Grito: DC Mental ou Assustado.",
-        comportamento: "Possui e confunde, odeia luz.",
-      },
-      {
-        nome: "Guardião Rúnico",
-        papel: "Suporte",
-        habilidade: "Escudo Rúnico: +3 CA aliado. Pulso: cura 1d8 construtos.",
-        comportamento: "Protege outros construtos.",
-      },
-    ],
-    floresta_ecos: [
-      {
-        nome: "Morph Alpha",
-        papel: "Atacante",
-        habilidade:
-          "Açoite: 2d8+ND. Grito Sincronizado: convoca 1d4 Morphs menores.",
-        comportamento: "Lidera grupo, recua se sozinho.",
-      },
-      {
-        nome: "Colmeia Ambulante",
-        papel: "Tanque",
-        habilidade:
-          "Enxame: dano em área 3m. Regeneração: 5 HP/turno enquanto na névoa.",
-        comportamento: "Avança sem parar, ignora dor.",
-      },
-      {
-        nome: "Esporo Sentinela",
-        papel: "Controlador",
-        habilidade:
-          "Nuvem: área 6m, DC Resistência ou +1 Síncope. Raiz Rápida: imobiliza.",
-        comportamento: "Estático, defende área-chave.",
-      },
-      {
-        nome: "Predador de Névoa",
-        papel: "Assassino",
-        habilidade:
-          "Camuflar: invisível na névoa. Mordida: 2d10+ND, crítico em 19-20.",
-        comportamento: "Caça isolados, paciente.",
-      },
-      {
-        nome: "Simbionte Curador",
-        papel: "Suporte",
-        habilidade:
-          "Cura Parasita: sacrifica 5 HP para curar aliado 2d8. Esporos Sedantes: DC ou Lento.",
-        comportamento: "Fica grudado num aliado forte.",
-      },
-    ],
-    gorbax: [
-      {
-        nome: "Berserker Orc",
-        papel: "Atacante",
-        habilidade:
-          "Frenesi: +1d6 dano quando abaixo de 50% HP. Machado: 2d8+ND.",
-        comportamento: "Carga total, sem recuo.",
-      },
-      {
-        nome: "Xamã de Totem",
-        papel: "Suporte",
-        habilidade:
-          "Bênção Ancestral: +2 ataque aliados. Raio Espiritual: 2d6 força.",
-        comportamento: "Fica atrás de guerreiros.",
-      },
-      {
-        nome: "Warg Montaria",
-        papel: "Assassino",
-        habilidade:
-          "Salto: +2d6 dano na carga. Derrubar: DC Físico ou Derrubado.",
-        comportamento: "Flanqueia, ataca desprevenidos.",
-      },
-      {
-        nome: "Troll das Montanhas",
-        papel: "Tanque",
-        habilidade:
-          "Regeneração: 5 HP/turno (exceto fogo/ácido). Pedrada: 2d10+ND.",
-        comportamento: "Avança, ignora dano menor.",
-      },
-      {
-        nome: "Águia Gigante",
-        papel: "Controlador",
-        habilidade:
-          "Mergulho: 2d8+ND e agarra. Voo: carrega alvos para o alto.",
-        comportamento: "Agarra e larga de altura.",
+        perfil: "bestial",
+        focos: ["resistencia"],
+        descricao:
+          "Extensão da Floresta dos Ecos que perfurou o adamante de Morden. 3m de comprimento, cor verde-acinzentada, coberta de espinhos e ventosas. Parece inerte até que algo quente passe por perto.",
+        comportamento:
+          "Emboscada pura. Fica imóvel (Mimetismo CD 15) até que um alvo passe a 1,5m. Então Agarra e Drena. Não se move. Se cortada, outra cresce em 1d4 horas.",
+        passivas: [
+          {
+            nome: "Mimetismo (Planta)",
+            mecanica:
+              "Detectá-la exige Teste de Mental + Interação (Percepção) DC 15. Indistinguível de raiz morta enquanto imóvel.",
+            origem: "Cap.14 #4",
+          },
+          {
+            nome: "Vingança Final",
+            mecanica:
+              "Ao morrer, libera nuvem de esporos: 1d4 dano Veneno a todos em 1,5m.",
+            origem: "Cap.14 #8",
+          },
+        ],
+        ativas: [
+          {
+            nome: "Agarrar Parasita",
+            custo: "1 Ação",
+            mecanica:
+              "Alcance 3m. Teste de Físico + Resistência DC. Falha: Agarrado e Imobilizado. Enquanto agarrado, sofre 1d6 de dano Ácido no início de cada turno.",
+            descricao:
+              "Envolve a vítima com tentáculos e começa a se alimentar.",
+          },
+          {
+            nome: "Grito de Alerta",
+            custo: "1 Ação",
+            mecanica:
+              "Emite vibração que alerta outras Raízes a 30m. Reforços chegam em 1d4 rodadas.",
+            descricao:
+              "Pulso sísmico inaudível para humanos, ensurdecedor para outras raízes.",
+          },
+        ],
       },
     ],
   };
 
   /**
-   * Calcula HP base por ND e papel.
-   * @param {number} nd
-   * @param {string} papel
-   * @returns {number}
+   * Gera ficha completa de um monstro.
    */
-  function calcularHP(nd, papel) {
-    let hp = HP_POR_ND[nd] || nd * 15;
-    if (papel === "Tanque") hp = Math.floor(hp * 1.5);
-    if (papel === "Assassino") hp = Math.floor(hp * 0.75);
-    return hp;
-  }
+  function gerarMonstro(cenario, nd, indice) {
+    const pool = BESTIARIO[cenario] || BESTIARIO.morden;
+    const idx =
+      indice !== undefined
+        ? indice % pool.length
+        : Math.floor(Math.random() * pool.length);
+    const template = pool[idx];
+    const base = _getBase(nd);
+    const ajuste = AJUSTES_PAPEL[template.papel] || AJUSTES_PAPEL.Atacante;
 
-  /**
-   * Calcula CA base por ND e papel.
-   * @param {number} nd
-   * @param {string} papel
-   * @returns {number}
-   */
-  function calcularCA(nd, papel) {
-    let ca = 11 + nd;
-    if (papel === "Tanque") ca -= 2;
-    if (papel === "Assassino") ca += 2;
-    return ca;
-  }
+    // Stats ajustados
+    const hp =
+      template.papel === "Lacaio" ? 1 : Math.round(base.hp * ajuste.hp);
+    const ca = base.ca + ajuste.ca;
+    const ataque = base.ataque + ajuste.ataque;
+    const danoMedio = Math.round(base.danoMedio * ajuste.dano);
+    const dc = base.dc;
 
-  /**
-   * Calcula eixos por ND.
-   * @param {number} nd
-   * @returns {Object}
-   */
-  function calcularEixos(nd) {
+    // Eixos e Aplicações
+    const eixos = _calcEixos(nd, template.perfil);
+    const aplicacoes = _calcAplicacoes(eixos, template.focos);
+
+    // Iniciativa = Mental + Interação
+    const iniciativa =
+      eixos.mental + (aplicacoes.interacao.valor - eixos.mental);
+
+    // Processar ativas com valores calculados
+    const ativas = template.ativas.map((a) => {
+      let mec = a.mecanica;
+      mec = mec.replace(/\+ATQ/g, `+${ataque}`);
+      mec = mec.replace(/DADOS/g, base.dadosFis);
+      mec = mec.replace(/ DC(?!\d)/g, ` DC ${dc}`);
+      return { ...a, mecanica: mec };
+    });
+
     return {
-      fisico: Math.floor(nd / 2) + 2,
-      mental: Math.floor(nd / 4) + 1,
-      social: 0,
+      nome: template.nome,
+      nd,
+      papel: template.papel,
+      descPapel: ajuste.descPapel,
+      descricao: template.descricao,
+      comportamento: template.comportamento,
+      hp,
+      ca,
+      ataque: `+${ataque}`,
+      danoMedio,
+      dadosDano: base.dadosFis,
+      dc,
+      xp: base.xp,
+      eixos,
+      aplicacoes,
+      iniciativa: `+${Math.max(0, iniciativa)}`,
+      vigor: Math.max(1, Math.floor(nd / 2) + 2),
+      ee: Math.max(1, Math.floor(nd * 1.5) + 2),
+      passivas: template.passivas,
+      ativas,
+      velocidade: "9m (6 casas)",
     };
   }
 
-  /**
-   * Determina o ND apropriado para um encontro.
-   * @param {number} tier
-   * @param {string} dificuldade
-   * @param {number} jogadores
-   * @returns {{ nd: number, quantidade: number }}
-   */
   function calcularEncontro(tier, dificuldade, jogadores) {
     const ndBase = { 1: 1, 2: 3, 3: 5, 4: 8 }[tier] || 1;
     const mult =
@@ -329,41 +496,28 @@ const ForgeMonsters = (() => {
     return { nd, quantidade: qtd };
   }
 
-  /**
-   * Gera ficha completa de um monstro.
-   * @param {string} cenario
-   * @param {number} nd
-   * @param {number} [indice]
-   * @returns {Object}
-   */
-  function gerarMonstro(cenario, nd, indice) {
-    const pool = MONSTROS_POR_BIOMA[cenario] || MONSTROS_POR_BIOMA.morden;
-    const idx =
-      indice !== undefined
-        ? indice % pool.length
-        : Math.floor(Math.random() * pool.length);
-    const template = pool[idx];
-    return {
-      nome: template.nome,
-      nd,
-      papel: template.papel,
-      hp: calcularHP(nd, template.papel),
-      ca: calcularCA(nd, template.papel),
-      eixos: calcularEixos(nd),
-      ee: Math.floor(nd * 2) + 2,
-      vigor: Math.floor(nd / 2) + 2,
-      habilidade: template.habilidade,
-      comportamento: template.comportamento,
-    };
+  /** API auxiliar para NPCs — usa mesmas fórmulas internas */
+  function calcularHP(nd, papel) {
+    const base = _getBase(nd);
+    const ajuste = AJUSTES_PAPEL[papel] || AJUSTES_PAPEL.Atacante;
+    return Math.round(base.hp * ajuste.hp);
+  }
+  function calcularCA(nd, papel) {
+    const base = _getBase(nd);
+    const ajuste = AJUSTES_PAPEL[papel] || AJUSTES_PAPEL.Atacante;
+    return base.ca + ajuste.ca;
+  }
+  function calcularEixos(nd) {
+    return _calcEixos(nd, "fisico");
   }
 
   return {
+    gerarMonstro,
+    calcularEncontro,
     calcularHP,
     calcularCA,
     calcularEixos,
-    calcularEncontro,
-    gerarMonstro,
-    MONSTROS_POR_BIOMA,
-    PAPEIS,
+    BESTIARIO,
+    TABELA_MESTRA,
   };
 })();

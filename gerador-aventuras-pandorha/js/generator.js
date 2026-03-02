@@ -548,14 +548,7 @@ const ForgeGenerator = (() => {
           ? narr.capitulos[i].cenas.map((c, ci) =>
               _enriquecerCena(c, ci, av, ndCap, cenarioData),
             )
-          : NARRATIVA_GENERICA.cenas(
-              cenarioData || {
-                nome: av.cenario,
-                atmosfera: { inicio: {}, meio: {}, climax: {} },
-              },
-              ndCap,
-              dcBase,
-            );
+          : _gerarCenasGenericas(av, ndCap, dcBase, cenarioData);
 
       av.capitulos.push({
         numero: i + 1,
@@ -570,6 +563,37 @@ const ForgeGenerator = (() => {
         recompensa: _gerarRecompensa(av.tier, i),
       });
     }
+  }
+
+  function _gerarCenasGenericas(av, nd, dcBase, cenarioData) {
+    const cd = cenarioData || {
+      nome: av.cenario,
+      atmosfera: {
+        inicio: { visao: "", cheiro: "O ambiente" },
+        meio: { visao: "" },
+        climax: {},
+      },
+    };
+    const baseCenas = NARRATIVA_GENERICA.cenas(cd, nd, dcBase);
+
+    // Cena 2 (O Covil) — adicionar monstros
+    const { quantidade } = ForgeMonsters.calcularEncontro(
+      av.tier,
+      av.dificuldade,
+      av.jogadores,
+    );
+    const monstros = [];
+    for (let m = 0; m < quantidade; m++)
+      monstros.push(ForgeMonsters.gerarMonstro(av.cenario, nd, m));
+    baseCenas[1].monstros = monstros;
+    baseCenas[1].mecanicaCenario = cenarioData
+      ? ForgeTables.random(cenarioData.mecanicasCenario)
+      : "Terreno difícil em área aleatória";
+
+    // Cena 3 (A Verdade) — adicionar dilema
+    baseCenas[2].dilema = ForgeTables.random(ForgeTables.DILEMAS);
+
+    return baseCenas;
   }
 
   function _enriquecerCena(cena, idx, av, nd, cenarioData) {
@@ -797,13 +821,9 @@ const ForgeGenerator = (() => {
           html += "<h4>⚔️ Encontro</h4>";
           if (cena.mecanicaCenario)
             html += `<p><em>🏗️ Mecânica de Cenário: ${cena.mecanicaCenario}</em></p>`;
-          html +=
-            "<table><thead><tr><th>Monstro</th><th>ND</th><th>HP</th><th>CA</th><th>Habilidade</th><th>Comportamento</th></tr></thead><tbody>";
-          cena.monstros.forEach(
-            (m) =>
-              (html += `<tr><td><strong>${m.nome}</strong> (${m.papel})</td><td>${m.nd}</td><td>${m.hp}</td><td>${m.ca}</td><td>${m.habilidade}</td><td><em>${m.comportamento}</em></td></tr>`),
-          );
-          html += "</tbody></table>";
+          cena.monstros.forEach((m) => {
+            html += _fichaComletaMonstro(m);
+          });
         }
 
         if (cena.dilema) {
@@ -849,11 +869,18 @@ const ForgeGenerator = (() => {
     // NPCs
     html += "<h2>👥 Personagens</h2>";
     av.npcs.forEach((npc) => {
-      html += `<h3>${npc.nome} <span style="color:var(--color-text-muted)">(${npc.tipo})</span></h3>`;
+      const e = npc.stats.eixos;
+      html += `<div style="border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.5rem;margin:1rem 0;background:var(--color-bg-card)">`;
+      html += `<h3 style="margin-top:0">${npc.nome} <span style="color:var(--color-text-muted)">(${npc.tipo})</span></h3>`;
       html += `<p><em>${npc.descricaoFisica}</em></p>`;
+      html +=
+        "<table><thead><tr><th>ND</th><th>HP</th><th>CA</th><th>Físico</th><th>Mental</th><th>Social</th><th>Iniciativa</th></tr></thead><tbody>";
+      html += `<tr><td>${npc.stats.nd}</td><td>${npc.stats.hp}</td><td>${npc.stats.ca}</td><td>+${e.fisico}</td><td>+${e.mental}</td><td>+${e.social || 0}</td><td>+${Math.max(0, e.mental)}</td></tr>`;
+      html += "</tbody></table>";
+      html += "<h4>🎭 Motivação</h4>";
       html += `<ul><li><strong>Desejo:</strong> ${npc.desejo}</li><li><strong>Medo:</strong> ${npc.medo}</li><li><strong>Segredo:</strong> ${npc.segredo}</li></ul>`;
-      html += `<p>💬 ${npc.falaIconica}</p>`;
-      html += `<p><em>ND ${npc.stats.nd} | HP ${npc.stats.hp} | CA ${npc.stats.ca} | Físico ${npc.stats.eixos.fisico} | Mental ${npc.stats.eixos.mental}</em></p>`;
+      html += `<p>💬 <em>"${npc.falaIconica}"</em></p>`;
+      html += "</div>";
     });
 
     return html;
@@ -881,19 +908,37 @@ const ForgeGenerator = (() => {
         if (cena.teste)
           md += `**Teste:** ${cena.teste.eixo} + ${cena.teste.pericia} DC ${cena.teste.dc}\n- ✅ **Sucesso:** ${cena.teste.sucesso}\n- ❌ **Falha:** ${cena.teste.falha}\n\n`;
         if (cena.monstros)
-          cena.monstros.forEach(
-            (m) =>
-              (md += `**${m.nome}** (${m.papel}, ND ${m.nd}) — HP ${m.hp} | CA ${m.ca}\n${m.habilidade}\n*${m.comportamento}*\n\n`),
-          );
+          cena.monstros.forEach((m) => {
+            md += `#### ${m.nome} (${m.papel}, ND ${m.nd})\n`;
+            md += `*${m.descricao}*\n\n`;
+            md += `| HP | CA | Ataque | Dano | DC | Iniciativa | Vigor |\n`;
+            md += `|:--:|:--:|:------:|:----:|:--:|:---------:|:-----:|\n`;
+            md += `| ${m.hp} | ${m.ca} | ${m.ataque} | ${m.dadosDano} | ${m.dc} | ${m.iniciativa} | ${m.vigor} |\n\n`;
+            md += `| Físico | Mental | Social |\n|:------:|:------:|:------:|\n| +${m.eixos.fisico} | +${m.eixos.mental} | +${m.eixos.social || 0} |\n\n`;
+            if (m.passivas)
+              m.passivas.forEach(
+                (p) => (md += `- **${p.nome}:** ${p.mecanica}\n`),
+              );
+            if (m.ativas)
+              m.ativas.forEach(
+                (a) => (md += `- **[${a.custo}] ${a.nome}:** ${a.mecanica}\n`),
+              );
+            md += `\n**Comportamento:** *${m.comportamento}*\n\n`;
+          });
         if (cena.dilema)
           md += `#### ⚖️ ${cena.dilema.titulo}\n- A) **${cena.dilema.opcaoA.nome}:** ${cena.dilema.opcaoA.efeito}\n- B) **${cena.dilema.opcaoB.nome}:** ${cena.dilema.opcaoB.efeito}\n\n`;
       });
       md += `**🎁 Recompensa:** ${cap.recompensa}\n\n---\n\n`;
     });
-    av.npcs.forEach(
-      (npc) =>
-        (md += `### ${npc.nome} (${npc.tipo})\n*${npc.descricaoFisica}*\n- **Desejo:** ${npc.desejo}\n- **Medo:** ${npc.medo}\n- **Segredo:** ${npc.segredo}\n- 💬 ${npc.falaIconica}\n- ND ${npc.stats.nd} | HP ${npc.stats.hp} | CA ${npc.stats.ca}\n\n`),
-    );
+    md += "## 👥 Personagens\n\n";
+    av.npcs.forEach((npc) => {
+      const e = npc.stats.eixos;
+      md += `### ${npc.nome} (${npc.tipo})\n*${npc.descricaoFisica}*\n\n`;
+      md += `| ND | HP | CA | Físico | Mental | Social | Iniciativa |\n`;
+      md += `|:--:|:--:|:--:|:------:|:------:|:------:|:---------:|\n`;
+      md += `| ${npc.stats.nd} | ${npc.stats.hp} | ${npc.stats.ca} | +${e.fisico} | +${e.mental} | +${e.social || 0} | +${Math.max(0, e.mental)} |\n\n`;
+      md += `- **Desejo:** ${npc.desejo}\n- **Medo:** ${npc.medo}\n- **Segredo:** ${npc.segredo}\n- 💬 *"${npc.falaIconica}"*\n\n`;
+    });
     return md;
   }
 
@@ -911,6 +956,53 @@ const ForgeGenerator = (() => {
       `Relíquia do cenário e título honorário`,
     ];
     return r[capIdx] || r[0];
+  }
+
+  function _fichaComletaMonstro(m) {
+    let h = "";
+    h += `<div style="border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.5rem;margin:1rem 0;background:var(--color-bg-card)">`;
+    h += `<h4 style="margin-top:0">${m.nome} <span style="color:var(--color-text-muted)">(${m.papel}) — ND ${m.nd}</span></h4>`;
+    h += `<p><em>${m.descPapel}</em></p>`;
+    h += `<p>${m.descricao}</p>`;
+
+    // Stats base
+    h +=
+      "<table><thead><tr><th>HP</th><th>CA</th><th>Ataque</th><th>Dano</th><th>DC</th><th>Iniciativa</th><th>Vigor</th><th>EE</th><th>Velocidade</th><th>XP</th></tr></thead><tbody>";
+    h += `<tr><td><strong>${m.hp}</strong></td><td><strong>${m.ca}</strong></td><td>${m.ataque}</td><td>${m.dadosDano}</td><td>${m.dc}</td><td>${m.iniciativa}</td><td>${m.vigor}</td><td>${m.ee}</td><td>${m.velocidade}</td><td>${m.xp}</td></tr>`;
+    h += "</tbody></table>";
+
+    // Eixos + Aplicações
+    h +=
+      "<table><thead><tr><th>Eixo</th><th>Valor</th><th>Aplicação Focada</th><th>Aplicação Não-Focada</th></tr></thead><tbody>";
+    h += `<tr><td><strong>Físico</strong></td><td>+${m.eixos.fisico}</td><td>Conflito +${Math.max(0, m.aplicacoes.conflito.valor)}</td><td>Resistência +${Math.max(0, m.aplicacoes.resistencia.valor)}</td></tr>`;
+    h += `<tr><td><strong>Mental</strong></td><td>+${m.eixos.mental}</td><td>Interação +${Math.max(0, m.aplicacoes.interacao.valor)}</td><td>Percepção +${Math.max(0, m.aplicacoes.percepcao.valor)}</td></tr>`;
+    h += `<tr><td><strong>Social</strong></td><td>+${m.eixos.social || 0}</td><td colspan="2">Vontade +${Math.max(0, m.aplicacoes.vontade.valor)}</td></tr>`;
+    h += "</tbody></table>";
+
+    // Passivas
+    if (m.passivas && m.passivas.length) {
+      h += "<h5>🔹 Passivas</h5><ul>";
+      m.passivas.forEach(
+        (p) =>
+          (h += `<li><strong>${p.nome}:</strong> ${p.mecanica} <em>(${p.origem})</em></li>`),
+      );
+      h += "</ul>";
+    }
+
+    // Ativas
+    if (m.ativas && m.ativas.length) {
+      h += "<h5>🔸 Ativas</h5><ul>";
+      m.ativas.forEach(
+        (a) =>
+          (h += `<li><strong>[${a.custo}] ${a.nome}:</strong> ${a.mecanica}<br><em>${a.descricao}</em></li>`),
+      );
+      h += "</ul>";
+    }
+
+    // Comportamento
+    h += `<p>🧠 <strong>Comportamento Tático:</strong> <em>${m.comportamento}</em></p>`;
+    h += "</div>";
+    return h;
   }
 
   return { forjar, toHTML, toMarkdown };
