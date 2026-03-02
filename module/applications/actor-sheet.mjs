@@ -2002,7 +2002,7 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(
     // Procura o padrão: "- **Capacidade Primordial (Nome da Capacidade):** Texto" na descrição
     const desc = ancestryItem.system?.description || "";
     const match = desc.match(
-      /- \*\*Capacidade Primordial \(([^)]+)\):\*\*\s*(.*?)<\/p>/i,
+      /- \*\*Capacidade Primordial \(([^)]+)\):\*\*\s*([\s\S]*?)<\/p>/i,
     );
 
     if (match) {
