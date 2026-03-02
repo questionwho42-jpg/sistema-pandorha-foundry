@@ -617,6 +617,107 @@ const ForgeGenerator = (() => {
     return cena;
   }
 
+  // Habilidades temáticas por tipo de NPC
+  const HABILIDADES_NPC = {
+    mentor: {
+      perfil: "mental",
+      focos: ["interacao", "percepcao"],
+      passivas: [
+        {
+          nome: "Olhos de Experiência",
+          mecanica:
+            "Vantagem em testes de Mental + Interação (Percepção) para detectar mentiras e emboscadas.",
+        },
+        {
+          nome: "Autoridade Natural",
+          mecanica:
+            "Aliados a 6m ganham +1 em testes de Mental + Resistência contra Medo e Charme.",
+        },
+      ],
+      ativas: [
+        {
+          nome: "Conselho Sábio",
+          custo: "1 Ação",
+          mecanica:
+            "1× por cena: um aliado a 9m pode rerolar um teste falhado.",
+          descricao:
+            "Palavras precisas no momento certo, fruto de décadas de experiência.",
+        },
+        {
+          nome: "Golpe Contido",
+          custo: "1 Ação",
+          mecanica:
+            "Ataque Melee. +ATQ. Dano: DADOS. Pode optar por dano não-letal.",
+          descricao: "Golpe medido — ensina uma lição sem matar.",
+        },
+      ],
+    },
+    rival: {
+      perfil: "fisico",
+      focos: ["conflito", "resistencia"],
+      passivas: [
+        {
+          nome: "Determinação Implacável",
+          mecanica:
+            "1× por cena: ao cair a 0 HP, volta com 1 HP e faz um ataque gratuito.",
+        },
+        {
+          nome: "Presença Intimidadora",
+          mecanica:
+            "Inimigos a 3m sofrem -1 em testes de ataque contra o rival (aura de pressão).",
+        },
+      ],
+      ativas: [
+        {
+          nome: "Golpe Decisivo",
+          custo: "2 Ações",
+          mecanica:
+            "Ataque Melee. +ATQ+2. Dano: DADOS + ND extra. Se crítico: alvo fica Atordoado por 1 rodada.",
+          descricao: "Golpe com toda a força, concentrado num único ponto.",
+        },
+        {
+          nome: "Provocação",
+          custo: "1 Ação",
+          mecanica:
+            "Alvo a 9m faz Teste de Mental + Resistência DC. Falha: obrigado a atacar o rival no próximo turno.",
+          descricao: "Insulto preciso que atinge onde dói.",
+        },
+      ],
+    },
+    aliado: {
+      perfil: "social",
+      focos: ["interacao", "vontade"],
+      passivas: [
+        {
+          nome: "Rede de Contatos",
+          mecanica:
+            "Vantagem em testes de Social + Interação para obter informações e favores em áreas urbanas.",
+        },
+        {
+          nome: "Presença Reconfortante",
+          mecanica:
+            "Aliados a 6m recuperam +2 Vigor extra em Descansos Curtos.",
+        },
+      ],
+      ativas: [
+        {
+          nome: "Palavras de Encorajamento",
+          custo: "1 Ação",
+          mecanica:
+            "Aliado a 9m ganha HP Temporário igual a 1d6 + ND do aliado. Dura até o fim da cena.",
+          descricao: "Discurso motivacional que reacende a chama interior.",
+        },
+        {
+          nome: "Negociação Rápida",
+          custo: "1 Ação",
+          mecanica:
+            "Teste de Social + Interação DC. Sucesso: inimigo inteligente hesita e perde 1 Ação no próximo turno.",
+          descricao: "Oferta ou blefe que faz o oponente pensar duas vezes.",
+        },
+      ],
+    },
+  };
+
   function _gerarNpcs(av) {
     const qtd = { oneshot: 6, mini: 10, campanha: 15 }[av.duracao] || 6;
     const nomes =
@@ -630,6 +731,64 @@ const ForgeGenerator = (() => {
       const tipo = tipos[i % tipos.length];
       const motivacao = ForgeTables.random(ForgeTables.MOTIVACOES);
       const nd = Math.max(1, av.tier + Math.floor(i / 3));
+      const hab = HABILIDADES_NPC[tipo];
+      const base =
+        ForgeMonsters.TABELA_MESTRA[nd] || ForgeMonsters.TABELA_MESTRA[1];
+      const eixos = ForgeMonsters.calcularEixos(nd);
+
+      // Recalcular eixos com perfil do NPC
+      const forte = Math.floor(nd / 2) + 2;
+      const medio = Math.floor(nd / 4) + 1;
+      const fraco = Math.max(0, Math.floor(nd / 6));
+      const eixosNpc =
+        hab.perfil === "mental"
+          ? { fisico: medio, mental: forte, social: fraco }
+          : hab.perfil === "social"
+            ? { fisico: fraco, mental: medio, social: forte }
+            : { fisico: forte, mental: medio, social: fraco };
+
+      // Aplicações
+      const aplicacoes = {
+        conflito: {
+          valor: eixosNpc.fisico + (hab.focos.includes("conflito") ? 0 : -2),
+          eixo: "Físico",
+        },
+        resistencia: {
+          valor: eixosNpc.fisico + (hab.focos.includes("resistencia") ? 0 : -2),
+          eixo: "Físico",
+        },
+        interacao: {
+          valor: eixosNpc.mental + (hab.focos.includes("interacao") ? 0 : -2),
+          eixo: "Mental",
+        },
+        percepcao: {
+          valor: eixosNpc.mental + (hab.focos.includes("percepcao") ? 0 : -2),
+          eixo: "Mental",
+        },
+        vontade: {
+          valor: eixosNpc.social + (hab.focos.includes("vontade") ? 0 : -2),
+          eixo: "Social",
+        },
+      };
+
+      const hp = ForgeMonsters.calcularHP(nd, "Atacante");
+      const ca = ForgeMonsters.calcularCA(nd, "Atacante");
+      const ataque = base.ataque || 3;
+      const dc = base.dc || 12;
+      const iniciativa =
+        eixosNpc.mental +
+        Math.max(0, aplicacoes.interacao.valor - eixosNpc.mental);
+
+      // Processar ativas com valores calculados
+      const ativas = hab.ativas.map((a) => {
+        let mec = a.mecanica;
+        mec = mec.replace(/\+ATQ/g, `+${ataque}`);
+        mec = mec.replace(/DADOS/g, base.dadosFis || "1d6+2");
+        mec = mec.replace(/ DC(?!\d)/g, ` DC ${dc}`);
+        mec = mec.replace(/ND/g, `${nd}`);
+        return { ...a, mecanica: mec };
+      });
+
       av.npcs.push({
         nome,
         tipo,
@@ -640,9 +799,19 @@ const ForgeGenerator = (() => {
         falaIconica: ForgeTables.random(ForgeTables.DIALOGOS_POR_TIPO[tipo]),
         stats: {
           nd,
-          hp: ForgeMonsters.calcularHP(nd, "Atacante"),
-          ca: ForgeMonsters.calcularCA(nd, "Atacante"),
-          eixos: ForgeMonsters.calcularEixos(nd),
+          hp,
+          ca,
+          ataque: `+${ataque}`,
+          dadosDano: base.dadosFis || "1d6+2",
+          dc,
+          eixos: eixosNpc,
+          aplicacoes,
+          iniciativa: `+${Math.max(0, iniciativa)}`,
+          vigor: Math.max(1, Math.floor(nd / 2) + 2),
+          ee: Math.max(1, Math.floor(nd * 1.5) + 2),
+          velocidade: "9m (6 casas)",
+          passivas: hab.passivas,
+          ativas,
         },
       });
     });
@@ -866,23 +1035,40 @@ const ForgeGenerator = (() => {
       html += "</tbody></table>";
     }
 
-    // NPCs
-    html += "<h2>👥 Personagens</h2>";
+    // NPCs — Fichas Completas
+    html += "<h2>\u{1F465} Personagens</h2>";
     av.npcs.forEach((npc) => {
-      const e = npc.stats.eixos;
+      const s = npc.stats;
+      const e = s.eixos;
+      const ap = s.aplicacoes;
       html += `<div style="border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:1.5rem;margin:1rem 0;background:var(--color-bg-card)">`;
-      html += `<h3 style="margin-top:0">${npc.nome} <span style="color:var(--color-text-muted)">(${npc.tipo})</span></h3>`;
+      html += `<h3 style="margin-top:0">${npc.nome} <span style="color:var(--color-text-muted)">(${npc.tipo}) \u2014 ND ${s.nd}</span></h3>`;
       html += `<p><em>${npc.descricaoFisica}</em></p>`;
-      html +=
-        "<table><thead><tr><th>ND</th><th>HP</th><th>CA</th><th>Físico</th><th>Mental</th><th>Social</th><th>Iniciativa</th></tr></thead><tbody>";
-      html += `<tr><td>${npc.stats.nd}</td><td>${npc.stats.hp}</td><td>${npc.stats.ca}</td><td>+${e.fisico}</td><td>+${e.mental}</td><td>+${e.social || 0}</td><td>+${Math.max(0, e.mental)}</td></tr>`;
-      html += "</tbody></table>";
-      html += "<h4>🎭 Motivação</h4>";
+      html += '<table><thead><tr><th>HP</th><th>CA</th><th>Ataque</th><th>Dano</th><th>DC</th><th>Iniciativa</th><th>Vigor</th><th>EE</th><th>Velocidade</th></tr></thead><tbody>';
+      html += `<tr><td><strong>${s.hp}</strong></td><td><strong>${s.ca}</strong></td><td>${s.ataque}</td><td>${s.dadosDano}</td><td>${s.dc}</td><td>${s.iniciativa}</td><td>${s.vigor}</td><td>${s.ee}</td><td>${s.velocidade}</td></tr>`;
+      html += '</tbody></table>';
+      if (ap) {
+        html += '<table><thead><tr><th>Eixo</th><th>Valor</th><th>Aplica\u00E7\u00E3o Focada</th><th>Aplica\u00E7\u00E3o N\u00E3o-Focada</th></tr></thead><tbody>';
+        html += `<tr><td><strong>F\u00EDsico</strong></td><td>+${e.fisico}</td><td>Conflito +${Math.max(0,ap.conflito.valor)}</td><td>Resist\u00EAncia +${Math.max(0,ap.resistencia.valor)}</td></tr>`;
+        html += `<tr><td><strong>Mental</strong></td><td>+${e.mental}</td><td>Intera\u00E7\u00E3o +${Math.max(0,ap.interacao.valor)}</td><td>Percep\u00E7\u00E3o +${Math.max(0,ap.percepcao.valor)}</td></tr>`;
+        html += `<tr><td><strong>Social</strong></td><td>+${e.social || 0}</td><td colspan="2">Vontade +${Math.max(0,ap.vontade.valor)}</td></tr>`;
+        html += '</tbody></table>';
+      }
+      if (s.passivas && s.passivas.length) {
+        html += '<h4>\u{1F539} Passivas</h4><ul>';
+        s.passivas.forEach(p => html += `<li><strong>${p.nome}:</strong> ${p.mecanica}</li>`);
+        html += '</ul>';
+      }
+      if (s.ativas && s.ativas.length) {
+        html += '<h4>\u{1F538} Ativas</h4><ul>';
+        s.ativas.forEach(a => html += `<li><strong>[${a.custo}] ${a.nome}:</strong> ${a.mecanica}<br><em>${a.descricao}</em></li>`);
+        html += '</ul>';
+      }
+      html += '<h4>\u{1F3AD} Motiva\u00E7\u00E3o</h4>';
       html += `<ul><li><strong>Desejo:</strong> ${npc.desejo}</li><li><strong>Medo:</strong> ${npc.medo}</li><li><strong>Segredo:</strong> ${npc.segredo}</li></ul>`;
-      html += `<p>💬 <em>"${npc.falaIconica}"</em></p>`;
-      html += "</div>";
+      html += `<p>\u{1F4AC} <em>"${npc.falaIconica}"</em></p>`;
+      html += '</div>';
     });
-
     return html;
   }
 
@@ -930,14 +1116,24 @@ const ForgeGenerator = (() => {
       });
       md += `**🎁 Recompensa:** ${cap.recompensa}\n\n---\n\n`;
     });
-    md += "## 👥 Personagens\n\n";
-    av.npcs.forEach((npc) => {
-      const e = npc.stats.eixos;
-      md += `### ${npc.nome} (${npc.tipo})\n*${npc.descricaoFisica}*\n\n`;
-      md += `| ND | HP | CA | Físico | Mental | Social | Iniciativa |\n`;
-      md += `|:--:|:--:|:--:|:------:|:------:|:------:|:---------:|\n`;
-      md += `| ${npc.stats.nd} | ${npc.stats.hp} | ${npc.stats.ca} | +${e.fisico} | +${e.mental} | +${e.social || 0} | +${Math.max(0, e.mental)} |\n\n`;
-      md += `- **Desejo:** ${npc.desejo}\n- **Medo:** ${npc.medo}\n- **Segredo:** ${npc.segredo}\n- 💬 *"${npc.falaIconica}"*\n\n`;
+    md += '## \u{1F465} Personagens\n\n';
+    av.npcs.forEach(npc => {
+      const s = npc.stats;
+      const e = s.eixos;
+      const ap = s.aplicacoes;
+      md += `### ${npc.nome} (${npc.tipo}) \u2014 ND ${s.nd}\n*${npc.descricaoFisica}*\n\n`;
+      md += `| HP | CA | Ataque | Dano | DC | Iniciativa | Vigor | EE | Velocidade |\n`;
+      md += `|:--:|:--:|:------:|:----:|:--:|:---------:|:-----:|:--:|:----------:|\n`;
+      md += `| ${s.hp} | ${s.ca} | ${s.ataque} | ${s.dadosDano} | ${s.dc} | ${s.iniciativa} | ${s.vigor} | ${s.ee} | ${s.velocidade} |\n\n`;
+      if (ap) {
+        md += `| Eixo | Valor | Foco 1 | Foco 2 |\n|:----:|:-----:|:------:|:------:|\n`;
+        md += `| F\u00EDsico | +${e.fisico} | Conflito +${Math.max(0,ap.conflito.valor)} | Resist\u00EAncia +${Math.max(0,ap.resistencia.valor)} |\n`;
+        md += `| Mental | +${e.mental} | Intera\u00E7\u00E3o +${Math.max(0,ap.interacao.valor)} | Percep\u00E7\u00E3o +${Math.max(0,ap.percepcao.valor)} |\n`;
+        md += `| Social | +${e.social || 0} | Vontade +${Math.max(0,ap.vontade.valor)} | \u2014 |\n\n`;
+      }
+      if (s.passivas) s.passivas.forEach(p => md += `- **${p.nome}:** ${p.mecanica}\n`);
+      if (s.ativas) s.ativas.forEach(a => md += `- **[${a.custo}] ${a.nome}:** ${a.mecanica}\n`);
+      md += `\n- **Desejo:** ${npc.desejo}\n- **Medo:** ${npc.medo}\n- **Segredo:** ${npc.segredo}\n- \u{1F4AC} *"${npc.falaIconica}"*\n\n---\n\n`;
     });
     return md;
   }
