@@ -77,23 +77,6 @@ export function getActorAutomation(actor) {
   for (const item of actor.items ?? []) {
     if (!isItemActiveForAutomation(item)) continue;
     const itemAutomation = parseItemAutomation(item);
-    if (itemAutomation.testBonus !== 0) {
-      console.warn(
-        `[Pandorha DEBUG] Item "${item.name}" (${item.type}) → testBonus = ${itemAutomation.testBonus}`,
-      );
-      const rawText = [
-        item?.system?.effect,
-        item?.system?.description,
-        item?.system?.rune?.effects,
-        item?.system?.details?.requirements,
-      ]
-        .filter(Boolean)
-        .join("\n");
-      console.warn(
-        `[Pandorha DEBUG] Texto bruto (primeiros 300 chars):`,
-        rawText.substring(0, 300),
-      );
-    }
     mergeAutomation(automation, itemAutomation);
   }
 
@@ -200,10 +183,11 @@ function parseItemAutomation(item) {
     /(?:movimento|deslocamento|velocidade)[^+\-\n]{0,16}([+\-]\s*\d+)\s*(?:m|metros?)?/gi,
   ]);
 
-  result.testBonus += collectSigned(text, [
-    /([+\-]\s*\d+)\s*(?:de\s*)?(?:bonus|penalidade)?\s*em\s*testes(?: globais)?\b/gi,
-    /\btestes(?: globais)?\b[^\w+\-\n]{0,16}([+\-]\s*\d+)/gi,
-  ]);
+  if (!["ancestry", "background", "class"].includes(item.type)) {
+    result.testBonus += collectSigned(text, [
+      /([+\-]\s*\d+)\s*(?:de\s*)?(?:bonus|penalidade)?\s*em\s*testes(?: globais)?(?!\s+(?:contra|de\b|para\b|quando|que\b|sobre|relacionad|voltad|envolv))\b/gi,
+    ]);
+  }
 
   result.resources.hp += collectSigned(text, [
     /([+\-]\s*\d+)\s*(?:hp|vida)\s*(?:max(?:imo|ima)?)\b/gi,
