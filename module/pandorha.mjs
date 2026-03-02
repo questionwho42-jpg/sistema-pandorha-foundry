@@ -1,6 +1,5 @@
 import { PandorhaActor } from "./documents/actor.mjs";
 import { PandorhaItem } from "./documents/item.mjs";
-import "../scripts/monks-tokenbar-integration.mjs";
 import { PandorhaActorSheet } from "./applications/actor-sheet.mjs";
 import { PandorhaItemSheet } from "./applications/item-sheet.mjs";
 import { PandorhaQuickbar } from "./applications/quickbar.mjs";

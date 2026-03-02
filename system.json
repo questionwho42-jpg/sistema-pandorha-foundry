@@ -2,18 +2,17 @@
   "id": "pandorha",
   "title": "Pandorha",
   "description": "Sistema Pandorha para Foundry VTT.",
-  "version": "0.1.54",
+  "version": "0.1.57",
   "compatibility": {
     "minimum": "13",
     "verified": "13.338",
     "maximum": "13"
   },
   "esmodules": [
-    "module/pandorha.mjs"
+    "module/pandorha.mjs",
+    "scripts/monks-tokenbar-integration.mjs"
   ],
-  "styles": [
-    "styles/pandorha-0.1.50.css"
-  ],
+  "styles": ["styles/pandorha-0.1.50.css"],
   "manifest": "https://raw.githubusercontent.com/questionwho42-jpg/sistema-pandorha-foundry/main/system.json",
   "download": "https://github.com/questionwho42-jpg/sistema-pandorha-foundry/archive/refs/heads/main.zip",
   "languages": [
@@ -27,141 +26,81 @@
   "documentTypes": {
     "Actor": {
       "character": {
-        "htmlFields": [
-          "description",
-          "details.biography",
-          "details.notes"
-        ],
+        "htmlFields": ["description", "details.biography", "details.notes"],
         "filePathFields": {
-          "details.crest": [
-            "IMAGE"
-          ],
-          "details.portrait": [
-            "IMAGE"
-          ]
+          "details.crest": ["IMAGE"],
+          "details.portrait": ["IMAGE"]
         }
       },
       "npc": {
-        "htmlFields": [
-          "description",
-          "details.biography",
-          "details.notes"
-        ],
+        "htmlFields": ["description", "details.biography", "details.notes"],
         "filePathFields": {
-          "details.crest": [
-            "IMAGE"
-          ],
-          "details.portrait": [
-            "IMAGE"
-          ]
+          "details.crest": ["IMAGE"],
+          "details.portrait": ["IMAGE"]
         }
       },
       "monster": {
-        "htmlFields": [
-          "description",
-          "details.biography",
-          "details.notes"
-        ],
+        "htmlFields": ["description", "details.biography", "details.notes"],
         "filePathFields": {
-          "details.crest": [
-            "IMAGE"
-          ],
-          "details.portrait": [
-            "IMAGE"
-          ]
+          "details.crest": ["IMAGE"],
+          "details.portrait": ["IMAGE"]
         }
       }
     },
     "Item": {
       "ancestry": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "trait": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "class": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "talent": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "maneuver": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "spell": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "weapon": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "armor": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "shield": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "equipment": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "consumable": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "condition": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "background": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "feature": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "ability": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "rune": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "disease": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       },
       "toxin": {
-        "htmlFields": [
-          "description"
-        ]
+        "htmlFields": ["description"]
       }
     }
   },
