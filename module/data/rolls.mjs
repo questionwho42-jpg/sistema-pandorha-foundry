@@ -27,14 +27,15 @@ export async function rollTest({
     level: actor.system.attributes.level ?? 0,
     eixo: actor.system.eixos?.[eixo] ?? 0,
     aplicacao: actor.system.aplicacoes?.[aplicacao] ?? 0,
-    bonus:
-      (bonus ?? 0) +
-      untrainedPenalty +
-      mapPenalty +
-      (automation.testBonus ?? 0),
+    bonusBase: (bonus ?? 0) + untrainedPenalty + (automation.testBonus ?? 0),
+    mapPenalty: mapPenalty,
   };
 
-  const formula = "1d20 + @level + @eixo + @aplicacao + @bonus";
+  const formulaParts = ["1d20", "@level", "@eixo", "@aplicacao"];
+  if (data.bonusBase !== 0) formulaParts.push("@bonusBase");
+  if (data.mapPenalty !== 0) formulaParts.push("@mapPenalty");
+
+  const formula = formulaParts.join(" + ");
   const roll = await new Roll(formula, data).evaluate({ async: true });
   const flavor = `${label}: ${eixo ?? ""} + ${aplicacao ?? ""}`.trim();
 

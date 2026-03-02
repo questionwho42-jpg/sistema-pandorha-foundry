@@ -184,8 +184,8 @@ function parseItemAutomation(item) {
   ]);
 
   result.testBonus += collectSigned(text, [
-    /([+\-]\s*\d+)\s*(?:de\s*)?(?:bonus|penalidade)?\s*em\s*testes?\b/gi,
-    /\btestes?\b[^+\-\n]{0,24}([+\-]\s*\d+)/gi,
+    /([+\-]\s*\d+)\s*(?:de\s*)?(?:bonus|penalidade)?\s*em\s*testes(?: globais)?\b/gi,
+    /\btestes(?: globais)?\b[^\w+\-\n]{0,16}([+\-]\s*\d+)/gi,
   ]);
 
   result.resources.hp += collectSigned(text, [
