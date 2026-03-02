@@ -1,0 +1,8 @@
+# Arquivos grandes (PDFs e HTML gerados)
+livros/Ato_1/O_Mundo_de_Pandorha_Ato_1_Completo.pdf
+livros/Ato_1/O_Mundo_de_Pandorha_Ato_1_Completo_ebook.html
+livros/O_Mundo_de_Pandorha_Ato_1_Completo_v2.pdf
+
+# Arquivos temporários
+large_files.txt
+error.log
