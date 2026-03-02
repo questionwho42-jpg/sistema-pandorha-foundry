@@ -1,0 +1,40 @@
+DATA: [Data Atual]
+BRANCH: feature/dungard-geral
+STATUS: Em andamento (Refinando S_Sociedade - Q4 - Correção Aplicada)
+STATUS: Em andamento (Refinando S_Sociedade - Q5)
+AÇÕES REALIZADAS:
+- Backup dos arquivos de Dungard criado.
+- Análise de arquivos existentes feita (Falta S_Sociedade.md).
+- Arquivo S_Sociedade.md criado com estrutura G.R.A.P.E.S.
+- Arquivo S_Sociedade.md preenchido com dados de cenario-inicial, Politica e Economia.
+- Mudança de direção: Iniciando questionário interativo (1 pergunta por vez) para S_Sociedade.md.
+- S_Sociedade: Definida Estrutura Social (Tecnocracia + Sem-Voz).
+- S_Sociedade: Definida Família (Filhos de Patente + Delação).
+- S_Sociedade: Definido Lazer (Opção A + 10 Formas de Lazer/Vícios).
+- S_Sociedade: Adicionado Lazer Alternativo (Corrida, Burocracia, Ratos, Grito, Chaminé, Engenharia, Colapso).
+- CORREÇÃO: Arquivo S_Sociedade.md reescrito completamente para garantir que todas as seções anteriores estejam salvas.
+- CORREÇÃO 2: Reaplicada Seção 4 (Vestimenta) após falha de atualização.
+- S_Sociedade: Definida Vestimenta (EPI de Gala: Funcional + Ostentação).
+- CORREÇÃO 3: Reaplicada Seção 5 (Culinária) após falha de salvamento.
+- CORREÇÃO 4: Reaplicada Seção 5 (Culinária) novamente.
+- S_Sociedade: Definidos Tabus (Quebra de Sigilo e Paranoia).
+- S_Sociedade: Definida Arte e Cultura (Funcionalismo + Melancolia + Cópia).
+- S_Sociedade: Definido Morte e Luto (Culpa Coletiva e Pedidos de Desculpas).
+- S_Sociedade: Definida Relação com Forasteiros (Burocracia + Clientes VIP).
+- S_Sociedade: Definida Educação (Osmose + Escolas Pagas). Arquivo Completo.
+- Consolidação: Criado arquivo Dungard_Mestre.md unificando todos os módulos (G.R.A.P.E.S.) mantendo originais.
+- Almar: Finalizado Pilar S (Sociedade) com 10 perguntas.
+- Almar: Gerado arquivo Almar_Mestre.md consolidando todos os 6 pilares.
+- Almar: Criado arquivo 'cenario.md' (Versão Hiper-Expandida) com narrativa imersiva, citações e lista de sabores.
+- Morden: Criado arquivo 'grapes_recanto.md' estruturando a facção Recanto da Viúva no formato G.R.A.P.E.S.
+- Morden: Workflow Recanto da Viúva. Pilar G - Q1 (Ambiente: Estática) definida. Q2 (Defesa) apresentada.
+- Morden: Correção de Diff aplicada em grapes_recanto.md. Pilar G restaurado.
+- Morden: Workflow Recanto. Pilar G - Q2 (Defesa: Ecos + Fungos) definida. Q3 (Água) apresentada.
+- Morden: Workflow Recanto. Pilar G - Q3 (Água: Híbrida) definida. Q4 (Conectividade) apresentada.
+- Morden: Workflow Recanto. Pilar G - Q4 (Conectividade: Teia de Túneis) definida. Q5 (Iluminação) apresentada.
+- Morden: Workflow Recanto. Pilar G - Q5 (Iluminação: Bioluminescência) definida. Q6 (Ar) apresentada.
+- Morden: Workflow Recanto. Pilar G - Q6 (Ar: Pulmões da Viúva) definida. Q7 (Resíduos) apresentada.
+- Morden: Workflow Recanto. Pilar G - Q7 (Resíduos: Reciclagem Fúngica) definida. Q8 (Habitação) apresentada.
+- Morden: Workflow Recanto. Pilar G - Q9 (Estabilidade: Praga da Ferrugem) definida. Q10 (Segredo Final) apresentada.
+- Morden: Finalizado Pilar G (Geografia) do Recanto. Arquivo G_Geografia.md criado.
+- Morden: Workflow Recanto. Pilar R - Q11 (Divindade Central) apresentada.

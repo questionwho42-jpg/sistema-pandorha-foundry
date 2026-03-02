@@ -1,0 +1,8 @@
+DATA: [Data Atual]
+BRANCH: feature/dungard-anacronismos
+STATUS: Em andamento (Refinamento de Tom)
+AÇÕES REALIZADAS:
+- Backup completo da pasta Dungard.
+- Análise dos arquivos de Cinar, Gorbax e Floresta dos Ecos.
+- Criação do arquivo 'cenario.md' em Dungard seguindo o padrão Hiper-Expandido.
+- Substituição de termos anacrônicos (ozônio, royalties, backup) por termos de fantasia medieval (ar transmutado, tributos, receptáculo).

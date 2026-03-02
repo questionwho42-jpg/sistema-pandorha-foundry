@@ -37,7 +37,7 @@ _Grão-Mestre da Guilda dos Engenheiros (Tecnocrata)_
 
 ## 🌑 O Submundo (A Sombra)
 
-### 4. "A Viúva" (Silas Mor)
+### 4. "A Viúva" (A Matriarca dos Excluídos)
 
 _Líder da Guilda das Sombras (Crime)_
 
