@@ -49,12 +49,7 @@ const ForgeGenerator = (() => {
               "O elevador de carga range ao descer para o Setor 7. As luzes rúnicas, normalmente azuis e estáveis as paredes, piscam num verde doentio. O corredor principal, onde centenas de operários costumavam marchar entre turnos, está vazio. Ferramentas abandonadas no chão. Capacetes largados. Uma refeição pela metade numa mesa de cantina, a sopa ainda morna. Algo fez estas pessoas largarem tudo e saírem — ou algo as levou.",
             objetivo:
               "Descobrir o que aconteceu com os 47 operários desaparecidos do Setor 7 e encontrar a origem da contaminação biótica.",
-            pistas: [
-              'Um diário de operário encontrado na cantina menciona "sonhos com raízes que cantam" nas últimas 3 noites.',
-              "Marcas de unhas no metal de um corredor sugerem que alguém foi arrastado — ou tentou resistir a algo.",
-              "Um frasco quebrado num laboratório abandonado contém resíduos de seiva verde-luminescente. Teste Mental + Alquimia DC 13: é seiva da Floresta dos Ecos, mas modificada. Alguém a trouxe para cá de propósito.",
-              "A última entrada do registro de turno mostra que o Duto de Ventilação C-12 foi aberto por alguém de dentro, 6 horas antes dos desaparecimentos. Quem autorizou?",
-            ],
+            pistas: ForgeTables.randomN(ForgeTables.PISTAS_POOL, 4),
             cenas: [
               {
                 titulo: "A Cantina Abandonada",
@@ -417,16 +412,25 @@ const ForgeGenerator = (() => {
 
   // Fallback genérico para cenários sem narrativa específica
   const NARRATIVA_GENERICA = {
-    sinopse: (c) =>
-      `Uma ameaça se ergue em ${c.nome}. Relatos alarmantes chegam de viajantes e moradores: desaparecimentos, fenômenos inexplicáveis e tensões crescentes entre as facções locais. O grupo é convocado para investigar, mas logo descobre que as raízes do problema são mais profundas — e mais pessoais — do que qualquer um imaginava. Cada escolha terá consequências duradouras para a região e seus habitantes.`,
+    sinopse: (c) => {
+      const tpl = ForgeTables.random(ForgeTables.SINOPSES_TEMPLATE);
+      const faccao = c.faccoes ? ForgeTables.random(c.faccoes) : 'O Conselho local';
+      const evento = ForgeTables.random(ForgeTables.EVENTOS_POOL);
+      const objetivo = ForgeTables.random(ForgeTables.OBJETIVOS_POOL);
+      const consequencia = ForgeTables.random(ForgeTables.CONSEQUENCIAS_POOL);
+      const local = c.nome.split(',')[0];
+      return tpl.replace('{local}', local).replace('{evento}', evento)
+        .replace('{faccao}', faccao).replace('{consequencia}', consequencia)
+        .replace('{objetivo}', objetivo).replace('{npc_tipo}', ForgeTables.random(['mercador','veterano','refugiado','sacerdote','espião']));
+    },
     capitulo: (cenarioData, conflito, idx) => ({
       titulo:
         [
-          "O Chamado",
-          "A Escalada",
-          "O Ponto de Virada",
-          "A Tempestade",
-          "O Confronto Final",
+          ForgeTables.random(ForgeTables.TITULO_PREFIXOS),
+          ForgeTables.random(ForgeTables.TITULO_PREFIXOS),
+          ForgeTables.random(ForgeTables.TITULO_PREFIXOS),
+          ForgeTables.random(ForgeTables.TITULO_PREFIXOS),
+          ForgeTables.random(ForgeTables.TITULO_PREFIXOS)
         ][idx] || `Ato ${idx + 1}`,
       introducao: `O grupo chega a ${cenarioData.nome.split(",")[0]}. ${cenarioData.atmosfera.inicio.visao}. ${cenarioData.atmosfera.inicio.som}. Os moradores olham com uma mistura de esperança e desconfiança. Um informante local — nervoso, olhando por cima do ombro — confirma os piores rumores: a ameaça é real e está crescendo. Em 3 dias, será tarde demais para agir.`,
       objetivo: `Investigar a ameaça de ${conflito ? conflito.nome : "a região"} e encontrar uma solução antes que a situação fique irreversível.`,
@@ -437,46 +441,26 @@ const ForgeGenerator = (() => {
         `Registros comerciais mostram compras massivas de um recurso específico nas últimas semanas — suprimentos que seriam necessários apenas se alguém estivesse planejando uma operação de grande escala.`,
       ],
     }),
-    cenas: (cenarioData, nd, dcBase) => [
-      {
-        titulo: "O Rastro",
-        descricao: `O grupo segue as primeiras pistas por ${cenarioData.nome.split(",")[0]}. ${cenarioData.atmosfera.inicio.visao}. O ar traz o cheiro de ${cenarioData.atmosfera.inicio.cheiro.toLowerCase()}. Um contato local marca encontro num local discreto e relata o que viu: figuras misteriosas operando durante a noite, carregando equipamento estranho para um local que todos evitam. O contato entrega um mapa rudimentar com a localização marcada, mas avisa: "Se falaar que eu ajudei vocês, minha família paga o preço."`,
-        objetivo:
-          "Coletar informações iniciais e decidir a abordagem: investigação discreta ou confronto direto.",
-        teste: {
-          eixo: "Mental",
-          pericia: "Percepção",
-          dc: dcBase,
-          sucesso: `O herói percebe que estão sendo observados por um espião no telhado adjacente. Podem capturá-lo para obter mais informações — ele carrega uma mensagem codificada que revela o plano do vilão.`,
-          falha: `O espião foge e alerta os inimigos. Os encontros futuros ficam mais difíceis (+2 DC nos próximos testes do capítulo).`,
-        },
-      },
-      {
-        titulo: "O Covil",
-        descricao: `Seguindo o mapa, o grupo chega ao esconderijo da ameaça. ${cenarioData.atmosfera.meio.visao}. O local é mais fortificado do que esperavam — armadilhas no perímetro, sentinelas armadas e o som de atividade frenética lá dentro. No centro da operação, os inimigos estão realizando uma ação que, se concluída, tornará a ameaça permanente. O grupo tem 5 rodadas para agir antes que o ritual/máquina/processo seja completado.`,
-        objetivo:
-          "Interromper a operação inimiga e neutralizar a ameaça central.",
-        teste: {
-          eixo: "Físico",
-          pericia: "Conflito",
-          dc: dcBase + 2,
-          sucesso: `O herói encontra o ponto fraco da operação e consegue sabotá-lo, dando Desvantagem a todos os inimigos por 2 rodadas.`,
-          falha: `O herói ativa uma armadilha: ${Math.ceil(nd * 1.5)}d6 de dano e fica Derrubado.`,
-        },
-      },
-      {
-        titulo: "A Verdade",
-        descricao: `Com a operação interrompida (ou concluída parcialmente), o verdadeiro responsável se revela — e não é quem o grupo esperava. É alguém que eles encontraram antes, alguém que parecia aliado. A motivação não é pura maldade: é desespero, vingança ou uma crença distorcida de que está fazendo o bem. O vilão oferece um argumento que faz sentido, e o grupo precisa decidir: justiça ou misericórdia?`,
-        objetivo: "Confrontar a verdade e tomar a decisão final.",
-        teste: {
-          eixo: "Social",
-          pericia: "Interação",
-          dc: dcBase + 1,
-          sucesso: `O herói encontra as palavras certas e o vilão depõe as armas. Aceita julgamento público. A região ganha esperança.`,
-          falha: `O vilão foge ou se sacrifica num ato final. A vitória fica amarga. +1 Ponto de Corrupção.`,
-        },
-      },
-    ],
+    cenas: (cenarioData, nd, dcBase) => {
+      const inv = ForgeTables.random(ForgeTables.CENAS_POOL.investigacao);
+      const cmb = ForgeTables.random(ForgeTables.CENAS_POOL.combate);
+      const soc = ForgeTables.random(ForgeTables.CENAS_POOL.social);
+      const local = cenarioData.nome.split(',')[0];
+      return [
+        { titulo: inv.titulo, descricao: inv.desc + ' Local: ' + local + '.', objetivo: 'Coletar informações e pistas.',
+          teste: { eixo: 'Mental', pericia: 'Interação', dc: dcBase,
+            sucesso: 'O herói descobre uma pista crítica que revela o próximo passo.',
+            falha: 'A investigação é comprometida. +2 DC nos próximos testes.' }},
+        { titulo: cmb.titulo, descricao: cmb.desc, objetivo: 'Neutralizar a ameaça e proteger os inocentes.',
+          teste: { eixo: 'Físico', pericia: 'Conflito', dc: dcBase + 2,
+            sucesso: 'O herói encontra o ponto fraco do inimigo. Desvantagem por 2 rodadas.',
+            falha: 'O herói ativa uma armadilha: ' + Math.ceil(nd * 1.5) + 'd6 de dano e fica Derrubado.' }},
+        { titulo: soc.titulo, descricao: soc.desc, objetivo: 'Confrontar a verdade e tomar a decisão final.',
+          teste: { eixo: 'Social', pericia: 'Interação', dc: dcBase + 1,
+            sucesso: 'O herói encontra as palavras certas. A situação se resolve favoravelmente.',
+            falha: 'A negociação falha. A vitória fica amarga. +1 Ponto de Corrupção.' }}
+      ];
+    }
   };
 
   // ============================================================
@@ -492,6 +476,11 @@ const ForgeGenerator = (() => {
       : null;
 
     // Sinopse
+    // Título procedural composto
+    if (!av.titulo || av.titulo === 'Aventura Sem Nome') {
+      av.titulo = ForgeTables.random(ForgeTables.TITULO_PREFIXOS) + ' ' + ForgeTables.random(ForgeTables.TITULO_SUFIXOS);
+    }
+
     av.sinopse = narr
       ? narr.sinopse
       : NARRATIVA_GENERICA.sinopse(cenarioData || { nome: av.cenario });
@@ -843,66 +832,40 @@ const ForgeGenerator = (() => {
 
   function _gerarRumores(av, narr) {
     if (narr && narr.rumores) {
-      av.tabelas.rumores = narr.rumores;
+      // Shuffle pre-written rumors too
+      av.tabelas.rumores = ForgeTables.randomN(narr.rumores, Math.min(narr.rumores.length, 20))
+        .map((r, i) => ({ ...r, numero: i + 1 }));
       return;
     }
+    // Use pool of generic rumors + cenario-specific elements
+    const pool = [...ForgeTables.RUMORES_POOL];
     const cenarioData = ForgeTables.CENARIOS[av.cenario];
-    const n = cenarioData ? cenarioData.nome.split(",")[0] : av.cenario;
-    const tipos = ["V", "F", "P", "L"];
-    av.tabelas.rumores = Array.from({ length: 20 }, (_, i) => ({
-      numero: i + 1,
-      tipo: tipos[i % 4],
-      texto: [
-        `Viajantes vindos do norte relatam fenômenos estranhos: luzes que se movem sozinhas e sons de metal batendo à noite.`,
-        `O preço dos suprimentos em ${n} triplicou da noite pro dia. Alguém está acumulando estoques.`,
-        `Um mercador ambulante jura que viu o líder da facção principal conversando com figuras encapuzadas fora dos portões.`,
-        `Dizem que os guardas encontraram corpos nas fronteiras — não de combate, mas de algo que arrancou a energia vital.`,
-        `Uma velha curandeira alerta: "A terra está doente. Posso sentir na água." Ninguém leva a sério, mas ela nunca errou.`,
-        `Três crianças desapareceram do distrito residencial. As famílias estão desesperadas e culpam o Conselho.`,
-        `O ferreiro principal da cidade se recusa a forjar armas há uma semana. Diz que "o metal está diferente".`,
-        `Um bêbado na taverna mostra uma moeda antiga com símbolos que ninguém reconhece. Diz que encontrou dezenas delas num túnel.`,
-        `Animais domésticos estão fugindo na direção oposta à ameaça. Cavalos se recusam a ir para o leste.`,
-        `O sacerdote local trancou o templo e não recebe ninguém. Seus assistentes dizem que ele está "em vigília".`,
-        `Soldados veteranos estão pedindo transferência. Um deles disse: "Eu já vi isso antes, no último conflito. Não acaba bem."`,
-        `Uma caravana de refugiados chegou ontem. Vieram de uma vila 2 dias ao norte que "simplesmente desapareceu".`,
-        `O poço central da cidade está com a água turva pela primeira vez em 100 anos.`,
-        `Um informante oferece informações por 200 PO. Parece confiável mas tem cicatrizes recentes no rosto.`,
-        `Dois conselheiros brigaram publicamente na praça. Um acusou o outro de "saber mais do que deveria".`,
-        `Houve terremotos leves nas últimas 3 noites. Os mineradores dizem que vem de algo se movendo no subsolo.`,
-        `A guilda local está recrutando mercenários a preços altíssimos. Nunca pagaram tanto por proteção.`,
-        `Um mapa antigo apareceu no mercado negro. Mostra passagens secretas sob a cidade que não estão em nenhum registro oficial.`,
-        `Moradores do bairro norte relatam pesadelos compartilhados: todos sonham com o mesmo rosto.`,
-        `O líder militar mandou reforçar os portões e cancelar todas as licenças. Ninguém sai nem entra sem autorização.`,
-      ][i],
-    }));
+    const n = cenarioData ? cenarioData.nome.split(',')[0] : av.cenario;
+    // Add some dynamic ones
+    const faccoes = cenarioData ? cenarioData.faccoes : ['o Conselho'];
+    pool.push(
+      { tipo: 'P', texto: `${ForgeTables.random(faccoes)} está acumulando armas em segredo. Um espião confirma.` },
+      { tipo: 'V', texto: `Moradores de ${n} ouviram rúgidos vindos do subsolo ontem à noite.` },
+      { tipo: 'F', texto: `${ForgeTables.random(faccoes)} está por trás de tudo. É sempre eles.` },
+      { tipo: 'L', texto: `Uma profecia antiga de ${n} fala de "o dia em que o céu sangra". Estamos perto.` },
+      { tipo: 'V', texto: `O mercador mais rico de ${n} fugiu ontem com toda a família. Sem avisar ninguém.` }
+    );
+    av.tabelas.rumores = ForgeTables.randomN(pool, 20).map((r, i) => ({ ...r, numero: i + 1 }));
   }
+
 
   function _gerarSideQuests(av, narr) {
     if (narr && narr.sideQuests) {
-      av.sideQuests = narr.sideQuests;
+      av.sideQuests = ForgeTables.randomN(narr.sideQuests, Math.min(narr.sideQuests.length, 3));
       return;
     }
-    av.sideQuests = [
-      {
-        titulo: "O Mensageiro Perdido",
-        descricao:
-          "Um mensageiro oficial desapareceu há 3 dias com documentos importantes. Sua rota passava perto da zona de perigo.",
-        objetivo:
-          "Encontrar o mensageiro (vivo ou morto) e recuperar os documentos.",
-        cena1:
-          "Rastreando a rota do mensageiro, o grupo encontra sinais de luta. Teste Mental + Rastreamento DC 13 revela que ele foi arrastado para fora da estrada por pelo menos 3 criaturas.",
-        cena2:
-          'O mensageiro está vivo mas preso numa caverna, guardado por criaturas que parecem estar acumulando "suprimentos humanos". Os documentos que ele carregava revelam que o Conselho planejava evacuar secretamente os mais ricos e abandonar a população.',
-        recompensa:
-          "O mensageiro se torna informante (+1 Favor com facção). Os documentos podem ser usados para pressionar o Conselho.",
-        efeitoEpilogo: -1,
-      },
-    ];
+    const numSQ = { oneshot: 1, mini: 2, campanha: 3 }[av.duracao] || 1;
+    av.sideQuests = ForgeTables.randomN(ForgeTables.SIDE_QUESTS_POOL, numSQ).map(sq => ({
+      ...sq,
+      efeitoEpilogo: Math.floor(Math.random() * 3) + 1
+    }));
   }
 
-  // ============================================================
-  //  RENDERIZAÇÃO HTML
-  // ============================================================
 
   function toHTML(av) {
     let html = "";
