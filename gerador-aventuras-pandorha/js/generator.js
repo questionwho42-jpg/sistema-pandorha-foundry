@@ -621,7 +621,7 @@ const ForgeGenerator = (() => {
   const HABILIDADES_NPC = {
     mentor: {
       perfil: "mental",
-      focos: ["interacao", "percepcao"],
+      focos: ["interacao", "interacao"],
       passivas: [
         {
           nome: "Olhos de Experiência",
@@ -686,7 +686,7 @@ const ForgeGenerator = (() => {
     },
     aliado: {
       perfil: "social",
-      focos: ["interacao", "vontade"],
+      focos: ["interacao", "resistencia"],
       passivas: [
         {
           nome: "Rede de Contatos",
@@ -749,26 +749,9 @@ const ForgeGenerator = (() => {
 
       // Aplicações
       const aplicacoes = {
-        conflito: {
-          valor: eixosNpc.fisico + (hab.focos.includes("conflito") ? 0 : -2),
-          eixo: "Físico",
-        },
-        resistencia: {
-          valor: eixosNpc.fisico + (hab.focos.includes("resistencia") ? 0 : -2),
-          eixo: "Físico",
-        },
-        interacao: {
-          valor: eixosNpc.mental + (hab.focos.includes("interacao") ? 0 : -2),
-          eixo: "Mental",
-        },
-        percepcao: {
-          valor: eixosNpc.mental + (hab.focos.includes("percepcao") ? 0 : -2),
-          eixo: "Mental",
-        },
-        vontade: {
-          valor: eixosNpc.social + (hab.focos.includes("vontade") ? 0 : -2),
-          eixo: "Social",
-        },
+        interacao:   { valor: Math.max(0, Math.max(eixosNpc.fisico, eixosNpc.mental, eixosNpc.social) + (hab.focos.includes('interacao') ? 0 : -2)) },
+        conflito:    { valor: Math.max(0, Math.max(eixosNpc.fisico, eixosNpc.mental) + (hab.focos.includes('conflito') ? 0 : -2)) },
+        resistencia: { valor: Math.max(0, Math.max(eixosNpc.fisico, eixosNpc.mental) + (hab.focos.includes('resistencia') ? 0 : -2)) }
       };
 
       const hp = ForgeMonsters.calcularHP(nd, "Atacante");
@@ -1048,10 +1031,8 @@ const ForgeGenerator = (() => {
       html += `<tr><td><strong>${s.hp}</strong></td><td><strong>${s.ca}</strong></td><td>${s.ataque}</td><td>${s.dadosDano}</td><td>${s.dc}</td><td>${s.iniciativa}</td><td>${s.vigor}</td><td>${s.ee}</td><td>${s.velocidade}</td></tr>`;
       html += '</tbody></table>';
       if (ap) {
-        html += '<table><thead><tr><th>Eixo</th><th>Valor</th><th>Aplica\u00E7\u00E3o Focada</th><th>Aplica\u00E7\u00E3o N\u00E3o-Focada</th></tr></thead><tbody>';
-        html += `<tr><td><strong>F\u00EDsico</strong></td><td>+${e.fisico}</td><td>Conflito +${Math.max(0,ap.conflito.valor)}</td><td>Resist\u00EAncia +${Math.max(0,ap.resistencia.valor)}</td></tr>`;
-        html += `<tr><td><strong>Mental</strong></td><td>+${e.mental}</td><td>Intera\u00E7\u00E3o +${Math.max(0,ap.interacao.valor)}</td><td>Percep\u00E7\u00E3o +${Math.max(0,ap.percepcao.valor)}</td></tr>`;
-        html += `<tr><td><strong>Social</strong></td><td>+${e.social || 0}</td><td colspan="2">Vontade +${Math.max(0,ap.vontade.valor)}</td></tr>`;
+        html += '<table><thead><tr><th>Interação</th><th>Conflito</th><th>Resistência</th></tr></thead><tbody>';
+        html += `<tr><td>+${Math.max(0,ap.interacao.valor)}</td><td>+${Math.max(0,ap.conflito.valor)}</td><td>+${Math.max(0,ap.resistencia.valor)}</td></tr>`;
         html += '</tbody></table>';
       }
       if (s.passivas && s.passivas.length) {
@@ -1126,10 +1107,8 @@ const ForgeGenerator = (() => {
       md += `|:--:|:--:|:------:|:----:|:--:|:---------:|:-----:|:--:|:----------:|\n`;
       md += `| ${s.hp} | ${s.ca} | ${s.ataque} | ${s.dadosDano} | ${s.dc} | ${s.iniciativa} | ${s.vigor} | ${s.ee} | ${s.velocidade} |\n\n`;
       if (ap) {
-        md += `| Eixo | Valor | Foco 1 | Foco 2 |\n|:----:|:-----:|:------:|:------:|\n`;
-        md += `| F\u00EDsico | +${e.fisico} | Conflito +${Math.max(0,ap.conflito.valor)} | Resist\u00EAncia +${Math.max(0,ap.resistencia.valor)} |\n`;
-        md += `| Mental | +${e.mental} | Intera\u00E7\u00E3o +${Math.max(0,ap.interacao.valor)} | Percep\u00E7\u00E3o +${Math.max(0,ap.percepcao.valor)} |\n`;
-        md += `| Social | +${e.social || 0} | Vontade +${Math.max(0,ap.vontade.valor)} | \u2014 |\n\n`;
+        md += `| Interação | Conflito | Resistência |\n|:---------:|:--------:|:----------:|\n`;
+        md += `| +${Math.max(0,ap.interacao.valor)} | +${Math.max(0,ap.conflito.valor)} | +${Math.max(0,ap.resistencia.valor)} |\n\n`;
       }
       if (s.passivas) s.passivas.forEach(p => md += `- **${p.nome}:** ${p.mecanica}\n`);
       if (s.ativas) s.ativas.forEach(a => md += `- **[${a.custo}] ${a.nome}:** ${a.mecanica}\n`);
@@ -1168,12 +1147,9 @@ const ForgeGenerator = (() => {
     h += "</tbody></table>";
 
     // Eixos + Aplicações
-    h +=
-      "<table><thead><tr><th>Eixo</th><th>Valor</th><th>Aplicação Focada</th><th>Aplicação Não-Focada</th></tr></thead><tbody>";
-    h += `<tr><td><strong>Físico</strong></td><td>+${m.eixos.fisico}</td><td>Conflito +${Math.max(0, m.aplicacoes.conflito.valor)}</td><td>Resistência +${Math.max(0, m.aplicacoes.resistencia.valor)}</td></tr>`;
-    h += `<tr><td><strong>Mental</strong></td><td>+${m.eixos.mental}</td><td>Interação +${Math.max(0, m.aplicacoes.interacao.valor)}</td><td>Percepção +${Math.max(0, m.aplicacoes.percepcao.valor)}</td></tr>`;
-    h += `<tr><td><strong>Social</strong></td><td>+${m.eixos.social || 0}</td><td colspan="2">Vontade +${Math.max(0, m.aplicacoes.vontade.valor)}</td></tr>`;
-    h += "</tbody></table>";
+    h += '<table><thead><tr><th>Interação</th><th>Conflito</th><th>Resistência</th></tr></thead><tbody>';
+    h += `<tr><td>+${Math.max(0,(m.aplicacoes||{interacao:{valor:0}}).interacao.valor)}</td><td>+${Math.max(0,(m.aplicacoes||{conflito:{valor:0}}).conflito.valor)}</td><td>+${Math.max(0,(m.aplicacoes||{resistencia:{valor:0}}).resistencia.valor)}</td></tr>`;
+    h += '</tbody></table>';
 
     // Passivas
     if (m.passivas && m.passivas.length) {

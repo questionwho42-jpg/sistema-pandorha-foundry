@@ -189,26 +189,9 @@ const ForgeMonsters = (() => {
   // Aplicações derivadas (Cap. 13, Seção 3.2)
   function _calcAplicacoes(eixos, focos) {
     return {
-      conflito: {
-        valor: eixos.fisico + (focos.includes("conflito") ? 0 : -2),
-        eixo: "Físico",
-      },
-      resistencia: {
-        valor: eixos.fisico + (focos.includes("resistencia") ? 0 : -2),
-        eixo: "Físico",
-      },
-      interacao: {
-        valor: eixos.mental + (focos.includes("interacao") ? 0 : -2),
-        eixo: "Mental",
-      },
-      percepcao: {
-        valor: eixos.mental + (focos.includes("percepcao") ? 0 : -2),
-        eixo: "Mental",
-      },
-      vontade: {
-        valor: eixos.social + (focos.includes("vontade") ? 0 : -2),
-        eixo: "Social",
-      },
+      interacao:   { valor: Math.max(0, (focos.includes('interacao') ? Math.max(eixos.fisico, eixos.mental, eixos.social) : Math.max(eixos.fisico, eixos.mental, eixos.social) - 2)) },
+      conflito:    { valor: Math.max(0, (focos.includes('conflito') ? Math.max(eixos.fisico, eixos.mental) : Math.max(eixos.fisico, eixos.mental) - 2)) },
+      resistencia: { valor: Math.max(0, (focos.includes('resistencia') ? Math.max(eixos.fisico, eixos.mental) : Math.max(eixos.fisico, eixos.mental) - 2)) }
     };
   }
 
@@ -305,7 +288,7 @@ const ForgeMonsters = (() => {
         nome: "Sombra de Éter",
         papel: "Controlador",
         perfil: "mental",
-        focos: ["interacao", "percepcao"],
+        focos: ["interacao", "interacao"],
         descricao:
           "Entidade semitransparente que habita o Éter. Aparência de fumaça negra com olhos brancos. Flutua através de paredes. A temperatura cai 10°C quando está próxima.",
         comportamento:
