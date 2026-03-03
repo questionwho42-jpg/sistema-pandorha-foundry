@@ -423,24 +423,47 @@ const ForgeGenerator = (() => {
         .replace('{faccao}', faccao).replace('{consequencia}', consequencia)
         .replace('{objetivo}', objetivo).replace('{npc_tipo}', ForgeTables.random(['mercador','veterano','refugiado','sacerdote','espião']));
     },
-    capitulo: (cenarioData, conflito, idx) => ({
-      titulo:
-        [
-          ForgeTables.random(ForgeTables.TITULO_PREFIXOS),
-          ForgeTables.random(ForgeTables.TITULO_PREFIXOS),
-          ForgeTables.random(ForgeTables.TITULO_PREFIXOS),
-          ForgeTables.random(ForgeTables.TITULO_PREFIXOS),
-          ForgeTables.random(ForgeTables.TITULO_PREFIXOS)
-        ][idx] || `Ato ${idx + 1}`,
-      introducao: `O grupo chega a ${cenarioData.nome.split(",")[0]}. ${cenarioData.atmosfera.inicio.visao}. ${cenarioData.atmosfera.inicio.som}. Os moradores olham com uma mistura de esperança e desconfiança. Um informante local — nervoso, olhando por cima do ombro — confirma os piores rumores: a ameaça é real e está crescendo. Em 3 dias, será tarde demais para agir.`,
-      objetivo: `Investigar a ameaça de ${conflito ? conflito.nome : "a região"} e encontrar uma solução antes que a situação fique irreversível.`,
-      pistas: [
-        `Um documento oficial encontrado num corpo de mensageiro revela que o Conselho local SABIA do problema há semanas, mas tentou resolver em silêncio.`,
-        `Marcas incomuns no solo sugerem que a ameaça não é natural — alguém ou algo está dirigindo o caos deliberadamente.`,
-        `Um sobrevivente encontrado num esconderijo improvisado balbucia informações fragmentadas: viu "a pessoa responsável" e pode identificá-la. Mas está ferido e precisa de cura.`,
-        `Registros comerciais mostram compras massivas de um recurso específico nas últimas semanas — suprimentos que seriam necessários apenas se alguém estivesse planejando uma operação de grande escala.`,
-      ],
-    }),
+    capitulo: (cenarioData, conflito, idx) => {
+      // Titulos unicos por fase do capitulo
+      const TITULOS_POR_FASE = [
+        ['O Chamado', 'A Chegada', 'Primeiros Sinais', 'O Convite', 'A Notícia'],
+        ['A Escalada', 'Caminhos Cruzados', 'A Descoberta', 'O Rastro', 'A Trilha'],
+        ['O Ponto de Virada', 'A Revelação', 'Verdades Ocultas', 'O Segredo', 'A Emboscada'],
+        ['A Tempestade', 'O Cerco', 'A Batalha', 'O Confronto', 'A Última Defesa'],
+        ['O Confronto Final', 'O Julgamento', 'A Hora da Verdade', 'O Destino', 'Fim da Linha']
+      ];
+      const titulo = ForgeTables.random(TITULOS_POR_FASE[idx] || TITULOS_POR_FASE[0]);
+
+      // Introduções unicas por fase
+      const local = cenarioData.nome.split(',')[0];
+      const atm = cenarioData.atmosfera || {inicio:{visao:'',som:''},meio:{visao:''},climax:{visao:''}};
+      const INTROS = [
+        `O grupo chega a ${local}. ${atm.inicio.visao}. ${atm.inicio.som}. Os moradores olham com uma mistura de esperança e desconfiança. Um informante local confirma os piores rumores: a ameaça é real e está crescendo.`,
+        `Tensão paira sobre ${local}. ${atm.inicio.visao}. O grupo percebe que a situação é pior do que os relatos sugeriam. Marcas de conflito recente estão por toda parte.`,
+        `A jornada até ${local} foi tranquila demais. ${atm.meio.visao}. O silêncio é perturbador. Onde havia vida, agora há apenas vestígios de uma partida apressada.`,
+        `O grupo avança mais fundo em território hostil. ${atm.meio.visao}. Cada passo revela mais sobre a escala do problema. Não há como voltar atrás agora.`,
+        `É hora do confronto decisivo. ${atm.climax ? atm.climax.visao || '' : ''}. Tudo que o grupo descobriu leva a este momento. As escolhas feitas até aqui determinam o desfecho.`
+      ];
+      const intro = INTROS[Math.min(idx, INTROS.length - 1)];
+
+      // Objetivos unicos por fase
+      const conflitoNome = conflito ? conflito.nome : 'a região';
+      const OBJETIVOS = [
+        `Investigar os primeiros sinais de ${conflitoNome} e estabelecer contato com aliados locais.`,
+        `Seguir as pistas encontradas e avançar em direção à origem de ${conflitoNome}.`,
+        `Descobrir a verdade por trás de ${conflitoNome} e decidir o próximo curso de ação.`,
+        `Preparar-se para o confronto final contra a ameaça de ${conflitoNome}.`,
+        `Resolver ${conflitoNome} de uma vez por todas e lidar com as consequências.`
+      ];
+      const objetivo = OBJETIVOS[Math.min(idx, OBJETIVOS.length - 1)];
+
+      return {
+        titulo,
+        introducao: intro,
+        objetivo,
+        pistas: ForgeTables.randomN(ForgeTables.PISTAS_POOL, 4)
+      };
+    },
     cenas: (cenarioData, nd, dcBase) => {
       const inv = ForgeTables.random(ForgeTables.CENAS_POOL.investigacao);
       const cmb = ForgeTables.random(ForgeTables.CENAS_POOL.combate);
