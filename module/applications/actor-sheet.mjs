@@ -469,6 +469,11 @@ export class PandorhaActorSheet extends HandlebarsApplicationMixin(
         initiative: formatSigned(automation.initiative),
         tests: formatSigned(automation.testBonus),
       },
+      enrichedBiography: await TextEditor.enrichHTML(this.document.system.details?.biography || "", {
+        async: true,
+        relativeTo: this.document
+      }),
+      editable: this.isEditable
     };
   }
 
