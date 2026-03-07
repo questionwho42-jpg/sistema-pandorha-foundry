@@ -43,7 +43,7 @@ export class PandorhaItemSheet extends HandlebarsApplicationMixin(foundry.applic
 
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
-    const enrichedDescription = await TextEditor.enrichHTML(this.document.system.description || "", {
+    const enrichedDescription = await foundry.applications.ux.TextEditor.implementation.enrichHTML(this.document.system.description || "", {
       async: true,
       relativeTo: this.document
     });
