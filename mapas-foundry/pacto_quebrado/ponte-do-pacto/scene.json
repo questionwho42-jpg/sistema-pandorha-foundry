@@ -1,0 +1,88 @@
+{
+  "name": "A Ponte do Pacto",
+  "background": {
+    "src": "mapas-foundry/pacto_quebrado/ponte-do-pacto/background.png",
+    "offsetX": 0,
+    "offsetY": 0
+  },
+  "width": 3440,
+  "height": 1440,
+  "padding": 0.25,
+  "grid": {
+    "type": 1,
+    "size": 140,
+    "color": "#000000",
+    "alpha": 0.2,
+    "distance": 1.5,
+    "units": "m"
+  },
+  "tokenVision": true,
+  "fog": {
+    "exploration": true,
+    "reset": 1726514732
+  },
+  "environment": {
+    "globalLight": {
+      "enabled": false,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "darknessLevel": 0.5
+  },
+  "walls": [
+    {
+      "c": [0, 450, 3440, 450],
+      "door": 0,
+      "move": 1,
+      "sense": 0,
+      "sound": 0,
+      "dir": 0
+    },
+    {
+      "c": [0, 990, 3440, 990],
+      "door": 0,
+      "move": 1,
+      "sense": 0,
+      "sound": 0,
+      "dir": 0
+    }
+  ],
+  "lights": [],
+  "notes": [
+    {
+      "x": 400,
+      "y": 720,
+      "text": "Estátua Oeste dos Antigos Heróis. O musgo pálido parece crescer mais rápido aqui perto do abismo.",
+      "icon": "icons/svg/statue.svg",
+      "iconSize": 45,
+      "textStyle": {
+        "fontSize": 20,
+        "fill": "#a9a9a9"
+      }
+    },
+    {
+      "x": 3040,
+      "y": 720,
+      "text": "Estátua Leste dos Antigos Heróis. Rachada pelas eras.",
+      "icon": "icons/svg/statue.svg",
+      "iconSize": 45,
+      "textStyle": {
+        "fontSize": 20,
+        "fill": "#a9a9a9"
+      }
+    },
+    {
+      "x": 1720,
+      "y": 450,
+      "text": "Precipício Tenebroso. Queda fatal (ou dano massivo). O Vento aqui impõe Desvantagem em testes de Acrobacia.",
+      "icon": "icons/svg/falling.svg",
+      "iconSize": 45,
+      "textStyle": {
+        "fontSize": 20,
+        "fill": "#ff4d4d"
+      }
+    }
+  ]
+}

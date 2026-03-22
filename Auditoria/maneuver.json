@@ -1,0 +1,73 @@
+{
+    "_id": "IHWOhQYR7S7KUCLX",
+    "name": "Ameaça Gélida",
+    "type": "maneuver",
+    "img": "icons/svg/book.svg",
+    "system": {
+        "description": "<p>### 801. Ameaça Gélida\r</p><p>- **Custo:** [A] | **Alcance:** 6m | **Check:** Social + Conflito + Nível (Intimidação).\r<br>- **Sucesso:** Status Alvo: Aterrorizado (Duração: 1 rodada).\r<br>- **Crítico:** Status Alvo: Aterrorizado (Duração: 1 minuto) + O alvo foge do combate.\r<br>- **F. Parcial:** Status Alvo: Abalado (Redução de defesa por 1 rodada).\r<br>  &gt; **Nota de Campo:** O poder do terror puro. Às vezes, um olhar é mais letal que uma lâmina.\r</p><p></p>",
+        "details": {
+            "source": "Pandorha",
+            "category": "",
+            "requirements": "",
+            "tags": [
+                "Nota de Campo",
+                "Parcial: Status Alvo: Abalado (Redução de defesa por 1 rodada)."
+            ]
+        },
+        "activation": {
+            "cost": "[A]",
+            "type": ""
+        },
+        "range": "6m",
+        "duration": "",
+        "target": "",
+        "check": "Social + Conflito + Nível (Intimidação).",
+        "dc": "",
+        "damage": "",
+        "effect": "Status Alvo: Aterrorizado (Duração: 1 rodada).",
+        "roll": {
+            "axis": "social",
+            "aplicacao": "conflito",
+            "bonus": 0,
+            "isAttack": true
+        },
+        "components": "",
+        "school": "",
+        "circle": 0,
+        "level": 0,
+        "price": "",
+        "quantity": 1,
+        "equipped": false,
+        "slotCost": 0,
+        "weapon": {
+            "damage": "",
+            "tags": [],
+            "range": "",
+            "type": "",
+            "hands": 1
+        },
+        "armor": {
+            "bonus": 0,
+            "penalty": "",
+            "tags": [],
+            "maxAxis": 0
+        },
+        "shield": {
+            "bonus": 0,
+            "tags": [],
+            "type": ""
+        },
+        "rune": {
+            "grade": "",
+            "effects": ""
+        },
+        "classData": {
+            "baseHp": 0,
+            "basePv": 0,
+            "baseEe": 0,
+            "trainedWeapons": [],
+            "trainedArmors": [],
+            "trainedShields": []
+        }
+    }
+}

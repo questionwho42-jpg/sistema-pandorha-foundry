@@ -1,0 +1,225 @@
+/* PANDORHA - PREMIUM DESIGN SYSTEM (v1.0) 
+   Baseado no design estático de Ficha_Pandorha.html
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap");
+
+:root {
+  --pandorha-bg: #1c1917;
+  --pandorha-panel: #2a2622;
+  --pandorha-border: #b8945a;
+  --pandorha-gold: #dab973;
+  --pandorha-gold-light: #f0d89a;
+  --pandorha-text: #dcd7cd;
+  --pandorha-field-bg: #37322c;
+  --pandorha-label: #a0968a;
+  --pandorha-accent: #a87832;
+  --pandorha-accent-dark: #6b4e22;
+}
+
+/* Custom System Builder - Global Styles Override */
+.custom-system-builder.window-app .window-content {
+  background: var(--pandorha-bg) !important;
+  color: var(--pandorha-text) !important;
+  font-family: "Inter", sans-serif !important;
+}
+
+/* Headers e Títulos Estilo Cinzel */
+.custom-system-builder .pandorha-header-decorator h1,
+.custom-system-builder .panel-title,
+.custom-system-builder label.title,
+.custom-system-builder .tabs .item {
+  font-family: "Cinzel", serif !important;
+  color: var(--pandorha-gold) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+}
+
+/* Estilização de Painéis (Wrappers) */
+.custom-system-builder .panel {
+  background: var(--pandorha-panel) !important;
+  border: 1px solid var(--pandorha-border) !important;
+  border-radius: 4px !important;
+  padding: 8px !important;
+  margin-bottom: 6px !important;
+  position: relative !important;
+}
+
+/* Inputs e Campos de Texto */
+.custom-system-builder input[type="text"],
+.custom-system-builder input[type="number"],
+.custom-system-builder textarea {
+  background: var(--pandorha-field-bg) !important;
+  border: 1px solid rgba(184, 148, 90, 0.4) !important;
+  color: var(--pandorha-text) !important;
+  border-radius: 2px !important;
+  transition: all 0.2s ease !important;
+}
+
+.custom-system-builder input:focus,
+.custom-system-builder textarea:focus {
+  border-color: var(--pandorha-gold) !important;
+  box-shadow: 0 0 6px rgba(218, 185, 115, 0.2) !important;
+}
+
+/* Abas */
+.custom-system-builder .tabs .item.active {
+  border-bottom: 2px solid var(--pandorha-gold) !important;
+  text-shadow: 0 0 8px var(--pandorha-gold) !important;
+}
+
+/* Números de Eixo (Grandes e Dourados) */
+.custom-system-builder .stat-value input {
+  font-family: "Cinzel", serif !important;
+  font-size: 24px !important;
+  font-weight: 900 !important;
+  color: var(--pandorha-gold-light) !important;
+}
+
+/* ═══════════════════════════════════════════
+   POLIMENTO v2.9.1 — Compactação & Alinhamento
+   ═══════════════════════════════════════════ */
+
+/* Títulos de Seção (H2 estilizado) — COMPACTOS */
+.custom-system-builder .p-section h2 {
+    font-family: 'Cinzel', serif !important;
+    font-size: 13px !important;
+    font-weight: 900 !important;
+    color: var(--pandorha-gold) !important;
+    border-bottom: 2px solid var(--pandorha-border) !important;
+    margin: 4px 0 3px 0 !important;
+    padding-bottom: 2px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+/* Painéis Internos — Padding reduzido para compactação */
+.custom-system-builder .pandorha-panel {
+    padding: 4px !important;
+    margin-bottom: 4px !important;
+}
+
+/* Painéis em Caixa (p-box) */
+.custom-system-builder .p-box {
+    background: rgba(42, 38, 34, 0.6) !important;
+    border: 1px solid var(--pandorha-border) !important;
+    border-radius: 4px !important;
+    padding: 8px !important;
+    margin-bottom: 6px !important;
+    min-height: 60px !important;
+}
+
+.custom-system-builder .p-box .panel-title {
+    font-family: 'Cinzel', serif !important;
+    font-size: 9px !important;
+    color: var(--pandorha-gold) !important;
+    margin-bottom: 3px !important;
+    display: block !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+/* Rótulos Internos de Caixa — Refinados */
+.custom-system-builder .p-label-box {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 8px !important;
+    color: var(--pandorha-label) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.2px !important;
+    margin-top: 4px !important;
+}
+
+/* Labels genéricos (p-label) */
+.custom-system-builder .p-label {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 8px !important;
+    color: var(--pandorha-label) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+/* Itens das Matrizes */
+.custom-system-builder .p-item-name input {
+    font-family: 'Cinzel', serif !important;
+    font-size: 13px !important;
+    color: var(--pandorha-gold) !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+.custom-system-builder .p-item-effect textarea {
+    min-height: 80px !important;
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+}
+
+/* Recursos Estilizados (HP, PV, EE) */
+.custom-system-builder .p-resource-label {
+    font-family: 'Cinzel', serif !important;
+    font-size: 12px !important;
+    color: var(--pandorha-gold) !important;
+    text-align: center !important;
+    font-weight: bold !important;
+}
+
+.custom-system-builder .stat-max {
+    font-size: 16px !important;
+    color: var(--pandorha-label) !important;
+    align-self: center !important;
+    margin-left: 4px !important;
+}
+
+/* Valores de Defesa (CA, Iniciativa, etc) */
+.custom-system-builder .p-def-val {
+    font-family: 'Cinzel', serif !important;
+    font-size: 20px !important;
+    font-weight: 900 !important;
+    color: var(--pandorha-gold-light) !important;
+    text-align: center !important;
+}
+
+/* Cabeçalho da Ficha */
+.custom-system-builder .p-header {
+    background: linear-gradient(to right, rgba(62,56,48,0.8), rgba(28,25,23,0.8)) !important;
+    padding: 8px 12px !important;
+    border: 1px solid var(--pandorha-border) !important;
+    border-radius: 6px !important;
+    margin-bottom: 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+.custom-system-builder .p-title h1 {
+    font-family: 'Cinzel', serif !important;
+    font-size: 18px !important;
+    margin: 0 !important;
+    color: var(--pandorha-gold-light) !important;
+    letter-spacing: 2px !important;
+}
+
+/* ═══════════════════════════════════════════
+   TESTES DE MORTE — Alinhamento Horizontal
+   ═══════════════════════════════════════════ */
+.custom-system-builder .p-box .panel[data-flow="horizontal"] {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 2px 0 !important;
+}
+
+.custom-system-builder .p-box input[type="checkbox"] {
+    width: 16px !important;
+    height: 16px !important;
+    accent-color: var(--pandorha-gold) !important;
+    cursor: pointer !important;
+}
+
+/* Tabelas Internas — Compactação */
+.custom-system-builder table {
+    border-spacing: 2px !important;
+}
+
+.custom-system-builder table td {
+    padding: 2px 4px !important;
+}

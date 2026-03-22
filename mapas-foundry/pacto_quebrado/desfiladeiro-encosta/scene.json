@@ -1,0 +1,56 @@
+{
+  "name": "As Colinas: Desfiladeiro de Encosta",
+  "background": {
+    "src": "mapas-foundry/pacto_quebrado/desfiladeiro-encosta/background.png"
+  },
+  "width": 3000,
+  "height": 2000,
+  "grid": {
+    "type": 1,
+    "size": 100,
+    "color": "#000000",
+    "alpha": 0.2,
+    "distance": 1.5,
+    "units": "m"
+  },
+  "tokenVision": true,
+  "fog": {
+    "exploration": true
+  },
+  "environment": {
+    "darknessLevel": 0.3
+  },
+  "walls": [
+    {
+      "c": [0, 400, 3000, 400],
+      "move": 1,
+      "sense": 1
+    },
+    {
+      "c": [0, 1600, 3000, 1600],
+      "move": 1,
+      "sense": 1
+    }
+  ],
+  "lights": [],
+  "notes": [
+    {
+      "x": 1500,
+      "y": 1000,
+      "text": "Perigo 1: Desmoronamento. Teste de Físico + Resistência DC 15. Falha: 1d8 dano e condição Lento.",
+      "icon": "icons/svg/falling.svg"
+    },
+    {
+      "x": 1800,
+      "y": 1000,
+      "text": "Perigo 2: Armadilha de Arame (Invisível). Mental + Interação DC 15 para detectar. Umbrais detectam automático.",
+      "icon": "icons/svg/trap.svg"
+    },
+    {
+      "x": 2500,
+      "y": 1700,
+      "text": "Interação: O Renegado Morto. Investigação DC 12 revela: Mapa das Ruínas e Carta para Garth.",
+      "icon": "icons/svg/skull.svg"
+    }
+  ]
+}

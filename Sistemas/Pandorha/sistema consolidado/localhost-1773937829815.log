@@ -1,0 +1,787 @@
+ _______________________________________________________________
+ _____ ___  _   _ _   _ ____  ______   __ __     _______ _____
+|  ___/ _ \| | | | \ | |  _ \|  _ \ \ / / \ \   / |_   _|_   _|
+| |_ | | | | | | |  \| | | | | |_) \ V /   \ \ / /  | |   | |
+|  _|| |_| | |_| | |\  | |_| |  _ < | |     \ V /   | |   | |
+|_|   \___/ \___/|_| \_|____/|_| \_\|_|      \_/    |_|   |_|
+===============================================================
+ Foundry VTT | Foundry Virtual Tabletop ESModule loaded
+ Foundry VTT | Reestablishing existing session 0a4ceeb465bd7a73b17213b2
+foundry.mjs:168847 Foundry VTT | Connected to server socket using session 0a4ceeb465bd7a73b17213b2
+foundry.mjs:169003 Foundry VTT | Initializing Foundry Virtual Tabletop Game
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-formula.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-info.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-no-delimiters.hbs
+foundry.mjs:167817 Foundry VTT | Loaded localization file modules/popout/lang/pt-BR.json
+foundry.mjs:167817 Foundry VTT | Loaded localization file modules/pt-BR/lang/pt-BR.json
+foundry.mjs:167817 Foundry VTT | Loaded localization file modules/popout/lang/en.json
+foundry.mjs:167817 Foundry VTT | Loaded localization file systems/custom-system-builder/lang/en.json
+foundry.mjs:167817 Foundry VTT | Loaded localization file lang/en.json
+foundry.mjs:167466 Foundry VTT | Synchronized official game time in 1ms
+foundry.mjs:23855 Error: Failed data preparation for Actor.JQSCeMRfWBYwRp2I. Unrecognized component type tab
+    at Hooks.onError (foundry.mjs:23854:24)
+    at CustomActor._safePrepareData (foundry.mjs:32568:17)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+    at async #initializeGameView (foundry.mjs:170576:5)
+    at async Game.initialize (foundry.mjs:169026:5)
+    at async window.addEventListener.once (foundry.mjs:181096:3)Caused by: Error: Unrecognized component type tab
+    at ComponentFactory.createOneComponent (ComponentFactory.js:52:19)
+    at ComponentFactory.createMultipleComponents (ComponentFactory.js:34:32)
+    at Panel.fromJSON (Panel.js:238:44)
+    at TemplateSystem.prepareData (TemplateSystem.js:176:37)
+    at CustomActor.prepareBaseData (CustomActor.js:188:29)
+    at CustomActor.prepareData (foundry.mjs:32604:12)
+    at CustomActor.prepareData (foundry.mjs:41572:11)
+    at CustomActor._safePrepareData (foundry.mjs:32566:14)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+onError @ foundry.mjs:23855
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+foundry.mjs:23855 Error: Failed data preparation for Actor.K8ZN5evj0MHyOxPQ. Unrecognized component type tab
+    at Hooks.onError (foundry.mjs:23854:24)
+    at CustomActor._safePrepareData (foundry.mjs:32568:17)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+    at async #initializeGameView (foundry.mjs:170576:5)
+    at async Game.initialize (foundry.mjs:169026:5)
+    at async window.addEventListener.once (foundry.mjs:181096:3)Caused by: Error: Unrecognized component type tab
+    at ComponentFactory.createOneComponent (ComponentFactory.js:52:19)
+    at ComponentFactory.createMultipleComponents (ComponentFactory.js:34:32)
+    at Panel.fromJSON (Panel.js:238:44)
+    at TemplateSystem.prepareData (TemplateSystem.js:176:37)
+    at CustomActor.prepareBaseData (CustomActor.js:188:29)
+    at CustomActor.prepareData (foundry.mjs:32604:12)
+    at CustomActor.prepareData (foundry.mjs:41572:11)
+    at CustomActor._safePrepareData (foundry.mjs:32566:14)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+onError @ foundry.mjs:23855
+foundry.mjs:23855 Error: Failed data preparation for Actor.gNOoF8iSJ4jQeFJl. Unrecognized component type tab
+    at Hooks.onError (foundry.mjs:23854:24)
+    at CustomActor._safePrepareData (foundry.mjs:32568:17)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+    at async #initializeGameView (foundry.mjs:170576:5)
+    at async Game.initialize (foundry.mjs:169026:5)
+    at async window.addEventListener.once (foundry.mjs:181096:3)Caused by: Error: Unrecognized component type tab
+    at ComponentFactory.createOneComponent (ComponentFactory.js:52:19)
+    at ComponentFactory.createMultipleComponents (ComponentFactory.js:34:32)
+    at Panel.fromJSON (Panel.js:238:44)
+    at TemplateSystem.prepareData (TemplateSystem.js:176:37)
+    at CustomActor.prepareBaseData (CustomActor.js:188:29)
+    at CustomActor.prepareData (foundry.mjs:32604:12)
+    at CustomActor.prepareData (foundry.mjs:41572:11)
+    at CustomActor._safePrepareData (foundry.mjs:32566:14)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+onError @ foundry.mjs:23855
+Logger.js:39 Custom System Builder | All props for Humano (ItemHumano000001) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.ItemHumano000001).
+Logger.js:39 Custom System Builder | All props for Humano (ItemHumano000001) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.ItemHumano000001).
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/scene-navigation.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tab.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/players.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/hotbar.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/scene-controls-layers.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/scene-controls-tools.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/log.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/notifications.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/input.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/header.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/tracker.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/footer.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/directory/header.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/directory/directory.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/scene-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/folder-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/directory/footer.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/document-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/controls.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playlist-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playing.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/sound-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/compendiums.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/pack-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/settings.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/chat-message.hbs
+foundry.mjs:75114 Foundry VTT | Fonts loaded and ready.
+foundry.mjs:46163 Foundry VTT | Viewing Scene Cena
+foundry.mjs:94310 Foundry VTT | Drawing game canvas for scene Cena
+foundry.mjs:84197 Foundry VTT | Loading 52 Assets
+foundry.mjs:85137 Foundry VTT | Drawing the HiddenCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the RenderedCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the EnvironmentCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the PrimaryCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the WeatherEffects canvas layer
+foundry.mjs:85137 Foundry VTT | Drawing the EffectsCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasBackgroundAlterationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasIlluminationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasColorationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasDarknessEffects canvas layer
+foundry.mjs:85137 Foundry VTT | Drawing the CanvasVisibility canvas group
+worker.js:72 Worker TextureCompressor of FogExtractor | Initialized Worker
+foundry.mjs:85137 Foundry VTT | Drawing the InterfaceCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the GridLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the RegionLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the DrawingsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TemplateLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TilesLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the WallsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TokenLayer canvas layer
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/hud/waypoint-label.hbs
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+foundry.mjs:90022 Foundry VTT | Drawing the SoundsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the LightingLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the NotesLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the ControlsLayer canvas layer
+foundry.mjs:85137 Foundry VTT | Drawing the OverlayCanvasGroup canvas group
+foundry.mjs:168911 Applying buffered socket event: userActivity
+foundry.mjs:115132 O Foundry Virtual Tabletop requer uma janela utilizável com dimensões de 1024px por 768px ou maiores. As dimensões atuais desta janela são 982px por 794px. No momento, você tem um fator de zoom aplicado no sistema operacional ou no navegador, o que está reduzindo o tamanho efetivo da sua janela. Você deve aumentar o tamanho da sua janela ou reduzir o fator de zoom aplicado ao seu navegador, caso contrário, alguns recursos do software não funcionarão corretamente. 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+#validateResolution @ foundry.mjs:166558
+(anonymous) @ foundry.mjs:692
+foundry.mjs:115132 Atualizando itens Pandorha (v1.2)... 
+foundry.mjs:115132 0 itens atualizados com sucesso! 
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/item/v2/equippableItem-sheet.hbs
+foundry.mjs:115132 O Foundry Virtual Tabletop requer uma janela utilizável com dimensões de 1024px por 768px ou maiores. As dimensões atuais desta janela são 982px por 794px. No momento, você tem um fator de zoom aplicado no sistema operacional ou no navegador, o que está reduzindo o tamanho efetivo da sua janela. Você deve aumentar o tamanho da sua janela ou reduzir o fator de zoom aplicado ao seu navegador, caso contrário, alguns recursos do software não funcionarão corretamente. 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+#validateResolution @ foundry.mjs:166558
+(anonymous) @ foundry.mjs:692
+foundry.mjs:115132 Atualizando itens Pandorha (v1.2)... 
+foundry.mjs:115132 0 itens atualizados com sucesso! 
+foundry.mjs:115132 Atualizando itens Pandorha (v1.2)... 
+Logger.js:39 Custom System Builder | All props for Humano (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (null).
+Logger.js:39 Custom System Builder | All props for Humano (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (null).
+Logger.js:39 Custom System Builder | All props for Humano (IsVC0InMKBpY1FUM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.IsVC0InMKBpY1FUM).
+Logger.js:39 Custom System Builder | All props for Humano (IsVC0InMKBpY1FUM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.IsVC0InMKBpY1FUM).
+Logger.js:39 Custom System Builder | All props for Elfo (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Elfo (null).
+Logger.js:39 Custom System Builder | All props for Elfo (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Elfo (null).
+Logger.js:39 Custom System Builder | All props for Humano (IsVC0InMKBpY1FUM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.IsVC0InMKBpY1FUM).
+Logger.js:39 Custom System Builder | All props for Humano (IsVC0InMKBpY1FUM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.IsVC0InMKBpY1FUM).
+Logger.js:39 Custom System Builder | All props for Humano (IsVC0InMKBpY1FUM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.IsVC0InMKBpY1FUM).
+Logger.js:39 Custom System Builder | All props for Humano (IsVC0InMKBpY1FUM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.IsVC0InMKBpY1FUM).
+Logger.js:39 Custom System Builder | All props for Elfo (UsMpvt6ouzEfR0UE) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Elfo (Item.UsMpvt6ouzEfR0UE).
+Logger.js:39 Custom System Builder | All props for Elfo (UsMpvt6ouzEfR0UE) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Elfo (Item.UsMpvt6ouzEfR0UE).
+Logger.js:39 Custom System Builder | All props for Anão (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (null).
+Logger.js:39 Custom System Builder | All props for Anão (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (null).
+Logger.js:39 Custom System Builder | All props for Elfo (UsMpvt6ouzEfR0UE) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Elfo (Item.UsMpvt6ouzEfR0UE).
+Logger.js:39 Custom System Builder | All props for Elfo (UsMpvt6ouzEfR0UE) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Elfo (Item.UsMpvt6ouzEfR0UE).
+Logger.js:39 Custom System Builder | All props for Elfo (UsMpvt6ouzEfR0UE) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Elfo (Item.UsMpvt6ouzEfR0UE).
+Logger.js:39 Custom System Builder | All props for Elfo (UsMpvt6ouzEfR0UE) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Elfo (Item.UsMpvt6ouzEfR0UE).
+Logger.js:39 Custom System Builder | All props for Anão (m7Ltqg3bGbCGBCxc) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Item.m7Ltqg3bGbCGBCxc).
+Logger.js:39 Custom System Builder | All props for Anão (m7Ltqg3bGbCGBCxc) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Item.m7Ltqg3bGbCGBCxc).
+Logger.js:39 Custom System Builder | All props for Drakari (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Drakari (null).
+Logger.js:39 Custom System Builder | All props for Drakari (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Drakari (null).
+Logger.js:39 Custom System Builder | All props for Anão (m7Ltqg3bGbCGBCxc) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Item.m7Ltqg3bGbCGBCxc).
+Logger.js:39 Custom System Builder | All props for Anão (m7Ltqg3bGbCGBCxc) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Item.m7Ltqg3bGbCGBCxc).
+Logger.js:39 Custom System Builder | All props for Anão (m7Ltqg3bGbCGBCxc) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Item.m7Ltqg3bGbCGBCxc).
+Logger.js:39 Custom System Builder | All props for Anão (m7Ltqg3bGbCGBCxc) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Item.m7Ltqg3bGbCGBCxc).
+Logger.js:39 Custom System Builder | All props for Drakari (wOCEdnCG3Hu8i8bX) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Drakari (Item.wOCEdnCG3Hu8i8bX).
+Logger.js:39 Custom System Builder | All props for Drakari (wOCEdnCG3Hu8i8bX) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Drakari (Item.wOCEdnCG3Hu8i8bX).
+Logger.js:39 Custom System Builder | All props for Umbral (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Umbral (null).
+Logger.js:39 Custom System Builder | All props for Umbral (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Umbral (null).
+Logger.js:39 Custom System Builder | All props for Drakari (wOCEdnCG3Hu8i8bX) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Drakari (Item.wOCEdnCG3Hu8i8bX).
+Logger.js:39 Custom System Builder | All props for Drakari (wOCEdnCG3Hu8i8bX) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Drakari (Item.wOCEdnCG3Hu8i8bX).
+Logger.js:39 Custom System Builder | All props for Drakari (wOCEdnCG3Hu8i8bX) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Drakari (Item.wOCEdnCG3Hu8i8bX).
+Logger.js:39 Custom System Builder | All props for Drakari (wOCEdnCG3Hu8i8bX) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Drakari (Item.wOCEdnCG3Hu8i8bX).
+Logger.js:39 Custom System Builder | All props for Umbral (R5rGsZnwNRYEjqTa) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Umbral (Item.R5rGsZnwNRYEjqTa).
+Logger.js:39 Custom System Builder | All props for Umbral (R5rGsZnwNRYEjqTa) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Umbral (Item.R5rGsZnwNRYEjqTa).
+Logger.js:39 Custom System Builder | All props for Fera (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Fera (null).
+Logger.js:39 Custom System Builder | All props for Fera (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Fera (null).
+Logger.js:39 Custom System Builder | All props for Umbral (R5rGsZnwNRYEjqTa) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Umbral (Item.R5rGsZnwNRYEjqTa).
+Logger.js:39 Custom System Builder | All props for Umbral (R5rGsZnwNRYEjqTa) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Umbral (Item.R5rGsZnwNRYEjqTa).
+Logger.js:39 Custom System Builder | All props for Umbral (R5rGsZnwNRYEjqTa) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Umbral (Item.R5rGsZnwNRYEjqTa).
+Logger.js:39 Custom System Builder | All props for Umbral (R5rGsZnwNRYEjqTa) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Umbral (Item.R5rGsZnwNRYEjqTa).
+Logger.js:39 Custom System Builder | All props for Fera (YbMkFmBgqm2rCRr7) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Fera (Item.YbMkFmBgqm2rCRr7).
+Logger.js:39 Custom System Builder | All props for Fera (YbMkFmBgqm2rCRr7) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Fera (Item.YbMkFmBgqm2rCRr7).
+foundry.mjs:115132 6 itens atualizados com sucesso! 
+Logger.js:39 Custom System Builder | All props for Fera (YbMkFmBgqm2rCRr7) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Fera (Item.YbMkFmBgqm2rCRr7).
+Logger.js:39 Custom System Builder | All props for Fera (YbMkFmBgqm2rCRr7) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Fera (Item.YbMkFmBgqm2rCRr7).
+Logger.js:39 Custom System Builder | All props for Fera (YbMkFmBgqm2rCRr7) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Fera (Item.YbMkFmBgqm2rCRr7).
+Logger.js:39 Custom System Builder | All props for Fera (YbMkFmBgqm2rCRr7) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Fera (Item.YbMkFmBgqm2rCRr7).
+Logger.js:39 Custom System Builder | All props for Humano (IsVC0InMKBpY1FUM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.IsVC0InMKBpY1FUM).
+Logger.js:39 Custom System Builder | All props for Humano (IsVC0InMKBpY1FUM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.IsVC0InMKBpY1FUM).
+Logger.js:39 Custom System Builder | All props for Humano (IsVC0InMKBpY1FUM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.IsVC0InMKBpY1FUM).
+Logger.js:39 Custom System Builder | All props for Humano (IsVC0InMKBpY1FUM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.IsVC0InMKBpY1FUM).
+Logger.js:39 Custom System Builder | All props for Humano (IsVC0InMKBpY1FUM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.IsVC0InMKBpY1FUM).
+Logger.js:39 Custom System Builder | All props for Humano (IsVC0InMKBpY1FUM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.IsVC0InMKBpY1FUM).
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/actor/v2/actor-character-sheet.hbs
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Anão (m7Ltqg3bGbCGBCxc) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Item.m7Ltqg3bGbCGBCxc).
+Logger.js:39 Custom System Builder | All props for Anão (m7Ltqg3bGbCGBCxc) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Item.m7Ltqg3bGbCGBCxc).
+Logger.js:39 Custom System Builder | Created item contents w2GqoL3CUKq0ipHT
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Humano (IsVC0InMKBpY1FUM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.IsVC0InMKBpY1FUM).
+Logger.js:39 Custom System Builder | All props for Humano (IsVC0InMKBpY1FUM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.IsVC0InMKBpY1FUM).
+Logger.js:39 Custom System Builder | Created item contents Bc6ksFqjaaPond4M
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | Created item contents B4jASE3hlwiLXDpJ
+Logger.js:39 Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+Logger.js:39 Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+Logger.js:39 Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+Logger.js:39 Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+Logger.js:39 Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+Logger.js:39 Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+Logger.js:39 Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+foundry.mjs:23855 Error: Failed data preparation for Actor.JQSCeMRfWBYwRp2I. Unrecognized component type tab
+    at Hooks.onError (foundry.mjs:23854:24)
+    at CustomActor._safePrepareData (foundry.mjs:32568:17)
+    at CustomActor._initialize (foundry.mjs:32398:12)
+    at CustomActor.updateSource (foundry.mjs:11825:12)
+    at #handleUpdateDocuments (foundry.mjs:58810:20)
+    at async CustomActor.updateDocuments (foundry.mjs:12555:21)
+    at async CustomActor.update (foundry.mjs:12667:21)
+    at async CharacterSheetV2._processSubmitData (foundry.mjs:35130:7)
+    at async #onSubmitDocumentForm (foundry.mjs:35074:5)
+    at async CharacterSheetV2._onSubmitForm (foundry.mjs:28365:9)Caused by: Error: Unrecognized component type tab
+    at ComponentFactory.createOneComponent (ComponentFactory.js:52:19)
+    at ComponentFactory.createMultipleComponents (ComponentFactory.js:34:32)
+    at Panel.fromJSON (Panel.js:238:44)
+    at TemplateSystem.prepareData (TemplateSystem.js:176:37)
+    at CustomActor.prepareBaseData (CustomActor.js:188:29)
+    at CustomActor.prepareData (foundry.mjs:32604:12)
+    at CustomActor.prepareData (foundry.mjs:41572:11)
+    at CustomActor._safePrepareData (foundry.mjs:32566:14)
+    at CustomActor._initialize (foundry.mjs:32398:12)
+    at CustomActor.updateSource (foundry.mjs:11825:12)
+onError @ foundry.mjs:23855
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/actor/v2/actor-_template-sheet.hbs
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ItemContainer.js:555 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'canBeRendered')
+    at ItemContainer.js:555:50
+    at Array.forEach (<anonymous>)
+    at ItemContainer._getElement (ItemContainer.js:551:47)
+    at async ItemContainer.render (Component.js:273:25)
+    at async Tab.renderContents (Container.js:55:25)
+    at async Tab._getElement (Tab.js:48:33)
+    at async Tab.render (Component.js:273:25)
+    at async TabbedPanel._getElement (TabbedPanel.js:61:36)
+    at async TabbedPanel.render (Component.js:273:25)
+    at async Table._getElement (Table.js:130:33)
+foundry.mjs:115132 O Foundry Virtual Tabletop requer uma janela utilizável com dimensões de 1024px por 768px ou maiores. As dimensões atuais desta janela são 982px por 794px. No momento, você tem um fator de zoom aplicado no sistema operacional ou no navegador, o que está reduzindo o tamanho efetivo da sua janela. Você deve aumentar o tamanho da sua janela ou reduzir o fator de zoom aplicado ao seu navegador, caso contrário, alguns recursos do software não funcionarão corretamente. 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+#validateResolution @ foundry.mjs:166558
+(anonymous) @ foundry.mjs:692

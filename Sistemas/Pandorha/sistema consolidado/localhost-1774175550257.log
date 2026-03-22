@@ -1,0 +1,433 @@
+foundry.mjs:181072 _______________________________________________________________
+ _____ ___  _   _ _   _ ____  ______   __ __     _______ _____
+|  ___/ _ \| | | | \ | |  _ \|  _ \ \ / / \ \   / |_   _|_   _|
+| |_ | | | | | | |  \| | | | | |_) \ V /   \ \ / /  | |   | |
+|  _|| |_| | |_| | |\  | |_| |  _ < | |     \ V /   | |   | |
+|_|   \___/ \___/|_| \_|____/|_| \_\|_|      \_/    |_|   |_|
+===============================================================
+foundry.mjs:181073 Foundry VTT | Foundry Virtual Tabletop ESModule loaded
+foundry.mjs:181085 Foundry VTT | Reestablishing existing session 27841b3364eadaa57d5b2a16
+foundry.mjs:168847 Foundry VTT | Connected to server socket using session 27841b3364eadaa57d5b2a16
+foundry.mjs:169003 Foundry VTT | Initializing Foundry Virtual Tabletop Game
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-formula.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-info.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-no-delimiters.hbs
+foundry.mjs:167817 Foundry VTT | Loaded localization file modules/popout/lang/pt-BR.json
+foundry.mjs:167817 Foundry VTT | Loaded localization file modules/pt-BR/lang/pt-BR.json
+foundry.mjs:167817 Foundry VTT | Loaded localization file systems/custom-system-builder/lang/en.json
+foundry.mjs:167817 Foundry VTT | Loaded localization file lang/en.json
+foundry.mjs:167817 Foundry VTT | Loaded localization file modules/popout/lang/en.json
+foundry.mjs:167466 Foundry VTT | Synchronized official game time in 1ms
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+Logger.js:39 Custom System Builder | Item template has been deleted for item Anão - Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+foundry.mjs:23855 Error: Failed data preparation for Actor.SpWW4pln0EJ1BTXa. Cannot read properties of undefined (reading 'warn')
+    at Hooks.onError (foundry.mjs:23854:24)
+    at CustomActor._safePrepareData (foundry.mjs:32568:17)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+    at async #initializeGameView (foundry.mjs:170576:5)
+    at async Game.initialize (foundry.mjs:169026:5)
+    at async window.addEventListener.once (foundry.mjs:181096:3)Caused by: TypeError: Cannot read properties of undefined (reading 'warn')
+    at TemplateSystem.getModifiers (TemplateSystem.js:623:34)
+    at TemplateSystem._prepareEntityData (TemplateSystem.js:198:35)
+    at TemplateSystem.prepareData (TemplateSystem.js:179:14)
+    at CustomActor.prepareBaseData (CustomActor.js:188:29)
+    at CustomActor.prepareData (foundry.mjs:32604:12)
+    at CustomActor.prepareData (foundry.mjs:41572:11)
+    at CustomActor._safePrepareData (foundry.mjs:32566:14)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+    at async #initializeGameView (foundry.mjs:170576:5)
+onError @ foundry.mjs:23855
+Logger.js:39 Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+Logger.js:39 Custom System Builder | All props for Humanos (1e8PXsHCuEjdovpe) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.DsuH3ouBXiVaexmF.Item.1e8PXsHCuEjdovpe).
+Logger.js:39 Custom System Builder | All props for Humanos (1e8PXsHCuEjdovpe) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.DsuH3ouBXiVaexmF.Item.1e8PXsHCuEjdovpe).
+Logger.js:39 Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | All props for Humanos (ekCBgFPICC0hPDLM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.ekCBgFPICC0hPDLM).
+Logger.js:39 Custom System Builder | All props for Humanos (ekCBgFPICC0hPDLM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.ekCBgFPICC0hPDLM).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+foundry.mjs:23855 Error: Failed data preparation for Actor.K8ZN5evj0MHyOxPQ. Unrecognized component type tab
+    at Hooks.onError (foundry.mjs:23854:24)
+    at CustomActor._safePrepareData (foundry.mjs:32568:17)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+    at async #initializeGameView (foundry.mjs:170576:5)
+    at async Game.initialize (foundry.mjs:169026:5)
+    at async window.addEventListener.once (foundry.mjs:181096:3)Caused by: Error: Unrecognized component type tab
+    at ComponentFactory.createOneComponent (ComponentFactory.js:52:19)
+    at ComponentFactory.createMultipleComponents (ComponentFactory.js:34:32)
+    at Panel.fromJSON (Panel.js:238:44)
+    at TemplateSystem.prepareData (TemplateSystem.js:176:37)
+    at CustomActor.prepareBaseData (CustomActor.js:188:29)
+    at CustomActor.prepareData (foundry.mjs:32604:12)
+    at CustomActor.prepareData (foundry.mjs:41572:11)
+    at CustomActor._safePrepareData (foundry.mjs:32566:14)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+onError @ foundry.mjs:23855
+foundry.mjs:23855 Error: Failed data preparation for Actor.gNOoF8iSJ4jQeFJl. Unrecognized component type tab
+    at Hooks.onError (foundry.mjs:23854:24)
+    at CustomActor._safePrepareData (foundry.mjs:32568:17)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+    at async #initializeGameView (foundry.mjs:170576:5)
+    at async Game.initialize (foundry.mjs:169026:5)
+    at async window.addEventListener.once (foundry.mjs:181096:3)Caused by: Error: Unrecognized component type tab
+    at ComponentFactory.createOneComponent (ComponentFactory.js:52:19)
+    at ComponentFactory.createMultipleComponents (ComponentFactory.js:34:32)
+    at Panel.fromJSON (Panel.js:238:44)
+    at TemplateSystem.prepareData (TemplateSystem.js:176:37)
+    at CustomActor.prepareBaseData (CustomActor.js:188:29)
+    at CustomActor.prepareData (foundry.mjs:32604:12)
+    at CustomActor.prepareData (foundry.mjs:41572:11)
+    at CustomActor._safePrepareData (foundry.mjs:32566:14)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+onError @ foundry.mjs:23855
+Logger.js:39 Custom System Builder | All props for Anões (bSKfWNMfRsJWfnbX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Item.bSKfWNMfRsJWfnbX).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (bSKfWNMfRsJWfnbX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Item.bSKfWNMfRsJWfnbX).
+Logger.js:39 Custom System Builder | All props for Drakari (ZLR80ZgQveFC0QSg) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Drakari (Item.ZLR80ZgQveFC0QSg).
+Logger.js:39 Custom System Builder | All props for Drakari (ZLR80ZgQveFC0QSg) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Drakari (Item.ZLR80ZgQveFC0QSg).
+Logger.js:39 Custom System Builder | All props for Elfos (WaSNkFJUVNqq3Qm3) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Elfos (Item.WaSNkFJUVNqq3Qm3).
+Logger.js:39 Custom System Builder | All props for Elfos (WaSNkFJUVNqq3Qm3) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Elfos (Item.WaSNkFJUVNqq3Qm3).
+Logger.js:39 Custom System Builder | All props for Feras (PznmdGSo0dM7ySbe) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Feras (Item.PznmdGSo0dM7ySbe).
+Logger.js:39 Custom System Builder | All props for Feras (PznmdGSo0dM7ySbe) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Feras (Item.PznmdGSo0dM7ySbe).
+Logger.js:39 Custom System Builder | All props for Humanos (0K05nsHImr37wdEL) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Item.0K05nsHImr37wdEL).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Humanos (0K05nsHImr37wdEL) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Item.0K05nsHImr37wdEL).
+Logger.js:39 Custom System Builder | All props for Umbrais (YOovM3LlsPYj8GXU) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Umbrais (Item.YOovM3LlsPYj8GXU).
+Logger.js:39 Custom System Builder | All props for Umbrais (YOovM3LlsPYj8GXU) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Umbrais (Item.YOovM3LlsPYj8GXU).
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/scene-navigation.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tab.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/players.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/hotbar.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/scene-controls-layers.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/scene-controls-tools.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/log.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/notifications.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/input.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/header.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/tracker.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/footer.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/directory/header.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/directory/directory.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/scene-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/folder-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/directory/footer.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/document-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/controls.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playlist-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playing.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/sound-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/compendiums.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/pack-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/settings.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/chat-message.hbs
+foundry.mjs:75114 Foundry VTT | Fonts loaded and ready.
+foundry.mjs:46163 Foundry VTT | Viewing Scene Cena
+foundry.mjs:94310 Foundry VTT | Drawing game canvas for scene Cena
+foundry.mjs:84197 Foundry VTT | Loading 51 Assets
+foundry.mjs:85137 Foundry VTT | Drawing the HiddenCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the RenderedCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the EnvironmentCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the PrimaryCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the WeatherEffects canvas layer
+foundry.mjs:85137 Foundry VTT | Drawing the EffectsCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasBackgroundAlterationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasIlluminationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasColorationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasDarknessEffects canvas layer
+foundry.mjs:85137 Foundry VTT | Drawing the CanvasVisibility canvas group
+worker.js:72 Worker TextureCompressor of FogExtractor | Initialized Worker
+foundry.mjs:85137 Foundry VTT | Drawing the InterfaceCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the GridLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the RegionLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the DrawingsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TemplateLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TilesLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the WallsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TokenLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the SoundsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the LightingLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the NotesLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the ControlsLayer canvas layer
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/hud/waypoint-label.hbs
+foundry.mjs:85137 Foundry VTT | Drawing the OverlayCanvasGroup canvas group
+foundry.mjs:168911 Applying buffered socket event: userActivity
+VM1901:276 PANDORHA | Gatilho de Ancestralidade Ativado!
+VM1901:310 PANDORHA | Sincronizado: Humanos
+VM1901:310 PANDORHA | Sincronizado: Elfos
+VM1901:310 PANDORHA | Sincronizado: Anões
+VM1901:310 PANDORHA | Sincronizado: Drakari
+VM1901:310 PANDORHA | Sincronizado: Umbrais
+VM1901:310 PANDORHA | Sincronizado: Feras
+foundry.mjs:115132 Sincronização Pandorha v1.4 Concluída! Gatilho do Seletor Ativo. 
+VM1901:374 PANDORHA | Filtros corrigidos no Actor Template: Template Ator Pandorha (OFICIAL)
+foundry.mjs:115132 Filtros de Ancestralidade e Classe foram blindados com sucesso em 1 Ficha(s)! 
+VM1902:224 PANDORHA | Gatilho de Classe Ativado!
+Logger.js:39 Custom System Builder | All props for Vanguarda (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Vanguarda (null).
+Logger.js:39 Custom System Builder | All props for Vanguarda (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Vanguarda (null).
+Logger.js:39 Custom System Builder | All props for Vanguarda (FmWZ6cPuD7UKJOf4) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Vanguarda (Item.FmWZ6cPuD7UKJOf4).
+Logger.js:39 Custom System Builder | All props for Vanguarda (FmWZ6cPuD7UKJOf4) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Vanguarda (Item.FmWZ6cPuD7UKJOf4).
+VM1902:270 PANDORHA | Classe criada: Vanguarda
+Logger.js:39 Custom System Builder | All props for Tecelão de Sombras (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Tecelão de Sombras (null).
+Logger.js:39 Custom System Builder | All props for Tecelão de Sombras (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Tecelão de Sombras (null).
+Logger.js:39 Custom System Builder | All props for Vanguarda (FmWZ6cPuD7UKJOf4) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Vanguarda (Item.FmWZ6cPuD7UKJOf4).
+Logger.js:39 Custom System Builder | All props for Vanguarda (FmWZ6cPuD7UKJOf4) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Vanguarda (Item.FmWZ6cPuD7UKJOf4).
+Logger.js:39 Custom System Builder | All props for Vanguarda (FmWZ6cPuD7UKJOf4) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Vanguarda (Item.FmWZ6cPuD7UKJOf4).
+Logger.js:39 Custom System Builder | All props for Vanguarda (FmWZ6cPuD7UKJOf4) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Vanguarda (Item.FmWZ6cPuD7UKJOf4).
+Logger.js:39 Custom System Builder | All props for Tecelão de Sombras (ll0bdHbJOuNE7aZF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Tecelão de Sombras (Item.ll0bdHbJOuNE7aZF).
+Logger.js:39 Custom System Builder | All props for Tecelão de Sombras (ll0bdHbJOuNE7aZF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Tecelão de Sombras (Item.ll0bdHbJOuNE7aZF).
+VM1902:270 PANDORHA | Classe criada: Tecelão de Sombras
+Logger.js:39 Custom System Builder | All props for Emissário (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Emissário (null).
+Logger.js:39 Custom System Builder | All props for Emissário (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Emissário (null).
+Logger.js:39 Custom System Builder | All props for Tecelão de Sombras (ll0bdHbJOuNE7aZF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Tecelão de Sombras (Item.ll0bdHbJOuNE7aZF).
+Logger.js:39 Custom System Builder | All props for Tecelão de Sombras (ll0bdHbJOuNE7aZF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Tecelão de Sombras (Item.ll0bdHbJOuNE7aZF).
+Logger.js:39 Custom System Builder | All props for Tecelão de Sombras (ll0bdHbJOuNE7aZF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Tecelão de Sombras (Item.ll0bdHbJOuNE7aZF).
+Logger.js:39 Custom System Builder | All props for Tecelão de Sombras (ll0bdHbJOuNE7aZF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Tecelão de Sombras (Item.ll0bdHbJOuNE7aZF).
+Logger.js:39 Custom System Builder | All props for Emissário (6Bjuv2QiVV7hFKOg) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Emissário (Item.6Bjuv2QiVV7hFKOg).
+Logger.js:39 Custom System Builder | All props for Emissário (6Bjuv2QiVV7hFKOg) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Emissário (Item.6Bjuv2QiVV7hFKOg).
+VM1902:270 PANDORHA | Classe criada: Emissário
+Logger.js:39 Custom System Builder | All props for Caçador (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (null).
+Logger.js:39 Custom System Builder | All props for Caçador (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (null).
+Logger.js:39 Custom System Builder | All props for Emissário (6Bjuv2QiVV7hFKOg) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Emissário (Item.6Bjuv2QiVV7hFKOg).
+Logger.js:39 Custom System Builder | All props for Emissário (6Bjuv2QiVV7hFKOg) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Emissário (Item.6Bjuv2QiVV7hFKOg).
+Logger.js:39 Custom System Builder | All props for Emissário (6Bjuv2QiVV7hFKOg) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Emissário (Item.6Bjuv2QiVV7hFKOg).
+Logger.js:39 Custom System Builder | All props for Emissário (6Bjuv2QiVV7hFKOg) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Emissário (Item.6Bjuv2QiVV7hFKOg).
+Logger.js:39 Custom System Builder | All props for Caçador (96dunHElT9YUHwbY) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.96dunHElT9YUHwbY).
+Logger.js:39 Custom System Builder | All props for Caçador (96dunHElT9YUHwbY) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.96dunHElT9YUHwbY).
+VM1902:270 PANDORHA | Classe criada: Caçador
+foundry.mjs:115132 Instalador de Classes Pandorha concluído! 4 classes sincronizadas. Arraste para a ficha do personagem. 
+Logger.js:39 Custom System Builder | All props for Caçador (96dunHElT9YUHwbY) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.96dunHElT9YUHwbY).
+Logger.js:39 Custom System Builder | All props for Caçador (96dunHElT9YUHwbY) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.96dunHElT9YUHwbY).
+Logger.js:39 Custom System Builder | All props for Caçador (96dunHElT9YUHwbY) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.96dunHElT9YUHwbY).
+Logger.js:39 Custom System Builder | All props for Caçador (96dunHElT9YUHwbY) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.96dunHElT9YUHwbY).
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/actor/v2/actor-character-sheet.hbs
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/item/v2/equippableItem-sheet.hbs
+Logger.js:39 Custom System Builder | All props for Caçador (96dunHElT9YUHwbY) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.96dunHElT9YUHwbY).
+Logger.js:39 Custom System Builder | All props for Caçador (96dunHElT9YUHwbY) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.96dunHElT9YUHwbY).
+Logger.js:39 Custom System Builder | All props for Caçador (96dunHElT9YUHwbY) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.96dunHElT9YUHwbY).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (96dunHElT9YUHwbY) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.96dunHElT9YUHwbY).
+Logger.js:39 Custom System Builder | All props for Caçador (96dunHElT9YUHwbY) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.96dunHElT9YUHwbY).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (96dunHElT9YUHwbY) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.96dunHElT9YUHwbY).
+Logger.js:39 Custom System Builder | All props for Caçador (96dunHElT9YUHwbY) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.96dunHElT9YUHwbY).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (96dunHElT9YUHwbY) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.96dunHElT9YUHwbY).
+Logger.js:39 Custom System Builder | Created item contents JsMLLBET5DJJvWUB
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+VM1902:219 PANDORHA | Classe detectada: Caçador. Abrindo Seletor...
+foundry.mjs:6727 Error: The V1 Application framework is deprecated, and will be removed in a later core software version. Please use the V2 version of the Application framework available under foundry.applications.api.ApplicationV2.
+Deprecated since Version 13
+Backwards-compatible support will be removed in Version 16
+    at Object.logCompatibilityWarning (foundry.mjs:6715:17)
+    at new Application (foundry.mjs:37008:21)
+    at new Dialog (foundry.mjs:117100:5)
+    at openClassSelector (eval at #executeScript (foundry.mjs:45528:16), <anonymous>:136:9)
+    at Object.eval [as fn] (eval at #executeScript (foundry.mjs:45528:16), <anonymous>:220:17)
+    at #call (foundry.mjs:23832:20)
+    at Hooks.callAll (foundry.mjs:23791:17)
+    at foundry.mjs:58663:17
+    at foundry.mjs:58668:41
+    at Array.map (<anonymous>)
+logCompatibilityWarning @ foundry.mjs:6727
+foundry.mjs:37351 Foundry VTT | Rendering Dialog
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/hud/dialog.html
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/app-window.html
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+foundry.mjs:115132 Classe Caçador configurada com sucesso! 
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (bSKfWNMfRsJWfnbX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Item.bSKfWNMfRsJWfnbX).
+Logger.js:39 Custom System Builder | All props for Anões (bSKfWNMfRsJWfnbX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Item.bSKfWNMfRsJWfnbX).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (bSKfWNMfRsJWfnbX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Item.bSKfWNMfRsJWfnbX).
+Logger.js:39 Custom System Builder | Created item contents ikXafBFnKb3rjpc5
+Logger.js:39 Custom System Builder | All props for Anões (ikXafBFnKb3rjpc5) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.ikXafBFnKb3rjpc5).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (ikXafBFnKb3rjpc5) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.ikXafBFnKb3rjpc5).
+Logger.js:39 Custom System Builder | All props for Anões (ikXafBFnKb3rjpc5) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.ikXafBFnKb3rjpc5).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (ikXafBFnKb3rjpc5) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.ikXafBFnKb3rjpc5).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | All props for Anões (ikXafBFnKb3rjpc5) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.ikXafBFnKb3rjpc5).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (ikXafBFnKb3rjpc5) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.ikXafBFnKb3rjpc5).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+VM1901:271 PANDORHA | Ancestralidade detectada: Anões. Abrindo Seletor...
+foundry.mjs:37351 Foundry VTT | Rendering Dialog
+Logger.js:39 Custom System Builder | All props for Anões (ikXafBFnKb3rjpc5) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.ikXafBFnKb3rjpc5).
+Logger.js:39 Custom System Builder | All props for Anões (ikXafBFnKb3rjpc5) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.ikXafBFnKb3rjpc5).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | All props for Anões (ikXafBFnKb3rjpc5) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.ikXafBFnKb3rjpc5).
+Logger.js:39 Custom System Builder | All props for Anões (ikXafBFnKb3rjpc5) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.ikXafBFnKb3rjpc5).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | All props for Caçador (JsMLLBET5DJJvWUB) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.JsMLLBET5DJJvWUB).
+Logger.js:39 Custom System Builder | All props for Anões (ikXafBFnKb3rjpc5) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.ikXafBFnKb3rjpc5).
+Logger.js:39 Custom System Builder | All props for Anões (ikXafBFnKb3rjpc5) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.ikXafBFnKb3rjpc5).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+foundry.mjs:115132 Ancestralidade Anões configurada com sucesso! 
+foundry.mjs:115132 O Foundry Virtual Tabletop requer uma janela utilizável com dimensões de 1024px por 768px ou maiores. As dimensões atuais desta janela são 982px por 794px. No momento, você tem um fator de zoom aplicado no sistema operacional ou no navegador, o que está reduzindo o tamanho efetivo da sua janela. Você deve aumentar o tamanho da sua janela ou reduzir o fator de zoom aplicado ao seu navegador, caso contrário, alguns recursos do software não funcionarão corretamente. 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+#validateResolution @ foundry.mjs:166558
+(anonymous) @ foundry.mjs:692

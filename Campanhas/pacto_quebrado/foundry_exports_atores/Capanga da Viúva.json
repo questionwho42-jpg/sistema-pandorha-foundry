@@ -1,0 +1,49 @@
+{
+    "name": "Capanga da Viúva",
+    "type": "monster",
+    "system": {
+        "eixos": {
+            "fisico": 2,
+            "mental": 0,
+            "social": 0,
+            "conflito": 3,
+            "interacao": 0,
+            "resistencia": 0
+        },
+        "resources": {
+            "hp": {
+                "value": 11,
+                "max": 11
+            },
+            "pv": {
+                "value": 5,
+                "max": 5
+            },
+            "ee": {
+                "value": 5,
+                "max": 5
+            }
+        },
+        "defenses": {
+            "ca": {
+                "value": 12
+            }
+        },
+        "derived": {
+            "initiative": {
+                "value": 2
+            }
+        }
+    },
+    "items": [
+        {
+            "name": "Ataque",
+            "type": "weapon",
+            "system": {
+                "description": {
+                    "value": "Descrição"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Template de Habilidade",
+  "type": "_equippableItemTemplate",
+  "data": {
+    "body": {
+      "type": "panel",
+      "contents": [
+        { "type": "text", "key": "matriz", "label": "Matriz/Tipo" },
+        { "type": "textarea", "key": "efeito", "label": "Efeito da Habilidade" },
+        { "type": "text", "key": "custo", "label": "Custo (EE/PV)" }
+      ]
+    }
+  }
+}

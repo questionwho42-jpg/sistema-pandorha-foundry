@@ -1,0 +1,31 @@
+{
+    "name": "Mira Ferrosângue — Líder da Vila",
+    "pages": [
+        {
+            "name": "Mira Ferrosângue — Líder da Vila",
+            "type": "text",
+            "text": {
+                "content": "<h3>Mira Ferrosângue — Líder da Vila</h3><br>**Nível:** 5 | **ND:** 3 | **Tipo:** Humanoide (Humana)<br><br>#### Bloco de Estatísticas<br><br>| Stat       | Valor |     | Stat            | Valor |<br>| ---------- | :---: | --- | --------------- | :---: |<br>| **Físico** |   2   |     | **Conflito**    |   2   |<br>| **Mental** |   3   |     | **Interação**   |   3   |<br>| **Social** |   3   |     | **Resistência** |   1   |<br><br>| Derivado       | Fórmula                                     |               Valor               |<br>| -------------- | ------------------------------------------- | :-------------------------------: |<br>| **HP**         | HP Base Classe + (Fís+Res)×5                |                35                 |<br>| **CA**         | 10 + Nível + Armadura + Fís (lim.) + Escudo | 19 (Couraça +4, Escudo +1, Fís 2) |<br>| **Vigor**      | (Fís+Int) + Nível                           |                10                 |<br>| **EE**         | (Men+Res) + Nível + Classe                  |                 9                 |<br>| **Iniciativa** | Nível + Mental + Interação                  |                +11                |<br>| **Velocidade** | Base                                        |                9m                 |<br>| **Percepção**  | Nível + Mental + Interação                  |          +11 (Treinada)           |<br><br>#### Perícias (Treinadas)<br><br>- Diplomacia (Social + Interação): +11<br>- Intimidação (Social + Conflito): +10<br>- Engenharia Rúnica (Mental + Interação): +11<br>- Tática Militar (Mental + Conflito): +10<br>- Atletismo (Físico + Conflito): +9<br><br>#### Ações (3 PA por turno)<br><br>| Ação                    |    Custo     | Teste de Ataque                          | Dano/Efeito                                                                                               |<br>| ----------------------- | :----------: | ---------------------------------------- | --------------------------------------------------------------------------------------------------------- |<br>| **Espada Longa**        | [A] [Ataque] | Físico + Conflito + Nível = **+9** vs CA | 1d8+2 cortante                                                                                            |<br>| **Golpe de Escudo**     | [A] [Ataque] | Físico + Conflito + Nível = **+9** vs CA | 1d6+2 contusão + **Empurrão** 1,5m (Físico + Resistência DC 14 para resistir)                             |<br>| **Ordem Tática**        |     [A]      | — (automático)                           | 1 aliado em 9m pode usar **Reação** para se mover 3m gratuitamente OU ganha +2 ao próximo teste de ataque |<br>| **Comando de Formação** |     [AA]     | —                                        | Até 3 aliados em 9m ganham +1 CA até o próximo turno de Mira                                              |<br>| **Mover**               |     [A]      | —                                        | Move até 9m                                                                                               |<br>| **Passo Seguro**        |     [A]      | —                                        | Move 1,5m, não provoca AO                                                                                 |<br>| **Agarrar**             | [A] [Ataque] | Físico + Conflito + Nível = **+9** vs CA | Alvo **Agarrado**                                                                                         |<br>| **Empurrar**            | [A] [Ataque] | Físico + Conflito + Nível = **+9** vs CA | Empurra 1,5m ou **Caído**                                                                                 |<br><br>#### Reações [R] (1/rodada)<br><br>| Reação                     | Gatilho                          | Efeito                                               |<br>| -------------------------- | -------------------------------- | ---------------------------------------------------- |<br>| **Ataque de Oportunidade** | Inimigo sai do alcance sem Passo | 1 ataque corpo-a-corpo (+9, 1d8+2)                   |<br>| **Escudo Interposto**      | Aliado adjacente é atacado       | Mira recebe o ataque no lugar, usando sua própria CA |<br><br>#### Traços e Habilidades Passivas<br><br>- **Liderança Natural:** Aliados dentro de 9m de Mira recebem +1 em testes de Resistência contra medo (Mental + Resistência)<br>- **Veterana de Engenharia:** Vantagem em testes de Mental + Interação relacionados a mecanismos rúnicos, armadilhas e construtos<br>- **Ferida Grave (Ativo no Cap.1-2):** Enquanto ferida, Mira tem -2 em todos os testes e não pode usar Comando de Formação. Só pode dar Ordens Táticas deitada<br><br>#### Equipamento<br><br>- Espada longa (1d8 cortante) | Escudo leve (+1 CA)<br>- Couraça (+4 CA, lim. Físico 3) | Kit de ferramentas rúnicas<br>- Anel de identificação de Morden (partido ao meio — símbolo da fuga)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Que Ferroforja sobreviva independente<br>- **Medo:** Que a vila descubra que ela destruiu protótipos de armas em Morden<br>- **Segredo:** Reconhece o Compasso como tecnologia pré-Morden<br><br>#### Falas<br><br>1. _\"Esta vila não pertence a Morden. Nós a arrancamos da terra com as mãos.\"_<br>2. _\"Baixe a arma, soldado. Nesta vila, ninguém atira primeiro.\"_<br>3. _(Delirando)_ _\"As runas... não são nossas... não são de Morden... são de antes...\"_<br>4. _\"Eu sei o que é ser abandonada. Não farei isso com meu povo.\"_<br><br>---<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {
+                        "hp": "35",
+                        "ca": "10"
+                    }
+                }
+            }
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "type": "person",
+            "attributes": {
+                "hp": "35",
+                "ca": "10"
+            }
+        }
+    }
+}

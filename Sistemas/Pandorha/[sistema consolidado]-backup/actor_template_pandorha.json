@@ -1,0 +1,59 @@
+{
+  "name": "Aventureiro de Pandorha",
+  "type": "character",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "identidade": {
+      "jogador": "",
+      "ancestralidade": "",
+      "classe": "",
+      "antecedente": "",
+      "xp": 0,
+      "nivel": 1
+    },
+    "eixos": {
+      "fisico": 1,
+      "mental": 1,
+      "social": 1,
+      "total": 3
+    },
+    "aplicacoes": {
+      "conflito": 1,
+      "interacao": 1,
+      "resistencia": 1,
+      "total": 3
+    },
+    "atributos": {
+      "hp": {
+        "value": 10,
+        "max": 10,
+        "base_classe": 10,
+        "bonus_raciais": 0
+      },
+      "pv": {
+        "value": 5,
+        "max": 5,
+        "bonus_classe": 0
+      },
+      "ee": {
+        "value": 5,
+        "max": 5,
+        "bonus_classe": 0
+      },
+      "defesas": {
+        "ca": 10,
+        "armadura": 0,
+        "escudo": 0,
+        "iniciativa": 1,
+        "velocidade": 9,
+        "carga": {
+          "value": 0,
+          "max": 6
+        }
+      }
+    },
+    "biografia": "",
+    "fama": 0,
+    "influencia": 0
+  }
+}

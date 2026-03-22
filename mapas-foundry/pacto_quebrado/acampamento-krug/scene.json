@@ -1,0 +1,81 @@
+{
+  "name": "As Colinas: Acampamento de Krug",
+  "background": {
+    "src": "mapas-foundry/pacto_quebrado/acampamento-krug/background.png"
+  },
+  "width": 3000,
+  "height": 2000,
+  "grid": {
+    "type": 1,
+    "size": 100,
+    "color": "#000000",
+    "alpha": 0.2,
+    "distance": 1.5,
+    "units": "m"
+  },
+  "tokenVision": true,
+  "fog": {
+    "exploration": true
+  },
+  "environment": {
+    "darknessLevel": 0.4
+  },
+  "walls": [
+    {
+      "c": [2200, 1400, 2600, 1400],
+      "move": 1,
+      "sense": 1
+    },
+    {
+      "c": [2200, 1800, 2600, 1800],
+      "move": 1,
+      "sense": 1
+    },
+    {
+      "c": [2200, 1400, 2200, 1800],
+      "move": 1,
+      "sense": 1
+    },
+    {
+      "c": [2600, 1400, 2600, 1800],
+      "move": 1,
+      "sense": 1
+    }
+  ],
+  "lights": [
+    {
+      "x": 1500,
+      "y": 1000,
+      "config": {
+        "alpha": 0.3,
+        "bright": 8,
+        "dim": 15,
+        "color": "#ff4500",
+        "animation": {
+          "type": "torch",
+          "speed": 5
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "x": 2400,
+      "y": 1600,
+      "text": "Jaula de Krug: Contém o comerciante orc. Pode ser aberta com força (Físico DC 18) ou chaves dos batedores.",
+      "icon": "icons/svg/cage.svg"
+    },
+    {
+      "x": 1000,
+      "y": 800,
+      "text": "Tendas dos Batedores: 2 Batedores Renegados (ND 1) estão aqui.",
+      "icon": "icons/svg/trap.svg"
+    },
+    {
+      "x": 2400,
+      "y": 1300,
+      "text": "Revelação Social: Krug conta sobre Dente-de-Ouro e o Velho Garth.",
+      "icon": "icons/svg/speech.svg"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+    "name": "Sargento Harken — Legionário de Morden",
+    "pages": [
+        {
+            "name": "Sargento Harken — Legionário de Morden",
+            "type": "text",
+            "text": {
+                "content": "<h3>Sargento Harken — Legionário de Morden</h3><br>**Nível:** 5 | **ND:** 3 | **Tipo:** Humanoide (Humano, Veterano)<br><br>#### Bloco de Estatísticas<br><br>| Stat       | Valor |     | Stat            | Valor |<br>| ---------- | :---: | --- | --------------- | :---: |<br>| **Físico** |   3   |     | **Conflito**    |   3   |<br>| **Mental** |   1   |     | **Interação**   |   1   |<br>| **Social** |   2   |     | **Resistência** |   3   |<br><br>| Derivado       | Fórmula                              |                    Valor                    |<br>| -------------- | ------------------------------------ | :-----------------------------------------: |<br>| **HP**         | Base + (Fís+Res)×5                   |                     45                      |<br>| **CA**         | 10 + Nível + Armadura + Escudo + Fís | 22 (Armadura completa +5, Escudo +2, Fís 3) |<br>| **Vigor**      | (Fís+Int) + Nível                    |                      9                      |<br>| **Iniciativa** | Nível + Men + Int                    |                     +7                      |<br>| **Velocidade** | Base (armadura pesada)               |                     6m                      |<br><br>#### Perícias (Treinadas)<br><br>- Atletismo (Físico + Conflito): +11<br>- Sobrevivência (Mental + Resistência): +9<br>- Intimidação (Social + Conflito): +10<br>- Resistência Física (Físico + Resistência): +11<br>- Conhecimento Militar (Mental + Conflito): +9<br><br>#### Ações (3 PA por turno)<br><br>| Ação                      |     Custo     | Teste de Ataque                           | Dano/Efeito                                                                          |<br>| ------------------------- | :-----------: | ----------------------------------------- | ------------------------------------------------------------------------------------ |<br>| **Lança da Legião**       | [A] [Ataque]  | Físico + Conflito + Nível = **+11** vs CA | 1d8+3 perfurante (alcance 3m)                                                        |<br>| **Ataque de Lança Duplo** | [AA] [Ataque] | +11 (1°) / +6 (2°) vs CA                  | 1d8+3 + 1d8+3 perfurante                                                             |<br>| **Investida de Lança**    | [AA] [Ataque] | +11 vs CA (após mover 6m)                 | 2d8+6 perfurante + **Empurrão** 3m                                                   |<br>| **Bloquear com Escudo**   |      [A]      | —                                         | +2 CA até o próximo turno. Se ataque errar por 5+, atacante fica **Exposto** (-2 CA) |<br>| **Avanço de Formação**    |      [A]      | —                                         | Harken e até 2 legionários adjacentes avançam 3m juntos. Não provoca AO              |<br>| **Mover**                 |      [A]      | —                                         | 6m                                                                                   |<br>| **Agarrar**               | [A] [Ataque]  | +11 vs CA                                 | **Agarrado**                                                                         |<br><br>#### Reações [R]<br><br>| Reação                     | Gatilho                               | Efeito                                         |<br>| -------------------------- | ------------------------------------- | ---------------------------------------------- |<br>| **Ataque de Oportunidade** | Inimigo sai do alcance (3m com lança) | +11, 1d8+3 perfurante                          |<br>| **Escudo de Mara**         | Legionário adjacente recebe Crítico   | Reduz dano em 1d8+5 (absorve com escudo de fé) |<br><br>#### Traços e Habilidades Passivas<br><br>- **Cão de Guarda:** +5 em Percepção contra criaturas ou pessoas tentando se esgueirar perto dele. Nunca é Surpreendido<br>- **Fortaleza Ambulante:** Imune a **Caído** e **Empurrado** enquanto usar Bloquear com Escudo<br>- **Lealdade Absoluta (enquanto acredita em Morden):** Imune a **Enfeitiçado** e **Aterrorizado**. Se descobrir a verdade sobre o abandono, perde esta habilidade e fica **Abalado** permanentemente até resolver o dilema<br>- **Honra Militar:** Não ataca rendidos, não usa veneno, não embosca. Se inimigos se rendem, aceita e mantém como prisioneiros<br>- **Joelho Ferido:** Desvantagem em testes de Atletismo para subir/escalar. Velocidade reduzida para 6m<br><br>#### Equipamento<br><br>- Lança da Legião (1d8 perfurante, alcance 3m)<br>- Armadura completa da Legião (+5 CA) | Escudo pesado (+2 CA)<br>- Amuleto de Mara | Kit de primeiros socorros da Legião<br>- Apito de sinalização (chama reforços em 1d4 horas)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Cumprir seu dever e manter a ordem<br>- **Medo:** Que Morden não mereça a lealdade que ele deu<br>- **Segredo:** NÃO sabe do plano de abandono<br><br>#### Falas<br><br>1. _\"Sou Sargento Harken da Legião Oeste. Cooperem.\"_<br>2. _\"30 anos de serviço. Se tudo foi por nada... não sei o que faço.\"_<br>3. _\"Ordens são ordens. Questionar é luxo de quem não está na fronteira.\"_<br>4. _(Se souber a verdade)_ _\"...Veros estava certo. Deus de Mara...\"_<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {
+                        "hp": "45",
+                        "ca": "10"
+                    }
+                }
+            }
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "type": "person",
+            "attributes": {
+                "hp": "45",
+                "ca": "10"
+            }
+        }
+    }
+}

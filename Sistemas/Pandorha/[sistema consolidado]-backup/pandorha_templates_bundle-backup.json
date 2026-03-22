@@ -1,0 +1,288 @@
+{
+  "isCustomSystemExport": true,
+  "templates": [],
+  "items": [],
+  "actors": [
+    {
+      "type": "_template",
+      "name": "Template Ator Pandorha v3.0 (True Mirror)",
+      "data": {
+        "hidden": [
+          { "name": "hp_max_total", "value": "${10 + (fisico + resistencia) * 5}$" },
+          { "name": "pv_max_total", "value": "${fisico + interacao + nivel}$" },
+          { "name": "ee_max_total", "value": "${mental + resistencia + nivel}$" },
+          { "name": "ca_total", "value": "${10 + nivel + resistencia + armadura + escudo}$" },
+          { "name": "init_total", "value": "${nivel + mental + interacao}$" },
+          { "name": "mov_total", "value": "${9 + fisico}$" },
+          { "name": "carga_total", "value": "${fisico + resistencia + 6}$" },
+          { "name": "armadura", "value": "0" },
+          { "name": "escudo", "value": "0" }
+        ],
+        "body": {
+          "type": "panel",
+          "cssClass": "pandorha-actor-body",
+          "contents": [
+            {
+              "key": "main_tabs",
+              "type": "tabbedPanel",
+              "contents": [
+                {
+                  "type": "tab", "name": "Página 1", "key": "pg1",
+                  "contents": [
+
+                    { "type": "label", "value": "<h2>IDENTIDADE</h2>", "cssClass": "p-section" },
+                    {
+                      "key": "id_panel", "type": "panel", "label": "Identidade", "cssClass": "pandorha-panel",
+                      "contents": [
+                        {
+                          "type": "table", "cols": 4, "rows": 2,
+                          "contents": [
+                            [ { "type": "label", "value": "NOME DO PERSONAGEM" }, { "type": "label", "value": "JOGADOR" }, { "type": "label", "value": "CLASSE" }, { "type": "label", "value": "NÍVEL" } ],
+                            [ { "key": "nome", "type": "textField" }, { "key": "jogador", "type": "textField" }, { "key": "classe_nome", "type": "textField" }, { "key": "nivel", "type": "numberField", "defaultValue": "1" } ]
+                          ]
+                        },
+                        {
+                          "type": "table", "cols": 4, "rows": 2,
+                          "contents": [
+                            [ { "type": "label", "value": "ANCESTRALIDADE" }, { "type": "label", "value": "ANTECEDENTE" }, { "type": "label", "value": "ESPECIALIZAÇÃO" }, { "type": "label", "value": "XP" } ],
+                            [ { "key": "anc_nome", "type": "textField" }, { "key": "ant_nome", "type": "textField" }, { "key": "especial", "type": "textField" }, { "key": "xp", "type": "numberField", "defaultValue": "0" } ]
+                          ]
+                        }
+                      ]
+                    },
+
+                    {
+                      "type": "table", "cols": 3, "rows": 1,
+                      "contents": [
+                        [
+                          {
+                            "key": "eixos_box", "type": "panel", "label": "Eixos", "cssClass": "pandorha-panel",
+                            "contents": [
+                              {
+                                "type": "table", "cols": 3, "rows": 2,
+                                "contents": [
+                                  [ { "type": "label", "value": "FÍSICO" }, { "type": "label", "value": "MENTAL" }, { "type": "label", "value": "SOCIAL" } ],
+                                  [ { "key": "fisico", "type": "numberField", "defaultValue": "1", "cssClass": "stat-value" }, { "key": "mental", "type": "numberField", "defaultValue": "1", "cssClass": "stat-value" }, { "key": "social", "type": "numberField", "defaultValue": "1", "cssClass": "stat-value" } ]
+                                ]
+                              },
+                              { "type": "panel", "flow": "horizontal", "contents": [ { "type": "label", "value": "Bônus racial:" }, { "key": "bn_rac", "type": "textField" } ] },
+                              { "type": "label", "value": "6 pontos (mín 1, máx 3 cada)", "size": "small" }
+                            ]
+                          },
+                          {
+                            "key": "apps_box", "type": "panel", "label": "Aplicações", "cssClass": "pandorha-panel",
+                            "contents": [
+                              {
+                                "type": "table", "cols": 3, "rows": 2,
+                                "contents": [
+                                  [ { "type": "label", "value": "CONFLITO" }, { "type": "label", "value": "INTERAÇÃO" }, { "type": "label", "value": "RESISTÊNCIA" } ],
+                                  [ { "key": "conflito", "type": "numberField", "defaultValue": "1", "cssClass": "stat-value" }, { "key": "interacao", "type": "numberField", "defaultValue": "1", "cssClass": "stat-value" }, { "key": "resistencia", "type": "numberField", "defaultValue": "1", "cssClass": "stat-value" } ]
+                                ]
+                              },
+                              { "type": "label", "value": "6 pontos (mín 1, máx 3 cada)", "size": "small" }
+                            ]
+                          },
+                          {
+                            "key": "recs_box", "type": "panel", "label": "Recursos", "cssClass": "pandorha-panel",
+                            "contents": [
+                              { "type": "label", "value": "HP" },
+                              { "type": "panel", "flow": "horizontal", "contents": [ { "key": "hp_cur", "type": "numberField", "defaultValue": "20" }, { "type": "label", "value": "/ ${hp_max_total}$" } ] },
+                              {
+                                "type": "table", "cols": 2, "rows": 1,
+                                "contents": [
+                                  [
+                                    { "type": "panel", "contents": [ { "type": "label", "value": "PV" }, { "type": "panel", "flow": "horizontal", "contents": [ { "key": "pv_cur", "type": "numberField", "defaultValue": "3" }, { "type": "label", "value": "/ ${pv_max_total}$" } ] } ] },
+                                    { "type": "panel", "contents": [ { "type": "label", "value": "EE" }, { "type": "panel", "flow": "horizontal", "contents": [ { "key": "ee_cur", "type": "numberField", "defaultValue": "3" }, { "type": "label", "value": "/ ${ee_max_total}$" } ] } ] }
+                                  ]
+                                ]
+                              },
+                              { "type": "label", "value": "1 PV = +2 em teste", "size": "small" }
+                            ]
+                          }
+                        ]
+                      ]
+                    },
+
+                    {
+                      "key": "def_panel", "type": "panel", "label": "Defesas e Derivados", "cssClass": "pandorha-panel",
+                      "contents": [
+                        {
+                          "type": "table", "cols": 6, "rows": 2,
+                          "contents": [
+                            [ { "type": "label", "value": "CA" }, { "type": "label", "value": "INICIATIVA" }, { "type": "label", "value": "VELOCIDADE" }, { "type": "label", "value": "CARGA" }, { "type": "label", "value": "PERCEPÇÃO" }, { "type": "label", "value": "CÁLCULOS" } ],
+                            [ { "type": "label", "value": "${ca_total}$" }, { "type": "label", "value": "${init_total}$" }, { "type": "label", "value": "${mov_total}$m" }, { "type": "label", "value": "${carga_total}$" }, { "key": "percepcao", "type": "numberField" }, { "type": "label", "value": "CA: 10+Nív+Armad+Resist\nINI: Nív+Mental+Inter\nCarga: (Fís+Res)+6", "size": "small" } ]
+                          ]
+                        }
+                      ]
+                    },
+
+                    {
+                      "type": "table", "cols": 2, "rows": 1,
+                      "contents": [
+                        [
+                          { "key": "cp_box", "type": "panel", "label": "Capacidade Primordial (Ancestralidade)", "cssClass": "pandorha-panel", "contents": [ { "key": "cap_prim", "type": "textArea" } ] },
+                          { "key": "ho_box", "type": "panel", "label": "Habilidade de Origem (Antecedente)", "cssClass": "pandorha-panel", "contents": [ { "key": "orig_hab", "type": "textArea" } ] }
+                        ]
+                      ]
+                    },
+
+                    { "key": "pass_box", "type": "panel", "label": "Habilidade Passiva de Classe", "cssClass": "pandorha-panel", "contents": [ { "key": "passiva", "type": "textArea" } ] },
+
+                    {
+                      "type": "table", "cols": 2, "rows": 1,
+                      "contents": [
+                        [
+                          {
+                            "key": "tal_cls", "type": "panel", "label": "Talentos de Classe (Escolha 2)", "cssClass": "pandorha-panel",
+                            "contents": [
+                              { "type": "label", "value": "Talento 1" }, { "key": "t1_n", "type": "textField" }, { "key": "t1_d", "type": "textArea", "placeholder": "Efeito..." },
+                              { "type": "label", "value": "Talento 2" }, { "key": "t2_n", "type": "textField" }, { "key": "t2_d", "type": "textArea", "placeholder": "Efeito..." }
+                            ]
+                          },
+                          {
+                            "key": "tal_gen", "type": "panel", "label": "Talentos de Antecedente & Gerais", "cssClass": "pandorha-panel",
+                            "contents": [
+                              { "type": "label", "value": "Talento Antecedente" }, { "key": "ta_n", "type": "textField" }, { "key": "ta_d", "type": "textArea", "placeholder": "Efeito..." },
+                              { "type": "label", "value": "Talento Geral" }, { "key": "tg_n", "type": "textField" }
+                            ]
+                          }
+                        ]
+                      ]
+                    },
+
+                    {
+                      "key": "tracos_panel", "type": "panel", "label": "Traços Ancestrais (Escolha 3)", "cssClass": "pandorha-panel",
+                      "contents": [
+                        {
+                          "type": "table", "cols": 3, "rows": 1,
+                          "contents": [
+                            [
+                              { "type": "panel", "contents": [ { "type": "label", "value": "Traço 1" }, { "key": "tr1_n", "type": "textField" }, { "key": "tr1_d", "type": "textArea", "placeholder": "Descrição..." } ] },
+                              { "type": "panel", "contents": [ { "type": "label", "value": "Traço 2" }, { "key": "tr2_n", "type": "textField" }, { "key": "tr2_d", "type": "textArea", "placeholder": "Descrição..." } ] },
+                              { "type": "panel", "contents": [ { "type": "label", "value": "Traço 3" }, { "key": "tr3_n", "type": "textField" }, { "key": "tr3_d", "type": "textArea", "placeholder": "Descrição..." } ] }
+                            ]
+                          ]
+                        }
+                      ]
+                    },
+
+                    {
+                      "key": "equip_panel", "type": "panel", "label": "Equipamento & Inventário", "cssClass": "pandorha-panel",
+                      "contents": [
+                        {
+                          "type": "table", "cols": 4, "rows": 1,
+                          "contents": [
+                            [
+                              { "type": "panel", "contents": [ { "type": "label", "value": "Arma" }, { "key": "eq_arma", "type": "textArea" } ] },
+                              { "type": "panel", "contents": [ { "type": "label", "value": "Armadura / Escudo" }, { "key": "eq_prot", "type": "textArea" } ] },
+                              { "type": "panel", "contents": [ { "type": "label", "value": "Itens (Slots)" }, { "key": "eq_itens", "type": "textArea" } ] },
+                              { "type": "panel", "contents": [ { "type": "label", "value": "Ouro" }, { "key": "eq_ouro", "type": "textArea" } ] }
+                            ]
+                          ]
+                        }
+                      ]
+                    }
+
+                  ]
+                },
+                {
+                  "type": "tab", "name": "Página 2", "key": "pg2",
+                  "contents": [
+
+                    {
+                      "key": "man_panel", "type": "panel", "label": "Manobras Conhecidas", "cssClass": "pandorha-panel",
+                      "contents": [
+                        {
+                          "type": "table", "cols": 3, "rows": 1,
+                          "contents": [
+                            [
+                              {
+                                "type": "panel", "label": "Matriz Física",
+                                "contents": [
+                                  { "type": "label", "value": "Manobra 1" }, { "key": "mf1_n", "type": "textField" }, { "key": "mf1_e", "type": "textArea", "placeholder": "Efeito..." },
+                                  { "type": "label", "value": "Manobra 2" }, { "key": "mf2_n", "type": "textField" }, { "key": "mf2_e", "type": "textArea", "placeholder": "Efeito..." },
+                                  { "type": "label", "value": "Manobra 3" }, { "key": "mf3_n", "type": "textField" }, { "key": "mf3_e", "type": "textArea", "placeholder": "Efeito..." },
+                                  { "type": "label", "value": "Manobra 4" }, { "key": "mf4_n", "type": "textField" }, { "key": "mf4_e", "type": "textArea", "placeholder": "Efeito..." }
+                                ]
+                              },
+                              {
+                                "type": "panel", "label": "Matriz Mental",
+                                "contents": [
+                                  { "type": "label", "value": "Manobra 1" }, { "key": "mm1_n", "type": "textField" }, { "key": "mm1_e", "type": "textArea", "placeholder": "Efeito..." },
+                                  { "type": "label", "value": "Manobra 2" }, { "key": "mm2_n", "type": "textField" }, { "key": "mm2_e", "type": "textArea", "placeholder": "Efeito..." },
+                                  { "type": "label", "value": "Manobra 3" }, { "key": "mm3_n", "type": "textField" }, { "key": "mm3_e", "type": "textArea", "placeholder": "Efeito..." },
+                                  { "type": "label", "value": "Manobra 4" }, { "key": "mm4_n", "type": "textField" }, { "key": "mm4_e", "type": "textArea", "placeholder": "Efeito..." }
+                                ]
+                              },
+                              {
+                                "type": "panel", "label": "Matriz Social",
+                                "contents": [
+                                  { "type": "label", "value": "Manobra 1" }, { "key": "ms1_n", "type": "textField" }, { "key": "ms1_e", "type": "textArea", "placeholder": "Efeito..." },
+                                  { "type": "label", "value": "Manobra 2" }, { "key": "ms2_n", "type": "textField" }, { "key": "ms2_e", "type": "textArea", "placeholder": "Efeito..." },
+                                  { "type": "label", "value": "Manobra 3" }, { "key": "ms3_n", "type": "textField" }, { "key": "ms3_e", "type": "textArea", "placeholder": "Efeito..." },
+                                  { "type": "label", "value": "Manobra 4" }, { "key": "ms4_n", "type": "textField" }, { "key": "ms4_e", "type": "textArea", "placeholder": "Efeito..." }
+                                ]
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    },
+
+                    {
+                      "key": "mag_panel", "type": "panel", "label": "Magias Preparadas (Limite: Mental + 1)", "cssClass": "pandorha-panel",
+                      "contents": [
+                        {
+                          "type": "table", "cols": 3, "rows": 2,
+                          "contents": [
+                            [
+                              { "type": "panel", "contents": [ { "type": "label", "value": "Magia 1" }, { "key": "mag1_n", "type": "textField" }, { "type": "panel", "flow": "horizontal", "contents": [ { "type": "label", "value": "Círculo:" }, { "key": "mag1_c", "type": "numberField" }, { "type": "label", "value": "EE:" }, { "key": "mag1_ee", "type": "numberField" } ] }, { "type": "label", "value": "EFEITO" }, { "key": "mag1_ef", "type": "textArea" } ] },
+                              { "type": "panel", "contents": [ { "type": "label", "value": "Magia 2" }, { "key": "mag2_n", "type": "textField" }, { "type": "panel", "flow": "horizontal", "contents": [ { "type": "label", "value": "Círculo:" }, { "key": "mag2_c", "type": "numberField" }, { "type": "label", "value": "EE:" }, { "key": "mag2_ee", "type": "numberField" } ] }, { "type": "label", "value": "EFEITO" }, { "key": "mag2_ef", "type": "textArea" } ] },
+                              { "type": "panel", "contents": [ { "type": "label", "value": "Magia 3" }, { "key": "mag3_n", "type": "textField" }, { "type": "panel", "flow": "horizontal", "contents": [ { "type": "label", "value": "Círculo:" }, { "key": "mag3_c", "type": "numberField" }, { "type": "label", "value": "EE:" }, { "key": "mag3_ee", "type": "numberField" } ] }, { "type": "label", "value": "EFEITO" }, { "key": "mag3_ef", "type": "textArea" } ] }
+                            ],
+                            [
+                              { "type": "panel", "contents": [ { "type": "label", "value": "Magia 4" }, { "key": "mag4_n", "type": "textField" }, { "type": "panel", "flow": "horizontal", "contents": [ { "type": "label", "value": "Círculo:" }, { "key": "mag4_c", "type": "numberField" }, { "type": "label", "value": "EE:" }, { "key": "mag4_ee", "type": "numberField" } ] }, { "type": "label", "value": "EFEITO" }, { "key": "mag4_ef", "type": "textArea" } ] },
+                              { "type": "panel", "contents": [ { "type": "label", "value": "Magia 5" }, { "key": "mag5_n", "type": "textField" }, { "type": "panel", "flow": "horizontal", "contents": [ { "type": "label", "value": "Círculo:" }, { "key": "mag5_c", "type": "numberField" }, { "type": "label", "value": "EE:" }, { "key": "mag5_ee", "type": "numberField" } ] }, { "type": "label", "value": "EFEITO" }, { "key": "mag5_ef", "type": "textArea" } ] },
+                              { "type": "panel", "contents": [ { "type": "label", "value": "Magia 6" }, { "key": "mag6_n", "type": "textField" }, { "type": "panel", "flow": "horizontal", "contents": [ { "type": "label", "value": "Círculo:" }, { "key": "mag6_c", "type": "numberField" }, { "type": "label", "value": "EE:" }, { "key": "mag6_ee", "type": "numberField" } ] }, { "type": "label", "value": "EFEITO" }, { "key": "mag6_ef", "type": "textArea" } ] }
+                            ]
+                          ]
+                        }
+                      ]
+                    },
+
+                    {
+                      "type": "table", "cols": 2, "rows": 1,
+                      "contents": [
+                        [
+                          {
+                            "key": "cond_panel", "type": "panel", "label": "Condições Ativas", "cssClass": "pandorha-panel",
+                            "contents": [
+                              { "key": "cond1", "type": "textField", "placeholder": "Condição 1" },
+                              { "key": "cond2", "type": "textField", "placeholder": "Condição 2" },
+                              { "key": "cond3", "type": "textField", "placeholder": "Condição 3" }
+                            ]
+                          },
+                          {
+                            "key": "death_panel", "type": "panel", "label": "Testes de Morte (0 HP)", "cssClass": "pandorha-panel",
+                            "contents": [
+                              { "type": "panel", "flow": "horizontal", "contents": [ { "type": "label", "value": "Falhas:" }, { "key": "df1", "type": "checkbox" }, { "key": "df2", "type": "checkbox" }, { "key": "df3", "type": "checkbox" } ] },
+                              { "type": "panel", "flow": "horizontal", "contents": [ { "type": "label", "value": "Estabilizado:" }, { "key": "estab", "type": "checkbox" } ] },
+                              { "type": "label", "value": "DC 15 no d20 para estabilizar. 3 falhas = morte.", "size": "small" }
+                            ]
+                          }
+                        ]
+                      ]
+                    },
+
+                    { "key": "bio_panel", "type": "panel", "label": "Notas, História & Objetivos", "cssClass": "pandorha-panel", "contents": [ { "key": "biografia", "type": "textArea" } ] }
+
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

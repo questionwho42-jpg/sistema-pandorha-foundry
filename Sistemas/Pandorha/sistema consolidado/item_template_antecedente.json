@@ -1,0 +1,40 @@
+{
+  "name": "Template de Antecedente",
+  "type": "_equippableItemTemplate",
+  "data": {
+    "body": {
+      "type": "panel",
+      "contents": [
+        { "type": "label", "value": "Descrição do Antecedente" },
+        { "key": "ant_descricao", "type": "textArea" },
+        { "key": "ant_descricao_display", "type": "label", "value": "${ant_descricao}$" },
+        
+        { "type": "label", "value": "Habilidade de Origem" },
+        { "key": "hab_origem_nome", "type": "textField" },
+        { "key": "hab_origem_nome_display", "type": "label", "value": "<b>${hab_origem_nome}$</b>" },
+        { "key": "hab_origem_descr", "type": "textArea" },
+        { "key": "hab_origem_descr_display", "type": "label", "value": "${hab_origem_descr}$" },
+        
+        { "type": "label", "value": "<h3>Talentos do Antecedente (Escolha 1)</h3>" },
+        
+        { "key": "talento_ant_1_nome", "type": "textField" },
+        { "key": "talento_ant_1_nome_display", "type": "label", "value": "<b>1. ${talento_ant_1_nome}$</b>" },
+        { "key": "talento_ant_1_descr", "type": "textArea" },
+        { "key": "talento_ant_1_descr_display", "type": "label", "value": "${talento_ant_1_descr}$" },
+        
+        { "key": "talento_ant_2_nome", "type": "textField" },
+        { "key": "talento_ant_2_nome_display", "type": "label", "value": "<b>2. ${talento_ant_2_nome}$</b>" },
+        { "key": "talento_ant_2_descr", "type": "textArea" },
+        { "key": "talento_ant_2_descr_display", "type": "label", "value": "${talento_ant_2_descr}$" },
+        
+        { "key": "talento_ant_3_nome", "type": "textField" },
+        { "key": "talento_ant_3_nome_display", "type": "label", "value": "<b>3. ${talento_ant_3_nome}$</b>" },
+        { "key": "talento_ant_3_descr", "type": "textArea" },
+        { "key": "talento_ant_3_descr_display", "type": "label", "value": "${talento_ant_3_descr}$" },
+        
+        { "key": "is_configurado", "type": "checkbox", "defaultValue": false, "hidden": true },
+        { "key": "tipo_item", "type": "textField", "defaultValue": "antecedente", "hidden": true }
+      ]
+    }
+  }
+}

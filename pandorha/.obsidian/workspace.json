@@ -1,0 +1,226 @@
+{
+  "main": {
+    "id": "3430d2a03357a3d7",
+    "type": "split",
+    "children": [
+      {
+        "id": "2e14639b61e8032f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "42b8a170f7712109",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sistemas/Pandorha/sistema consolidado/03_Codex_de_Combate_e_Condicoes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "03_Codex_de_Combate_e_Condicoes"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f1601d26d0acce16",
+    "type": "split",
+    "children": [
+      {
+        "id": "5aa645d4af28535e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d2cd0a80a8e0d96",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "9d9a777d7cd9fe07",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "e58f86e93ab5d5f6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "47b09f9d185ea296",
+    "type": "split",
+    "children": [
+      {
+        "id": "2ab9944e554788b6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "160fd014ec2de761",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Bem-vindo.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para Bem-vindo"
+            }
+          },
+          {
+            "id": "f1de9940460b52b5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Bem-vindo.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para Bem-vindo"
+            }
+          },
+          {
+            "id": "8c65de0d5a33af98",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "fd21812823f38e0d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "656133d161a4bc8e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Bem-vindo.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de Bem-vindo"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "42b8a170f7712109",
+  "lastOpenFiles": [
+    "Sistemas/Pandorha/sistema consolidado/01_00_Regras_Gerais.md",
+    "Sem título.canvas",
+    "Sistemas/Pandorha/sistema consolidado/Pandorha-backup/12_02_Grimorio_Circulo_0_backup.md",
+    "Sistemas/Pandorha/sistema consolidado/Pandorha-backup/05_03_Emissario_backup.md",
+    "Sistemas/Pandorha/sistema consolidado/Pandorha-backup/05_02_Tecelao_backup.md",
+    "Sistemas/Pandorha/sistema consolidado/Pandorha-backup/05_01_Vanguarda_backup.md",
+    "Sistemas/Pandorha/sistema consolidado/Pandorha-backup/02c_Matriz_Social_backup.md",
+    "Sistemas/Pandorha/sistema consolidado/Pandorha-backup/02b_Matriz_Mental_backup.md",
+    "Sistemas/Pandorha/sistema consolidado/Pandorha-backup",
+    "Sistemas/Pandorha/sistema consolidado/Guia_Criacao_de_Ficha.md",
+    "Sistemas/Pandorha/sistema consolidado/Glossario_Definitivo_de_Testes.md",
+    "Sistemas/Pandorha/sistema consolidado/Ficha_Pandorha.html",
+    "Sistemas/Pandorha/sistema consolidado/criação de jogos.code-workspace",
+    "Sistemas/Pandorha/sistema consolidado/23_Codex_de_Armadilhas.md",
+    "Sistemas/Pandorha/sistema consolidado/23d_Codex_Armadilhas_Tier4.md",
+    "Sistemas/Pandorha/sistema consolidado/23c_Codex_Armadilhas_Tier3.md",
+    "Sistemas/Pandorha/sistema consolidado/23b_Codex_Armadilhas_Tier2.md",
+    "Sistemas/Pandorha/sistema consolidado/23a_Codex_Armadilhas_Tier1.md",
+    "Sistemas/Pandorha/sistema consolidado/22_Codex_de_Exploracao_e_Downtime.md",
+    "Sistemas/Pandorha/sistema consolidado/21_Mecanicas_de_Fama_e_Influencia.md",
+    "Sistemas/Pandorha/sistema consolidado/20_Codex_de_Toxinas.md",
+    "Sistemas/Pandorha/sistema consolidado/19_Codex_de_Enfermidades.md",
+    "Sistemas/Pandorha/sistema consolidado/18_Tratado_de_Dano.md",
+    "Sistemas/Pandorha/sistema consolidado/17_Compendio_de_Habilidades_de_Monstros_Tier4.md",
+    "Sistemas/Pandorha/sistema consolidado/16_Compendio_de_Habilidades_de_Monstros_Tier3.md",
+    "Sistemas/Pandorha/sistema consolidado/15_Compendio_de_Habilidades_de_Monstros_Tier2.md",
+    "Sistemas/Pandorha/sistema consolidado/14_Compendio_de_Habilidades_de_Monstros.md",
+    "Sistemas/Pandorha/sistema consolidado/13_Guia_de_Criacao_de_Monstros.md",
+    "Sistemas/Pandorha/sistema consolidado/12_12_Grimorio_Circulo_10.md",
+    "Sistemas/Pandorha/sistema consolidado/12_11_Grimorio_Circulo_9.md",
+    "Sistemas/Pandorha/sistema consolidado",
+    "Sistemas/Pandorha/Pandorha-backup",
+    "Sistemas/Pandorha/Fichas_Completas",
+    "Sistemas/Pandorha/backups e obsoletos/Pandorha-backup-Audit6",
+    "Sistemas/Pandorha/backups e obsoletos",
+    "Sistemas/Pandorha",
+    "Sistemas"
+  ]
+}

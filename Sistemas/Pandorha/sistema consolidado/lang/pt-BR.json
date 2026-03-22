@@ -1,0 +1,40 @@
+{
+  "pdh": {
+    "Label": {
+      "Nome": "Nome",
+      "Nivel": "Nível",
+      "XP": "XP",
+      "Jogador": "Jogador",
+      "Ancestralidade": "Ancestralidade",
+      "Classe": "Classe",
+      "Antecedente": "Antecedente",
+      "Fisico": "Físico",
+      "Mental": "Mental",
+      "Social": "Social",
+      "Conflito": "Conflito",
+      "Interacao": "Interação",
+      "Resistencia": "Resistência",
+      "HP": "Pontos de Vida (HP)",
+      "PV": "Pontos de Vigor (PV)",
+      "EE": "Energia Etérica (EE)",
+      "CA": "Classe de Armadura (CA)",
+      "Iniciativa": "Iniciativa",
+      "Velocidade": "Velocidade",
+      "Carga": "Carga",
+      "Manobras": "Manobras e Habilidades",
+      "Equipamento": "Equipamento",
+      "Habilidade": "Habilidade",
+      "Efeito": "Efeito",
+      "Custo": "Custo",
+      "Matriz": "Matriz"
+    },
+    "Sections": {
+      "Identidade": "Identidade do Herói",
+      "Eixos": "Eixos Primários (Ser)",
+      "Aplicacoes": "Aplicações de Campo (Saber)",
+      "Recursos": "Recursos Vitais",
+      "Defesas": "Defesas e Mobilidade",
+      "Matrizes": "Matrizes de Poder"
+    }
+  }
+}

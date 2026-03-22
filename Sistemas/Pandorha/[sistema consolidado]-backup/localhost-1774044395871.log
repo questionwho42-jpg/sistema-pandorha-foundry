@@ -1,0 +1,725 @@
+ _______________________________________________________________
+ _____ ___  _   _ _   _ ____  ______   __ __     _______ _____
+|  ___/ _ \| | | | \ | |  _ \|  _ \ \ / / \ \   / |_   _|_   _|
+| |_ | | | | | | |  \| | | | | |_) \ V /   \ \ / /  | |   | |
+|  _|| |_| | |_| | |\  | |_| |  _ < | |     \ V /   | |   | |
+|_|   \___/ \___/|_| \_|____/|_| \_\|_|      \_/    |_|   |_|
+===============================================================
+ Foundry VTT | Foundry Virtual Tabletop ESModule loaded
+ Foundry VTT | Reestablishing existing session abba55edb81f65ff878d5e3f
+ Foundry VTT | Connected to server socket using session abba55edb81f65ff878d5e3f
+ Foundry VTT | Initializing Foundry Virtual Tabletop Game
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-formula.hbs
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-info.hbs
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-no-delimiters.hbs
+ Foundry VTT | Loaded localization file modules/popout/lang/pt-BR.json
+ Foundry VTT | Loaded localization file modules/pt-BR/lang/pt-BR.json
+ Foundry VTT | Loaded localization file modules/popout/lang/en.json
+ Foundry VTT | Loaded localization file lang/en.json
+ Foundry VTT | Loaded localization file systems/custom-system-builder/lang/en.json
+ Foundry VTT | Synchronized official game time in 1ms
+ Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ Custom System Builder | Item template has been deleted for item Anão - Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+ 
+onError @ foundry.mjs:23855
+ Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+ Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+ 
+onError @ foundry.mjs:23855
+ 
+onError @ foundry.mjs:23855
+ Custom System Builder | All props for Acólito (m2G40aBIiBmhcagP) computed in 1 loops.
+ Custom System Builder | Done preparing data for Acólito (Item.m2G40aBIiBmhcagP).
+ Custom System Builder | All props for Acólito (m2G40aBIiBmhcagP) computed in 1 loops.
+ Custom System Builder | Done preparing data for Acólito (Item.m2G40aBIiBmhcagP).
+ Custom System Builder | All props for Anão (qo4CxGxq2wOFBw47) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anão (Item.qo4CxGxq2wOFBw47).
+ Custom System Builder | All props for Anão (qo4CxGxq2wOFBw47) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anão (Item.qo4CxGxq2wOFBw47).
+ Custom System Builder | All props for Aristocrata (Nivl00X1ZkuIoRf9) computed in 1 loops.
+ Custom System Builder | Done preparing data for Aristocrata (Item.Nivl00X1ZkuIoRf9).
+ Custom System Builder | All props for Aristocrata (Nivl00X1ZkuIoRf9) computed in 1 loops.
+ Custom System Builder | Done preparing data for Aristocrata (Item.Nivl00X1ZkuIoRf9).
+ Custom System Builder | All props for Caçador (n13aG5QOrrrH14Od) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Item.n13aG5QOrrrH14Od).
+ Custom System Builder | All props for Caçador (n13aG5QOrrrH14Od) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Item.n13aG5QOrrrH14Od).
+ Custom System Builder | All props for Criminoso (66wOlxhixnjf37fK) computed in 1 loops.
+ Custom System Builder | Done preparing data for Criminoso (Item.66wOlxhixnjf37fK).
+ Custom System Builder | All props for Criminoso (66wOlxhixnjf37fK) computed in 1 loops.
+ Custom System Builder | Done preparing data for Criminoso (Item.66wOlxhixnjf37fK).
+ Custom System Builder | All props for Drakari (dKTSUog9J5LYDzv2) computed in 1 loops.
+ Custom System Builder | Done preparing data for Drakari (Item.dKTSUog9J5LYDzv2).
+ Custom System Builder | All props for Drakari (dKTSUog9J5LYDzv2) computed in 1 loops.
+ Custom System Builder | Done preparing data for Drakari (Item.dKTSUog9J5LYDzv2).
+ Custom System Builder | All props for Elfo (jj0GZtMsmj0M5c4f) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfo (Item.jj0GZtMsmj0M5c4f).
+ Custom System Builder | All props for Elfo (jj0GZtMsmj0M5c4f) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfo (Item.jj0GZtMsmj0M5c4f).
+ Custom System Builder | All props for Emissário (j1lGyH3zqvfhssfi) computed in 1 loops.
+ Custom System Builder | Done preparing data for Emissário (Item.j1lGyH3zqvfhssfi).
+ Custom System Builder | All props for Emissário (j1lGyH3zqvfhssfi) computed in 1 loops.
+ Custom System Builder | Done preparing data for Emissário (Item.j1lGyH3zqvfhssfi).
+ Custom System Builder | All props for Erudito (VeGoKJC9hENVmJ0s) computed in 1 loops.
+ Custom System Builder | Done preparing data for Erudito (Item.VeGoKJC9hENVmJ0s).
+ Custom System Builder | All props for Erudito (VeGoKJC9hENVmJ0s) computed in 1 loops.
+ Custom System Builder | Done preparing data for Erudito (Item.VeGoKJC9hENVmJ0s).
+ Custom System Builder | All props for Fera (URfTTGHwLXKBIxNa) computed in 1 loops.
+ Custom System Builder | Done preparing data for Fera (Item.URfTTGHwLXKBIxNa).
+ Custom System Builder | All props for Fera (URfTTGHwLXKBIxNa) computed in 1 loops.
+ Custom System Builder | Done preparing data for Fera (Item.URfTTGHwLXKBIxNa).
+ Custom System Builder | All props for Humano (hYQnCagkaXHVdiHF) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Item.hYQnCagkaXHVdiHF).
+ Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | All props for Humano (hYQnCagkaXHVdiHF) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Item.hYQnCagkaXHVdiHF).
+ Custom System Builder | All props for Soldado Veterano (UVA1gW9MrxRSqT0Q) computed in 1 loops.
+ Custom System Builder | Done preparing data for Soldado Veterano (Item.UVA1gW9MrxRSqT0Q).
+ Custom System Builder | All props for Soldado Veterano (UVA1gW9MrxRSqT0Q) computed in 1 loops.
+ Custom System Builder | Done preparing data for Soldado Veterano (Item.UVA1gW9MrxRSqT0Q).
+ Custom System Builder | All props for Tecelão de Sombras (2Aw4Gh7FpMUdgX8N) computed in 1 loops.
+ Custom System Builder | Done preparing data for Tecelão de Sombras (Item.2Aw4Gh7FpMUdgX8N).
+ Custom System Builder | All props for Tecelão de Sombras (2Aw4Gh7FpMUdgX8N) computed in 1 loops.
+ Custom System Builder | Done preparing data for Tecelão de Sombras (Item.2Aw4Gh7FpMUdgX8N).
+ Custom System Builder | All props for Umbral (H89KDDNbDDGBFfqK) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbral (Item.H89KDDNbDDGBFfqK).
+ Custom System Builder | All props for Umbral (H89KDDNbDDGBFfqK) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbral (Item.H89KDDNbDDGBFfqK).
+ Custom System Builder | All props for Vanguarda (Dyucew8KGp94CJ38) computed in 1 loops.
+ Custom System Builder | Done preparing data for Vanguarda (Item.Dyucew8KGp94CJ38).
+ Custom System Builder | All props for Vanguarda (Dyucew8KGp94CJ38) computed in 1 loops.
+ Custom System Builder | Done preparing data for Vanguarda (Item.Dyucew8KGp94CJ38).
+ Foundry VTT | Retrieved and compiled template templates/ui/scene-navigation.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tab.hbs
+ Foundry VTT | Retrieved and compiled template templates/ui/players.hbs
+ Foundry VTT | Retrieved and compiled template templates/ui/hotbar.hbs
+ Foundry VTT | Retrieved and compiled template templates/ui/scene-controls-layers.hbs
+ Foundry VTT | Retrieved and compiled template templates/ui/scene-controls-tools.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/log.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/notifications.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/input.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/header.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/tracker.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/footer.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/directory/header.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/directory/directory.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/partials/scene-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/partials/folder-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/directory/footer.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/partials/document-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/controls.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playlist-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playing.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/sound-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/compendiums.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/partials/pack-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/settings.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/chat-message.hbs
+ Foundry VTT | Fonts loaded and ready.
+ Foundry VTT | Viewing Scene Cena
+ Foundry VTT | Drawing game canvas for scene Cena
+ Foundry VTT | Loading 52 Assets
+ Foundry VTT | Drawing the HiddenCanvasGroup canvas group
+ Foundry VTT | Drawing the RenderedCanvasGroup canvas group
+ Foundry VTT | Drawing the EnvironmentCanvasGroup canvas group
+ Foundry VTT | Drawing the PrimaryCanvasGroup canvas group
+ Foundry VTT | Drawing the WeatherEffects canvas layer
+ Foundry VTT | Drawing the EffectsCanvasGroup canvas group
+ Foundry VTT | Drawing the CanvasBackgroundAlterationEffects canvas layer
+ Foundry VTT | Drawing the CanvasIlluminationEffects canvas layer
+ Foundry VTT | Drawing the CanvasColorationEffects canvas layer
+ Foundry VTT | Drawing the CanvasDarknessEffects canvas layer
+ Foundry VTT | Drawing the CanvasVisibility canvas group
+ Worker TextureCompressor of FogExtractor | Initialized Worker
+ Foundry VTT | Drawing the InterfaceCanvasGroup canvas group
+ Foundry VTT | Drawing the GridLayer canvas layer
+ Foundry VTT | Drawing the RegionLayer canvas layer
+ Foundry VTT | Drawing the DrawingsLayer canvas layer
+ Foundry VTT | Drawing the TemplateLayer canvas layer
+ Foundry VTT | Drawing the TilesLayer canvas layer
+ Foundry VTT | Drawing the WallsLayer canvas layer
+ Foundry VTT | Drawing the TokenLayer canvas layer
+ Foundry VTT | Retrieved and compiled template templates/hud/waypoint-label.hbs
+ Custom System Builder | Item template has been deleted for item Anão - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+ Item template has been deleted for item Anão - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+ Custom System Builder | Item template has been deleted for item Humano - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M used in Character (2) - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+ Item template has been deleted for item Humano - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M used in Character (2) - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+ Custom System Builder | Item template has been deleted for item Humano - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ used in Character (2) - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+ Item template has been deleted for item Humano - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ used in Character (2) - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+ Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+ Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anão (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+ Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anão (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+ Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+ Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+ Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+ Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+ Custom System Builder | Item template has been deleted for item Anão - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+ Item template has been deleted for item Anão - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+ Custom System Builder | Item template has been deleted for item Humano - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M used in Character (2) - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+ Custom System Builder | Item template has been deleted for item Humano - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ used in Character (2) - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+ Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (2) (Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa).
+ Foundry VTT | Drawing the SoundsLayer canvas layer
+ Foundry VTT | Drawing the LightingLayer canvas layer
+ Foundry VTT | Drawing the NotesLayer canvas layer
+ Foundry VTT | Drawing the ControlsLayer canvas layer
+ Foundry VTT | Drawing the OverlayCanvasGroup canvas group
+ Applying buffered socket event: userActivity
+ Item template has been deleted for item Humano - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M used in Character (2) - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+ Item template has been deleted for item Humano - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ used in Character (2) - Scene.Me1Uwj8HH6KVxjfj.Token.h59AEyL7LdF6Kldw.Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/actor/v2/actor-character-sheet.hbs
+ Custom System Builder | No access to property "props"  Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | No access to property "props"  Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | No access to property "props"  Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | No access to property "props"  Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | No access to property "props"  Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | No access to property "props"  Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | No access to property "props"  Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | No access to property "props"  Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | No access to property "props"  Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/item/v2/equippableItem-sheet.hbs
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Humano (hYQnCagkaXHVdiHF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.hYQnCagkaXHVdiHF).
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Humano (hYQnCagkaXHVdiHF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.hYQnCagkaXHVdiHF).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Humano (hYQnCagkaXHVdiHF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.hYQnCagkaXHVdiHF).
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | No access to property "props" Error: No access to property "props"
+    at u (customs.js:19:9)
+    at AccessorNode.js:82:18
+    at AccessorNode.js:82:34
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Humano (hYQnCagkaXHVdiHF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.hYQnCagkaXHVdiHF).
+Logger.js:39 Custom System Builder | All props for Humano (hYQnCagkaXHVdiHF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.hYQnCagkaXHVdiHF).
+Logger.js:39 Custom System Builder | All props for Humano (hYQnCagkaXHVdiHF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.hYQnCagkaXHVdiHF).
+Logger.js:39 Custom System Builder | All props for Humano (hYQnCagkaXHVdiHF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.hYQnCagkaXHVdiHF).
+Logger.js:39 Custom System Builder | Created item contents zYan9vUPbGfsgjql
+Logger.js:39 Custom System Builder | All props for Humano (zYan9vUPbGfsgjql) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.DsuH3ouBXiVaexmF.Item.zYan9vUPbGfsgjql).
+Logger.js:39 Custom System Builder | All props for Humano (zYan9vUPbGfsgjql) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.DsuH3ouBXiVaexmF.Item.zYan9vUPbGfsgjql).
+Logger.js:39 Custom System Builder | All props for Humano (zYan9vUPbGfsgjql) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.DsuH3ouBXiVaexmF.Item.zYan9vUPbGfsgjql).
+Logger.js:39 Custom System Builder | All props for Humano (zYan9vUPbGfsgjql) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.DsuH3ouBXiVaexmF.Item.zYan9vUPbGfsgjql).
+Logger.js:39 Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+Logger.js:39 Custom System Builder | All props for Humano (zYan9vUPbGfsgjql) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.DsuH3ouBXiVaexmF.Item.zYan9vUPbGfsgjql).
+Logger.js:39 Custom System Builder | All props for Humano (zYan9vUPbGfsgjql) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.DsuH3ouBXiVaexmF.Item.zYan9vUPbGfsgjql).
+Logger.js:39 Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+Logger.js:39 Custom System Builder | Cannot read properties of undefined (reading 'anc_descricao') TypeError: Cannot read properties of undefined (reading 'anc_descricao')
+    at u (customs.js:16:14)
+    at AccessorNode.js:82:18
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9)
+    at async Label._getElement (Label.js:163:26) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot read properties of undefined (reading 'anc_lore') TypeError: Cannot read properties of undefined (reading 'anc_lore')
+    at u (customs.js:16:14)
+    at AccessorNode.js:82:18
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9)
+    at async Label._getElement (Label.js:163:26) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot read properties of undefined (reading 'anc_aparencia') TypeError: Cannot read properties of undefined (reading 'anc_aparencia')
+    at u (customs.js:16:14)
+    at AccessorNode.js:82:18
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9)
+    at async Label._getElement (Label.js:163:26) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot read properties of undefined (reading 'anc_bonus_eixo') TypeError: Cannot read properties of undefined (reading 'anc_bonus_eixo')
+    at u (customs.js:16:14)
+    at AccessorNode.js:82:18
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9)
+    at async Label._getElement (Label.js:163:26) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot read properties of undefined (reading 'capacidade_primordial_nome') TypeError: Cannot read properties of undefined (reading 'capacidade_primordial_nome')
+    at u (customs.js:16:14)
+    at AccessorNode.js:82:18
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9)
+    at async Label._getElement (Label.js:163:26) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot read properties of undefined (reading 'capacidade_primordial_descr') TypeError: Cannot read properties of undefined (reading 'capacidade_primordial_descr')
+    at u (customs.js:16:14)
+    at AccessorNode.js:82:18
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9)
+    at async Label._getElement (Label.js:163:26) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot read properties of undefined (reading 'traco_sel1_nome') TypeError: Cannot read properties of undefined (reading 'traco_sel1_nome')
+    at u (customs.js:16:14)
+    at AccessorNode.js:82:18
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9)
+    at async Label._getElement (Label.js:163:26) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot read properties of undefined (reading 'traco_sel1_descr') TypeError: Cannot read properties of undefined (reading 'traco_sel1_descr')
+    at u (customs.js:16:14)
+    at AccessorNode.js:82:18
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9)
+    at async Label._getElement (Label.js:163:26) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot read properties of undefined (reading 'traco_sel2_nome') TypeError: Cannot read properties of undefined (reading 'traco_sel2_nome')
+    at u (customs.js:16:14)
+    at AccessorNode.js:82:18
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9)
+    at async Label._getElement (Label.js:163:26) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot read properties of undefined (reading 'traco_sel2_descr') TypeError: Cannot read properties of undefined (reading 'traco_sel2_descr')
+    at u (customs.js:16:14)
+    at AccessorNode.js:82:18
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9)
+    at async Label._getElement (Label.js:163:26) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot read properties of undefined (reading 'traco_sel3_nome') TypeError: Cannot read properties of undefined (reading 'traco_sel3_nome')
+    at u (customs.js:16:14)
+    at AccessorNode.js:82:18
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9)
+    at async Label._getElement (Label.js:163:26) Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot read properties of undefined (reading 'traco_sel3_descr') TypeError: Cannot read properties of undefined (reading 'traco_sel3_descr')
+    at u (customs.js:16:14)
+    at AccessorNode.js:82:18
+    at Object.evaluate (Node.js:56:16)
+    at a.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at Formula.compute (Formula.js:458:21)
+    at processFormulas (ComputablePhrase.js:115:35)
+    at async ComputablePhrase.compute (ComputablePhrase.js:173:34)
+    at async ComputablePhrase.computeMessage (ComputablePhrase.js:280:9)
+    at async Label._getElement (Label.js:163:26) Object
+_logToConsole @ Logger.js:39
+foundry.mjs:115132 O Foundry Virtual Tabletop requer uma janela utilizável com dimensões de 1024px por 768px ou maiores. As dimensões atuais desta janela são 982px por 794px. No momento, você tem um fator de zoom aplicado no sistema operacional ou no navegador, o que está reduzindo o tamanho efetivo da sua janela. Você deve aumentar o tamanho da sua janela ou reduzir o fator de zoom aplicado ao seu navegador, caso contrário, alguns recursos do software não funcionarão corretamente. 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+#validateResolution @ foundry.mjs:166558
+(anonymous) @ foundry.mjs:692

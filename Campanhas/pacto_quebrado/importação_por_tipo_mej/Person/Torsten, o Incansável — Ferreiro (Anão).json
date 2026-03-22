@@ -1,0 +1,36 @@
+{
+    "name": "Torsten, o Incansável — Ferreiro (Anão)",
+    "pages": [
+        {
+            "name": "Torsten, o Incansável — Ferreiro (Anão)",
+            "type": "text",
+            "text": {
+                "content": "<br>**Nível:** 4 | **ND:** 2 | **Tipo:** Humanoide (Anão)<br><br>#### Bloco de Estatísticas<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Stat</th><th style=\"padding: 5px;\">Valor</th><th style=\"padding: 5px;\">Stat</th><th style=\"padding: 5px;\">Valor</th></tr><tr><td style=\"padding: 5px;\">**Físico**</td><td style=\"padding: 5px;\">4 (3+1 racial)</td><td style=\"padding: 5px;\">**Conflito**</td><td style=\"padding: 5px;\">2</td></tr><tr><td style=\"padding: 5px;\">**Mental**</td><td style=\"padding: 5px;\">2</td><td style=\"padding: 5px;\">**Interação**</td><td style=\"padding: 5px;\">2</td></tr><tr><td style=\"padding: 5px;\">**Social**</td><td style=\"padding: 5px;\">1</td><td style=\"padding: 5px;\">**Resistência**</td><td style=\"padding: 5px;\">3</td></tr></tbody></table><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Derivado</th><th style=\"padding: 5px;\">Fórmula</th><th style=\"padding: 5px;\">Valor</th></tr><tr><td style=\"padding: 5px;\">**HP**</td><td style=\"padding: 5px;\">HP Base + (Fís+Res)×5</td><td style=\"padding: 5px;\">48</td></tr><tr><td style=\"padding: 5px;\">**CA**</td><td style=\"padding: 5px;\">10 + Nível + Armadura + Fís</td><td style=\"padding: 5px;\">18 (Avental reforçado +2, Fís 4)</td></tr><tr><td style=\"padding: 5px;\">**Vigor**</td><td style=\"padding: 5px;\">(Fís+Int) + Nível</td><td style=\"padding: 5px;\">10</td></tr><tr><td style=\"padding: 5px;\">**Iniciativa**</td><td style=\"padding: 5px;\">Nível + Men + Int</td><td style=\"padding: 5px;\">+8</td></tr><tr><td style=\"padding: 5px;\">**Velocidade**</td><td style=\"padding: 5px;\">Base racial</td><td style=\"padding: 5px;\">6m</td></tr><tr><td style=\"padding: 5px;\">**Percepção**</td><td style=\"padding: 5px;\">Nível + Men + Int</td><td style=\"padding: 5px;\">+8</td></tr></tbody></table><br>#### Perícias (Treinadas)<br><br>- Ofício: Forja (Físico + Interação): +10 (Especialista — pode forjar itens +1)<br>- Atletismo (Físico + Conflito): +10<br>- Engenharia (Mental + Interação): +8<br>- Avaliação de Metal (Mental + Interação): +8<br><br>#### Ações (3 PA por turno)<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Ação</th><th style=\"padding: 5px;\">Custo</th><th style=\"padding: 5px;\">Teste de Ataque</th><th style=\"padding: 5px;\">Dano/Efeito</th></tr><tr><td style=\"padding: 5px;\">**Martelo de Guerra**</td><td style=\"padding: 5px;\">[A] [Ataque]</td><td style=\"padding: 5px;\">Físico + Conflito + Nível = **+10** vs CA</td><td style=\"padding: 5px;\">2d8+4 contusão</td></tr><tr><td style=\"padding: 5px;\">**Arremesso de Brasas**</td><td style=\"padding: 5px;\">[A] [Ataque]</td><td style=\"padding: 5px;\">Mental + Conflito + Nível = **+8** vs CA (3m)</td><td style=\"padding: 5px;\">1d6+2 fogo + **Cegado** 1R (Físico + Resistência DC 14 para evitar)</td></tr><tr><td style=\"padding: 5px;\">**Golpe Devastador**</td><td style=\"padding: 5px;\">[AA] [Ataque]</td><td style=\"padding: 5px;\">Físico + Conflito + Nível = **+10** vs CA</td><td style=\"padding: 5px;\">3d8+4 contusão + **Caído** (Físico + Resistência DC 16)</td></tr><tr><td style=\"padding: 5px;\">**Postura de Forja**</td><td style=\"padding: 5px;\">[A]</td><td style=\"padding: 5px;\">—</td><td style=\"padding: 5px;\">+2 CA até próximo turno (cava os pés no chão, impossível empurrar)</td></tr><tr><td style=\"padding: 5px;\">**Mover**</td><td style=\"padding: 5px;\">[A]</td><td style=\"padding: 5px;\">—</td><td style=\"padding: 5px;\">6m</td></tr><tr><td style=\"padding: 5px;\">**Agarrar**</td><td style=\"padding: 5px;\">[A] [Ataque]</td><td style=\"padding: 5px;\">Fís + Conf + Nível = **+10** vs CA</td><td style=\"padding: 5px;\">Alvo **Agarrado**</td></tr><tr><td style=\"padding: 5px;\">**Empurrar**</td><td style=\"padding: 5px;\">[A] [Ataque]</td><td style=\"padding: 5px;\">Fís + Conf + Nível = **+10** vs CA</td><td style=\"padding: 5px;\">Empurra 1,5m ou **Caído**</td></tr></tbody></table><br>#### Reações [R]<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Reação</th><th style=\"padding: 5px;\">Gatilho</th><th style=\"padding: 5px;\">Efeito</th></tr><tr><td style=\"padding: 5px;\">**Ataque de Oportunidade**</td><td style=\"padding: 5px;\">Inimigo sai do alcance</td><td style=\"padding: 5px;\">+10, 2d8+4 contusão</td></tr><tr><td style=\"padding: 5px;\">**Parede de Ferro**</td><td style=\"padding: 5px;\">Aliado adjacente é atacado</td><td style=\"padding: 5px;\">Torsten impõe -2 ao ataque do inimigo</td></tr></tbody></table><br>#### Traços e Habilidades Passivas<br><br>- **Peso Pétreo (Racial Anão):** Imune a empurrão se o atacante tiver Nível ≤ Físico de Torsten (4)<br>- **Fôlego das Profundezas (Racial):** Pode ficar sem ar por Físico+1 rodadas extras. Imune a sufocamento por gás<br>- **Olho de Rubi (Prótese):** O olho de vidro rúnico brilha na presença de metal de qualidade. Detecta automaticamente itens mágicos ou de qualidade masterwork num raio de 3m<br>- **Incansável:** Torsten não sofre Exausto por trabalho prolongado. Pode trabalhar 48h sem penalidade<br>- **Runa de Rastreamento:** Pode ativar a runa na adaga de Veros — aponta a direção de Veros num raio de 10km<br><br>#### Equipamento<br><br>- Martelo de guerra (2d8 contusão, Demolidor) | Avental de couro reforçado (+2 CA)<br>- Ferramentas de ferreiro masterwork | Olho de vidro rúnico (esquerdo)<br>- Brasas quentes da forja (componente para Arremesso de Brasas)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Forjar a arma perfeita usando a Bigorna de Runas Vermelhas<br>- **Medo:** A vila morrer e ele perder propósito (o Louvor ao Ato corre em suas veias)<br>- **Segredo:** Forjou a adaga de Veros e pode rastreá-lo a qualquer momento<br><br>#### Falas<br><br>1. _\"Palavras são vento. Ferro é verdade.\"_<br>2. _\"Essa flechada? Metal da Legião. Eu conheço esse ferro.\"_<br>3. _\"Se encontrarem minha bigorna, a dos rubis... eu forjo qualquer coisa.\"_<br>4. _\"O Compasso não encontra ferro. Ele encontra o que QUER ferro.\"_<br><br>---<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {}
+                }
+            },
+            "system": {},
+            "title": {
+                "show": true,
+                "level": 1
+            },
+            "sort": 0
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "pagetype": "person",
+            "img": "modules/monks-enhanced-journal/assets/person.png"
+        }
+    },
+    "system": {},
+    "_stats": {
+        "systemId": "pandorha",
+        "coreVersion": "13.351"
+    }
+}

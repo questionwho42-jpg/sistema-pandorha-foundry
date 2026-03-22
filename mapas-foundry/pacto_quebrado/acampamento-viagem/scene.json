@@ -1,0 +1,76 @@
+{
+  "name": "As Colinas: Acampamento de Viagem",
+  "background": {
+    "src": "mapas-foundry/pacto_quebrado/acampamento-viagem/background.png"
+  },
+  "width": 2048,
+  "height": 2048,
+  "grid": {
+    "type": 1,
+    "size": 100,
+    "color": "#000000",
+    "alpha": 0.2,
+    "distance": 1.5,
+    "units": "m"
+  },
+  "tokenVision": true,
+  "fog": {
+    "exploration": true
+  },
+  "environment": {
+    "darknessLevel": 0.7
+  },
+  "walls": [],
+  "lights": [
+    {
+      "x": 1024,
+      "y": 1024,
+      "config": {
+        "alpha": 0.4,
+        "angle": 360,
+        "bright": 6,
+        "color": "#ff8c00",
+        "dim": 12,
+        "gradual": true,
+        "luminosity": 0.5,
+        "animation": {
+          "type": "torch",
+          "speed": 3,
+          "intensity": 5
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "x": 800,
+      "y": 800,
+      "text": "Ação de Downtime: Preparar Armas (+1 no próximo ataque).",
+      "icon": "icons/svg/sword.svg"
+    },
+    {
+      "x": 1248,
+      "y": 800,
+      "text": "Ação de Downtime: Estudar Mapa (Se tiver o mapa, revela entrada secreta de Karathon).",
+      "icon": "icons/svg/book.svg"
+    },
+    {
+      "x": 800,
+      "y": 1248,
+      "text": "Ação de Downtime: Conversar para Bônus de Roleplay (+1 Vigor).",
+      "icon": "icons/svg/speech.svg"
+    },
+    {
+      "x": 1248,
+      "y": 1248,
+      "text": "Ação de Downtime: Tratar Feridos (Recupera +1d8 HP).",
+      "icon": "icons/svg/heal.svg"
+    },
+    {
+      "x": 1024,
+      "y": 1024,
+      "text": "Evento Surpresa Noturno (1d6): 1-2: Tranquilo. 3-4: Uivo de Cão de Guerra. 5-6: Mestra Thazza aparece.",
+      "icon": "icons/svg/d20.svg"
+    }
+  ]
+}

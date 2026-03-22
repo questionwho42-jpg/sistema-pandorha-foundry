@@ -1,0 +1,169 @@
+{
+  "isCustomSystemExport": true,
+  "templates": [],
+  "actors": [],
+  "items": [
+    {
+      "name": "Humano",
+      "type": "equippableItem",
+      "system": {
+        "template": "Ancestralidade",
+        "props": {
+          "cap_prim_nome": "Mente Inquieta",
+          "cap_prim_desc": "Ganhe +1 Talento Geral adicional no Nível 1 e pode escolher +1 Aplicação extra para aumentar em +1.",
+          "traco1": "Diligência Erudita",
+          "traco1_desc": "+2 em Testes Globais cuja soma de bônus fixos seja 10 ou superior.",
+          "traco2": "Língua de Prata",
+          "traco2_desc": "Vantagem em Social + Interação + Nível (vezes por dia = Eixo Social).",
+          "traco3": "Vontade Indomável [R]",
+          "traco3_desc": "Reação para estabilizar automaticamente ao chegar a 0 HP pela primeira vez na cena."
+        }
+      }
+    },
+    {
+      "name": "Elfo",
+      "type": "equippableItem",
+      "system": {
+        "template": "Ancestralidade",
+        "props": {
+          "cap_prim_nome": "Sentido Etérico",
+          "cap_prim_desc": "Percebe presença de magia em um raio de 9m (Passiva). Sucesso automático para notar fontes mágicas.",
+          "traco1": "Visão Estelar",
+          "traco1_desc": "Ignora penalidades de baixa luminosidade (Penumbra).",
+          "traco2": "Agilidade Élfica",
+          "traco2_desc": "Velocidade base aumenta em 1,5 metros (total 10,5m).",
+          "traco3": "Transe Profundo",
+          "traco3_desc": "Descanso Longo em 4 horas (Transe)."
+        }
+      }
+    },
+    {
+      "name": "Anão",
+      "type": "equippableItem",
+      "system": {
+        "template": "Ancestralidade",
+        "props": {
+          "cap_prim_nome": "Peso Pétreo",
+          "cap_prim_desc": "Imune a 'Empurrão' de criaturas/magias de nível menor ou igual ao seu Físico.",
+          "traco1": "Sentido de Minério",
+          "traco1_desc": "Sente metais/gemas a 18m através de pedra.",
+          "traco2": "Couraça Biológica",
+          "traco2_desc": "+2 de Resistência contra Venenos e Doenças naturais.",
+          "traco3": "Ruptura de Rocha",
+          "traco3_desc": "Margem de Crítico em Físico+Conflito-1 (crita 19-20)."
+        }
+      }
+    },
+    {
+      "name": "Drakari",
+      "type": "equippableItem",
+      "system": {
+        "template": "Ancestralidade",
+        "props": {
+          "cap_prim_nome": "Sopro Elemental",
+          "cap_prim_desc": "Cone 4,5m de energia (Fogo/Gelo/Raio). Dano 1d8 (+1d8 por tier). 1x por Cena.",
+          "traco1": "Escamas de Guerra",
+          "traco1_desc": "Sem armadura: CA = 11 + Nível + Físico + Resistência.",
+          "traco2": "Coração de Dragão",
+          "traco2_desc": "+1 HP extra por nível global.",
+          "traco3": "Garras Letais",
+          "traco3_desc": "Ataque desarmado 1d6 (leve) + Físico (Conflito)."
+        }
+      }
+    },
+    {
+      "name": "Umbral",
+      "type": "equippableItem",
+      "system": {
+        "template": "Ancestralidade",
+        "props": {
+          "cap_prim_nome": "Corpo de Éter",
+          "cap_prim_desc": "Atravessa frestas de 10cm sem penalidade.",
+          "traco1": "Visão do Vazio",
+          "traco1_desc": "Enxerga perfeitamente na escuridão total (mesmo mágica).",
+          "traco2": "Passo Silencioso",
+          "traco2_desc": "+2 em Físico + Interação (Furtividade).",
+          "traco3": "Desvanecer [AA]",
+          "traco3_desc": "Invisível por 1 Rodada (1x por cena)."
+        }
+      }
+    },
+    {
+      "name": "Fera",
+      "type": "equippableItem",
+      "system": {
+        "template": "Ancestralidade",
+        "props": {
+          "cap_prim_nome": "Faro Aguçado",
+          "cap_prim_desc": "Detecta odores a 18m. +5 para rastrear inimigos feridos.",
+          "traco1": "Impulso Selvagem",
+          "traco1_desc": "Velocidade base aumenta em 3 metros (total 12m).",
+          "traco2": "Couraça de Pelagem",
+          "traco2_desc": "+1 permanente na Defesa (CA).",
+          "traco3": "Ira de Pandorha",
+          "traco3_desc": "Abaixo de 50% HP: +2 em Físico + Conflito."
+        }
+      }
+    },
+    {
+      "name": "Vanguarda",
+      "type": "equippableItem",
+      "system": {
+        "template": "Classe",
+        "props": {
+          "passiva_nome": "Postura de Combate",
+          "passiva_desc": "Pode fazer uma Ação de Interagir (sacar arma, abrir porta) como 1 Ação [L] uma vez por turno.",
+          "talento1": "Golpe Esmagador [AA]",
+          "talento1_desc": "Ataque corpo-a-corpo +1d8 de dano. Alvo fica Exposto (-2 CA) até seu próximo turno.",
+          "talento2": "Muralha Humana [A]",
+          "talento2_desc": "Concede Cobertura Total para aliados atrás. Pode usar Reação para levar dano por aliado adjacente."
+        }
+      }
+    },
+    {
+      "name": "Tecelão de Sombras",
+      "type": "equippableItem",
+      "system": {
+        "template": "Classe",
+        "props": {
+          "passiva_nome": "Visão de Éter",
+          "passiva_desc": "Enxerga auras mágicas e invisibilidade. Pode gastar 1 EE para rerolar Conhecimento.",
+          "talento1": "Armadura Mágica [A]",
+          "talento1_desc": "CA torna-se 13 + Eixo Mental por 1 hora.",
+          "talento2": "Passo de Bruma [A]",
+          "talento2_desc": "Teleporte 9m (Custa 1 EE)."
+        }
+      }
+    },
+    {
+      "name": "Emissário",
+      "type": "equippableItem",
+      "system": {
+        "template": "Classe",
+        "props": {
+          "passiva_nome": "Diplomacia Armada",
+          "passiva_desc": "Usa Eixo Social para Iniciativa. Aliados a 3m ganham +1 em Mental + Resistência.",
+          "talento1": "Ataque Furtivo (Passivo)",
+          "talento1_desc": "Causa +1d6 de dano se o alvo estiver distraído ou surpreso (1x por turno).",
+          "talento2": "Golpe Fantasma [AA]",
+          "talento2_desc": "Ataca, move-se sem oportunidade e fica Invisível até o fim do turno."
+        }
+      }
+    },
+    {
+      "name": "Caçador",
+      "type": "equippableItem",
+      "system": {
+        "template": "Classe",
+        "props": {
+          "passiva_nome": "Predador",
+          "passiva_desc": "Rastreia em velocidade normal. +2 de dano contra Bestas e Monstros conhecidos.",
+          "talento1": "Companheiro Animal",
+          "talento1_desc": "Possui um animal leal (Nível 1) que age na sua iniciativa.",
+          "talento2": "Marca do Caçador [A]",
+          "talento2_desc": "Marca alvo visível: +1d4 de dano extra em todos os ataques contra ele."
+        }
+      }
+    }
+  ]
+}

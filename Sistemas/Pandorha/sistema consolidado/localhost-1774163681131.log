@@ -1,0 +1,391 @@
+ _______________________________________________________________
+ _____ ___  _   _ _   _ ____  ______   __ __     _______ _____
+|  ___/ _ \| | | | \ | |  _ \|  _ \ \ / / \ \   / |_   _|_   _|
+| |_ | | | | | | |  \| | | | | |_) \ V /   \ \ / /  | |   | |
+|  _|| |_| | |_| | |\  | |_| |  _ < | |     \ V /   | |   | |
+|_|   \___/ \___/|_| \_|____/|_| \_\|_|      \_/    |_|   |_|
+===============================================================
+ Foundry VTT | Foundry Virtual Tabletop ESModule loaded
+ Foundry VTT | Reestablishing existing session 407eb85d29902594bf0d98bb
+ Foundry VTT | Connected to server socket using session 407eb85d29902594bf0d98bb
+ Foundry VTT | Initializing Foundry Virtual Tabletop Game
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-formula.hbs
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-info.hbs
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-no-delimiters.hbs
+ Foundry VTT | Loaded localization file modules/popout/lang/pt-BR.json
+ Foundry VTT | Loaded localization file modules/pt-BR/lang/pt-BR.json
+ Foundry VTT | Loaded localization file lang/en.json
+ Foundry VTT | Loaded localization file systems/custom-system-builder/lang/en.json
+ Foundry VTT | Loaded localization file modules/popout/lang/en.json
+ Foundry VTT | Synchronized official game time in 1ms
+ Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ Custom System Builder | Item template has been deleted for item Anão - Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+ 
+onError @ foundry.mjs:23855
+ Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+ Custom System Builder | All props for Humanos (1e8PXsHCuEjdovpe) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humanos (Actor.DsuH3ouBXiVaexmF.Item.1e8PXsHCuEjdovpe).
+ Custom System Builder | All props for Humanos (1e8PXsHCuEjdovpe) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humanos (Actor.DsuH3ouBXiVaexmF.Item.1e8PXsHCuEjdovpe).
+ Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+ Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+ Custom System Builder | All props for Humanos (ekCBgFPICC0hPDLM) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.ekCBgFPICC0hPDLM).
+ Custom System Builder | All props for Humanos (ekCBgFPICC0hPDLM) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.ekCBgFPICC0hPDLM).
+ Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+ Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+ Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+ 
+onError @ foundry.mjs:23855
+ 
+onError @ foundry.mjs:23855
+ Custom System Builder | All props for Acólito (4ExyEL6QwxVqQbXR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Acólito (Item.4ExyEL6QwxVqQbXR).
+ Custom System Builder | All props for Acólito (4ExyEL6QwxVqQbXR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Acólito (Item.4ExyEL6QwxVqQbXR).
+ Custom System Builder | All props for Anões (bSKfWNMfRsJWfnbX) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anões (Item.bSKfWNMfRsJWfnbX).
+ Custom System Builder | All props for Anões (bSKfWNMfRsJWfnbX) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anões (Item.bSKfWNMfRsJWfnbX).
+ Custom System Builder | All props for Aristocrata (39iasryXewEk1lob) computed in 1 loops.
+ Custom System Builder | Done preparing data for Aristocrata (Item.39iasryXewEk1lob).
+ Custom System Builder | All props for Aristocrata (39iasryXewEk1lob) computed in 1 loops.
+ Custom System Builder | Done preparing data for Aristocrata (Item.39iasryXewEk1lob).
+ Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+ Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+ Custom System Builder | All props for Criminoso (ZW3higi65kBf5TVr) computed in 1 loops.
+ Custom System Builder | Done preparing data for Criminoso (Item.ZW3higi65kBf5TVr).
+ Custom System Builder | All props for Criminoso (ZW3higi65kBf5TVr) computed in 1 loops.
+ Custom System Builder | Done preparing data for Criminoso (Item.ZW3higi65kBf5TVr).
+ Custom System Builder | All props for Drakari (ZLR80ZgQveFC0QSg) computed in 1 loops.
+ Custom System Builder | Done preparing data for Drakari (Item.ZLR80ZgQveFC0QSg).
+ Custom System Builder | All props for Drakari (ZLR80ZgQveFC0QSg) computed in 1 loops.
+ Custom System Builder | Done preparing data for Drakari (Item.ZLR80ZgQveFC0QSg).
+ Custom System Builder | All props for Elfos (WaSNkFJUVNqq3Qm3) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfos (Item.WaSNkFJUVNqq3Qm3).
+ Custom System Builder | All props for Elfos (WaSNkFJUVNqq3Qm3) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfos (Item.WaSNkFJUVNqq3Qm3).
+ Custom System Builder | All props for Emissário (5xRxdGRw2qXCDTQH) computed in 1 loops.
+ Custom System Builder | Done preparing data for Emissário (Item.5xRxdGRw2qXCDTQH).
+ Custom System Builder | All props for Emissário (5xRxdGRw2qXCDTQH) computed in 1 loops.
+ Custom System Builder | Done preparing data for Emissário (Item.5xRxdGRw2qXCDTQH).
+ Custom System Builder | All props for Erudito (HLYTWbr0JT6rxzIE) computed in 1 loops.
+ Custom System Builder | Done preparing data for Erudito (Item.HLYTWbr0JT6rxzIE).
+ Custom System Builder | All props for Erudito (HLYTWbr0JT6rxzIE) computed in 1 loops.
+ Custom System Builder | Done preparing data for Erudito (Item.HLYTWbr0JT6rxzIE).
+ Custom System Builder | All props for Feras (PznmdGSo0dM7ySbe) computed in 1 loops.
+ Custom System Builder | Done preparing data for Feras (Item.PznmdGSo0dM7ySbe).
+ Custom System Builder | All props for Feras (PznmdGSo0dM7ySbe) computed in 1 loops.
+ Custom System Builder | Done preparing data for Feras (Item.PznmdGSo0dM7ySbe).
+ Custom System Builder | All props for Humanos (0K05nsHImr37wdEL) computed in 2 loops.
+ Custom System Builder | Done preparing data for Humanos (Item.0K05nsHImr37wdEL).
+ Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | All props for Humanos (0K05nsHImr37wdEL) computed in 2 loops.
+ Custom System Builder | Done preparing data for Humanos (Item.0K05nsHImr37wdEL).
+ Custom System Builder | All props for Soldado Veterano (fJ8UP5bHt4XuQ1Uz) computed in 1 loops.
+ Custom System Builder | Done preparing data for Soldado Veterano (Item.fJ8UP5bHt4XuQ1Uz).
+ Custom System Builder | All props for Soldado Veterano (fJ8UP5bHt4XuQ1Uz) computed in 1 loops.
+ Custom System Builder | Done preparing data for Soldado Veterano (Item.fJ8UP5bHt4XuQ1Uz).
+ Custom System Builder | All props for Tecelão de Sombras (6s0iH1asc4yD0Lre) computed in 1 loops.
+ Custom System Builder | Done preparing data for Tecelão de Sombras (Item.6s0iH1asc4yD0Lre).
+ Custom System Builder | All props for Tecelão de Sombras (6s0iH1asc4yD0Lre) computed in 1 loops.
+ Custom System Builder | Done preparing data for Tecelão de Sombras (Item.6s0iH1asc4yD0Lre).
+ Custom System Builder | All props for Umbrais (YOovM3LlsPYj8GXU) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbrais (Item.YOovM3LlsPYj8GXU).
+ Custom System Builder | All props for Umbrais (YOovM3LlsPYj8GXU) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbrais (Item.YOovM3LlsPYj8GXU).
+ Custom System Builder | All props for Vanguarda (OLT80ojrOk3d2UZs) computed in 1 loops.
+ Custom System Builder | Done preparing data for Vanguarda (Item.OLT80ojrOk3d2UZs).
+ Custom System Builder | All props for Vanguarda (OLT80ojrOk3d2UZs) computed in 1 loops.
+ Custom System Builder | Done preparing data for Vanguarda (Item.OLT80ojrOk3d2UZs).
+ Custom System Builder | All props for humus (5Jp0lM1urARrtLY0) computed in 1 loops.
+ Custom System Builder | Done preparing data for humus (Item.5Jp0lM1urARrtLY0).
+ Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | All props for humus (5Jp0lM1urARrtLY0) computed in 1 loops.
+ Custom System Builder | Done preparing data for humus (Item.5Jp0lM1urARrtLY0).
+ Foundry VTT | Retrieved and compiled template templates/ui/scene-navigation.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tab.hbs
+ Foundry VTT | Retrieved and compiled template templates/ui/players.hbs
+ Foundry VTT | Retrieved and compiled template templates/ui/hotbar.hbs
+ Foundry VTT | Retrieved and compiled template templates/ui/scene-controls-layers.hbs
+ Foundry VTT | Retrieved and compiled template templates/ui/scene-controls-tools.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/log.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/notifications.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/input.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/header.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/tracker.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/footer.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/directory/header.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/directory/directory.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/partials/scene-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/partials/folder-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/directory/footer.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/partials/document-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/controls.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playlist-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playing.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/sound-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/compendiums.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/partials/pack-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/settings.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/chat-message.hbs
+ Foundry VTT | Fonts loaded and ready.
+ Foundry VTT | Viewing Scene Cena
+ Foundry VTT | Drawing game canvas for scene Cena
+ Foundry VTT | Loading 51 Assets
+ Foundry VTT | Drawing the HiddenCanvasGroup canvas group
+ Foundry VTT | Drawing the RenderedCanvasGroup canvas group
+ Foundry VTT | Drawing the EnvironmentCanvasGroup canvas group
+ Foundry VTT | Drawing the PrimaryCanvasGroup canvas group
+ Foundry VTT | Drawing the WeatherEffects canvas layer
+ Foundry VTT | Drawing the EffectsCanvasGroup canvas group
+ Foundry VTT | Drawing the CanvasBackgroundAlterationEffects canvas layer
+ Foundry VTT | Drawing the CanvasIlluminationEffects canvas layer
+ Foundry VTT | Drawing the CanvasColorationEffects canvas layer
+ Foundry VTT | Drawing the CanvasDarknessEffects canvas layer
+ Foundry VTT | Drawing the CanvasVisibility canvas group
+ Worker TextureCompressor of FogExtractor | Initialized Worker
+ Foundry VTT | Drawing the InterfaceCanvasGroup canvas group
+ Foundry VTT | Drawing the GridLayer canvas layer
+ Foundry VTT | Drawing the RegionLayer canvas layer
+ Foundry VTT | Drawing the DrawingsLayer canvas layer
+ Foundry VTT | Drawing the TemplateLayer canvas layer
+ Foundry VTT | Drawing the TilesLayer canvas layer
+ Foundry VTT | Drawing the WallsLayer canvas layer
+ Foundry VTT | Drawing the TokenLayer canvas layer
+ Foundry VTT | Drawing the SoundsLayer canvas layer
+ Foundry VTT | Drawing the LightingLayer canvas layer
+ Foundry VTT | Drawing the NotesLayer canvas layer
+ Foundry VTT | Drawing the ControlsLayer canvas layer
+ Foundry VTT | Retrieved and compiled template templates/hud/waypoint-label.hbs
+ Foundry VTT | Drawing the OverlayCanvasGroup canvas group
+ Applying buffered socket event: userActivity
+ PANDORHA | Gatilho de Classe Ativado!
+ Custom System Builder | All props for Vanguarda (OLT80ojrOk3d2UZs) computed in 1 loops.
+ Custom System Builder | Done preparing data for Vanguarda (Item.OLT80ojrOk3d2UZs).
+ Custom System Builder | All props for Vanguarda (OLT80ojrOk3d2UZs) computed in 1 loops.
+ Custom System Builder | Done preparing data for Vanguarda (Item.OLT80ojrOk3d2UZs).
+ PANDORHA | Classe atualizada: Vanguarda
+ Custom System Builder | All props for Tecelão de Sombras (6s0iH1asc4yD0Lre) computed in 1 loops.
+ Custom System Builder | Done preparing data for Tecelão de Sombras (Item.6s0iH1asc4yD0Lre).
+ Custom System Builder | All props for Tecelão de Sombras (6s0iH1asc4yD0Lre) computed in 1 loops.
+ Custom System Builder | Done preparing data for Tecelão de Sombras (Item.6s0iH1asc4yD0Lre).
+ PANDORHA | Classe atualizada: Tecelão de Sombras
+ Custom System Builder | All props for Emissário (5xRxdGRw2qXCDTQH) computed in 1 loops.
+ Custom System Builder | Done preparing data for Emissário (Item.5xRxdGRw2qXCDTQH).
+ Custom System Builder | All props for Emissário (5xRxdGRw2qXCDTQH) computed in 1 loops.
+ Custom System Builder | Done preparing data for Emissário (Item.5xRxdGRw2qXCDTQH).
+ PANDORHA | Classe atualizada: Emissário
+ Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+ Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+ PANDORHA | Classe atualizada: Caçador
+ Instalador de Classes Pandorha concluído! 4 classes sincronizadas. Arraste para a ficha do personagem. 
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/actor/v2/actor-character-sheet.hbs
+ Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+ Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+ Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+ Custom System Builder | Created item contents lWohKsRkyOivZ9dR
+ Custom System Builder | All props for Caçador (lWohKsRkyOivZ9dR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Actor.P0NZxGVDz6rEBjpw.Item.lWohKsRkyOivZ9dR).
+ Custom System Builder | All props for Caçador (lWohKsRkyOivZ9dR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Actor.P0NZxGVDz6rEBjpw.Item.lWohKsRkyOivZ9dR).
+ Custom System Builder | All props for Caçador (lWohKsRkyOivZ9dR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Actor.P0NZxGVDz6rEBjpw.Item.lWohKsRkyOivZ9dR).
+ Custom System Builder | All props for Caçador (lWohKsRkyOivZ9dR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Actor.P0NZxGVDz6rEBjpw.Item.lWohKsRkyOivZ9dR).
+ Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+ Custom System Builder | All props for Caçador (lWohKsRkyOivZ9dR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Actor.P0NZxGVDz6rEBjpw.Item.lWohKsRkyOivZ9dR).
+ Custom System Builder | All props for Caçador (lWohKsRkyOivZ9dR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Actor.P0NZxGVDz6rEBjpw.Item.lWohKsRkyOivZ9dR).
+ Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+ PANDORHA | Classe detectada: Caçador. Abrindo Seletor...
+ 
+logCompatibilityWarning @ foundry.mjs:6727
+ Foundry VTT | Rendering Dialog
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_lore_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_aparencia_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_bonus_eixo_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw capacidade_primordial_nome_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw capacidade_primordial_descr_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel3_nome_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel3_descr_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+ Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/hud/dialog.html
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/app-window.html
+foundry.mjs:115132 Máximo de 2 talentos! 
+#fetch @ foundry.mjs:115132
+Logger.js:39 Custom System Builder | All props for Caçador (lWohKsRkyOivZ9dR) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.P0NZxGVDz6rEBjpw.Item.lWohKsRkyOivZ9dR).
+Logger.js:39 Custom System Builder | All props for Caçador (lWohKsRkyOivZ9dR) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.P0NZxGVDz6rEBjpw.Item.lWohKsRkyOivZ9dR).
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | All props for Caçador (lWohKsRkyOivZ9dR) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.P0NZxGVDz6rEBjpw.Item.lWohKsRkyOivZ9dR).
+Logger.js:39 Custom System Builder | All props for Caçador (lWohKsRkyOivZ9dR) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.P0NZxGVDz6rEBjpw.Item.lWohKsRkyOivZ9dR).
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_lore_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_aparencia_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_bonus_eixo_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw capacidade_primordial_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw capacidade_primordial_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel3_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel3_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | All props for Caçador (lWohKsRkyOivZ9dR) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.P0NZxGVDz6rEBjpw.Item.lWohKsRkyOivZ9dR).
+Logger.js:39 Custom System Builder | All props for Caçador (lWohKsRkyOivZ9dR) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.P0NZxGVDz6rEBjpw.Item.lWohKsRkyOivZ9dR).
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+foundry.mjs:115132 Classe Caçador configurada com sucesso! 
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_lore_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_aparencia_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_bonus_eixo_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw capacidade_primordial_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw capacidade_primordial_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel3_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel3_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+foundry.mjs:115132 O Foundry Virtual Tabletop requer uma janela utilizável com dimensões de 1024px por 768px ou maiores. As dimensões atuais desta janela são 982px por 794px. No momento, você tem um fator de zoom aplicado no sistema operacional ou no navegador, o que está reduzindo o tamanho efetivo da sua janela. Você deve aumentar o tamanho da sua janela ou reduzir o fator de zoom aplicado ao seu navegador, caso contrário, alguns recursos do software não funcionarão corretamente. 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+#validateResolution @ foundry.mjs:166558
+(anonymous) @ foundry.mjs:692

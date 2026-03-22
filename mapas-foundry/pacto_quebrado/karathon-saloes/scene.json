@@ -1,0 +1,77 @@
+{
+  "name": "Karathon: Salões Internos",
+  "background": {
+    "src": "mapas-foundry/pacto_quebrado/karathon-saloes/background.png"
+  },
+  "width": 1920,
+  "height": 1080,
+  "grid": {
+    "type": 1,
+    "size": 100,
+    "color": "#000000",
+    "alpha": 0.2,
+    "distance": 1.5,
+    "units": "m"
+  },
+  "tokenVision": true,
+  "fog": {
+    "exploration": true
+  },
+  "environment": {
+    "darknessLevel": 0.6
+  },
+  "walls": [
+    {
+      "c": [400, 200, 1520, 200],
+      "move": 1,
+      "sense": 1
+    },
+    {
+      "c": [400, 880, 1520, 880],
+      "move": 1,
+      "sense": 1
+    }
+  ],
+  "lights": [
+    {
+      "x": 960,
+      "y": 540,
+      "config": {
+        "alpha": 0.3,
+        "bright": 4,
+        "dim": 10,
+        "color": "#00ffff",
+        "animation": {
+          "type": "ghost",
+          "speed": 1
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "x": 960,
+      "y": 300,
+      "text": "Armadilha: Degraus de Areia Magnética. Físico + Resistência DC 15. Falha = +2 Saturação Magnética.",
+      "icon": "icons/svg/trap.svg"
+    },
+    {
+      "x": 1400,
+      "y": 540,
+      "text": "Puzzle: Porta Rúnica Elétrica. Mental + Conflito DC 15. Elfos percebem design pré-Morden automaticamente.",
+      "icon": "icons/svg/bolt.svg"
+    },
+    {
+      "x": 500,
+      "y": 800,
+      "text": "Sidequest 1: A Bigorna Oculta (Torsten). Mental + Int DC 15 para achar a parede falsa.",
+      "icon": "icons/svg/anvil.svg"
+    },
+    {
+      "x": 200,
+      "y": 540,
+      "text": "Lore: Fragmentos Rúnicos Culturais. Mental + Interação DC 15 (Recompensa: 50 Pesos Argila Orc).",
+      "icon": "icons/svg/book-open.svg"
+    }
+  ]
+}

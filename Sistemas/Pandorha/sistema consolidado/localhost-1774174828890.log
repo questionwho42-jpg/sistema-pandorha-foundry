@@ -1,0 +1,2950 @@
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/directory/footer.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/document-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/controls.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playlist-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playing.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/sound-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/compendiums.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/pack-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/settings.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/chat-message.hbs
+foundry.mjs:75114 Foundry VTT | Fonts loaded and ready.
+foundry.mjs:46163 Foundry VTT | Viewing Scene Cena
+foundry.mjs:94310 Foundry VTT | Drawing game canvas for scene Cena
+foundry.mjs:84197 Foundry VTT | Loading 51 Assets
+foundry.mjs:85137 Foundry VTT | Drawing the HiddenCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the RenderedCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the EnvironmentCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the PrimaryCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the WeatherEffects canvas layer
+foundry.mjs:85137 Foundry VTT | Drawing the EffectsCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasBackgroundAlterationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasIlluminationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasColorationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasDarknessEffects canvas layer
+foundry.mjs:85137 Foundry VTT | Drawing the CanvasVisibility canvas group
+worker.js:72 Worker TextureCompressor of FogExtractor | Initialized Worker
+foundry.mjs:85137 Foundry VTT | Drawing the InterfaceCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the GridLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the RegionLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the DrawingsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TemplateLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TilesLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the WallsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TokenLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the SoundsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the LightingLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the NotesLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the ControlsLayer canvas layer
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/hud/waypoint-label.hbs
+foundry.mjs:85137 Foundry VTT | Drawing the OverlayCanvasGroup canvas group
+foundry.mjs:168911 Applying buffered socket event: userActivity
+VM1543:276 PANDORHA | Gatilho de Ancestralidade Ativado!
+VM1543:310 PANDORHA | Sincronizado: Humanos
+VM1543:310 PANDORHA | Sincronizado: Elfos
+VM1543:310 PANDORHA | Sincronizado: Anões
+VM1543:310 PANDORHA | Sincronizado: Drakari
+VM1543:310 PANDORHA | Sincronizado: Umbrais
+VM1543:310 PANDORHA | Sincronizado: Feras
+foundry.mjs:115132 Sincronização Pandorha v1.4 Concluída! Gatilho do Seletor Ativo. 
+VM1543:380 PANDORHA | Nenhuma Ficha de Ator precisou de atualização ou as abas necessárias não existem nela.
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_lore_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_aparencia_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_bonus_eixo_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw capacidade_primordial_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw capacidade_primordial_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel3_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel3_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/actor/v2/actor-character-sheet.hbs
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | All props for Anões (G6IGRPaNr9KcMJuV) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.P0NZxGVDz6rEBjpw.Item.G6IGRPaNr9KcMJuV).
+Logger.js:39 Custom System Builder | All props for Anões (G6IGRPaNr9KcMJuV) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.P0NZxGVDz6rEBjpw.Item.G6IGRPaNr9KcMJuV).
+Logger.js:39 Custom System Builder | All props for Caçador (sXSYpI0jfTu8gMIN) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.P0NZxGVDz6rEBjpw.Item.sXSYpI0jfTu8gMIN).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (sXSYpI0jfTu8gMIN) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.P0NZxGVDz6rEBjpw.Item.sXSYpI0jfTu8gMIN).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_lore_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_aparencia_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_bonus_eixo_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw capacidade_primordial_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw capacidade_primordial_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel3_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel3_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_lore_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_aparencia_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw anc_bonus_eixo_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw capacidade_primordial_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw capacidade_primordial_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel3_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw traco_sel3_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | All props for Anões (G6IGRPaNr9KcMJuV) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.P0NZxGVDz6rEBjpw.Item.G6IGRPaNr9KcMJuV).
+Logger.js:39 Custom System Builder | All props for Anões (G6IGRPaNr9KcMJuV) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.P0NZxGVDz6rEBjpw.Item.G6IGRPaNr9KcMJuV).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.P0NZxGVDz6rEBjpw talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/document-create.html
+Logger.js:39 Custom System Builder | All props for Character (6) (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (null).
+Logger.js:39 Custom System Builder | All props for Character (6) (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (null).
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/item/v2/equippableItem-sheet.hbs
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (bSKfWNMfRsJWfnbX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Item.bSKfWNMfRsJWfnbX).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+Logger.js:39 Custom System Builder | All props for Anões (bSKfWNMfRsJWfnbX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Item.bSKfWNMfRsJWfnbX).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (bSKfWNMfRsJWfnbX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Item.bSKfWNMfRsJWfnbX).
+Logger.js:39 Custom System Builder | Created item contents Y3gGx9zEMNVlAAVs
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+VM1543:271 PANDORHA | Ancestralidade detectada: Anões. Abrindo Seletor...
+foundry.mjs:6727 Error: The V1 Application framework is deprecated, and will be removed in a later core software version. Please use the V2 version of the Application framework available under foundry.applications.api.ApplicationV2.
+Deprecated since Version 13
+Backwards-compatible support will be removed in Version 16
+    at Object.logCompatibilityWarning (foundry.mjs:6715:17)
+    at new Application (foundry.mjs:37008:21)
+    at new Dialog (foundry.mjs:117100:5)
+    at openAncestrySelector (eval at #executeScript (foundry.mjs:45528:16), <anonymous>:191:9)
+    at Object.eval [as fn] (eval at #executeScript (foundry.mjs:45528:16), <anonymous>:272:17)
+    at #call (foundry.mjs:23832:20)
+    at Hooks.callAll (foundry.mjs:23791:17)
+    at foundry.mjs:58663:17
+    at foundry.mjs:58668:41
+    at Array.map (<anonymous>)
+logCompatibilityWarning @ foundry.mjs:6727
+foundry.mjs:37351 Foundry VTT | Rendering Dialog
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/hud/dialog.html
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/app-window.html
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+foundry.mjs:115132 Ancestralidade Anões configurada com sucesso! 
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+Logger.js:39 Custom System Builder | Created item contents 3FdRXXM7ERPmNWR6
+Logger.js:39 Custom System Builder | All props for Caçador (3FdRXXM7ERPmNWR6) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.3FdRXXM7ERPmNWR6).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (3FdRXXM7ERPmNWR6) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.3FdRXXM7ERPmNWR6).
+Logger.js:39 Custom System Builder | All props for Caçador (3FdRXXM7ERPmNWR6) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.3FdRXXM7ERPmNWR6).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (3FdRXXM7ERPmNWR6) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.3FdRXXM7ERPmNWR6).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | All props for Caçador (3FdRXXM7ERPmNWR6) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.3FdRXXM7ERPmNWR6).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (3FdRXXM7ERPmNWR6) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.3FdRXXM7ERPmNWR6).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF anc_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF anc_lore_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF anc_aparencia_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF anc_bonus_eixo_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF capacidade_primordial_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF capacidade_primordial_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel3_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel3_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Created item contents 4ovKSlh4De4PJ1g3
+Logger.js:39 Custom System Builder | All props for Caçador (4ovKSlh4De4PJ1g3) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.4ovKSlh4De4PJ1g3).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (4ovKSlh4De4PJ1g3) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.4ovKSlh4De4PJ1g3).
+Logger.js:39 Custom System Builder | All props for Caçador (4ovKSlh4De4PJ1g3) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.4ovKSlh4De4PJ1g3).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (4ovKSlh4De4PJ1g3) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.4ovKSlh4De4PJ1g3).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | All props for Caçador (4ovKSlh4De4PJ1g3) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.4ovKSlh4De4PJ1g3).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (4ovKSlh4De4PJ1g3) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.4ovKSlh4De4PJ1g3).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF anc_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF anc_lore_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF anc_aparencia_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF anc_bonus_eixo_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF capacidade_primordial_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF capacidade_primordial_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel3_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel3_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+foundry.mjs:115132 O Foundry Virtual Tabletop requer uma janela utilizável com dimensões de 1024px por 768px ou maiores. As dimensões atuais desta janela são 982px por 794px. No momento, você tem um fator de zoom aplicado no sistema operacional ou no navegador, o que está reduzindo o tamanho efetivo da sua janela. Você deve aumentar o tamanho da sua janela ou reduzir o fator de zoom aplicado ao seu navegador, caso contrário, alguns recursos do software não funcionarão corretamente. 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+#validateResolution @ foundry.mjs:166558
+(anonymous) @ foundry.mjs:692
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sheets/folder-config.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/generic/form-footer.hbs
+foundry.mjs:23855 Error: Failed data preparation for Actor.K8ZN5evj0MHyOxPQ. Unrecognized component type tab
+    at Hooks.onError (foundry.mjs:23854:24)
+    at CustomActor._safePrepareData (foundry.mjs:32568:17)
+    at CustomActor._initialize (foundry.mjs:32398:12)
+    at CustomActor.updateSource (foundry.mjs:11825:12)
+    at CustomActor.fromDropData (foundry.mjs:33332:18)
+    at async ActorDirectory._handleDroppedEntry (foundry.mjs:104714:17)Caused by: Error: Unrecognized component type tab
+    at ComponentFactory.createOneComponent (ComponentFactory.js:52:19)
+    at ComponentFactory.createMultipleComponents (ComponentFactory.js:34:32)
+    at Panel.fromJSON (Panel.js:238:44)
+    at TemplateSystem.prepareData (TemplateSystem.js:176:37)
+    at CustomActor.prepareBaseData (CustomActor.js:188:29)
+    at CustomActor.prepareData (foundry.mjs:32604:12)
+    at CustomActor.prepareData (foundry.mjs:41572:11)
+    at CustomActor._safePrepareData (foundry.mjs:32566:14)
+    at CustomActor._initialize (foundry.mjs:32398:12)
+    at CustomActor.updateSource (foundry.mjs:11825:12)
+onError @ foundry.mjs:23855
+foundry.mjs:23855 Error: Failed data preparation for Actor.K8ZN5evj0MHyOxPQ. Unrecognized component type tab
+    at Hooks.onError (foundry.mjs:23854:24)
+    at CustomActor._safePrepareData (foundry.mjs:32568:17)
+    at CustomActor._initialize (foundry.mjs:32398:12)
+    at CustomActor.updateSource (foundry.mjs:11825:12)
+    at #handleUpdateDocuments (foundry.mjs:58810:20)
+    at async CustomActor.updateDocuments (foundry.mjs:12555:21)
+    at async CustomActor.sortRelative (foundry.mjs:32680:29)Caused by: Error: Unrecognized component type tab
+    at ComponentFactory.createOneComponent (ComponentFactory.js:52:19)
+    at ComponentFactory.createMultipleComponents (ComponentFactory.js:34:32)
+    at Panel.fromJSON (Panel.js:238:44)
+    at TemplateSystem.prepareData (TemplateSystem.js:176:37)
+    at CustomActor.prepareBaseData (CustomActor.js:188:29)
+    at CustomActor.prepareData (foundry.mjs:32604:12)
+    at CustomActor.prepareData (foundry.mjs:41572:11)
+    at CustomActor._safePrepareData (foundry.mjs:32566:14)
+    at CustomActor._initialize (foundry.mjs:32398:12)
+    at CustomActor.updateSource (foundry.mjs:11825:12)
+onError @ foundry.mjs:23855
+foundry.mjs:23855 Error: Failed data preparation for Actor.gNOoF8iSJ4jQeFJl. Unrecognized component type tab
+    at Hooks.onError (foundry.mjs:23854:24)
+    at CustomActor._safePrepareData (foundry.mjs:32568:17)
+    at CustomActor._initialize (foundry.mjs:32398:12)
+    at CustomActor.updateSource (foundry.mjs:11825:12)
+    at CustomActor.fromDropData (foundry.mjs:33332:18)
+    at async ActorDirectory._handleDroppedEntry (foundry.mjs:104714:17)Caused by: Error: Unrecognized component type tab
+    at ComponentFactory.createOneComponent (ComponentFactory.js:52:19)
+    at ComponentFactory.createMultipleComponents (ComponentFactory.js:34:32)
+    at Panel.fromJSON (Panel.js:238:44)
+    at TemplateSystem.prepareData (TemplateSystem.js:176:37)
+    at CustomActor.prepareBaseData (CustomActor.js:188:29)
+    at CustomActor.prepareData (foundry.mjs:32604:12)
+    at CustomActor.prepareData (foundry.mjs:41572:11)
+    at CustomActor._safePrepareData (foundry.mjs:32566:14)
+    at CustomActor._initialize (foundry.mjs:32398:12)
+    at CustomActor.updateSource (foundry.mjs:11825:12)
+onError @ foundry.mjs:23855
+foundry.mjs:23855 Error: Failed data preparation for Actor.gNOoF8iSJ4jQeFJl. Unrecognized component type tab
+    at Hooks.onError (foundry.mjs:23854:24)
+    at CustomActor._safePrepareData (foundry.mjs:32568:17)
+    at CustomActor._initialize (foundry.mjs:32398:12)
+    at CustomActor.updateSource (foundry.mjs:11825:12)
+    at #handleUpdateDocuments (foundry.mjs:58810:20)
+    at async CustomActor.updateDocuments (foundry.mjs:12555:21)
+    at async CustomActor.sortRelative (foundry.mjs:32680:29)Caused by: Error: Unrecognized component type tab
+    at ComponentFactory.createOneComponent (ComponentFactory.js:52:19)
+    at ComponentFactory.createMultipleComponents (ComponentFactory.js:34:32)
+    at Panel.fromJSON (Panel.js:238:44)
+    at TemplateSystem.prepareData (TemplateSystem.js:176:37)
+    at CustomActor.prepareBaseData (CustomActor.js:188:29)
+    at CustomActor.prepareData (foundry.mjs:32604:12)
+    at CustomActor.prepareData (foundry.mjs:41572:11)
+    at CustomActor._safePrepareData (foundry.mjs:32566:14)
+    at CustomActor._initialize (foundry.mjs:32398:12)
+    at CustomActor.updateSource (foundry.mjs:11825:12)
+onError @ foundry.mjs:23855
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+Logger.js:39 Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+Logger.js:39 Custom System Builder | Item template has been deleted for item Anão - Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+foundry.mjs:115132 Item template has been deleted for item Anão - Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+Logger.js:39 Custom System Builder | Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+foundry.mjs:115132 Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M used in Character (2) - Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+Logger.js:39 Custom System Builder | Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+foundry.mjs:115132 Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ used in Character (2) - Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+Logger.js:39 Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+Logger.js:39 Custom System Builder | Item template has been deleted for item Anão - Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+foundry.mjs:115132 Item template has been deleted for item Anão - Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+Logger.js:39 Custom System Builder | Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+foundry.mjs:115132 Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M used in Character (2) - Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+Logger.js:39 Custom System Builder | Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | Item template has been deleted for item Anão - Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Anão (w2GqoL3CUKq0ipHT) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (Bc6ksFqjaaPond4M) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M).
+Logger.js:39 Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+Logger.js:39 Custom System Builder | All props for Humano (B4jASE3hlwiLXDpJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ).
+Logger.js:39 Custom System Builder | Item template has been deleted for item Anão - Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (2) (SpWW4pln0EJ1BTXa) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (2) (Actor.SpWW4pln0EJ1BTXa).
+Logger.js:39 Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+Logger.js:39 Custom System Builder | All props for Humanos (1e8PXsHCuEjdovpe) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.DsuH3ouBXiVaexmF.Item.1e8PXsHCuEjdovpe).
+Logger.js:39 Custom System Builder | All props for Humanos (1e8PXsHCuEjdovpe) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.DsuH3ouBXiVaexmF.Item.1e8PXsHCuEjdovpe).
+Logger.js:39 Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+Logger.js:39 Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+Logger.js:39 Custom System Builder | All props for Humanos (1e8PXsHCuEjdovpe) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.DsuH3ouBXiVaexmF.Item.1e8PXsHCuEjdovpe).
+Logger.js:39 Custom System Builder | All props for Humanos (1e8PXsHCuEjdovpe) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.DsuH3ouBXiVaexmF.Item.1e8PXsHCuEjdovpe).
+Logger.js:39 Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | All props for Humanos (ekCBgFPICC0hPDLM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.ekCBgFPICC0hPDLM).
+Logger.js:39 Custom System Builder | All props for Humanos (ekCBgFPICC0hPDLM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.ekCBgFPICC0hPDLM).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | All props for Humanos (ekCBgFPICC0hPDLM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.ekCBgFPICC0hPDLM).
+Logger.js:39 Custom System Builder | All props for Humanos (ekCBgFPICC0hPDLM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.ekCBgFPICC0hPDLM).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | All props for Character (5) (P0NZxGVDz6rEBjpw) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (5) (Actor.P0NZxGVDz6rEBjpw).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | All props for Caçador (4ovKSlh4De4PJ1g3) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.4ovKSlh4De4PJ1g3).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (4ovKSlh4De4PJ1g3) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.4ovKSlh4De4PJ1g3).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | All props for Caçador (4ovKSlh4De4PJ1g3) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.4ovKSlh4De4PJ1g3).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (4ovKSlh4De4PJ1g3) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.CyiOVlE0lIauwjOF.Item.4ovKSlh4De4PJ1g3).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF anc_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF anc_lore_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF anc_aparencia_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF anc_bonus_eixo_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF capacidade_primordial_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF capacidade_primordial_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel3_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF traco_sel3_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+foundry.mjs:115132 Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ used in Character (2) - Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+foundry.mjs:115132 Item template has been deleted for item Anão - Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+foundry.mjs:115132 Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M used in Character (2) - Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+foundry.mjs:115132 Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ used in Character (2) - Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+foundry.mjs:115132 Item template has been deleted for item Anão - Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+foundry.mjs:115132 Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.Bc6ksFqjaaPond4M used in Character (2) - Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+foundry.mjs:115132 Item template has been deleted for item Humano - Actor.SpWW4pln0EJ1BTXa.Item.B4jASE3hlwiLXDpJ used in Character (2) - Actor.SpWW4pln0EJ1BTXa 
+#fetch @ foundry.mjs:115132
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | All props for Anões (Y3gGx9zEMNVlAAVs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.CyiOVlE0lIauwjOF.Item.Y3gGx9zEMNVlAAVs).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_matriz_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_vitalidade_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF classe_equipamento_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF hab_passiva_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.CyiOVlE0lIauwjOF talento_classe_2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+Logger.js:39 Custom System Builder | All props for Character (6) (CyiOVlE0lIauwjOF) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (6) (Actor.CyiOVlE0lIauwjOF).
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sheets/macro-config.hbs
+ PANDORHA | Sincronizado: Humanos
+ PANDORHA | Sincronizado: Elfos
+ PANDORHA | Sincronizado: Anões
+ PANDORHA | Sincronizado: Drakari
+ PANDORHA | Sincronizado: Umbrais
+ PANDORHA | Sincronizado: Feras
+foundry.mjs:115132 Sincronização Pandorha v1.4 Concluída! Gatilho do Seletor Ativo. 
+ PANDORHA | Filtros corrigidos no Actor Template: Template Ator Pandorha (OFICIAL)
+ PANDORHA | Filtros corrigidos no Actor Template: Template Ator Pandorha v3.0 (True Mirror)
+foundry.mjs:115132 Filtros de Ancestralidade e Classe foram blindados com sucesso em 2 Ficha(s)! 
+VM1586:224 PANDORHA | Gatilho de Classe Ativado!
+VM1586:267 PANDORHA | Classe atualizada: Vanguarda
+VM1586:267 PANDORHA | Classe atualizada: Tecelão de Sombras
+VM1586:267 PANDORHA | Classe atualizada: Emissário
+VM1586:267 PANDORHA | Classe atualizada: Caçador
+foundry.mjs:115132 Instalador de Classes Pandorha concluído! 4 classes sincronizadas. Arraste para a ficha do personagem. 
+ PANDORHA | Sincronizado: Humanos
+ PANDORHA | Sincronizado: Elfos
+ PANDORHA | Sincronizado: Anões
+ PANDORHA | Sincronizado: Drakari
+ PANDORHA | Sincronizado: Umbrais
+ PANDORHA | Sincronizado: Feras
+foundry.mjs:115132 Sincronização Pandorha v1.4 Concluída! Gatilho do Seletor Ativo. 
+ PANDORHA | Nenhuma Ficha de Ator precisou de atualização ou as abas necessárias não existem nela.
+Logger.js:39 Custom System Builder | All props for Character (7) (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (null).
+Logger.js:39 Custom System Builder | All props for Character (7) (null) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (null).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (bSKfWNMfRsJWfnbX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Item.bSKfWNMfRsJWfnbX).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+Logger.js:39 Custom System Builder | Created item contents lsBgyyOO6kkPZv81
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+VM1543:271 PANDORHA | Ancestralidade detectada: Anões. Abrindo Seletor...
+foundry.mjs:37351 Foundry VTT | Rendering Dialog
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+foundry.mjs:115132 Ancestralidade Anões configurada com sucesso! 
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Created item contents z2oKpGzurM7Fjhur
+Logger.js:39 Custom System Builder | All props for Caçador (z2oKpGzurM7Fjhur) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.z2oKpGzurM7Fjhur).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (z2oKpGzurM7Fjhur) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.z2oKpGzurM7Fjhur).
+Logger.js:39 Custom System Builder | All props for Caçador (z2oKpGzurM7Fjhur) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.z2oKpGzurM7Fjhur).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (z2oKpGzurM7Fjhur) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.z2oKpGzurM7Fjhur).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Caçador (z2oKpGzurM7Fjhur) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.z2oKpGzurM7Fjhur).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (z2oKpGzurM7Fjhur) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.z2oKpGzurM7Fjhur).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+VM1586:219 PANDORHA | Classe detectada: Caçador. Abrindo Seletor...
+foundry.mjs:37351 Foundry VTT | Rendering Dialog
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (z2oKpGzurM7Fjhur) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.z2oKpGzurM7Fjhur).
+Logger.js:39 Custom System Builder | All props for Caçador (z2oKpGzurM7Fjhur) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.z2oKpGzurM7Fjhur).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Caçador (z2oKpGzurM7Fjhur) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.z2oKpGzurM7Fjhur).
+Logger.js:39 Custom System Builder | All props for Caçador (z2oKpGzurM7Fjhur) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.z2oKpGzurM7Fjhur).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Caçador (z2oKpGzurM7Fjhur) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.z2oKpGzurM7Fjhur).
+Logger.js:39 Custom System Builder | All props for Caçador (z2oKpGzurM7Fjhur) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.z2oKpGzurM7Fjhur).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+foundry.mjs:115132 Classe Caçador configurada com sucesso! 
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Created item contents aEtSt49Y5hIVYhUK
+Logger.js:39 Custom System Builder | All props for Caçador (aEtSt49Y5hIVYhUK) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.aEtSt49Y5hIVYhUK).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (aEtSt49Y5hIVYhUK) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.aEtSt49Y5hIVYhUK).
+Logger.js:39 Custom System Builder | All props for Caçador (aEtSt49Y5hIVYhUK) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.aEtSt49Y5hIVYhUK).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (aEtSt49Y5hIVYhUK) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.aEtSt49Y5hIVYhUK).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Caçador (aEtSt49Y5hIVYhUK) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.aEtSt49Y5hIVYhUK).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (aEtSt49Y5hIVYhUK) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.aEtSt49Y5hIVYhUK).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+VM1586:219 PANDORHA | Classe detectada: Caçador. Abrindo Seletor...
+foundry.mjs:37351 Foundry VTT | Rendering Dialog
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Caçador (aEtSt49Y5hIVYhUK) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.aEtSt49Y5hIVYhUK).
+Logger.js:39 Custom System Builder | All props for Caçador (aEtSt49Y5hIVYhUK) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.aEtSt49Y5hIVYhUK).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Anões (lsBgyyOO6kkPZv81) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anões (Actor.pRGcjiB8SYR4m2lX.Item.lsBgyyOO6kkPZv81).
+Logger.js:39 Custom System Builder | All props for Caçador (aEtSt49Y5hIVYhUK) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.aEtSt49Y5hIVYhUK).
+Logger.js:39 Custom System Builder | All props for Caçador (aEtSt49Y5hIVYhUK) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Actor.pRGcjiB8SYR4m2lX.Item.aEtSt49Y5hIVYhUK).
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (7) (pRGcjiB8SYR4m2lX) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (7) (Actor.pRGcjiB8SYR4m2lX).
+foundry.mjs:115132 Classe Caçador configurada com sucesso! 
+Logger.js:39 Custom System Builder | Cannot convert "ancestralidade" to a number Error: Cannot convert "ancestralidade" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Cannot convert "classe" to a number Error: Cannot convert "classe" to a number
+    at convert (typed.js:305:15)
+    at I.r (typed-function.js:1076:22)
+    at t (typed-function.js:1030:43)
+    at oe (typed-function.js:1448:27)
+    at equal (typed-function.js:1476:24)
+    at OperatorNode.js:304:18
+    at Object.evaluate (Node.js:56:16)
+    at i.evaluate (Node.js:38:29)
+    at Formula.computeStatic (Formula.js:531:27)
+    at ItemContainer.js:929:79 Object
+_logToConsole @ Logger.js:39
+foundry.mjs:115132 O Foundry Virtual Tabletop requer uma janela utilizável com dimensões de 1024px por 768px ou maiores. As dimensões atuais desta janela são 982px por 794px. No momento, você tem um fator de zoom aplicado no sistema operacional ou no navegador, o que está reduzindo o tamanho efetivo da sua janela. Você deve aumentar o tamanho da sua janela ou reduzir o fator de zoom aplicado ao seu navegador, caso contrário, alguns recursos do software não funcionarão corretamente. 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+#validateResolution @ foundry.mjs:166558
+(anonymous) @ foundry.mjs:692

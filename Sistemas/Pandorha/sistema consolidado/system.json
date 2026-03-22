@@ -1,0 +1,25 @@
+{
+  "id": "pandorha-csb",
+  "title": "O Mundo de Pandorha (CSB)",
+  "description": "Sistema oficial para o cenário de Dark Fantasy Pandorha, construído sobre o Custom System Builder.",
+  "version": "1.0.0",
+  "author": "Antigravity & User",
+  "scripts": [],
+  "styles": ["css/style.css"],
+  "languages": [
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "custom-system-builder",
+      "type": "module"
+    }
+  ],
+  "url": "",
+  "manifest": "",
+  "download": ""
+}

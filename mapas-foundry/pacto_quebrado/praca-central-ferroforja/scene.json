@@ -1,0 +1,106 @@
+{
+  "name": "Praça Central de Ferroforja",
+  "background": {
+    "src": "mapas-foundry/pacto_quebrado/praca-central-ferroforja/background.png",
+    "offsetX": 0,
+    "offsetY": 0
+  },
+  "width": 2048,
+  "height": 2048,
+  "padding": 0.25,
+  "grid": {
+    "type": 1,
+    "size": 140,
+    "color": "#000000",
+    "alpha": 0.2,
+    "distance": 1.5,
+    "units": "m"
+  },
+  "tokenVision": true,
+  "fog": {
+    "exploration": true,
+    "reset": 1726514732
+  },
+  "environment": {
+    "globalLight": {
+      "enabled": false,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "darknessLevel": 0.6
+  },
+  "walls": [
+    {
+      "c": [1024, 800, 1100, 800],
+      "door": 0,
+      "move": 1,
+      "sense": 1,
+      "sound": 1,
+      "dir": 0
+    },
+    {
+      "c": [950, 1150, 1050, 1150],
+      "door": 0,
+      "move": 1,
+      "sense": 1,
+      "sound": 1,
+      "dir": 0
+    }
+  ],
+  "lights": [
+    {
+      "x": 800,
+      "y": 800,
+      "rotation": 0,
+      "config": {
+        "dim": 10,
+        "bright": 5,
+        "angle": 360,
+        "color": "#1aff00",
+        "alpha": 0.4,
+        "animation": {
+          "type": "torch",
+          "speed": 3,
+          "intensity": 5
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "x": 1024,
+      "y": 1024,
+      "text": "Poço Central (Entrada da Mina)",
+      "icon": "icons/svg/stairs-down.svg",
+      "iconSize": 40,
+      "textStyle": {
+        "fontSize": 24,
+        "fill": "#ffffff"
+      }
+    },
+    {
+      "x": 400,
+      "y": 400,
+      "text": "Barris de Óleo Explosivo (Físico+Conflito DC12 p/ derrubar)",
+      "icon": "icons/svg/barrel.svg",
+      "iconSize": 40,
+      "textStyle": {
+        "fontSize": 20,
+        "fill": "#ff4d4d"
+      }
+    },
+    {
+      "x": 1600,
+      "y": 1200,
+      "text": "Mural Desbotado: Fundação da Vila",
+      "icon": "icons/svg/book.svg",
+      "iconSize": 40,
+      "textStyle": {
+        "fontSize": 20,
+        "fill": "#a9a9a9"
+      }
+    }
+  ]
+}

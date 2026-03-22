@@ -1,0 +1,31 @@
+{
+    "name": "Velho Garth — Ex-Mineiro e Guardião do Compasso",
+    "pages": [
+        {
+            "name": "Velho Garth — Ex-Mineiro e Guardião do Compasso",
+            "type": "text",
+            "text": {
+                "content": "<h3>Velho Garth — Ex-Mineiro e Guardião do Compasso</h3><br>**Nível:** 2 | **ND:** ½ | **Tipo:** Humanoide (Humano, Idoso)<br><br>#### Bloco de Estatísticas<br><br>| Stat       | Valor |     | Stat            | Valor |<br>| ---------- | :---: | --- | --------------- | :---: |<br>| **Físico** |   1   |     | **Conflito**    |   1   |<br>| **Mental** |   3   |     | **Interação**   |   2   |<br>| **Social** |   2   |     | **Resistência** |   3   |<br><br>| Derivado       | Fórmula            |   Valor    |<br>| -------------- | ------------------ | :--------: |<br>| **HP**         | Base + (Fís+Res)×5 |     22     |<br>| **CA**         | 10 + Nível + Fís   |     13     |<br>| **Vigor**      | (Fís+Int) + Nível  |     5      |<br>| **Iniciativa** | Nível + Men + Int  |     +7     |<br>| **Velocidade** | Base (reduzida)    | 6m (manca) |<br>| **Percepção**  | Nível + Men + Int  |     +7     |<br><br>#### Perícias (Treinadas)<br><br>- Mineração (Físico + Interação): +5<br>- Conhecimento Subterrâneo (Mental + Interação): +7<br>- Avaliação de Minério (Mental + Interação): +7<br>- Sobrevivência (Mental + Resistência): +8<br>- Percepção de Mina (Mental + Interação): +7 (sente deslizamentos iminentes)<br><br>#### Ações (3 PA por turno)<br><br>| Ação                 |    Custo     | Teste de Ataque                          | Dano/Efeito                                                          |<br>| -------------------- | :----------: | ---------------------------------------- | -------------------------------------------------------------------- |<br>| **Picareta**         | [A] [Ataque] | Físico + Conflito + Nível = **+4** vs CA | 1d6+1 perfurante                                                     |<br>| **Lanterna na Cara** |     [A]      | —                                        | 1 inimigo adjacente: **Mental + Resistência DC 12** ou **Cegado** 1R |<br>| **Mover**            |     [A]      | —                                        | 6m                                                                   |<br><br>#### Traços e Habilidades Passivas<br><br>- **Sentido de Mina:** Garth sente instabilidade estrutural em túneis. +5 em testes para detectar armadilhas, deslizamentos ou passagens ocultas em ambientes subterrâneos<br>- **Falar com a Pedra:** 30 anos de mineração deram-lhe uma intuição quase sobrenatural. Pode prever desabamentos 1d4 rodadas antes de acontecerem<br>- **Idade e Fragilidade:** Desvantagem em testes de Físico + Conflito. Não pode correr (máximo 6m/turno)<br>- **Conhecimento do Compasso:** É o único NPC que sabe ativar o modo avançado do Compasso (detectar Núcleos Solares)<br><br>#### Equipamento<br><br>- Picareta velha (1d6 perfurante) | Lanterna rúnica (8h de luz azul)<br>- Saco de ferramentas de mineração | Mapa mental das minas (30 anos de memória)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Que seu filho Veros volte para casa<br>- **Medo:** Que a verdade sobre o Compasso destrua a vila<br>- **Segredo:** Veros é seu filho. O Compasso detecta Núcleos Solares, não só ferro<br><br>#### Falas<br><br>1. _\"O Compasso... encontrei-o num lugar que não deveria existir.\"_<br>2. _\"Meu filho fez escolhas. Mas ele não é mau.\"_<br>3. _\"Eu menti para esta vila por 30 anos. E essa mentira nos alimentou.\"_<br>4. _\"Não toquem no que brilha. O que brilha nas profundezas não dorme.\"_<br><br>---<br><br>## ⚔️ NPCs Antagonistas / Facções<br><br>---<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {
+                        "hp": "22",
+                        "ca": "10"
+                    }
+                }
+            }
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "type": "person",
+            "attributes": {
+                "hp": "22",
+                "ca": "10"
+            }
+        }
+    }
+}

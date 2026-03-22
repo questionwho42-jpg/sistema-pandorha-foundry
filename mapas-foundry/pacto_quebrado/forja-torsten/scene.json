@@ -1,0 +1,111 @@
+{
+  "name": "Forja de Torsten",
+  "background": {
+    "src": "mapas-foundry/pacto_quebrado/forja-torsten/background.png",
+    "offsetX": 0,
+    "offsetY": 0
+  },
+  "width": 2048,
+  "height": 2048,
+  "padding": 0.25,
+  "grid": {
+    "type": 1,
+    "size": 140,
+    "color": "#000000",
+    "alpha": 0.2,
+    "distance": 1.5,
+    "units": "m"
+  },
+  "tokenVision": true,
+  "fog": {
+    "exploration": false,
+    "reset": 1726514732
+  },
+  "environment": {
+    "globalLight": {
+      "enabled": false,
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "darknessLevel": 0.4
+  },
+  "walls": [
+    {
+      "c": [200, 200, 1848, 200],
+      "door": 0,
+      "move": 1,
+      "sense": 1,
+      "sound": 1,
+      "dir": 0
+    },
+    {
+      "c": [1848, 200, 1848, 1848],
+      "door": 0,
+      "move": 1,
+      "sense": 1,
+      "sound": 1,
+      "dir": 0
+    },
+    {
+      "c": [200, 1848, 1848, 1848],
+      "door": 0,
+      "move": 1,
+      "sense": 1,
+      "sound": 1,
+      "dir": 0
+    },
+    {
+      "c": [200, 200, 200, 1848],
+      "door": 0,
+      "move": 1,
+      "sense": 1,
+      "sound": 1,
+      "dir": 0
+    }
+  ],
+  "lights": [
+    {
+      "x": 1024,
+      "y": 1024,
+      "rotation": 0,
+      "config": {
+        "dim": 15,
+        "bright": 7,
+        "angle": 360,
+        "color": "#ff6600",
+        "alpha": 0.6,
+        "animation": {
+          "type": "torch",
+          "speed": 3,
+          "intensity": 5
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "x": 1024,
+      "y": 1024,
+      "text": "A Grande Bigorna Central. Possui um compartimento secreto sob a base (Investigação DC 13) guardando 50 Peças de Aço (PA).",
+      "icon": "icons/svg/item-bag.svg",
+      "iconSize": 45,
+      "textStyle": {
+        "fontSize": 20,
+        "fill": "#ffd700"
+      }
+    },
+    {
+      "x": 300,
+      "y": 1024,
+      "text": "Muralha de Ferramentas. Adaga Oculta de Veros (Sombria e Desbotada) escondida na prateleira superior. (Investigação DC 18)",
+      "icon": "icons/svg/combat.svg",
+      "iconSize": 45,
+      "textStyle": {
+        "fontSize": 20,
+        "fill": "#ff4d4d"
+      }
+    }
+  ]
+}

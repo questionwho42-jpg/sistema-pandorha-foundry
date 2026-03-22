@@ -1,0 +1,81 @@
+{
+  "name": "Karathon: Pátio Exterior",
+  "background": {
+    "src": "mapas-foundry/pacto_quebrado/karathon-patio/background.png"
+  },
+  "width": 3000,
+  "height": 2000,
+  "grid": {
+    "type": 1,
+    "size": 100,
+    "color": "#000000",
+    "alpha": 0.2,
+    "distance": 1.5,
+    "units": "m"
+  },
+  "tokenVision": true,
+  "fog": {
+    "exploration": true
+  },
+  "environment": {
+    "darknessLevel": 0.4
+  },
+  "walls": [
+    {
+      "c": [0, 600, 1000, 600],
+      "move": 1,
+      "sense": 1
+    },
+    {
+      "c": [2000, 600, 3000, 600],
+      "move": 1,
+      "sense": 1
+    },
+    {
+      "c": [1200, 0, 1200, 500],
+      "move": 1,
+      "sense": 1
+    },
+    {
+      "c": [1800, 0, 1800, 500],
+      "move": 1,
+      "sense": 1
+    }
+  ],
+  "lights": [
+    {
+      "x": 1500,
+      "y": 1000,
+      "config": {
+        "alpha": 0.2,
+        "bright": 6,
+        "dim": 12,
+        "color": "#ff4500",
+        "animation": {
+          "type": "torch",
+          "speed": 3
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "x": 1500,
+      "y": 800,
+      "text": "Cena 1: O Encontro com Capitão Veros. Stand-off Social (DC 12/15). Drakari recebem +2 Intimidação.",
+      "icon": "icons/svg/speech.svg"
+    },
+    {
+      "x": 1500,
+      "y": 300,
+      "text": "Entrada Principal: Leva aos Salões Internos das Ruínas.",
+      "icon": "icons/svg/door-open.svg"
+    },
+    {
+      "x": 2500,
+      "y": 1500,
+      "text": "Brennan (Sidequest 3): O desertor ferido escondido entre as tendas.",
+      "icon": "icons/svg/citizen.svg"
+    }
+  ]
+}

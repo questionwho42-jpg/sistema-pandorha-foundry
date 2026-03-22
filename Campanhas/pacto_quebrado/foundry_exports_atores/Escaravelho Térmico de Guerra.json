@@ -1,0 +1,49 @@
+{
+    "name": "Escaravelho Térmico de Guerra",
+    "type": "monster",
+    "system": {
+        "eixos": {
+            "fisico": 3,
+            "mental": 0,
+            "social": 0,
+            "conflito": 1,
+            "interacao": 0,
+            "resistencia": 0
+        },
+        "resources": {
+            "hp": {
+                "value": 22,
+                "max": 22
+            },
+            "pv": {
+                "value": 5,
+                "max": 5
+            },
+            "ee": {
+                "value": 5,
+                "max": 5
+            }
+        },
+        "defenses": {
+            "ca": {
+                "value": 14
+            }
+        },
+        "derived": {
+            "initiative": {
+                "value": 2
+            }
+        }
+    },
+    "items": [
+        {
+            "name": "Ataque",
+            "type": "weapon",
+            "system": {
+                "description": {
+                    "value": "Descrição"
+                }
+            }
+        }
+    ]
+}

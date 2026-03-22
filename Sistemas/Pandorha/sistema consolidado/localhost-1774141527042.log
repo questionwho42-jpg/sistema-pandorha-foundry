@@ -1,0 +1,586 @@
+foundry.mjs:181072 _______________________________________________________________
+ _____ ___  _   _ _   _ ____  ______   __ __     _______ _____
+|  ___/ _ \| | | | \ | |  _ \|  _ \ \ / / \ \   / |_   _|_   _|
+| |_ | | | | | | |  \| | | | | |_) \ V /   \ \ / /  | |   | |
+|  _|| |_| | |_| | |\  | |_| |  _ < | |     \ V /   | |   | |
+|_|   \___/ \___/|_| \_|____/|_| \_\|_|      \_/    |_|   |_|
+===============================================================
+foundry.mjs:181073 Foundry VTT | Foundry Virtual Tabletop ESModule loaded
+foundry.mjs:181085 Foundry VTT | Reestablishing existing session d94559e6127db07691c9884a
+foundry.mjs:168847 Foundry VTT | Connected to server socket using session d94559e6127db07691c9884a
+foundry.mjs:169003 Foundry VTT | Initializing Foundry Virtual Tabletop Game
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-formula.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-info.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-no-delimiters.hbs
+foundry.mjs:167817 Foundry VTT | Loaded localization file modules/popout/lang/pt-BR.json
+foundry.mjs:167817 Foundry VTT | Loaded localization file modules/pt-BR/lang/pt-BR.json
+foundry.mjs:167817 Foundry VTT | Loaded localization file modules/popout/lang/en.json
+foundry.mjs:167817 Foundry VTT | Loaded localization file lang/en.json
+foundry.mjs:167817 Foundry VTT | Loaded localization file systems/custom-system-builder/lang/en.json
+foundry.mjs:167466 Foundry VTT | Synchronized official game time in 1ms
+ Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ Custom System Builder | Item template has been deleted for item Anão - Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+warn @ Logger.js:48
+getModifiers @ TemplateSystem.js:622
+_prepareEntityData @ TemplateSystem.js:198
+prepareData @ TemplateSystem.js:179
+prepareBaseData @ CustomActor.js:188
+prepareData @ foundry.mjs:32604
+prepareData @ foundry.mjs:41572
+_safePrepareData @ foundry.mjs:32566
+initializeDocuments @ foundry.mjs:169259
+setupGame @ foundry.mjs:169084
+await in setupGame
+#initializeGameView @ foundry.mjs:170576
+_initializeView @ foundry.mjs:170553
+initialize @ foundry.mjs:169026
+await in initialize
+window.addEventListener.once @ foundry.mjs:181096
+ 
+onError @ foundry.mjs:23855
+_safePrepareData @ foundry.mjs:32568
+initializeDocuments @ foundry.mjs:169259
+setupGame @ foundry.mjs:169084
+await in setupGame
+#initializeGameView @ foundry.mjs:170576
+_initializeView @ foundry.mjs:170553
+initialize @ foundry.mjs:169026
+await in initialize
+window.addEventListener.once @ foundry.mjs:181096
+ Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+ Custom System Builder | All props for Humano (zYan9vUPbGfsgjql) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Actor.DsuH3ouBXiVaexmF.Item.zYan9vUPbGfsgjql).
+ Custom System Builder | All props for Humano (zYan9vUPbGfsgjql) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Actor.DsuH3ouBXiVaexmF.Item.zYan9vUPbGfsgjql).
+ Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+ Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+ Custom System Builder | All props for Humano (EwbghotuVGRvNDzb) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.EwbghotuVGRvNDzb).
+Logger.js:39 Custom System Builder | Some props were not computed. {uncomputedProps: {…}, scope: {…}}
+_logToConsole @ Logger.js:39
+warn @ Logger.js:48
+_prepareEntityData @ TemplateSystem.js:331
+prepareData @ TemplateSystem.js:179
+prepareDerivedData @ CustomItem.js:317
+prepareData @ foundry.mjs:32607
+_safePrepareData @ foundry.mjs:32566
+prepareEmbeddedDocuments @ foundry.mjs:32629
+prepareEmbeddedDocuments @ foundry.mjs:41588
+prepareData @ foundry.mjs:32605
+prepareData @ foundry.mjs:41572
+_safePrepareData @ foundry.mjs:32566
+initializeDocuments @ foundry.mjs:169259
+setupGame @ foundry.mjs:169084
+await in setupGame
+#initializeGameView @ foundry.mjs:170576
+_initializeView @ foundry.mjs:170553
+initialize @ foundry.mjs:169026
+await in initialize
+window.addEventListener.once @ foundry.mjs:181096
+Logger.js:39 Custom System Builder | All props for Humano (EwbghotuVGRvNDzb) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.EwbghotuVGRvNDzb).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+foundry.mjs:23855 Error: Failed data preparation for Actor.K8ZN5evj0MHyOxPQ. Unrecognized component type tab
+    at Hooks.onError (foundry.mjs:23854:24)
+    at CustomActor._safePrepareData (foundry.mjs:32568:17)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+    at async #initializeGameView (foundry.mjs:170576:5)
+    at async Game.initialize (foundry.mjs:169026:5)
+    at async window.addEventListener.once (foundry.mjs:181096:3)Caused by: Error: Unrecognized component type tab
+    at ComponentFactory.createOneComponent (ComponentFactory.js:52:19)
+    at ComponentFactory.createMultipleComponents (ComponentFactory.js:34:32)
+    at Panel.fromJSON (Panel.js:238:44)
+    at TemplateSystem.prepareData (TemplateSystem.js:176:37)
+    at CustomActor.prepareBaseData (CustomActor.js:188:29)
+    at CustomActor.prepareData (foundry.mjs:32604:12)
+    at CustomActor.prepareData (foundry.mjs:41572:11)
+    at CustomActor._safePrepareData (foundry.mjs:32566:14)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+onError @ foundry.mjs:23855
+_safePrepareData @ foundry.mjs:32568
+initializeDocuments @ foundry.mjs:169259
+setupGame @ foundry.mjs:169084
+await in setupGame
+#initializeGameView @ foundry.mjs:170576
+_initializeView @ foundry.mjs:170553
+initialize @ foundry.mjs:169026
+await in initialize
+window.addEventListener.once @ foundry.mjs:181096
+foundry.mjs:23855 Error: Failed data preparation for Actor.gNOoF8iSJ4jQeFJl. Unrecognized component type tab
+    at Hooks.onError (foundry.mjs:23854:24)
+    at CustomActor._safePrepareData (foundry.mjs:32568:17)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+    at async #initializeGameView (foundry.mjs:170576:5)
+    at async Game.initialize (foundry.mjs:169026:5)
+    at async window.addEventListener.once (foundry.mjs:181096:3)Caused by: Error: Unrecognized component type tab
+    at ComponentFactory.createOneComponent (ComponentFactory.js:52:19)
+    at ComponentFactory.createMultipleComponents (ComponentFactory.js:34:32)
+    at Panel.fromJSON (Panel.js:238:44)
+    at TemplateSystem.prepareData (TemplateSystem.js:176:37)
+    at CustomActor.prepareBaseData (CustomActor.js:188:29)
+    at CustomActor.prepareData (foundry.mjs:32604:12)
+    at CustomActor.prepareData (foundry.mjs:41572:11)
+    at CustomActor._safePrepareData (foundry.mjs:32566:14)
+    at Game.initializeDocuments (foundry.mjs:169259:18)
+    at Game.setupGame (foundry.mjs:169084:10)
+onError @ foundry.mjs:23855
+_safePrepareData @ foundry.mjs:32568
+initializeDocuments @ foundry.mjs:169259
+setupGame @ foundry.mjs:169084
+await in setupGame
+#initializeGameView @ foundry.mjs:170576
+_initializeView @ foundry.mjs:170553
+initialize @ foundry.mjs:169026
+await in initialize
+window.addEventListener.once @ foundry.mjs:181096
+Logger.js:39 Custom System Builder | All props for Acólito (4ExyEL6QwxVqQbXR) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Acólito (Item.4ExyEL6QwxVqQbXR).
+Logger.js:39 Custom System Builder | All props for Acólito (4ExyEL6QwxVqQbXR) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Acólito (Item.4ExyEL6QwxVqQbXR).
+Logger.js:39 Custom System Builder | All props for Anão (qxwHDdOfFTYveD1F) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Item.qxwHDdOfFTYveD1F).
+Logger.js:39 Custom System Builder | All props for Anão (qxwHDdOfFTYveD1F) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Anão (Item.qxwHDdOfFTYveD1F).
+Logger.js:39 Custom System Builder | All props for Aristocrata (39iasryXewEk1lob) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Aristocrata (Item.39iasryXewEk1lob).
+Logger.js:39 Custom System Builder | All props for Aristocrata (39iasryXewEk1lob) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Aristocrata (Item.39iasryXewEk1lob).
+Logger.js:39 Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+Logger.js:39 Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+Logger.js:39 Custom System Builder | All props for Criminoso (ZW3higi65kBf5TVr) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Criminoso (Item.ZW3higi65kBf5TVr).
+Logger.js:39 Custom System Builder | All props for Criminoso (ZW3higi65kBf5TVr) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Criminoso (Item.ZW3higi65kBf5TVr).
+Logger.js:39 Custom System Builder | All props for Drakari (shVBZwdkdkjpf1kC) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Drakari (Item.shVBZwdkdkjpf1kC).
+Logger.js:39 Custom System Builder | All props for Drakari (shVBZwdkdkjpf1kC) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Drakari (Item.shVBZwdkdkjpf1kC).
+Logger.js:39 Custom System Builder | All props for Elfo (ZlxcOdSHpeQxUXHR) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Elfo (Item.ZlxcOdSHpeQxUXHR).
+Logger.js:39 Custom System Builder | All props for Elfo (ZlxcOdSHpeQxUXHR) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Elfo (Item.ZlxcOdSHpeQxUXHR).
+Logger.js:39 Custom System Builder | All props for Emissário (5xRxdGRw2qXCDTQH) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Emissário (Item.5xRxdGRw2qXCDTQH).
+Logger.js:39 Custom System Builder | All props for Emissário (5xRxdGRw2qXCDTQH) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Emissário (Item.5xRxdGRw2qXCDTQH).
+Logger.js:39 Custom System Builder | All props for Erudito (HLYTWbr0JT6rxzIE) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Erudito (Item.HLYTWbr0JT6rxzIE).
+Logger.js:39 Custom System Builder | All props for Erudito (HLYTWbr0JT6rxzIE) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Erudito (Item.HLYTWbr0JT6rxzIE).
+Logger.js:39 Custom System Builder | All props for Fera (rmFryzZ6gfRECM2r) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Fera (Item.rmFryzZ6gfRECM2r).
+Logger.js:39 Custom System Builder | All props for Fera (rmFryzZ6gfRECM2r) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Fera (Item.rmFryzZ6gfRECM2r).
+Logger.js:39 Custom System Builder | All props for Humano (P5lU90aOgYigjRoJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.P5lU90aOgYigjRoJ).
+Logger.js:39 Custom System Builder | All props for Humano (P5lU90aOgYigjRoJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.P5lU90aOgYigjRoJ).
+Logger.js:39 Custom System Builder | All props for Soldado Veterano (fJ8UP5bHt4XuQ1Uz) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Soldado Veterano (Item.fJ8UP5bHt4XuQ1Uz).
+Logger.js:39 Custom System Builder | All props for Soldado Veterano (fJ8UP5bHt4XuQ1Uz) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Soldado Veterano (Item.fJ8UP5bHt4XuQ1Uz).
+Logger.js:39 Custom System Builder | All props for Tecelão de Sombras (6s0iH1asc4yD0Lre) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Tecelão de Sombras (Item.6s0iH1asc4yD0Lre).
+Logger.js:39 Custom System Builder | All props for Tecelão de Sombras (6s0iH1asc4yD0Lre) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Tecelão de Sombras (Item.6s0iH1asc4yD0Lre).
+Logger.js:39 Custom System Builder | All props for Umbral (HYyQn7eW6ztMv85T) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Umbral (Item.HYyQn7eW6ztMv85T).
+Logger.js:39 Custom System Builder | All props for Umbral (HYyQn7eW6ztMv85T) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Umbral (Item.HYyQn7eW6ztMv85T).
+Logger.js:39 Custom System Builder | All props for Vanguarda (OLT80ojrOk3d2UZs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Vanguarda (Item.OLT80ojrOk3d2UZs).
+Logger.js:39 Custom System Builder | All props for Vanguarda (OLT80ojrOk3d2UZs) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Vanguarda (Item.OLT80ojrOk3d2UZs).
+Logger.js:39 Custom System Builder | All props for humus (5Jp0lM1urARrtLY0) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for humus (Item.5Jp0lM1urARrtLY0).
+Logger.js:39 Custom System Builder | Some props were not computed. {uncomputedProps: {…}, scope: {…}}
+_logToConsole @ Logger.js:39
+warn @ Logger.js:48
+_prepareEntityData @ TemplateSystem.js:331
+prepareData @ TemplateSystem.js:179
+prepareDerivedData @ CustomItem.js:317
+prepareData @ foundry.mjs:32607
+_safePrepareData @ foundry.mjs:32566
+initializeDocuments @ foundry.mjs:169259
+setupGame @ foundry.mjs:169084
+await in setupGame
+#initializeGameView @ foundry.mjs:170576
+_initializeView @ foundry.mjs:170553
+initialize @ foundry.mjs:169026
+await in initialize
+window.addEventListener.once @ foundry.mjs:181096
+Logger.js:39 Custom System Builder | All props for humus (5Jp0lM1urARrtLY0) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for humus (Item.5Jp0lM1urARrtLY0).
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/scene-navigation.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tab.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/players.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/hotbar.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/scene-controls-layers.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/scene-controls-tools.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/log.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/notifications.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/input.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/header.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/tracker.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/footer.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/directory/header.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/directory/directory.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/scene-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/folder-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/directory/footer.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/document-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/controls.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playlist-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playing.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/sound-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/compendiums.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/pack-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/settings.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/chat-message.hbs
+foundry.mjs:75114 Foundry VTT | Fonts loaded and ready.
+foundry.mjs:46163 Foundry VTT | Viewing Scene Cena
+foundry.mjs:94310 Foundry VTT | Drawing game canvas for scene Cena
+foundry.mjs:84197 Foundry VTT | Loading 51 Assets
+foundry.mjs:85137 Foundry VTT | Drawing the HiddenCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the RenderedCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the EnvironmentCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the PrimaryCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the WeatherEffects canvas layer
+foundry.mjs:85137 Foundry VTT | Drawing the EffectsCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasBackgroundAlterationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasIlluminationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasColorationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasDarknessEffects canvas layer
+foundry.mjs:85137 Foundry VTT | Drawing the CanvasVisibility canvas group
+worker.js:72 Worker TextureCompressor of FogExtractor | Initialized Worker
+foundry.mjs:85137 Foundry VTT | Drawing the InterfaceCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the GridLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the RegionLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the DrawingsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TemplateLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TilesLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the WallsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TokenLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the SoundsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the LightingLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the NotesLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the ControlsLayer canvas layer
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/hud/waypoint-label.hbs
+foundry.mjs:85137 Foundry VTT | Drawing the OverlayCanvasGroup canvas group
+foundry.mjs:168911 Applying buffered socket event: userActivity
+foundry.mjs:115132 O Foundry Virtual Tabletop requer uma janela utilizável com dimensões de 1024px por 768px ou maiores. As dimensões atuais desta janela são 982px por 794px. No momento, você tem um fator de zoom aplicado no sistema operacional ou no navegador, o que está reduzindo o tamanho efetivo da sua janela. Você deve aumentar o tamanho da sua janela ou reduzir o fator de zoom aplicado ao seu navegador, caso contrário, alguns recursos do software não funcionarão corretamente. 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+#validateResolution @ foundry.mjs:166558
+_detectUsabilityIssues @ foundry.mjs:166634
+initialize @ foundry.mjs:169029
+await in initialize
+window.addEventListener.once @ foundry.mjs:181096
+VM943:237 PANDORHA | Gatilho de Ancestralidade Ativado!
+foundry.mjs:23855 DataModelValidationError: CustomItem validation errors:
+  type: "_equippableItem" is not a valid type for the Item Document class
+    at DataModelValidationFailure.asError (foundry.mjs:5141:12)
+    at CustomItem.validate (foundry.mjs:11743:59)
+    at new DataModel (foundry.mjs:11419:10)
+    at new Document (foundry.mjs:12005:1)
+    at new BaseItem (foundry.mjs:15503:1)
+    at new ClientDocumentMixin (foundry.mjs:32362:7)
+    at new Item (foundry.mjs:45138:14)
+    at new CustomItem (CustomItem.js:152:9)
+    at #preCreateDocumentArray (foundry.mjs:58608:15)
+    at ClientDatabaseBackend._createDocuments (foundry.mjs:58570:56)
+onError @ foundry.mjs:23855
+#preCreateDocumentArray @ foundry.mjs:58610
+_createDocuments @ foundry.mjs:58570
+create @ foundry.mjs:58201
+await in create
+createDocuments @ foundry.mjs:12504
+create @ foundry.mjs:12650
+eval @ VM943:272
+eval @ VM943:278
+#executeScript @ foundry.mjs:45533
+execute @ foundry.mjs:45475
+#onExecute @ foundry.mjs:114427
+#onClickAction @ foundry.mjs:28185
+#onClick @ foundry.mjs:28138
+foundry.mjs:115132 CustomItem validation errors:
+  type: "_equippableItem" is not a valid type for the Item Document class 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+onError @ foundry.mjs:23856
+#preCreateDocumentArray @ foundry.mjs:58610
+_createDocuments @ foundry.mjs:58570
+create @ foundry.mjs:58201
+await in create
+createDocuments @ foundry.mjs:12504
+create @ foundry.mjs:12650
+eval @ VM943:272
+eval @ VM943:278
+#executeScript @ foundry.mjs:45533
+execute @ foundry.mjs:45475
+#onExecute @ foundry.mjs:114427
+#onClickAction @ foundry.mjs:28185
+#onClick @ foundry.mjs:28138
+VM943:273 PANDORHA | Criado: Humanos
+foundry.mjs:23855 DataModelValidationError: CustomItem validation errors:
+  type: "_equippableItem" is not a valid type for the Item Document class
+    at DataModelValidationFailure.asError (foundry.mjs:5141:12)
+    at CustomItem.validate (foundry.mjs:11743:59)
+    at new DataModel (foundry.mjs:11419:10)
+    at new Document (foundry.mjs:12005:1)
+    at new BaseItem (foundry.mjs:15503:1)
+    at new ClientDocumentMixin (foundry.mjs:32362:7)
+    at new Item (foundry.mjs:45138:14)
+    at new CustomItem (CustomItem.js:152:9)
+    at #preCreateDocumentArray (foundry.mjs:58608:15)
+    at ClientDatabaseBackend._createDocuments (foundry.mjs:58570:56)
+onError @ foundry.mjs:23855
+#preCreateDocumentArray @ foundry.mjs:58610
+_createDocuments @ foundry.mjs:58570
+create @ foundry.mjs:58201
+await in create
+createDocuments @ foundry.mjs:12504
+create @ foundry.mjs:12650
+eval @ VM943:272
+await in eval
+eval @ VM943:278
+#executeScript @ foundry.mjs:45533
+execute @ foundry.mjs:45475
+#onExecute @ foundry.mjs:114427
+#onClickAction @ foundry.mjs:28185
+#onClick @ foundry.mjs:28138
+foundry.mjs:115132 CustomItem validation errors:
+  type: "_equippableItem" is not a valid type for the Item Document class 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+onError @ foundry.mjs:23856
+#preCreateDocumentArray @ foundry.mjs:58610
+_createDocuments @ foundry.mjs:58570
+create @ foundry.mjs:58201
+await in create
+createDocuments @ foundry.mjs:12504
+create @ foundry.mjs:12650
+eval @ VM943:272
+await in eval
+eval @ VM943:278
+#executeScript @ foundry.mjs:45533
+execute @ foundry.mjs:45475
+#onExecute @ foundry.mjs:114427
+#onClickAction @ foundry.mjs:28185
+#onClick @ foundry.mjs:28138
+VM943:273 PANDORHA | Criado: Elfos
+foundry.mjs:23855 DataModelValidationError: CustomItem validation errors:
+  type: "_equippableItem" is not a valid type for the Item Document class
+    at DataModelValidationFailure.asError (foundry.mjs:5141:12)
+    at CustomItem.validate (foundry.mjs:11743:59)
+    at new DataModel (foundry.mjs:11419:10)
+    at new Document (foundry.mjs:12005:1)
+    at new BaseItem (foundry.mjs:15503:1)
+    at new ClientDocumentMixin (foundry.mjs:32362:7)
+    at new Item (foundry.mjs:45138:14)
+    at new CustomItem (CustomItem.js:152:9)
+    at #preCreateDocumentArray (foundry.mjs:58608:15)
+    at ClientDatabaseBackend._createDocuments (foundry.mjs:58570:56)
+onError @ foundry.mjs:23855
+#preCreateDocumentArray @ foundry.mjs:58610
+_createDocuments @ foundry.mjs:58570
+create @ foundry.mjs:58201
+await in create
+createDocuments @ foundry.mjs:12504
+create @ foundry.mjs:12650
+eval @ VM943:272
+await in eval
+eval @ VM943:278
+#executeScript @ foundry.mjs:45533
+execute @ foundry.mjs:45475
+#onExecute @ foundry.mjs:114427
+#onClickAction @ foundry.mjs:28185
+#onClick @ foundry.mjs:28138
+foundry.mjs:115132 CustomItem validation errors:
+  type: "_equippableItem" is not a valid type for the Item Document class 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+onError @ foundry.mjs:23856
+#preCreateDocumentArray @ foundry.mjs:58610
+_createDocuments @ foundry.mjs:58570
+create @ foundry.mjs:58201
+await in create
+createDocuments @ foundry.mjs:12504
+create @ foundry.mjs:12650
+eval @ VM943:272
+await in eval
+eval @ VM943:278
+#executeScript @ foundry.mjs:45533
+execute @ foundry.mjs:45475
+#onExecute @ foundry.mjs:114427
+#onClickAction @ foundry.mjs:28185
+#onClick @ foundry.mjs:28138
+VM943:273 PANDORHA | Criado: Anões
+foundry.mjs:23855 DataModelValidationError: CustomItem validation errors:
+  type: "_equippableItem" is not a valid type for the Item Document class
+    at DataModelValidationFailure.asError (foundry.mjs:5141:12)
+    at CustomItem.validate (foundry.mjs:11743:59)
+    at new DataModel (foundry.mjs:11419:10)
+    at new Document (foundry.mjs:12005:1)
+    at new BaseItem (foundry.mjs:15503:1)
+    at new ClientDocumentMixin (foundry.mjs:32362:7)
+    at new Item (foundry.mjs:45138:14)
+    at new CustomItem (CustomItem.js:152:9)
+    at #preCreateDocumentArray (foundry.mjs:58608:15)
+    at ClientDatabaseBackend._createDocuments (foundry.mjs:58570:56)
+onError @ foundry.mjs:23855
+#preCreateDocumentArray @ foundry.mjs:58610
+_createDocuments @ foundry.mjs:58570
+create @ foundry.mjs:58201
+await in create
+createDocuments @ foundry.mjs:12504
+create @ foundry.mjs:12650
+eval @ VM943:272
+await in eval
+eval @ VM943:278
+#executeScript @ foundry.mjs:45533
+execute @ foundry.mjs:45475
+#onExecute @ foundry.mjs:114427
+#onClickAction @ foundry.mjs:28185
+#onClick @ foundry.mjs:28138
+foundry.mjs:115132 CustomItem validation errors:
+  type: "_equippableItem" is not a valid type for the Item Document class 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+onError @ foundry.mjs:23856
+#preCreateDocumentArray @ foundry.mjs:58610
+_createDocuments @ foundry.mjs:58570
+create @ foundry.mjs:58201
+await in create
+createDocuments @ foundry.mjs:12504
+create @ foundry.mjs:12650
+eval @ VM943:272
+await in eval
+eval @ VM943:278
+#executeScript @ foundry.mjs:45533
+execute @ foundry.mjs:45475
+#onExecute @ foundry.mjs:114427
+#onClickAction @ foundry.mjs:28185
+#onClick @ foundry.mjs:28138
+VM943:273 PANDORHA | Criado: Drakari
+foundry.mjs:23855 DataModelValidationError: CustomItem validation errors:
+  type: "_equippableItem" is not a valid type for the Item Document class
+    at DataModelValidationFailure.asError (foundry.mjs:5141:12)
+    at CustomItem.validate (foundry.mjs:11743:59)
+    at new DataModel (foundry.mjs:11419:10)
+    at new Document (foundry.mjs:12005:1)
+    at new BaseItem (foundry.mjs:15503:1)
+    at new ClientDocumentMixin (foundry.mjs:32362:7)
+    at new Item (foundry.mjs:45138:14)
+    at new CustomItem (CustomItem.js:152:9)
+    at #preCreateDocumentArray (foundry.mjs:58608:15)
+    at ClientDatabaseBackend._createDocuments (foundry.mjs:58570:56)
+onError @ foundry.mjs:23855
+#preCreateDocumentArray @ foundry.mjs:58610
+_createDocuments @ foundry.mjs:58570
+create @ foundry.mjs:58201
+await in create
+createDocuments @ foundry.mjs:12504
+create @ foundry.mjs:12650
+eval @ VM943:272
+await in eval
+eval @ VM943:278
+#executeScript @ foundry.mjs:45533
+execute @ foundry.mjs:45475
+#onExecute @ foundry.mjs:114427
+#onClickAction @ foundry.mjs:28185
+#onClick @ foundry.mjs:28138
+VM943:273 PANDORHA | Criado: Umbrais
+foundry.mjs:23855 DataModelValidationError: CustomItem validation errors:
+  type: "_equippableItem" is not a valid type for the Item Document class
+    at DataModelValidationFailure.asError (foundry.mjs:5141:12)
+    at CustomItem.validate (foundry.mjs:11743:59)
+    at new DataModel (foundry.mjs:11419:10)
+    at new Document (foundry.mjs:12005:1)
+    at new BaseItem (foundry.mjs:15503:1)
+    at new ClientDocumentMixin (foundry.mjs:32362:7)
+    at new Item (foundry.mjs:45138:14)
+    at new CustomItem (CustomItem.js:152:9)
+    at #preCreateDocumentArray (foundry.mjs:58608:15)
+    at ClientDatabaseBackend._createDocuments (foundry.mjs:58570:56)
+onError @ foundry.mjs:23855
+#preCreateDocumentArray @ foundry.mjs:58610
+_createDocuments @ foundry.mjs:58570
+create @ foundry.mjs:58201
+await in create
+createDocuments @ foundry.mjs:12504
+create @ foundry.mjs:12650
+eval @ VM943:272
+await in eval
+eval @ VM943:278
+#executeScript @ foundry.mjs:45533
+execute @ foundry.mjs:45475
+#onExecute @ foundry.mjs:114427
+#onClickAction @ foundry.mjs:28185
+#onClick @ foundry.mjs:28138
+VM943:273 PANDORHA | Criado: Feras
+foundry.mjs:115132 CustomItem validation errors:
+  type: "_equippableItem" is not a valid type for the Item Document class 
+#fetch @ foundry.mjs:115132
+#remove @ foundry.mjs:115148
+setTimeout
+#fetch @ foundry.mjs:115134
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+onError @ foundry.mjs:23856
+#preCreateDocumentArray @ foundry.mjs:58610
+_createDocuments @ foundry.mjs:58570
+create @ foundry.mjs:58201
+await in create
+createDocuments @ foundry.mjs:12504
+create @ foundry.mjs:12650
+eval @ VM943:272
+eval @ VM943:278
+#executeScript @ foundry.mjs:45533
+execute @ foundry.mjs:45475
+#onExecute @ foundry.mjs:114427
+#onClickAction @ foundry.mjs:28185
+#onClick @ foundry.mjs:28138
+foundry.mjs:115132 CustomItem validation errors:
+  type: "_equippableItem" is not a valid type for the Item Document class 
+#fetch @ foundry.mjs:115132
+#remove @ foundry.mjs:115148
+setTimeout
+#fetch @ foundry.mjs:115134
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+onError @ foundry.mjs:23856
+#preCreateDocumentArray @ foundry.mjs:58610
+_createDocuments @ foundry.mjs:58570
+create @ foundry.mjs:58201
+await in create
+createDocuments @ foundry.mjs:12504
+create @ foundry.mjs:12650
+eval @ VM943:272
+await in eval
+eval @ VM943:278
+#executeScript @ foundry.mjs:45533
+execute @ foundry.mjs:45475
+#onExecute @ foundry.mjs:114427
+#onClickAction @ foundry.mjs:28185
+#onClick @ foundry.mjs:28138
+foundry.mjs:115132 Sincronização Pandorha v1.4 Concluída! Gatilho do Seletor Ativo. 

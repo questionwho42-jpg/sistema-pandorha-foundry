@@ -1,0 +1,15 @@
+{
+  "name": "Template de Antecedente",
+  "type": "_equippableItemTemplate",
+  "data": {
+    "body": {
+      "type": "panel",
+      "contents": [
+        { "type": "text", "key": "hab_origem_nome", "label": "Habilidade de Origem" },
+        { "type": "textarea", "key": "hab_origem_descr", "label": "Descrição da Origem" },
+        { "type": "text", "key": "talento_antecedente_nome", "label": "Talento de Antecedente" },
+        { "type": "textarea", "key": "talento_antecedente_descr", "label": "Efeito do Talento" }
+      ]
+    }
+  }
+}

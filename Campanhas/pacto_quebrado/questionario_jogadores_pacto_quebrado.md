@@ -1,0 +1,57 @@
+# 📝 Pacto Quebrado — Questionário de Criação de Personagem
+
+> **O Onde:** Vocês estão na **Vila de Ferroforja**, um assentamento calejado de mineradores agarrado às encostas oeste de Morden, fora da proteção do Domo.
+> **O Clima:** O ar cheira a poeira mineral, a cerveja amarga do *Parafuso Torto* rola solta à noite, e o barulho de martelo contra bigorna nunca cessa de dia. Ao lado da vila repousa a titânica **Ponte do Pacto**, a única calçada segura entre a opressiva Megacidade (Morden) e a nação orc dos ferreiros (Gorbax). É uma terra neutra que respira ferro e onde todo mundo tem um passado a esconder.
+> *"Para jogar esta campanha, precisamos amarrar o seu personagem a este mundo. Responda às perguntas abaixo para construir as fundações do seu herói na vila."*
+
+---
+
+## Parte 1: Perguntas Obrigatórias
+*(Todos os jogadores devem responder a estas 6 perguntas essenciais para conectar os personagens ao cenário inicial)*
+
+1. **Qual é a história principal do seu personagem antes de chegar à Fronteira?**
+   *(Resuma quem ele era, sua profissão, origem ou evento marcante antes de a vida o trazer para as encostas de Morden).*
+
+2. **Por que seu personagem está em Ferroforja quando a invasão acontece?**
+   *(A vila não é um lugar turístico. Você pode morar aqui, estar de passagem por comércio, ou cumprindo ordens).*
+
+3. **Seu personagem conhece alguém na vila? Quem?**
+   *(Você pode inventar um morador comum, ou usar um dos NPCs centrais: Torsten o Ferreiro, Renna a Taberneira, Velho Garth o ex-mineiro, ou a Líder Mira).*
+
+4. **Qual a opinião do seu personagem sobre Morden?**
+   *(A Megacidade Focada na Lógica e na Pureza. Você sente: Lealdade militar cega? Ressentimento de um exilado? Indiferença de quem vive longe?)*
+
+5. **Seu personagem já viu um orc de perto? Como reagiria?**
+   *(Gorbax, a nação orc focada na Forja e Honra, fica do outro lado da Ponte do Pacto adjacente à vila. É comum o choque cultural).*
+
+6. **O que seu personagem faria se descobrisse que está sendo abandonado por quem deveria protegê-lo?**
+   *(Esta é a base do tema da campanha: lealdade vs sobrevivência).*
+
+---
+
+## Parte 2: Perguntas Opcionais (Para Aprofundar)
+*(Responda o máximo que puder para dar ganchos narrativos mais ricos ao Mestre)*
+
+6. **Qual o maior medo do seu personagem?**
+7. **Quem é a pessoa mais importante na vida dele — e onde ela está agora?**
+8. **Ele tem um segredo que não conta a ninguém?**
+9. **Ele já traiu alguém? Ou foi traído?**
+10. **Se pudesse mudar UMA coisa no mundo de Pandorha, o que seria?**
+
+---
+
+## 🎯 Ganchos de Trama Sugeridos (Para o Mestre / Jogador)
+
+Se você não tiver certeza do que criar, aqui estão sugestões diretas de backgrounds que geram alto impacto na campanha atual:
+
+*   Se você disser: **"Sou ex-soldado de Morden"** → Você será reconhecido pela patrulha local e terá conexão direta com os invasores.
+*   Se você disser: **"Sou comerciante"** → Você será visto como concorrente para o controle do submundo e terá contatos úteis nas sombras.
+*   Se você disser: **"Vim de Gorbax"** → A emissária orc confiará naturalmente em você, oferecendo caminhos exclusivos.
+*   Se você disser: **"Sou fugitivo do Domo"** → A líder da vila compartilhará segredos críticos de imediato com você.
+*   Se você disser: **"Tenho família na vila"** → Isso aumentará drasticamente o peso emocional e as consequências das suas escolhas.
+*   Se você disser: **"Odeio Morden"** → A facção inimiga tentará recrutar você para a causa deles.
+*   Se você disser: **"Procuro artefatos antigos"** → O Capítulo 2 da campanha será o momento de brilho absoluto do seu personagem.
+
+---
+**[Instruções Finais]**
+*Escolha suas raízes ou use as sugestões de ganchos. Salve essas respostas e entregue-as antes do início. Nossa história começa na sua primeira noite na vila, bem no instante em que o terror atinge o portão da mina.*

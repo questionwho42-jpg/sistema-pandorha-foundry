@@ -1,0 +1,281 @@
+﻿diff --git a/Sistemas/Pandorha/sistema consolidado/01_01_Humanos.md b/Sistemas/Pandorha/sistema consolidado/01_01_Humanos.md
+index f73c41e..0eac63b 100644
+--- a/Sistemas/Pandorha/sistema consolidado/01_01_Humanos.md	
++++ b/Sistemas/Pandorha/sistema consolidado/01_01_Humanos.md	
+@@ -13,7 +13,7 @@ Os Humanos de Pandorha s├úo definidos pela sua tenacidade sob press├úo. Como hab
+ ### Ô¡É Tra├ºos Selecion├íveis: Humanos (Escolha 3)
+ 
+ 1. **Dilig├¬ncia Erudita:** Voc├¬ possui uma facilidade natural com tarefas complexas. Ganha +2 em qualquer Teste Global cuja soma de b├┤nus fixos (N├¡vel + Eixo + Aplica├º├úo) j├í seja 10 ou superior.
+-2. **L├¡ngua de Prata:** Suas palavras t├¬m peso. Ao realizar **Testes Globais de Social + Intera├º├úo + N├¡vel** para convencer algu├®m, voc├¬ rola **2d20** e escolhe o melhor resultado.
++2. **L├¡ngua de Prata:** Suas palavras t├¬m peso. Voc├¬ pode ganhar vantagem (rolar **2d20** e escolher o melhor) em um **Teste Global de Social + Intera├º├úo + N├¡vel** um n├║mero de vezes igual ao seu **Eixo Social** por Descanso Longo.
+ 3. **Vontade Indom├ível [R]:** Quando seu HP chega a 0 pela primeira vez na cena, voc├¬ pode gastar sua Rea├º├úo para estabilizar automaticamente sem precisar rolar dados.
+ 4. **Maestria Improvisada:** Voc├¬ ignora a penalidade de -4 por usar ferramentas ou armas que n├úo possua treinamento (N├¡vel 0).
+ 5. **Mem├│ria de Mercador:** Voc├¬ nunca esquece um rosto ou um pre├ºo. Ganha +2 em **Testes Globais de Mental + Intera├º├úo + N├¡vel** para lembrar fatos hist├│ricos ou identificar o valor real de itens de mercado.
+diff --git a/Sistemas/Pandorha/sistema consolidado/01_04_Drakari.md b/Sistemas/Pandorha/sistema consolidado/01_04_Drakari.md
+index eb47bb6..c1328f3 100644
+--- a/Sistemas/Pandorha/sistema consolidado/01_04_Drakari.md	
++++ b/Sistemas/Pandorha/sistema consolidado/01_04_Drakari.md	
+@@ -12,13 +12,27 @@ Os Drakari n├úo s├úo apenas guerreiros; eles s├úo os propriet├írios de Pandorha.
+ 
+ ### Ô¡É Tra├ºos Selecion├íveis: Drakari (Escolha 3)
+ 
++## 4. Drakari (Os Senhores do Metal Vivo)
++
++Os Drakari n├úo s├úo apenas guerreiros; eles s├úo os propriet├írios de Pandorha. Habitantes do **Geodo de Draskar**, eles vivem em um "Mercado Totalit├írio" onde a honra ├® medida em solv├¬ncia e a exist├¬ncia ├® uma d├¡vida a ser paga aos deuses do metal.
++
++- **Lore:** Origin├írios da **Espiral do Geodo**, os Drakari veem o mundo como uma grande transa├º├úo. Eles dominam o **Ouro Vivo (Auro-├ëter)**, um metal que corre em suas veias e substitui a carne fr├ígil por poder duradouro. Para um Drakari, ser pobre ├® a maior heresia, e o ac├║mulo de riqueza ├® o ├║nico caminho para a divindade.
++- **Apar├¬ncia:** Cobertos por escamas met├ílicas que variam do bronze fosco dos "Opacos" ao ouro resplandecente da elite. Muitos possuem membros ou ├│rg├úos substitu├¡dos por engenhos r├║nicos de Julian, emitindo um brilho et├®rico constante.
++
++### ÔÜÖ´©Å Especifica├º├Áes: Drakari
++
++- **B├┤nus Inicial:** +1 no Eixo **F├¡sico** OU +1 na Aplica├º├úo **Conflito**. Representa sua biologia voltada para a guerra.
++- **Capacidade Primordial (Sopro Elemental): [AA]** Voc├¬ pode exalar um cone de 4,5 metros de energia elemental (Fogo, Gelo ou Raio). Dano: **1d8** (2d8 no Nv 5, 3d8 no Nv 10, 4d8 no Nv 15). Voc├¬ pode usar esta habilidade uma vez por Cena de combate.
++
++### Ô¡É Tra├ºos Selecion├íveis: Drakari (Escolha 3)
++
+ 1. Escamas de Guerra: Sua pele ├® uma armadura natural. Se voc├¬ n├úo estiver usando nenhuma armadura, sua Defesa (CA) ├® igual a **11 + N├¡vel + F├¡sico + Resist├¬ncia**.
+ 2. Rugido Aterrorizante [A]: Gaste 1 a├º├úo para soltar um rugido ensurdecedor. Inimigos em um raio de 3m devem rolar um **Teste Global de Mental + Resist├¬ncia + N├¡vel** (DC 10 + N├¡vel + Social + Conflito) ou ficar├úo com a condi├º├úo 'Abalado'.
+ 3. Honra de Sangue: Sua determina├º├úo ├® inquebr├ível. Voc├¬ ganha +2 de Resist├¬ncia em testes contra a condi├º├úo 'Medo'.
+ 4. Cora├º├úo de Drag├úo: Sua vitalidade ├® superior. Voc├¬ ganha +1 ponto de Vida (HP) extra para cada n├¡vel global que possuir.
+ 5. Garras Letais: Seus ataques desarmados (socos/patadas) causam **1d6** (1d8 no Nv 5, 1d10 no Nv 10) de dano + F├¡sico (Conflito), sendo considerados armas leves.
+ 6. Heran├ºa de Cor: Voc├¬ possui Redu├º├úo de Dano (RD) 5 contra o elemento correspondente ao seu sopro (ex: se seu sopro ├® de fogo, tem RD 5 contra fogo).
+-7. Carga Traum├ítica [A]: Ao se mover pelo menos 3 metros e realizar um ataque com sucesso, o alvo deve rolar um **Teste Global de F├¡sico + Resist├¬ncia + N├¡vel** ou cair├í com a condi├º├úo 'Ca├¡do'.
++7. **Carga Traum├ítica [A]:** Ao se mover pelo menos 3 metros e realizar um ataque com sucesso, voc├¬ empurra o alvo 1,5m. Se o ataque for um **Sucesso Cr├¡tico**, o alvo deve rolar um **Teste Global de F├¡sico + Resist├¬ncia + N├¡vel** ou cair├í com a condi├º├úo 'Ca├¡do'.
+ 8. Vis├úo T├®rmica: Seus olhos detectam o calor dos seres vivos. Voc├¬ ignora invisibilidade e camuflagem de seres vivos em um raio de 15 metros.
+ 9. Misticismo Inato: Voc├¬ nasce com a **Centelha Et├®rica**. Escolha uma magia de 1┬║ C├¡rculo do Cap├¡tulo 12. Voc├¬ pode lan├º├í-la uma vez por dia sem gastar Energia Et├®rica.
+ 10. Golpe de Cauda [R]: Quando um inimigo tenta fugir de voc├¬ (usando movimento sair do alcance), voc├¬ pode gastar sua Rea├º├úo para atac├í-lo com a cauda (Dano: 1d4 + F├¡sico).
+diff --git a/Sistemas/Pandorha/sistema consolidado/02b_Matriz_Mental.md b/Sistemas/Pandorha/sistema consolidado/02b_Matriz_Mental.md
+index f0146ab..fae78b7 100644
+--- a/Sistemas/Pandorha/sistema consolidado/02b_Matriz_Mental.md	
++++ b/Sistemas/Pandorha/sistema consolidado/02b_Matriz_Mental.md	
+@@ -90,7 +90,7 @@ _Focado em manipula├º├úo direta de energia, ataques psicossom├íticos e debuffs d
+ 
+ - **Custo:** [AAA] | **Alcance:** 15m | **Check:** Mental + Conflito + N├¡vel vs Mental + Resist├¬ncia.
+ - **Sucesso:** O alvo deve realizar imediatamente uma a├º├úo simples (1 [A]) ordenada por voc├¬.
+-- **Cr├¡tico:** O alvo fica sob seu comando por 1 **Rodada** completa.
++- **Cr├¡tico:** O alvo fica sob seu comando imediato, mas pode realizar apenas **duas a├º├Áes [AA]** sob sua ordem.
+ - **F. Parcial:** O alvo fica com o Status: Confuso (1R).
+   > **Nota de Campo:** O "Poder da Palavra". Pode ser usado para fazer um guarda abrir uma cela ou um inimigo largar sua arma.
+ 
+diff --git a/Sistemas/Pandorha/sistema consolidado/02c_Matriz_Social.md b/Sistemas/Pandorha/sistema consolidado/02c_Matriz_Social.md
+index 5151614..82c1443 100644
+--- a/Sistemas/Pandorha/sistema consolidado/02c_Matriz_Social.md	
++++ b/Sistemas/Pandorha/sistema consolidado/02c_Matriz_Social.md	
+@@ -102,11 +102,11 @@ _Focado em pavor, comando autorit├írio e desmoraliza├º├úo psicol├│gica de inimig
+ 
+ ### 801. Amea├ºa G├®lida
+ 
+-- **Custo:** [A] | **Alcance:** 6m | **Check:** Social + Conflito + N├¡vel (Intimida├º├úo).
+-- **Sucesso:** Status Alvo: Aterrorizado (Dura├º├úo: 1 rodada).
+-- **Cr├¡tico:** Status Alvo: Aterrorizado (Dura├º├úo: 1 minuto) + O alvo foge do combate.
+-- **F. Parcial:** Status Alvo: Abalado (Redu├º├úo de defesa por 1 rodada).
+-  > **Nota de Campo:** O poder do terror puro. ├Çs vezes, um olhar ├® mais letal que uma l├ómina.
++- **Custo:** [AAA] | **Alcance:** 6m | **Check:** Social + Conflito + N├¡vel (Intimida├º├úo).
++- **Sucesso:** Status Alvo: Aterrorizado (Dura├º├úo: 1 rodada). O alvo n├úo pode realizar Rea├º├Áes [R] at├® o in├¡cio do seu pr├│ximo turno.
++- **Cr├¡tico:** Status Alvo: Aterrorizado (Dura├º├úo: 1 rodada) + O alvo solta quaisquer itens que esteja empunhando (Desarmar) e foge do combate.
++- **F. Parcial:** Status Alvo: Abalado (Penalidade de -2 por 1 rodada).
++  > **Nota de Campo:** O poder do terror puro. Ao investir seu turno completo, voc├¬ anula a vontade do inimigo de agir e de reagir, deixando-o vulner├ível.
+ 
+ ### 802. Ordem Autorit├íria
+ 
+diff --git a/Sistemas/Pandorha/sistema consolidado/04_Arsenal_e_Economia.md b/Sistemas/Pandorha/sistema consolidado/04_Arsenal_e_Economia.md
+index 03c0851..2ded426 100644
+--- a/Sistemas/Pandorha/sistema consolidado/04_Arsenal_e_Economia.md	
++++ b/Sistemas/Pandorha/sistema consolidado/04_Arsenal_e_Economia.md	
+@@ -55,7 +55,7 @@ Este cap├¡tulo cont├®m a lista completa de equipamentos de guerra, com suas desc
+ | **Espada Longa**    | Marcial | 1d8  | Vers├ítil (1d10)               |  5 O  | L├ómina de cavaleiro. S├¡mbolo de status.             |
+ | **Rapieira**        | Marcial | 1d8  | ├ügil, Perfurante              | 15 O  | L├ómina fina e elegante de duelistas.                |
+ | **Cimitra**         | Marcial | 1d6  | ├ügil, Brutal                  |  8 O  | L├ómina curva para cortes em movimento.              |
+-| **Montante**        | Marcial | 2d6  | Pesada, Alcance 3m            | 25 O  | Espada gigante. Exige for├ºa tit├ónica.               |
++| **Montante**        | Marcial | 2d6  | Pesada, Impacto Brutal        | 25 O  | Espada gigante. Exige for├ºa tit├ónica.               |
+ 
+ ### 2.3 Armas de Haste e Correntes
+ 
+@@ -261,7 +261,7 @@ _Conceito:_ Rapidez, leveza e liberdade de movimento.
+   - _Arma:_ Bumerangue. A arma ganha a tag _Arremesso_. Se jogada, retorna ├á m├úo.
+   - _Armadura:_ Z├®firo. Reduz a penalidade de movimento em 3m (zera penalidade de Placas).
+ - **N├¡vel 3 (Ancestral):**
+-  - _Arma:_ L├ómina do Vendaval. Permite realizar 1 Ataque [A] Extra por rodada (m├íximo 4 ataques/turno).
++  - _Arma:_ L├ómina do Vendaval. Permite realizar 1 A├º├úo [A] Extra por rodada, mas ela s├│ pode ser usada para: **Mover-se**, **Interagir com Objeto** ou **Desengajar**.
+   - _Armadura:_ Caminho do Vento. A├º├úo [R]: Voc├¬ pode correr pelas paredes ou teto durante seu movimento.
+     > **Nota de Ferreiro:** _A parte mais dif├¡cil ├® que o martelo rebate r├ípido demais. Voc├¬ precisa ter reflexos de gato para forjar isso._
+ 
+diff --git a/Sistemas/Pandorha/sistema consolidado/05_01_Vanguarda.md b/Sistemas/Pandorha/sistema consolidado/05_01_Vanguarda.md
+index f4c1d19..41473ae 100644
+--- a/Sistemas/Pandorha/sistema consolidado/05_01_Vanguarda.md	
++++ b/Sistemas/Pandorha/sistema consolidado/05_01_Vanguarda.md	
+@@ -55,7 +55,9 @@ _Escolha 2. Estes definem seu estilo de luta inicial._
+ 
+ > _O escudo n├úo ├® apenas defesa; ├® uma arma de impacto brutal._
+ >
+-> **Efeito Mec├ónico:** Fa├ºa um ataque usando seu escudo (Dano 1d4). Se acertar, o alvo ├® empurrado **3 metros** para tr├ís e cai no ch├úo (**Ca├¡do**).
++> **Efeito Mec├ónico:** Fa├ºa um ataque usando seu escudo (Dano 1d4).
++> - **Sucesso:** O alvo ├® empurrado **3 metros**. Caso colida com uma parede ou obst├ículo, fica **Exposto** (-2 CA / 1R).
++> - **Cr├¡tico:** O alvo ├® empurrado **3 metros** E fica **Ca├¡do**.
+ 
+ #### 6. Quebra-Hordas (Passivo)
+ 
+diff --git a/Sistemas/Pandorha/sistema consolidado/05_02_Tecelao.md b/Sistemas/Pandorha/sistema consolidado/05_02_Tecelao.md
+index 47bb25d..1ba5d72 100644
+--- a/Sistemas/Pandorha/sistema consolidado/05_02_Tecelao.md	
++++ b/Sistemas/Pandorha/sistema consolidado/05_02_Tecelao.md	
+@@ -93,7 +93,7 @@ No N├¡vel 3, o Tecel├úo escolhe qual aspecto da realidade ele ir├í dobrar.
+ 
+ - **N├¡vel 3 - Duplicata (Ativa):**
+   > _Quando a l├ómina inimiga desce, ela encontra apenas ar e uma imagem debochada de voc├¬._
+-  > **Efeito:** Rea├º├úo (Gaste 1 EE). Quando for atacado, crie uma c├│pia ilus├│ria instant├ónea. O ataque erra voc├¬ e destr├│i a c├│pia.
++  > **Efeito:** Rea├º├úo (Gaste 1 EE). Quando for atacado, a duplicata intercepta o impacto. Reduza o dano recebido em **(10 + N├¡vel + Eixo Mental)**. A duplicata ├® destru├¡da ap├│s o impacto e o Tecel├úo recebe qualquer dano excedente.
+ 
+ ### C. O Necromante (Senhor da Morte)
+ 
+@@ -158,10 +158,8 @@ Seu dom├¡nio sobre sua escola se torna absoluto.
+ 
+ > _O que para outros ├® um grande feito m├ígico, para voc├¬ ├® um simples estalar de dedos._
+ >
+-> **Efeito:**
+->
+ > 1. Seus **Truques** causam +1 dado de dano.
+-> 2. Suas magias de **C├¡rculo 1** agora custam **0 EE** (tornam-se Truques para voc├¬).
++> 2. Voc├¬ pode lan├ºar magias de **C├¡rculo 1** sem custo de EE um n├║mero de vezes igual ao seu **Eixo Mental** por Descanso Longo. Ap├│s isso, elas voltam ao custo normal.
+ 
+ ### N├¡vel 13: Arquimago
+ 
+diff --git a/Sistemas/Pandorha/sistema consolidado/05_03_Emissario.md b/Sistemas/Pandorha/sistema consolidado/05_03_Emissario.md
+index a8737b3..fa17b16 100644
+--- a/Sistemas/Pandorha/sistema consolidado/05_03_Emissario.md	
++++ b/Sistemas/Pandorha/sistema consolidado/05_03_Emissario.md	
+@@ -49,7 +49,10 @@ _Escolha 2. Suas ferramentas de of├¡cio._
+ 
+ > _Areia nos olhos, chute na canela, pux├úo de capa._
+ >
+-> **Efeito Mec├ónico:** Fa├ºa um **Teste Global de Social + Conflito** contra o **F├¡sico + Resist├¬ncia** do alvo. Se vencer, o alvo fica **Cego**, **Atordoado** ou **Sem Ar** por 1 rodada.
++> **Efeito Mec├ónico:** Fa├ºa um **Teste Global de Social + Conflito** contra o **F├¡sico + Resist├¬ncia** do alvo.
++> - **Sucesso:** O alvo fica **Cego** (Penalidade no acerto) OU **Sem Ar** (Impedindo magias verbais) por 1 rodada.
++> - **Cr├¡tico:** Status Alvo: **Atordoado** (Perde as 3 a├º├Áes / 1 rodada).
++> - **F. Parcial:** Status Alvo: **Abalado** (Penalidade de -1 em testes por 1 rodada).
+ 
+ #### 5. Mestre dos Disfarces (Passivo)
+ 
+diff --git a/Sistemas/Pandorha/sistema consolidado/07_01a_Tier1_Mundo_Natural.md b/Sistemas/Pandorha/sistema consolidado/07_01a_Tier1_Mundo_Natural.md
+index e654021..a6042ab 100644
+--- a/Sistemas/Pandorha/sistema consolidado/07_01a_Tier1_Mundo_Natural.md	
++++ b/Sistemas/Pandorha/sistema consolidado/07_01a_Tier1_Mundo_Natural.md	
+@@ -58,7 +58,7 @@ De longe, parece um lobo albino, mas de perto, sua forma ├® inst├ível. Seu corpo
+ - **Eixos:** F├¡sico +3, Mental +3, Social +1.
+ - **Aplica├º├Áes:** Conflito +2, Resist├¬ncia +2, Intera├º├úo 0.
+ - **Passiva - Forma Et├®rea:** O lobo pode gastar **1 A├º├úo [A]** para entrar no Plano Et├®reo at├® o in├¡cio do seu pr├│ximo turno. Enquanto et├®reo, ele tem **RD 5** a dano f├¡sico n├úo-m├ígico e pode atravessar paredes.
+-- **[A] Mordida Espectral:** +7 (Nv 4 + Fis 3). Alcance 1,5m. Dano **2d6+3 Energia**. Este ataque atinge diretamente a alma: a Defesa do alvo ├® calculada usando **[Mental + Resist├¬ncia]** em vez de CA f├¡sica.
++- **[A] Mordida Espectral:** +7 (Nv 4 + Fis 3). Alcance 1,5m. **Vantagem no Ataque**. Dano **2d6+3 Energia**. Este ataque "pisca" entre as realidades, sendo extremamente dif├¡cil de aparar ou evitar, embora armaduras pesadas ainda ofere├ºam prote├º├úo aos ├│rg├úos vitais.
+ 
+ ---
+ 
+@@ -369,7 +369,9 @@ Um tapete vivo de pelos cinzentos e caudas rosadas que chia e se contorce. O som
+ - **Eixos:** F├¡sico +2, Mental -4, Social -4.
+ - **Aplica├º├Áes:** Conflito +2, Resist├¬ncia +2, Intera├º├úo 0.
+ - **Passiva:** Resistente a ataques de alvo ├║nico. Ocupa espa├ºo da v├¡tima. O enxame age com instinto sobrenatural (+2 Iniciativa).
+-- **[A] Mordidas em Massa:** Ataque Autom├ítico (Sem rolagem). Qualquer criatura no espa├ºo do enxame sofre **2d6 Perfurante** no in├¡cio do turno do Enxame.
++- **[A] Mordidas Coletivas:** Qualquer criatura que termine o seu turno no espa├ºo ocupado pelo enxame deve fazer um **Teste Global de F├¡sico + Conflito + N├¡vel (DC 14)** (10 + Nv 1 + 3 Fis).
++  - **Falha:** Sofre **1d6+1 Dano de Perfura├º├úo**.
++  - **Sucesso:** Consegue afastar os ratos ou saltar para fora do caminho, n├úo sofrendo dano.
+ 
+ ### C. Rato-L├ómina (N├¡vel 3)
+ 
+diff --git a/Sistemas/Pandorha/sistema consolidado/07_01b_Tier1_Sobrenatural.md b/Sistemas/Pandorha/sistema consolidado/07_01b_Tier1_Sobrenatural.md
+index 24cbc5e..224e7d7 100644
+--- a/Sistemas/Pandorha/sistema consolidado/07_01b_Tier1_Sobrenatural.md	
++++ b/Sistemas/Pandorha/sistema consolidado/07_01b_Tier1_Sobrenatural.md	
+@@ -186,7 +186,10 @@ Emaciado, com membros alongados e dedos que terminam em garras de osso. A l├¡ngu
+ - **HP:** 30 | **CA:** 12 | **Movimento:** 9m.
+ - **Eixos:** F├¡sico +3, Mental +1, Social 0.
+ - **Aplica├º├Áes:** Conflito +3, Resist├¬ncia +2, Intera├º├úo 0.
+-- **[A] Garra Paralisante:** +6 (Nv 3 + Fis 3). Dano **2d4+3**. Se o alvo for uma criatura viva (n├úo elfo), deve passar em **Teste Global de F├¡sico + Resist├¬ncia + N├¡vel (DC 16)** (10 + Nv 3 + 3 Fis) ou ficar **Imobilizado/Paralisado** por 1 minuto.
++- **[A] Garra Paralisante:** +6 (Nv 3 + Fis 3). Dano **2d4+3**. Se o alvo for uma criatura viva (n├úo elfo), deve fazer um **Teste Global de F├¡sico + Resist├¬ncia + N├¡vel (DC 16)** (10 + Nv 3 + 3 Fis).
++  - **Sucesso:** Alvo fica **Abalado** (Penalidade -2) por 1 rodada.
++  - **Falha:** Alvo fica **Imobilizado/Paralisado** por **1 rodada** (at├® o fim do pr├│ximo turno do alvo).
++  - **Falha Cr├¡tica:** Alvo fica **Imobilizado** por **1d4+1 rodadas**.
+ 
+ ### B. Carni├ºal Rastejante (N├¡vel 4)
+ 
+@@ -328,7 +331,9 @@ Uma figura feminina flutuante, bela mas terr├¡vel, com cabelos flutuando em ├ígu
+ - **HP:** 55 | **CA:** 12 | **Movimento:** 12m Voo.
+ - **Eixos:** Mental +4, Social +4.
+ - **Aplica├º├Áes:** Conflito 0, Resist├¬ncia +4, Intera├º├úo +4.
+-- **[A] Lamento:** (1/dia). Todas as criaturas vivas a 9m devem passar em **Teste Global de F├¡sico + Resist├¬ncia + N├¡vel (DC 19)** (10 + Nv 5 + 4 Men/Soc). Falha: Cai imediatamente a **0 HP**. Sucesso: Sofre 3d6 Dano Ps├¡quico.
++- **[A] Lamento:** (1/dia). Todas as criaturas vivas a 9m devem passar em **Teste Global de F├¡sico + Resist├¬ncia + N├¡vel (DC 19)** (10 + Nv 5 + 4 Men/Soc). 
++  - **Falha:** Sofre **8d6 de Dano Ps├¡quico** e fica **Abalado** (Penalidade -2 em todos os testes) por 1 minuto.
++  - **Sucesso:** Sofre metade do dano e n├úo fica Abalado.
+ 
+ ---
+ 
+@@ -455,7 +460,10 @@ Apenas 30cm de altura, com asas de inseto brilhantes (borboleta ou lib├®lula). D
+ - **Eixos:** F├¡sico -2, Mental +3, Social +3.
+ - **Aplica├º├Áes:** Conflito 0, Resist├¬ncia 0, Intera├º├úo +3.
+ - **Passiva:** Pode ficar Invis├¡vel ├á vontade (1 A├º├úo [L]).
+-- **[A] P├│ M├ígico:** Alcance 3m. Alvo faz **Teste Global de Mental + Resist├¬ncia + N├¡vel (DC 14)** (10 + Nv 1 + 3 Men/Soc) ou cai no **Sono** (Inconsciente por 1 minuto ou at├® sofrer dano) ou **Levita** (Involuntariamente, 6m no ar).
++- [AA] P├│ M├ígico: Alcance 3m. Alvo faz **Teste Global de Mental + Resist├¬ncia + N├¡vel (DC 14)** (10 + Nv 1 + 3 Men/Soc). 
++  - **Sucesso:** Alvo fica **Abalado** (Penalidade -2) por 1 rodada.
++  - **Falha:** Cai em **Sono** (Inconsciente por 1 minuto ou at├® sofrer dano).
++  - **Falha Cr├¡tica:** Sono Profundo (Exige 1 A├º├úo de aliado para acordar, al├®m de dano).
+ - **[A] Espinho:** +6 (Nv 1 + Men 3 + 2). Alcance 6m. Dano **1 Perfurante** + **1d4 Veneno**.
+ 
+ ### B. Sprite de Guerra (N├¡vel 3)
+diff --git a/Sistemas/Pandorha/sistema consolidado/11_Compendio_de_Talentos.md b/Sistemas/Pandorha/sistema consolidado/11_Compendio_de_Talentos.md
+index 0fcb7e6..1b6825e 100644
+--- a/Sistemas/Pandorha/sistema consolidado/11_Compendio_de_Talentos.md	
++++ b/Sistemas/Pandorha/sistema consolidado/11_Compendio_de_Talentos.md	
+@@ -36,7 +36,7 @@ _Para aqueles que resolvem problemas com a├ºo._
+ 
+ _Para l├¡deres e manipuladores._
+ 
+-- **L├¡der Inspirador:** Gaste 10 minutos discursando. At├® 6 aliados ganham +5 HP Tempor├írio.
++- **L├¡der Inspirador:** Gaste 10 minutos discursando. At├® 6 aliados ganham HP Tempor├írio igual ao seu **[Eixo Social + Metade do N├¡vel]** (M├¡nimo 1).
+ - **Provocador:** (Requer Intera├º├úo 2) Em combate, pode gastar **1 A├º├úo [A]** para insultar um inimigo. Ele tem **-2 de Penalidade** para atacar qualquer um que n├úo seja voc├¬.
+ - **Negociador Implac├ível:** Voc├¬ tem **+2 de B├┤nus** em testes de regatear pre├ºos.
+ - **Poliglota:** Voc├¬ aprende 3 novos idiomas e ganha +1 em testes de Mental + Intera├º├úo (Conhecimento).
+diff --git a/Sistemas/Pandorha/sistema consolidado/12_02_Grimorio_Circulo_0.md b/Sistemas/Pandorha/sistema consolidado/12_02_Grimorio_Circulo_0.md
+index b2e5fc8..81aad8e 100644
+--- a/Sistemas/Pandorha/sistema consolidado/12_02_Grimorio_Circulo_0.md	
++++ b/Sistemas/Pandorha/sistema consolidado/12_02_Grimorio_Circulo_0.md	
+@@ -95,13 +95,14 @@ Voc├¬ toca uma criatura volunt├íria. Uma vez, antes da magia acabar, o alvo pode
+ 
+ ---
+ 
+-## 8. Seta Et├®rica
++### 8. Seta Et├®rica
+ 
+ - **Escola:** Evoca├º├úo
+ - **Tempo:** 1 A├º├úo [A]
+ - **Alcance:** 30 metros
+ - **Componentes:** V, S
+ - **Dura├º├úo:** Instant├ónea
++- **Uso:** (Uma vez por Turno)
+ 
+ Voc├¬ cria um dardo de energia m├ígica. A seta atinge uma criatura ├á sua escolha dentro do alcance. O dardo causa **1d4+1 de dano de Energia**. O dardo acerta automaticamente (n├úo precisa rolar ataque).
+ 
+diff --git a/Sistemas/Pandorha/sistema consolidado/12_03_Grimorio_Circulo_1.md b/Sistemas/Pandorha/sistema consolidado/12_03_Grimorio_Circulo_1.md
+index 4912772..1f0bee0 100644
+--- a/Sistemas/Pandorha/sistema consolidado/12_03_Grimorio_Circulo_1.md	
++++ b/Sistemas/Pandorha/sistema consolidado/12_03_Grimorio_Circulo_1.md	
+@@ -66,12 +66,18 @@ Uma criatura que voc├¬ tocar recupera Pontos de Vida iguais a **1d8 + seu Eixo M
+ - **Tempo:** 2 A├º├Áes [AA]
+ - **Alcance:** 18 metros
+ - **Componentes:** V, S, M (um punhado de areia fina, p├®talas de rosa ou um grilo)
+-- **Dura├º├úo:** 1 minuto
++- **Dura├º├úo:** 1 minuto (Ver efeito)
+ 
+-Essa magia faz as criaturas ca├¡rem em um sono m├ígico. Role **5d8**; o total ├® a quantidade de Pontos de Vida de criaturas que a magia pode afetar. Criaturas a at├® 6m de um ponto ├á sua escolha dentro do alcance s├úo afetadas em ordem ascendente de seus PV atuais (ignorando criaturas inconscientes).
+-Come├ºando pela criatura com menos PV atual, cada criatura afetada cai inconsciente at├® a magia acabar, sofrer dano ou algu├®m usar uma a├º├úo para acord├í-la. Subtraia os PV de cada criatura do total antes de seguir para a pr├│xima com mais PV. N├úo h├í teste de resist├¬ncia. Mortos-vivos e criaturas imunes a charme n├úo s├úo afetados.
++Voc├¬ sopra uma areia invis├¡vel que induz letargia m├ígica. Criaturas em uma ├írea de 6m de raio a partir de um ponto ├á sua escolha devem realizar um teste de **Resist├¬ncia Mental** (`[d20] + [N├¡vel] + [Mental] + [Resist├¬ncia] + [Item]`) contra sua CD de Magia.
+ 
+-**Potencializar:** +2d8 no total de HP por C├¡rculo acima do 1┬║.
++- **Sucesso Cr├¡tico:** O alvo ignora o efeito.
++- **Sucesso:** O alvo resiste ao sono, mas fica **Lento** e **Abalado** por 1 rodada devido ├á forte sonol├¬ncia.
++- **Falha:** O alvo cai inconsciente at├® a magia acabar (1 min), sofrer dano ou algu├®m usar uma a├º├úo para acord├í-lo.
++- **Falha Cr├¡tica:** O alvo entra em um sono profundo por 1 hora. S├│ acorda se sofrer dano ou se for alvo de uma restaura├º├úo m├ígica.
++
++**Especial:** Mortos-vivos e criaturas imunes a charme s├úo imunes a esta magia.
++
++**Potencializar:** Aumenta a CD da magia em +1 por C├¡rculo acima do 1┬║ (em vez de aumentar HP).
+ 
+ ---
+ 

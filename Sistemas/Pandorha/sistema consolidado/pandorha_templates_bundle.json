@@ -1,0 +1,1591 @@
+{
+  "isCustomSystemExport": true,
+  "templates": [],
+
+  "actors": [
+    {
+      "type": "_template",
+      "name": "Template Ator Pandorha (OFICIAL)",
+      "data": {
+        "hidden": [
+          {
+            "name": "hp_max_total",
+            "value": "${10 + (fisico + resistencia) * 5}$"
+          },
+          {
+            "name": "pv_max_total",
+            "value": "${fisico + interacao + nivel}$"
+          },
+          {
+            "name": "ee_max_total",
+            "value": "${mental + resistencia + nivel}$"
+          },
+          {
+            "name": "ca_total",
+            "value": "${10 + nivel + resistencia + armadura + escudo}$"
+          },
+          {
+            "name": "init_total",
+            "value": "${nivel + mental + interacao}$"
+          },
+          {
+            "name": "mov_total",
+            "value": "${9 + fisico}$"
+          },
+          {
+            "name": "carga_total",
+            "value": "${fisico + resistencia + 6}$"
+          },
+          {
+            "name": "armadura",
+            "value": "0"
+          },
+          {
+            "name": "escudo",
+            "value": "0"
+          }
+        ],
+        "body": {
+          "type": "panel",
+          "cssClass": "pandorha-actor-body",
+          "contents": [
+            {
+              "type": "table",
+              "cols": 2,
+              "rows": 1,
+              "cssClass": "pandorha-layout-root",
+              "contents": [
+                [
+                  {
+                    "key": "sidebar_panel",
+                    "type": "panel",
+                    "cssClass": "pandorha-sidebar",
+                    "contents": [
+                      {
+                        "type": "label",
+                        "value": "<h3>HP</h3>",
+                        "tooltip": "Pontos de Vida = 10 + (Físico + Resistência) × 5"
+                      },
+                      {
+                        "type": "panel",
+                        "flow": "horizontal",
+                        "cssClass": "sidebar-stat",
+                        "contents": [
+                          {
+                            "key": "hp_cur",
+                            "type": "numberField",
+                            "defaultValue": "20",
+                            "cssClass": "sidebar-input"
+                          },
+                          {
+                            "type": "label",
+                            "value": "/ ${hp_max_total}$"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "label",
+                        "value": "<h3>EE</h3>",
+                        "tooltip": "Energia Etérica = Mental + Resistência + Nível"
+                      },
+                      {
+                        "type": "panel",
+                        "flow": "horizontal",
+                        "cssClass": "sidebar-stat",
+                        "contents": [
+                          {
+                            "key": "ee_cur",
+                            "type": "numberField",
+                            "defaultValue": "3",
+                            "cssClass": "sidebar-input"
+                          },
+                          {
+                            "type": "label",
+                            "value": "/ ${ee_max_total}$"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "label",
+                        "value": "<h3>PV</h3>",
+                        "tooltip": "Pontos de Vigor = Físico + Interação + Nível"
+                      },
+                      {
+                        "type": "panel",
+                        "flow": "horizontal",
+                        "cssClass": "sidebar-stat",
+                        "contents": [
+                          {
+                            "key": "pv_cur",
+                            "type": "numberField",
+                            "defaultValue": "3",
+                            "cssClass": "sidebar-input"
+                          },
+                          {
+                            "type": "label",
+                            "value": "/ ${pv_max_total}$"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "label",
+                        "value": "───────",
+                        "cssClass": "sidebar-divider"
+                      },
+                      {
+                        "type": "label",
+                        "value": "PERCEPÇÃO"
+                      },
+                      {
+                        "key": "percepcao",
+                        "type": "numberField",
+                        "cssClass": "sidebar-input"
+                      },
+                      {
+                        "type": "label",
+                        "value": "INICIATIVA",
+                        "tooltip": "Nível + Mental + Interação"
+                      },
+                      {
+                        "type": "label",
+                        "value": "${init_total}$",
+                        "cssClass": "sidebar-calc"
+                      },
+                      {
+                        "type": "label",
+                        "value": "CA",
+                        "tooltip": "CA = 10 + [Nível] + [Bônus de Armadura] + [Eixo Limitado] + [Escudo]"
+                      },
+                      {
+                        "type": "label",
+                        "value": "${ca_total}$",
+                        "cssClass": "sidebar-calc"
+                      },
+                      {
+                        "type": "label",
+                        "value": "VELOCIDADE"
+                      },
+                      {
+                        "type": "label",
+                        "value": "${mov_total}$m",
+                        "cssClass": "sidebar-calc"
+                      },
+                      {
+                        "type": "label",
+                        "value": "CARGA",
+                        "tooltip": "(Físico + Resistência) + 6 slots"
+                      },
+                      {
+                        "type": "label",
+                        "value": "${carga_total}$",
+                        "cssClass": "sidebar-calc"
+                      }
+                    ]
+                  },
+                  {
+                    "key": "main_tabs",
+                    "type": "tabbedPanel",
+                    "contents": [
+                      {
+                        "type": "tab",
+                        "name": "Identidade",
+                        "key": "pg1",
+                        "contents": [
+                          {
+                            "type": "label",
+                            "value": "<h2>IDENTIDADE</h2>",
+                            "cssClass": "p-section"
+                          },
+                          {
+                            "key": "id_panel",
+                            "type": "panel",
+                            "label": "Identidade",
+                            "cssClass": "pandorha-panel",
+                            "contents": [
+                              {
+                                "type": "table",
+                                "cols": 4,
+                                "rows": 2,
+                                "contents": [
+                                  [
+                                    {
+                                      "type": "label",
+                                      "value": "NOME DO PERSONAGEM"
+                                    },
+                                    {
+                                      "type": "label",
+                                      "value": "JOGADOR"
+                                    },
+                                    {
+                                      "type": "label",
+                                      "value": "CLASSE"
+                                    },
+                                    {
+                                      "type": "label",
+                                      "value": "NÍVEL"
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "key": "nome",
+                                      "type": "textField"
+                                    },
+                                    {
+                                      "key": "jogador",
+                                      "type": "textField"
+                                    },
+                                    {
+                                      "key": "classe_nome",
+                                      "type": "textField"
+                                    },
+                                    {
+                                      "key": "nivel",
+                                      "type": "numberField",
+                                      "defaultValue": "1"
+                                    }
+                                  ]
+                                ]
+                              },
+                              {
+                                "type": "table",
+                                "cols": 4,
+                                "rows": 2,
+                                "contents": [
+                                  [
+                                    {
+                                      "type": "label",
+                                      "value": "ANCESTRALIDADE"
+                                    },
+                                    {
+                                      "type": "label",
+                                      "value": "ANTECEDENTE"
+                                    },
+                                    {
+                                      "type": "label",
+                                      "value": "ESPECIALIZAÇÃO"
+                                    },
+                                    {
+                                      "type": "label",
+                                      "value": "XP"
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "key": "anc_nome",
+                                      "type": "textField"
+                                    },
+                                    {
+                                      "key": "ant_nome",
+                                      "type": "textField"
+                                    },
+                                    {
+                                      "key": "especial",
+                                      "type": "textField"
+                                    },
+                                    {
+                                      "key": "xp",
+                                      "type": "numberField",
+                                      "defaultValue": "0"
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "table",
+                            "cols": 2,
+                            "rows": 1,
+                            "contents": [
+                              [
+                                {
+                                  "key": "eixos_box",
+                                  "type": "panel",
+                                  "label": "Eixos",
+                                  "cssClass": "pandorha-panel",
+                                  "contents": [
+                                    {
+                                      "type": "table",
+                                      "cols": 3,
+                                      "rows": 2,
+                                      "contents": [
+                                        [
+                                          {
+                                            "type": "label",
+                                            "value": "FÍSICO"
+                                          },
+                                          {
+                                            "type": "label",
+                                            "value": "MENTAL"
+                                          },
+                                          {
+                                            "type": "label",
+                                            "value": "SOCIAL"
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "key": "fisico",
+                                            "type": "numberField",
+                                            "defaultValue": "1",
+                                            "cssClass": "stat-value"
+                                          },
+                                          {
+                                            "key": "mental",
+                                            "type": "numberField",
+                                            "defaultValue": "1",
+                                            "cssClass": "stat-value"
+                                          },
+                                          {
+                                            "key": "social",
+                                            "type": "numberField",
+                                            "defaultValue": "1",
+                                            "cssClass": "stat-value"
+                                          }
+                                        ]
+                                      ]
+                                    },
+                                    {
+                                      "type": "panel",
+                                      "flow": "horizontal",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Bônus racial:"
+                                        },
+                                        {
+                                          "key": "bn_rac",
+                                          "type": "textField"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "label",
+                                      "value": "6 pontos (mín 1, máx 3 cada)",
+                                      "size": "small"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "key": "apps_box",
+                                  "type": "panel",
+                                  "label": "Aplicações",
+                                  "cssClass": "pandorha-panel",
+                                  "contents": [
+                                    {
+                                      "type": "table",
+                                      "cols": 3,
+                                      "rows": 2,
+                                      "contents": [
+                                        [
+                                          {
+                                            "type": "label",
+                                            "value": "CONFLITO"
+                                          },
+                                          {
+                                            "type": "label",
+                                            "value": "INTERAÇÃO"
+                                          },
+                                          {
+                                            "type": "label",
+                                            "value": "RESISTÊNCIA"
+                                          }
+                                        ],
+                                        [
+                                          {
+                                            "key": "conflito",
+                                            "type": "numberField",
+                                            "defaultValue": "1",
+                                            "cssClass": "stat-value"
+                                          },
+                                          {
+                                            "key": "interacao",
+                                            "type": "numberField",
+                                            "defaultValue": "1",
+                                            "cssClass": "stat-value"
+                                          },
+                                          {
+                                            "key": "resistencia",
+                                            "type": "numberField",
+                                            "defaultValue": "1",
+                                            "cssClass": "stat-value"
+                                          }
+                                        ]
+                                      ]
+                                    },
+                                    {
+                                      "type": "label",
+                                      "value": "6 pontos (mín 1, máx 3 cada)",
+                                      "size": "small"
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "tab",
+                        "name": "Atributos & Defesas",
+                        "key": "pg2",
+                        "contents": [
+                          {
+                            "type": "table",
+                            "cols": 2,
+                            "rows": 1,
+                            "contents": [
+                              [
+                                {
+                                  "key": "cp_box",
+                                  "type": "panel",
+                                  "label": "Capacidade Primordial (Ancestralidade)",
+                                  "cssClass": "pandorha-panel",
+                                  "contents": [
+                                    {
+                                      "key": "cap_prim",
+                                      "type": "textArea"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "key": "ho_box",
+                                  "type": "panel",
+                                  "label": "Habilidade de Origem (Antecedente)",
+                                  "cssClass": "pandorha-panel",
+                                  "contents": [
+                                    {
+                                      "key": "orig_hab",
+                                      "type": "textArea"
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          },
+                          {
+                            "key": "pass_box",
+                            "type": "panel",
+                            "label": "Habilidade Passiva de Classe",
+                            "cssClass": "pandorha-panel",
+                            "contents": [
+                              {
+                                "key": "passiva",
+                                "type": "textArea"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "table",
+                            "cols": 2,
+                            "rows": 1,
+                            "contents": [
+                              [
+                                {
+                                  "key": "tal_cls",
+                                  "type": "panel",
+                                  "label": "Talentos de Classe (Escolha 2)",
+                                  "cssClass": "pandorha-panel",
+                                  "contents": [
+                                    {
+                                      "type": "label",
+                                      "value": "Talento 1"
+                                    },
+                                    {
+                                      "key": "t1_n",
+                                      "type": "textField"
+                                    },
+                                    {
+                                      "key": "t1_d",
+                                      "type": "textArea",
+                                      "placeholder": "Efeito..."
+                                    },
+                                    {
+                                      "type": "label",
+                                      "value": "Talento 2"
+                                    },
+                                    {
+                                      "key": "t2_n",
+                                      "type": "textField"
+                                    },
+                                    {
+                                      "key": "t2_d",
+                                      "type": "textArea",
+                                      "placeholder": "Efeito..."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "key": "tal_gen",
+                                  "type": "panel",
+                                  "label": "Talentos de Antecedente & Gerais",
+                                  "cssClass": "pandorha-panel",
+                                  "contents": [
+                                    {
+                                      "type": "label",
+                                      "value": "Talento Antecedente"
+                                    },
+                                    {
+                                      "key": "ta_n",
+                                      "type": "textField"
+                                    },
+                                    {
+                                      "key": "ta_d",
+                                      "type": "textArea",
+                                      "placeholder": "Efeito..."
+                                    },
+                                    {
+                                      "type": "label",
+                                      "value": "Talento Geral"
+                                    },
+                                    {
+                                      "key": "tg_n",
+                                      "type": "textField"
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          },
+                          {
+                            "key": "tracos_panel",
+                            "type": "panel",
+                            "label": "Traços Ancestrais (Escolha 3)",
+                            "cssClass": "pandorha-panel",
+                            "contents": [
+                              {
+                                "type": "table",
+                                "cols": 3,
+                                "rows": 1,
+                                "contents": [
+                                  [
+                                    {
+                                      "type": "panel",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Traço 1"
+                                        },
+                                        {
+                                          "key": "tr1_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "tr1_d",
+                                          "type": "textArea",
+                                          "placeholder": "Descrição..."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "panel",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Traço 2"
+                                        },
+                                        {
+                                          "key": "tr2_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "tr2_d",
+                                          "type": "textArea",
+                                          "placeholder": "Descrição..."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "panel",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Traço 3"
+                                        },
+                                        {
+                                          "key": "tr3_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "tr3_d",
+                                          "type": "textArea",
+                                          "placeholder": "Descrição..."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "key": "equip_panel",
+                            "type": "panel",
+                            "label": "Equipamento & Inventário",
+                            "cssClass": "pandorha-panel",
+                            "contents": [
+                              {
+                                "type": "table",
+                                "cols": 4,
+                                "rows": 1,
+                                "contents": [
+                                  [
+                                    {
+                                      "type": "panel",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Arma"
+                                        },
+                                        {
+                                          "key": "eq_arma",
+                                          "type": "textArea"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "panel",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Armadura / Escudo"
+                                        },
+                                        {
+                                          "key": "eq_prot",
+                                          "type": "textArea"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "panel",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Itens (Slots)"
+                                        },
+                                        {
+                                          "key": "eq_itens",
+                                          "type": "textArea"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "panel",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Ouro"
+                                        },
+                                        {
+                                          "key": "eq_ouro",
+                                          "type": "textArea"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "tab",
+                        "name": "Magias & Manobras",
+                        "key": "pg6",
+                        "contents": [
+                          {
+                            "key": "man_panel",
+                            "type": "panel",
+                            "label": "Manobras Conhecidas",
+                            "cssClass": "pandorha-panel",
+                            "contents": [
+                              {
+                                "type": "table",
+                                "cols": 3,
+                                "rows": 1,
+                                "contents": [
+                                  [
+                                    {
+                                      "type": "panel",
+                                      "label": "Matriz Física",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Manobra 1"
+                                        },
+                                        {
+                                          "key": "mf1_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "mf1_e",
+                                          "type": "textArea",
+                                          "placeholder": "Efeito..."
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "Manobra 2"
+                                        },
+                                        {
+                                          "key": "mf2_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "mf2_e",
+                                          "type": "textArea",
+                                          "placeholder": "Efeito..."
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "Manobra 3"
+                                        },
+                                        {
+                                          "key": "mf3_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "mf3_e",
+                                          "type": "textArea",
+                                          "placeholder": "Efeito..."
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "Manobra 4"
+                                        },
+                                        {
+                                          "key": "mf4_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "mf4_e",
+                                          "type": "textArea",
+                                          "placeholder": "Efeito..."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "panel",
+                                      "label": "Matriz Mental",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Manobra 1"
+                                        },
+                                        {
+                                          "key": "mm1_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "mm1_e",
+                                          "type": "textArea",
+                                          "placeholder": "Efeito..."
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "Manobra 2"
+                                        },
+                                        {
+                                          "key": "mm2_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "mm2_e",
+                                          "type": "textArea",
+                                          "placeholder": "Efeito..."
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "Manobra 3"
+                                        },
+                                        {
+                                          "key": "mm3_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "mm3_e",
+                                          "type": "textArea",
+                                          "placeholder": "Efeito..."
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "Manobra 4"
+                                        },
+                                        {
+                                          "key": "mm4_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "mm4_e",
+                                          "type": "textArea",
+                                          "placeholder": "Efeito..."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "panel",
+                                      "label": "Matriz Social",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Manobra 1"
+                                        },
+                                        {
+                                          "key": "ms1_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "ms1_e",
+                                          "type": "textArea",
+                                          "placeholder": "Efeito..."
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "Manobra 2"
+                                        },
+                                        {
+                                          "key": "ms2_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "ms2_e",
+                                          "type": "textArea",
+                                          "placeholder": "Efeito..."
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "Manobra 3"
+                                        },
+                                        {
+                                          "key": "ms3_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "ms3_e",
+                                          "type": "textArea",
+                                          "placeholder": "Efeito..."
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "Manobra 4"
+                                        },
+                                        {
+                                          "key": "ms4_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "key": "ms4_e",
+                                          "type": "textArea",
+                                          "placeholder": "Efeito..."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "key": "mag_panel",
+                            "type": "panel",
+                            "label": "Magias Preparadas (Limite: Mental + 1)",
+                            "cssClass": "pandorha-panel",
+                            "contents": [
+                              {
+                                "type": "table",
+                                "cols": 3,
+                                "rows": 2,
+                                "contents": [
+                                  [
+                                    {
+                                      "type": "panel",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Magia 1"
+                                        },
+                                        {
+                                          "key": "mag1_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "type": "panel",
+                                          "flow": "horizontal",
+                                          "contents": [
+                                            {
+                                              "type": "label",
+                                              "value": "Círculo:"
+                                            },
+                                            {
+                                              "key": "mag1_c",
+                                              "type": "numberField"
+                                            },
+                                            {
+                                              "type": "label",
+                                              "value": "EE:"
+                                            },
+                                            {
+                                              "key": "mag1_ee",
+                                              "type": "numberField"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "EFEITO"
+                                        },
+                                        {
+                                          "key": "mag1_ef",
+                                          "type": "textArea"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "panel",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Magia 2"
+                                        },
+                                        {
+                                          "key": "mag2_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "type": "panel",
+                                          "flow": "horizontal",
+                                          "contents": [
+                                            {
+                                              "type": "label",
+                                              "value": "Círculo:"
+                                            },
+                                            {
+                                              "key": "mag2_c",
+                                              "type": "numberField"
+                                            },
+                                            {
+                                              "type": "label",
+                                              "value": "EE:"
+                                            },
+                                            {
+                                              "key": "mag2_ee",
+                                              "type": "numberField"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "EFEITO"
+                                        },
+                                        {
+                                          "key": "mag2_ef",
+                                          "type": "textArea"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "panel",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Magia 3"
+                                        },
+                                        {
+                                          "key": "mag3_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "type": "panel",
+                                          "flow": "horizontal",
+                                          "contents": [
+                                            {
+                                              "type": "label",
+                                              "value": "Círculo:"
+                                            },
+                                            {
+                                              "key": "mag3_c",
+                                              "type": "numberField"
+                                            },
+                                            {
+                                              "type": "label",
+                                              "value": "EE:"
+                                            },
+                                            {
+                                              "key": "mag3_ee",
+                                              "type": "numberField"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "EFEITO"
+                                        },
+                                        {
+                                          "key": "mag3_ef",
+                                          "type": "textArea"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  [
+                                    {
+                                      "type": "panel",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Magia 4"
+                                        },
+                                        {
+                                          "key": "mag4_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "type": "panel",
+                                          "flow": "horizontal",
+                                          "contents": [
+                                            {
+                                              "type": "label",
+                                              "value": "Círculo:"
+                                            },
+                                            {
+                                              "key": "mag4_c",
+                                              "type": "numberField"
+                                            },
+                                            {
+                                              "type": "label",
+                                              "value": "EE:"
+                                            },
+                                            {
+                                              "key": "mag4_ee",
+                                              "type": "numberField"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "EFEITO"
+                                        },
+                                        {
+                                          "key": "mag4_ef",
+                                          "type": "textArea"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "panel",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Magia 5"
+                                        },
+                                        {
+                                          "key": "mag5_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "type": "panel",
+                                          "flow": "horizontal",
+                                          "contents": [
+                                            {
+                                              "type": "label",
+                                              "value": "Círculo:"
+                                            },
+                                            {
+                                              "key": "mag5_c",
+                                              "type": "numberField"
+                                            },
+                                            {
+                                              "type": "label",
+                                              "value": "EE:"
+                                            },
+                                            {
+                                              "key": "mag5_ee",
+                                              "type": "numberField"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "EFEITO"
+                                        },
+                                        {
+                                          "key": "mag5_ef",
+                                          "type": "textArea"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "panel",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Magia 6"
+                                        },
+                                        {
+                                          "key": "mag6_n",
+                                          "type": "textField"
+                                        },
+                                        {
+                                          "type": "panel",
+                                          "flow": "horizontal",
+                                          "contents": [
+                                            {
+                                              "type": "label",
+                                              "value": "Círculo:"
+                                            },
+                                            {
+                                              "key": "mag6_c",
+                                              "type": "numberField"
+                                            },
+                                            {
+                                              "type": "label",
+                                              "value": "EE:"
+                                            },
+                                            {
+                                              "key": "mag6_ee",
+                                              "type": "numberField"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "label",
+                                          "value": "EFEITO"
+                                        },
+                                        {
+                                          "key": "mag6_ef",
+                                          "type": "textArea"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "table",
+                            "cols": 2,
+                            "rows": 1,
+                            "contents": [
+                              [
+                                {
+                                  "key": "cond_panel",
+                                  "type": "panel",
+                                  "label": "Condições Ativas",
+                                  "cssClass": "pandorha-panel",
+                                  "contents": [
+                                    {
+                                      "key": "cond1",
+                                      "type": "textField",
+                                      "placeholder": "Condição 1"
+                                    },
+                                    {
+                                      "key": "cond2",
+                                      "type": "textField",
+                                      "placeholder": "Condição 2"
+                                    },
+                                    {
+                                      "key": "cond3",
+                                      "type": "textField",
+                                      "placeholder": "Condição 3"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "key": "death_panel",
+                                  "type": "panel",
+                                  "label": "Testes de Morte (0 HP)",
+                                  "cssClass": "pandorha-panel",
+                                  "contents": [
+                                    {
+                                      "type": "panel",
+                                      "flow": "horizontal",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Falhas:"
+                                        },
+                                        {
+                                          "key": "df1",
+                                          "type": "checkbox"
+                                        },
+                                        {
+                                          "key": "df2",
+                                          "type": "checkbox"
+                                        },
+                                        {
+                                          "key": "df3",
+                                          "type": "checkbox"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "panel",
+                                      "flow": "horizontal",
+                                      "contents": [
+                                        {
+                                          "type": "label",
+                                          "value": "Estabilizado:"
+                                        },
+                                        {
+                                          "key": "estab",
+                                          "type": "checkbox"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "label",
+                                      "value": "DC 15 no d20 para estabilizar. 3 falhas = morte.",
+                                      "size": "small"
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          },
+                          {
+                            "key": "bio_panel",
+                            "type": "panel",
+                            "label": "Notas, História & Objetivos",
+                            "cssClass": "pandorha-panel",
+                            "contents": [
+                              {
+                                "key": "biografia",
+                                "type": "textArea"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "tab",
+                        "name": "Ancestralidade",
+                        "key": "pg_anc",
+                        "contents": [
+                          {
+                            "key": "anc_main_container",
+                            "type": "itemContainer",
+                            "title": "Ancestralidade Ativa (Solte o item aqui)",
+                            "nameLabel": "Ancestralidade",
+                            "nameAlign": "left",
+                            "headDisplay": true,
+                            "head": true,
+                            "showDelete": true,
+                            "deleteWarning": true,
+                            "statusIcon": true,
+                            "hideEmpty": false,
+                            "sortOption": "disabled",
+                            "templateFilter": [],
+                            "itemFilterFormula": "item.tipo_item == \"ancestralidade\"",
+                            "contents": [],
+                            "rowLayout": [
+                              {
+                                "type": "panel",
+                                "key": "anc_inner_panel",
+                                "cssClass": "anc-details-panel",
+                                "contents": [
+
+                                  { "type": "label", "key": "lbl_desc", "value": "<h3>Descrição</h3>" },
+                                  { "type": "panel", "key": "p_desc", "contents": [ { "type": "mirrorComponent", "targetKey": "anc_descricao_display" } ] },
+                                  { "type": "label", "key": "lbl_lore", "value": "<h3>Lore</h3>" },
+                                  { "type": "panel", "key": "p_lore", "contents": [ { "type": "mirrorComponent", "targetKey": "anc_lore_display" } ] },
+                                  { "type": "label", "key": "lbl_app", "value": "<h3>Aparência</h3>" },
+                                  { "type": "panel", "key": "p_app", "contents": [ { "type": "mirrorComponent", "targetKey": "anc_aparencia_display" } ] },
+                                  { "type": "label", "key": "lbl_bonus", "value": "<h3>Bônus de Eixo</h3>" },
+                                  { "type": "panel", "key": "p_bonus", "contents": [ { "type": "mirrorComponent", "targetKey": "anc_bonus_eixo_display" } ] },
+                                  { "type": "label", "key": "lbl_cp", "value": "<h3>Capacidade Primordial</h3>" },
+                                  { "type": "panel", "key": "p_cp", "contents": [
+                                      { "type": "mirrorComponent", "targetKey": "capacidade_primordial_nome_display" },
+                                      { "type": "mirrorComponent", "targetKey": "capacidade_primordial_descr_display" }
+                                  ]},
+                                  { "type": "label", "key": "lbl_tracos", "value": "<h3>Traços Selecionados</h3>" },
+                                  { "type": "panel", "key": "p_tr1_tot", "contents": [
+                                      { "type": "mirrorComponent", "targetKey": "traco_sel1_nome_display" },
+                                      { "type": "mirrorComponent", "targetKey": "traco_sel1_descr_display" }
+                                  ]},
+                                  { "type": "panel", "key": "p_tr2_tot", "contents": [
+                                      { "type": "mirrorComponent", "targetKey": "traco_sel2_nome_display" },
+                                      { "type": "mirrorComponent", "targetKey": "traco_sel2_descr_display" }
+                                  ]},
+                                  { "type": "panel", "key": "p_tr3_tot", "contents": [
+                                      { "type": "mirrorComponent", "targetKey": "traco_sel3_nome_display" },
+                                      { "type": "mirrorComponent", "targetKey": "traco_sel3_descr_display" }
+                                  ]}
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "tab",
+                        "name": "Classe",
+                        "key": "pg_cls",
+                        "contents": [
+                          {
+                            "key": "cls_main_container",
+                            "type": "itemContainer",
+                            "title": "Classe Ativa (Solte o item aqui)",
+                            "nameLabel": "Classe",
+                            "nameAlign": "left",
+                            "headDisplay": true,
+                            "head": true,
+                            "showDelete": true,
+                            "deleteWarning": true,
+                            "statusIcon": true,
+                            "hideEmpty": false,
+                            "sortOption": "disabled",
+                            "templateFilter": [],
+                            "itemFilterFormula": "item.tipo_item == \"classe\"",
+                            "contents": [],
+                            "rowLayout": [
+                              {
+                                "type": "panel",
+                                "key": "cls_inner_panel",
+                                "cssClass": "cls-details-panel",
+                                "contents": [
+
+                                  { "type": "label", "key": "lbl_cls_desc", "value": "<h3>Descrição</h3>" },
+                                  { "type": "panel", "key": "p_cls_desc", "contents": [ { "type": "mirrorComponent", "targetKey": "classe_descricao_display" } ] },
+                                  { "type": "label", "key": "lbl_cls_mat", "value": "<h3>Matriz</h3>" },
+                                  { "type": "panel", "key": "p_cls_mat", "contents": [ { "type": "mirrorComponent", "targetKey": "classe_matriz_display" } ] },
+                                  { "type": "label", "key": "lbl_cls_vit", "value": "<h3>Vitalidade Inicial</h3>" },
+                                  { "type": "panel", "key": "p_cls_vit", "contents": [ { "type": "mirrorComponent", "targetKey": "classe_vitalidade_display" } ] },
+                                  { "type": "label", "key": "lbl_cls_equip", "value": "<h3>Equipamento Treinado</h3>" },
+                                  { "type": "panel", "key": "p_cls_equip", "contents": [ { "type": "mirrorComponent", "targetKey": "classe_equipamento_display" } ] },
+                                  { "type": "label", "key": "lbl_cls_pass", "value": "<h3>Habilidade Passiva</h3>" },
+                                  { "type": "panel", "key": "p_cls_pass", "contents": [
+                                      { "type": "mirrorComponent", "targetKey": "hab_passiva_nome_display" },
+                                      { "type": "mirrorComponent", "targetKey": "hab_passiva_descr_display" }
+                                  ]},
+                                  { "type": "label", "key": "lbl_cls_tal", "value": "<h3>Talentos Selecionados</h3>" },
+                                  { "type": "panel", "key": "p_cls_t1", "contents": [
+                                      { "type": "mirrorComponent", "targetKey": "talento_classe_1_nome_display" },
+                                      { "type": "mirrorComponent", "targetKey": "talento_classe_1_descr_display" }
+                                  ]},
+                                  { "type": "panel", "key": "p_cls_t2", "contents": [
+                                      { "type": "mirrorComponent", "targetKey": "talento_classe_2_nome_display" },
+                                      { "type": "mirrorComponent", "targetKey": "talento_classe_2_descr_display" }
+                                  ]}
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "tab",
+                        "name": "Antecedente",
+                        "key": "pg_ant",
+                        "contents": [
+                          {
+                            "key": "ant_main_container",
+                            "type": "itemContainer",
+                            "title": "Antecedente Ativo (Solte o item aqui)",
+                            "nameLabel": "Antecedente",
+                            "nameAlign": "left",
+                            "headDisplay": true,
+                            "head": true,
+                            "showDelete": true,
+                            "deleteWarning": true,
+                            "statusIcon": true,
+                            "hideEmpty": false,
+                            "sortOption": "disabled",
+                            "templateFilter": [],
+                            "itemFilterFormula": "",
+                            "contents": [],
+                            "rowLayout": [
+                              {
+                                "type": "panel",
+                                "key": "ant_inner_panel",
+                                "cssClass": "cls-details-panel",
+                                "contents": [
+                                  { "type": "label", "key": "lbl_ant_desc", "value": "<h3>Descrição</h3>" },
+                                  { "type": "panel", "key": "p_ant_desc", "contents": [ { "type": "mirrorComponent", "targetKey": "ant_descricao_display" } ] },
+                                  { "type": "label", "key": "lbl_ant_hab", "value": "<h3>Habilidade de Origem</h3>" },
+                                  { "type": "panel", "key": "p_ant_hab", "contents": [
+                                      { "type": "mirrorComponent", "targetKey": "hab_origem_nome_display" },
+                                      { "type": "mirrorComponent", "targetKey": "hab_origem_descr_display" }
+                                  ]},
+                                  { "type": "label", "key": "lbl_ant_tal", "value": "<h3>Talento Selecionado</h3>" },
+                                  { "type": "panel", "key": "p_ant_t1", "contents": [
+                                      { "type": "mirrorComponent", "targetKey": "talento_ant_1_nome_display" },
+                                      { "type": "mirrorComponent", "targetKey": "talento_ant_1_descr_display" }
+                                  ]},
+                                  { "type": "panel", "key": "p_ant_t2", "contents": [
+                                      { "type": "mirrorComponent", "targetKey": "talento_ant_2_nome_display" },
+                                      { "type": "mirrorComponent", "targetKey": "talento_ant_2_descr_display" }
+                                  ]},
+                                  { "type": "panel", "key": "p_ant_t3", "contents": [
+                                      { "type": "mirrorComponent", "targetKey": "talento_ant_3_nome_display" },
+                                      { "type": "mirrorComponent", "targetKey": "talento_ant_3_descr_display" }
+                                  ]}
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "name": "Template de Antecedente",
+      "type": "_equippableItemTemplate",
+      "data": {
+        "body": {
+          "type": "panel",
+          "contents": [
+            { "type": "label", "value": "Descrição do Antecedente" },
+            { "key": "ant_descricao", "type": "textArea" },
+            { "key": "ant_descricao_display", "type": "label", "value": "${ant_descricao}$" },
+            { "type": "label", "value": "Habilidade de Origem" },
+            { "key": "hab_origem_nome", "type": "textField" },
+            { "key": "hab_origem_nome_display", "type": "label", "value": "<b>${hab_origem_nome}$</b>" },
+            { "key": "hab_origem_descr", "type": "textArea" },
+            { "key": "hab_origem_descr_display", "type": "label", "value": "${hab_origem_descr}$" },
+            { "type": "label", "value": "<h3>Talentos do Antecedente (Escolha 1)</h3>" },
+            { "key": "talento_ant_1_nome", "type": "textField" },
+            { "key": "talento_ant_1_nome_display", "type": "label", "value": "<b>1. ${talento_ant_1_nome}$</b>" },
+            { "key": "talento_ant_1_descr", "type": "textArea" },
+            { "key": "talento_ant_1_descr_display", "type": "label", "value": "${talento_ant_1_descr}$" },
+            { "key": "talento_ant_2_nome", "type": "textField" },
+            { "key": "talento_ant_2_nome_display", "type": "label", "value": "<b>2. ${talento_ant_2_nome}$</b>" },
+            { "key": "talento_ant_2_descr", "type": "textArea" },
+            { "key": "talento_ant_2_descr_display", "type": "label", "value": "${talento_ant_2_descr}$" },
+            { "key": "talento_ant_3_nome", "type": "textField" },
+            { "key": "talento_ant_3_nome_display", "type": "label", "value": "<b>3. ${talento_ant_3_nome}$</b>" },
+            { "key": "talento_ant_3_descr", "type": "textArea" },
+            { "key": "talento_ant_3_descr_display", "type": "label", "value": "${talento_ant_3_descr}$" },
+            { "key": "is_configurado", "type": "checkbox", "defaultValue": false, "hidden": true },
+            { "key": "tipo_item", "type": "textField", "defaultValue": "antecedente", "hidden": true }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ancestralidade (PRO)",
+      "type": "_equippableItemTemplate",
+      "data": {
+        "body": {
+          "type": "panel",
+          "contents": [
+            { "type": "label", "value": "Lore da Ancestralidade" },
+            { "key": "anc_lore", "type": "textArea" },
+            { "key": "anc_lore_display", "type": "label", "value": "${anc_lore}$" },
+            { "type": "label", "value": "Descrição da Ancestralidade" },
+            { "key": "anc_descricao", "type": "textArea" },
+            { "key": "anc_descricao_display", "type": "label", "value": "${anc_descricao}$" },
+            { "type": "label", "value": "Aparência Sugerida" },
+            { "key": "anc_aparencia", "type": "textArea" },
+            { "key": "anc_aparencia_display", "type": "label", "value": "${anc_aparencia}$" },
+            { "type": "label", "value": "Bônus de Eixo" },
+            { "key": "anc_bonus_eixo", "type": "textField" },
+            { "key": "anc_bonus_eixo_display", "type": "label", "value": "${anc_bonus_eixo}$" },
+            { "type": "label", "value": "Capacidade Primordial" },
+            { "key": "capacidade_primordial_nome", "type": "textField" },
+            { "key": "capacidade_primordial_nome_display", "type": "label", "value": "<b>${capacidade_primordial_nome}$</b>" },
+            { "key": "capacidade_primordial_descr", "type": "textArea" },
+            { "key": "capacidade_primordial_descr_display", "type": "label", "value": "${capacidade_primordial_descr}$" },
+            { "type": "label", "value": "<h3>Traços</h3>" },
+            { "key": "traco_sel1_nome", "type": "textField" },
+            { "key": "traco_sel1_nome_display", "type": "label", "value": "<b>1. ${traco_sel1_nome}$</b>" },
+            { "key": "traco_sel1_descr", "type": "textArea" },
+            { "key": "traco_sel1_descr_display", "type": "label", "value": "${traco_sel1_descr}$" },
+            { "key": "traco_sel2_nome", "type": "textField" },
+            { "key": "traco_sel2_nome_display", "type": "label", "value": "<b>2. ${traco_sel2_nome}$</b>" },
+            { "key": "traco_sel2_descr", "type": "textArea" },
+            { "key": "traco_sel2_descr_display", "type": "label", "value": "${traco_sel2_descr}$" },
+            { "key": "traco_sel3_nome", "type": "textField" },
+            { "key": "traco_sel3_nome_display", "type": "label", "value": "<b>3. ${traco_sel3_nome}$</b>" },
+            { "key": "traco_sel3_descr", "type": "textArea" },
+            { "key": "traco_sel3_descr_display", "type": "label", "value": "${traco_sel3_descr}$" },
+            { "key": "is_configurado", "type": "checkbox", "defaultValue": false, "hidden": true },
+            { "key": "tipo_item", "type": "textField", "defaultValue": "ancestralidade", "hidden": true }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Template de Antecedente",
+      "type": "_equippableItemTemplate",
+      "data": {
+        "body": {
+          "type": "panel",
+          "contents": [
+            { "type": "label", "value": "Habilidade de Origem" },
+            { "key": "hab_origem_nome", "type": "textField" },
+            { "key": "hab_origem_nome_display", "type": "label", "value": "${hab_origem_nome}$" },
+            { "type": "label", "value": "Descrição da Origem" },
+            { "key": "hab_origem_descr", "type": "textArea" },
+            { "key": "hab_origem_descr_display", "type": "label", "value": "${hab_origem_descr}$" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Template de Classe",
+      "type": "_equippableItemTemplate",
+      "data": {
+        "body": {
+          "type": "panel",
+          "contents": [
+            { "type": "label", "value": "Descrição da Classe" },
+            { "key": "classe_descricao", "type": "textArea" },
+            { "key": "classe_descricao_display", "type": "label", "value": "${classe_descricao}$" },
+            { "type": "label", "value": "Matriz" },
+            { "key": "classe_matriz", "type": "textField" },
+            { "key": "classe_matriz_display", "type": "label", "value": "${classe_matriz}$" },
+            { "type": "label", "value": "Vitalidade Inicial" },
+            { "key": "classe_vitalidade", "type": "textField" },
+            { "key": "classe_vitalidade_display", "type": "label", "value": "${classe_vitalidade}$" },
+            { "type": "label", "value": "Equipamento Treinado" },
+            { "key": "classe_equipamento", "type": "textField" },
+            { "key": "classe_equipamento_display", "type": "label", "value": "${classe_equipamento}$" },
+            { "type": "label", "value": "Habilidade Passiva" },
+            { "key": "hab_passiva_nome", "type": "textField" },
+            { "key": "hab_passiva_nome_display", "type": "label", "value": "<b>${hab_passiva_nome}$</b>" },
+            { "key": "hab_passiva_descr", "type": "textArea" },
+            { "key": "hab_passiva_descr_display", "type": "label", "value": "${hab_passiva_descr}$" },
+            { "type": "label", "value": "<h3>Talentos de Classe (Escolha 2)</h3>" },
+            { "key": "talento_classe_1_nome", "type": "textField" },
+            { "key": "talento_classe_1_nome_display", "type": "label", "value": "<b>1. ${talento_classe_1_nome}$</b>" },
+            { "key": "talento_classe_1_descr", "type": "textArea" },
+            { "key": "talento_classe_1_descr_display", "type": "label", "value": "${talento_classe_1_descr}$" },
+            { "key": "talento_classe_2_nome", "type": "textField" },
+            { "key": "talento_classe_2_nome_display", "type": "label", "value": "<b>2. ${talento_classe_2_nome}$</b>" },
+            { "key": "talento_classe_2_descr", "type": "textArea" },
+            { "key": "talento_classe_2_descr_display", "type": "label", "value": "${talento_classe_2_descr}$" },
+            { "key": "is_configurado", "type": "checkbox", "defaultValue": false, "hidden": true },
+            { "key": "tipo_item", "type": "textField", "defaultValue": "classe", "hidden": true }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Template de Habilidade",
+      "type": "_equippableItemTemplate",
+      "data": {
+        "body": {
+          "type": "panel",
+          "contents": [
+            { "type": "label", "value": "Matriz/Tipo" },
+            { "key": "matriz", "type": "textField" },
+            { "type": "label", "value": "Efeito da Habilidade" },
+            { "key": "efeito", "type": "textArea" },
+            { "type": "label", "value": "Custo (EE/PV)" },
+            { "key": "custo", "type": "textField" }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+    "name": "Mestra Thazza — Emissária de Gorbax (Orc Elevada)",
+    "pages": [
+        {
+            "name": "Mestra Thazza — Emissária de Gorbax (Orc Elevada)",
+            "type": "text",
+            "text": {
+                "content": "<br>**Nível:** 5 | **ND:** 3 | **Tipo:** Humanoide (Orc)<br><br>#### Bloco de Estatísticas<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Stat</th><th style=\"padding: 5px;\">Valor</th><th style=\"padding: 5px;\">Stat</th><th style=\"padding: 5px;\">Valor</th></tr><tr><td style=\"padding: 5px;\">**Físico**</td><td style=\"padding: 5px;\">3 (2+1 racial)</td><td style=\"padding: 5px;\">**Conflito**</td><td style=\"padding: 5px;\">2</td></tr><tr><td style=\"padding: 5px;\">**Mental**</td><td style=\"padding: 5px;\">3</td><td style=\"padding: 5px;\">**Interação**</td><td style=\"padding: 5px;\">3</td></tr><tr><td style=\"padding: 5px;\">**Social**</td><td style=\"padding: 5px;\">2</td><td style=\"padding: 5px;\">**Resistência**</td><td style=\"padding: 5px;\">2</td></tr></tbody></table><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Derivado</th><th style=\"padding: 5px;\">Fórmula</th><th style=\"padding: 5px;\">Valor</th></tr><tr><td style=\"padding: 5px;\">**HP**</td><td style=\"padding: 5px;\">Base + (Fís+Res)×5</td><td style=\"padding: 5px;\">40</td></tr><tr><td style=\"padding: 5px;\">**CA**</td><td style=\"padding: 5px;\">10 + Nível + Armadura + Fís</td><td style=\"padding: 5px;\">21 (Placas orc +5, Fís 3)</td></tr><tr><td style=\"padding: 5px;\">**Vigor**</td><td style=\"padding: 5px;\">(Fís+Int) + Nível</td><td style=\"padding: 5px;\">11</td></tr><tr><td style=\"padding: 5px;\">**EE**</td><td style=\"padding: 5px;\">(Men+Res) + Nível + Classe</td><td style=\"padding: 5px;\">10</td></tr><tr><td style=\"padding: 5px;\">**Iniciativa**</td><td style=\"padding: 5px;\">Nível + Men + Int</td><td style=\"padding: 5px;\">+11</td></tr><tr><td style=\"padding: 5px;\">**Velocidade**</td><td style=\"padding: 5px;\">Base</td><td style=\"padding: 5px;\">9m</td></tr></tbody></table><br>#### Perícias (Treinadas)<br><br>- Engenharia Rúnica (Mental + Interação): +11 (Especialista)<br>- Diplomacia (Social + Interação): +10<br>- Arqueologia (Mental + Interação): +11<br>- Atletismo (Físico + Conflito): +10<br>- Conhecimento: Ciclos Anteriores (Mental + Interação): +11<br>- Mão-de-Ferro (linguagem de sinais orc): nativa<br><br>#### Ações (3 PA por turno)<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Ação</th><th style=\"padding: 5px;\">Custo</th><th style=\"padding: 5px;\">Teste de Ataque</th><th style=\"padding: 5px;\">Dano/Efeito</th></tr><tr><td style=\"padding: 5px;\">**Martelo de Guerra Orc**</td><td style=\"padding: 5px;\">[A] [Ataque]</td><td style=\"padding: 5px;\">Físico + Conflito + Nível = **+10** vs CA</td><td style=\"padding: 5px;\">2d8+3 contusão</td></tr><tr><td style=\"padding: 5px;\">**Golpe Técnico**</td><td style=\"padding: 5px;\">[AA] [Ataque]</td><td style=\"padding: 5px;\">+10 vs CA</td><td style=\"padding: 5px;\">2d8+3 contusão + **Desarme** (alvo solta 1 arma, Fís + Resistência DC 16 para resistir)</td></tr><tr><td style=\"padding: 5px;\">**Análise de Runa**</td><td style=\"padding: 5px;\">[AA]</td><td style=\"padding: 5px;\">Mental + Interação + Nível = **+11** vs DC</td><td style=\"padding: 5px;\">Identifica qualquer inscrição rúnica, armadilha mecânica ou propriedade de artefato. Concede +2 ao grupo em testes contra a runa/armadilha</td></tr><tr><td style=\"padding: 5px;\">**Invocação de Trégua**</td><td style=\"padding: 5px;\">[AAA]</td><td style=\"padding: 5px;\">Social + Interação + Nível = **+10** vs Mental + Resistência de todos os presentes</td><td style=\"padding: 5px;\">Todos em 15m param de lutar por 1 rodada. Quem recusar deve vencer o teste</td></tr><tr><td style=\"padding: 5px;\">**Mover**</td><td style=\"padding: 5px;\">[A]</td><td style=\"padding: 5px;\">—</td><td style=\"padding: 5px;\">9m</td></tr></tbody></table><br>#### Reações [R]<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Reação</th><th style=\"padding: 5px;\">Gatilho</th><th style=\"padding: 5px;\">Efeito</th></tr><tr><td style=\"padding: 5px;\">**Contra-Golpe Preciso**</td><td style=\"padding: 5px;\">Inimigo erra ataque contra Thazza</td><td style=\"padding: 5px;\">Thazza faz 1 ataque de martelo (+10, 2d8+3)</td></tr><tr><td style=\"padding: 5px;\">**Armadura Ressonante**</td><td style=\"padding: 5px;\">Thazza sofre Crítico</td><td style=\"padding: 5px;\">Reduz o dano do Crítico em Nível×2 (10 pontos). As engrenagens da armadura absorvem o impacto</td></tr></tbody></table><br>#### Traços e Habilidades Passivas<br><br>- **Olhos de Âmbar (Racial Orc):** Os olhos brilham na presença de Éter concentrado (3m). Detecta automaticamente itens com carga mágica<br>- **Engenheira Mestra:** Vantagem em todos os testes de Mental + Interação com runas, mecanismos e construtos<br>- **Armadura de Engrenagens:** A armadura orc contém engrenagens funcionais que dão +2 em testes de força bruta (abrir portas, levantar peso). Barulhenta: -4 em Furtividade<br>- **Diplomata Pragmática:** Prefere NÃO lutar. Se o combate é evitável, tentará negociar primeiro (sempre). Só luta se atacada ou se vidas inocentes estiverem em risco<br>- **Código de Ofício:** Não destrói artefatos, construtos ou obras de engenharia. Seria contra o Louvor ao Ato<br><br>#### Equipamento<br><br>- Martelo de guerra orc (2d8 contusão, gravuras rúnicas) | Armadura de placas orc (+5 CA, engrenagens)<br>- Caderno de anotações técnicas (sempre presente)<br>- Kit de arqueologia rúnica | Selo de Identificação de Gorbax<br>- 30 Créditos de Ato (argila vulcanizada)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Evidências dos Ciclos Anteriores para o General Erudito<br>- **Medo:** A Matriarca da Forja descobrir sua missão<br>- **Segredo:** Pessoalmente contra o isolacionismo de Gorbax<br><br>#### Falas<br><br>1. _\"Eu não vim para roubar. Vim para comerciar.\"_<br>2. _\"Essas runas... não são de Morden. Não são nossas. São dos que vieram antes.\"_<br>3. _\"O Ato Supremo é aquele que beneficia todos os clãs.\"_<br>4. _(Admirando)_ _\"Magnífico... resolveram a harmonia do quinto vetor...\"_<br><br>---<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {}
+                }
+            },
+            "system": {},
+            "title": {
+                "show": true,
+                "level": 1
+            },
+            "sort": 0
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "pagetype": "person",
+            "img": "modules/monks-enhanced-journal/assets/person.png"
+        }
+    },
+    "system": {},
+    "_stats": {
+        "systemId": "pandorha",
+        "coreVersion": "13.351"
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "name": "Mestra Thazza",
+    "type": "npc",
+    "system": {
+        "eixos": {
+            "fisico": 3,
+            "mental": 3,
+            "social": 2,
+            "conflito": 2,
+            "interacao": 3,
+            "resistencia": 2
+        },
+        "resources": {
+            "hp": {
+                "value": 20,
+                "max": 20
+            },
+            "pv": {
+                "value": 10,
+                "max": 10
+            },
+            "ee": {
+                "value": 10,
+                "max": 10
+            }
+        },
+        "defenses": {
+            "ca": {
+                "value": 10
+            }
+        },
+        "derived": {
+            "initiative": {
+                "value": 5
+            }
+        }
+    },
+    "items": [
+        {
+            "name": "Ataque Básico",
+            "type": "weapon",
+            "system": {
+                "description": {
+                    "value": "Descrição da arma"
+                }
+            }
+        }
+    ]
+}

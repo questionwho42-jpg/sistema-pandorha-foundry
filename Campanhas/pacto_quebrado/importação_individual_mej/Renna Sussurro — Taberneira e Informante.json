@@ -1,0 +1,31 @@
+{
+    "name": "Renna Sussurro — Taberneira e Informante",
+    "pages": [
+        {
+            "name": "Renna Sussurro — Taberneira e Informante",
+            "type": "text",
+            "text": {
+                "content": "<h3>Renna Sussurro — Taberneira e Informante</h3><br>**Nível:** 3 | **ND:** 1 | **Tipo:** Humanoide (Humana)<br><br>#### Bloco de Estatísticas<br><br>| Stat       | Valor |     | Stat            | Valor |<br>| ---------- | :---: | --- | --------------- | :---: |<br>| **Físico** |   1   |     | **Conflito**    |   1   |<br>| **Mental** |   3   |     | **Interação**   |   3   |<br>| **Social** |   3   |     | **Resistência** |   2   |<br><br>| Derivado       | Fórmula               |            Valor             |<br>| -------------- | --------------------- | :--------------------------: |<br>| **HP**         | HP Base + (Fís+Res)×5 |              18              |<br>| **CA**         | 10 + Nível + Fís      | 14 (Roupas leves, agilidade) |<br>| **Vigor**      | (Fís+Int) + Nível     |              7               |<br>| **Iniciativa** | Nível + Men + Int     |              +9              |<br>| **Velocidade** | Base                  |              9m              |<br>| **Percepção**  | Nível + Men + Int     |              +9              |<br><br>#### Perícias (Treinadas)<br><br>- Diplomacia (Social + Interação): +9<br>- Engano (Social + Conflito): +7<br>- Furtividade (Mental + Conflito): +7<br>- Percepção (Mental + Interação): +9<br>- Conhecimento Local (Mental + Interação): +9<br><br>#### Ações (3 PA por turno)<br><br>| Ação                    |    Custo     | Teste de Ataque                               | Dano/Efeito                                                                                                 |<br>| ----------------------- | :----------: | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |<br>| **Adaga Envenenada**    | [A] [Ataque] | Físico + Conflito + Nível = **+5** vs CA      | 1d4+1 perfurante + alvo testa **Físico + Resistência DC 13** ou **Envenenado** (1d4 dano/rodada, 3 rodadas) |<br>| **Arremesso de Caneca** | [A] [Ataque] | Mental + Conflito + Nível = **+7** vs CA (6m) | 1d4+3 contusão + **Atordoado** 1R se Crítico                                                                |<br>| **Grito de Distração**  |     [A]      | —                                             | 1 inimigo em 9m: **Mental + Resistência DC 15** ou perde 1 Ação no próximo turno                            |<br>| **Fugir**               |    [AAA]     | —                                             | Move o dobro da velocidade (18m) e ganha **Oculto** se sair de linha de visão                               |<br>| **Mover**               |     [A]      | —                                             | 9m                                                                                                          |<br><br>#### Reações [R]<br><br>| Reação                 | Gatilho          | Efeito                   |<br>| ---------------------- | ---------------- | ------------------------ |<br>| **Esquiva Instintiva** | É alvo de ataque | +2 CA contra esse ataque |<br><br>#### Traços e Habilidades Passivas<br><br>- **Ouvidos em Todo Lugar:** Renna ouve conversas num raio de 15m mesmo em ambientes barulhentos (taverna). Não pode ser surpreendida em seu próprio estabelecimento<br>- **Rede de Informantes:** Sempre sabe os 3 rumores mais recentes da vila. Pode responder qualquer pergunta sobre \"quem esteve aqui recentemente\"<br>- **Fuga Preparada:** Tem 3 rotas de fuga pré-planejadas do Parafuso Torto (porão, janela dos fundos, telhado). +5 em Furtividade quando foge por essas rotas<br>- **Veneno de Musgo (3 doses):** Aplica veneno na adaga como ação gratuita antes do combate<br><br>#### Equipamento<br><br>- Adaga envenenada (1d4 perfurante + veneno) | 3 doses de veneno de musgo<br>- Roupas discretas com bolsos ocultos | Chaves do Parafuso Torto<br>- Relatórios codificados para a Viúva (escondidos no porão)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Dinheiro para fugir de Pandorha<br>- **Medo:** A Viúva descobrir que ela desvia informações<br>- **Segredo:** Sabe que Dente-de-Ouro esteve na vila antes da invasão<br><br>#### Falas<br><br>1. _\"A primeira rodada é por conta da casa. A segunda custa informação.\"_<br>2. _(Sussurrando)_ _\"Dente-de-Ouro esteve aqui. Terça. Mesa do fundo.\"_<br>3. _\"Eu trabalho para quem paga. Não me julgue.\"_<br>4. _\"Se a Viúva souber que contei... eu nunca disse nada.\"_<br><br>---<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {
+                        "hp": "18",
+                        "ca": "10"
+                    }
+                }
+            }
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "type": "person",
+            "attributes": {
+                "hp": "18",
+                "ca": "10"
+            }
+        }
+    }
+}

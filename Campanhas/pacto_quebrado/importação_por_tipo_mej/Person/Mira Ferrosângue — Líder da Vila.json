@@ -1,0 +1,36 @@
+{
+    "name": "Mira Ferrosângue — Líder da Vila",
+    "pages": [
+        {
+            "name": "Mira Ferrosângue — Líder da Vila",
+            "type": "text",
+            "text": {
+                "content": "<br>**Nível:** 5 | **ND:** 3 | **Tipo:** Humanoide (Humana)<br><br>#### Bloco de Estatísticas<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Stat</th><th style=\"padding: 5px;\">Valor</th><th style=\"padding: 5px;\">Stat</th><th style=\"padding: 5px;\">Valor</th></tr><tr><td style=\"padding: 5px;\">**Físico**</td><td style=\"padding: 5px;\">2</td><td style=\"padding: 5px;\">**Conflito**</td><td style=\"padding: 5px;\">2</td></tr><tr><td style=\"padding: 5px;\">**Mental**</td><td style=\"padding: 5px;\">3</td><td style=\"padding: 5px;\">**Interação**</td><td style=\"padding: 5px;\">3</td></tr><tr><td style=\"padding: 5px;\">**Social**</td><td style=\"padding: 5px;\">3</td><td style=\"padding: 5px;\">**Resistência**</td><td style=\"padding: 5px;\">1</td></tr></tbody></table><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Derivado</th><th style=\"padding: 5px;\">Fórmula</th><th style=\"padding: 5px;\">Valor</th></tr><tr><td style=\"padding: 5px;\">**HP**</td><td style=\"padding: 5px;\">HP Base Classe + (Fís+Res)×5</td><td style=\"padding: 5px;\">35</td></tr><tr><td style=\"padding: 5px;\">**CA**</td><td style=\"padding: 5px;\">10 + Nível + Armadura + Fís (lim.) + Escudo</td><td style=\"padding: 5px;\">19 (Couraça +4, Escudo +1, Fís 2)</td></tr><tr><td style=\"padding: 5px;\">**Vigor**</td><td style=\"padding: 5px;\">(Fís+Int) + Nível</td><td style=\"padding: 5px;\">10</td></tr><tr><td style=\"padding: 5px;\">**EE**</td><td style=\"padding: 5px;\">(Men+Res) + Nível + Classe</td><td style=\"padding: 5px;\">9</td></tr><tr><td style=\"padding: 5px;\">**Iniciativa**</td><td style=\"padding: 5px;\">Nível + Mental + Interação</td><td style=\"padding: 5px;\">+11</td></tr><tr><td style=\"padding: 5px;\">**Velocidade**</td><td style=\"padding: 5px;\">Base</td><td style=\"padding: 5px;\">9m</td></tr><tr><td style=\"padding: 5px;\">**Percepção**</td><td style=\"padding: 5px;\">Nível + Mental + Interação</td><td style=\"padding: 5px;\">+11 (Treinada)</td></tr></tbody></table><br>#### Perícias (Treinadas)<br><br>- Diplomacia (Social + Interação): +11<br>- Intimidação (Social + Conflito): +10<br>- Engenharia Rúnica (Mental + Interação): +11<br>- Tática Militar (Mental + Conflito): +10<br>- Atletismo (Físico + Conflito): +9<br><br>#### Ações (3 PA por turno)<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Ação</th><th style=\"padding: 5px;\">Custo</th><th style=\"padding: 5px;\">Teste de Ataque</th><th style=\"padding: 5px;\">Dano/Efeito</th></tr><tr><td style=\"padding: 5px;\">**Espada Longa**</td><td style=\"padding: 5px;\">[A] [Ataque]</td><td style=\"padding: 5px;\">Físico + Conflito + Nível = **+9** vs CA</td><td style=\"padding: 5px;\">1d8+2 cortante</td></tr><tr><td style=\"padding: 5px;\">**Golpe de Escudo**</td><td style=\"padding: 5px;\">[A] [Ataque]</td><td style=\"padding: 5px;\">Físico + Conflito + Nível = **+9** vs CA</td><td style=\"padding: 5px;\">1d6+2 contusão + **Empurrão** 1,5m (Físico + Resistência DC 14 para resistir)</td></tr><tr><td style=\"padding: 5px;\">**Ordem Tática**</td><td style=\"padding: 5px;\">[A]</td><td style=\"padding: 5px;\">— (automático)</td><td style=\"padding: 5px;\">1 aliado em 9m pode usar **Reação** para se mover 3m gratuitamente OU ganha +2 ao próximo teste de ataque</td></tr><tr><td style=\"padding: 5px;\">**Comando de Formação**</td><td style=\"padding: 5px;\">[AA]</td><td style=\"padding: 5px;\">—</td><td style=\"padding: 5px;\">Até 3 aliados em 9m ganham +1 CA até o próximo turno de Mira</td></tr><tr><td style=\"padding: 5px;\">**Mover**</td><td style=\"padding: 5px;\">[A]</td><td style=\"padding: 5px;\">—</td><td style=\"padding: 5px;\">Move até 9m</td></tr><tr><td style=\"padding: 5px;\">**Passo Seguro**</td><td style=\"padding: 5px;\">[A]</td><td style=\"padding: 5px;\">—</td><td style=\"padding: 5px;\">Move 1,5m, não provoca AO</td></tr><tr><td style=\"padding: 5px;\">**Agarrar**</td><td style=\"padding: 5px;\">[A] [Ataque]</td><td style=\"padding: 5px;\">Físico + Conflito + Nível = **+9** vs CA</td><td style=\"padding: 5px;\">Alvo **Agarrado**</td></tr><tr><td style=\"padding: 5px;\">**Empurrar**</td><td style=\"padding: 5px;\">[A] [Ataque]</td><td style=\"padding: 5px;\">Físico + Conflito + Nível = **+9** vs CA</td><td style=\"padding: 5px;\">Empurra 1,5m ou **Caído**</td></tr></tbody></table><br>#### Reações [R] (1/rodada)<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Reação</th><th style=\"padding: 5px;\">Gatilho</th><th style=\"padding: 5px;\">Efeito</th></tr><tr><td style=\"padding: 5px;\">**Ataque de Oportunidade**</td><td style=\"padding: 5px;\">Inimigo sai do alcance sem Passo</td><td style=\"padding: 5px;\">1 ataque corpo-a-corpo (+9, 1d8+2)</td></tr><tr><td style=\"padding: 5px;\">**Escudo Interposto**</td><td style=\"padding: 5px;\">Aliado adjacente é atacado</td><td style=\"padding: 5px;\">Mira recebe o ataque no lugar, usando sua própria CA</td></tr></tbody></table><br>#### Traços e Habilidades Passivas<br><br>- **Liderança Natural:** Aliados dentro de 9m de Mira recebem +1 em testes de Resistência contra medo (Mental + Resistência)<br>- **Veterana de Engenharia:** Vantagem em testes de Mental + Interação relacionados a mecanismos rúnicos, armadilhas e construtos<br>- **Ferida Grave (Ativo no Cap.1-2):** Enquanto ferida, Mira tem -2 em todos os testes e não pode usar Comando de Formação. Só pode dar Ordens Táticas deitada<br><br>#### Equipamento<br><br>- Espada longa (1d8 cortante) | Escudo leve (+1 CA)<br>- Couraça (+4 CA, lim. Físico 3) | Kit de ferramentas rúnicas<br>- Anel de identificação de Morden (partido ao meio — símbolo da fuga)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Que Ferroforja sobreviva independente<br>- **Medo:** Que a vila descubra que ela destruiu protótipos de armas em Morden<br>- **Segredo:** Reconhece o Compasso como tecnologia pré-Morden<br><br>#### Falas<br><br>1. _\"Esta vila não pertence a Morden. Nós a arrancamos da terra com as mãos.\"_<br>2. _\"Baixe a arma, soldado. Nesta vila, ninguém atira primeiro.\"_<br>3. _(Delirando)_ _\"As runas... não são nossas... não são de Morden... são de antes...\"_<br>4. _\"Eu sei o que é ser abandonada. Não farei isso com meu povo.\"_<br><br>---<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {}
+                }
+            },
+            "system": {},
+            "title": {
+                "show": true,
+                "level": 1
+            },
+            "sort": 0
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "pagetype": "person",
+            "img": "modules/monks-enhanced-journal/assets/person.png"
+        }
+    },
+    "system": {},
+    "_stats": {
+        "systemId": "pandorha",
+        "coreVersion": "13.351"
+    }
+}

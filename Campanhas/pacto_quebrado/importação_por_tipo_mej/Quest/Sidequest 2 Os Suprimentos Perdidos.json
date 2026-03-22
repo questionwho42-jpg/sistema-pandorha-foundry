@@ -1,0 +1,36 @@
+{
+    "name": "Sidequest 2: Os Suprimentos Perdidos",
+    "pages": [
+        {
+            "name": "Sidequest 2: Os Suprimentos Perdidos",
+            "type": "text",
+            "text": {
+                "content": "<br>**Hook:** Cap.1, Cena 4 — Moradores mencionam que uma caravana de suprimentos não chegou há 3 dias.<br>**Gatilho:** Qualquer momento durante viagem nas colinas.<br><br>### Cena 1: A Caravana Tombada<br><br>- Encontrada 2km ao norte da trilha principal. Carroça tombada, caixas espalhadas<br>- Teste Mental + Interação DC 12: Não foram bandidos — marcas de garras. Algo grande arrastou os cavalos<br>- Teste Mental + Interação DC 15: Rastros levam a uma caverna próxima<br><br>### Cena 2: O Ninho<br><br>- Caverna com 1 **Morph Matriarca** (ND 2) protegendo uma ninhada de 8 filhotes<br>- **Morph Matriarca:** HP 30 | CA 13 | Mordida: +3, 1d8+2 | Grito Sônico: todos em 6m, Mental + Resistência DC 12 ou Atordoado 1 rodada<br>- Suprimentos estão no fundo da caverna: 3 caixas de comida, 1 caixa de ferramentas, 50 PA em mercadorias<br>- **Dilema:** Matar a Matriarca é fácil, mas os filhotes morrem sem ela. Morph é praga em Morden, mas aqui na fronteira... são apenas animais sobrevivendo.<br>  - Matar tudo: +10 PA (peles), +1 Favor Vila (\"menos pragas\")<br>  - Poupar: +1 Favor Gorbax (Thazza aprova — \"o Ato honra a vida\")<br><br>### Recompensa<br><br>- Suprimentos recuperados: +1 Favor Vila<br>- 50 PA em mercadorias para dividir<br>- Se poupou os Morphs: Thazza oferece 20 Argila de Gorbax como recompensa pela \"sabedoria\"<br><br>---<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "quest",
+                    "status": "active"
+                }
+            },
+            "system": {},
+            "title": {
+                "show": true,
+                "level": 1
+            },
+            "sort": 0
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "pagetype": "quest",
+            "img": "modules/monks-enhanced-journal/assets/quest.png"
+        }
+    },
+    "system": {},
+    "_stats": {
+        "systemId": "pandorha",
+        "coreVersion": "13.351"
+    }
+}

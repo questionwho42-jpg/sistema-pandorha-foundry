@@ -1,0 +1,31 @@
+{
+    "name": "Dente-de-Ouro — Agente da Viúva",
+    "pages": [
+        {
+            "name": "Dente-de-Ouro — Agente da Viúva",
+            "type": "text",
+            "text": {
+                "content": "<h3>Dente-de-Ouro — Agente da Viúva</h3><br>**Nível:** 5 | **ND:** 3 | **Tipo:** Humanoide (Humano, Criminoso)<br><br>#### Bloco de Estatísticas<br><br>| Stat       | Valor |     | Stat            | Valor |<br>| ---------- | :---: | --- | --------------- | :---: |<br>| **Físico** |   2   |     | **Conflito**    |   3   |<br>| **Mental** |   3   |     | **Interação**   |   2   |<br>| **Social** |   2   |     | **Resistência** |   1   |<br><br>| Derivado       | Fórmula                     |            Valor            |<br>| -------------- | --------------------------- | :-------------------------: |<br>| **HP**         | Base + (Fís+Res)×5          |             30              |<br>| **CA**         | 10 + Nível + Armadura + Fís | 19 (Couro oculto +4, Fís 2) |<br>| **Vigor**      | (Fís+Int) + Nível           |              9              |<br>| **Iniciativa** | Nível + Men + Int           |             +10             |<br>| **Velocidade** | Base                        |             9m              |<br><br>#### Perícias (Treinadas)<br><br>- Engano (Social + Conflito): +10 (Especialista)<br>- Furtividade (Mental + Conflito): +11<br>- Intimidação (Social + Conflito): +10<br>- Ladinagem (Mental + Interação): +10<br>- Percepção (Mental + Interação): +10<br><br>#### Ações (3 PA por turno)<br><br>| Ação                 |    Custo     | Teste de Ataque                                | Dano/Efeito                                                                                                                                       |<br>| -------------------- | :----------: | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |<br>| **Adaga envenenada** | [A] [Ataque] | Físico + Conflito + Nível = **+10** vs CA      | 1d4+2 perfurante + **Envenenado** DC 15 (1d8 dano/rodada, 3R)                                                                                     |<br>| **Ataque Furtivo**   | [A] [Ataque] | Fís + Conf + Nível = **+10** vs CA             | 3d6+2 perfurante (APENAS se alvo não vê Dente-de-Ouro ou se aliado flanqueia)                                                                     |<br>| **Pó nos Olhos**     |     [A]      | Mental + Conflito + Nível = **+11** vs CA (3m) | Alvo **Cegado** 1R (sem salvaguarda)                                                                                                              |<br>| **Escudo Humano**    |     [A]      | —                                              | Agarra 1 capanga adjacente e o usa como escudo: +4 CA e ataques que errem Dente-de-Ouro atingem o capanga                                         |<br>| **Fuga Desesperada** |    [AAA]     | —                                              | Move 18m, ignora AO, ganha **Oculto** se sair de linha de visão. Deixa 1d4 caltrops no caminho (Físico + Interação DC 12 ou **Lento** + 1d4 dano) |<br>| **Mover**            |     [A]      | —                                              | 9m                                                                                                                                                |<br><br>#### Reações [R]<br><br>| Reação          | Gatilho                        | Efeito                                                                                          |<br>| --------------- | ------------------------------ | ----------------------------------------------------------------------------------------------- |<br>| **Desvio Sujo** | É alvo de ataque corpo-a-corpo | Redireciona o ataque para 1 aliado adjacente (aliado testa Físico + Conflito DC 15 para evitar) |<br><br>#### Traços e Habilidades Passivas<br><br>- **Covarde Calculista:** Se Dente-de-Ouro cair abaixo de 50% HP, tenta fugir usando Fuga Desesperada. Se não puder fugir, negocia rendição imediatamente<br>- **Dente Oco:** O dente de ouro contém 1 dose de veneno letal (se engolido: morte em 1 hora sem cura). Para SI MESMO — é a saída de emergência se a Viúva decidir que ele falhou demais<br>- **Mão de Ferro (Esquerda):** Prótese metálica oculta por luva. Dano de soco: 1d6+3 contusão. Pode ser magnetizada (+2 Saturação perto da Ponte)<br>- **Negociador:** Mesmo em combate, oferece acordos. PCs podem fazer Social + Interação DC 15 para forçar trégua temporária<br><br>#### Equipamento<br><br>- 2 adagas envenenadas (1d4 perfurante + veneno)<br>- Couro reforçado oculto (+4 CA, parece roupa comum)<br>- Mão de ferro protética (esquerda, sob luva) | Caltrops (1d4 doses)<br>- 50 Pesos em Aço | Dente de ouro oco com veneno<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Promoção a Gerente de Distrito da Viúva<br>- **Medo:** A Viúva (já falhou uma vez, quase perdeu a mão)<br>- **Segredo:** NÃO organizou a invasão — chegou depois para aproveitar o caos<br><br>#### Falas<br><br>1. _\"Negócios, meus amigos. Apenas negócios.\"_<br>2. _\"Matem-me e a Viúva manda o triplo!\"_<br>3. _\"Eu não sou o vilão. O vilão fechou um Domo e deixou vocês de fora.\"_<br>4. _(Capturado)_ _\"Vamos negociar como pessoas civilizadas?\"_<br><br>---<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {
+                        "hp": "30",
+                        "ca": "10"
+                    }
+                }
+            }
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "type": "person",
+            "attributes": {
+                "hp": "30",
+                "ca": "10"
+            }
+        }
+    }
+}

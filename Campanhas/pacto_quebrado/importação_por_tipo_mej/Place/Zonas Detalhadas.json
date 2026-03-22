@@ -1,0 +1,35 @@
+{
+    "name": "Zonas Detalhadas",
+    "pages": [
+        {
+            "name": "Zonas Detalhadas",
+            "type": "text",
+            "text": {
+                "content": "<br>**A) Pátio Exterior (Acampamento Renegado)**<br><br>- **Visual:** Ruínas de pedra negra arranjadas em semicírculo. Tendas militares improvisadas. Fogueira central. O Escaravelho Térmico amarrado a um pilar partido. 15-20 renegados em atividade<br>- **Som:** Conversas baixas, metal sendo afiado, latidos de cães de guerra presos<br>- **Cheiro:** Fumaça de fogueira, ração de campanha (cobre), suor e ferro<br>- **Trilha sonora sugerida:** \"The Last of Us — military camp ambiance\"<br><br>**B) Salões Internos**<br><br>- **Visual:** Corredores de pedra negra perfeitamente cortada. Paredes lisas com runas desconhecidas que brilham azul-pálido quando alguém se aproxima. Teto de 4m, ecos multiplicados. Poça de água mineral no chão que reflete as runas<br>- **Som:** Eco dos passos ampliado, zumbido elétrico baixo das runas, gotejamento distante<br>- **Cheiro:** Cobre velho, ozônio, umidade mineral<br>- **Pontos de interesse:** Armadilhas de areia magnética (ver Cap.2), parede falsa da bigorna, biblioteca com fragmentos rúnicos colecionáveis<br>- **Trilha sonora sugerida:** \"Skyrim — Blackreach\" / cavernas + mistério + grandiosidade antiga<br><br>**C) Câmara Profunda**<br><br>- **Visual:** Sala circular, 15m de diâmetro. Chão de vidro negro que revela escuridão infinita abaixo. No centro, um pilar de cristal com o símbolo de um sol. O Compasso de Veios aponta para baixo, a agulha girando freneticamente<br>- **Som:** Silêncio absoluto, exceto um pulso grave e lento — como o batimento de algo dormindo<br>- **Cheiro:** Nada. Ausência total de odor. Perturbador<br>- **Pontos de interesse:** Painel rúnico de controle (Mental + Interação DC 20 para ler), selo no chão (indestrutível por meios conhecidos), marca de mão na parede — recente, com sangue<br>- **Trilha sonora sugerida:** \"Hollow Knight — Abyss\" / silêncio + gravidade + terror reverente<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "place"
+                }
+            },
+            "system": {},
+            "title": {
+                "show": true,
+                "level": 1
+            },
+            "sort": 0
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "pagetype": "place",
+            "img": "modules/monks-enhanced-journal/assets/place.png"
+        }
+    },
+    "system": {},
+    "_stats": {
+        "systemId": "pandorha",
+        "coreVersion": "13.351"
+    }
+}

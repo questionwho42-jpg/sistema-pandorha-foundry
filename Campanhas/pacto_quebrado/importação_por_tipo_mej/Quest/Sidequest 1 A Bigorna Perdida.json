@@ -1,0 +1,36 @@
+{
+    "name": "Sidequest 1: A Bigorna Perdida",
+    "pages": [
+        {
+            "name": "Sidequest 1: A Bigorna Perdida",
+            "type": "text",
+            "text": {
+                "content": "<br>**Hook:** Cap.1, Cena 2 — Torsten pede que fiquem atentos a uma bigorna com runas vermelhas.<br>**Gatilho:** Cap.2, Cena 2 — Encontrada nos Salões Internos de Karathon, atrás de uma parede falsa.<br><br>### Cena 1: A Parede Falsa<br><br>- **DDesafio:** Mental + Interação DC 15 para notar irregularidade na parede do Salão Interno<br>- **Caminho Racial:** 🪨 Anão detecta automaticamente (instinto mineral)<br>- Abrir a parede requer Físico + Resistência DC 12 (força bruta) ou Mental + Conflito DC 15 (mecanismo rúnico)<br><br>### Cena 2: O Guardião de Ferro<br><br>- A sala contém a bigorna + 1 **Sentinela de Ferro** (construto da civilização esquecida)<br>- **Sentinela de Ferro:** ND 2 | HP 25 | CA 15 | Ataque: +4, 1d10+3 contusão | Imune a veneno, encantamento, medo<br>- A Sentinela só ataca quem tentar mover a bigorna. Pode ser desativada: Mental + Interação DC 18 no painel rúnico atrás<br>- **Elemento de Cenário:** Correntes presas ao teto — Físico + Conflito DC 12 para derrubar sobre a Sentinela (2d8 dano + Derrubado)<br><br>### Recompensa<br><br>- **Bigorna de Runas Vermelhas** (ver `itens_pacto_quebrado.md`)<br>- Torsten forja 1 arma personalizada para cada jogador que participou da sidequest<br><br>---<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "quest",
+                    "status": "active"
+                }
+            },
+            "system": {},
+            "title": {
+                "show": true,
+                "level": 1
+            },
+            "sort": 0
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "pagetype": "quest",
+            "img": "modules/monks-enhanced-journal/assets/quest.png"
+        }
+    },
+    "system": {},
+    "_stats": {
+        "systemId": "pandorha",
+        "coreVersion": "13.351"
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Template de Classe",
+  "type": "_equippableItemTemplate",
+  "data": {
+    "body": {
+      "type": "panel",
+      "contents": [
+        { "type": "text", "key": "hab_passiva_nome", "label": "Habilidade Passiva" },
+        { "type": "textarea", "key": "hab_passiva_descr", "label": "Descrição da Passiva" },
+        { "type": "header", "label": "Talentos de Classe (Escolha 2)" },
+        { "type": "text", "key": "talento_classe_1_nome", "label": "Talento 1" },
+        { "type": "textarea", "key": "talento_classe_1_descr", "label": "Efeito do Talento 1" },
+        { "type": "text", "key": "talento_classe_2_nome", "label": "Talento 2" },
+        { "type": "textarea", "key": "talento_classe_2_descr", "label": "Efeito do Talento 2" }
+      ]
+    }
+  }
+}

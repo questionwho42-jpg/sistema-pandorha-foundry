@@ -1,0 +1,68 @@
+{
+  "folder": "ZFwTG03CfWtM0NM5",
+  "name": "Registro de Diário",
+  "flags": {
+    "monks-enhanced-journal": {
+      "pagetype": "person",
+      "img": "modules/monks-enhanced-journal/assets/person.png"
+    }
+  },
+  "pages": [
+    {
+      "type": "text",
+      "name": "Registro de Diário",
+      "flags": {
+        "monks-enhanced-journal": {
+          "type": "person"
+        }
+      },
+      "_id": "Pjw4uMGvCvoHAmAV",
+      "system": {},
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "category": null,
+      "sort": 0,
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pandorha",
+        "systemVersion": "0.1.69",
+        "createdTime": 1772731262055,
+        "modifiedTime": 1772731262055,
+        "lastModifiedBy": "PJA8T6IevfXg4pDu"
+      },
+      "ownership": {
+        "default": -1
+      }
+    }
+  ],
+  "categories": [],
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pandorha",
+    "systemVersion": "0.1.69",
+    "createdTime": 1772731262047,
+    "modifiedTime": 1772731262050,
+    "lastModifiedBy": "PJA8T6IevfXg4pDu",
+    "exportSource": {
+      "worldId": "ds",
+      "uuid": "JournalEntry.DbqHsqcqLfs3BvmL",
+      "coreVersion": "13.351",
+      "systemId": "pandorha",
+      "systemVersion": "0.1.69"
+    }
+  },
+  "ownership": {
+    "default": 0
+  }
+}

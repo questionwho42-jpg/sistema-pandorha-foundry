@@ -1,0 +1,468 @@
+{
+    "name": "Pacto Quebrado - Monk's Enhanced",
+    "entries": [
+        {
+            "name": "Mira Ferrosângue — Líder da Vila",
+            "pages": [
+                {
+                    "name": "Mira Ferrosângue — Líder da Vila",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Mira Ferrosângue — Líder da Vila</h3><br>**Nível:** 5 | **ND:** 3 | **Tipo:** Humanoide (Humana)<br><br>#### Bloco de Estatísticas<br><br>| Stat       | Valor |     | Stat            | Valor |<br>| ---------- | :---: | --- | --------------- | :---: |<br>| **Físico** |   2   |     | **Conflito**    |   2   |<br>| **Mental** |   3   |     | **Interação**   |   3   |<br>| **Social** |   3   |     | **Resistência** |   1   |<br><br>| Derivado       | Fórmula                                     |               Valor               |<br>| -------------- | ------------------------------------------- | :-------------------------------: |<br>| **HP**         | HP Base Classe + (Fís+Res)×5                |                35                 |<br>| **CA**         | 10 + Nível + Armadura + Fís (lim.) + Escudo | 19 (Couraça +4, Escudo +1, Fís 2) |<br>| **Vigor**      | (Fís+Int) + Nível                           |                10                 |<br>| **EE**         | (Men+Res) + Nível + Classe                  |                 9                 |<br>| **Iniciativa** | Nível + Mental + Interação                  |                +11                |<br>| **Velocidade** | Base                                        |                9m                 |<br>| **Percepção**  | Nível + Mental + Interação                  |          +11 (Treinada)           |<br><br>#### Perícias (Treinadas)<br><br>- Diplomacia (Social + Interação): +11<br>- Intimidação (Social + Conflito): +10<br>- Engenharia Rúnica (Mental + Interação): +11<br>- Tática Militar (Mental + Conflito): +10<br>- Atletismo (Físico + Conflito): +9<br><br>#### Ações (3 PA por turno)<br><br>| Ação                    |    Custo     | Teste de Ataque                          | Dano/Efeito                                                                                               |<br>| ----------------------- | :----------: | ---------------------------------------- | --------------------------------------------------------------------------------------------------------- |<br>| **Espada Longa**        | [A] [Ataque] | Físico + Conflito + Nível = **+9** vs CA | 1d8+2 cortante                                                                                            |<br>| **Golpe de Escudo**     | [A] [Ataque] | Físico + Conflito + Nível = **+9** vs CA | 1d6+2 contusão + **Empurrão** 1,5m (Físico + Resistência DC 14 para resistir)                             |<br>| **Ordem Tática**        |     [A]      | — (automático)                           | 1 aliado em 9m pode usar **Reação** para se mover 3m gratuitamente OU ganha +2 ao próximo teste de ataque |<br>| **Comando de Formação** |     [AA]     | —                                        | Até 3 aliados em 9m ganham +1 CA até o próximo turno de Mira                                              |<br>| **Mover**               |     [A]      | —                                        | Move até 9m                                                                                               |<br>| **Passo Seguro**        |     [A]      | —                                        | Move 1,5m, não provoca AO                                                                                 |<br>| **Agarrar**             | [A] [Ataque] | Físico + Conflito + Nível = **+9** vs CA | Alvo **Agarrado**                                                                                         |<br>| **Empurrar**            | [A] [Ataque] | Físico + Conflito + Nível = **+9** vs CA | Empurra 1,5m ou **Caído**                                                                                 |<br><br>#### Reações [R] (1/rodada)<br><br>| Reação                     | Gatilho                          | Efeito                                               |<br>| -------------------------- | -------------------------------- | ---------------------------------------------------- |<br>| **Ataque de Oportunidade** | Inimigo sai do alcance sem Passo | 1 ataque corpo-a-corpo (+9, 1d8+2)                   |<br>| **Escudo Interposto**      | Aliado adjacente é atacado       | Mira recebe o ataque no lugar, usando sua própria CA |<br><br>#### Traços e Habilidades Passivas<br><br>- **Liderança Natural:** Aliados dentro de 9m de Mira recebem +1 em testes de Resistência contra medo (Mental + Resistência)<br>- **Veterana de Engenharia:** Vantagem em testes de Mental + Interação relacionados a mecanismos rúnicos, armadilhas e construtos<br>- **Ferida Grave (Ativo no Cap.1-2):** Enquanto ferida, Mira tem -2 em todos os testes e não pode usar Comando de Formação. Só pode dar Ordens Táticas deitada<br><br>#### Equipamento<br><br>- Espada longa (1d8 cortante) | Escudo leve (+1 CA)<br>- Couraça (+4 CA, lim. Físico 3) | Kit de ferramentas rúnicas<br>- Anel de identificação de Morden (partido ao meio — símbolo da fuga)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Que Ferroforja sobreviva independente<br>- **Medo:** Que a vila descubra que ela destruiu protótipos de armas em Morden<br>- **Segredo:** Reconhece o Compasso como tecnologia pré-Morden<br><br>#### Falas<br><br>1. _\"Esta vila não pertence a Morden. Nós a arrancamos da terra com as mãos.\"_<br>2. _\"Baixe a arma, soldado. Nesta vila, ninguém atira primeiro.\"_<br>3. _(Delirando)_ _\"As runas... não são nossas... não são de Morden... são de antes...\"_<br>4. _\"Eu sei o que é ser abandonada. Não farei isso com meu povo.\"_<br><br>---<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "person",
+                            "attributes": {
+                                "hp": "35",
+                                "ca": "10"
+                            }
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {
+                        "hp": "35",
+                        "ca": "10"
+                    }
+                }
+            }
+        },
+        {
+            "name": "Torsten, o Incansável — Ferreiro (Anão)",
+            "pages": [
+                {
+                    "name": "Torsten, o Incansável — Ferreiro (Anão)",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Torsten, o Incansável — Ferreiro (Anão)</h3><br>**Nível:** 4 | **ND:** 2 | **Tipo:** Humanoide (Anão)<br><br>#### Bloco de Estatísticas<br><br>| Stat       |     Valor      |     | Stat            | Valor |<br>| ---------- | :------------: | --- | --------------- | :---: |<br>| **Físico** | 4 (3+1 racial) |     | **Conflito**    |   2   |<br>| **Mental** |       2        |     | **Interação**   |   2   |<br>| **Social** |       1        |     | **Resistência** |   3   |<br><br>| Derivado       | Fórmula                     |              Valor               |<br>| -------------- | --------------------------- | :------------------------------: |<br>| **HP**         | HP Base + (Fís+Res)×5       |                48                |<br>| **CA**         | 10 + Nível + Armadura + Fís | 18 (Avental reforçado +2, Fís 4) |<br>| **Vigor**      | (Fís+Int) + Nível           |                10                |<br>| **Iniciativa** | Nível + Men + Int           |                +8                |<br>| **Velocidade** | Base racial                 |                6m                |<br>| **Percepção**  | Nível + Men + Int           |                +8                |<br><br>#### Perícias (Treinadas)<br><br>- Ofício: Forja (Físico + Interação): +10 (Especialista — pode forjar itens +1)<br>- Atletismo (Físico + Conflito): +10<br>- Engenharia (Mental + Interação): +8<br>- Avaliação de Metal (Mental + Interação): +8<br><br>#### Ações (3 PA por turno)<br><br>| Ação                    |     Custo     | Teste de Ataque                               | Dano/Efeito                                                         |<br>| ----------------------- | :-----------: | --------------------------------------------- | ------------------------------------------------------------------- |<br>| **Martelo de Guerra**   | [A] [Ataque]  | Físico + Conflito + Nível = **+10** vs CA     | 2d8+4 contusão                                                      |<br>| **Arremesso de Brasas** | [A] [Ataque]  | Mental + Conflito + Nível = **+8** vs CA (3m) | 1d6+2 fogo + **Cegado** 1R (Físico + Resistência DC 14 para evitar) |<br>| **Golpe Devastador**    | [AA] [Ataque] | Físico + Conflito + Nível = **+10** vs CA     | 3d8+4 contusão + **Caído** (Físico + Resistência DC 16)             |<br>| **Postura de Forja**    |      [A]      | —                                             | +2 CA até próximo turno (cava os pés no chão, impossível empurrar)  |<br>| **Mover**               |      [A]      | —                                             | 6m                                                                  |<br>| **Agarrar**             | [A] [Ataque]  | Fís + Conf + Nível = **+10** vs CA            | Alvo **Agarrado**                                                   |<br>| **Empurrar**            | [A] [Ataque]  | Fís + Conf + Nível = **+10** vs CA            | Empurra 1,5m ou **Caído**                                           |<br><br>#### Reações [R]<br><br>| Reação                     | Gatilho                    | Efeito                                |<br>| -------------------------- | -------------------------- | ------------------------------------- |<br>| **Ataque de Oportunidade** | Inimigo sai do alcance     | +10, 2d8+4 contusão                   |<br>| **Parede de Ferro**        | Aliado adjacente é atacado | Torsten impõe -2 ao ataque do inimigo |<br><br>#### Traços e Habilidades Passivas<br><br>- **Peso Pétreo (Racial Anão):** Imune a empurrão se o atacante tiver Nível ≤ Físico de Torsten (4)<br>- **Fôlego das Profundezas (Racial):** Pode ficar sem ar por Físico+1 rodadas extras. Imune a sufocamento por gás<br>- **Olho de Rubi (Prótese):** O olho de vidro rúnico brilha na presença de metal de qualidade. Detecta automaticamente itens mágicos ou de qualidade masterwork num raio de 3m<br>- **Incansável:** Torsten não sofre Exausto por trabalho prolongado. Pode trabalhar 48h sem penalidade<br>- **Runa de Rastreamento:** Pode ativar a runa na adaga de Veros — aponta a direção de Veros num raio de 10km<br><br>#### Equipamento<br><br>- Martelo de guerra (2d8 contusão, Demolidor) | Avental de couro reforçado (+2 CA)<br>- Ferramentas de ferreiro masterwork | Olho de vidro rúnico (esquerdo)<br>- Brasas quentes da forja (componente para Arremesso de Brasas)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Forjar a arma perfeita usando a Bigorna de Runas Vermelhas<br>- **Medo:** A vila morrer e ele perder propósito (o Louvor ao Ato corre em suas veias)<br>- **Segredo:** Forjou a adaga de Veros e pode rastreá-lo a qualquer momento<br><br>#### Falas<br><br>1. _\"Palavras são vento. Ferro é verdade.\"_<br>2. _\"Essa flechada? Metal da Legião. Eu conheço esse ferro.\"_<br>3. _\"Se encontrarem minha bigorna, a dos rubis... eu forjo qualquer coisa.\"_<br>4. _\"O Compasso não encontra ferro. Ele encontra o que QUER ferro.\"_<br><br>---<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "person",
+                            "attributes": {
+                                "hp": "48",
+                                "ca": "10"
+                            }
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {
+                        "hp": "48",
+                        "ca": "10"
+                    }
+                }
+            }
+        },
+        {
+            "name": "Renna Sussurro — Taberneira e Informante",
+            "pages": [
+                {
+                    "name": "Renna Sussurro — Taberneira e Informante",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Renna Sussurro — Taberneira e Informante</h3><br>**Nível:** 3 | **ND:** 1 | **Tipo:** Humanoide (Humana)<br><br>#### Bloco de Estatísticas<br><br>| Stat       | Valor |     | Stat            | Valor |<br>| ---------- | :---: | --- | --------------- | :---: |<br>| **Físico** |   1   |     | **Conflito**    |   1   |<br>| **Mental** |   3   |     | **Interação**   |   3   |<br>| **Social** |   3   |     | **Resistência** |   2   |<br><br>| Derivado       | Fórmula               |            Valor             |<br>| -------------- | --------------------- | :--------------------------: |<br>| **HP**         | HP Base + (Fís+Res)×5 |              18              |<br>| **CA**         | 10 + Nível + Fís      | 14 (Roupas leves, agilidade) |<br>| **Vigor**      | (Fís+Int) + Nível     |              7               |<br>| **Iniciativa** | Nível + Men + Int     |              +9              |<br>| **Velocidade** | Base                  |              9m              |<br>| **Percepção**  | Nível + Men + Int     |              +9              |<br><br>#### Perícias (Treinadas)<br><br>- Diplomacia (Social + Interação): +9<br>- Engano (Social + Conflito): +7<br>- Furtividade (Mental + Conflito): +7<br>- Percepção (Mental + Interação): +9<br>- Conhecimento Local (Mental + Interação): +9<br><br>#### Ações (3 PA por turno)<br><br>| Ação                    |    Custo     | Teste de Ataque                               | Dano/Efeito                                                                                                 |<br>| ----------------------- | :----------: | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |<br>| **Adaga Envenenada**    | [A] [Ataque] | Físico + Conflito + Nível = **+5** vs CA      | 1d4+1 perfurante + alvo testa **Físico + Resistência DC 13** ou **Envenenado** (1d4 dano/rodada, 3 rodadas) |<br>| **Arremesso de Caneca** | [A] [Ataque] | Mental + Conflito + Nível = **+7** vs CA (6m) | 1d4+3 contusão + **Atordoado** 1R se Crítico                                                                |<br>| **Grito de Distração**  |     [A]      | —                                             | 1 inimigo em 9m: **Mental + Resistência DC 15** ou perde 1 Ação no próximo turno                            |<br>| **Fugir**               |    [AAA]     | —                                             | Move o dobro da velocidade (18m) e ganha **Oculto** se sair de linha de visão                               |<br>| **Mover**               |     [A]      | —                                             | 9m                                                                                                          |<br><br>#### Reações [R]<br><br>| Reação                 | Gatilho          | Efeito                   |<br>| ---------------------- | ---------------- | ------------------------ |<br>| **Esquiva Instintiva** | É alvo de ataque | +2 CA contra esse ataque |<br><br>#### Traços e Habilidades Passivas<br><br>- **Ouvidos em Todo Lugar:** Renna ouve conversas num raio de 15m mesmo em ambientes barulhentos (taverna). Não pode ser surpreendida em seu próprio estabelecimento<br>- **Rede de Informantes:** Sempre sabe os 3 rumores mais recentes da vila. Pode responder qualquer pergunta sobre \"quem esteve aqui recentemente\"<br>- **Fuga Preparada:** Tem 3 rotas de fuga pré-planejadas do Parafuso Torto (porão, janela dos fundos, telhado). +5 em Furtividade quando foge por essas rotas<br>- **Veneno de Musgo (3 doses):** Aplica veneno na adaga como ação gratuita antes do combate<br><br>#### Equipamento<br><br>- Adaga envenenada (1d4 perfurante + veneno) | 3 doses de veneno de musgo<br>- Roupas discretas com bolsos ocultos | Chaves do Parafuso Torto<br>- Relatórios codificados para a Viúva (escondidos no porão)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Dinheiro para fugir de Pandorha<br>- **Medo:** A Viúva descobrir que ela desvia informações<br>- **Segredo:** Sabe que Dente-de-Ouro esteve na vila antes da invasão<br><br>#### Falas<br><br>1. _\"A primeira rodada é por conta da casa. A segunda custa informação.\"_<br>2. _(Sussurrando)_ _\"Dente-de-Ouro esteve aqui. Terça. Mesa do fundo.\"_<br>3. _\"Eu trabalho para quem paga. Não me julgue.\"_<br>4. _\"Se a Viúva souber que contei... eu nunca disse nada.\"_<br><br>---<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "person",
+                            "attributes": {
+                                "hp": "18",
+                                "ca": "10"
+                            }
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {
+                        "hp": "18",
+                        "ca": "10"
+                    }
+                }
+            }
+        },
+        {
+            "name": "Velho Garth — Ex-Mineiro e Guardião do Compasso",
+            "pages": [
+                {
+                    "name": "Velho Garth — Ex-Mineiro e Guardião do Compasso",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Velho Garth — Ex-Mineiro e Guardião do Compasso</h3><br>**Nível:** 2 | **ND:** ½ | **Tipo:** Humanoide (Humano, Idoso)<br><br>#### Bloco de Estatísticas<br><br>| Stat       | Valor |     | Stat            | Valor |<br>| ---------- | :---: | --- | --------------- | :---: |<br>| **Físico** |   1   |     | **Conflito**    |   1   |<br>| **Mental** |   3   |     | **Interação**   |   2   |<br>| **Social** |   2   |     | **Resistência** |   3   |<br><br>| Derivado       | Fórmula            |   Valor    |<br>| -------------- | ------------------ | :--------: |<br>| **HP**         | Base + (Fís+Res)×5 |     22     |<br>| **CA**         | 10 + Nível + Fís   |     13     |<br>| **Vigor**      | (Fís+Int) + Nível  |     5      |<br>| **Iniciativa** | Nível + Men + Int  |     +7     |<br>| **Velocidade** | Base (reduzida)    | 6m (manca) |<br>| **Percepção**  | Nível + Men + Int  |     +7     |<br><br>#### Perícias (Treinadas)<br><br>- Mineração (Físico + Interação): +5<br>- Conhecimento Subterrâneo (Mental + Interação): +7<br>- Avaliação de Minério (Mental + Interação): +7<br>- Sobrevivência (Mental + Resistência): +8<br>- Percepção de Mina (Mental + Interação): +7 (sente deslizamentos iminentes)<br><br>#### Ações (3 PA por turno)<br><br>| Ação                 |    Custo     | Teste de Ataque                          | Dano/Efeito                                                          |<br>| -------------------- | :----------: | ---------------------------------------- | -------------------------------------------------------------------- |<br>| **Picareta**         | [A] [Ataque] | Físico + Conflito + Nível = **+4** vs CA | 1d6+1 perfurante                                                     |<br>| **Lanterna na Cara** |     [A]      | —                                        | 1 inimigo adjacente: **Mental + Resistência DC 12** ou **Cegado** 1R |<br>| **Mover**            |     [A]      | —                                        | 6m                                                                   |<br><br>#### Traços e Habilidades Passivas<br><br>- **Sentido de Mina:** Garth sente instabilidade estrutural em túneis. +5 em testes para detectar armadilhas, deslizamentos ou passagens ocultas em ambientes subterrâneos<br>- **Falar com a Pedra:** 30 anos de mineração deram-lhe uma intuição quase sobrenatural. Pode prever desabamentos 1d4 rodadas antes de acontecerem<br>- **Idade e Fragilidade:** Desvantagem em testes de Físico + Conflito. Não pode correr (máximo 6m/turno)<br>- **Conhecimento do Compasso:** É o único NPC que sabe ativar o modo avançado do Compasso (detectar Núcleos Solares)<br><br>#### Equipamento<br><br>- Picareta velha (1d6 perfurante) | Lanterna rúnica (8h de luz azul)<br>- Saco de ferramentas de mineração | Mapa mental das minas (30 anos de memória)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Que seu filho Veros volte para casa<br>- **Medo:** Que a verdade sobre o Compasso destrua a vila<br>- **Segredo:** Veros é seu filho. O Compasso detecta Núcleos Solares, não só ferro<br><br>#### Falas<br><br>1. _\"O Compasso... encontrei-o num lugar que não deveria existir.\"_<br>2. _\"Meu filho fez escolhas. Mas ele não é mau.\"_<br>3. _\"Eu menti para esta vila por 30 anos. E essa mentira nos alimentou.\"_<br>4. _\"Não toquem no que brilha. O que brilha nas profundezas não dorme.\"_<br><br>---<br><br>## ⚔️ NPCs Antagonistas / Facções<br><br>---<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "person",
+                            "attributes": {
+                                "hp": "22",
+                                "ca": "10"
+                            }
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {
+                        "hp": "22",
+                        "ca": "10"
+                    }
+                }
+            }
+        },
+        {
+            "name": "Capitão Veros — Líder dos Renegados",
+            "pages": [
+                {
+                    "name": "Capitão Veros — Líder dos Renegados",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Capitão Veros — Líder dos Renegados</h3><br>**Nível:** 6 | **ND:** 4 | **Tipo:** Humanoide (Humano, Veterano)<br><br>#### Bloco de Estatísticas<br><br>| Stat       | Valor |     | Stat            | Valor |<br>| ---------- | :---: | --- | --------------- | :---: |<br>| **Físico** |   3   |     | **Conflito**    |   3   |<br>| **Mental** |   2   |     | **Interação**   |   2   |<br>| **Social** |   2   |     | **Resistência** |   2   |<br><br>| Derivado       | Fórmula                              |                   Valor                   |<br>| -------------- | ------------------------------------ | :---------------------------------------: |<br>| **HP**         | Base + (Fís+Res)×5 + Veterano        |                    55                     |<br>| **CA**         | 10 + Nível + Armadura + Escudo + Fís | 22 (Armadura Legião +5, Escudo +1, Fís 3) |<br>| **Vigor**      | (Fís+Int) + Nível                    |                    11                     |<br>| **EE**         | —                                    |             0 (não usa magia)             |<br>| **Iniciativa** | Nível + Men + Int                    |                    +10                    |<br>| **Velocidade** | Base                                 |                    9m                     |<br>| **Percepção**  | Nível + Men + Int                    |                    +10                    |<br><br>#### Perícias (Treinadas)<br><br>- Tática Militar (Mental + Conflito): +11 (Especialista)<br>- Atletismo (Físico + Conflito): +12<br>- Intimidação (Social + Conflito): +11<br>- Sobrevivência (Mental + Interação): +10<br>- Diplomacia (Social + Interação): +10<br>- Furtividade (Mental + Conflito): +11<br><br>#### Ações (3 PA por turno)<br><br>| Ação                       |     Custo      | Teste de Ataque                                           | Dano/Efeito                                                                                                              |<br>| -------------------------- | :------------: | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |<br>| **Espada Longa da Legião** |  [A] [Ataque]  | Físico + Conflito + Nível = **+12** vs CA                 | 1d8+3 cortante                                                                                                           |<br>| **Ataque Duplo**           | [AA] [Ataque]  | +12 (1°) / +7 (2°) vs CA                                  | 1d8+3 + 1d8+3 cortante (dois golpes consecutivos, MAP -5 no segundo)                                                     |<br>| **Investida de Capitão**   | [AAA] [Ataque] | Físico + Conflito + Nível = **+12** vs CA (após mover 9m) | 2d8+6 cortante + **Caído** (Fís + Res DC 18). Se aliado renegado adjacente ao alvo, +1d8 dano (flanqueamento coordenado) |<br>| **Grito de Comando**       |      [A]       | —                                                         | Todos os renegados em 15m ganham +2 ao próximo ataque E +1 CA por 1 rodada                                               |<br>| **Desarmar**               |  [A] [Ataque]  | Físico + Conflito + Nível = **+12** vs CA                 | Alvo solta 1 item (prefere DESARMAR a matar)                                                                             |<br>| **Mover**                  |      [A]       | —                                                         | 9m                                                                                                                       |<br>| **Agarrar**                |  [A] [Ataque]  | +12 vs CA                                                 | Alvo **Agarrado**                                                                                                        |<br>| **Empurrar**               |  [A] [Ataque]  | +12 vs CA                                                 | Empurra 1,5m ou **Caído**                                                                                                |<br><br>#### Reações [R]<br><br>| Reação                     | Gatilho                      | Efeito                                                       |<br>| -------------------------- | ---------------------------- | ------------------------------------------------------------ |<br>| **Ataque de Oportunidade** | Inimigo sai do alcance       | +12, 1d8+3                                                   |<br>| **Parada Defensiva**       | Veros é atacado              | +4 CA contra esse ataque (ergue o escudo no último instante) |<br>| **Reagrupar**              | 1 renegado aliado cai a 0 HP | Todos os renegados em 9m podem se mover 3m gratuitamente     |<br><br>#### Traços e Habilidades Passivas<br><br>- **Veterano da Legião Oeste:** Conhece todas as táticas, sinais e fraquezas da Legião. +5 em testes para prever ações de legionários de Morden<br>- **Comandante Tático:** Enquanto Veros estiver de pé, renegados aliados recebem +1 CA (formação Falange) e não fogem. Se Veros cair, todos testam Mental + Resistência DC 15 ou ficam Assustados<br>- **Código de Honra:** Veros NUNCA executa um inimigo rendido. Prefere desarmar. Ordena seus homens: \"Render, não matar.\" Se um jogador se rende, aceita<br>- **A Adaga do Pai:** Carrega a adaga cerimonial forjada por Torsten. Não a usa em combate — é símbolo, não arma<br><br>#### Equipamento<br><br>- Espada longa da Legião (+1 qualidade, 1d8 cortante)<br>- Armadura completa da Legião (+5 CA, insígnias arrancadas)<br>- Escudo leve (+1 CA) | Adaga cerimonial (não usada em combate)<br>- Cópia do documento de abandono de Morden (escondida nas ruínas)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Criar uma comunidade independente<br>- **Medo:** Que esteja errado sobre o plano de abandono<br>- **Segredo:** Viu os documentos no gabinete do General Kaelen<br><br>#### Falas<br><br>1. _\"Eu era leal. Dei dez anos à Legião. E me retribuíram com 'não olhe para trás.'\"_<br>2. _\"O Compasso não é meu. Mas se alguém vai usá-lo, que seja alguém que se importe.\"_<br>3. _(Para Garth)_ _\"Pai... mentir para proteger quem se ama é a coisa mais humana.\"_<br>4. _\"Se Morden nos abandona, faremos nossa própria fortaleza.\"_<br><br>---<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "person",
+                            "attributes": {
+                                "hp": "55",
+                                "ca": "10"
+                            }
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {
+                        "hp": "55",
+                        "ca": "10"
+                    }
+                }
+            }
+        },
+        {
+            "name": "Dente-de-Ouro — Agente da Viúva",
+            "pages": [
+                {
+                    "name": "Dente-de-Ouro — Agente da Viúva",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Dente-de-Ouro — Agente da Viúva</h3><br>**Nível:** 5 | **ND:** 3 | **Tipo:** Humanoide (Humano, Criminoso)<br><br>#### Bloco de Estatísticas<br><br>| Stat       | Valor |     | Stat            | Valor |<br>| ---------- | :---: | --- | --------------- | :---: |<br>| **Físico** |   2   |     | **Conflito**    |   3   |<br>| **Mental** |   3   |     | **Interação**   |   2   |<br>| **Social** |   2   |     | **Resistência** |   1   |<br><br>| Derivado       | Fórmula                     |            Valor            |<br>| -------------- | --------------------------- | :-------------------------: |<br>| **HP**         | Base + (Fís+Res)×5          |             30              |<br>| **CA**         | 10 + Nível + Armadura + Fís | 19 (Couro oculto +4, Fís 2) |<br>| **Vigor**      | (Fís+Int) + Nível           |              9              |<br>| **Iniciativa** | Nível + Men + Int           |             +10             |<br>| **Velocidade** | Base                        |             9m              |<br><br>#### Perícias (Treinadas)<br><br>- Engano (Social + Conflito): +10 (Especialista)<br>- Furtividade (Mental + Conflito): +11<br>- Intimidação (Social + Conflito): +10<br>- Ladinagem (Mental + Interação): +10<br>- Percepção (Mental + Interação): +10<br><br>#### Ações (3 PA por turno)<br><br>| Ação                 |    Custo     | Teste de Ataque                                | Dano/Efeito                                                                                                                                       |<br>| -------------------- | :----------: | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |<br>| **Adaga envenenada** | [A] [Ataque] | Físico + Conflito + Nível = **+10** vs CA      | 1d4+2 perfurante + **Envenenado** DC 15 (1d8 dano/rodada, 3R)                                                                                     |<br>| **Ataque Furtivo**   | [A] [Ataque] | Fís + Conf + Nível = **+10** vs CA             | 3d6+2 perfurante (APENAS se alvo não vê Dente-de-Ouro ou se aliado flanqueia)                                                                     |<br>| **Pó nos Olhos**     |     [A]      | Mental + Conflito + Nível = **+11** vs CA (3m) | Alvo **Cegado** 1R (sem salvaguarda)                                                                                                              |<br>| **Escudo Humano**    |     [A]      | —                                              | Agarra 1 capanga adjacente e o usa como escudo: +4 CA e ataques que errem Dente-de-Ouro atingem o capanga                                         |<br>| **Fuga Desesperada** |    [AAA]     | —                                              | Move 18m, ignora AO, ganha **Oculto** se sair de linha de visão. Deixa 1d4 caltrops no caminho (Físico + Interação DC 12 ou **Lento** + 1d4 dano) |<br>| **Mover**            |     [A]      | —                                              | 9m                                                                                                                                                |<br><br>#### Reações [R]<br><br>| Reação          | Gatilho                        | Efeito                                                                                          |<br>| --------------- | ------------------------------ | ----------------------------------------------------------------------------------------------- |<br>| **Desvio Sujo** | É alvo de ataque corpo-a-corpo | Redireciona o ataque para 1 aliado adjacente (aliado testa Físico + Conflito DC 15 para evitar) |<br><br>#### Traços e Habilidades Passivas<br><br>- **Covarde Calculista:** Se Dente-de-Ouro cair abaixo de 50% HP, tenta fugir usando Fuga Desesperada. Se não puder fugir, negocia rendição imediatamente<br>- **Dente Oco:** O dente de ouro contém 1 dose de veneno letal (se engolido: morte em 1 hora sem cura). Para SI MESMO — é a saída de emergência se a Viúva decidir que ele falhou demais<br>- **Mão de Ferro (Esquerda):** Prótese metálica oculta por luva. Dano de soco: 1d6+3 contusão. Pode ser magnetizada (+2 Saturação perto da Ponte)<br>- **Negociador:** Mesmo em combate, oferece acordos. PCs podem fazer Social + Interação DC 15 para forçar trégua temporária<br><br>#### Equipamento<br><br>- 2 adagas envenenadas (1d4 perfurante + veneno)<br>- Couro reforçado oculto (+4 CA, parece roupa comum)<br>- Mão de ferro protética (esquerda, sob luva) | Caltrops (1d4 doses)<br>- 50 Pesos em Aço | Dente de ouro oco com veneno<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Promoção a Gerente de Distrito da Viúva<br>- **Medo:** A Viúva (já falhou uma vez, quase perdeu a mão)<br>- **Segredo:** NÃO organizou a invasão — chegou depois para aproveitar o caos<br><br>#### Falas<br><br>1. _\"Negócios, meus amigos. Apenas negócios.\"_<br>2. _\"Matem-me e a Viúva manda o triplo!\"_<br>3. _\"Eu não sou o vilão. O vilão fechou um Domo e deixou vocês de fora.\"_<br>4. _(Capturado)_ _\"Vamos negociar como pessoas civilizadas?\"_<br><br>---<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "person",
+                            "attributes": {
+                                "hp": "30",
+                                "ca": "10"
+                            }
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {
+                        "hp": "30",
+                        "ca": "10"
+                    }
+                }
+            }
+        },
+        {
+            "name": "Mestra Thazza — Emissária de Gorbax (Orc Elevada)",
+            "pages": [
+                {
+                    "name": "Mestra Thazza — Emissária de Gorbax (Orc Elevada)",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Mestra Thazza — Emissária de Gorbax (Orc Elevada)</h3><br>**Nível:** 5 | **ND:** 3 | **Tipo:** Humanoide (Orc)<br><br>#### Bloco de Estatísticas<br><br>| Stat       |     Valor      |     | Stat            | Valor |<br>| ---------- | :------------: | --- | --------------- | :---: |<br>| **Físico** | 3 (2+1 racial) |     | **Conflito**    |   2   |<br>| **Mental** |       3        |     | **Interação**   |   3   |<br>| **Social** |       2        |     | **Resistência** |   2   |<br><br>| Derivado       | Fórmula                     |           Valor           |<br>| -------------- | --------------------------- | :-----------------------: |<br>| **HP**         | Base + (Fís+Res)×5          |            40             |<br>| **CA**         | 10 + Nível + Armadura + Fís | 21 (Placas orc +5, Fís 3) |<br>| **Vigor**      | (Fís+Int) + Nível           |            11             |<br>| **EE**         | (Men+Res) + Nível + Classe  |            10             |<br>| **Iniciativa** | Nível + Men + Int           |            +11            |<br>| **Velocidade** | Base                        |            9m             |<br><br>#### Perícias (Treinadas)<br><br>- Engenharia Rúnica (Mental + Interação): +11 (Especialista)<br>- Diplomacia (Social + Interação): +10<br>- Arqueologia (Mental + Interação): +11<br>- Atletismo (Físico + Conflito): +10<br>- Conhecimento: Ciclos Anteriores (Mental + Interação): +11<br>- Mão-de-Ferro (linguagem de sinais orc): nativa<br><br>#### Ações (3 PA por turno)<br><br>| Ação                      |     Custo     | Teste de Ataque                                                                    | Dano/Efeito                                                                                                                                |<br>| ------------------------- | :-----------: | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |<br>| **Martelo de Guerra Orc** | [A] [Ataque]  | Físico + Conflito + Nível = **+10** vs CA                                          | 2d8+3 contusão                                                                                                                             |<br>| **Golpe Técnico**         | [AA] [Ataque] | +10 vs CA                                                                          | 2d8+3 contusão + **Desarme** (alvo solta 1 arma, Fís + Resistência DC 16 para resistir)                                                    |<br>| **Análise de Runa**       |     [AA]      | Mental + Interação + Nível = **+11** vs DC                                         | Identifica qualquer inscrição rúnica, armadilha mecânica ou propriedade de artefato. Concede +2 ao grupo em testes contra a runa/armadilha |<br>| **Invocação de Trégua**   |     [AAA]     | Social + Interação + Nível = **+10** vs Mental + Resistência de todos os presentes | Todos em 15m param de lutar por 1 rodada. Quem recusar deve vencer o teste                                                                 |<br>| **Mover**                 |      [A]      | —                                                                                  | 9m                                                                                                                                         |<br><br>#### Reações [R]<br><br>| Reação                   | Gatilho                           | Efeito                                                                                        |<br>| ------------------------ | --------------------------------- | --------------------------------------------------------------------------------------------- |<br>| **Contra-Golpe Preciso** | Inimigo erra ataque contra Thazza | Thazza faz 1 ataque de martelo (+10, 2d8+3)                                                   |<br>| **Armadura Ressonante**  | Thazza sofre Crítico              | Reduz o dano do Crítico em Nível×2 (10 pontos). As engrenagens da armadura absorvem o impacto |<br><br>#### Traços e Habilidades Passivas<br><br>- **Olhos de Âmbar (Racial Orc):** Os olhos brilham na presença de Éter concentrado (3m). Detecta automaticamente itens com carga mágica<br>- **Engenheira Mestra:** Vantagem em todos os testes de Mental + Interação com runas, mecanismos e construtos<br>- **Armadura de Engrenagens:** A armadura orc contém engrenagens funcionais que dão +2 em testes de força bruta (abrir portas, levantar peso). Barulhenta: -4 em Furtividade<br>- **Diplomata Pragmática:** Prefere NÃO lutar. Se o combate é evitável, tentará negociar primeiro (sempre). Só luta se atacada ou se vidas inocentes estiverem em risco<br>- **Código de Ofício:** Não destrói artefatos, construtos ou obras de engenharia. Seria contra o Louvor ao Ato<br><br>#### Equipamento<br><br>- Martelo de guerra orc (2d8 contusão, gravuras rúnicas) | Armadura de placas orc (+5 CA, engrenagens)<br>- Caderno de anotações técnicas (sempre presente)<br>- Kit de arqueologia rúnica | Selo de Identificação de Gorbax<br>- 30 Créditos de Ato (argila vulcanizada)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Evidências dos Ciclos Anteriores para o General Erudito<br>- **Medo:** A Matriarca da Forja descobrir sua missão<br>- **Segredo:** Pessoalmente contra o isolacionismo de Gorbax<br><br>#### Falas<br><br>1. _\"Eu não vim para roubar. Vim para comerciar.\"_<br>2. _\"Essas runas... não são de Morden. Não são nossas. São dos que vieram antes.\"_<br>3. _\"O Ato Supremo é aquele que beneficia todos os clãs.\"_<br>4. _(Admirando)_ _\"Magnífico... resolveram a harmonia do quinto vetor...\"_<br><br>---<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "person",
+                            "attributes": {
+                                "hp": "40",
+                                "ca": "10"
+                            }
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {
+                        "hp": "40",
+                        "ca": "10"
+                    }
+                }
+            }
+        },
+        {
+            "name": "Sargento Harken — Legionário de Morden",
+            "pages": [
+                {
+                    "name": "Sargento Harken — Legionário de Morden",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Sargento Harken — Legionário de Morden</h3><br>**Nível:** 5 | **ND:** 3 | **Tipo:** Humanoide (Humano, Veterano)<br><br>#### Bloco de Estatísticas<br><br>| Stat       | Valor |     | Stat            | Valor |<br>| ---------- | :---: | --- | --------------- | :---: |<br>| **Físico** |   3   |     | **Conflito**    |   3   |<br>| **Mental** |   1   |     | **Interação**   |   1   |<br>| **Social** |   2   |     | **Resistência** |   3   |<br><br>| Derivado       | Fórmula                              |                    Valor                    |<br>| -------------- | ------------------------------------ | :-----------------------------------------: |<br>| **HP**         | Base + (Fís+Res)×5                   |                     45                      |<br>| **CA**         | 10 + Nível + Armadura + Escudo + Fís | 22 (Armadura completa +5, Escudo +2, Fís 3) |<br>| **Vigor**      | (Fís+Int) + Nível                    |                      9                      |<br>| **Iniciativa** | Nível + Men + Int                    |                     +7                      |<br>| **Velocidade** | Base (armadura pesada)               |                     6m                      |<br><br>#### Perícias (Treinadas)<br><br>- Atletismo (Físico + Conflito): +11<br>- Sobrevivência (Mental + Resistência): +9<br>- Intimidação (Social + Conflito): +10<br>- Resistência Física (Físico + Resistência): +11<br>- Conhecimento Militar (Mental + Conflito): +9<br><br>#### Ações (3 PA por turno)<br><br>| Ação                      |     Custo     | Teste de Ataque                           | Dano/Efeito                                                                          |<br>| ------------------------- | :-----------: | ----------------------------------------- | ------------------------------------------------------------------------------------ |<br>| **Lança da Legião**       | [A] [Ataque]  | Físico + Conflito + Nível = **+11** vs CA | 1d8+3 perfurante (alcance 3m)                                                        |<br>| **Ataque de Lança Duplo** | [AA] [Ataque] | +11 (1°) / +6 (2°) vs CA                  | 1d8+3 + 1d8+3 perfurante                                                             |<br>| **Investida de Lança**    | [AA] [Ataque] | +11 vs CA (após mover 6m)                 | 2d8+6 perfurante + **Empurrão** 3m                                                   |<br>| **Bloquear com Escudo**   |      [A]      | —                                         | +2 CA até o próximo turno. Se ataque errar por 5+, atacante fica **Exposto** (-2 CA) |<br>| **Avanço de Formação**    |      [A]      | —                                         | Harken e até 2 legionários adjacentes avançam 3m juntos. Não provoca AO              |<br>| **Mover**                 |      [A]      | —                                         | 6m                                                                                   |<br>| **Agarrar**               | [A] [Ataque]  | +11 vs CA                                 | **Agarrado**                                                                         |<br><br>#### Reações [R]<br><br>| Reação                     | Gatilho                               | Efeito                                         |<br>| -------------------------- | ------------------------------------- | ---------------------------------------------- |<br>| **Ataque de Oportunidade** | Inimigo sai do alcance (3m com lança) | +11, 1d8+3 perfurante                          |<br>| **Escudo de Mara**         | Legionário adjacente recebe Crítico   | Reduz dano em 1d8+5 (absorve com escudo de fé) |<br><br>#### Traços e Habilidades Passivas<br><br>- **Cão de Guarda:** +5 em Percepção contra criaturas ou pessoas tentando se esgueirar perto dele. Nunca é Surpreendido<br>- **Fortaleza Ambulante:** Imune a **Caído** e **Empurrado** enquanto usar Bloquear com Escudo<br>- **Lealdade Absoluta (enquanto acredita em Morden):** Imune a **Enfeitiçado** e **Aterrorizado**. Se descobrir a verdade sobre o abandono, perde esta habilidade e fica **Abalado** permanentemente até resolver o dilema<br>- **Honra Militar:** Não ataca rendidos, não usa veneno, não embosca. Se inimigos se rendem, aceita e mantém como prisioneiros<br>- **Joelho Ferido:** Desvantagem em testes de Atletismo para subir/escalar. Velocidade reduzida para 6m<br><br>#### Equipamento<br><br>- Lança da Legião (1d8 perfurante, alcance 3m)<br>- Armadura completa da Legião (+5 CA) | Escudo pesado (+2 CA)<br>- Amuleto de Mara | Kit de primeiros socorros da Legião<br>- Apito de sinalização (chama reforços em 1d4 horas)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Cumprir seu dever e manter a ordem<br>- **Medo:** Que Morden não mereça a lealdade que ele deu<br>- **Segredo:** NÃO sabe do plano de abandono<br><br>#### Falas<br><br>1. _\"Sou Sargento Harken da Legião Oeste. Cooperem.\"_<br>2. _\"30 anos de serviço. Se tudo foi por nada... não sei o que faço.\"_<br>3. _\"Ordens são ordens. Questionar é luxo de quem não está na fronteira.\"_<br>4. _(Se souber a verdade)_ _\"...Veros estava certo. Deus de Mara...\"_<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "person",
+                            "attributes": {
+                                "hp": "45",
+                                "ca": "10"
+                            }
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {
+                        "hp": "45",
+                        "ca": "10"
+                    }
+                }
+            }
+        },
+        {
+            "name": "Mapa Narrativo",
+            "pages": [
+                {
+                    "name": "Mapa Narrativo",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Mapa Narrativo</h3><br>```<br>         [Copa da Colina]<br>            ↓ (trilha)<br>    [Torre de Vigia] ←→ [Entrada da Mina]<br>            ↓                    ↓<br>    [Praça Central] ←→ [Forja de Torsten]<br>       ↓        ↓<br>[O Parafuso   [Casa de<br>  Torto]       Mira]<br>       ↓<br>  [Paliçada]<br>       ↓<br>  [Ponte do Pacto] ←→ [Rio]<br>       ↓<br>  [Margem de Gorbax]<br>```<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "place"
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "place"
+                }
+            }
+        },
+        {
+            "name": "Zonas Detalhadas",
+            "pages": [
+                {
+                    "name": "Zonas Detalhadas",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Zonas Detalhadas</h3><br>**A) Praça Central**<br><br>- **Visual:** Chão de pedra irregular, barris de minério empilhados, uma fonte de água mineral que borbulha verde-esmeralda<br>- **Som:** Crianças brincando (dia), silêncio tenso (noite), som de bigornas ao fundo constante<br>- **Cheiro:** Poeira mineral, ferrugem e pão de raiz assando na padaria<br>- **Pontos de interesse:** Poço central (entrada oculta à mina inferior), barris de óleo (explosivos em combate), pintura mural desbotada mostrando a fundação da vila<br>- **Trilha sonora sugerida:** \"The Witcher 3 — Kaer Morhen\" / ambiente de vila medieval com martelos<br><br>**B) O Parafuso Torto (Taverna)**<br><br>- **Visual:** Interior escuro e aconchegante, vigas de madeira baixas, canecas de estanho, mapa da região desenhado numa parede inteira. Mesa do canto sempre vazia (reservada para \"visitantes especiais\")<br>- **Som:** Risadas, vidro batendo, Renna cantarolando baixo enquanto serve<br>- **Cheiro:** Cerveja de raiz amarga, carne de cogumelo assada, fumaça de tabaco de musgo<br>- **Pontos de interesse:** Porão (Renna guarda relatórios para A Viúva), mesa do canto (onde Dente-de-Ouro sentou, há marcas de adaga na madeira)<br>- **Trilha sonora sugerida:** \"Baldur's Gate 3 — campfire ambiance\"<br><br>**C) Forja de Torsten**<br><br>- **Visual:** Oficina a céu aberto, bigorna central, brasas alaranjadas permanentes. Paredes cobertas de ferramentas organizadas com precisão obsessiva. Armas prontas penduradas em ganchos<br>- **Som:** TANG-TANG-TANG constante, crepitar de fogo, sibilo de metal sendo temperado em água<br>- **Cheiro:** Metal quente, carvão, suor<br>- **Pontos de interesse:** A adaga de Veros (numa prateleira alta, coberta de pó). Moldes de armas experimentais (algumas falhas interessantes). Compartimento secreto sob a bigorna com 50 PA guardados<br>- **Trilha sonora sugerida:** \"Dark Souls 3 — Firelink Shrine\"<br><br>**D) Ponte do Pacto**<br><br>- **Visual:** 30 metros de comprimento, 5 de largura. Pilares de ferro-frio com runas humanas (lado leste) e rúnicas orcs (lado oeste). As runas pulsam violeta a cada hora. Cabos de sustentação de adamante. Rio escuro 20 metros abaixo<br>- **Som:** Vento constante no desfiladeiro, vibração metálica grave dos cabos, pulso rúnico (como batimento cardíaco)<br>- **Cheiro:** Ozônio (éter dos pilares), água mineral do rio, ferro gelado<br>- **Pontos de interesse:** Centro da ponte (ponto de máximo magnetismo), 4 cabos de sustentação (podem ser cortados), painel de controle rúnico na base do pilar leste (Manutenção DC 18)<br>- **Trilha sonora sugerida:** \"God of War — Bridge of the Damned\" / vento + metal + tensão<br><br>---<br><br>## 2. Colinas Ocidentais (Viagem)<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "place"
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "place"
+                }
+            }
+        },
+        {
+            "name": "Mapa Narrativo",
+            "pages": [
+                {
+                    "name": "Mapa Narrativo",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Mapa Narrativo</h3><br>```<br>[Ferroforja] → [Trilha de Encosta] → [Desfiladeiro Estreito]<br>                                          ↓<br>                    [Caverna dos Morphs] ← [Planície Rochosa]<br>                                          ↓<br>                              [Acampamento de Krug] → [Ruínas de Karathon]<br>```<br><br>- **Visual:** Colinas pedregosas, vegetação escassa e seca. Rochas avermelhadas pelo óxido de ferro. Céu amplo com o Domo de Morden visível ao leste — uma silhueta violeta pulsante no horizonte<br>- **Som:** Vento constante, cascalho sob os pés, ocasionalmente um uivo distante<br>- **Cheiro:** Terra seca, mineral, um toque de enxofre vindo das profundezas<br>- **Trilha sonora sugerida:** \"Elden Ring — Limgrave exploration\" / vento + vastidão + solidão perigosa<br><br>---<br><br>## 3. Ruínas de Karathon<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "place"
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "place"
+                }
+            }
+        },
+        {
+            "name": "Mapa Narrativo",
+            "pages": [
+                {
+                    "name": "Mapa Narrativo",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Mapa Narrativo</h3><br>```<br>[Entrada Principal] → [Pátio Exterior]<br>                         ↓   ↓<br>           [Sentinela Leste]  [Sentinela Oeste]<br>                         ↓<br>               [Salões Internos]<br>              ↙      ↓       ↘<br>    [Armaria] [Salão Central] [Biblioteca]<br>                    ↓              ↓<br>            [Parede Falsa]    [Painel Rúnico]<br>            (Bigorna oculta)       ↓<br>                         [Câmara Profunda]<br>                              ↓<br>                    [Selo do Núcleo Solar]<br>                         (SELADO)<br>```<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "place"
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "place"
+                }
+            }
+        },
+        {
+            "name": "Zonas Detalhadas",
+            "pages": [
+                {
+                    "name": "Zonas Detalhadas",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Zonas Detalhadas</h3><br>**A) Pátio Exterior (Acampamento Renegado)**<br><br>- **Visual:** Ruínas de pedra negra arranjadas em semicírculo. Tendas militares improvisadas. Fogueira central. O Escaravelho Térmico amarrado a um pilar partido. 15-20 renegados em atividade<br>- **Som:** Conversas baixas, metal sendo afiado, latidos de cães de guerra presos<br>- **Cheiro:** Fumaça de fogueira, ração de campanha (cobre), suor e ferro<br>- **Trilha sonora sugerida:** \"The Last of Us — military camp ambiance\"<br><br>**B) Salões Internos**<br><br>- **Visual:** Corredores de pedra negra perfeitamente cortada. Paredes lisas com runas desconhecidas que brilham azul-pálido quando alguém se aproxima. Teto de 4m, ecos multiplicados. Poça de água mineral no chão que reflete as runas<br>- **Som:** Eco dos passos ampliado, zumbido elétrico baixo das runas, gotejamento distante<br>- **Cheiro:** Cobre velho, ozônio, umidade mineral<br>- **Pontos de interesse:** Armadilhas de areia magnética (ver Cap.2), parede falsa da bigorna, biblioteca com fragmentos rúnicos colecionáveis<br>- **Trilha sonora sugerida:** \"Skyrim — Blackreach\" / cavernas + mistério + grandiosidade antiga<br><br>**C) Câmara Profunda**<br><br>- **Visual:** Sala circular, 15m de diâmetro. Chão de vidro negro que revela escuridão infinita abaixo. No centro, um pilar de cristal com o símbolo de um sol. O Compasso de Veios aponta para baixo, a agulha girando freneticamente<br>- **Som:** Silêncio absoluto, exceto um pulso grave e lento — como o batimento de algo dormindo<br>- **Cheiro:** Nada. Ausência total de odor. Perturbador<br>- **Pontos de interesse:** Painel rúnico de controle (Mental + Interação DC 20 para ler), selo no chão (indestrutível por meios conhecidos), marca de mão na parede — recente, com sangue<br>- **Trilha sonora sugerida:** \"Hollow Knight — Abyss\" / silêncio + gravidade + terror reverente<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "place"
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "place"
+                }
+            }
+        },
+        {
+            "name": "Sidequest: 1: A Bigorna Perdida",
+            "pages": [
+                {
+                    "name": "Sidequest: 1: A Bigorna Perdida",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Sidequest: 1: A Bigorna Perdida</h3><br>**Hook:** Cap.1, Cena 2 — Torsten pede que fiquem atentos a uma bigorna com runas vermelhas.<br>**Gatilho:** Cap.2, Cena 2 — Encontrada nos Salões Internos de Karathon, atrás de uma parede falsa.<br><br>### Cena 1: A Parede Falsa<br><br>- **DDesafio:** Mental + Interação DC 15 para notar irregularidade na parede do Salão Interno<br>- **Caminho Racial:** 🪨 Anão detecta automaticamente (instinto mineral)<br>- Abrir a parede requer Físico + Resistência DC 12 (força bruta) ou Mental + Conflito DC 15 (mecanismo rúnico)<br><br>### Cena 2: O Guardião de Ferro<br><br>- A sala contém a bigorna + 1 **Sentinela de Ferro** (construto da civilização esquecida)<br>- **Sentinela de Ferro:** ND 2 | HP 25 | CA 15 | Ataque: +4, 1d10+3 contusão | Imune a veneno, encantamento, medo<br>- A Sentinela só ataca quem tentar mover a bigorna. Pode ser desativada: Mental + Interação DC 18 no painel rúnico atrás<br>- **Elemento de Cenário:** Correntes presas ao teto — Físico + Conflito DC 12 para derrubar sobre a Sentinela (2d8 dano + Derrubado)<br><br>### Recompensa<br><br>- **Bigorna de Runas Vermelhas** (ver `itens_pacto_quebrado.md`)<br>- Torsten forja 1 arma personalizada para cada jogador que participou da sidequest<br><br>---<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "quest",
+                            "status": "active"
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "quest",
+                    "status": "active"
+                }
+            }
+        },
+        {
+            "name": "Sidequest: 2: Os Suprimentos Perdidos",
+            "pages": [
+                {
+                    "name": "Sidequest: 2: Os Suprimentos Perdidos",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Sidequest: 2: Os Suprimentos Perdidos</h3><br>**Hook:** Cap.1, Cena 4 — Moradores mencionam que uma caravana de suprimentos não chegou há 3 dias.<br>**Gatilho:** Qualquer momento durante viagem nas colinas.<br><br>### Cena 1: A Caravana Tombada<br><br>- Encontrada 2km ao norte da trilha principal. Carroça tombada, caixas espalhadas<br>- Teste Mental + Interação DC 12: Não foram bandidos — marcas de garras. Algo grande arrastou os cavalos<br>- Teste Mental + Interação DC 15: Rastros levam a uma caverna próxima<br><br>### Cena 2: O Ninho<br><br>- Caverna com 1 **Morph Matriarca** (ND 2) protegendo uma ninhada de 8 filhotes<br>- **Morph Matriarca:** HP 30 | CA 13 | Mordida: +3, 1d8+2 | Grito Sônico: todos em 6m, Mental + Resistência DC 12 ou Atordoado 1 rodada<br>- Suprimentos estão no fundo da caverna: 3 caixas de comida, 1 caixa de ferramentas, 50 PA em mercadorias<br>- **Dilema:** Matar a Matriarca é fácil, mas os filhotes morrem sem ela. Morph é praga em Morden, mas aqui na fronteira... são apenas animais sobrevivendo.<br>  - Matar tudo: +10 PA (peles), +1 Favor Vila (\"menos pragas\")<br>  - Poupar: +1 Favor Gorbax (Thazza aprova — \"o Ato honra a vida\")<br><br>### Recompensa<br><br>- Suprimentos recuperados: +1 Favor Vila<br>- 50 PA em mercadorias para dividir<br>- Se poupou os Morphs: Thazza oferece 20 Argila de Gorbax como recompensa pela \"sabedoria\"<br><br>---<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "quest",
+                            "status": "active"
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "quest",
+                    "status": "active"
+                }
+            }
+        },
+        {
+            "name": "Sidequest: 3: O Desertor Arrependido",
+            "pages": [
+                {
+                    "name": "Sidequest: 3: O Desertor Arrependido",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Sidequest: 3: O Desertor Arrependido</h3><br>**Hook:** Cap.2, Cena 1 — Um renegado jovem (Soldado Brennan, 19 anos) se aproxima dos jogadores em segredo.<br>**Gatilho:** Acampamento dos renegados em Karathon.<br><br>### Cena 1: O Pedido<br><br>- Brennan quer desertar DOS renegados. Estava na Legião, seguiu Veros por lealdade, mas viu coisas que o assustaram: Dente-de-Ouro oferecendo dinheiro a Veros, e Veros considerando aceitar.<br>- Brennan quer voltar para a vila e proteger sua irmã mais nova (Lissa, 12 anos, mora com os moradores)<br>- **Teste Social + Interação DC 12** para avaliar se Brennan é sincero (ele é)<br><br>### Cena 2: A Fuga<br><br>- Tirar Brennan do acampamento sem que Veros descubra: Físico + Interação DC 15 (furtividade) ou Social + Conflito DC 15 (distração)<br>- Se Veros descobrir, não pune Brennan — mas fica visivelmente magoado. \"Mais um que me abandona.\"<br>- **Dilema:** Brennan tem informação sobre as defesas dos renegados. Compartilhar = vantagem tática mas traição pessoal de Veros.<br>  - Usar a informação: +1 em testes táticos no Cap.3, -2 Favor Renegados<br>  - Guardar segredo: +1 Favor Renegados, Brennan agradece com lealdade permanente<br><br>### Recompensa<br><br>- Brennan como aliado NPC (ND 1, luta ao lado dos jogadores se necessário)<br>- Informação sobre defesas dos renegados (opcional)<br>- Satisfação narrativa de reunir Brennan com Lissa<br><br>---<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "quest",
+                            "status": "active"
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "quest",
+                    "status": "active"
+                }
+            }
+        },
+        {
+            "name": "Sidequest: 4: O Comerciante Preso",
+            "pages": [
+                {
+                    "name": "Sidequest: 4: O Comerciante Preso",
+                    "type": "text",
+                    "text": {
+                        "content": "<h3>Sidequest: 4: O Comerciante Preso</h3><br>**Hook:** Cap.1, Cena 3 — Na trilha, encontram sinais de acampamento recente e gritos abafados.<br>**Gatilho:** Durante a viagem para Karathon.<br><br>### Cena 1: O Resgate<br><br>- Um comerciante orc chamado **Krug** está preso numa jaula improvisada, guardada por 2 Batedores Renegados (ND 1)<br>- Os renegados capturaram Krug porque ele sabe demais sobre a rota de contrabando<br>- Combate simples (2 batedores) ou negociação (Social + Conflito DC 15 para convencer os batedores a largar o posto)<br>- **Caminho Racial:** 🐉 Drakari — Batedores ficam intimidados, DC cai para 12<br><br>### Cena 2: A Informação<br><br>- Krug é comerciante independente que viajava pela Ponte do Pacto<br>- Ele viu Dente-de-Ouro reunido com um \"homem de capuz\" na vila ANTES da invasão<br>- **Teste Social + Interação DC 12:** Krug descreve o homem de capuz — corresponde ao Velho Garth<br>- **Pista crucial:** Garth sabia da invasão? Ou foi coincidência?<br><br>### Recompensa<br><br>- 20 PA em mercadorias orcs (comida, ferramentas)<br>- Informação sobre Garth/Dente-de-Ouro<br>- +1 Favor Gorbax (Krug report a Thazza que foi bem tratado)<br>",
+                        "format": 1
+                    },
+                    "flags": {
+                        "monks-enhanced-journal": {
+                            "type": "quest",
+                            "status": "active"
+                        }
+                    }
+                }
+            ],
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "quest",
+                    "status": "active"
+                }
+            }
+        }
+    ]
+}

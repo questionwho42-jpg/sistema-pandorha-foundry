@@ -1,0 +1,25 @@
+{
+    "name": "Sidequest: 3: O Desertor Arrependido",
+    "pages": [
+        {
+            "name": "Sidequest: 3: O Desertor Arrependido",
+            "type": "text",
+            "text": {
+                "content": "<h3>Sidequest: 3: O Desertor Arrependido</h3><br>**Hook:** Cap.2, Cena 1 — Um renegado jovem (Soldado Brennan, 19 anos) se aproxima dos jogadores em segredo.<br>**Gatilho:** Acampamento dos renegados em Karathon.<br><br>### Cena 1: O Pedido<br><br>- Brennan quer desertar DOS renegados. Estava na Legião, seguiu Veros por lealdade, mas viu coisas que o assustaram: Dente-de-Ouro oferecendo dinheiro a Veros, e Veros considerando aceitar.<br>- Brennan quer voltar para a vila e proteger sua irmã mais nova (Lissa, 12 anos, mora com os moradores)<br>- **Teste Social + Interação DC 12** para avaliar se Brennan é sincero (ele é)<br><br>### Cena 2: A Fuga<br><br>- Tirar Brennan do acampamento sem que Veros descubra: Físico + Interação DC 15 (furtividade) ou Social + Conflito DC 15 (distração)<br>- Se Veros descobrir, não pune Brennan — mas fica visivelmente magoado. \"Mais um que me abandona.\"<br>- **Dilema:** Brennan tem informação sobre as defesas dos renegados. Compartilhar = vantagem tática mas traição pessoal de Veros.<br>  - Usar a informação: +1 em testes táticos no Cap.3, -2 Favor Renegados<br>  - Guardar segredo: +1 Favor Renegados, Brennan agradece com lealdade permanente<br><br>### Recompensa<br><br>- Brennan como aliado NPC (ND 1, luta ao lado dos jogadores se necessário)<br>- Informação sobre defesas dos renegados (opcional)<br>- Satisfação narrativa de reunir Brennan com Lissa<br><br>---<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "quest",
+                    "status": "active"
+                }
+            }
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "type": "quest",
+            "status": "active"
+        }
+    }
+}

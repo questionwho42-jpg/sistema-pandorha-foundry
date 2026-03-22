@@ -1,0 +1,286 @@
+ _______________________________________________________________
+ _____ ___  _   _ _   _ ____  ______   __ __     _______ _____
+|  ___/ _ \| | | | \ | |  _ \|  _ \ \ / / \ \   / |_   _|_   _|
+| |_ | | | | | | |  \| | | | | |_) \ V /   \ \ / /  | |   | |
+|  _|| |_| | |_| | |\  | |_| |  _ < | |     \ V /   | |   | |
+|_|   \___/ \___/|_| \_|____/|_| \_\|_|      \_/    |_|   |_|
+===============================================================
+ Foundry VTT | Foundry Virtual Tabletop ESModule loaded
+ Foundry VTT | Reestablishing existing session d94559e6127db07691c9884a
+ Foundry VTT | Connected to server socket using session d94559e6127db07691c9884a
+ Foundry VTT | Initializing Foundry Virtual Tabletop Game
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-formula.hbs
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-info.hbs
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-no-delimiters.hbs
+ Foundry VTT | Loaded localization file modules/popout/lang/pt-BR.json
+ Foundry VTT | Loaded localization file modules/pt-BR/lang/pt-BR.json
+ Foundry VTT | Loaded localization file modules/popout/lang/en.json
+ Foundry VTT | Loaded localization file lang/en.json
+ Foundry VTT | Loaded localization file systems/custom-system-builder/lang/en.json
+ Foundry VTT | Synchronized official game time in 1ms
+ Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ Custom System Builder | Item template has been deleted for item Anão - Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+ 
+onError @ foundry.mjs:23855
+ Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+ Custom System Builder | All props for Humano (zYan9vUPbGfsgjql) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Actor.DsuH3ouBXiVaexmF.Item.zYan9vUPbGfsgjql).
+ Custom System Builder | All props for Humano (zYan9vUPbGfsgjql) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Actor.DsuH3ouBXiVaexmF.Item.zYan9vUPbGfsgjql).
+ Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+ Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+ Custom System Builder | All props for Humano (EwbghotuVGRvNDzb) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.EwbghotuVGRvNDzb).
+ Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | All props for Humano (EwbghotuVGRvNDzb) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.EwbghotuVGRvNDzb).
+ Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+ 
+onError @ foundry.mjs:23855
+ 
+onError @ foundry.mjs:23855
+ Custom System Builder | All props for Acólito (4ExyEL6QwxVqQbXR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Acólito (Item.4ExyEL6QwxVqQbXR).
+ Custom System Builder | All props for Acólito (4ExyEL6QwxVqQbXR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Acólito (Item.4ExyEL6QwxVqQbXR).
+ Custom System Builder | All props for Anão (qxwHDdOfFTYveD1F) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anão (Item.qxwHDdOfFTYveD1F).
+ Custom System Builder | All props for Anão (qxwHDdOfFTYveD1F) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anão (Item.qxwHDdOfFTYveD1F).
+ Custom System Builder | All props for Aristocrata (39iasryXewEk1lob) computed in 1 loops.
+ Custom System Builder | Done preparing data for Aristocrata (Item.39iasryXewEk1lob).
+ Custom System Builder | All props for Aristocrata (39iasryXewEk1lob) computed in 1 loops.
+ Custom System Builder | Done preparing data for Aristocrata (Item.39iasryXewEk1lob).
+ Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+ Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+ Custom System Builder | All props for Criminoso (ZW3higi65kBf5TVr) computed in 1 loops.
+ Custom System Builder | Done preparing data for Criminoso (Item.ZW3higi65kBf5TVr).
+ Custom System Builder | All props for Criminoso (ZW3higi65kBf5TVr) computed in 1 loops.
+ Custom System Builder | Done preparing data for Criminoso (Item.ZW3higi65kBf5TVr).
+ Custom System Builder | All props for Drakari (shVBZwdkdkjpf1kC) computed in 1 loops.
+ Custom System Builder | Done preparing data for Drakari (Item.shVBZwdkdkjpf1kC).
+ Custom System Builder | All props for Drakari (shVBZwdkdkjpf1kC) computed in 1 loops.
+ Custom System Builder | Done preparing data for Drakari (Item.shVBZwdkdkjpf1kC).
+ Custom System Builder | All props for Elfo (ZlxcOdSHpeQxUXHR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfo (Item.ZlxcOdSHpeQxUXHR).
+ Custom System Builder | All props for Elfo (ZlxcOdSHpeQxUXHR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfo (Item.ZlxcOdSHpeQxUXHR).
+ Custom System Builder | All props for Emissário (5xRxdGRw2qXCDTQH) computed in 1 loops.
+ Custom System Builder | Done preparing data for Emissário (Item.5xRxdGRw2qXCDTQH).
+ Custom System Builder | All props for Emissário (5xRxdGRw2qXCDTQH) computed in 1 loops.
+ Custom System Builder | Done preparing data for Emissário (Item.5xRxdGRw2qXCDTQH).
+ Custom System Builder | All props for Erudito (HLYTWbr0JT6rxzIE) computed in 1 loops.
+ Custom System Builder | Done preparing data for Erudito (Item.HLYTWbr0JT6rxzIE).
+ Custom System Builder | All props for Erudito (HLYTWbr0JT6rxzIE) computed in 1 loops.
+ Custom System Builder | Done preparing data for Erudito (Item.HLYTWbr0JT6rxzIE).
+ Custom System Builder | All props for Fera (rmFryzZ6gfRECM2r) computed in 1 loops.
+ Custom System Builder | Done preparing data for Fera (Item.rmFryzZ6gfRECM2r).
+ Custom System Builder | All props for Fera (rmFryzZ6gfRECM2r) computed in 1 loops.
+ Custom System Builder | Done preparing data for Fera (Item.rmFryzZ6gfRECM2r).
+ Custom System Builder | All props for Humano (P5lU90aOgYigjRoJ) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Item.P5lU90aOgYigjRoJ).
+ Custom System Builder | All props for Humano (P5lU90aOgYigjRoJ) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Item.P5lU90aOgYigjRoJ).
+ Custom System Builder | All props for Soldado Veterano (fJ8UP5bHt4XuQ1Uz) computed in 1 loops.
+ Custom System Builder | Done preparing data for Soldado Veterano (Item.fJ8UP5bHt4XuQ1Uz).
+ Custom System Builder | All props for Soldado Veterano (fJ8UP5bHt4XuQ1Uz) computed in 1 loops.
+ Custom System Builder | Done preparing data for Soldado Veterano (Item.fJ8UP5bHt4XuQ1Uz).
+ Custom System Builder | All props for Tecelão de Sombras (6s0iH1asc4yD0Lre) computed in 1 loops.
+ Custom System Builder | Done preparing data for Tecelão de Sombras (Item.6s0iH1asc4yD0Lre).
+ Custom System Builder | All props for Tecelão de Sombras (6s0iH1asc4yD0Lre) computed in 1 loops.
+ Custom System Builder | Done preparing data for Tecelão de Sombras (Item.6s0iH1asc4yD0Lre).
+ Custom System Builder | All props for Umbral (HYyQn7eW6ztMv85T) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbral (Item.HYyQn7eW6ztMv85T).
+ Custom System Builder | All props for Umbral (HYyQn7eW6ztMv85T) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbral (Item.HYyQn7eW6ztMv85T).
+ Custom System Builder | All props for Vanguarda (OLT80ojrOk3d2UZs) computed in 1 loops.
+ Custom System Builder | Done preparing data for Vanguarda (Item.OLT80ojrOk3d2UZs).
+ Custom System Builder | All props for Vanguarda (OLT80ojrOk3d2UZs) computed in 1 loops.
+ Custom System Builder | Done preparing data for Vanguarda (Item.OLT80ojrOk3d2UZs).
+ Custom System Builder | All props for humus (5Jp0lM1urARrtLY0) computed in 1 loops.
+ Custom System Builder | Done preparing data for humus (Item.5Jp0lM1urARrtLY0).
+ Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | All props for humus (5Jp0lM1urARrtLY0) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for humus (Item.5Jp0lM1urARrtLY0).
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/scene-navigation.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tab.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/players.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/hotbar.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/scene-controls-layers.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/ui/scene-controls-tools.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/log.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/notifications.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/input.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/header.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/tracker.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/footer.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/directory/header.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/directory/directory.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/scene-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/folder-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/directory/footer.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/document-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/controls.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playlist-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playing.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/sound-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/compendiums.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/partials/pack-partial.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/settings.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sidebar/chat-message.hbs
+foundry.mjs:75114 Foundry VTT | Fonts loaded and ready.
+foundry.mjs:46163 Foundry VTT | Viewing Scene Cena
+foundry.mjs:94310 Foundry VTT | Drawing game canvas for scene Cena
+foundry.mjs:84197 Foundry VTT | Loading 51 Assets
+foundry.mjs:85137 Foundry VTT | Drawing the HiddenCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the RenderedCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the EnvironmentCanvasGroup canvas group
+foundry.mjs:85137 Foundry VTT | Drawing the PrimaryCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the WeatherEffects canvas layer
+foundry.mjs:85137 Foundry VTT | Drawing the EffectsCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasBackgroundAlterationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasIlluminationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasColorationEffects canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the CanvasDarknessEffects canvas layer
+foundry.mjs:85137 Foundry VTT | Drawing the CanvasVisibility canvas group
+worker.js:72 Worker TextureCompressor of FogExtractor | Initialized Worker
+foundry.mjs:85137 Foundry VTT | Drawing the InterfaceCanvasGroup canvas group
+foundry.mjs:90022 Foundry VTT | Drawing the GridLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the RegionLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the DrawingsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TemplateLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TilesLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the WallsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the TokenLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the SoundsLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the LightingLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the NotesLayer canvas layer
+foundry.mjs:90022 Foundry VTT | Drawing the ControlsLayer canvas layer
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/hud/waypoint-label.hbs
+foundry.mjs:85137 Foundry VTT | Drawing the OverlayCanvasGroup canvas group
+foundry.mjs:168911 Applying buffered socket event: userActivity
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/sheets/macro-config.hbs
+foundry.mjs:65845 Foundry VTT | Retrieved and compiled template templates/generic/form-footer.hbs
+VM640:237 PANDORHA | Gatilho de Ancestralidade Ativado!
+foundry.mjs:23855 DataModelValidationError: CustomItem validation errors:
+  type: "item" is not a valid type for the Item Document class
+    at DataModelValidationFailure.asError (foundry.mjs:5141:12)
+    at CustomItem.validate (foundry.mjs:11743:59)
+    at new DataModel (foundry.mjs:11419:10)
+    at new ClientDocumentMixin (foundry.mjs:32362:7)
+    at new CustomItem (CustomItem.js:152:9)
+    at #preCreateDocumentArray (foundry.mjs:58608:15)
+    at ClientDatabaseBackend._createDocuments (foundry.mjs:58570:56)
+    at ClientDatabaseBackend.create (foundry.mjs:58201:17)
+    at async Item.createDocuments (foundry.mjs:12504:21)
+    at async Item.create (foundry.mjs:12650:21)
+onError @ foundry.mjs:23855
+foundry.mjs:115132 CustomItem validation errors:
+  type: "item" is not a valid type for the Item Document class 
+#fetch @ foundry.mjs:115132
+VM640:273 PANDORHA | Criado: Humanos
+foundry.mjs:23855 DataModelValidationError: CustomItem validation errors:
+  type: "item" is not a valid type for the Item Document class
+    at DataModelValidationFailure.asError (foundry.mjs:5141:12)
+    at CustomItem.validate (foundry.mjs:11743:59)
+    at new DataModel (foundry.mjs:11419:10)
+    at new ClientDocumentMixin (foundry.mjs:32362:7)
+    at new CustomItem (CustomItem.js:152:9)
+    at #preCreateDocumentArray (foundry.mjs:58608:15)
+    at ClientDatabaseBackend._createDocuments (foundry.mjs:58570:56)
+    at ClientDatabaseBackend.create (foundry.mjs:58201:17)
+    at async Item.createDocuments (foundry.mjs:12504:21)
+    at async Item.create (foundry.mjs:12650:21)
+onError @ foundry.mjs:23855
+foundry.mjs:115132 CustomItem validation errors:
+  type: "item" is not a valid type for the Item Document class 
+#fetch @ foundry.mjs:115132
+VM640:273 PANDORHA | Criado: Elfos
+foundry.mjs:23855 DataModelValidationError: CustomItem validation errors:
+  type: "item" is not a valid type for the Item Document class
+    at DataModelValidationFailure.asError (foundry.mjs:5141:12)
+    at CustomItem.validate (foundry.mjs:11743:59)
+    at new DataModel (foundry.mjs:11419:10)
+    at new ClientDocumentMixin (foundry.mjs:32362:7)
+    at new CustomItem (CustomItem.js:152:9)
+    at #preCreateDocumentArray (foundry.mjs:58608:15)
+    at ClientDatabaseBackend._createDocuments (foundry.mjs:58570:56)
+    at ClientDatabaseBackend.create (foundry.mjs:58201:17)
+    at async Item.createDocuments (foundry.mjs:12504:21)
+    at async Item.create (foundry.mjs:12650:21)
+onError @ foundry.mjs:23855
+foundry.mjs:115132 CustomItem validation errors:
+  type: "item" is not a valid type for the Item Document class 
+#fetch @ foundry.mjs:115132
+VM640:273 PANDORHA | Criado: Anões
+foundry.mjs:23855 DataModelValidationError: CustomItem validation errors:
+  type: "item" is not a valid type for the Item Document class
+    at DataModelValidationFailure.asError (foundry.mjs:5141:12)
+    at CustomItem.validate (foundry.mjs:11743:59)
+    at new DataModel (foundry.mjs:11419:10)
+    at new ClientDocumentMixin (foundry.mjs:32362:7)
+    at new CustomItem (CustomItem.js:152:9)
+    at #preCreateDocumentArray (foundry.mjs:58608:15)
+    at ClientDatabaseBackend._createDocuments (foundry.mjs:58570:56)
+    at ClientDatabaseBackend.create (foundry.mjs:58201:17)
+    at async Item.createDocuments (foundry.mjs:12504:21)
+    at async Item.create (foundry.mjs:12650:21)
+onError @ foundry.mjs:23855
+foundry.mjs:115132 CustomItem validation errors:
+  type: "item" is not a valid type for the Item Document class 
+#fetch @ foundry.mjs:115132
+VM640:273 PANDORHA | Criado: Drakari
+foundry.mjs:23855 DataModelValidationError: CustomItem validation errors:
+  type: "item" is not a valid type for the Item Document class
+    at DataModelValidationFailure.asError (foundry.mjs:5141:12)
+    at CustomItem.validate (foundry.mjs:11743:59)
+    at new DataModel (foundry.mjs:11419:10)
+    at new ClientDocumentMixin (foundry.mjs:32362:7)
+    at new CustomItem (CustomItem.js:152:9)
+    at #preCreateDocumentArray (foundry.mjs:58608:15)
+    at ClientDatabaseBackend._createDocuments (foundry.mjs:58570:56)
+    at ClientDatabaseBackend.create (foundry.mjs:58201:17)
+    at async Item.createDocuments (foundry.mjs:12504:21)
+    at async Item.create (foundry.mjs:12650:21)
+onError @ foundry.mjs:23855
+foundry.mjs:115132 CustomItem validation errors:
+  type: "item" is not a valid type for the Item Document class 
+#fetch @ foundry.mjs:115132
+VM640:273 PANDORHA | Criado: Umbrais
+foundry.mjs:23855 DataModelValidationError: CustomItem validation errors:
+  type: "item" is not a valid type for the Item Document class
+    at DataModelValidationFailure.asError (foundry.mjs:5141:12)
+    at CustomItem.validate (foundry.mjs:11743:59)
+    at new DataModel (foundry.mjs:11419:10)
+    at new ClientDocumentMixin (foundry.mjs:32362:7)
+    at new CustomItem (CustomItem.js:152:9)
+    at #preCreateDocumentArray (foundry.mjs:58608:15)
+    at ClientDatabaseBackend._createDocuments (foundry.mjs:58570:56)
+    at ClientDatabaseBackend.create (foundry.mjs:58201:17)
+    at async Item.createDocuments (foundry.mjs:12504:21)
+    at async Item.create (foundry.mjs:12650:21)
+onError @ foundry.mjs:23855
+VM640:273 PANDORHA | Criado: Feras
+foundry.mjs:115132 CustomItem validation errors:
+  type: "item" is not a valid type for the Item Document class 
+#fetch @ foundry.mjs:115132
+foundry.mjs:115132 Sincronização Pandorha v1.4 Concluída! Gatilho do Seletor Ativo. 
+foundry.mjs:115132 O Foundry Virtual Tabletop requer uma janela utilizável com dimensões de 1024px por 768px ou maiores. As dimensões atuais desta janela são 982px por 794px. No momento, você tem um fator de zoom aplicado no sistema operacional ou no navegador, o que está reduzindo o tamanho efetivo da sua janela. Você deve aumentar o tamanho da sua janela ou reduzir o fator de zoom aplicado ao seu navegador, caso contrário, alguns recursos do software não funcionarão corretamente. 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+#validateResolution @ foundry.mjs:166558
+(anonymous) @ foundry.mjs:692

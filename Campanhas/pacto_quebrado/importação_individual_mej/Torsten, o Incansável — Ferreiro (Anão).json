@@ -1,0 +1,31 @@
+{
+    "name": "Torsten, o Incansável — Ferreiro (Anão)",
+    "pages": [
+        {
+            "name": "Torsten, o Incansável — Ferreiro (Anão)",
+            "type": "text",
+            "text": {
+                "content": "<h3>Torsten, o Incansável — Ferreiro (Anão)</h3><br>**Nível:** 4 | **ND:** 2 | **Tipo:** Humanoide (Anão)<br><br>#### Bloco de Estatísticas<br><br>| Stat       |     Valor      |     | Stat            | Valor |<br>| ---------- | :------------: | --- | --------------- | :---: |<br>| **Físico** | 4 (3+1 racial) |     | **Conflito**    |   2   |<br>| **Mental** |       2        |     | **Interação**   |   2   |<br>| **Social** |       1        |     | **Resistência** |   3   |<br><br>| Derivado       | Fórmula                     |              Valor               |<br>| -------------- | --------------------------- | :------------------------------: |<br>| **HP**         | HP Base + (Fís+Res)×5       |                48                |<br>| **CA**         | 10 + Nível + Armadura + Fís | 18 (Avental reforçado +2, Fís 4) |<br>| **Vigor**      | (Fís+Int) + Nível           |                10                |<br>| **Iniciativa** | Nível + Men + Int           |                +8                |<br>| **Velocidade** | Base racial                 |                6m                |<br>| **Percepção**  | Nível + Men + Int           |                +8                |<br><br>#### Perícias (Treinadas)<br><br>- Ofício: Forja (Físico + Interação): +10 (Especialista — pode forjar itens +1)<br>- Atletismo (Físico + Conflito): +10<br>- Engenharia (Mental + Interação): +8<br>- Avaliação de Metal (Mental + Interação): +8<br><br>#### Ações (3 PA por turno)<br><br>| Ação                    |     Custo     | Teste de Ataque                               | Dano/Efeito                                                         |<br>| ----------------------- | :-----------: | --------------------------------------------- | ------------------------------------------------------------------- |<br>| **Martelo de Guerra**   | [A] [Ataque]  | Físico + Conflito + Nível = **+10** vs CA     | 2d8+4 contusão                                                      |<br>| **Arremesso de Brasas** | [A] [Ataque]  | Mental + Conflito + Nível = **+8** vs CA (3m) | 1d6+2 fogo + **Cegado** 1R (Físico + Resistência DC 14 para evitar) |<br>| **Golpe Devastador**    | [AA] [Ataque] | Físico + Conflito + Nível = **+10** vs CA     | 3d8+4 contusão + **Caído** (Físico + Resistência DC 16)             |<br>| **Postura de Forja**    |      [A]      | —                                             | +2 CA até próximo turno (cava os pés no chão, impossível empurrar)  |<br>| **Mover**               |      [A]      | —                                             | 6m                                                                  |<br>| **Agarrar**             | [A] [Ataque]  | Fís + Conf + Nível = **+10** vs CA            | Alvo **Agarrado**                                                   |<br>| **Empurrar**            | [A] [Ataque]  | Fís + Conf + Nível = **+10** vs CA            | Empurra 1,5m ou **Caído**                                           |<br><br>#### Reações [R]<br><br>| Reação                     | Gatilho                    | Efeito                                |<br>| -------------------------- | -------------------------- | ------------------------------------- |<br>| **Ataque de Oportunidade** | Inimigo sai do alcance     | +10, 2d8+4 contusão                   |<br>| **Parede de Ferro**        | Aliado adjacente é atacado | Torsten impõe -2 ao ataque do inimigo |<br><br>#### Traços e Habilidades Passivas<br><br>- **Peso Pétreo (Racial Anão):** Imune a empurrão se o atacante tiver Nível ≤ Físico de Torsten (4)<br>- **Fôlego das Profundezas (Racial):** Pode ficar sem ar por Físico+1 rodadas extras. Imune a sufocamento por gás<br>- **Olho de Rubi (Prótese):** O olho de vidro rúnico brilha na presença de metal de qualidade. Detecta automaticamente itens mágicos ou de qualidade masterwork num raio de 3m<br>- **Incansável:** Torsten não sofre Exausto por trabalho prolongado. Pode trabalhar 48h sem penalidade<br>- **Runa de Rastreamento:** Pode ativar a runa na adaga de Veros — aponta a direção de Veros num raio de 10km<br><br>#### Equipamento<br><br>- Martelo de guerra (2d8 contusão, Demolidor) | Avental de couro reforçado (+2 CA)<br>- Ferramentas de ferreiro masterwork | Olho de vidro rúnico (esquerdo)<br>- Brasas quentes da forja (componente para Arremesso de Brasas)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Forjar a arma perfeita usando a Bigorna de Runas Vermelhas<br>- **Medo:** A vila morrer e ele perder propósito (o Louvor ao Ato corre em suas veias)<br>- **Segredo:** Forjou a adaga de Veros e pode rastreá-lo a qualquer momento<br><br>#### Falas<br><br>1. _\"Palavras são vento. Ferro é verdade.\"_<br>2. _\"Essa flechada? Metal da Legião. Eu conheço esse ferro.\"_<br>3. _\"Se encontrarem minha bigorna, a dos rubis... eu forjo qualquer coisa.\"_<br>4. _\"O Compasso não encontra ferro. Ele encontra o que QUER ferro.\"_<br><br>---<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {
+                        "hp": "48",
+                        "ca": "10"
+                    }
+                }
+            }
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "type": "person",
+            "attributes": {
+                "hp": "48",
+                "ca": "10"
+            }
+        }
+    }
+}

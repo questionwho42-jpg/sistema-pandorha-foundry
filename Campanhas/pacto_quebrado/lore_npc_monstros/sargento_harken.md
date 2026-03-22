@@ -1,0 +1,20 @@
+# 8. Sargento Harken — Legionário de Morden
+
+**História de Origem e Infância:**
+A vida no *Nível do Tronco* era uma rotina gasta que Harken esqueceu no momento em que a caneta riscou seu nome nos papiros das Forças Voluntárias de Morden, na tenra idade de 14 anos. Sem memórias quentes de infância, órfão forjado no tédio industrial dos corredores estáticos, ele abraçou o calor da farda. Recebeu pancadas com *Sais de Tempestade* para acordar de madrugadas e marchou ao ritmo das esteiras da cidade sob uma chuva rúnica e suor alheio. Cresceu moldado para não fazer perguntas.
+
+**Formação, Ofício e Especializações:**
+Trinta anos nas *Legiões Cardeais*. O soldado operário perfeito da Teocracia da Estratégia. Suas cicatrizes formam o currículo militar de combater os "inconversíveis" das montanhas orcs da Fronteira Oeste e as feras da névoa. Especializou-se na tática cega: bloqueios inquebráveis, avanço cronometrado em falanges rudes de escudo, e disciplina esmagadora para focar no sangue inimigo e esquecer do pânico aliado. Os seus joelhos estalaram tantas vezes no combate de cerco que carregam doloridos estilhaços de metal protético de má qualidade.
+
+**Objetivos, Ideologias e Crenças:**
+Seu cérebro atua sob o *Cálculo Sagrado da Igreja de Mara.* A ordem, a logística e as tabelas de suprimento do Nível da Copa guiam o seu amanhã absoluto. Caos é a única doença a ser purgada perante os *Vigilantes das Runas*. Ele estava em Ferroforja para garantir que a *Árvore-Estado* lograsse impostos das colheitas de minério seguras. O dogma mais crucial para toda a estabilidade psicológica de Harken é que o Alto Comando sabe exatamente o que está fazendo em cada metro de território. Em sua abjeta devoção cega aos despachos de Morden, *ele desconhece as ordens reais do Protocolo de Abandono (que causaram a traição justificável do Capitão Veros).* A falha dessa doutrina, se exposta ao coração frágil de seu zelo, pode enlouquecê-lo.
+
+**Estratégias, Táticas e Planos:**
+Na crise dos Renegados na vila, a mente binária do Sargento vê em Veros não um líder desesperado para salvar suas tropas da aniquilação governamental (a verdade), mas sim um herege infiel, um baderneiro desertor do *General Kaelen*. O próprio Harken tenta recrutar as defesas civis para realizar prisões baseadas no "Código Limpo" do exército padrão. Num confronto no chão: táticas absolutas defensivas, focadas na duração infinita ("Escudo de Mara"), esperando sempre reforços da cavalaria que jamais virão.
+
+**Adaptação às Escolhas dos Jogadores:**
+- **Se os PJs vestirem a camisa da "Autoridade e Honra Oficial", prometendo seguir suas ordens hierárquicas estritas num resgate tático:** O Sargento vira o arquétipo do Mártir Indestrutível. Irá doar todas as suas poções secretas arcanas padronizadas da Legião para curar PJs jovens e se jogará voluntariamente nas lanças de armadilhas para manter o passo perfeito da Missão, entregando tudo ao Dever Punitivo.
+- **Se os PJs mostrarem que a Legião Oeste de Veros e as planilhas da Igreja da Capital (trazidas em evidência de documentos ou falas irrefutáveis) tramaram o Abandono e riram dos recrutas e dos cidadãos (inclusive da própria lealdade inútil do Sargento):** O choque quebra ele no meio da medula. Harken sofrerá "Colapso do Dogma". Fica letárgico, inoperante em ações de base, a não ser que os PJs o chacoalhem. Caso PJs o curem espiritualmente usando verdades mais nobres, ele transcende as táticas, perdendo suas rolagens pautadas e ganhando Fúria Irracional, querendo cortar as cabeças dos "Chefes Militares Burocratas" (inclusive renegados) por sujarem a capa real com mentiras.
+
+**Reações à Reputação e Personalidade:**
+Zelo fanático por personagens com *Status de Pureza Institucional*, Paladinos Ratos da Lei, Clérigos pragmáticos ou guerreiros que reluzem metal mantido. Sente enorme aversão a mercenários ruidosos e desorganizados; perante atitudes desleais ou zombação contra as "Leis Válidas", ele punirá passivamente, exigindo subordinação constante dos personagens ou minando a paciência de conjuradores desleixados (*Ode ao esforço cego*).

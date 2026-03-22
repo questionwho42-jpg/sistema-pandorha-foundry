@@ -1,0 +1,276 @@
+/**
+ * MACRO: INSTALADOR DE CONTEÚDO PANDORHA (v1.4 - O SELETOR INTERATIVO)
+ * 
+ * Sincroniza os itens com o Livro de Regras e ativa o Seletor Automático.
+ * Instruções: Execute esta macro UMA VEZ para atualizar seu banco de itens e ativar o modal.
+ */
+
+(async () => {
+    // --- 1. CONFIGURAÇÕES E DADOS ---
+    const ANCESTRIES_DATA = {
+        "Humanos": {
+            bonusOptions: ["Físico", "Mental", "Social", "Interação", "Conflito", "Resistência"],
+            extraOptions: ["Interação", "Conflito", "Resistência"], // Mente Inquieta
+            traits: [
+                { n: "Diligência Erudita", d: "Ganha +2 em qualquer Teste Global cuja soma de bônus fixos (Nível + Eixo + Aplicação) já seja 10 ou superior." },
+                { n: "Língua de Prata", d: "Pode ganhar vantagem em Social + Interação + Nível um número de vezes = Eixo Social por Descanso Longo." },
+                { n: "Vontade Indomável [R]", d: "Se HP chega a 0, gasta Reação para estabilizar automaticamente (1x/cena)." },
+                { n: "Maestria Improvisada", d: "Ignora a penalidade de -4 por usar ferramentas ou armas sem treinamento." },
+                { n: "Memória de Mercador", d: "+2 em Mental + Interação para lembrar fatos históricos ou identificar valor de itens." },
+                { n: "Imunidade Adaptativa", d: "Imune a Doenças Comuns e +2 de Resistência contra Toxinas Mágicas." },
+                { n: "Sorte do Novato", d: "Uma vez por sessão, pode rolar novamente uma Falha Crítica em Social + Interação." },
+                { n: "Artífice de Ferro", d: "Tempo para construir/consertar itens mundanos é reduzido pela metade." },
+                { n: "Foco Cooperativo", d: "Aliados em 1,5m ganham +1 em testes de Resistência Mental." },
+                { n: "Pensamento Estratégico [A]", d: "1 [A] para observar. Próximo ataque contra o alvo ganha +2 de bônus." }
+            ]
+        },
+        "Elfos": {
+            bonusOptions: ["Mental", "Interação"],
+            traits: [
+                { n: "Visão Estelar", d: "Ignora penalidades de baixa luminosidade (Penumbra)." },
+                { n: "Passo de Folha", d: "Não sofre penalidade em terrenos difíceis naturais." },
+                { n: "Memória Arcaica", d: "+2 em Mental + Interation para eventos com mais de 500 anos." },
+                { n: "Agilidade Élfica", d: "Velocidade base aumenta em 1,5m (total 10,5m)." },
+                { n: "Mente de Cristal", d: "+2 de Resistência contra a condição 'Confuso'." },
+                { n: "Arquearia Tradicional", d: "Alcance de armas de distância aumenta em 6 metros." },
+                { n: "Transe Profundo", d: "Descanso Longo em apenas 4 horas (sem sono)." },
+                { n: "Domínio Animal [A]", d: "Pode comandar animal de nível inferior (Social + Interação vs DC)." },
+                { n: "Reflexos Célere", d: "Ganha +1 permanentemente em sua Iniciativa." },
+                { n: "Ressonância Elemental", d: "RD 2 contra um elemento (Fogo, Gelo ou Raio) à escolha." }
+            ]
+        },
+        "Anões": {
+            bonusOptions: ["Físico", "Resistência"],
+            traits: [
+                { n: "Fôlego da Profundeza", d: "Segura o fôlego 3x mais que o normal." },
+                { n: "Sentido de Minério", d: "Sente metais/pedras a 18m através de pedra sólida." },
+                { n: "Inimizade Ancestral", d: "+2 no dano contra Orcs ou Goblins." },
+                { n: "Couraça Biológica", d: "+2 de Resistência contra Venenos e Doenças naturais." },
+                { n: "Estreito de Armadura", d: "Penalidade de velocidade de armaduras pesadas reduzida em 1,5m." },
+                { n: "Bússola Interna", d: "Ambientes subterrâneos: sempre sabe Norte e nunca se perde." },
+                { n: "Ruptura de Rocha", d: "Margem de Crítico em Físico+Conflito reduzida em 1 (Crit 19-20)." },
+                { n: "Mule do Abismo", d: "Ganha +2 Slots extras de inventário." },
+                { n: "Barganha Mercantil", d: "+1 em Social + Interação para barganhar preços." },
+                { n: "Vontade de Rocha", d: "+4 contra magias de controle mental." }
+            ]
+        },
+        "Drakari": {
+            bonusOptions: ["Físico", "Conflito"],
+            extraOptions: ["Fogo", "Gelo", "Raio"], // Sopro
+            traits: [
+                { n: "Escamas de Guerra", d: "Sem armadura, CA = 11 + Nível + Físico + Resistência." },
+                { n: "Rugido Aterrorizante [A]", d: "1 [A] para causar 'Abalado' em área (DC vs Mental)." },
+                { n: "Honra de Sangue", d: "+2 de Resistência contra 'Medo'." },
+                { n: "Coração de Dragão", d: "+1 PV extra para cada nível global." },
+                { n: "Garras Letais", d: "Ataque desarmado 1d6 + Físico, considerado arma leve." },
+                { n: "Herança de Cor", d: "RD 5 contra o elemento do seu sopro." },
+                { n: "Carga Traumática [A]", d: "Move 3m + Ataque: Empurra 1,5m. Crítico: Teste de Físico ou 'Caído'." },
+                { n: "Visão Térmica", d: "Detecta calor: ignora invisibilidade de seres vivos a 15m." },
+                { n: "Misticismo Inato", d: "Escolha 1 magia de 1º Círculo. Lança 1x/dia sem custo (EE)." },
+                { n: "Golpe de Cauda [R]", d: "Reação ao inimigo fugindo: Ataca com cauda (1d4 + Físico)." }
+            ]
+        },
+        "Umbrais": {
+            bonusOptions: ["Social", "Interação"],
+            traits: [
+                { n: "Visão do Vazio", d: "Enxerga na escuridão total (mesmo mágica)." },
+                { n: "Passo Silencioso", d: "+2 em Furtividade (Físico + Interação)." },
+                { n: "Toque de Geada", d: "Ataque desarmado pode usar Mental para dano." },
+                { n: "Aura de Inquietude", d: "Animais mundanos evitam contato e se afastam." },
+                { n: "Névoa de Proteção", d: "RD 1 contra ataques físicos não-mágicos." },
+                { n: "Desvanecer [AA]", d: "Torna-se invisível por 1 Rodada (1x/cena)." },
+                { n: "Elo Telepático", d: "Transmite pensamentos a 15m (mesmo idioma)." },
+                { n: "Resistência à Luz", d: "+2 de Resistência contra Luz ou Cegueira." },
+                { n: "Salto de Sombra [R]", d: "Reação ao ser alvo de ataque: Teleporta 1,5m para sombra." },
+                { n: "Memória Genética", d: "1x/dia: Usa habilidade Nível 0 como se fosse Nível 1." }
+            ]
+        },
+        "Feras": {
+            bonusOptions: ["Físico", "Interação"],
+            traits: [
+                { n: "Tática de Matilha", d: "+2 no dano com aliado adjacente ao inimigo." },
+                { n: "Impulso Selvagem", d: "Velocidade padrão aumenta em 3 metros (total 12m)." },
+                { n: "Resiliência Primal", d: "Imune a doenças nutricionais ou água podre." },
+                { n: "Predador Vertical", d: "Teste de Salto [A] sem custo de ação (integrado ao movimento)." },
+                { n: "Sangue de Fera", d: "Crítico com garras/dentes causa 'Sangrando' (1d4/turno)." },
+                { n: "Couraça de Pelagem", d: "+1 de Defesa (CA) permanente." },
+                { n: "Instinto de Sobrevivência", d: "Imune a 'Surpreendido' no primeiro turno." },
+                { n: "Mestre do Terreno", d: "Ignora terreno difícil natural (mato, pântano)." },
+                { n: "Rugido de Comando", d: "Comunica e ordena animais com Social+Interação." },
+                { n: "Ira de Pandorha", d: "Abaixo de 50% HP: +2 em todos os Testes Globais de Físico." }
+            ]
+        }
+    };
+
+    // --- 2. LÓGICA DO SELETOR (MODAL) ---
+    async function openAncestrySelector(actor, item) {
+        const race = item.name.replace(" (PRO)", "").trim();
+        const data = ANCESTRIES_DATA[race];
+        if (!data) return;
+
+        // Limpar flag de configurado para permitir reconfiguração se necessário
+        let html = `<form id="pandorha-selector">
+            <p>Escolha as opções para sua ancestralidade: <b>${race}</b></p>
+            <hr>
+            <h3>1. Escolha seu Bônus Inicial</h3>
+            <div class="form-group" style="display:flex; flex-wrap: wrap; gap: 10px;">
+                ${data.bonusOptions.map(opt => `
+                    <label><input type="radio" name="bonus" value="${opt}" required> +1 ${opt}</label>
+                `).join("")}
+            </div>`;
+
+        // Lógica Especial Humana
+        if (race === "Humanos") {
+            html += `<h3>2. Mente Inquieta (Extra)</h3>
+            <p>Escolha a aplicação extra para receber +1:</p>
+            <div class="form-group" style="display:flex; gap: 10px;">
+                ${data.extraOptions.map(opt => `
+                    <label><input type="radio" name="extra" value="${opt}" required> +1 ${opt}</label>
+                `).join("")}
+            </div>`;
+        }
+
+        // Lógica Especial Drakari
+        if (race === "Drakari") {
+            html += `<h3>2. Elemento do Sopro</h3>
+            <div class="form-group" style="display:flex; gap: 10px;">
+                ${data.extraOptions.map(opt => `
+                    <label><input type="radio" name="elemento" value="${opt}" required> ${opt}</label>
+                `).join("")}
+            </div>`;
+        }
+
+        html += `<hr>
+            <h3>3. Selecione 3 Traços (Fiel ao Livro)</h3>
+            <div class="traits-list" style="max-height: 300px; overflow-y: auto; background: #eee; padding: 10px; border-radius: 5px;">
+                ${data.traits.map((t, i) => `
+                    <div style="margin-bottom: 8px; border-bottom: 1px solid #ccc;">
+                        <label>
+                            <input type="checkbox" name="trait" value="${i}" class="trait-check"> 
+                            <b>${t.n}</b>
+                        </label>
+                        <p style="font-size: 0.9em; margin: 2px 0 5px 20px; color: #444;">${t.d}</p>
+                    </div>
+                `).join("")}
+            </div>
+            <p id="trait-counter">Selecionados: 0 / 3</p>
+        </form>`;
+
+        new Dialog({
+            title: `Configurar Ancestralidade: ${race}`,
+            content: html,
+            buttons: {
+                save: {
+                    label: "Confirmar Seleção",
+                    callback: (dlg) => {
+                        const form = dlg[0].querySelector("#pandorha-selector");
+                        const selectedTraitsIdx = Array.from(form.querySelectorAll(".trait-check:checked")).map(c => parseInt(c.value));
+                        
+                        if (selectedTraitsIdx.length !== 3) {
+                            ui.notifications.warn("Você DEVE escolher exatamente 3 traços!");
+                            return openAncestrySelector(actor, item); // Reabrir
+                        }
+
+                        const bonus = form.bonus.value;
+                        const extra = form.extra?.value || form.elemento?.value || "";
+                        const selectedTraits = selectedTraitsIdx.map(idx => data.traits[idx]);
+
+                        applySelection(actor, item, bonus, extra, selectedTraits);
+                    }
+                }
+            },
+            render: (dlg) => {
+                const checks = dlg[0].querySelectorAll(".trait-check");
+                const counter = dlg[0].querySelector("#trait-counter");
+                checks.forEach(c => c.addEventListener("change", () => {
+                   const count = dlg[0].querySelectorAll(".trait-check:checked").length;
+                   counter.innerText = `Selecionados: ${count} / 3`;
+                   if(count > 3) {
+                       c.checked = false;
+                       ui.notifications.warn("Limite de 3 traços atingido!");
+                   }
+                }));
+            }
+        }).render(true);
+    }
+
+    async function applySelection(actor, item, bonus, extra, traits) {
+        const updates = {
+            "system.props.anc_bonus_eixo": bonus + (extra ? ` & ${extra}` : ""),
+            "system.props.traco_sel1_nome": traits[0].n,
+            "system.props.traco_sel1_descr": traits[0].d,
+            "system.props.traco_sel2_nome": traits[1].n,
+            "system.props.traco_sel2_descr": traits[1].d,
+            "system.props.traco_sel3_nome": traits[2].n,
+            "system.props.traco_sel3_descr": traits[2].d,
+            "system.props.is_configurado": true
+        };
+
+        // Automação de Atributos: Se o bônus for um Eixo ou Aplicação, tentamos somar (Opcional, mas Wow!)
+        const attrMap = { 
+            "Físico": "fisico", "Mental": "mental", "Social": "social",
+            "Interação": "interacao", "Conflito": "conflito", "Resistência": "resistencia"
+        };
+        
+        const actorUpdates = {};
+        if (attrMap[bonus]) actorUpdates[`system.props.${attrMap[bonus]}`] = (actor.system.props[attrMap[bonus]] || 0) + 1;
+        if (extra && attrMap[extra]) actorUpdates[`system.props.${attrMap[extra]}`] = (actor.system.props[attrMap[extra]] || 0) + 1;
+
+        await item.update(updates);
+        if (Object.keys(actorUpdates).length > 0) await actor.update(actorUpdates);
+
+        ui.notifications.info(`Ancestralidade ${item.name} configurada com sucesso!`);
+    }
+
+    // --- 3. GATILHO AUTOMÁTICO (HOOK) ---
+    // Registra no sistema para abrir o modal quando o item é criado no ator
+    if (!window._pandorhaHookActive) {
+        Hooks.on("createItem", (item, options, userId) => {
+            if (game.user.id !== userId) return;
+            if (item.actor && item.name.includes("Ancestralidade") && !item.system.props.is_configurado) {
+                openAncestrySelector(item.actor, item);
+            }
+        });
+        window._pandorhaHookActive = true;
+        console.log("PANDORHA | Gatilho de Ancestralidade Ativado!");
+    }
+
+    // --- 4. INSTALADOR DE ITENS ---
+    const getTemplateId = (name) => {
+        const item = game.items.find(i => i.name === name && i.type === "_equippableItemTemplate");
+        return item ? item.id : null;
+    };
+
+    const templateAnc = getTemplateId("Ancestralidade (PRO)");
+
+    const itemsToSync = Object.entries(ANCESTRIES_DATA).map(([name, data]) => ({
+        name: name,
+        type: "item",
+        img: `icons/skills/social/diplomacy-handshake.webp`,
+        system: {
+            templateId: templateAnc,
+            props: {
+                anc_lore: `Lore oficial de ${name}...`, // Placeholder
+                anc_descricao: `Descrição oficial...`,
+                anc_aparencia: `Aparência sugerida...`,
+                capacidade_primordial_nome: "Habilidade Especial",
+                capacidade_primordial_descr: "Descrição básica...",
+                is_configurado: false
+            }
+        }
+    }));
+
+    // Executa a sincronização
+    for (let itemData of itemsToSync) {
+        let existing = game.items.find(i => i.name === itemData.name && i.type === "item");
+        if (existing) {
+            await existing.update(itemData);
+            console.log(`PANDORHA | Sincronizado: ${itemData.name}`);
+        } else {
+            await Item.create(itemData);
+            console.log(`PANDORHA | Criado: ${itemData.name}`);
+        }
+    }
+
+    ui.notifications.info("Sincronização Pandorha v1.4 Concluída! Gatilho do Seletor Ativo.");
+})();

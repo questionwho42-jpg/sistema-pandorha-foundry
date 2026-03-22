@@ -1,0 +1,19 @@
+
+--- Analyzing Conditions ---
+FOUND: Aterrorizado
+FOUND: Exposto
+
+--- Analyzing Spells ---
+FOUND: Raio de Gelo
+
+--- Analyzing Monster Abilities ---
+FOUND: [1 Ação] Agarrar Gigante
+FOUND: [1 Ação] Garras Rasga-Planos
+
+--- Analyzing Bestiary ---
+FOUND: Lobo do Éter
+FOUND: Enxame de Ratos
+FOUND: Carniçal Faminto
+FOUND: Carniçal Rastejante
+FOUND: Banshee
+FOUND: Pixie

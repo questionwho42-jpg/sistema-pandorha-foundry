@@ -1,0 +1,84 @@
+{
+  "name": "Template de Ancestralidade v2.0",
+  "type": "_equippableItemTemplate",
+  "data": {
+    "body": {
+      "type": "panel",
+      "contents": [
+        { "type": "label", "value": "<h2>Ancestralidade</h2>" },
+
+        { "type": "label", "value": "DESCRIÇÃO" },
+        { "key": "anc_descricao", "type": "textArea", "tooltip": "Descrição geral da ancestralidade" },
+
+        { "type": "label", "value": "LORE" },
+        { "key": "anc_lore", "type": "textArea", "tooltip": "História e cultura da ancestralidade" },
+
+        { "type": "label", "value": "APARÊNCIA" },
+        { "key": "anc_aparencia", "type": "textArea", "tooltip": "Traços físicos e visuais típicos" },
+
+        { "type": "label", "value": "BÔNUS DE EIXO" },
+        { "key": "anc_bonus_eixo", "type": "textField", "tooltip": "Ex: +1 Físico, +1 Mental" },
+
+        { "type": "label", "value": "<h3>Capacidade Primordial</h3>" },
+        { "key": "capacidade_primordial_nome", "type": "textField" },
+        { "key": "capacidade_primordial_descr", "type": "textArea" },
+
+        { "type": "label", "value": "<h3>Traços Disponíveis (10 opções)</h3>" },
+
+        { "type": "label", "value": "Traço 1" },
+        { "key": "traco_op1_nome", "type": "textField" },
+        { "key": "traco_op1_descr", "type": "textArea", "placeholder": "Descrição..." },
+
+        { "type": "label", "value": "Traço 2" },
+        { "key": "traco_op2_nome", "type": "textField" },
+        { "key": "traco_op2_descr", "type": "textArea", "placeholder": "Descrição..." },
+
+        { "type": "label", "value": "Traço 3" },
+        { "key": "traco_op3_nome", "type": "textField" },
+        { "key": "traco_op3_descr", "type": "textArea", "placeholder": "Descrição..." },
+
+        { "type": "label", "value": "Traço 4" },
+        { "key": "traco_op4_nome", "type": "textField" },
+        { "key": "traco_op4_descr", "type": "textArea", "placeholder": "Descrição..." },
+
+        { "type": "label", "value": "Traço 5" },
+        { "key": "traco_op5_nome", "type": "textField" },
+        { "key": "traco_op5_descr", "type": "textArea", "placeholder": "Descrição..." },
+
+        { "type": "label", "value": "Traço 6" },
+        { "key": "traco_op6_nome", "type": "textField" },
+        { "key": "traco_op6_descr", "type": "textArea", "placeholder": "Descrição..." },
+
+        { "type": "label", "value": "Traço 7" },
+        { "key": "traco_op7_nome", "type": "textField" },
+        { "key": "traco_op7_descr", "type": "textArea", "placeholder": "Descrição..." },
+
+        { "type": "label", "value": "Traço 8" },
+        { "key": "traco_op8_nome", "type": "textField" },
+        { "key": "traco_op8_descr", "type": "textArea", "placeholder": "Descrição..." },
+
+        { "type": "label", "value": "Traço 9" },
+        { "key": "traco_op9_nome", "type": "textField" },
+        { "key": "traco_op9_descr", "type": "textArea", "placeholder": "Descrição..." },
+
+        { "type": "label", "value": "Traço 10" },
+        { "key": "traco_op10_nome", "type": "textField" },
+        { "key": "traco_op10_descr", "type": "textArea", "placeholder": "Descrição..." },
+
+        { "type": "label", "value": "<h3>Traços Selecionados pelo Jogador (Escolha 3)</h3>" },
+
+        { "type": "label", "value": "Traço Selecionado 1" },
+        { "key": "traco_sel1_nome", "type": "textField" },
+        { "key": "traco_sel1_descr", "type": "textArea", "placeholder": "Descrição..." },
+
+        { "type": "label", "value": "Traço Selecionado 2" },
+        { "key": "traco_sel2_nome", "type": "textField" },
+        { "key": "traco_sel2_descr", "type": "textArea", "placeholder": "Descrição..." },
+
+        { "type": "label", "value": "Traço Selecionado 3" },
+        { "key": "traco_sel3_nome", "type": "textField" },
+        { "key": "traco_sel3_descr", "type": "textArea", "placeholder": "Descrição..." }
+      ]
+    }
+  }
+}

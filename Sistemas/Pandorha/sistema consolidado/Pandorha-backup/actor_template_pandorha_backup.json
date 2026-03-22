@@ -1,0 +1,91 @@
+{
+  "name": "Template de Actor Pandorha",
+  "type": "_template",
+  "data": {
+    "body": {
+      "type": "panel",
+      "contents": [
+        {
+          "type": "panel",
+          "key": "identidade",
+          "contents": [
+            { "type": "text", "key": "jogador", "label": "Jogador" },
+            { "type": "text", "key": "xp", "label": "XP" }
+          ]
+        },
+        {
+          "type": "panel",
+          "key": "eixos",
+          "contents": [
+            { "type": "number", "key": "fisico", "label": "Físico" },
+            { "type": "number", "key": "mental", "label": "Mental" },
+            { "type": "number", "key": "social", "label": "Social" }
+          ]
+        },
+        {
+          "type": "panel",
+          "key": "aplicacoes",
+          "contents": [
+            { "type": "number", "key": "conflito", "label": "Conflito" },
+            { "type": "number", "key": "interacao", "label": "Interação" },
+            { "type": "number", "key": "resistencia", "label": "Resistência" }
+          ]
+        },
+        {
+          "type": "panel",
+          "key": "recursos",
+          "contents": [
+            { "type": "number", "key": "hp_atual", "label": "HP Atual" },
+            { "type": "number", "key": "hp_max", "label": "HP Max" },
+            { "type": "number", "key": "pv_atual", "label": "PV Atual" },
+            { "type": "number", "key": "pv_max", "label": "PV Max" },
+            { "type": "number", "key": "ee_atual", "label": "EE Atual" },
+            { "type": "number", "key": "ee_max", "label": "EE Max" }
+          ]
+        },
+        {
+          "type": "panel",
+          "key": "defesas",
+          "contents": [
+            { "type": "number", "key": "ca", "label": "CA" },
+            { "type": "number", "key": "iniciativa", "label": "Iniciativa" },
+            { "type": "number", "key": "velocidade", "label": "Velocidade" },
+            { "type": "number", "key": "carga_atual", "label": "Carga Atual" },
+            { "type": "number", "key": "carga_max", "label": "Carga Máxima" }
+          ]
+        },
+        {
+          "type": "itemContainer",
+          "key": "ancestralidade_container",
+          "label": "Ancestralidade",
+          "allowedItemTypes": ["equippableItem"]
+        },
+        {
+          "type": "itemContainer",
+          "key": "classe_container",
+          "label": "Classe",
+          "allowedItemTypes": ["equippableItem"]
+        },
+        {
+          "type": "itemContainer",
+          "key": "antecedente_container",
+          "label": "Antecedente",
+          "allowedItemTypes": ["equippableItem"]
+        },
+        {
+          "type": "itemContainer",
+          "key": "habilidades_manobras",
+          "label": "Habilidades e Manobras",
+          "allowedItemTypes": ["equippableItem"]
+        }
+      ]
+    },
+    "header": {
+      "type": "panel",
+      "contents": [
+        { "type": "text", "key": "name", "label": "Nome" },
+        { "type": "number", "key": "nivel", "label": "Nível" }
+      ]
+    }
+  }
+}

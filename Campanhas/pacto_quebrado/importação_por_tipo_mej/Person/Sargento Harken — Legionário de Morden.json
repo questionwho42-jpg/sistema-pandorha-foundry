@@ -1,0 +1,36 @@
+{
+    "name": "Sargento Harken — Legionário de Morden",
+    "pages": [
+        {
+            "name": "Sargento Harken — Legionário de Morden",
+            "type": "text",
+            "text": {
+                "content": "<br>**Nível:** 5 | **ND:** 3 | **Tipo:** Humanoide (Humano, Veterano)<br><br>#### Bloco de Estatísticas<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Stat</th><th style=\"padding: 5px;\">Valor</th><th style=\"padding: 5px;\">Stat</th><th style=\"padding: 5px;\">Valor</th></tr><tr><td style=\"padding: 5px;\">**Físico**</td><td style=\"padding: 5px;\">3</td><td style=\"padding: 5px;\">**Conflito**</td><td style=\"padding: 5px;\">3</td></tr><tr><td style=\"padding: 5px;\">**Mental**</td><td style=\"padding: 5px;\">1</td><td style=\"padding: 5px;\">**Interação**</td><td style=\"padding: 5px;\">1</td></tr><tr><td style=\"padding: 5px;\">**Social**</td><td style=\"padding: 5px;\">2</td><td style=\"padding: 5px;\">**Resistência**</td><td style=\"padding: 5px;\">3</td></tr></tbody></table><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Derivado</th><th style=\"padding: 5px;\">Fórmula</th><th style=\"padding: 5px;\">Valor</th></tr><tr><td style=\"padding: 5px;\">**HP**</td><td style=\"padding: 5px;\">Base + (Fís+Res)×5</td><td style=\"padding: 5px;\">45</td></tr><tr><td style=\"padding: 5px;\">**CA**</td><td style=\"padding: 5px;\">10 + Nível + Armadura + Escudo + Fís</td><td style=\"padding: 5px;\">22 (Armadura completa +5, Escudo +2, Fís 3)</td></tr><tr><td style=\"padding: 5px;\">**Vigor**</td><td style=\"padding: 5px;\">(Fís+Int) + Nível</td><td style=\"padding: 5px;\">9</td></tr><tr><td style=\"padding: 5px;\">**Iniciativa**</td><td style=\"padding: 5px;\">Nível + Men + Int</td><td style=\"padding: 5px;\">+7</td></tr><tr><td style=\"padding: 5px;\">**Velocidade**</td><td style=\"padding: 5px;\">Base (armadura pesada)</td><td style=\"padding: 5px;\">6m</td></tr></tbody></table><br>#### Perícias (Treinadas)<br><br>- Atletismo (Físico + Conflito): +11<br>- Sobrevivência (Mental + Resistência): +9<br>- Intimidação (Social + Conflito): +10<br>- Resistência Física (Físico + Resistência): +11<br>- Conhecimento Militar (Mental + Conflito): +9<br><br>#### Ações (3 PA por turno)<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Ação</th><th style=\"padding: 5px;\">Custo</th><th style=\"padding: 5px;\">Teste de Ataque</th><th style=\"padding: 5px;\">Dano/Efeito</th></tr><tr><td style=\"padding: 5px;\">**Lança da Legião**</td><td style=\"padding: 5px;\">[A] [Ataque]</td><td style=\"padding: 5px;\">Físico + Conflito + Nível = **+11** vs CA</td><td style=\"padding: 5px;\">1d8+3 perfurante (alcance 3m)</td></tr><tr><td style=\"padding: 5px;\">**Ataque de Lança Duplo**</td><td style=\"padding: 5px;\">[AA] [Ataque]</td><td style=\"padding: 5px;\">+11 (1°) / +6 (2°) vs CA</td><td style=\"padding: 5px;\">1d8+3 + 1d8+3 perfurante</td></tr><tr><td style=\"padding: 5px;\">**Investida de Lança**</td><td style=\"padding: 5px;\">[AA] [Ataque]</td><td style=\"padding: 5px;\">+11 vs CA (após mover 6m)</td><td style=\"padding: 5px;\">2d8+6 perfurante + **Empurrão** 3m</td></tr><tr><td style=\"padding: 5px;\">**Bloquear com Escudo**</td><td style=\"padding: 5px;\">[A]</td><td style=\"padding: 5px;\">—</td><td style=\"padding: 5px;\">+2 CA até o próximo turno. Se ataque errar por 5+, atacante fica **Exposto** (-2 CA)</td></tr><tr><td style=\"padding: 5px;\">**Avanço de Formação**</td><td style=\"padding: 5px;\">[A]</td><td style=\"padding: 5px;\">—</td><td style=\"padding: 5px;\">Harken e até 2 legionários adjacentes avançam 3m juntos. Não provoca AO</td></tr><tr><td style=\"padding: 5px;\">**Mover**</td><td style=\"padding: 5px;\">[A]</td><td style=\"padding: 5px;\">—</td><td style=\"padding: 5px;\">6m</td></tr><tr><td style=\"padding: 5px;\">**Agarrar**</td><td style=\"padding: 5px;\">[A] [Ataque]</td><td style=\"padding: 5px;\">+11 vs CA</td><td style=\"padding: 5px;\">**Agarrado**</td></tr></tbody></table><br>#### Reações [R]<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Reação</th><th style=\"padding: 5px;\">Gatilho</th><th style=\"padding: 5px;\">Efeito</th></tr><tr><td style=\"padding: 5px;\">**Ataque de Oportunidade**</td><td style=\"padding: 5px;\">Inimigo sai do alcance (3m com lança)</td><td style=\"padding: 5px;\">+11, 1d8+3 perfurante</td></tr><tr><td style=\"padding: 5px;\">**Escudo de Mara**</td><td style=\"padding: 5px;\">Legionário adjacente recebe Crítico</td><td style=\"padding: 5px;\">Reduz dano em 1d8+5 (absorve com escudo de fé)</td></tr></tbody></table><br>#### Traços e Habilidades Passivas<br><br>- **Cão de Guarda:** +5 em Percepção contra criaturas ou pessoas tentando se esgueirar perto dele. Nunca é Surpreendido<br>- **Fortaleza Ambulante:** Imune a **Caído** e **Empurrado** enquanto usar Bloquear com Escudo<br>- **Lealdade Absoluta (enquanto acredita em Morden):** Imune a **Enfeitiçado** e **Aterrorizado**. Se descobrir a verdade sobre o abandono, perde esta habilidade e fica **Abalado** permanentemente até resolver o dilema<br>- **Honra Militar:** Não ataca rendidos, não usa veneno, não embosca. Se inimigos se rendem, aceita e mantém como prisioneiros<br>- **Joelho Ferido:** Desvantagem em testes de Atletismo para subir/escalar. Velocidade reduzida para 6m<br><br>#### Equipamento<br><br>- Lança da Legião (1d8 perfurante, alcance 3m)<br>- Armadura completa da Legião (+5 CA) | Escudo pesado (+2 CA)<br>- Amuleto de Mara | Kit de primeiros socorros da Legião<br>- Apito de sinalização (chama reforços em 1d4 horas)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Cumprir seu dever e manter a ordem<br>- **Medo:** Que Morden não mereça a lealdade que ele deu<br>- **Segredo:** NÃO sabe do plano de abandono<br><br>#### Falas<br><br>1. _\"Sou Sargento Harken da Legião Oeste. Cooperem.\"_<br>2. _\"30 anos de serviço. Se tudo foi por nada... não sei o que faço.\"_<br>3. _\"Ordens são ordens. Questionar é luxo de quem não está na fronteira.\"_<br>4. _(Se souber a verdade)_ _\"...Veros estava certo. Deus de Mara...\"_<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {}
+                }
+            },
+            "system": {},
+            "title": {
+                "show": true,
+                "level": 1
+            },
+            "sort": 0
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "pagetype": "person",
+            "img": "modules/monks-enhanced-journal/assets/person.png"
+        }
+    },
+    "system": {},
+    "_stats": {
+        "systemId": "pandorha",
+        "coreVersion": "13.351"
+    }
+}

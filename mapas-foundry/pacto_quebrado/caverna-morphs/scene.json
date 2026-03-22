@@ -1,0 +1,65 @@
+{
+  "name": "As Colinas: Caverna dos Morphs",
+  "background": {
+    "src": "mapas-foundry/pacto_quebrado/caverna-morphs/background.png"
+  },
+  "width": 1920,
+  "height": 1080,
+  "grid": {
+    "type": 1,
+    "size": 100,
+    "color": "#000000",
+    "alpha": 0.2,
+    "distance": 1.5,
+    "units": "m"
+  },
+  "tokenVision": true,
+  "fog": {
+    "exploration": true
+  },
+  "environment": {
+    "darknessLevel": 0.2
+  },
+  "walls": [
+    {
+      "c": [1200, 400, 1920, 200],
+      "move": 1,
+      "sense": 1
+    },
+    {
+      "c": [1200, 700, 1920, 900],
+      "move": 1,
+      "sense": 1
+    }
+  ],
+  "lights": [
+    {
+      "x": 1600,
+      "y": 540,
+      "config": {
+        "alpha": 0.2,
+        "bright": 2,
+        "dim": 5,
+        "color": "#4b0082",
+        "animation": {
+          "type": "pulse",
+          "speed": 1
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "x": 400,
+      "y": 500,
+      "text": "Destroços da Carroça: Investigação DC 15 revela marcas de garras e suprimentos perdidos.",
+      "icon": "icons/svg/search.svg"
+    },
+    {
+      "x": 1600,
+      "y": 540,
+      "text": "O Covil: Aqui reside a Matriarca Morph. No fundo da caverna estão os filhotes (Dilema Moral).",
+      "icon": "icons/svg/skull.svg"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+    "name": "Sidequest: 4: O Comerciante Preso",
+    "pages": [
+        {
+            "name": "Sidequest: 4: O Comerciante Preso",
+            "type": "text",
+            "text": {
+                "content": "<h3>Sidequest: 4: O Comerciante Preso</h3><br>**Hook:** Cap.1, Cena 3 — Na trilha, encontram sinais de acampamento recente e gritos abafados.<br>**Gatilho:** Durante a viagem para Karathon.<br><br>### Cena 1: O Resgate<br><br>- Um comerciante orc chamado **Krug** está preso numa jaula improvisada, guardada por 2 Batedores Renegados (ND 1)<br>- Os renegados capturaram Krug porque ele sabe demais sobre a rota de contrabando<br>- Combate simples (2 batedores) ou negociação (Social + Conflito DC 15 para convencer os batedores a largar o posto)<br>- **Caminho Racial:** 🐉 Drakari — Batedores ficam intimidados, DC cai para 12<br><br>### Cena 2: A Informação<br><br>- Krug é comerciante independente que viajava pela Ponte do Pacto<br>- Ele viu Dente-de-Ouro reunido com um \"homem de capuz\" na vila ANTES da invasão<br>- **Teste Social + Interação DC 12:** Krug descreve o homem de capuz — corresponde ao Velho Garth<br>- **Pista crucial:** Garth sabia da invasão? Ou foi coincidência?<br><br>### Recompensa<br><br>- 20 PA em mercadorias orcs (comida, ferramentas)<br>- Informação sobre Garth/Dente-de-Ouro<br>- +1 Favor Gorbax (Krug report a Thazza que foi bem tratado)<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "quest",
+                    "status": "active"
+                }
+            }
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "type": "quest",
+            "status": "active"
+        }
+    }
+}

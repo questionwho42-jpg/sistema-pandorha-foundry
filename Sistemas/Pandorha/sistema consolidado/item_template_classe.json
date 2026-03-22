@@ -1,0 +1,39 @@
+{
+  "name": "Template de Classe",
+  "type": "_equippableItemTemplate",
+  "data": {
+    "body": {
+      "type": "panel",
+      "contents": [
+        { "type": "label", "value": "Descrição da Classe" },
+        { "key": "classe_descricao", "type": "textArea" },
+        { "key": "classe_descricao_display", "type": "label", "value": "${classe_descricao}$" },
+        { "type": "label", "value": "Matriz" },
+        { "key": "classe_matriz", "type": "textField" },
+        { "key": "classe_matriz_display", "type": "label", "value": "${classe_matriz}$" },
+        { "type": "label", "value": "Vitalidade Inicial" },
+        { "key": "classe_vitalidade", "type": "textField" },
+        { "key": "classe_vitalidade_display", "type": "label", "value": "${classe_vitalidade}$" },
+        { "type": "label", "value": "Equipamento Treinado" },
+        { "key": "classe_equipamento", "type": "textField" },
+        { "key": "classe_equipamento_display", "type": "label", "value": "${classe_equipamento}$" },
+        { "type": "label", "value": "Habilidade Passiva" },
+        { "key": "hab_passiva_nome", "type": "textField" },
+        { "key": "hab_passiva_nome_display", "type": "label", "value": "<b>${hab_passiva_nome}$</b>" },
+        { "key": "hab_passiva_descr", "type": "textArea" },
+        { "key": "hab_passiva_descr_display", "type": "label", "value": "${hab_passiva_descr}$" },
+        { "type": "label", "value": "<h3>Talentos de Classe (Escolha 2)</h3>" },
+        { "key": "talento_classe_1_nome", "type": "textField" },
+        { "key": "talento_classe_1_nome_display", "type": "label", "value": "<b>1. ${talento_classe_1_nome}$</b>" },
+        { "key": "talento_classe_1_descr", "type": "textArea" },
+        { "key": "talento_classe_1_descr_display", "type": "label", "value": "${talento_classe_1_descr}$" },
+        { "key": "talento_classe_2_nome", "type": "textField" },
+        { "key": "talento_classe_2_nome_display", "type": "label", "value": "<b>2. ${talento_classe_2_nome}$</b>" },
+        { "key": "talento_classe_2_descr", "type": "textArea" },
+        { "key": "talento_classe_2_descr_display", "type": "label", "value": "${talento_classe_2_descr}$" },
+        { "key": "is_configurado", "type": "checkbox", "defaultValue": false, "hidden": true },
+        { "key": "tipo_item", "type": "textField", "defaultValue": "classe", "hidden": true }
+      ]
+    }
+  }
+}

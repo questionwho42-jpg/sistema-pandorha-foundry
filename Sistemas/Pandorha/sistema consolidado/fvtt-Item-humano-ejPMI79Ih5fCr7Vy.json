@@ -1,0 +1,319 @@
+{
+  "name": "humano",
+  "type": "equippableItem",
+  "_id": "ejPMI79Ih5fCr7Vy",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "body": {
+      "contents": [
+        {
+          "type": "label",
+          "value": "<h2>Ancestralidade</h2>"
+        },
+        {
+          "type": "label",
+          "value": "DESCRIÇÃO"
+        },
+        {
+          "key": "anc_descricao",
+          "type": "textArea",
+          "tooltip": "Descrição geral da ancestralidade"
+        },
+        {
+          "type": "label",
+          "value": "LORE"
+        },
+        {
+          "key": "anc_lore",
+          "type": "textArea",
+          "tooltip": "História e cultura da ancestralidade"
+        },
+        {
+          "type": "label",
+          "value": "APARÊNCIA"
+        },
+        {
+          "key": "anc_aparencia",
+          "type": "textArea",
+          "tooltip": "Traços físicos e visuais típicos"
+        },
+        {
+          "type": "label",
+          "value": "BÔNUS DE EIXO"
+        },
+        {
+          "key": "anc_bonus_eixo",
+          "type": "textField",
+          "tooltip": "Ex: +1 Físico, +1 Mental"
+        },
+        {
+          "type": "label",
+          "value": "<h3>Capacidade Primordial</h3>"
+        },
+        {
+          "key": "capacidade_primordial_nome",
+          "type": "textField"
+        },
+        {
+          "key": "capacidade_primordial_descr",
+          "type": "textArea"
+        },
+        {
+          "type": "label",
+          "value": "<h3>Traços Disponíveis (10 opções)</h3>"
+        },
+        {
+          "type": "label",
+          "value": "Traço 1"
+        },
+        {
+          "key": "traco_op1_nome",
+          "type": "textField"
+        },
+        {
+          "key": "traco_op1_descr",
+          "type": "textArea",
+          "placeholder": "Descrição..."
+        },
+        {
+          "type": "label",
+          "value": "Traço 2"
+        },
+        {
+          "key": "traco_op2_nome",
+          "type": "textField"
+        },
+        {
+          "key": "traco_op2_descr",
+          "type": "textArea",
+          "placeholder": "Descrição..."
+        },
+        {
+          "type": "label",
+          "value": "Traço 3"
+        },
+        {
+          "key": "traco_op3_nome",
+          "type": "textField"
+        },
+        {
+          "key": "traco_op3_descr",
+          "type": "textArea",
+          "placeholder": "Descrição..."
+        },
+        {
+          "type": "label",
+          "value": "Traço 4"
+        },
+        {
+          "key": "traco_op4_nome",
+          "type": "textField"
+        },
+        {
+          "key": "traco_op4_descr",
+          "type": "textArea",
+          "placeholder": "Descrição..."
+        },
+        {
+          "type": "label",
+          "value": "Traço 5"
+        },
+        {
+          "key": "traco_op5_nome",
+          "type": "textField"
+        },
+        {
+          "key": "traco_op5_descr",
+          "type": "textArea",
+          "placeholder": "Descrição..."
+        },
+        {
+          "type": "label",
+          "value": "Traço 6"
+        },
+        {
+          "key": "traco_op6_nome",
+          "type": "textField"
+        },
+        {
+          "key": "traco_op6_descr",
+          "type": "textArea",
+          "placeholder": "Descrição..."
+        },
+        {
+          "type": "label",
+          "value": "Traço 7"
+        },
+        {
+          "key": "traco_op7_nome",
+          "type": "textField"
+        },
+        {
+          "key": "traco_op7_descr",
+          "type": "textArea",
+          "placeholder": "Descrição..."
+        },
+        {
+          "type": "label",
+          "value": "Traço 8"
+        },
+        {
+          "key": "traco_op8_nome",
+          "type": "textField"
+        },
+        {
+          "key": "traco_op8_descr",
+          "type": "textArea",
+          "placeholder": "Descrição..."
+        },
+        {
+          "type": "label",
+          "value": "Traço 9"
+        },
+        {
+          "key": "traco_op9_nome",
+          "type": "textField"
+        },
+        {
+          "key": "traco_op9_descr",
+          "type": "textArea",
+          "placeholder": "Descrição..."
+        },
+        {
+          "type": "label",
+          "value": "Traço 10"
+        },
+        {
+          "key": "traco_op10_nome",
+          "type": "textField"
+        },
+        {
+          "key": "traco_op10_descr",
+          "type": "textArea",
+          "placeholder": "Descrição..."
+        },
+        {
+          "type": "label",
+          "value": "<h3>Traços Selecionados pelo Jogador (Escolha 3)</h3>"
+        },
+        {
+          "type": "label",
+          "value": "Traço Selecionado 1"
+        },
+        {
+          "key": "traco_sel1_nome",
+          "type": "textField"
+        },
+        {
+          "key": "traco_sel1_descr",
+          "type": "textArea",
+          "placeholder": "Descrição..."
+        },
+        {
+          "type": "label",
+          "value": "Traço Selecionado 2"
+        },
+        {
+          "key": "traco_sel2_nome",
+          "type": "textField"
+        },
+        {
+          "key": "traco_sel2_descr",
+          "type": "textArea",
+          "placeholder": "Descrição..."
+        },
+        {
+          "type": "label",
+          "value": "Traço Selecionado 3"
+        },
+        {
+          "key": "traco_sel3_nome",
+          "type": "textField"
+        },
+        {
+          "key": "traco_sel3_descr",
+          "type": "textArea",
+          "placeholder": "Descrição..."
+        }
+      ],
+      "key": "",
+      "type": "panel"
+    },
+    "display": {
+      "width": 600,
+      "height": 600,
+      "fix_size": false,
+      "pp_width": 64,
+      "pp_height": 64
+    },
+    "header": {
+      "contents": [],
+      "key": "custom_header",
+      "type": "panel"
+    },
+    "hidden": [],
+    "modifiers": [],
+    "props": {
+      "anc_bonus_eixo": "Escolha +1 em um dos Eixos (Físico, Mental ou Social) OU +1 em uma das Aplicações (Interação, Conflito ou Resistência). Representa sua especialização precoce.",
+      "capacidade_primordial_nome": "Mente Inquieta: Sua mente absorve conhecimento rapidamente. Você ganha +1 Talento Geral adicional no Nível 1 e pode escolher +1 Aplicação extra (Interação, Conflito ou Resistência) para aumentar em +1.",
+      "traco_op1_nome": "Diligência Erudita",
+      "traco_op2_nome": "Língua de Prata",
+      "traco_op3_nome": "Vontade Indomável [R]",
+      "traco_op4_nome": "Maestria Improvisada",
+      "traco_op5_nome": "Memória de Mercador:",
+      "traco_op6_nome": "Imunidade Adaptativa",
+      "traco_op7_nome": "Sorte do Novato",
+      "traco_op8_nome": "Artífice de Ferro",
+      "traco_op9_nome": "Foco Cooperativo",
+      "traco_op10_nome": "Pensamento Estratégico [A]",
+      "traco_sel1_nome": "",
+      "traco_sel2_nome": "",
+      "traco_sel3_nome": "",
+      "anc_descricao": "<p><span style=\"color: rgb(248, 248, 242); font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(40, 40, 40); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none\">Os Humanos de Pandorha são definidos pela sua tenacidade sob pressão. Como habitantes de </span><span style=\"--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-scroll-snap-strictness: proximity; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / .5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; color: rgb(255, 255, 255); font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(40, 40, 40); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\">Morden, o Bastião da Tempestade</span><span style=\"color: rgb(248, 248, 242); font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(40, 40, 40); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none\">, eles aprenderam que a sobrevivência não é um direito, mas um cálculo constante. Em um mundo de mutações descontroladas, eles são os mestres do aço, da estratégia e da \"Pureza Técnica\".</span></p>",
+      "anc_lore": "<p><span data-source-line=\"5\" style=\"--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-scroll-snap-strictness: proximity; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / .5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; padding-left: 2em; margin-top: 0px; margin-bottom: 16px; list-style: disc; color: rgb(248, 248, 242); font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(40, 40, 40); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial\"><strong style=\"--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / .5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; color: rgb(255, 255, 255);\">Lore:</strong> Nascidos sob o <strong style=\"--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / .5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; color: rgb(255, 255, 255);\">Domo de Mara</strong>, os humanos construíram uma civilização vertical de metal e oração. Para eles, o Éter é uma ferramenta de defesa, e a economia de \"Peso em Aço\" dita quem respira e quem é reciclado. Eles veem a si mesmos como a última bússola moral de um mundo que esqueceu a forma original da vida.</span></p>",
+      "anc_aparencia": "<p>Aparência: Frequentemente usam trajes com reforços metálicos e dispositivos de respiração rúnica. Suas peles costumam ser palidificadas pela vida sob o domo, e muitos possuem tatuagens de \"Selos de Pureza\" na nuca ou pulsos.</p>",
+      "traco_op1_descr": "<p>Você possui uma facilidade natural com tarefas complexas. Ganha +2 em qualquer Teste Global cuja soma de bônus fixos (Nível + Eixo + Aplicação) já seja 10 ou superior.</p>",
+      "traco_op2_descr": "<p>Suas palavras têm peso. Você pode ganhar vantagem (rolar 2d20 e escolher o melhor) em um Teste Global de Social + Interação + Nível um número de vezes igual ao seu Eixo Social por Descanso Longo.</p>",
+      "traco_op3_descr": "<p>Quando seu HP chega a 0 pela primeira vez na cena, você pode gastar sua Reação para estabilizar automaticamente sem precisar rolar dados.</p>",
+      "traco_op4_descr": "<p>Você ignora a penalidade de -4 por usar ferramentas ou armas que não possua treinamento (Nível 0).</p>",
+      "traco_op5_descr": "<p>Você nunca esquece um rosto ou um preço. Ganha +2 em Testes Globais de Mental + Interação + Nível para lembrar fatos históricos ou identificar o valor real de itens de mercado.</p>",
+      "traco_op6_descr": "<p>Seu sistema imunológico evolui rapidamente. Você é imune a Doenças Comuns e ganha +2 de Resistência contra Toxinas Mágicas.</p>",
+      "traco_op7_descr": "<p>Uma vez por sessão, você pode rolar novamente um teste de Social + Interação que tenha resultado em uma Falha Crítica.</p>",
+      "traco_op8_descr": "<p>Você entende de engrenagens. O tempo necessário para construir, consertar ou modificar itens mundanos é reduzido pela metade.</p>",
+      "traco_op9_descr": "<p>Aliados em um raio de 1,5m de você ganham +1 de bônus em testes de Resistência Mental devido à sua presença centrada.</p>",
+      "traco_op10_descr": "<p>Gaste 1 Ação [A] para observar um inimigo. Seu próximo ataque contra ele ganha +2 de bônus no dado.</p>"
+    },
+    "unique": true,
+    "uniqueId": "ejPMI79Ih5fCr7Vy",
+    "template": "J6mpBPGRsWTLa4tT",
+    "templateSystemUniqueVersion": 3785503853
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "custom-system-builder": {
+      "version": "5.2.0"
+    }
+  },
+  "_stats": {
+    "compendiumSource": "Item.ejPMI79Ih5fCr7Vy",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "csb-pandorha-2",
+      "uuid": "Item.ejPMI79Ih5fCr7Vy",
+      "coreVersion": "13.351",
+      "systemId": "custom-system-builder",
+      "systemVersion": "5.2.0"
+    },
+    "coreVersion": "13.351",
+    "systemId": "custom-system-builder",
+    "systemVersion": "5.2.0",
+    "createdTime": 1773825201944,
+    "modifiedTime": 1773849767134,
+    "lastModifiedBy": "58DEjtRXCTRmOaun"
+  },
+  "items": [],
+  "ownership": {
+    "default": 0
+  }
+}

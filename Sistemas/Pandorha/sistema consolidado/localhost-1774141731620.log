@@ -1,0 +1,469 @@
+ _______________________________________________________________
+ _____ ___  _   _ _   _ ____  ______   __ __     _______ _____
+|  ___/ _ \| | | | \ | |  _ \|  _ \ \ / / \ \   / |_   _|_   _|
+| |_ | | | | | | |  \| | | | | |_) \ V /   \ \ / /  | |   | |
+|  _|| |_| | |_| | |\  | |_| |  _ < | |     \ V /   | |   | |
+|_|   \___/ \___/|_| \_|____/|_| \_\|_|      \_/    |_|   |_|
+===============================================================
+ Foundry VTT | Foundry Virtual Tabletop ESModule loaded
+ Foundry VTT | Reestablishing existing session d94559e6127db07691c9884a
+ Foundry VTT | Connected to server socket using session d94559e6127db07691c9884a
+ Foundry VTT | Initializing Foundry Virtual Tabletop Game
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-formula.hbs
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-info.hbs
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/_template/partials/icon-no-delimiters.hbs
+ Foundry VTT | Loaded localization file modules/popout/lang/pt-BR.json
+ Foundry VTT | Loaded localization file modules/pt-BR/lang/pt-BR.json
+ Foundry VTT | Loaded localization file modules/popout/lang/en.json
+ Foundry VTT | Loaded localization file lang/en.json
+ Foundry VTT | Loaded localization file systems/custom-system-builder/lang/en.json
+ Foundry VTT | Synchronized official game time in 1ms
+ Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ Custom System Builder | All props for Character (JQSCeMRfWBYwRp2I) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (Actor.JQSCeMRfWBYwRp2I).
+ Custom System Builder | Item template has been deleted for item Anão - Actor.SpWW4pln0EJ1BTXa.Item.w2GqoL3CUKq0ipHT used in Character (2) - Actor.SpWW4pln0EJ1BTXa
+_logToConsole @ Logger.js:39
+warn @ Logger.js:48
+getModifiers @ TemplateSystem.js:622
+_prepareEntityData @ TemplateSystem.js:198
+prepareData @ TemplateSystem.js:179
+prepareBaseData @ CustomActor.js:188
+prepareData @ foundry.mjs:32604
+prepareData @ foundry.mjs:41572
+_safePrepareData @ foundry.mjs:32566
+initializeDocuments @ foundry.mjs:169259
+setupGame @ foundry.mjs:169084
+ 
+onError @ foundry.mjs:23855
+_safePrepareData @ foundry.mjs:32568
+initializeDocuments @ foundry.mjs:169259
+setupGame @ foundry.mjs:169084
+ Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+ Custom System Builder | All props for Humano (zYan9vUPbGfsgjql) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Actor.DsuH3ouBXiVaexmF.Item.zYan9vUPbGfsgjql).
+ Custom System Builder | All props for Humano (zYan9vUPbGfsgjql) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Actor.DsuH3ouBXiVaexmF.Item.zYan9vUPbGfsgjql).
+ Custom System Builder | All props for Character (3) (DsuH3ouBXiVaexmF) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (3) (Actor.DsuH3ouBXiVaexmF).
+ Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+ Custom System Builder | All props for Humano (EwbghotuVGRvNDzb) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.EwbghotuVGRvNDzb).
+ Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+warn @ Logger.js:48
+_prepareEntityData @ TemplateSystem.js:331
+prepareData @ TemplateSystem.js:179
+prepareDerivedData @ CustomItem.js:317
+prepareData @ foundry.mjs:32607
+_safePrepareData @ foundry.mjs:32566
+prepareEmbeddedDocuments @ foundry.mjs:32629
+prepareEmbeddedDocuments @ foundry.mjs:41588
+prepareData @ foundry.mjs:32605
+prepareData @ foundry.mjs:41572
+_safePrepareData @ foundry.mjs:32566
+initializeDocuments @ foundry.mjs:169259
+setupGame @ foundry.mjs:169084
+ Custom System Builder | All props for Humano (EwbghotuVGRvNDzb) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.EwbghotuVGRvNDzb).
+ Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+ 
+onError @ foundry.mjs:23855
+_safePrepareData @ foundry.mjs:32568
+initializeDocuments @ foundry.mjs:169259
+setupGame @ foundry.mjs:169084
+ 
+onError @ foundry.mjs:23855
+_safePrepareData @ foundry.mjs:32568
+initializeDocuments @ foundry.mjs:169259
+setupGame @ foundry.mjs:169084
+ Custom System Builder | All props for Acólito (4ExyEL6QwxVqQbXR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Acólito (Item.4ExyEL6QwxVqQbXR).
+ Custom System Builder | All props for Acólito (4ExyEL6QwxVqQbXR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Acólito (Item.4ExyEL6QwxVqQbXR).
+ Custom System Builder | All props for Anão (qxwHDdOfFTYveD1F) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anão (Item.qxwHDdOfFTYveD1F).
+ Custom System Builder | All props for Anão (qxwHDdOfFTYveD1F) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anão (Item.qxwHDdOfFTYveD1F).
+ Custom System Builder | All props for Aristocrata (39iasryXewEk1lob) computed in 1 loops.
+ Custom System Builder | Done preparing data for Aristocrata (Item.39iasryXewEk1lob).
+ Custom System Builder | All props for Aristocrata (39iasryXewEk1lob) computed in 1 loops.
+ Custom System Builder | Done preparing data for Aristocrata (Item.39iasryXewEk1lob).
+ Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+ Custom System Builder | All props for Caçador (NTSnCjsCdP3jVJS6) computed in 1 loops.
+ Custom System Builder | Done preparing data for Caçador (Item.NTSnCjsCdP3jVJS6).
+ Custom System Builder | All props for Criminoso (ZW3higi65kBf5TVr) computed in 1 loops.
+ Custom System Builder | Done preparing data for Criminoso (Item.ZW3higi65kBf5TVr).
+ Custom System Builder | All props for Criminoso (ZW3higi65kBf5TVr) computed in 1 loops.
+ Custom System Builder | Done preparing data for Criminoso (Item.ZW3higi65kBf5TVr).
+ Custom System Builder | All props for Drakari (shVBZwdkdkjpf1kC) computed in 1 loops.
+ Custom System Builder | Done preparing data for Drakari (Item.shVBZwdkdkjpf1kC).
+ Custom System Builder | All props for Drakari (shVBZwdkdkjpf1kC) computed in 1 loops.
+ Custom System Builder | Done preparing data for Drakari (Item.shVBZwdkdkjpf1kC).
+ Custom System Builder | All props for Elfo (ZlxcOdSHpeQxUXHR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfo (Item.ZlxcOdSHpeQxUXHR).
+ Custom System Builder | All props for Elfo (ZlxcOdSHpeQxUXHR) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfo (Item.ZlxcOdSHpeQxUXHR).
+ Custom System Builder | All props for Emissário (5xRxdGRw2qXCDTQH) computed in 1 loops.
+ Custom System Builder | Done preparing data for Emissário (Item.5xRxdGRw2qXCDTQH).
+ Custom System Builder | All props for Emissário (5xRxdGRw2qXCDTQH) computed in 1 loops.
+ Custom System Builder | Done preparing data for Emissário (Item.5xRxdGRw2qXCDTQH).
+ Custom System Builder | All props for Erudito (HLYTWbr0JT6rxzIE) computed in 1 loops.
+ Custom System Builder | Done preparing data for Erudito (Item.HLYTWbr0JT6rxzIE).
+ Custom System Builder | All props for Erudito (HLYTWbr0JT6rxzIE) computed in 1 loops.
+ Custom System Builder | Done preparing data for Erudito (Item.HLYTWbr0JT6rxzIE).
+ Custom System Builder | All props for Fera (rmFryzZ6gfRECM2r) computed in 1 loops.
+ Custom System Builder | Done preparing data for Fera (Item.rmFryzZ6gfRECM2r).
+ Custom System Builder | All props for Fera (rmFryzZ6gfRECM2r) computed in 1 loops.
+ Custom System Builder | Done preparing data for Fera (Item.rmFryzZ6gfRECM2r).
+ Custom System Builder | All props for Humano (P5lU90aOgYigjRoJ) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Item.P5lU90aOgYigjRoJ).
+ Custom System Builder | All props for Humano (P5lU90aOgYigjRoJ) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Item.P5lU90aOgYigjRoJ).
+ Custom System Builder | All props for Soldado Veterano (fJ8UP5bHt4XuQ1Uz) computed in 1 loops.
+ Custom System Builder | Done preparing data for Soldado Veterano (Item.fJ8UP5bHt4XuQ1Uz).
+ Custom System Builder | All props for Soldado Veterano (fJ8UP5bHt4XuQ1Uz) computed in 1 loops.
+ Custom System Builder | Done preparing data for Soldado Veterano (Item.fJ8UP5bHt4XuQ1Uz).
+ Custom System Builder | All props for Tecelão de Sombras (6s0iH1asc4yD0Lre) computed in 1 loops.
+ Custom System Builder | Done preparing data for Tecelão de Sombras (Item.6s0iH1asc4yD0Lre).
+ Custom System Builder | All props for Tecelão de Sombras (6s0iH1asc4yD0Lre) computed in 1 loops.
+ Custom System Builder | Done preparing data for Tecelão de Sombras (Item.6s0iH1asc4yD0Lre).
+ Custom System Builder | All props for Umbral (HYyQn7eW6ztMv85T) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbral (Item.HYyQn7eW6ztMv85T).
+ Custom System Builder | All props for Umbral (HYyQn7eW6ztMv85T) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbral (Item.HYyQn7eW6ztMv85T).
+ Custom System Builder | All props for Vanguarda (OLT80ojrOk3d2UZs) computed in 1 loops.
+ Custom System Builder | Done preparing data for Vanguarda (Item.OLT80ojrOk3d2UZs).
+ Custom System Builder | All props for Vanguarda (OLT80ojrOk3d2UZs) computed in 1 loops.
+ Custom System Builder | Done preparing data for Vanguarda (Item.OLT80ojrOk3d2UZs).
+ Custom System Builder | All props for humus (5Jp0lM1urARrtLY0) computed in 1 loops.
+ Custom System Builder | Done preparing data for humus (Item.5Jp0lM1urARrtLY0).
+ Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+warn @ Logger.js:48
+_prepareEntityData @ TemplateSystem.js:331
+prepareData @ TemplateSystem.js:179
+prepareDerivedData @ CustomItem.js:317
+prepareData @ foundry.mjs:32607
+_safePrepareData @ foundry.mjs:32566
+initializeDocuments @ foundry.mjs:169259
+setupGame @ foundry.mjs:169084
+ Custom System Builder | All props for humus (5Jp0lM1urARrtLY0) computed in 1 loops.
+ Custom System Builder | Done preparing data for humus (Item.5Jp0lM1urARrtLY0).
+ Foundry VTT | Retrieved and compiled template templates/ui/scene-navigation.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tab.hbs
+ Foundry VTT | Retrieved and compiled template templates/ui/players.hbs
+ Foundry VTT | Retrieved and compiled template templates/ui/hotbar.hbs
+ Foundry VTT | Retrieved and compiled template templates/ui/scene-controls-layers.hbs
+ Foundry VTT | Retrieved and compiled template templates/ui/scene-controls-tools.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/log.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/notifications.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/chat/input.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/header.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/tracker.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/combat/footer.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/directory/header.hbs
+ Foundry VTT | Fonts loaded and ready.
+ Foundry VTT | Viewing Scene Cena
+ Foundry VTT | Retrieved and compiled template templates/sidebar/directory/directory.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/partials/scene-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/partials/folder-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/directory/footer.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/partials/document-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/controls.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playlist-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/playing.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/playlist/sound-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/compendiums.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/partials/pack-partial.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/tabs/settings.hbs
+ Foundry VTT | Retrieved and compiled template templates/sidebar/chat-message.hbs
+ Foundry VTT | Drawing game canvas for scene Cena
+ Foundry VTT | Loading 51 Assets
+ Foundry VTT | Drawing the HiddenCanvasGroup canvas group
+ Foundry VTT | Drawing the RenderedCanvasGroup canvas group
+ Foundry VTT | Drawing the EnvironmentCanvasGroup canvas group
+ Foundry VTT | Drawing the PrimaryCanvasGroup canvas group
+ Foundry VTT | Drawing the WeatherEffects canvas layer
+ Foundry VTT | Drawing the EffectsCanvasGroup canvas group
+ Foundry VTT | Drawing the CanvasBackgroundAlterationEffects canvas layer
+ Foundry VTT | Drawing the CanvasIlluminationEffects canvas layer
+ Foundry VTT | Drawing the CanvasColorationEffects canvas layer
+ Foundry VTT | Drawing the CanvasDarknessEffects canvas layer
+ Foundry VTT | Drawing the CanvasVisibility canvas group
+ Worker TextureCompressor of FogExtractor | Initialized Worker
+ Foundry VTT | Drawing the InterfaceCanvasGroup canvas group
+ Foundry VTT | Drawing the GridLayer canvas layer
+ Foundry VTT | Drawing the RegionLayer canvas layer
+ Foundry VTT | Drawing the DrawingsLayer canvas layer
+ Foundry VTT | Drawing the TemplateLayer canvas layer
+ Foundry VTT | Drawing the TilesLayer canvas layer
+ Foundry VTT | Drawing the WallsLayer canvas layer
+ Foundry VTT | Drawing the TokenLayer canvas layer
+ Foundry VTT | Drawing the SoundsLayer canvas layer
+ Foundry VTT | Drawing the LightingLayer canvas layer
+ Foundry VTT | Drawing the NotesLayer canvas layer
+ Foundry VTT | Drawing the ControlsLayer canvas layer
+ Foundry VTT | Retrieved and compiled template templates/hud/waypoint-label.hbs
+ Foundry VTT | Drawing the OverlayCanvasGroup canvas group
+ Applying buffered socket event: userActivity
+ O Foundry Virtual Tabletop requer uma janela utilizável com dimensões de 1024px por 768px ou maiores. As dimensões atuais desta janela são 982px por 794px. No momento, você tem um fator de zoom aplicado no sistema operacional ou no navegador, o que está reduzindo o tamanho efetivo da sua janela. Você deve aumentar o tamanho da sua janela ou reduzir o fator de zoom aplicado ao seu navegador, caso contrário, alguns recursos do software não funcionarão corretamente. 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+#validateResolution @ foundry.mjs:166558
+_detectUsabilityIssues @ foundry.mjs:166634
+initialize @ foundry.mjs:169029
+ Foundry VTT | Retrieved and compiled template templates/sheets/macro-config.hbs
+ Foundry VTT | Retrieved and compiled template templates/generic/form-footer.hbs
+ PANDORHA | Gatilho de Ancestralidade Ativado!
+ Custom System Builder | All props for Humanos (null) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humanos (null).
+ Custom System Builder | All props for Humanos (null) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humanos (null).
+ Custom System Builder | All props for Humanos (tXVEQWwz42UmZaEU) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humanos (Item.tXVEQWwz42UmZaEU).
+ Custom System Builder | All props for Humanos (tXVEQWwz42UmZaEU) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humanos (Item.tXVEQWwz42UmZaEU).
+ PANDORHA | Criado: Humanos
+ Custom System Builder | All props for Elfos (null) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfos (null).
+ Custom System Builder | All props for Elfos (null) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfos (null).
+ Custom System Builder | All props for Humanos (tXVEQWwz42UmZaEU) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humanos (Item.tXVEQWwz42UmZaEU).
+ Custom System Builder | All props for Humanos (tXVEQWwz42UmZaEU) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humanos (Item.tXVEQWwz42UmZaEU).
+ Custom System Builder | All props for Humanos (tXVEQWwz42UmZaEU) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humanos (Item.tXVEQWwz42UmZaEU).
+ Custom System Builder | All props for Humanos (tXVEQWwz42UmZaEU) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humanos (Item.tXVEQWwz42UmZaEU).
+ Custom System Builder | All props for Elfos (QNilPqHghmTXc0Qn) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfos (Item.QNilPqHghmTXc0Qn).
+ Custom System Builder | All props for Elfos (QNilPqHghmTXc0Qn) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfos (Item.QNilPqHghmTXc0Qn).
+ PANDORHA | Criado: Elfos
+ Custom System Builder | All props for Anões (null) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anões (null).
+ Custom System Builder | All props for Anões (null) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anões (null).
+ Custom System Builder | All props for Elfos (QNilPqHghmTXc0Qn) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfos (Item.QNilPqHghmTXc0Qn).
+ Custom System Builder | All props for Elfos (QNilPqHghmTXc0Qn) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfos (Item.QNilPqHghmTXc0Qn).
+ Custom System Builder | All props for Elfos (QNilPqHghmTXc0Qn) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfos (Item.QNilPqHghmTXc0Qn).
+ Custom System Builder | All props for Elfos (QNilPqHghmTXc0Qn) computed in 1 loops.
+ Custom System Builder | Done preparing data for Elfos (Item.QNilPqHghmTXc0Qn).
+ Custom System Builder | All props for Anões (XnhirrnPUTiv3qrP) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anões (Item.XnhirrnPUTiv3qrP).
+ Custom System Builder | All props for Anões (XnhirrnPUTiv3qrP) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anões (Item.XnhirrnPUTiv3qrP).
+ PANDORHA | Criado: Anões
+ Custom System Builder | All props for Anões (XnhirrnPUTiv3qrP) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anões (Item.XnhirrnPUTiv3qrP).
+ Custom System Builder | All props for Anões (XnhirrnPUTiv3qrP) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anões (Item.XnhirrnPUTiv3qrP).
+ Custom System Builder | All props for Anões (XnhirrnPUTiv3qrP) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anões (Item.XnhirrnPUTiv3qrP).
+ Custom System Builder | All props for Anões (XnhirrnPUTiv3qrP) computed in 1 loops.
+ Custom System Builder | Done preparing data for Anões (Item.XnhirrnPUTiv3qrP).
+ Custom System Builder | All props for Drakari (shVBZwdkdkjpf1kC) computed in 1 loops.
+ Custom System Builder | Done preparing data for Drakari (Item.shVBZwdkdkjpf1kC).
+ Custom System Builder | All props for Drakari (shVBZwdkdkjpf1kC) computed in 1 loops.
+ Custom System Builder | Done preparing data for Drakari (Item.shVBZwdkdkjpf1kC).
+ PANDORHA | Sincronizado: Drakari
+ Custom System Builder | All props for Umbrais (null) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbrais (null).
+ Custom System Builder | All props for Umbrais (null) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbrais (null).
+ Custom System Builder | All props for Umbrais (IKCvydB9ytd45Tcz) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbrais (Item.IKCvydB9ytd45Tcz).
+ Custom System Builder | All props for Umbrais (IKCvydB9ytd45Tcz) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbrais (Item.IKCvydB9ytd45Tcz).
+ PANDORHA | Criado: Umbrais
+ Custom System Builder | All props for Feras (null) computed in 1 loops.
+ Custom System Builder | Done preparing data for Feras (null).
+ Custom System Builder | All props for Feras (null) computed in 1 loops.
+ Custom System Builder | Done preparing data for Feras (null).
+ Custom System Builder | All props for Umbrais (IKCvydB9ytd45Tcz) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbrais (Item.IKCvydB9ytd45Tcz).
+ Custom System Builder | All props for Umbrais (IKCvydB9ytd45Tcz) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbrais (Item.IKCvydB9ytd45Tcz).
+ Custom System Builder | All props for Umbrais (IKCvydB9ytd45Tcz) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbrais (Item.IKCvydB9ytd45Tcz).
+ Custom System Builder | All props for Umbrais (IKCvydB9ytd45Tcz) computed in 1 loops.
+ Custom System Builder | Done preparing data for Umbrais (Item.IKCvydB9ytd45Tcz).
+ Custom System Builder | All props for Feras (SZpl3j8DXUUT0HdM) computed in 1 loops.
+ Custom System Builder | Done preparing data for Feras (Item.SZpl3j8DXUUT0HdM).
+ Custom System Builder | All props for Feras (SZpl3j8DXUUT0HdM) computed in 1 loops.
+ Custom System Builder | Done preparing data for Feras (Item.SZpl3j8DXUUT0HdM).
+ PANDORHA | Criado: Feras
+ Sincronização Pandorha v1.4 Concluída! Gatilho do Seletor Ativo. 
+ Custom System Builder | All props for Feras (SZpl3j8DXUUT0HdM) computed in 1 loops.
+ Custom System Builder | Done preparing data for Feras (Item.SZpl3j8DXUUT0HdM).
+ Custom System Builder | All props for Feras (SZpl3j8DXUUT0HdM) computed in 1 loops.
+ Custom System Builder | Done preparing data for Feras (Item.SZpl3j8DXUUT0HdM).
+ Custom System Builder | All props for Feras (SZpl3j8DXUUT0HdM) computed in 1 loops.
+ Custom System Builder | Done preparing data for Feras (Item.SZpl3j8DXUUT0HdM).
+ Custom System Builder | All props for Feras (SZpl3j8DXUUT0HdM) computed in 1 loops.
+ Custom System Builder | Done preparing data for Feras (Item.SZpl3j8DXUUT0HdM).
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/actor/v2/actor-character-sheet.hbs
+ Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+ Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+ Foundry VTT | Retrieved and compiled template systems/custom-system-builder/templates/item/v2/equippableItem-sheet.hbs
+ Custom System Builder | All props for Humanos (tXVEQWwz42UmZaEU) computed in 2 loops.
+ Custom System Builder | Done preparing data for Humanos (Item.tXVEQWwz42UmZaEU).
+ Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | All props for Humanos (tXVEQWwz42UmZaEU) computed in 2 loops.
+ Custom System Builder | Done preparing data for Humanos (Item.tXVEQWwz42UmZaEU).
+ Custom System Builder | All props for Humanos (tXVEQWwz42UmZaEU) computed in 2 loops.
+ Custom System Builder | Done preparing data for Humanos (Item.tXVEQWwz42UmZaEU).
+ Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | All props for Humanos (tXVEQWwz42UmZaEU) computed in 2 loops.
+ Custom System Builder | Done preparing data for Humanos (Item.tXVEQWwz42UmZaEU).
+ Custom System Builder | All props for Humanos (tXVEQWwz42UmZaEU) computed in 2 loops.
+ Custom System Builder | Done preparing data for Humanos (Item.tXVEQWwz42UmZaEU).
+ Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | All props for Humanos (tXVEQWwz42UmZaEU) computed in 2 loops.
+ Custom System Builder | Done preparing data for Humanos (Item.tXVEQWwz42UmZaEU).
+ Custom System Builder | Created item contents QPQYDpv33Ktpm9Gv
+ Custom System Builder | All props for Humanos (QPQYDpv33Ktpm9Gv) computed in 2 loops.
+ Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.QPQYDpv33Ktpm9Gv).
+ Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | All props for Humanos (QPQYDpv33Ktpm9Gv) computed in 2 loops.
+ Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.QPQYDpv33Ktpm9Gv).
+ Custom System Builder | All props for Humanos (QPQYDpv33Ktpm9Gv) computed in 2 loops.
+ Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.QPQYDpv33Ktpm9Gv).
+ Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | All props for Humanos (QPQYDpv33Ktpm9Gv) computed in 2 loops.
+ Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.QPQYDpv33Ktpm9Gv).
+ Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+ Custom System Builder | All props for Humanos (QPQYDpv33Ktpm9Gv) computed in 2 loops.
+ Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.QPQYDpv33Ktpm9Gv).
+ Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+ Custom System Builder | All props for Humanos (QPQYDpv33Ktpm9Gv) computed in 2 loops.
+ Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.QPQYDpv33Ktpm9Gv).
+ Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+ Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+ Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+ Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+ Custom System Builder | All props for Humano (P5lU90aOgYigjRoJ) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Item.P5lU90aOgYigjRoJ).
+ Custom System Builder | All props for Humano (P5lU90aOgYigjRoJ) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Item.P5lU90aOgYigjRoJ).
+ Custom System Builder | Created item contents ZvDNJCvHSpKfX0sM
+ Custom System Builder | All props for Humano (ZvDNJCvHSpKfX0sM) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.ZvDNJCvHSpKfX0sM).
+ Custom System Builder | All props for Humano (ZvDNJCvHSpKfX0sM) computed in 1 loops.
+ Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.ZvDNJCvHSpKfX0sM).
+Logger.js:39 Custom System Builder | All props for Humano (ZvDNJCvHSpKfX0sM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.ZvDNJCvHSpKfX0sM).
+Logger.js:39 Custom System Builder | All props for Humano (ZvDNJCvHSpKfX0sM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.ZvDNJCvHSpKfX0sM).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | All props for Humano (ZvDNJCvHSpKfX0sM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.ZvDNJCvHSpKfX0sM).
+Logger.js:39 Custom System Builder | All props for Humano (ZvDNJCvHSpKfX0sM) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.ZvDNJCvHSpKfX0sM).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.RV8sLBcwJuV1V7MW anc_descricao_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.RV8sLBcwJuV1V7MW anc_lore_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.RV8sLBcwJuV1V7MW anc_aparencia_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.RV8sLBcwJuV1V7MW anc_bonus_eixo_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.RV8sLBcwJuV1V7MW capacidade_primordial_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.RV8sLBcwJuV1V7MW capacidade_primordial_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.RV8sLBcwJuV1V7MW traco_sel1_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.RV8sLBcwJuV1V7MW traco_sel1_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.RV8sLBcwJuV1V7MW traco_sel2_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.RV8sLBcwJuV1V7MW traco_sel2_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.RV8sLBcwJuV1V7MW traco_sel3_nome_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | Component not found in linkedEntity undefined Actor.RV8sLBcwJuV1V7MW traco_sel3_descr_display CustomItem
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | All props for Humano (P5lU90aOgYigjRoJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.P5lU90aOgYigjRoJ).
+Logger.js:39 Custom System Builder | All props for Humano (P5lU90aOgYigjRoJ) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Item.P5lU90aOgYigjRoJ).
+Logger.js:39 Custom System Builder | Created item contents uuv6vhDvm5nvndqL
+Logger.js:39 Custom System Builder | All props for Humano (uuv6vhDvm5nvndqL) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.uuv6vhDvm5nvndqL).
+Logger.js:39 Custom System Builder | All props for Humano (uuv6vhDvm5nvndqL) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.uuv6vhDvm5nvndqL).
+Logger.js:39 Custom System Builder | All props for Humano (uuv6vhDvm5nvndqL) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.uuv6vhDvm5nvndqL).
+Logger.js:39 Custom System Builder | All props for Humano (uuv6vhDvm5nvndqL) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.uuv6vhDvm5nvndqL).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | All props for Humano (uuv6vhDvm5nvndqL) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.uuv6vhDvm5nvndqL).
+Logger.js:39 Custom System Builder | All props for Humano (uuv6vhDvm5nvndqL) computed in 1 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humano (Actor.RV8sLBcwJuV1V7MW.Item.uuv6vhDvm5nvndqL).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | Created item contents 0NrdV0ljnf5Vp2fl
+Logger.js:39 Custom System Builder | All props for Humanos (0NrdV0ljnf5Vp2fl) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.0NrdV0ljnf5Vp2fl).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Humanos (0NrdV0ljnf5Vp2fl) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.0NrdV0ljnf5Vp2fl).
+Logger.js:39 Custom System Builder | All props for Humanos (0NrdV0ljnf5Vp2fl) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.0NrdV0ljnf5Vp2fl).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Humanos (0NrdV0ljnf5Vp2fl) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.0NrdV0ljnf5Vp2fl).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+Logger.js:39 Custom System Builder | All props for Humanos (0NrdV0ljnf5Vp2fl) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.0NrdV0ljnf5Vp2fl).
+Logger.js:39 Custom System Builder | Some props were not computed. Object
+_logToConsole @ Logger.js:39
+Logger.js:39 Custom System Builder | All props for Humanos (0NrdV0ljnf5Vp2fl) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Humanos (Actor.RV8sLBcwJuV1V7MW.Item.0NrdV0ljnf5Vp2fl).
+Logger.js:39 Custom System Builder | All props for Character (4) (RV8sLBcwJuV1V7MW) computed in 2 loops.
+Logger.js:39 Custom System Builder | Done preparing data for Character (4) (Actor.RV8sLBcwJuV1V7MW).
+foundry.mjs:115132 O Foundry Virtual Tabletop requer uma janela utilizável com dimensões de 1024px por 768px ou maiores. As dimensões atuais desta janela são 982px por 794px. No momento, você tem um fator de zoom aplicado no sistema operacional ou no navegador, o que está reduzindo o tamanho efetivo da sua janela. Você deve aumentar o tamanho da sua janela ou reduzir o fator de zoom aplicado ao seu navegador, caso contrário, alguns recursos do software não funcionarão corretamente. 
+#fetch @ foundry.mjs:115132
+notify @ foundry.mjs:114991
+error @ foundry.mjs:115031
+#validateResolution @ foundry.mjs:166558
+(anonymous) @ foundry.mjs:692

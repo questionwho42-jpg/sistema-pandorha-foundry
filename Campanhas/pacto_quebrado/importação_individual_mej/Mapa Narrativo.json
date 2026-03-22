@@ -1,0 +1,23 @@
+{
+    "name": "Mapa Narrativo",
+    "pages": [
+        {
+            "name": "Mapa Narrativo",
+            "type": "text",
+            "text": {
+                "content": "<h3>Mapa Narrativo</h3><br>```<br>[Entrada Principal] → [Pátio Exterior]<br>                         ↓   ↓<br>           [Sentinela Leste]  [Sentinela Oeste]<br>                         ↓<br>               [Salões Internos]<br>              ↙      ↓       ↘<br>    [Armaria] [Salão Central] [Biblioteca]<br>                    ↓              ↓<br>            [Parede Falsa]    [Painel Rúnico]<br>            (Bigorna oculta)       ↓<br>                         [Câmara Profunda]<br>                              ↓<br>                    [Selo do Núcleo Solar]<br>                         (SELADO)<br>```<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "place"
+                }
+            }
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "type": "place"
+        }
+    }
+}

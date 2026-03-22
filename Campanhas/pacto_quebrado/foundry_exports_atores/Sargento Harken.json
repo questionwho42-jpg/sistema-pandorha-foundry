@@ -1,0 +1,49 @@
+{
+    "name": "Sargento Harken",
+    "type": "monster",
+    "system": {
+        "eixos": {
+            "fisico": 2,
+            "mental": 0,
+            "social": 0,
+            "conflito": 2,
+            "interacao": 0,
+            "resistencia": 0
+        },
+        "resources": {
+            "hp": {
+                "value": 28,
+                "max": 28
+            },
+            "pv": {
+                "value": 5,
+                "max": 5
+            },
+            "ee": {
+                "value": 5,
+                "max": 5
+            }
+        },
+        "defenses": {
+            "ca": {
+                "value": 18
+            }
+        },
+        "derived": {
+            "initiative": {
+                "value": 2
+            }
+        }
+    },
+    "items": [
+        {
+            "name": "Ataque",
+            "type": "weapon",
+            "system": {
+                "description": {
+                    "value": "Descrição"
+                }
+            }
+        }
+    ]
+}

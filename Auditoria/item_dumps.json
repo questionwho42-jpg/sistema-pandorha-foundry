@@ -1,0 +1,370 @@
+{
+    "Aterrorizado": {
+        "_id": "iXL1CD5Y95CGRZBO",
+        "name": "Aterrorizado",
+        "type": "condition",
+        "img": "icons/svg/book.svg",
+        "system": {
+            "description": "<p>Foge com todas as ações. -2 em testes.</p><p>Remo��o: Teste Global de [Mental + Resistência + Nível DC da Fonte] (Fim do Turno).</p>",
+            "details": {
+                "source": "Pandorha",
+                "category": "",
+                "requirements": "",
+                "tags": []
+            },
+            "activation": {
+                "cost": "",
+                "type": ""
+            },
+            "range": "",
+            "duration": "",
+            "target": "",
+            "check": "",
+            "dc": "",
+            "damage": "",
+            "effect": "Foge com todas as ações. -2 em testes.",
+            "roll": {
+                "axis": "",
+                "aplicacao": "",
+                "bonus": 0,
+                "isAttack": false
+            },
+            "components": "",
+            "school": "",
+            "circle": 0,
+            "level": 0,
+            "price": "",
+            "quantity": 1,
+            "equipped": false,
+            "slotCost": 0,
+            "weapon": {
+                "damage": "",
+                "tags": [],
+                "range": "",
+                "type": "",
+                "hands": 1
+            },
+            "armor": {
+                "bonus": 0,
+                "penalty": "",
+                "tags": [],
+                "maxAxis": 0
+            },
+            "shield": {
+                "bonus": 0,
+                "tags": [],
+                "type": ""
+            },
+            "rune": {
+                "grade": "",
+                "effects": ""
+            },
+            "classData": {
+                "baseHp": 0,
+                "basePv": 0,
+                "baseEe": 0,
+                "trainedWeapons": [],
+                "trainedArmors": [],
+                "trainedShields": []
+            }
+        }
+    },
+    "Exposto": {
+        "_id": "ccxXqid3gCPGHWbh",
+        "name": "Exposto",
+        "type": "condition",
+        "img": "icons/svg/book.svg",
+        "system": {
+            "description": "<p>-2 CA.</p><p>Remo��o: Ao sair de Flanco ou fim da habilidade.</p>",
+            "details": {
+                "source": "Pandorha",
+                "category": "",
+                "requirements": "",
+                "tags": []
+            },
+            "activation": {
+                "cost": "",
+                "type": ""
+            },
+            "range": "",
+            "duration": "",
+            "target": "",
+            "check": "",
+            "dc": "",
+            "damage": "",
+            "effect": "-2 CA.",
+            "roll": {
+                "axis": "",
+                "aplicacao": "",
+                "bonus": 0,
+                "isAttack": false
+            },
+            "components": "",
+            "school": "",
+            "circle": 0,
+            "level": 0,
+            "price": "",
+            "quantity": 1,
+            "equipped": false,
+            "slotCost": 0,
+            "weapon": {
+                "damage": "",
+                "tags": [],
+                "range": "",
+                "type": "",
+                "hands": 1
+            },
+            "armor": {
+                "bonus": 0,
+                "penalty": "",
+                "tags": [],
+                "maxAxis": 0
+            },
+            "shield": {
+                "bonus": 0,
+                "tags": [],
+                "type": ""
+            },
+            "rune": {
+                "grade": "",
+                "effects": ""
+            },
+            "classData": {
+                "baseHp": 0,
+                "basePv": 0,
+                "baseEe": 0,
+                "trainedWeapons": [],
+                "trainedArmors": [],
+                "trainedShields": []
+            }
+        }
+    },
+    "Raio de Gelo": {
+        "_id": "DDd48NDqAyWIkszE",
+        "name": "Raio de Gelo",
+        "type": "spell",
+        "img": "icons/svg/book.svg",
+        "system": {
+            "description": "<p>- **Escola:** Evocação\r<br>- **Tempo:** 2 Ações [AA]\r<br>- **Alcance:** 18 metros\r<br>- **Componentes:** V, S\r<br>- **Duração:** Instantânea\r</p><p>Um raio de luz branco-azulada parte em direção a uma criatura ao alcance. Faça um Ataque Mágico à distância (`[d20] + [Nível] + [Mental] + [Conflito] + [Item]`). Se acertar, causa **1d8 de dano de Frio** e o deslocamento do alvo é reduzido em 3m até o início do seu próximo turno.\r</p><p>---</p>",
+            "details": {
+                "source": "Pandorha",
+                "category": "",
+                "requirements": "",
+                "tags": []
+            },
+            "activation": {
+                "cost": "2 Ações [AA]",
+                "type": ""
+            },
+            "range": "18 metros",
+            "duration": "",
+            "target": "",
+            "check": "",
+            "dc": "",
+            "damage": "1d8",
+            "effect": "",
+            "roll": {
+                "axis": "mental",
+                "aplicacao": "conflito",
+                "bonus": 0,
+                "isAttack": true
+            },
+            "components": "V, S",
+            "school": "Evocação",
+            "circle": 0,
+            "level": 0,
+            "price": "",
+            "quantity": 1,
+            "equipped": false,
+            "slotCost": 0,
+            "weapon": {
+                "damage": "",
+                "tags": [],
+                "range": "",
+                "type": "",
+                "hands": 1
+            },
+            "armor": {
+                "bonus": 0,
+                "penalty": "",
+                "tags": [],
+                "maxAxis": 0
+            },
+            "shield": {
+                "bonus": 0,
+                "tags": [],
+                "type": ""
+            },
+            "rune": {
+                "grade": "",
+                "effects": ""
+            },
+            "classData": {
+                "baseHp": 0,
+                "basePv": 0,
+                "baseEe": 0,
+                "trainedWeapons": [],
+                "trainedArmors": [],
+                "trainedShields": []
+            }
+        }
+    },
+    "Enxame de Ratos": {
+        "_id": "YmFnMOgeIv2sMDSS",
+        "name": "Enxame de Ratos",
+        "type": "monster",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>**História:**\r<br>Uma massa de centenas de ratos comuns que se movem e pensam como um só organismo faminto. Eles cobrem o chão, subindo pelas pernas e mordendo em mil pontos simultâneos.\r</p><p>**Descrição Visual:**\r<br>Um tapete vivo de pelos cinzentos e caudas rosadas que chia e se contorce. O som de milhares de patas arranhando a pedra é enlouquecedor.\r</p><p>**Ficha Técnica:**\r</p><p>- **Iniciativa:** +2 (Instinto Coletivo).\r<br>- **HP:** 25 | **CA:** 10.\r<br>- **Eixos:** Físico +2, Mental -4, Social -4.\r<br>- **Aplicações:** Conflito +2, Resistência +2, Interação 0.\r<br>- **Passiva:** Resistente a ataques de alvo único. Ocupa espaço da vítima. O enxame age com instinto sobrenatural (+2 Iniciativa).\r<br>- **[A] Mordidas em Massa:** Ataque Automático (Sem rolagem). Qualquer criatura no espaço do enxame sofre **2d6 Perfurante** no início do turno do Enxame.</p>",
+            "details": {
+                "biography": "<p>**História:**\r<br>Uma massa de centenas de ratos comuns que se movem e pensam como um só organismo faminto. Eles cobrem o chão, subindo pelas pernas e mordendo em mil pontos simultâneos.\r</p><p>**Descrição Visual:**\r<br>Um tapete vivo de pelos cinzentos e caudas rosadas que chia e se contorce. O som de milhares de patas arranhando a pedra é enlouquecedor.\r</p><p>**Ficha Técnica:**\r</p><p>- **Iniciativa:** +2 (Instinto Coletivo).\r<br>- **HP:** 25 | **CA:** 10.\r<br>- **Eixos:** Físico +2, Mental -4, Social -4.\r<br>- **Aplicações:** Conflito +2, Resistência +2, Interação 0.\r<br>- **Passiva:** Resistente a ataques de alvo único. Ocupa espaço da vítima. O enxame age com instinto sobrenatural (+2 Iniciativa).\r<br>- **[A] Mordidas em Massa:** Ataque Automático (Sem rolagem). Qualquer criatura no espaço do enxame sofre **2d6 Perfurante** no início do turno do Enxame.</p>",
+                "notes": "",
+                "ancestry": "",
+                "class": "",
+                "background": "",
+                "crest": "",
+                "portrait": ""
+            },
+            "attributes": {
+                "level": 1,
+                "xp": 0,
+                "tier": 1
+            },
+            "eixos": {
+                "fisico": 0,
+                "mental": 0,
+                "social": 0
+            },
+            "aplicacoes": {
+                "conflito": 0,
+                "interacao": 0,
+                "resistencia": 0
+            },
+            "potencial": 0,
+            "resources": {
+                "hp": {
+                    "value": 25,
+                    "max": 25,
+                    "temp": 0
+                },
+                "pv": {
+                    "value": 0,
+                    "max": 0
+                },
+                "ee": {
+                    "value": 0,
+                    "max": 0
+                },
+                "actions": {
+                    "value": 3,
+                    "max": 3
+                },
+                "reaction": {
+                    "value": 1,
+                    "max": 1
+                }
+            },
+            "defenses": {
+                "ca": 10,
+                "caBase": 10
+            },
+            "movement": {
+                "base": 9,
+                "climb": 0,
+                "swim": 0,
+                "fly": 0
+            },
+            "training": {
+                "weapons": [],
+                "armors": [],
+                "skills": []
+            },
+            "derived": {
+                "initiative": 2,
+                "dc": 10,
+                "carryMax": 0,
+                "carrySlots": 0
+            }
+        },
+        "items": []
+    },
+    "Banshee": {
+        "_id": "4Q403WB4n7De8Nf8",
+        "name": "Banshee",
+        "type": "monster",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+            "description": "<p>**História:**\r<br>O espírito de uma mulher nobre corrompida pela vaidade e egoísmo. Ela foi amaldiçoada a lamentar eternamente sua própria beleza perdida. Ouvir seu grito é a morte certa.\r</p><p>**Descrição Visual:**\r<br>Uma figura feminina flutuante, bela mas terrível, com cabelos flutuando em água invisível e rosto distorcido em um grito eterno.\r</p><p>**Ficha Técnica:**\r</p><p>- **Iniciativa:** +8 (Mental +4 + Inter +4) | **Sentidos:** Visão no Escuro | **Idioma:** Élfico, Comum.\r<br>- **HP:** 55 | **CA:** 12 | **Movimento:** 12m Voo.\r<br>- **Eixos:** Mental +4, Social +4.\r<br>- **Aplicações:** Conflito 0, Resistência +4, Interação +4.\r<br>- **[A] Lamento:** (1/dia). Todas as criaturas vivas a 9m devem passar em **Teste Global de Físico + Resistência + Nível (DC 19)** (10 + Nv 5 + 4 Men/Soc). Falha: Cai imediatamente a **0 HP**. Sucesso: Sofre 3d6 Dano Psíquico.\r</p><p>---\r</p><p>## 17. Família Cultista</p>",
+            "details": {
+                "biography": "<p>**História:**\r<br>O espírito de uma mulher nobre corrompida pela vaidade e egoísmo. Ela foi amaldiçoada a lamentar eternamente sua própria beleza perdida. Ouvir seu grito é a morte certa.\r</p><p>**Descrição Visual:**\r<br>Uma figura feminina flutuante, bela mas terrível, com cabelos flutuando em água invisível e rosto distorcido em um grito eterno.\r</p><p>**Ficha Técnica:**\r</p><p>- **Iniciativa:** +8 (Mental +4 + Inter +4) | **Sentidos:** Visão no Escuro | **Idioma:** Élfico, Comum.\r<br>- **HP:** 55 | **CA:** 12 | **Movimento:** 12m Voo.\r<br>- **Eixos:** Mental +4, Social +4.\r<br>- **Aplicações:** Conflito 0, Resistência +4, Interação +4.\r<br>- **[A] Lamento:** (1/dia). Todas as criaturas vivas a 9m devem passar em **Teste Global de Físico + Resistência + Nível (DC 19)** (10 + Nv 5 + 4 Men/Soc). Falha: Cai imediatamente a **0 HP**. Sucesso: Sofre 3d6 Dano Psíquico.\r</p><p>---\r</p><p>## 17. Família Cultista</p>",
+                "notes": "",
+                "ancestry": "",
+                "class": "",
+                "background": "",
+                "crest": "",
+                "portrait": ""
+            },
+            "attributes": {
+                "level": 1,
+                "xp": 0,
+                "tier": 1
+            },
+            "eixos": {
+                "fisico": 0,
+                "mental": 0,
+                "social": 0
+            },
+            "aplicacoes": {
+                "conflito": 0,
+                "interacao": 0,
+                "resistencia": 0
+            },
+            "potencial": 0,
+            "resources": {
+                "hp": {
+                    "value": 55,
+                    "max": 55,
+                    "temp": 0
+                },
+                "pv": {
+                    "value": 0,
+                    "max": 0
+                },
+                "ee": {
+                    "value": 0,
+                    "max": 0
+                },
+                "actions": {
+                    "value": 3,
+                    "max": 3
+                },
+                "reaction": {
+                    "value": 1,
+                    "max": 1
+                }
+            },
+            "defenses": {
+                "ca": 12,
+                "caBase": 12
+            },
+            "movement": {
+                "base": 12,
+                "climb": 0,
+                "swim": 0,
+                "fly": 0
+            },
+            "training": {
+                "weapons": [],
+                "armors": [],
+                "skills": []
+            },
+            "derived": {
+                "initiative": 8,
+                "dc": 10,
+                "carryMax": 0,
+                "carrySlots": 0
+            }
+        },
+        "items": []
+    }
+}

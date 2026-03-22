@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pandorha — Ficha de Personagem</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap");
+
+      :root {
+        --bg: #1c1917;
+        --panel: #2a2622;
+        --border: #b8945a;
+        --gold: #dab973;
+        --gold-light: #f0d89a;
+        --text: #dcd7cd;
+        --field-bg: #37322c;
+        --label: #a0968a;
+        --accent: #a87832;
+        --accent-dark: #6b4e22;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+        font-size: 11px;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 8mm;
+        background: var(--bg);
+        position: relative;
+      }
+
+      /* Header */
+      .header {
+        text-align: center;
+        margin-bottom: 4mm;
+      }
+      .header h1 {
+        font-family: "Cinzel", serif;
+        font-size: 28px;
+        color: var(--gold);
+        letter-spacing: 8px;
+        margin-bottom: 2px;
+      }
+      .header .subtitle {
+        font-size: 9px;
+        color: var(--label);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      .header-line {
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--border),
+          transparent
+        );
+        margin: 3mm 0;
+      }
+
+      /* Panel */
+      .panel {
+        border: 1px solid var(--border);
+        border-radius: 3px;
+        background: var(--panel);
+        padding: 4mm 3mm 3mm;
+        margin-bottom: 3mm;
+        position: relative;
+      }
+      .panel-title {
+        position: absolute;
+        top: -3px;
+        left: 8px;
+        background: var(--panel);
+        padding: 0 6px;
+        font-family: "Cinzel", serif;
+        font-size: 8px;
+        font-weight: 700;
+        color: var(--gold);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+
+      /* Grid */
+      .grid {
+        display: grid;
+        gap: 2mm;
+      }
+      .g2 {
+        grid-template-columns: 1fr 1fr;
+      }
+      .g3 {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .g4 {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .g-id {
+        grid-template-columns: 3fr 1.6fr 1.4fr 1fr;
+      }
+      .g-id2 {
+        grid-template-columns: 2fr 2fr 1.5fr 1fr;
+      }
+      .g-stat {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3mm;
+      }
+      .g-def {
+        grid-template-columns: repeat(5, 1fr) 2fr;
+        gap: 2mm;
+      }
+      .g-res {
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 2mm;
+      }
+
+      /* Input fields */
+      .field {
+        display: flex;
+        flex-direction: column;
+      }
+      .field label {
+        font-size: 7px;
+        color: var(--label);
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        margin-bottom: 1px;
+      }
+      .field input,
+      .field textarea {
+        background: var(--field-bg);
+        border: 1px solid rgba(184, 148, 90, 0.3);
+        border-radius: 2px;
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+        font-size: 11px;
+        padding: 3px 5px;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .field input:focus,
+      .field textarea:focus {
+        border-color: var(--gold);
+        box-shadow: 0 0 4px rgba(218, 185, 115, 0.15);
+      }
+      .field textarea {
+        resize: vertical;
+        min-height: 28px;
+        font-size: 9px;
+      }
+
+      /* Stat box */
+      .stat-box {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .stat-box label {
+        font-family: "Cinzel", serif;
+        font-size: 7px;
+        font-weight: 700;
+        color: var(--gold);
+        letter-spacing: 1px;
+        margin-bottom: 2px;
+      }
+      .stat-box input {
+        width: 42px;
+        height: 36px;
+        background: var(--field-bg);
+        border: 2px solid var(--border);
+        border-radius: 4px;
+        color: var(--gold-light);
+        font-family: "Cinzel", serif;
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        outline: none;
+      }
+      .stat-box input:focus {
+        border-color: var(--gold-light);
+        box-shadow: 0 0 8px rgba(218, 185, 115, 0.2);
+      }
+
+      /* Resource box */
+      .resource-box {
+        text-align: center;
+      }
+      .resource-box .res-label {
+        font-family: "Cinzel", serif;
+        font-size: 8px;
+        font-weight: 700;
+        color: var(--gold);
+        letter-spacing: 1px;
+        margin-bottom: 2px;
+      }
+      .resource-box .res-fields {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+      }
+      .resource-box input {
+        width: 38px;
+        height: 30px;
+        background: var(--field-bg);
+        border: 2px solid var(--border);
+        border-radius: 3px;
+        color: var(--gold-light);
+        font-family: "Cinzel", serif;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        outline: none;
+      }
+      .resource-box .sep {
+        color: var(--border);
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      /* Derived stat */
+      .derived-stat {
+        text-align: center;
+      }
+      .derived-stat label {
+        font-size: 6px;
+        color: var(--label);
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        display: block;
+        margin-bottom: 1px;
+      }
+      .derived-stat input {
+        width: 100%;
+        max-width: 40px;
+        height: 28px;
+        background: var(--field-bg);
+        border: 1.5px solid var(--border);
+        border-radius: 3px;
+        color: var(--gold-light);
+        font-family: "Cinzel", serif;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        outline: none;
+      }
+
+      .formulas {
+        font-size: 7px;
+        color: var(--label);
+        line-height: 1.6;
+        padding-top: 4px;
+      }
+
+      .note {
+        font-size: 7px;
+        color: var(--label);
+        margin-top: 2px;
+      }
+
+      /* Maneuver row */
+      .maneuver-slot {
+        display: flex;
+        gap: 2mm;
+        align-items: flex-start;
+        margin-bottom: 1.5mm;
+      }
+      .maneuver-slot input {
+        width: 100%;
+        background: var(--field-bg);
+        border: 1px solid rgba(184, 148, 90, 0.3);
+        border-radius: 2px;
+        color: var(--text);
+        font-size: 9px;
+        padding: 2px 4px;
+        outline: none;
+      }
+      .maneuver-slot textarea {
+        width: 100%;
+        background: var(--field-bg);
+        border: 1px solid rgba(184, 148, 90, 0.2);
+        border-radius: 2px;
+        color: var(--text);
+        font-size: 8px;
+        padding: 2px 4px;
+        resize: none;
+        height: 22px;
+        outline: none;
+      }
+
+      .col-header {
+        font-family: "Cinzel", serif;
+        font-size: 8px;
+        font-weight: 700;
+        color: var(--accent);
+        text-align: center;
+        letter-spacing: 1px;
+        margin-bottom: 2mm;
+        border-bottom: 1px solid var(--accent-dark);
+        padding-bottom: 1mm;
+      }
+
+      .spell-card {
+        background: rgba(55, 50, 44, 0.5);
+        border: 1px solid rgba(184, 148, 90, 0.2);
+        border-radius: 3px;
+        padding: 2mm;
+      }
+      .spell-card .spell-top {
+        display: flex;
+        gap: 2mm;
+        margin-bottom: 1mm;
+      }
+      .spell-card .spell-top input {
+        flex: 1;
+      }
+      .spell-card .spell-meta {
+        display: flex;
+        gap: 2mm;
+        margin-bottom: 1mm;
+      }
+      .spell-card .spell-meta label {
+        font-size: 7px;
+        color: var(--label);
+      }
+      .spell-card .spell-meta input {
+        width: 30px;
+      }
+      .spell-card textarea {
+        width: 100%;
+        height: 30px;
+      }
+      .spell-card input,
+      .spell-card textarea {
+        background: var(--field-bg);
+        border: 1px solid rgba(184, 148, 90, 0.2);
+        border-radius: 2px;
+        color: var(--text);
+        font-size: 8px;
+        padding: 2px 4px;
+        outline: none;
+      }
+
+      .death-saves {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        margin-bottom: 4px;
+      }
+      .death-saves label {
+        font-size: 8px;
+        color: var(--label);
+      }
+      .death-saves input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        accent-color: var(--accent);
+        cursor: pointer;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 7px;
+        color: var(--label);
+        margin-top: 3mm;
+        letter-spacing: 1px;
+      }
+
+      /* Print */
+      @media print {
+        body {
+          background: white;
+        }
+        .page {
+          margin: 0;
+          padding: 6mm;
+          page-break-after: always;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        .field input,
+        .field textarea,
+        .stat-box input,
+        .resource-box input,
+        .derived-stat input,
+        .maneuver-slot input,
+        .maneuver-slot textarea,
+        .spell-card input,
+        .spell-card textarea {
+          border: 1px solid #999 !important;
+          background: #f5f5f0 !important;
+          color: #222 !important;
+        }
+        .panel {
+          background: #faf8f5 !important;
+          border-color: #999 !important;
+        }
+        .panel-title {
+          background: #faf8f5 !important;
+          color: #333 !important;
+        }
+        body,
+        .page {
+          background: white !important;
+          color: #222 !important;
+        }
+        .header h1 {
+          color: #333 !important;
+        }
+        .header-line {
+          background: #999 !important;
+        }
+        .stat-box input,
+        .resource-box input,
+        .derived-stat input {
+          color: #222 !important;
+          border-color: #666 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ============== PAGINA 1 ============== -->
+    <div class="page">
+      <div class="header">
+        <h1>PANDORHA</h1>
+        <div class="subtitle">
+          Ficha de Personagem &mdash; Sistema D20 T&aacute;tico
+        </div>
+      </div>
+      <div class="header-line"></div>
+
+      <!-- IDENTIDADE -->
+      <div class="panel">
+        <span class="panel-title">Identidade</span>
+        <div class="grid g-id" style="margin-bottom: 2mm">
+          <div class="field">
+            <label>Nome do Personagem</label><input type="text" />
+          </div>
+          <div class="field"><label>Jogador</label><input type="text" /></div>
+          <div class="field"><label>Classe</label><input type="text" /></div>
+          <div class="field">
+            <label>N&iacute;vel</label><input type="text" />
+          </div>
+        </div>
+        <div class="grid g-id2">
+          <div class="field">
+            <label>Ancestralidade</label><input type="text" />
+          </div>
+          <div class="field">
+            <label>Antecedente</label><input type="text" />
+          </div>
+          <div class="field">
+            <label>Especializa&ccedil;&atilde;o</label><input type="text" />
+          </div>
+          <div class="field"><label>XP</label><input type="text" /></div>
+        </div>
+      </div>
+
+      <!-- EIXOS + APLICAÇÕES + RECURSOS -->
+      <div class="grid g3">
+        <div class="panel">
+          <span class="panel-title">Eixos</span>
+          <div class="grid g-stat">
+            <div class="stat-box">
+              <label>F&Iacute;SICO</label><input type="text" />
+            </div>
+            <div class="stat-box">
+              <label>MENTAL</label><input type="text" />
+            </div>
+            <div class="stat-box">
+              <label>SOCIAL</label><input type="text" />
+            </div>
+          </div>
+          <div class="note" style="margin-top: 3mm">
+            B&ocirc;nus racial:
+            <input
+              type="text"
+              style="
+                width: 80px;
+                background: var(--field-bg);
+                border: 1px solid rgba(184, 148, 90, 0.3);
+                border-radius: 2px;
+                color: var(--text);
+                font-size: 8px;
+                padding: 1px 3px;
+                outline: none;
+              "
+            />
+          </div>
+          <div class="note">6 pontos (m&iacute;n 1, m&aacute;x 3 cada)</div>
+        </div>
+
+        <div class="panel">
+          <span class="panel-title">Aplica&ccedil;&otilde;es</span>
+          <div class="grid g-stat">
+            <div class="stat-box">
+              <label>CONFLITO</label><input type="text" />
+            </div>
+            <div class="stat-box">
+              <label>INTERA&Ccedil;&Atilde;O</label><input type="text" />
+            </div>
+            <div class="stat-box">
+              <label>RESIST&Ecirc;NCIA</label><input type="text" />
+            </div>
+          </div>
+          <div class="note" style="margin-top: 3mm">
+            6 pontos (m&iacute;n 1, m&aacute;x 3 cada)
+          </div>
+        </div>
+
+        <div class="panel">
+          <span class="panel-title">Recursos</span>
+          <div class="resource-box" style="margin-bottom: 3mm">
+            <div class="res-label">HP</div>
+            <div class="res-fields">
+              <input type="text" /> <span class="sep">/</span>
+              <input type="text" />
+            </div>
+          </div>
+          <div class="grid g2">
+            <div class="resource-box">
+              <div class="res-label">PV</div>
+              <div class="res-fields">
+                <input
+                  type="text"
+                  style="width: 28px; height: 24px; font-size: 14px"
+                />
+                <span class="sep">/</span>
+                <input
+                  type="text"
+                  style="width: 28px; height: 24px; font-size: 14px"
+                />
+              </div>
+            </div>
+            <div class="resource-box">
+              <div class="res-label">EE</div>
+              <div class="res-fields">
+                <input
+                  type="text"
+                  style="width: 28px; height: 24px; font-size: 14px"
+                />
+                <span class="sep">/</span>
+                <input
+                  type="text"
+                  style="width: 28px; height: 24px; font-size: 14px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="note">1 PV = +2 em teste</div>
+        </div>
+      </div>
+
+      <!-- DEFESAS -->
+      <div class="panel">
+        <span class="panel-title">Defesas e Derivados</span>
+        <div class="grid g-def">
+          <div class="derived-stat"><label>CA</label><input type="text" /></div>
+          <div class="derived-stat">
+            <label>INICIATIVA</label><input type="text" />
+          </div>
+          <div class="derived-stat">
+            <label>VELOCIDADE</label><input type="text" />
+          </div>
+          <div class="derived-stat">
+            <label>CARGA</label><input type="text" />
+          </div>
+          <div class="derived-stat">
+            <label>PERCEP&Ccedil;&Atilde;O</label><input type="text" />
+          </div>
+          <div class="formulas">
+            CA = 10 + N&iacute;vel + Armadura + Eixo + Escudo<br />
+            INI = N&iacute;vel + Mental + Intera&ccedil;&atilde;o<br />
+            Carga = (F&iacute;s + Res) + 6 slots
+          </div>
+        </div>
+      </div>
+
+      <!-- CAPACIDADE PRIMORDIAL + HAB. ORIGEM -->
+      <div class="grid g2">
+        <div class="panel">
+          <span class="panel-title"
+            >Capacidade Primordial (Ancestralidade)</span
+          >
+          <div class="field"><textarea rows="3"></textarea></div>
+        </div>
+        <div class="panel">
+          <span class="panel-title">Habilidade de Origem (Antecedente)</span>
+          <div class="field"><textarea rows="3"></textarea></div>
+        </div>
+      </div>
+
+      <!-- HAB. PASSIVA CLASSE -->
+      <div class="panel">
+        <span class="panel-title">Habilidade Passiva de Classe</span>
+        <div class="field"><textarea rows="2"></textarea></div>
+      </div>
+
+      <!-- TALENTOS -->
+      <div class="grid g2">
+        <div class="panel">
+          <span class="panel-title">Talentos de Classe (Escolha 2)</span>
+          <div class="field" style="margin-bottom: 2mm">
+            <label>Talento 1</label><input type="text" /><textarea
+              rows="1"
+              placeholder="Efeito..."
+            ></textarea>
+          </div>
+          <div class="field">
+            <label>Talento 2</label><input type="text" /><textarea
+              rows="1"
+              placeholder="Efeito..."
+            ></textarea>
+          </div>
+        </div>
+        <div class="panel">
+          <span class="panel-title">Talentos de Antecedente &amp; Gerais</span>
+          <div class="field" style="margin-bottom: 2mm">
+            <label>Talento Antecedente</label><input type="text" /><textarea
+              rows="1"
+              placeholder="Efeito..."
+            ></textarea>
+          </div>
+          <div class="field">
+            <label>Talento Geral</label><input type="text" />
+          </div>
+        </div>
+      </div>
+
+      <!-- TRAÇOS ANCESTRAIS -->
+      <div class="panel">
+        <span class="panel-title">Tra&ccedil;os Ancestrais (Escolha 3)</span>
+        <div class="grid g3">
+          <div class="field">
+            <label>Tra&ccedil;o 1</label><input type="text" /><textarea
+              rows="2"
+              placeholder="Descri&ccedil;&atilde;o..."
+            ></textarea>
+          </div>
+          <div class="field">
+            <label>Tra&ccedil;o 2</label><input type="text" /><textarea
+              rows="2"
+              placeholder="Descri&ccedil;&atilde;o..."
+            ></textarea>
+          </div>
+          <div class="field">
+            <label>Tra&ccedil;o 3</label><input type="text" /><textarea
+              rows="2"
+              placeholder="Descri&ccedil;&atilde;o..."
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- EQUIPAMENTO -->
+      <div class="panel">
+        <span class="panel-title">Equipamento &amp; Invent&aacute;rio</span>
+        <div class="grid g4">
+          <div class="field">
+            <label>Arma</label><textarea rows="4"></textarea>
+          </div>
+          <div class="field">
+            <label>Armadura / Escudo</label><textarea rows="4"></textarea>
+          </div>
+          <div class="field">
+            <label>Itens (Slots)</label><textarea rows="4"></textarea>
+          </div>
+          <div class="field">
+            <label>Ouro</label><textarea rows="4"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        Sistema Pandorha &mdash; Ficha de Personagem &mdash; P&aacute;gina 1/2
+      </div>
+    </div>
+
+    <!-- ============== PAGINA 2 ============== -->
+    <div class="page">
+      <div class="header">
+        <h1 style="font-size: 18px">PANDORHA</h1>
+        <div class="subtitle">Manobras, Magias &amp; Notas</div>
+      </div>
+      <div class="header-line"></div>
+
+      <!-- MANOBRAS -->
+      <div class="panel">
+        <span class="panel-title">Manobras Conhecidas</span>
+        <div class="grid g3">
+          <div>
+            <div class="col-header">Matriz F&iacute;sica</div>
+            <div class="field" style="margin-bottom: 1.5mm">
+              <input type="text" placeholder="Manobra 1" /><textarea
+                rows="1"
+                placeholder="Efeito..."
+              ></textarea>
+            </div>
+            <div class="field" style="margin-bottom: 1.5mm">
+              <input type="text" placeholder="Manobra 2" /><textarea
+                rows="1"
+                placeholder="Efeito..."
+              ></textarea>
+            </div>
+            <div class="field" style="margin-bottom: 1.5mm">
+              <input type="text" placeholder="Manobra 3" /><textarea
+                rows="1"
+                placeholder="Efeito..."
+              ></textarea>
+            </div>
+            <div class="field">
+              <input type="text" placeholder="Manobra 4" /><textarea
+                rows="1"
+                placeholder="Efeito..."
+              ></textarea>
+            </div>
+          </div>
+          <div>
+            <div class="col-header">Matriz Mental</div>
+            <div class="field" style="margin-bottom: 1.5mm">
+              <input type="text" placeholder="Manobra 1" /><textarea
+                rows="1"
+                placeholder="Efeito..."
+              ></textarea>
+            </div>
+            <div class="field" style="margin-bottom: 1.5mm">
+              <input type="text" placeholder="Manobra 2" /><textarea
+                rows="1"
+                placeholder="Efeito..."
+              ></textarea>
+            </div>
+            <div class="field" style="margin-bottom: 1.5mm">
+              <input type="text" placeholder="Manobra 3" /><textarea
+                rows="1"
+                placeholder="Efeito..."
+              ></textarea>
+            </div>
+            <div class="field">
+              <input type="text" placeholder="Manobra 4" /><textarea
+                rows="1"
+                placeholder="Efeito..."
+              ></textarea>
+            </div>
+          </div>
+          <div>
+            <div class="col-header">Matriz Social</div>
+            <div class="field" style="margin-bottom: 1.5mm">
+              <input type="text" placeholder="Manobra 1" /><textarea
+                rows="1"
+                placeholder="Efeito..."
+              ></textarea>
+            </div>
+            <div class="field" style="margin-bottom: 1.5mm">
+              <input type="text" placeholder="Manobra 2" /><textarea
+                rows="1"
+                placeholder="Efeito..."
+              ></textarea>
+            </div>
+            <div class="field" style="margin-bottom: 1.5mm">
+              <input type="text" placeholder="Manobra 3" /><textarea
+                rows="1"
+                placeholder="Efeito..."
+              ></textarea>
+            </div>
+            <div class="field">
+              <input type="text" placeholder="Manobra 4" /><textarea
+                rows="1"
+                placeholder="Efeito..."
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAGIAS -->
+      <div class="panel">
+        <span class="panel-title">Magias Preparadas (Limite: Mental + 1)</span>
+        <div class="grid g3">
+          <div class="spell-card">
+            <div class="field"><label>Magia 1</label><input type="text" /></div>
+            <div class="spell-meta">
+              <label>C&iacute;rculo:</label><input type="text" />
+              <label>EE:</label><input type="text" />
+            </div>
+            <div class="field">
+              <label>Efeito</label><textarea rows="2"></textarea>
+            </div>
+          </div>
+          <div class="spell-card">
+            <div class="field"><label>Magia 2</label><input type="text" /></div>
+            <div class="spell-meta">
+              <label>C&iacute;rculo:</label><input type="text" />
+              <label>EE:</label><input type="text" />
+            </div>
+            <div class="field">
+              <label>Efeito</label><textarea rows="2"></textarea>
+            </div>
+          </div>
+          <div class="spell-card">
+            <div class="field"><label>Magia 3</label><input type="text" /></div>
+            <div class="spell-meta">
+              <label>C&iacute;rculo:</label><input type="text" />
+              <label>EE:</label><input type="text" />
+            </div>
+            <div class="field">
+              <label>Efeito</label><textarea rows="2"></textarea>
+            </div>
+          </div>
+          <div class="spell-card">
+            <div class="field"><label>Magia 4</label><input type="text" /></div>
+            <div class="spell-meta">
+              <label>C&iacute;rculo:</label><input type="text" />
+              <label>EE:</label><input type="text" />
+            </div>
+            <div class="field">
+              <label>Efeito</label><textarea rows="2"></textarea>
+            </div>
+          </div>
+          <div class="spell-card">
+            <div class="field"><label>Magia 5</label><input type="text" /></div>
+            <div class="spell-meta">
+              <label>C&iacute;rculo:</label><input type="text" />
+              <label>EE:</label><input type="text" />
+            </div>
+            <div class="field">
+              <label>Efeito</label><textarea rows="2"></textarea>
+            </div>
+          </div>
+          <div class="spell-card">
+            <div class="field"><label>Magia 6</label><input type="text" /></div>
+            <div class="spell-meta">
+              <label>C&iacute;rculo:</label><input type="text" />
+              <label>EE:</label><input type="text" />
+            </div>
+            <div class="field">
+              <label>Efeito</label><textarea rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONDIÇÕES + MORTE -->
+      <div class="grid g2">
+        <div class="panel">
+          <span class="panel-title">Condi&ccedil;&otilde;es Ativas</span>
+          <div class="field" style="margin-bottom: 1mm">
+            <input type="text" placeholder="Condi&ccedil;&atilde;o 1" />
+          </div>
+          <div class="field" style="margin-bottom: 1mm">
+            <input type="text" placeholder="Condi&ccedil;&atilde;o 2" />
+          </div>
+          <div class="field">
+            <input type="text" placeholder="Condi&ccedil;&atilde;o 3" />
+          </div>
+        </div>
+        <div class="panel">
+          <span class="panel-title">Testes de Morte (0 HP)</span>
+          <div class="death-saves">
+            <label>Falhas:</label>
+            <input type="checkbox" /><input type="checkbox" /><input
+              type="checkbox"
+            />
+          </div>
+          <div class="death-saves">
+            <label>Estabilizado:</label>
+            <input type="checkbox" />
+          </div>
+          <div class="note">
+            DC 15 no d20 para estabilizar. 3 falhas = morte.
+          </div>
+        </div>
+      </div>
+
+      <!-- NOTAS -->
+      <div class="panel" style="flex: 1">
+        <span class="panel-title">Notas, Hist&oacute;ria &amp; Objetivos</span>
+        <div class="field">
+          <textarea rows="14" style="height: 120px"></textarea>
+        </div>
+      </div>
+
+      <div class="footer">
+        Sistema Pandorha &mdash; Ficha de Personagem &mdash; P&aacute;gina 2/2
+      </div>
+    </div>
+  </body>
+</html>

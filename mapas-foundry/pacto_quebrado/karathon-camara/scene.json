@@ -1,0 +1,66 @@
+{
+  "name": "Karathon: Câmara Profunda",
+  "background": {
+    "src": "mapas-foundry/pacto_quebrado/karathon-camara/background.png"
+  },
+  "width": 1920,
+  "height": 1080,
+  "grid": {
+    "type": 1,
+    "size": 100,
+    "color": "#000000",
+    "alpha": 0.2,
+    "distance": 1.5,
+    "units": "m"
+  },
+  "tokenVision": true,
+  "fog": {
+    "exploration": true
+  },
+  "environment": {
+    "darknessLevel": 0.5
+  },
+  "walls": [],
+  "lights": [
+    {
+      "x": 960,
+      "y": 540,
+      "config": {
+        "alpha": 0.4,
+        "bright": 8,
+        "dim": 15,
+        "color": "#ffd700",
+        "animation": {
+          "type": "sunlight",
+          "speed": 2
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "x": 960,
+      "y": 540,
+      "text": "O Selo do Núcleo Solar: Revelação de Velho Garth e local da decisão política final.",
+      "icon": "icons/svg/sun.svg"
+    },
+    {
+      "x": 1500,
+      "y": 300,
+      "text": "Válvula de Vapor: Mental + Interação DC 15 para liberar vapor e causar 2d6 dano em área.",
+      "icon": "icons/svg/acid.svg"
+    },
+    {
+      "x": 500,
+      "y": 300,
+      "text": "Pilar de Basalto: Pode ser derrubado (Físico + Conflito DC 12) para causar 3d6 dano de esmagamento.",
+      "icon": "icons/svg/falling.svg"
+    },
+    {
+      "x": 960,
+      "y": 800,
+      "text": "Dente-de-Ouro: O combate final do capítulo. Ele oferecerá um acordo ao perder 50% de HP.",
+      "icon": "icons/svg/skull.svg"
+    }
+  ]
+}

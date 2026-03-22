@@ -1,0 +1,36 @@
+{
+    "name": "Renna Sussurro — Taberneira e Informante",
+    "pages": [
+        {
+            "name": "Renna Sussurro — Taberneira e Informante",
+            "type": "text",
+            "text": {
+                "content": "<br>**Nível:** 3 | **ND:** 1 | **Tipo:** Humanoide (Humana)<br><br>#### Bloco de Estatísticas<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Stat</th><th style=\"padding: 5px;\">Valor</th><th style=\"padding: 5px;\">Stat</th><th style=\"padding: 5px;\">Valor</th></tr><tr><td style=\"padding: 5px;\">**Físico**</td><td style=\"padding: 5px;\">1</td><td style=\"padding: 5px;\">**Conflito**</td><td style=\"padding: 5px;\">1</td></tr><tr><td style=\"padding: 5px;\">**Mental**</td><td style=\"padding: 5px;\">3</td><td style=\"padding: 5px;\">**Interação**</td><td style=\"padding: 5px;\">3</td></tr><tr><td style=\"padding: 5px;\">**Social**</td><td style=\"padding: 5px;\">3</td><td style=\"padding: 5px;\">**Resistência**</td><td style=\"padding: 5px;\">2</td></tr></tbody></table><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Derivado</th><th style=\"padding: 5px;\">Fórmula</th><th style=\"padding: 5px;\">Valor</th></tr><tr><td style=\"padding: 5px;\">**HP**</td><td style=\"padding: 5px;\">HP Base + (Fís+Res)×5</td><td style=\"padding: 5px;\">18</td></tr><tr><td style=\"padding: 5px;\">**CA**</td><td style=\"padding: 5px;\">10 + Nível + Fís</td><td style=\"padding: 5px;\">14 (Roupas leves, agilidade)</td></tr><tr><td style=\"padding: 5px;\">**Vigor**</td><td style=\"padding: 5px;\">(Fís+Int) + Nível</td><td style=\"padding: 5px;\">7</td></tr><tr><td style=\"padding: 5px;\">**Iniciativa**</td><td style=\"padding: 5px;\">Nível + Men + Int</td><td style=\"padding: 5px;\">+9</td></tr><tr><td style=\"padding: 5px;\">**Velocidade**</td><td style=\"padding: 5px;\">Base</td><td style=\"padding: 5px;\">9m</td></tr><tr><td style=\"padding: 5px;\">**Percepção**</td><td style=\"padding: 5px;\">Nível + Men + Int</td><td style=\"padding: 5px;\">+9</td></tr></tbody></table><br>#### Perícias (Treinadas)<br><br>- Diplomacia (Social + Interação): +9<br>- Engano (Social + Conflito): +7<br>- Furtividade (Mental + Conflito): +7<br>- Percepção (Mental + Interação): +9<br>- Conhecimento Local (Mental + Interação): +9<br><br>#### Ações (3 PA por turno)<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Ação</th><th style=\"padding: 5px;\">Custo</th><th style=\"padding: 5px;\">Teste de Ataque</th><th style=\"padding: 5px;\">Dano/Efeito</th></tr><tr><td style=\"padding: 5px;\">**Adaga Envenenada**</td><td style=\"padding: 5px;\">[A] [Ataque]</td><td style=\"padding: 5px;\">Físico + Conflito + Nível = **+5** vs CA</td><td style=\"padding: 5px;\">1d4+1 perfurante + alvo testa **Físico + Resistência DC 13** ou **Envenenado** (1d4 dano/rodada, 3 rodadas)</td></tr><tr><td style=\"padding: 5px;\">**Arremesso de Caneca**</td><td style=\"padding: 5px;\">[A] [Ataque]</td><td style=\"padding: 5px;\">Mental + Conflito + Nível = **+7** vs CA (6m)</td><td style=\"padding: 5px;\">1d4+3 contusão + **Atordoado** 1R se Crítico</td></tr><tr><td style=\"padding: 5px;\">**Grito de Distração**</td><td style=\"padding: 5px;\">[A]</td><td style=\"padding: 5px;\">—</td><td style=\"padding: 5px;\">1 inimigo em 9m: **Mental + Resistência DC 15** ou perde 1 Ação no próximo turno</td></tr><tr><td style=\"padding: 5px;\">**Fugir**</td><td style=\"padding: 5px;\">[AAA]</td><td style=\"padding: 5px;\">—</td><td style=\"padding: 5px;\">Move o dobro da velocidade (18m) e ganha **Oculto** se sair de linha de visão</td></tr><tr><td style=\"padding: 5px;\">**Mover**</td><td style=\"padding: 5px;\">[A]</td><td style=\"padding: 5px;\">—</td><td style=\"padding: 5px;\">9m</td></tr></tbody></table><br>#### Reações [R]<br><table border=\"1\" style=\"width: 100%; border-collapse: collapse;\"><tbody><tr><th style=\"padding: 5px;\">Reação</th><th style=\"padding: 5px;\">Gatilho</th><th style=\"padding: 5px;\">Efeito</th></tr><tr><td style=\"padding: 5px;\">**Esquiva Instintiva**</td><td style=\"padding: 5px;\">É alvo de ataque</td><td style=\"padding: 5px;\">+2 CA contra esse ataque</td></tr></tbody></table><br>#### Traços e Habilidades Passivas<br><br>- **Ouvidos em Todo Lugar:** Renna ouve conversas num raio de 15m mesmo em ambientes barulhentos (taverna). Não pode ser surpreendida em seu próprio estabelecimento<br>- **Rede de Informantes:** Sempre sabe os 3 rumores mais recentes da vila. Pode responder qualquer pergunta sobre \"quem esteve aqui recentemente\"<br>- **Fuga Preparada:** Tem 3 rotas de fuga pré-planejadas do Parafuso Torto (porão, janela dos fundos, telhado). +5 em Furtividade quando foge por essas rotas<br>- **Veneno de Musgo (3 doses):** Aplica veneno na adaga como ação gratuita antes do combate<br><br>#### Equipamento<br><br>- Adaga envenenada (1d4 perfurante + veneno) | 3 doses de veneno de musgo<br>- Roupas discretas com bolsos ocultos | Chaves do Parafuso Torto<br>- Relatórios codificados para a Viúva (escondidos no porão)<br><br>#### Perfil Narrativo<br><br>- **Desejo:** Dinheiro para fugir de Pandorha<br>- **Medo:** A Viúva descobrir que ela desvia informações<br>- **Segredo:** Sabe que Dente-de-Ouro esteve na vila antes da invasão<br><br>#### Falas<br><br>1. _\"A primeira rodada é por conta da casa. A segunda custa informação.\"_<br>2. _(Sussurrando)_ _\"Dente-de-Ouro esteve aqui. Terça. Mesa do fundo.\"_<br>3. _\"Eu trabalho para quem paga. Não me julgue.\"_<br>4. _\"Se a Viúva souber que contei... eu nunca disse nada.\"_<br><br>---<br>",
+                "format": 1
+            },
+            "flags": {
+                "monks-enhanced-journal": {
+                    "type": "person",
+                    "attributes": {}
+                }
+            },
+            "system": {},
+            "title": {
+                "show": true,
+                "level": 1
+            },
+            "sort": 0
+        }
+    ],
+    "flags": {
+        "monks-enhanced-journal": {
+            "pagetype": "person",
+            "img": "modules/monks-enhanced-journal/assets/person.png"
+        }
+    },
+    "system": {},
+    "_stats": {
+        "systemId": "pandorha",
+        "coreVersion": "13.351"
+    }
+}
